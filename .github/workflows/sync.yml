@@ -5,7 +5,8 @@ name: Sync upstream config
 
 on:
   schedule:
-    # 每天 03:23 (Asia/Shanghai)，避开抓取任务的整点时段
+    # 每天 UTC 03:23（北京时间 11:23）。注意：GitHub Actions 的 cron 一律按 UTC 解释，
+    # 下面的 timedatectl 只影响任务内部的输出时间显示，不影响触发时刻。
     - cron: '23 3 * * *'
   workflow_dispatch:
 
