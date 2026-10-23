@@ -201,8 +201,9 @@ def main() -> int:
                     if r['判定'] == '疑似被墙'}
             keep_addrs -= drop
         if not os.path.exists(args.input_list):
-            print("找不到 %s，跳过子集输出" % args.input_list)
-            return 0
+            # 静默跳过是这类问题最大的帮凶——必须报错
+            print("找不到 %s，无法生成子集" % args.input_list)
+            return 1
         with open(args.input_list, encoding='utf-8') as f:
             text = f.read()
         data = yaml.safe_load(text) or {}

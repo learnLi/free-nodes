@@ -60,14 +60,23 @@ jobs:
           echo "国内侧结果：$(wc -l < probe_domestic.csv) 行"
           echo "found=true" >> "$GITHUB_OUTPUT"
 
-      - name: 取美国探活结果
+      - name: 取美国探活结果与节点列表
         if: steps.cn.outputs.found == 'true'
         run: |
           set -euo pipefail
-          curl -sL --max-time 60 \
-            "https://github.com/${{ github.repository }}/releases/latest/download/probe.csv" \
-            -o probe_us.csv
-          wc -l < probe_us.csv
+          BASE="https://github.com/${{ github.repository }}/releases/latest/download"
+          # 美国侧探活结果
+          curl -sL --max-time 60 "$BASE/probe.csv" -o probe_us.csv
+          # 节点列表是生成物，不在 git 里，必须从 Release 取
+          # （之前缺这一步，交叉比对会静默跳过子集输出）
+          curl -sL --max-time 60 "$BASE/list.meta.full.yml" -o list.meta.full.yml
+          for f in probe_us.csv list.meta.full.yml; do
+            if [ ! -s "$f" ]; then
+              echo "::error::取不到 $f"
+              exit 1
+            fi
+          done
+          echo "美国侧 $(wc -l < probe_us.csv) 行，节点列表 $(wc -c < list.meta.full.yml) 字节"
 
       - name: 交叉比对
         if: steps.cn.outputs.found == 'true'
@@ -80,6 +89,14 @@ jobs:
             --out-md crosscheck_summary.md \
             --input-list list.meta.full.yml \
             --out-cn-list list.meta.cn.yml
+          # 产出必须齐全，否则下游会静默拿到空结果
+          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
+            if [ ! -s "$f" ]; then
+              echo "::error::交叉比对没有产出 $f"
+              exit 1
+            fi
+          done
+          echo "产出齐全"
 
       - name: 发布交叉结果
         if: steps.cn.outputs.found == 'true'
@@ -101,9 +118,12 @@ jobs:
           set -euo pipefail
           git fetch --depth=1 origin probe-domestic
           git checkout -B probe-domestic origin/probe-domestic
-          cp crosscheck.csv crosscheck_summary.md . 2>/dev/null || true
-          [ -f list.meta.cn.yml ] && cp list.meta.cn.yml . || true
-          git add -A crosscheck* list.meta.cn.yml 2>/dev/null || true
+          cp crosscheck.csv crosscheck_summary.md list.meta.cn.yml .
+          # 逐个 add：git add 只要有一个 pathspec 不匹配就整体失败，
+          # 一个都不会被暂存
+          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
+            git add -f "$f"
+          done
           if git diff --cached --quiet; then
             echo "无变化"
           else
