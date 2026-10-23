@@ -71,7 +71,13 @@ def us_status(row: Optional[Dict[str, str]]) -> str:
     if row is None:
         return 'unknown'
     tcp = row.get('TCP')
+    quic = row.get('QUIC', '')
     if tcp == 'N/A':
+        # QUIC/UDP 协议：用 QUIC 探测结果判定
+        if quic == 'Y':
+            return 'alive'
+        if quic == 'N':
+            return 'dead'
         return 'n/a'
     if tcp == 'Y':
         return 'alive'
@@ -87,7 +93,12 @@ def cn_status(row: Optional[Dict[str, str]]) -> str:
     if row is None:
         return 'unknown'
     tcp = row.get('TCP')
+    quic = row.get('QUIC', '')
     if tcp == 'N/A':
+        if quic == 'Y':
+            return 'alive'
+        if quic == 'N':
+            return 'blocked'
         return 'n/a'
     if tcp == 'Y':
         return 'alive'

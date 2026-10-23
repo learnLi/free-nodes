@@ -85,7 +85,8 @@ check("probe_one: ss 不做 TLS 握手", row['TLS'], 'N/A')
 
 row = probe_one({'name': 'n', 'type': 'hysteria2', 'server': '127.0.0.1', 'port': port}, 2.0)
 check("probe_one: hysteria2 标记 N/A", row['TCP'], 'N/A')
-check("probe_one: hysteria2 有说明", 'UDP' in row['错误'], True)
+check("probe_one: hysteria2 走 QUIC 分支", row['QUIC'] in ('Y', 'N'), True)
+check("probe_one: hysteria2 有说明", row['错误'] != '', True)
 
 row = probe_one({'name': 'n', 'type': 'vmess', 'server': '', 'port': 0}, 1.0)
 check("probe_one: 地址不完整被拒", row['TCP'], '')
