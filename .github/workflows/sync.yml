@@ -68,5 +68,5 @@ jobs:
         if: steps.diff.outputs.changed == '有变更'
         run: |
           set -euo pipefail
-          git pull --rebase origin master || true
-          git push origin master
+          git pull --rebase origin main || true
+          git push origin main
