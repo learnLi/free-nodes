@@ -13,18 +13,19 @@ name: Cross-check (US vs CN)
 
 on:
   workflow_dispatch:
+  workflow_call:
   schedule:
     # 每 6 小时一次
     - cron: '41 */6 * * *'
-  push:
-    branches:
-      - 'output'
 # 注意：**不要**加 `push: branches: [probe-domestic]` 触发。
 # 本工作流会把结果推回 probe-domestic 分支，而那个 push 又会触发本工作流，
 # 形成自触发循环——concurrency 会把正在跑的那次取消掉，表现为推送步骤莫名失败。
 #
-# 监听 output 分支是有意的：Fetch 工作流每 3 小时把新抓到的节点推到
-# output，交叉表随之更新，保证表里的节点集合与最新产物一致。
+# 也不能靠 `push: branches: [output]`：output 分支只含构建产物，
+# 不含 .github/workflows/，GitHub 不会用那个 ref 上的工作流定义。
+# 所以改为由 Fetch 工作流用 workflow_call 直接调用（见 fetch.yml 的
+# crosscheck job），每 3 小时抓完节点就跑一次，保证表里的节点集合
+# 与最新产物一致。
 
 permissions:
   contents: write

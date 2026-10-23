@@ -343,3 +343,13 @@ jobs:
             list_result.csv
           retention-days: 7
           if-no-files-found: ignore
+
+  # 抓完节点就跑一次中美交叉比对。
+  # 不能靠监听 output 分支的 push 来触发：output 分支只含构建产物，
+  # 不含 .github/workflows/，GitHub 不会用那个 ref 上的工作流定义。
+  crosscheck:
+    needs: fetch
+    uses: ./.github/workflows/crosscheck.yml
+    permissions:
+      contents: write
+    secrets: inherit
