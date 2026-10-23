@@ -36,6 +36,9 @@ https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.yml
 | 锁区域名 | `https://github.com/learnLi/free-nodes/releases/download/snippets/region.yml` |
 
 > Release 的资产名不允许包含 `/`，因此顶层订阅与配置片段分装在两个 Release（`latest` / `snippets`）中。
+> `snippets` 被标记为**预发布**——这是必要的：GitHub 的 `releases/latest` 取「最近发布的非预发布」，
+> 若不标记，片段 Release 会顶掉订阅 Release，导致 `/releases/latest/download/list.*` 全部 404。
+> 工作流内已加入自检断言，指向错误会直接让构建失败。
 
 > ⚠️ **Clash 原版与 Clash Meta 的节点数差异很大**。原版 Clash 不支持 vless / hysteria2 / tuic，
 > 拿到的节点通常只有 Meta 的 1/5 左右。请优先使用 Meta 内核（Clash Verge Rev / Mihomo Party / FlClash 等）。
