@@ -16,7 +16,6 @@ WORK="${2:-/root/free-nodes}"
 IMAGE="${IMAGE:-free-nodes-probe:latest}"
 # 数据分支与文件名前缀。不同探测点用不同的：
 #   大陆 NAS -> probe-domestic / probe_domestic_<ts>.csv
-#   香港 VPS -> probe-hk        / probe_hk_<ts>.csv
 BRANCH="${BRANCH:-probe-domestic}"
 PREFIX="${PREFIX:-probe_domestic}"
 
