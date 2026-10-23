@@ -229,6 +229,28 @@ NAS 侧脚本：[`scripts/probe_domestic.sh`](scripts/probe_domestic.sh)
 本仓库把保留地址改为按网段判定（`127.0.0.0/8`、`0.0.0.0/8`、`169.254.0.0/16`），
 这类哨兵节点不再进入任何输出。
 
+### 客户端健康检查调优
+
+上游的 `config.yml` 里，`♻ 自动选择`（fallback）和 `🔰 延迟最低`（url-test）两个组
+都是 `interval: 300` + `url: https://www.google.com/`，且 `include-all: true`
+（即探测全部节点）。现在有 369 个节点，客户端启动时会并发探测全部 —— 这是开机卡顿的主因。
+
+本仓库的调优（`config.yml` 已改为自行维护，不会被上游同步覆盖）：
+
+| 项 | 上游 | 现在 | 理由 |
+| :- | :- | :- | :- |
+| `url` | `https://www.google.com/` | `https://www.gstatic.com/generate_204` | 后者返回 204 空响应，前者要传整页 HTML |
+| `interval` | 300 | 600 | 探测频率减半 |
+| `timeout` | 未设 | 5000 | 单次探测超时上限（毫秒） |
+| `lazy` | 未设 | `true` | **只在代理组真正被使用时才探测**，启动时不再并发探全部节点 |
+| `max-failed-times` | 未设 | 3 | 连续失败 3 次后不再探测该节点 |
+
+最后两项是关键：国内网络下大量节点是「**被墙**」而不是「关闭」，这类节点会一直失败；
+不设上限就会持续消耗探测资源。
+
+> `lazy` 与 `max-failed-times` 是 **Mihomo（Clash Meta）** 的字段。
+> 原版 Clash 不认识这两个字段会直接忽略，不影响使用。
+
 ### 按探测结论裁剪
 
 `prune.py` 读入 `probe.csv`，对 Clash 配置做**保守**裁剪。只剔除三类「确凿」的问题：
