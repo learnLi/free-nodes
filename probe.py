@@ -171,6 +171,47 @@ def probe_one(proxy: Dict[str, Any], timeout: float) -> Dict[str, Any]:
     return row
 
 
+def detect_egress(timeout: float = 8.0) -> Dict[str, Any]:
+    """探测发起方的公网出口 IP 与归属地。
+
+    探针结果的一切解读都取决于「从哪儿探的」——海外出口探到的「通」
+    不代表中国大陆可达。这个自报信息随每轮结果一起发布，让结论可核查。
+    """
+    import json as _json
+    import urllib.request
+    out: Dict[str, Any] = {}
+    ip = ''
+    for url in ('https://api.ipify.org?format=json',
+                'https://ifconfig.co/json',
+                'https://api.ip.sb/geoip'):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'free-nodes-probe'})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                data = _json.loads(r.read().decode('utf-8', 'ignore'))
+            ip = str(data.get('ip') or data.get('origin') or '').split(',')[0].strip()
+            if ip:
+                out['ip'] = ip
+                out['country'] = data.get('country') or data.get('country_name') or ''
+                out['city'] = data.get('city') or ''
+                out['org'] = data.get('org') or data.get('organization') or ''
+                break
+        except Exception:  # noqa: BLE001
+            continue
+    if ip and not out.get('country'):
+        # 归属地接口失败时再单独查一次
+        try:
+            req = urllib.request.Request('https://ipwho.is/' + ip,
+                                         headers={'User-Agent': 'free-nodes-probe'})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                data = _json.loads(r.read().decode('utf-8', 'ignore'))
+            out['country'] = data.get('country') or ''
+            out['city'] = data.get('city') or ''
+            out['org'] = out.get('org') or data.get('connection', {}).get('isp', '')
+        except Exception:  # noqa: BLE001
+            pass
+    return out
+
+
 def main() -> int:
     args = parse_args()
     if not os.path.exists(args.input):
@@ -181,6 +222,15 @@ def main() -> int:
     if args.limit and len(proxies) > args.limit:
         proxies = proxies[:args.limit]
     print("待探测节点：%d 个" % len(proxies))
+
+    # 探测出口自报：结果的一切解读都取决于从哪儿探的
+    egress = detect_egress()
+    if egress:
+        print("探测出口：%s  %s %s  %s" % (
+            egress.get('ip', '?'), egress.get('country', '?'),
+            egress.get('city', ''), egress.get('org', '')))
+    else:
+        print("探测出口：无法确定（自报接口不可达）")
 
     # 对照探测：区分「节点死了」和「runner 整体网络不通」
     refs: List[Tuple[str, int, bool, float, str]] = []
@@ -250,6 +300,7 @@ def main() -> int:
     # 汇总成 JSON，方便后续步骤消费
     summary = {
         'total': len(rows),
+        'egress': egress,
         'tcp_applicable': len(tcp_applicable),
         'tcp_ok': len(tcp_ok),
         'tcp_rate': pct(len(tcp_ok), len(tcp_applicable)),
@@ -268,6 +319,10 @@ def main() -> int:
 
     # 同时输出一份 Markdown，方便直接贴进 Release 说明
     md = ['```', '指标 | 数值', '--- | ---']
+    md.append('探测出口 | %s %s %s' % (
+        summary['egress'].get('ip', '未知'),
+        summary['egress'].get('country', ''),
+        summary['egress'].get('city', '')))
     md.append('总节点数 | %d' % summary['total'])
     md.append('TCP 可探测（已剔除 QUIC/UDP） | %d' % summary['tcp_applicable'])
     md.append('TCP 连通 | %d（%s）' % (summary['tcp_ok'], summary['tcp_rate']))
