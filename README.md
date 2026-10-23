@@ -12,20 +12,20 @@
 
 | 客户端 | 链接 |
 | :- | :- |
-| Clash Meta | `https://github.com/jocker-l/free-nodes/releases/latest/download/list.meta.yml` |
-| Clash 原版 | `https://github.com/jocker-l/free-nodes/releases/latest/download/list.yml` |
-| V2Ray / 通用 | `https://github.com/jocker-l/free-nodes/releases/latest/download/list.txt` |
-| 明文（查看用） | `https://github.com/jocker-l/free-nodes/releases/latest/download/list_raw.txt` |
+| Clash Meta | `https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.yml` |
+| Clash 原版 | `https://github.com/learnLi/free-nodes/releases/latest/download/list.yml` |
+| V2Ray / 通用 | `https://github.com/learnLi/free-nodes/releases/latest/download/list.txt` |
+| 明文（查看用） | `https://github.com/learnLi/free-nodes/releases/latest/download/list_raw.txt` |
 
 **备用通道（output 分支）** — 走 raw.githubusercontent / jsDelivr：
 
 ```
-https://raw.githubusercontent.com/jocker-l/free-nodes/output/list.meta.yml
-https://cdn.jsdelivr.net/gh/jocker-l/free-nodes@output/list.meta.yml
+https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.yml
+https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.yml
 ```
 
 **配置片段（rule-providers / proxy-providers）**：
-`https://github.com/jocker-l/free-nodes/releases/latest/download/snippets/nodes.meta.yml`
+`https://github.com/learnLi/free-nodes/releases/latest/download/snippets/nodes.meta.yml`
 
 > ⚠️ **Clash 原版与 Clash Meta 的节点数差异很大**。原版 Clash 不支持 vless / hysteria2 / tuic，
 > 拿到的节点通常只有 Meta 的 1/5 左右。请优先使用 Meta 内核（Clash Verge Rev / Mihomo Party / FlClash 等）。
@@ -108,7 +108,7 @@ list.txt        list.yml             list.meta.yml        snippets/*.yml
 ## 本地开发
 
 ```bash
-git clone git@github.com:jocker-l/free-nodes.git --depth=1
+git clone git@github.com:learnLi/free-nodes.git --depth=1
 cd free-nodes
 pip install -r requirements.txt
 
