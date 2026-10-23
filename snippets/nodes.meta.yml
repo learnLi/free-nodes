@@ -255,17 +255,6 @@ proxies:
     headers:
       Host: cdn1.freegradely.xyz
     path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 06B8FE
-  network: ws
-  port: 10086
-  server: 120.48.133.162
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
-  ws-opts: {}
 - alterId: 64
   cipher: auto
   name: CN 🇨🇳 | @Raydikalx | 65879E
@@ -296,6 +285,16 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 3E5831
+  network: tcp
+  port: 443
+  server: de.zhou-yufan.com
+  servername: de.zhu-yufan.com
+  tls: true
+  type: vmess
+  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 4769A2
@@ -471,6 +470,19 @@ proxies:
   uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   ws-opts:
     path: /vmess/
+- alterId: 0
+  cipher: auto
+  name: 'EPODONIOS #894'
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: kr02.a0a.xyz
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
   name: 'EPODONIOS #896'
@@ -657,18 +669,6 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: 'EPODONIOS #914'
-  network: ws
-  port: 10086
-  server: 120.48.133.162
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- alterId: 0
-  cipher: auto
   name: 'EPODONIOS #915'
   network: tcp
   port: 8080
@@ -677,6 +677,16 @@ proxies:
   tls: false
   type: vmess
   uuid: 0b4313e0-4f7b-45fb-8552-a60d130c84d2
+- alterId: 0
+  cipher: auto
+  name: 'EPODONIOS #916'
+  network: tcp
+  port: 58202
+  server: 206.1.99.36
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e2adaa66-0a40-4e48-a53d-e349e7ac3b80
 - alterId: 0
   cipher: auto
   name: 'EPODONIOS #967'
@@ -698,6 +708,20 @@ proxies:
   tls: false
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: 'EPODONIOS #977'
+  network: ws
+  port: 443
+  server: 186.190.211.67
+  servername: pahobac.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: pahobac.org
+    path: /linkvws
 - alterId: 0
   cipher: auto
   name: FI 🇫🇮 | @Raydikalx | 507C5C
@@ -811,6 +835,20 @@ proxies:
     path: /ws?ed=2048
 - alterId: 0
   cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 391006
+  network: ws
+  port: 443
+  server: i2psm3knof5qjjix.v.3dns.vip
+  servername: null
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: I2PSm3Knof5qjjix.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
   name: HK 🇭🇰 | @Raydikalx | 549DC8
   network: ws
   port: 443
@@ -822,6 +860,21 @@ proxies:
   ws-opts:
     headers:
       Host: M01c7B2z26DtQGEe.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 5C0AC9
+  network: ws
+  port: 443
+  server: i2psm3knof5qjjix.v.3dns.vip
+  servername: i2psm3knof5qjjix.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: i2psm3knof5qjjix.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
@@ -1344,20 +1397,6 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: vmess-1853493052
-  network: ws
-  port: 80
-  server: 168.138.43.75
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: none
-    path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
   name: vmess-1855810756
@@ -5884,17 +5923,6 @@ proxies:
     headers:
       Host: curly-waterfall-509e-ppal03.wimiba9167.workers.dev
     path: /?ed=2560
-- encryption: mlkem768x25519plus.native.0rtt.ANymG3pbNTc9XneprZhNvxHRz5_PxHksy0egsbnZXFA
-  name: 'EPODONIOS #526'
-  network: tcp
-  port: 24
-  server: 188.132.174.14
-  tls: false
-  type: vless
-  uuid: 7d5cdbb1-9632-483a-9b50-27932cfa9390
-  ws-opts:
-    headers:
-      Host: play.google.com
 - encryption: none
   name: 'EPODONIOS #527'
   network: ws
@@ -10052,6 +10080,18 @@ proxies:
     headers:
       Host: proxy-1cu.pages.dev
     path: /fp=androidsecurity=tls
+- name: '🇦🇺 澳大利亚 | AUS #1'
+  network: ws
+  port: 443
+  server: 203.88.117.227
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chrome
 - name: '🇧🇬 保加利亚 | BGR #1'
   network: ws
   port: 443
@@ -10078,24 +10118,6 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇧🇬BG_1|2.6MB/s
-  network: ws
-  port: 443
-  server: 13.140.29.253
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/61.0.3163.79 Safari/537.36
-    path: /
-  xudp: true
 - name: '🇧🇬[www.v2nodes.com] vless-BG-3... #1'
   network: ws
   port: 443
@@ -10159,12 +10181,6 @@ proxies:
     headers:
       Host: 95.128.71.79
     path: /vless
-- name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  port: 8080
-  server: 212.74.39.214
-  tls: false
-  type: vless
-  uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
 - name: '🇨🇦[www.v2nodes.com] vless-CA-1... #4'
   network: tcp
   port: 8080
@@ -10316,6 +10332,18 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- name: '🇩🇪 德国 | DEU #1'
+  network: ws
+  port: 443
+  server: 179.255.190.21
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chrome
 - name: '🇩🇪 德国 | DEU #2'
   network: ws
   port: 8443
@@ -10365,6 +10393,20 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chrome
 - client-fingerprint: chrome
+  name: '🇩🇪 德国 | DEU #5'
+  network: ws
+  port: 443
+  server: 179.255.190.21
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
   name: '🇩🇪 德国 | DEU #6'
   network: ws
   port: 8443
@@ -10378,35 +10420,6 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-- client-fingerprint: chrome
-  name: 🇩🇪DE_3|1.2MB/s
-  network: ws
-  port: 443
-  server: 177.1.187.183
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/67.0.3396.99 Safari/537.36
-    path: /fp=chrome
-  xudp: true
-- name: 🇩🇪DE_4|1.4MB/s
-  network: ws
-  port: 443
-  server: 177.1.187.183
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chromefp=chrome
 - client-fingerprint: chrome
   name: 🇩🇪DE_7|3.5MB/s
   network: ws
@@ -10775,30 +10788,6 @@ proxies:
     headers:
       Host: 45.144.234.157
     path: /vless
-- name: '🇫🇮[www.v2nodes.com] vless-FI-1... #20'
-  network: ws
-  port: 443
-  server: 77.110.97.245
-  servername: ccc.010304.xyz
-  tls: false
-  type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  ws-opts:
-    headers:
-      Host: ccc.010304.xyz
-    path: /fp=chromesecurity=tls
-- name: '🇫🇮[www.v2nodes.com] vless-FI-1... #21'
-  network: ws
-  port: 443
-  server: 77.110.97.245
-  servername: ccc.010304.xyz
-  tls: true
-  type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  ws-opts:
-    headers:
-      Host: ccc.010304.xyz
-    path: /fp=chrome
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: grpc
@@ -11164,17 +11153,6 @@ proxies:
     headers:
       Host: lucasjow.us.ci
     path: /cart/docs/www/proxyip=108.160.132.132?ed#Telegram---DailyConfigs
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #5'
-  port: 11907
-  server: 195.58.144.56
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
 - name: '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
   port: 13779
   server: 47.238.210.5
@@ -11256,18 +11234,6 @@ proxies:
   type: vless
   uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   ws-opts:
-    path: /vless
-- name: '🇮🇳[www.v2nodes.com] vless-IN-1... #3'
-  network: ws
-  port: 14430
-  server: 5.253.29.254
-  servername: 5.253.29.254
-  tls: false
-  type: vless
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
-  ws-opts:
-    headers:
-      Host: 5.253.29.254
     path: /vless
 - name: '🇮🇳[www.v2nodes.com] vless-IN-1... #4'
   network: ws
@@ -11515,6 +11481,18 @@ proxies:
   network: ws
   port: 8443
   server: 188.240.213.98
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chrome
+- name: '🇰🇷 韩国 | KOR #1 #1'
+  network: ws
+  port: 443
+  server: 103.218.173.218
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -11994,12 +11972,6 @@ proxies:
   tls: true
   type: vless
   uuid: 92a4056a-38d6-49d0-8bd2-600e55af1e9f
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #9'
-  port: 443
-  server: 77.90.61.135
-  tls: false
-  type: vless
-  uuid: 8815925b-c7b8-4f94-9c24-9dc864f63a29
 - client-fingerprint: chrome
   name: '🇵🇱 波兰 | POL #1'
   network: ws
@@ -12228,17 +12200,6 @@ proxies:
     headers:
       Host: se-sto.862400.xyz
     path: /announcement?ed=2048fp=random
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
-  network: ws
-  port: 14430
-  server: 193.188.21.253
-  tls: false
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  ws-opts:
-    headers:
-      Host: 193.188.21.253
-    path: /vless
 - name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
   network: ws
   port: 2053
@@ -16558,6 +16519,12 @@ proxies:
   port: 20700
   server: 109.122.251.86
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 'EPODONIOS #23'
+  password: YF329KNGVTUZ1qrH
+  port: 443
+  server: 20.123.1.55
+  type: ss
 - cipher: aes-128-gcm
   name: 'EPODONIOS #24'
   password: 56806e1f518b161950dd19f5960aafbe
@@ -16617,12 +16584,6 @@ proxies:
   password: Y6R9pAtvxxzmGC
   port: 8888
   server: 15.204.246.107
-  type: ss
-- cipher: aes-256-gcm
-  name: 'EPODONIOS #36'
-  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
-  port: 18443
-  server: 195.58.49.34
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 'EPODONIOS #37'
@@ -17771,6 +17732,13 @@ proxies:
   server: 103.149.182.79
   type: ss
 - cipher: aes-256-gcm
+  name: '🇮🇹 意大利 | ITA #3'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.90
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
   name: 🇮🇹[www.v2nodes.com] ss-IT-1597...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
@@ -17783,6 +17751,12 @@ proxies:
   server: 202.50.253.36
   type: ss
 - cipher: aes-256-gcm
+  name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #12'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.81
+  type: ss
+- cipher: aes-256-gcm
   name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #14'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
@@ -17793,6 +17767,12 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 202.50.253.63
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #6'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.54
   type: ss
 - cipher: aes-256-gcm
   name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #7'
@@ -17823,6 +17803,12 @@ proxies:
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   port: 8388
   server: 191.223.221.53
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'
+  password: BeaUf9c0AEWH40Pu
+  port: 8388
+  server: 154.36.158.197
   type: ss
 - cipher: aes-256-gcm
   name: 🇰🇷KR-141.164.45.187-0265
