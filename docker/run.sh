@@ -18,6 +18,15 @@ BRANCH="probe-domestic"
 
 cd "$REPO" || { echo "仓库目录不存在：$REPO"; exit 1; }
 
+# 随机抖动：打散「固定周期自动外连」的特征。
+# 住宅 IP 每 6 小时固定向几百个境外 IP 发连接，形态很规整。
+JITTER_MAX=$((15 * 60))
+if [ "${INTERVAL_JITTER:-1}" = "1" ] && [ "$JITTER_MAX" -gt 0 ]; then
+  W=$(( $(od -An -N2 -tu2 /dev/urandom 2>/dev/null || echo $RANDOM) % JITTER_MAX ))
+  echo "[$(date '+%F %T')] 随机等待 ${W}s（打散周期性）"
+  sleep "$W"
+fi
+
 # ---- 1. 拉最新代码（probe.py 会随仓库更新，容器是挂载的，不用重建）----
 git config user.name 'NAS probe' 2>/dev/null || true
 git config user.email 'probe@nas.local' 2>/dev/null || true
