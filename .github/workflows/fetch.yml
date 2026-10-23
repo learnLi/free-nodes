@@ -313,23 +313,46 @@ jobs:
           else
             gh release edit "$TAG" --notes-file notes.md
           fi
+          # crosscheck job 拥有的资产。不是本步骤产的，一律不动。
+          # 名单必须写全：漏一个，那份订阅就会被当成「陈旧资产」删掉。
+          # 漏了 list.cn.yml 时，它会在每轮 CI 里短暂 404，
+          # 碰上 crosscheck 失败更是会一直缺失到下一轮成功为止。
+          CROSSCHECK_ASSETS="crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml list.meta.hk.yml"
+          # 清理前记下它们存在哪些，清理后逐一核对 ——
+          # 豁免名单写漏了，这一步会当场报错，而不是等到用户发现链接 404。
+          BEFORE=""
+          for a in $CROSSCHECK_ASSETS; do
+            if gh release view "$TAG" --json assets --jq '.assets[].name' | grep -qx "$a"; then
+              BEFORE="$BEFORE $a"
+            fi
+          done
+          echo "crosscheck 的资产（清理前存在）：${BEFORE:-（无）}"
+
           # 清理陈旧资产（本次不再生成的文件）。
           # 但要放过两类不属于本步骤的资产：
           #   1) 带时间戳的历史副本（probe_<ts>.csv / crosscheck_<ts>.*）——
           #      它们不在 dist/ 里，却是交叉比对按时间戳配对的依据
-          #   2) crosscheck job 产出的交叉表与「大陆可用」「香港桥接池」子集——
-          #      由另一个工作流上传，这里不能删
+          #   2) crosscheck job 产出的交叉表与三份子集——由另一个工作流上传，
+          #      这里不能删
           while read -r old; do
             [ -n "$old" ] || continue
             case "$old" in
               probe_[0-9]*_*.csv|crosscheck_[0-9]*_*.csv|crosscheck_[0-9]*_*.md) continue ;;
-              crosscheck.csv|crosscheck_summary.md|list.meta.cn.yml|list.meta.hk.yml) continue ;;
+              crosscheck.csv|crosscheck_summary.md|list.meta.cn.yml|list.cn.yml|list.meta.hk.yml) continue ;;
             esac
             if [ ! -f "$SRC/$old" ]; then
               echo "删除陈旧资产：$old"
               gh release delete-asset "$TAG" "$old" -y
             fi
           done < <(gh release view "$TAG" --json assets --jq '.assets[].name')
+
+          for a in $BEFORE; do
+            if ! gh release view "$TAG" --json assets --jq '.assets[].name' | grep -qx "$a"; then
+              echo "::error::误删了 crosscheck job 的产物：${a}"
+              exit 1
+            fi
+          done
+          echo "crosscheck 的资产核对无误"
           mapfile -t assets < <(find "$SRC" -type f | sort)
           if ! gh release upload "$TAG" "${assets[@]}" --clobber 2>&1 | tee upload.log; then
             echo "::error::上传失败，日志见 upload.log"
