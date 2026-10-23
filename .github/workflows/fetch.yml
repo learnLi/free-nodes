@@ -108,6 +108,9 @@ jobs:
           echo "已上传 ${#assets[@]} 个文件"
 
       - name: 同步产物到 output 分支
+        env:
+          # GITHUB_TOKEN 不会自动注入到 run: 的环境变量，必须显式映射
+          GH_PUSH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           rm -rf .output
@@ -119,7 +122,7 @@ jobs:
           git config user.email "actions@github.com"
           git add -A
           git commit -q -m "build: $(date '+%Y-%m-%d %H:%M:%S') 自动构建产物"
-          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" \
+          git push -f "https://x-access-token:${GH_PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
             HEAD:refs/heads/output
           echo "output 分支已更新"
 
