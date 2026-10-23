@@ -104,11 +104,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
+          # 不加「release 存在就上传、否则跳过」的守卫——那会让失败变成静默跳过，
+          # 而 Release 由 Fetch 工作流保证存在
           for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
             [ -f "$f" ] || continue
-            if gh release view latest >/dev/null 2>&1; then
-              gh release upload latest "$f" --clobber
-            fi
+            gh release upload latest "$f" --clobber
+            echo "  已上传 $f"
           done
           echo "已上传到 latest Release"
 
@@ -116,8 +117,15 @@ jobs:
         if: steps.cn.outputs.found == 'true'
         run: |
           set -euo pipefail
-          git fetch --depth=1 origin probe-domestic
-          git checkout -B probe-domestic origin/probe-domestic
+          # 由 push 触发时，checkout 出来的 HEAD 就是 probe-domestic 的最新提交；
+          # 手动触发时 HEAD 是 main，需要显式切过去。
+          # 用 FETCH_HEAD 而不是 origin/probe-domestic——浅克隆下
+          # remote-tracking ref 不一定存在。
+          if [ "${GITHUB_REF_NAME:-}" != "probe-domestic" ]; then
+            git fetch --depth=1 origin probe-domestic
+            git checkout -B probe-domestic FETCH_HEAD
+          fi
+          echo "当前分支: $(git rev-parse --abbrev-ref HEAD) @ $(git rev-parse --short HEAD)"
           cp crosscheck.csv crosscheck_summary.md list.meta.cn.yml .
           # 逐个 add：git add 只要有一个 pathspec 不匹配就整体失败，
           # 一个都不会被暂存
@@ -129,7 +137,8 @@ jobs:
           else
             git -c user.name="GitHub Actions" -c user.email="actions@github.com" \
               commit -m "crosscheck: $(date '+%Y-%m-%d %H:%M:%S')"
-            git push origin probe-domestic
+            git push origin HEAD:refs/heads/probe-domestic
+            echo "已推送到 probe-domestic"
           fi
 
       - name: 上传运行日志
