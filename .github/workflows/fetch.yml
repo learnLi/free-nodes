@@ -108,6 +108,13 @@ jobs:
             echo "$f: $(($(wc -l < "$f") - 1)) 个节点被剔除"
           done
 
+      # 本轮的时间戳：代表「这批节点的版本」。必须在 Stage 1 之前生成——
+      # Stage 1 要用它给产物命名。放在这里（探测之后、裁剪之前）刚好。
+      - name: 生成本轮时间戳
+        run: |
+          date -u '+%Y%m%d_%H%M' > .ts
+          echo "本轮时间戳：$(cat .ts)"
+
       # Stage 1：用美国侧的多轮探测历史筛出「确实能用」的子集，交给 NAS 做国内探测。
       # 单轮探测噪声大——同一批地址连续几轮测下来，单轮说「活」的结果并不稳定。
       # 跨轮一致的才是真信号。
@@ -136,6 +143,10 @@ jobs:
             --min-rounds "${STAGE1_MIN_ROUNDS:-2}" \
             --report stage1.csv
           python3 ./scripts/validate_config.py list.meta.us.yml
+          if [ ! -s .ts ]; then
+            echo "::error::缺少本轮时间戳文件 .ts"
+            exit 1
+          fi
           cp list.meta.us.yml "list.meta.us.$(cat .ts).yml"
           cp stage1.csv "stage1.$(cat .ts).csv"
 
@@ -177,8 +188,6 @@ jobs:
           ls -la dist/ dist-snippets/
           # 本轮的时间戳：代表「这批节点的版本」。NAS 侧用同一批列表探测，
           # 才能和本轮的 probe.csv 严格对齐（否则两边节点池不是同一批）
-          date -u '+%Y%m%d_%H%M' > .ts
-          echo "本轮时间戳：$(cat .ts)"
 
       - name: 生成 Release 说明
         run: |
@@ -285,13 +294,16 @@ jobs:
             gh release edit "$TAG" --notes-file notes.md
           fi
           # 清理陈旧资产（本次不再生成的文件）。
-          # 但要放过带时间戳的历史副本：probe_<ts>.csv / crosscheck_<ts>.*
-          # 它们不在 dist/ 里，却是交叉比对按时间戳配对的依据。
+          # 但要放过两类不属于本步骤的资产：
+          #   1) 带时间戳的历史副本（probe_<ts>.csv / crosscheck_<ts>.*）——
+          #      它们不在 dist/ 里，却是交叉比对按时间戳配对的依据
+          #   2) crosscheck job 产出的交叉表与「大陆可用」子集——
+          #      由另一个工作流上传，这里不能删
           while read -r old; do
             [ -n "$old" ] || continue
             case "$old" in
-              probe_[0-9]*_*.csv|crosscheck_[0-9]*_*.csv|crosscheck_[0-9]*_*.md)
-                continue ;;
+              probe_[0-9]*_*.csv|crosscheck_[0-9]*_*.csv|crosscheck_[0-9]*_*.md) continue ;;
+              crosscheck.csv|crosscheck_summary.md|list.meta.cn.yml) continue ;;
             esac
             if [ ! -f "$SRC/$old" ]; then
               echo "删除陈旧资产：$old"
@@ -299,7 +311,12 @@ jobs:
             fi
           done < <(gh release view "$TAG" --json assets --jq '.assets[].name')
           mapfile -t assets < <(find "$SRC" -type f | sort)
-          gh release upload "$TAG" "${assets[@]}" --clobber
+          if ! gh release upload "$TAG" "${assets[@]}" --clobber 2>&1 | tee upload.log; then
+            echo "::error::上传失败，日志见 upload.log"
+            gh release upload latest upload.log --clobber || true
+            exit 1
+          fi
+          rm -f upload.log
           echo "已上传 ${#assets[@]} 个文件到 $TAG"
 
       # 带时间戳的美国侧探测结果。交叉比对按时间戳与国内侧数据配对，
@@ -340,7 +357,12 @@ jobs:
             fi
           done < <(gh release view "$TAG" --json assets --jq '.assets[].name')
           mapfile -t assets < <(find "$SRC" -type f | sort)
-          gh release upload "$TAG" "${assets[@]}" --clobber
+          if ! gh release upload "$TAG" "${assets[@]}" --clobber 2>&1 | tee upload.log; then
+            echo "::error::上传失败，日志见 upload.log"
+            gh release upload latest upload.log --clobber || true
+            exit 1
+          fi
+          rm -f upload.log
           echo "已上传 ${#assets[@]} 个文件到 $TAG"
 
       - name: 自检：产出必须齐全且指向正确
