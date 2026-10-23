@@ -51,8 +51,8 @@ TLS_REJECT_MARKERS = (
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description='按探测结果裁剪 Clash 配置')
-    p.add_argument('--input', required=True, help='输入的 Clash YAML')
-    p.add_argument('--output', required=True, help='裁剪后的输出 YAML')
+    p.add_argument('--input', default='', help='输入的 Clash YAML（留空则只处理 V2Ray 列表）')
+    p.add_argument('--output', default='', help='裁剪后的输出 YAML')
     p.add_argument('--probe', default='probe.csv', help='probe.csv 路径')
     p.add_argument('--keep-plaintext-proxy', action='store_true',
                    help='保留明文 HTTP / SOCKS 代理节点')
@@ -60,7 +60,68 @@ def parse_args() -> argparse.Namespace:
                    help='保留 TCP 超时的节点（默认保留，此开关仅为显式声明）')
     p.add_argument('--removed-report', default='pruned.csv',
                    help='被剔除节点的记录文件')
+    p.add_argument('--v2ray-input', default='',
+                   help='额外处理 V2Ray 明文链接列表（每行一条），按同样规则剔除')
+    p.add_argument('--v2ray-output', default='',
+                   help='V2Ray 明文链接列表的输出路径')
     return p.parse_args()
+
+
+# ---------------------------------------------------------------- V2Ray 明文链接
+
+def extract_addr(url: str) -> Tuple[str, int]:
+    """从一条 V2Ray 明文链接里取出 (server, port)。取不到就返回 ('', 0)。"""
+    import base64
+    import json
+    import re
+    from urllib.parse import unquote, urlparse
+    try:
+        if url.startswith('vmess://'):
+            raw = url[len('vmess://'):].split('#')[0]
+            raw += '=' * ((4 - len(raw) % 4) % 4)
+            data = json.loads(base64.b64decode(raw).decode('utf-8', 'ignore'))
+            return str(data.get('add', '')), int(data.get('port') or 0)
+        if url.startswith('ssr://'):
+            raw = url[len('ssr://'):].split('#')[0]
+            raw += '=' * ((4 - len(raw) % 4) % 4)
+            body = base64.urlsafe_b64decode(raw).decode('utf-8', 'ignore')
+            parts = body.split(':')
+            if len(parts) >= 2:
+                return parts[0], int(parts[1] or 0)
+            return '', 0
+        parsed = urlparse(url)
+        host = parsed.hostname or ''
+        return host, int(parsed.port or 0)
+    except Exception:  # noqa: BLE001 - 单条链接解析失败不应中断整批处理
+        return '', 0
+
+
+def prune_v2ray(path: str, out_path: str, probe: Dict[Tuple[str, int], Dict[str, str]],
+                keep_plaintext: bool) -> int:
+    """按同样规则裁剪 V2Ray 明文链接列表，返回剔除条数。"""
+    removed = 0
+    kept_lines: List[str] = []
+    with open(path, encoding='utf-8') as f:
+        lines = f.read().splitlines()
+    for url in lines:
+        url = url.strip()
+        if not url:
+            continue
+        scheme = url.split('://', 1)[0].lower() if '://' in url else ''
+        if scheme in PLAINTEXT_TYPES and not keep_plaintext:
+            removed += 1
+            continue
+        server, port = extract_addr(url)
+        row = probe.get((server, port)) if server else None
+        if row is not None and row.get('TCP') == 'N':
+            err = row.get('错误') or ''
+            if any(m.lower() in err.lower() for m in DEAD_ERROR_MARKERS):
+                removed += 1
+                continue
+        kept_lines.append(url)
+    with open(out_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(kept_lines) + ('\n' if kept_lines else ''))
+    return removed
 
 
 def load_probe(path: str) -> Dict[Tuple[str, int], Dict[str, str]]:
@@ -113,11 +174,23 @@ def decide(proxy: Dict[str, Any], probe: Dict[Tuple[str, int], Dict[str, str]],
 def main() -> int:
     import yaml
     args = parse_args()
+    probe = load_probe(args.probe)
+
+    # ---- V2Ray 明文链接列表 ----
+    if args.v2ray_input and args.v2ray_output:
+        if os.path.exists(args.v2ray_input):
+            n = prune_v2ray(args.v2ray_input, args.v2ray_output, probe,
+                            args.keep_plaintext_proxy)
+            print("裁剪 %s：剔除 %d 条链接" % (args.v2ray_input, n))
+        else:
+            print("跳过 V2Ray 列表（找不到 %s）" % args.v2ray_input)
+
+    if not args.input:
+        return 0
     if not os.path.exists(args.input):
         print("找不到输入文件：%s" % args.input)
         return 1
 
-    probe = load_probe(args.probe)
     with open(args.input, encoding='utf-8') as f:
         text = f.read()
     data = yaml.safe_load(text) or {}

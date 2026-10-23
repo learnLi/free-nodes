@@ -9,7 +9,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, REPO_ROOT)
 os.chdir(REPO_ROOT)
 
-from prune import decide, load_probe
+from prune import decide, load_probe, extract_addr, prune_v2ray
 
 FAILED = []
 
@@ -91,6 +91,60 @@ print()
 print("=== 7. IPv6 方括号 ===")
 check("带方括号的 server 能匹配", keep(
     {'name': 'n', 'type': 'vless', 'server': '[1.1.1.1]', 'port': 443}, PROBE), True)
+
+print()
+print("=== 8. V2Ray 链接的地址提取 ===")
+import base64
+import json
+
+
+def b64(s):
+    return base64.b64encode(s.encode()).decode()
+
+
+vmess = 'vmess://' + b64(json.dumps(
+    {'v': '2', 'ps': 'n', 'add': '1.2.3.4', 'port': '443', 'id': 'x'}))
+ssr = 'ssr://' + base64.urlsafe_b64encode(
+    b'1.2.3.4:443:origin:aes-128-cfb:tls1.2_ticket_auth').decode()
+check("vmess 链接取地址", extract_addr(vmess), ('1.2.3.4', 443))
+check("ssr 链接取地址", extract_addr(ssr), ('1.2.3.4', 443))
+check("trojan 链接取地址",
+      extract_addr('trojan://pw@1.2.3.4:443?sni=a.com#name'), ('1.2.3.4', 443))
+check("vless 链接取地址",
+      extract_addr('vless://uuid@1.2.3.4:443?type=ws#name'), ('1.2.3.4', 443))
+check("ss 链接取地址",
+      extract_addr('ss://' + b64('aes-128-gcm:pw') + '@1.2.3.4:443#name'),
+      ('1.2.3.4', 443))
+check("垃圾输入不抛异常", extract_addr('not-a-url'), ('', 0))
+
+print()
+print("=== 9. V2Ray 列表裁剪 ===")
+with tempfile.TemporaryDirectory() as td:
+    src = os.path.join(td, 'raw.txt')
+    dst = os.path.join(td, 'out.txt')
+    with open(src, 'w', encoding='utf-8') as f:
+        f.write('\n'.join([
+            'http://u:p@11.1.1.1:9002',
+            'socks5://u:p@11.1.1.1:1080',
+            'trojan://pw@5.6.7.8:443#dead',      # Connection refused -> 剔除
+            'trojan://pw@9.9.9.9:443#timeout',   # timeout -> 保留
+            'trojan://pw@1.1.1.1:443#alive',     # 正常 -> 保留
+        ]) + '\n')
+    n = prune_v2ray(src, dst, PROBE, keep_plaintext=False)
+    out = open(dst, encoding='utf-8').read().splitlines()
+    check("剔除 3 条", n, 3)
+    check("剩余 2 条", len(out), 2)
+    check("timeout 的节点保留", any('timeout' in x for x in out), True)
+    check("正常节点保留", any('alive' in x for x in out), True)
+    check("明文代理被剔除", any('http://' in x or 'socks5://' in x for x in out), False)
+
+with tempfile.TemporaryDirectory() as td:
+    src = os.path.join(td, 'raw.txt')
+    dst = os.path.join(td, 'out.txt')
+    with open(src, 'w', encoding='utf-8') as f:
+        f.write('http://u:p@11.1.1.1:9002\ntrojan://pw@1.1.1.1:443#alive\n')
+    n = prune_v2ray(src, dst, PROBE, keep_plaintext=True)
+    check("保留明文代理时只剔除确凿死的", n, 0)
 
 print()
 if FAILED:

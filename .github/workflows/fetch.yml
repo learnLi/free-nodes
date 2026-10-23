@@ -90,6 +90,18 @@ jobs:
               --removed-report "pruned/$(echo "$f" | tr '/' '_').csv"
             mv "$f.pruned" "$f"
           done
+          # V2Ray 明文链接列表同样裁剪（明文开放代理 / 确凿已死）
+          if [ -f list_raw.txt ]; then
+            cp list_raw.txt list_raw.full.txt
+            python ./prune.py \
+              --probe probe.csv \
+              --removed-report pruned/list_raw.txt.csv \
+              --v2ray-input list_raw.txt \
+              --v2ray-output list_raw.pruned.txt
+            mv list_raw.pruned.txt list_raw.txt
+            # 重新生成 Base64 订阅
+            base64 -w0 list_raw.txt > list.txt
+          fi
           echo "--- 裁剪结果汇总 ---"
           for f in pruned/*.csv; do
             [ -f "$f" ] || continue
