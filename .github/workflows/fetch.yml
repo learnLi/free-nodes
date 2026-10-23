@@ -1,0 +1,135 @@
+name: Fetch
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 表达式生成 https://crontab.guru/
+    # 每 3 小时一次，分钟数 17 以避开上游及整点高峰
+    - cron: '17 */3 * * *'
+  push:
+    paths:
+      - 'sources.list'
+      - 'config.yml'
+      - 'fetch_config.yml'
+      - 'abpwhite.txt'
+      - 'fetch.py'
+      - 'dynamic.py'
+      - 'requirements.txt'
+      - '.github/workflows/fetch.yml'
+
+# 同一分支上的手动触发与定时触发互斥，避免两个任务同时推送
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: 迁出代码
+        uses: actions/checkout@v7
+
+      - name: 设置时区
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+      - name: 安装 Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 抓取节点
+        run: python ./fetch.py
+
+      - name: 收集产物
+        id: collect
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          # 顶层订阅文件
+          for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv; do
+            if [ -f "$f" ]; then cp "$f" dist/; fi
+          done
+          # 配置片段
+          cp -r snippets dist/snippets
+          # 去掉 dist 内不需要入库的模板残留
+          rm -f dist/snippets/_config.yml
+          echo "文件数：$(find dist -type f | wc -l)"
+          echo "体积：$(du -sh dist | cut -f1)"
+          ls -la dist/
+
+      - name: 生成 Release 说明
+        id: notes
+        run: |
+          set -euo pipefail
+          total=$(tail -n 1 list_result.csv | cut -d, -f3)
+          {
+            echo "自动生成于 $(date '+%Y-%m-%d %H:%M:%S %Z')"
+            echo
+            echo "合并去重后节点总数：**${total:-0}**"
+            echo
+            echo "### 订阅链接"
+            echo
+            echo '```'
+            echo "Clash Meta : https://github.com/${{ github.repository }}/releases/latest/download/list.meta.yml"
+            echo "Clash 原版 : https://github.com/${{ github.repository }}/releases/latest/download/list.yml"
+            echo "V2Ray/通用 : https://github.com/${{ github.repository }}/releases/latest/download/list.txt"
+            echo '```'
+          } > notes.md
+          cat notes.md
+
+      - name: 上传产物到 Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: latest
+        run: |
+          set -euo pipefail
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "自动构建产物" \
+              --notes-file notes.md \
+              --target "$GITHUB_SHA"
+          else
+            gh release edit "$TAG" --notes-file notes.md
+          fi
+          # 用 find 展开，避免 gh 把目录当成单个资产
+          mapfile -t assets < <(find dist -type f | sort)
+          gh release upload "$TAG" "${assets[@]}" --clobber
+          echo "已上传 ${#assets[@]} 个文件"
+
+      - name: 同步产物到 output 分支
+        run: |
+          set -euo pipefail
+          rm -rf .output
+          mkdir -p .output
+          cp -r dist/. .output/
+          cd .output
+          git init -q -b output
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -q -m "build: $(date '+%Y-%m-%d %H:%M:%S') 自动构建产物"
+          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" \
+            HEAD:refs/heads/output
+          echo "output 分支已更新"
+
+      - name: 上传运行日志
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: fetch-logs
+          path: |
+            notes.md
+            list_result.csv
+          retention-days: 7
+          if-no-files-found: ignore

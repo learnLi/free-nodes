@@ -1,0 +1,72 @@
+name: Sync upstream config
+
+# 只同步上游「配置类」文件，代码（fetch.py / dynamic.py）由本仓库自行维护，
+# 避免上游更新把本地改动冲掉。详见 README 的「上游同步策略」。
+
+on:
+  schedule:
+    # 每天 03:23 (Asia/Shanghai)，避开抓取任务的整点时段
+    - cron: '23 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: 设置时区
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+      - name: 迁出代码
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: 拉取上游快照
+        run: |
+          git remote remove upstream 2>/dev/null || true
+          git remote add upstream https://github.com/peasoft/NoMoreWalls.git
+          git fetch --depth=1 upstream master
+          echo "上游 commit：$(git rev-parse upstream/master)"
+
+      - name: 计算差异
+        id: diff
+        run: |
+          set -euo pipefail
+          # 只同步这些「配置类」文件；fetch.py / dynamic.py 绝不覆盖
+          FILES="sources.list config.yml fetch_config.yml abpwhite.txt"
+          git checkout upstream/master -- $FILES
+          if git diff --quiet -- $FILES; then
+            echo "无变更" >> "$GITHUB_OUTPUT"
+          else
+            echo "有变更" >> "$GITHUB_OUTPUT"
+            git diff --stat -- $FILES | tee diff.txt
+            git diff -- $FILES | head -200 >> diff.txt
+          fi
+
+      - name: 提交
+        if: steps.diff.outputs.changed == '有变更'
+        run: |
+          set -euo pipefail
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add sources.list config.yml fetch_config.yml abpwhite.txt
+          git commit -m "sync upstream $(date '+%Y-%m-%d %H:%M:%S')  ($(git rev-parse --short upstream/master))"
+          git show --stat --oneline HEAD | tee -a diff.txt
+
+      - name: 推送
+        if: steps.diff.outputs.changed == '有变更'
+        run: |
+          set -euo pipefail
+          git pull --rebase origin master || true
+          git push origin master
