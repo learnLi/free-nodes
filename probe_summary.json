@@ -1,17 +1,17 @@
 {
-  "total": 1799,
+  "total": 1797,
   "egress": {
-    "ip": "172.184.211.151",
+    "ip": "52.242.243.199",
     "method": "direct",
     "country": "United States",
-    "city": "San Jose",
+    "city": "Des Moines",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 1752,
-  "tcp_ok": 1568,
-  "tcp_rate": "89.5%",
-  "tls_applicable": 989,
-  "tls_ok": 865,
+  "tcp_applicable": 1750,
+  "tcp_ok": 1579,
+  "tcp_rate": "90.2%",
+  "tls_applicable": 986,
+  "tls_ok": 863,
   "tls_rate": "87.5%",
   "quic_applicable": 47,
   "quic_ok": 1,
@@ -22,21 +22,21 @@
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 2,
+      "ms": 7,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 20,
+      "ms": 12,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 18,
+      "ms": 29,
       "err": ""
     }
   ],
@@ -46,28 +46,32 @@
       "ok": 3
     },
     "http": {
-      "total": 96,
-      "ok": 95
+      "total": 84,
+      "ok": 84
     },
     "hysteria": {
       "total": 2,
       "ok": 0
     },
+    "socks5": {
+      "total": 2,
+      "ok": 1
+    },
     "ss": {
       "total": 273,
-      "ok": 223
+      "ok": 230
     },
     "trojan": {
       "total": 187,
       "ok": 171
     },
     "vless": {
-      "total": 950,
-      "ok": 901
+      "total": 956,
+      "ok": 911
     },
     "vmess": {
-      "total": 241,
-      "ok": 175
+      "total": 243,
+      "ok": 179
     }
   },
   "by_type_quic": {

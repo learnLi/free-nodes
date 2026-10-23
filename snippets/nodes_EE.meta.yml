@@ -20,15 +20,9 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chromefp=chrome
-- name: 🇪🇪EE_1|1.7MB/s
+- name: 🇪🇪EE_1|3.0MB/s
   port: 9443
-  server: 95.153.32.2
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇪🇪EE_2|1.9MB/s
-  port: 9443
-  server: 192.159.101.174
+  server: 95.153.31.66
   skip-cert-verify: true
   tls: true
   type: http
