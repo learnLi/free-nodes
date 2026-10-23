@@ -29,6 +29,10 @@ import sys
 from collections import Counter, defaultdict
 from typing import Any, Dict, List, Optional, Tuple
 
+# 复用 prune.py 里的组引用清理逻辑，避免两处实现分叉
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from prune import clean_group_refs  # noqa: E402
+
 # 美国侧：只有对端主动回 RST 才算确凿已死
 US_DEAD_MARKERS = ('refused', 'reset by peer')
 
@@ -207,6 +211,11 @@ def main() -> int:
                 if (str(p.get('server', '')).strip('[]'),
                     str(p.get('port', ''))) in keep_addrs]
         data['proxies'] = kept
+        # 剔除节点后必须同步清理 proxy-groups 的引用，否则 Clash / Mihomo
+        # 会报 "proxy <name> not found" 并拒绝加载整个配置
+        dangling = clean_group_refs(data, kept)
+        if dangling:
+            print("同步清理了 %d 处失效的 proxy-group 引用" % dangling)
         header = ''
         if text.startswith('#'):
             for line in text.splitlines():

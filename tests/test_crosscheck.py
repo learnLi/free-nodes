@@ -113,6 +113,42 @@ with tempfile.TemporaryDirectory() as td:
     check("摘要含分协议", '分协议' in md, True)
 
 print()
+print("=== 6. 端到端：输出子集时会清理组引用 ===")
+# 回归：crosscheck.py 与 prune.py 曾各自漏掉这一步，导致产出的子集
+# 配置里有指向已剔除节点的引用，Clash / Mihomo 会拒绝加载
+import yaml
+with tempfile.TemporaryDirectory() as td:
+    lst = os.path.join(td, 'list.yml')
+    with open(lst, 'w', encoding='utf-8') as f:
+        f.write("proxies:\n"
+                "- name: a\n  type: vless\n  server: 1.1.1.1\n  port: 443\n"
+                "- name: b\n  type: vless\n  server: 2.2.2.2\n  port: 443\n"
+                "proxy-groups:\n"
+                "- name: g1\n  type: select\n  proxies: [a, b]\n")
+    us_csv = os.path.join(td, 'us.csv')
+    cn_csv = os.path.join(td, 'cn.csv')
+    with open(us_csv, 'w', encoding='utf-8', newline='') as f:
+        f.write("名称,类型,服务器,端口,TCP,TLS,耗时ms,错误\n")
+        f.write("a,vless,1.1.1.1,443,Y,Y,10,\n")
+        f.write("b,vless,2.2.2.2,443,Y,Y,10,\n")
+    with open(cn_csv, 'w', encoding='utf-8', newline='') as f:
+        f.write("名称,类型,服务器,端口,TCP,TLS,耗时ms,错误\n")
+        f.write("a,vless,1.1.1.1,443,Y,Y,10,\n")
+        f.write("b,vless,2.2.2.2,443,N,,10,Connection reset by peer\n")
+    out_list = os.path.join(td, 'out.yml')
+    r = subprocess.run([sys.executable, os.path.join(REPO_ROOT, 'scripts', 'crosscheck.py'),
+                        '--us', us_csv, '--cn', cn_csv,
+                        '--out-csv', os.path.join(td, 'x.csv'),
+                        '--out-md', os.path.join(td, 'x.md'),
+                        '--input-list', lst, '--out-cn-list', out_list],
+                       capture_output=True, text=True, encoding='utf-8')
+    check("退出码 0", r.returncode, 0)
+    d = yaml.safe_load(open(out_list, encoding='utf-8'))
+    check("子集只剩 1 个节点", [p['name'] for p in d['proxies']], ['a'])
+    check("组的引用同步清理", d['proxy-groups'][0]['proxies'], ['a'])
+    check("输出里提到清理数量", '失效的 proxy-group 引用' in r.stdout, True)
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)
