@@ -1,18 +1,18 @@
 {
   "total": 1799,
   "egress": {
-    "ip": "57.154.5.36",
+    "ip": "68.154.116.71",
     "method": "direct",
     "country": "United States",
-    "city": "Phoenix",
+    "city": "Chase City",
     "org": "Microsoft Corporation"
   },
   "tcp_applicable": 1752,
-  "tcp_ok": 1571,
-  "tcp_rate": "89.7%",
-  "tls_applicable": 987,
-  "tls_ok": 863,
-  "tls_rate": "87.4%",
+  "tcp_ok": 1570,
+  "tcp_rate": "89.6%",
+  "tls_applicable": 988,
+  "tls_ok": 866,
+  "tls_rate": "87.7%",
   "quic_applicable": 47,
   "quic_ok": 1,
   "quic_rate": "2.1%",
@@ -22,21 +22,21 @@
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 11,
+      "ms": 6,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 3,
+      "ms": 6,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 52,
+      "ms": 8,
       "err": ""
     }
   ],
@@ -55,19 +55,19 @@
     },
     "ss": {
       "total": 273,
-      "ok": 226
+      "ok": 227
     },
     "trojan": {
       "total": 187,
-      "ok": 170
+      "ok": 171
     },
     "vless": {
       "total": 950,
-      "ok": 904
+      "ok": 902
     },
     "vmess": {
       "total": 241,
-      "ok": 174
+      "ok": 173
     }
   },
   "by_type_quic": {
