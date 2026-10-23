@@ -473,16 +473,17 @@ proxies:
     path: /vmess/
 - alterId: 0
   cipher: auto
-  name: 'EPODONIOS #895'
+  name: 'EPODONIOS #894'
   network: ws
-  port: 20086
-  server: 183.109.131.75
+  port: 80
+  server: 132.145.80.230
+  servername: kr02.a0a.xyz
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
   ws-opts:
-    path: /
+    path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
   name: 'EPODONIOS #896'
@@ -691,6 +692,16 @@ proxies:
   uuid: 0b4313e0-4f7b-45fb-8552-a60d130c84d2
 - alterId: 0
   cipher: auto
+  name: 'EPODONIOS #916'
+  network: tcp
+  port: 58202
+  server: 206.1.99.36
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e2adaa66-0a40-4e48-a53d-e349e7ac3b80
+- alterId: 0
+  cipher: auto
   name: 'EPODONIOS #967'
   network: tcp
   port: 59236
@@ -710,6 +721,20 @@ proxies:
   tls: false
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: 'EPODONIOS #977'
+  network: ws
+  port: 443
+  server: 186.190.211.67
+  servername: pahobac.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: pahobac.org
+    path: /linkvws
 - alterId: 0
   cipher: auto
   name: FI 🇫🇮 | @Raydikalx | 507C5C
@@ -997,19 +1022,6 @@ proxies:
   uuid: 4b89551a-7b7c-442b-b790-207e48229045
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 3C89BD
-  network: ws
-  port: 443
-  server: UcKniXjfd2JOKBmx.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: UcKniXjfd2JOKBmx.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
   name: MY 🇲🇾 | @Raydikalx | 4CDFDF
   network: tcp
   port: 2083
@@ -1062,20 +1074,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 113ae61b-d6da-4d08-9221-48595cb8436c
-- alterId: 0
-  cipher: auto
-  name: RO 🇷🇴 | @Raydikalx | 1CD6CE
-  network: ws
-  port: 11901
-  server: 78.154.103.45
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 1e9edd93-f160-4a4a-b369-2e5194b1932a
-  ws-opts:
-    headers:
-      Host: 78.154.103.45
-    path: /Telegram=@AmyraxVPN
 - alterId: 0
   cipher: auto
   name: SG 🇸🇬 | @Raydikalx | C5D91D
@@ -1536,15 +1534,6 @@ proxies:
     headers:
       Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
     path: /ws-vmess
-- alterId: 64
-  cipher: auto
-  name: 🇨🇳_CN_中国
-  network: tcp
-  port: 50002
-  server: 112.132.215.108
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
   name: 🇩🇪DE-57.129.24.124-0983
@@ -1703,21 +1692,6 @@ proxies:
   ws-opts:
     headers:
       Host: ADncdOvLHR4M1P36.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇭🇰 香港4|@ripaojiedian
-  network: ws
-  port: 443
-  server: aZW0eunYVdvRe73k.v.3dns.vip
-  servername: aZW0eunYVdvRe73k.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: aZW0eunYVdvRe73k.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
@@ -3966,11 +3940,6 @@ proxies:
   server: lv1.dedushka.top
   sni: lv1.dedushka.top
   type: trojan
-- name: '🏳[www.v2nodes.com] trojan- #9'
-  password: 5931134d1cde66bf83a54acdfebe7ab2
-  port: 443
-  server: 47.250.84.25
-  type: trojan
 - cipher: chacha20-ietf-poly1305
   name: 'EPODONIOS #10'
   password: Ds3hlPero5ov6gae
@@ -3988,6 +3957,12 @@ proxies:
   password: BhYMkBpjAjE6ixSw
   port: 443
   server: 20.164.211.25
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 'EPODONIOS #13'
+  password: zziXHDOFXc4qRjoj
+  port: 443
+  server: 20.107.184.151
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 'EPODONIOS #14'
@@ -4109,6 +4084,12 @@ proxies:
   port: 8888
   server: 15.204.246.107
   type: ss
+- cipher: aes-256-gcm
+  name: 'EPODONIOS #36'
+  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+  port: 18443
+  server: 195.58.49.34
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 'EPODONIOS #37'
   password: 8zw5j9h
@@ -4179,12 +4160,6 @@ proxies:
   name: 'EPODONIOS #925'
   password: Y6R9pAtvxxzmGC
   port: 9090
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
-  name: 'EPODONIOS #926'
-  password: lGqs95QkFHo2NV
-  port: 5498
   server: 141.164.45.187
   type: ss
 - cipher: chacha20-ietf-poly1305
@@ -4895,12 +4870,6 @@ proxies:
   port: 19999
   server: 185.176.204.18
   type: ss
-- cipher: aes-256-gcm
-  name: 🇪🇬[www.v2nodes.com] ss-EG-1599...
-  password: pKEW8JPByTVTLtM
-  port: 443
-  server: 38.54.59.102
-  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇪🇸ES-113.30.149.199-0096
   password: JIJhc9gJ9Y7i
@@ -5263,12 +5232,6 @@ proxies:
   server: 202.50.253.81
   type: ss
 - cipher: aes-256-gcm
-  name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #14'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.27
-  type: ss
-- cipher: aes-256-gcm
   name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
@@ -5285,6 +5248,12 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 202.50.253.72
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #8'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.18
   type: ss
 - cipher: aes-256-gcm
   name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #9'
@@ -5321,6 +5290,12 @@ proxies:
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1602... #1'
+  password: 585f0e10-7b51-4f2e-a13d-479b045171bd
+  port: 22078
+  server: ruot.ayucloudservices.nl
   type: ss
 - cipher: aes-256-gcm
   name: 🇲🇽[www.v2nodes.com] ss-MX-1564...
