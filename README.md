@@ -203,6 +203,95 @@ GitHub Actions（美国）                     NAS（国内）
 NAS 侧脚本：[`scripts/probe_domestic.sh`](scripts/probe_domestic.sh)
 （只依赖 `git` + `python3`，不需要 Docker、不需要 GitHub Actions）
 
+### 部署到 NAS
+
+**不需要做成独立项目** —— 仓库里已经有现成脚本，NAS 上放一个文件就能跑。
+
+#### 方式一：原生脚本（最简单）
+
+NAS 需要：SSH、`python3`、`pip`、能直连境外。装依赖：
+
+```bash
+apt-get install -y python3-pip
+python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    aioquic PyYAML requests requests-file typing_extensions
+```
+
+（`aioquic` 依赖 `cryptography` 和 `pylsqpack`，aarch64 / arm64 都有预编译轮子，不用编译。）
+
+然后克隆仓库并跑：
+
+```bash
+git clone --depth=1 https://github.com/learnLi/free-nodes.git
+cd free-nodes
+INTERVAL_JITTER=1 NO_PUSH=1 sh scripts/probe_domestic.sh   # 先试跑，不推送
+```
+
+#### 方式二：Docker（环境更干净）
+
+[`docker/Dockerfile`](docker/Dockerfile) + [`docker/entrypoint.sh`](docker/entrypoint.sh)
++ [`docker/run.sh`](docker/run.sh)。容器只做探测（不含 git），推送由宿主机负责：
+
+```bash
+docker build -t free-nodes-probe -f docker/Dockerfile .
+sh docker/run.sh /volume1/free-nodes
+```
+
+> 用 `python:3.12-slim` 而不是 alpine：alpine 的 musl 轮子覆盖不如 Debian 全，
+> `cryptography` 有时需要本地编译。
+
+#### 定时任务
+
+```cron
+# 每 6 小时一次；脚本内部有 0~15 分钟随机抖动，打散固定周期的外连特征
+17 */6 * * * /root/free-nodes/run_probe.sh >> /root/free-nodes/probe.log 2>&1
+```
+
+#### 推回 GitHub
+
+NAS 需要一把能 push 的 SSH 密钥：
+
+```bash
+ssh-keygen -t ed25519 -C 'nas-probe' -f ~/.ssh/nas_probe -N ''
+cat ~/.ssh/nas_probe.pub
+```
+
+把公钥加到 **GitHub 账号的 Settings → SSH and GPG keys**（不是仓库的 deploy key ——
+deploy key 需要仓库 admin 权限，而账号自己的 SSH key 只要账号所有者就能加），
+然后：
+
+```sshconfig
+Host github.com
+  User git
+  IdentityFile ~/.ssh/nas_probe
+  IdentitiesOnly yes
+```
+
+> 建议同时用 `ssh-keyscan github.com` 固定主机密钥，并与 GitHub 官方公布的指纹核对
+> （ED25519 `SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM`，
+> RSA `SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU`）。
+
+### 实测参考：Orange Pi 3（aarch64）+ Ubuntu 22.04
+
+| 项 | 结果 |
+| :- | :- |
+| 出口 IP | `113.75.38.207`（中国电信广州）—— 与同宽带的 PC 完全同一个出口 |
+| 单轮耗时 | **51.9 秒**（441 节点） |
+| 流量 | 约 0.9 MB/轮 |
+| TCP 连通率 | 54.7% |
+| QUIC 响应率 | 1/46（2.2%） |
+| `pip install` | 清华源，aarch64 轮子直接可用，无需编译 |
+
+GFW 干扰特征（用于自检探针出口是否正常）：
+
+```
+1.1.1.1:443        超时
+8.8.8.8:443        超时
+35.158.96.132:443  超时
+104.16.111.193:443 正常（Cloudflare）
+www.gstatic.com:443 正常
+```
+
 ### 中美交叉表怎么读
 
 **关键陷阱**：GFW 的 RST 注入，和「服务端端口没开」在客户端看来完全一样，都是
