@@ -62,8 +62,10 @@ python3 /app/probe.py \
 
 STAMP=$(date -u '+%Y%m%d_%H%M')
 cp "$OUT_DIR/probe_domestic.csv" "$OUT_DIR/probe_domestic_${STAMP}.csv"
-# probe.py 把摘要写在工作目录，搬到输出目录
+# probe.py 把摘要写在当前工作目录（容器里是 /out），这里再确认一次
 for f in probe_summary.json probe_summary.md; do
-  [ -f "/app/$f" ] && cp "/app/$f" "$OUT_DIR/"
+  if [ -f "./$f" ]; then
+    cp "./$f" "$OUT_DIR/" 2>/dev/null || true
+  fi
 done
 echo "[$(date '+%F %T')] 完成：$OUT_DIR/probe_domestic.csv"

@@ -20,7 +20,9 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends tzdata \
         typing_extensions \
         aioquic
 
-WORKDIR /app
+# 工作目录放在 /out（可写）。probe.py 会把摘要写在当前工作目录，
+# 而 /app 是仓库的只读挂载，写不进去。
+WORKDIR /out
 # 兜底：正常运行时 /app 会被仓库挂载覆盖，这里只是防止裸跑容器时找不到文件
 COPY probe.py /app/probe.py
 COPY docker/entrypoint.sh /entrypoint.sh

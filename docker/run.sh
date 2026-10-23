@@ -49,6 +49,7 @@ docker run --rm \
   -v "$REPO:/app:ro" \
   -v "$WORK/in:/in:ro" \
   -v "$WORK/out:/out" \
+  -w /out \
   -e LIST=/in/list.meta.us.yml \
   -e OUT_DIR=/out \
   -e PROBE_TIMEOUT="${PROBE_TIMEOUT:-5}" \
