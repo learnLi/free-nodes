@@ -114,8 +114,10 @@ jobs:
 
       - name: 交叉比对
         if: steps.cn.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -euo pipefail
+          set +e
           python3 ./scripts/crosscheck.py \
             --us probe_us.csv \
             --cn probe_domestic.csv \
@@ -123,13 +125,22 @@ jobs:
             --out-md crosscheck_summary.md \
             --input-list list.meta.full.yml \
             --out-cn-list list.meta.cn.yml \
-            --us-release-url "$BASE" \
+            --us-release-url "https://github.com/${{ github.repository }}/releases/latest/download" \
             --us-candidates "${{ steps.us.outputs.candidates }}" \
-            --cn-file-name "${{ steps.cn.outputs.cn_name }}"
-          # 产出必须齐全，否则下游会静默拿到空结果
+            --cn-file-name "${{ steps.cn.outputs.cn_name }}" \
+            2>&1 | tee crosscheck.log
+          rc=${PIPESTATUS[0]}
+          echo "crosscheck 退出码：$rc"
+          if [ "$rc" != "0" ]; then
+            # 把日志传上去，方便排查（Actions 的 job 日志需要 admin 才能下）
+            gh release upload latest crosscheck.log --clobber || true
+            echo "::error::交叉比对失败，日志已上传到 Release 的 crosscheck.log"
+            exit 1
+          fi
           for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
             if [ ! -s "$f" ]; then
-              echo "::error::交叉比对没有产出 $f"
+              echo "::error::缺少产出文件 $f"
+              gh release upload latest crosscheck.log --clobber || true
               exit 1
             fi
           done
