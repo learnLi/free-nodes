@@ -166,6 +166,36 @@ with tempfile.TemporaryDirectory() as td:
     check("保留明文代理时只剔除确凿死的", n, 0)
 
 print()
+print("=== 10. 清理 proxy-groups 里的失效引用 ===")
+# 回归：裁剪节点后必须同步清理 proxy-groups 的引用，否则 Clash / Mihomo
+# 会报 "proxy <name> not found" 并拒绝加载整个配置
+from prune import clean_group_refs
+
+data = {
+    'proxies': [{'name': 'a'}, {'name': 'b'}],
+    'proxy-groups': [
+        {'name': '🚀 选择代理', 'type': 'select', 'proxies': ['♻ 自动选择']},
+        {'name': '♻ 自动选择', 'type': 'fallback', 'proxies': ['a', 'b', 'c', 'd']},
+        {'name': '🔰 延迟最低', 'type': 'url-test', 'proxies': ['a', 'c']},
+        {'name': '🐟 漏网之鱼', 'type': 'select', 'proxies': ['DIRECT', 'REJECT']},
+    ],
+}
+kept = [{'name': 'a'}]
+n = clean_group_refs(data, kept)
+check("清理了 4 处失效引用（fallback 剔 b/c/d，url-test 剔 c）", n, 4)
+check("fallback 组只剩存活节点", data['proxy-groups'][1]['proxies'], ['a'])
+check("url-test 组只剩存活节点", data['proxy-groups'][2]['proxies'], ['a'])
+check("组名引用被保留", data['proxy-groups'][0]['proxies'], ['♻ 自动选择'])
+check("DIRECT/REJECT 被保留", data['proxy-groups'][3]['proxies'], ['DIRECT', 'REJECT'])
+
+data2 = {
+    'proxies': [{'name': 'a'}],
+    'proxy-groups': [{'name': '空组', 'type': 'select', 'proxies': ['x']}],
+}
+clean_group_refs(data2, [{'name': 'a'}])
+check("被清空的组拿到合法兜底成员", data2['proxy-groups'][0]['proxies'], ['DIRECT'])
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)

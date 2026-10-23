@@ -285,6 +285,23 @@ NAS 侧脚本：[`scripts/probe_domestic.sh`](scripts/probe_domestic.sh)
 > 裁剪的前提是「探测结论可信」。对照目标全挂时（runner 网络异常），
 > 裁剪结果同样不可信——`probe_summary.md` 里的对照表就是为此准备的。
 
+### 配置一致性校验（硬门禁）
+
+裁剪节点后，`proxy-groups` 里指向被剔除节点的引用必须同步清理。
+**Mihomo / Clash 遇到 proxy-group 引用了不存在的节点时，会直接报
+`proxy <name> not found` 并拒绝加载整个配置** —— 用户在客户端里看到的就是
+「订阅无效」，而在 YAML 上完全看不出来。
+
+`scripts/validate_config.py` 会在构建时校验发布的所有配置，检查项：
+
+1. `proxy-groups` 里的每个引用都能解析（节点 / 其他组 / 内置策略）
+2. 组名、节点名不重复
+3. 每个节点有 name / type / server / port，且 port 合法
+4. `rules` 里引用的策略组都存在
+5. `url-test` / `fallback` 组必须有 `url`
+
+**校验不过就中止构建，绝不发布坏配置。**
+
 ---
 
 ## 本地开发

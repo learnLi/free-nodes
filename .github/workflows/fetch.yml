@@ -107,6 +107,16 @@ jobs:
             echo "$f: $(($(wc -l < "$f") - 1)) 个节点被剔除"
           done
 
+      # 配置一致性校验：Mihomo / Clash 遇到 proxy-group 引用了不存在的节点时，
+      # 会拒绝加载整个配置，用户看到的是「订阅无效」。这类问题在 YAML 上
+      # 看不出来，必须显式校验。校验不过就中止构建，绝不发布坏配置。
+      - name: 校验配置一致性
+        run: |
+          set -euo pipefail
+          python3 ./scripts/validate_config.py \
+            list.meta.full.yml list.meta.yml list.yml.full.yml list.yml \
+            snippets/nodes.meta.yml snippets/nodes.yml
+
       - name: 收集产物
         run: |
           set -euo pipefail

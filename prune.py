@@ -186,6 +186,36 @@ def decide(proxy: Dict[str, Any], probe: Dict[Tuple[str, int], Dict[str, str]],
     return True, ''
 
 
+def clean_group_refs(data: Dict[str, Any],
+                     kept: List[Dict[str, Any]]) -> int:
+    """清理 proxy-groups 中指向已剔除节点的引用。
+
+    返回被清理的引用条数。
+
+    Mihomo / Clash 遇到 proxy-group 引用了不存在的节点时，会直接报
+    "proxy <name> not found" 并拒绝加载整个配置——所以裁剪节点后必须
+    同步收尾，否则发布出去的是一份加载就报错的配置。
+    """
+    surviving = {str(p.get('name') or '') for p in kept}
+    groups = data.get('proxy-groups') or []
+    group_names = {str(g.get('name') or '') for g in groups}
+    builtin = {'DIRECT', 'REJECT', 'PASS', 'COMPATIBLE', 'GLOBAL'}
+    removed = 0
+    for g in groups:
+        refs = g.get('proxies')
+        if not isinstance(refs, list):
+            continue
+        new = [r for r in refs
+               if r in surviving or r in group_names or r in builtin]
+        removed += len(refs) - len(new)
+        if new != refs:
+            g['proxies'] = new
+        if not new:
+            # 组被清空：给一个合法成员，避免空组
+            g['proxies'] = ['DIRECT']
+    return removed
+
+
 def write_report(path: str, records: List[Tuple[str, str, str]]) -> None:
     d = os.path.dirname(path)
     if d:
@@ -240,6 +270,13 @@ def main() -> int:
             removed.append((str(p.get('name') or ''), str(p.get('type') or ''), reason))
 
     data['proxies'] = kept
+
+    # 清理 proxy-groups 里指向已剔除节点的引用。
+    # 这一步必须有：Mihomo / Clash 遇到 proxy-group 引用了不存在的节点时，
+    # 会直接报 "proxy <name> not found" 并拒绝加载整个配置。
+    # 上游不裁剪节点所以没这个问题，但本项目裁剪了，就必须同步收尾。
+    dangling = clean_group_refs(data, kept)
+
     header = ''
     if text.startswith('#'):
         for line in text.splitlines():
@@ -255,6 +292,8 @@ def main() -> int:
 
     print("裁剪 %s：%d -> %d 个节点（剔除 %d 个）" % (
         args.input, len(proxies), len(kept), len(removed)))
+    if dangling:
+        print("  同步清理了 %d 处失效的 proxy-group 引用" % dangling)
     by_reason = {}
     for _, _, r in removed:
         by_reason[r] = by_reason.get(r, 0) + 1
