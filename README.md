@@ -12,16 +12,23 @@
 
 | 客户端 | 链接 |
 | :- | :- |
-| Clash Meta | `https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.yml` |
+| **Clash Meta（大陆可用，推荐）** | `https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.cn.yml` |
+| Clash Meta（全量） | `https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.yml` |
+| Clash Meta（美国侧筛选） | `https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.us.yml` |
 | Clash 原版 | `https://github.com/learnLi/free-nodes/releases/latest/download/list.yml` |
 | V2Ray / 通用 | `https://github.com/learnLi/free-nodes/releases/latest/download/list.txt` |
 | 明文（查看用） | `https://github.com/learnLi/free-nodes/releases/latest/download/list_raw.txt` |
 
+> `list.meta.cn.yml` 是**中美多轮联合判定**后的子集，专门给中国大陆用户。
+> 它剔掉了「国内被墙」和「两端都没响应」的节点，实测从 376 个缩到 253 个，
+> 而其中能用的比例大幅提升。详细的判定过程见
+> [交叉表](https://github.com/learnLi/free-nodes/releases/latest/download/crosscheck_summary.md)。
+
 **备用通道（output 分支）** — 走 raw.githubusercontent / jsDelivr：
 
 ```
-https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.yml
-https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.yml
+https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.cn.yml
+https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.cn.yml
 ```
 
 **配置片段（rule-providers / proxy-providers）** — 单独的 Release，路径保持 `snippets/` 目录语义：
@@ -58,6 +65,75 @@ https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.yml
 > 公开免费节点存活率极低（通常几天内掉到 20% 以下），出现大量不可用节点属正常现象。
 
 ---
+
+## 三阶段筛选流水线
+
+```
+                    ┌──────────────────── GitHub Actions（美国出口）────────────────────┐
+  抓节点 ──▶ 探测(US) ──▶ 单轮裁剪 ──▶ Stage 1 多轮一致性筛选 ──▶ Stage 3 中美多轮判定
+             (probe.py)   (prune.py)    (stage1.py)                  (crosscheck.py)
+                              │              │                            │
+                    list.meta.yml      list.meta.us.yml          list.meta.cn.yml
+                        376 个             306 个                  253 个
+                              │              │                            │
+                              │              ▼                            │
+                              │        output 分支                        │
+                              │      list.meta.us_<ts>.yml                │
+                              │              │                            │
+                              │              ▼                            │
+                              │        ┌──────── NAS（中国出口）────────┐  │
+                              │        │ 探测 Stage 1 产物              │  │
+                              │        │ probe_domestic_<ts>.csv       │  │
+                              │        └───────────┬──────────────────┘  │
+                              │                    │ 推到 probe-domestic │
+                              │                    ▼                     │
+                              └────────────── 交叉比对 ◀───────────────────┘
+```
+
+| 阶段 | 做什么 | 产物 | 节点数 |
+| :- | :- | :- | :-: |
+| 全量 | 抓取 + 单轮裁剪（剔明文代理、确凿已死） | `list.meta.yml` | 376 |
+| **Stage 1** | 用**美国侧多轮历史**筛出跨轮一致的 | `list.meta.us.yml` | 306 |
+| **Stage 2** | NAS 在 Stage 1 产物上做国内探测 | `probe_domestic_<ts>.csv` | — |
+| **Stage 3** | 中美**多轮**历史联合判定 | `list.meta.cn.yml` | **253** |
+
+**为什么用多轮而不是单轮**：单轮探测噪声很大。同一批 409 个地址连测 5 轮，
+单轮说「活」的结果并不稳定；跨轮一致的才是真信号。实测：
+
+```
+美国跨 5 轮全活 314 / 全死 87 / 不定 8
+中美交叉：真·大陆可用 120，美国说活国内说死 109，美国误杀 10
+```
+
+Stage 1 一道就把 hysteria2 从 42 砍到 1（这批 UDP 节点两端都无响应，服务器
+本身就没在跑），Stage 3 再把被墙的 ss / trojan 剔掉。
+
+**时间戳的含义是「节点池的版本」**，不是「探测时刻」。CI 抓完节点算出时间戳
+`ts`，把这个时间戳同时用于：发布的 `list_<ts>.full.yml`、`probe_<ts>.csv`、
+`list.meta.us_<ts>.yml`。NAS 探测 `list.meta.us_<ts>.yml` 并把结果命名为
+`probe_domestic_<ts>.csv` —— 于是两侧严格对应同一批节点。
+
+> 如果时间戳表示「探测时刻」就会错位：NAS 探测时 output 分支上的列表往往是
+> 上一版（CI 那一轮还没推完），两边探测的节点池不是同一批。实测这种情况下
+> 节点池只重叠 78%，交叉表里 **32% 的节点只能判成「未测出」**，「可用」数
+> 被稀释到 110；改成按节点池版本对齐后重叠 **100%**，「可用」数 110 → 201。
+
+### 判定表
+
+| 美国 \ 国内 | 跨轮全活 | 跨轮全死 | 未定 |
+| :- | ---: | ---: | ---: |
+| **跨轮全活** | ✅ 保留（真正的大陆可用） | ❌ 剔除 | ✅ 保留 |
+| **跨轮全死** | ✅ 保留（**被美国侧误杀**） | ❌ 剔除 | ❌ 剔除 |
+| **未定** | ✅ 保留 | ❌ 剔除 | ✅ 保留（数据不足，保守） |
+
+### 各阶段订阅
+
+| 订阅 | 用途 |
+| :- | :- |
+| `list.meta.yml` | 全量（Clash Meta）—— 给全球用户 / 不确定自己要什么的人 |
+| `list.meta.us.yml` | 美国侧多轮筛选后的子集 |
+| `list.meta.cn.yml` | **大陆可用**（中美多轮联合判定）—— 给国内用户 |
+| `list.yml` | 全量（原版 Clash，只支持 ss/trojan/vmess）|
 
 ## 架构
 
