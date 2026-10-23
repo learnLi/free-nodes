@@ -72,27 +72,44 @@ jobs:
             echo "found=false" >> "$GITHUB_OUTPUT"
             exit 0
           }
-          git show origin/probe-domestic:probe_domestic.csv > probe_domestic.csv
-          echo "国内侧结果：$(wc -l < probe_domestic.csv) 行"
+          # 取最新的带时间戳的那一份（时间戳即探测时刻，UTC）
+          CN_NAME=$(git ls-tree --name-only origin/probe-domestic \
+            | grep -oE 'probe_domestic_[0-9]{8}_[0-9]{4}\.csv' | sort | tail -1 || true)
+          if [ -n "$CN_NAME" ]; then
+            git show "origin/probe-domestic:$CN_NAME" > probe_domestic.csv
+            echo "国内侧用 $CN_NAME"
+          else
+            git show origin/probe-domestic:probe_domestic.csv > probe_domestic.csv
+            CN_NAME="probe_domestic.csv"
+            echo "国内侧用 probe_domestic.csv（无时间戳）"
+          fi
+          echo "cn_name=$CN_NAME" >> "$GITHUB_OUTPUT"
           echo "found=true" >> "$GITHUB_OUTPUT"
 
       - name: 取美国探活结果与节点列表
         if: steps.cn.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           BASE="https://github.com/${{ github.repository }}/releases/latest/download"
-          # 美国侧探活结果
-          curl -sL --max-time 60 "$BASE/probe.csv" -o probe_us.csv
           # 节点列表是生成物，不在 git 里，必须从 Release 取
           # （之前缺这一步，交叉比对会静默跳过子集输出）
           curl -sL --max-time 60 "$BASE/list.meta.full.yml" -o list.meta.full.yml
-          for f in probe_us.csv list.meta.full.yml; do
+          for f in list.meta.full.yml; do
             if [ ! -s "$f" ]; then
               echo "::error::取不到 $f"
               exit 1
             fi
           done
-          echo "美国侧 $(wc -l < probe_us.csv) 行，节点列表 $(wc -c < list.meta.full.yml) 字节"
+          # 列出带时间戳的美国侧探测结果，供按时间戳配对
+          CANDS=$(gh release view latest --json assets --jq '.assets[].name' \
+            | grep -oE '^probe_[0-9]{8}_[0-9]{4}\.csv$' | paste -sd, - || true)
+          echo "candidates=$CANDS" >> "$GITHUB_OUTPUT"
+          # 没有历史候选时退回用最新的 probe.csv
+          curl -sL --max-time 60 "$BASE/probe.csv" -o probe_us.csv
+          echo "美国侧候选：${CANDS:-（无历史，用最新 probe.csv）}"
+          echo "节点列表 $(wc -c < list.meta.full.yml) 字节"
 
       - name: 交叉比对
         if: steps.cn.outputs.found == 'true'
@@ -104,7 +121,10 @@ jobs:
             --out-csv crosscheck.csv \
             --out-md crosscheck_summary.md \
             --input-list list.meta.full.yml \
-            --out-cn-list list.meta.cn.yml
+            --out-cn-list list.meta.cn.yml \
+            --us-release-url "$BASE" \
+            --us-candidates "${{ steps.us.outputs.candidates }}" \
+            --cn-file-name "${{ steps.cn.outputs.cn_name }}"
           # 产出必须齐全，否则下游会静默拿到空结果
           for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
             if [ ! -s "$f" ]; then

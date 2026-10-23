@@ -49,7 +49,50 @@ def parse_args() -> argparse.Namespace:
                    help='用于筛选国内可用子集的 Clash 配置')
     p.add_argument('--min-us', action='store_true',
                    help='剔除「国内被墙」的节点（默认只统计不剔除）')
+    p.add_argument('--us-release-url', default='',
+                   help='Release 资产的基础 URL，用于按时间戳配对下载')
+    p.add_argument('--us-candidates', default='',
+                   help='候选美国侧资产名，逗号分隔。给了就按时间戳挑最接近的一轮')
+    p.add_argument('--cn-file-name', default='',
+                   help='国内侧文件名（带时间戳），用于配对')
     return p.parse_args()
+
+
+TS_RE = __import__('re').compile(r'_(\d{8})_(\d{4})\.csv$')
+
+
+def ts_of(name: str) -> Optional[str]:
+    """从文件名里取出时间戳（YYYYMMDD_HHMM）。"""
+    m = TS_RE.search(name)
+    if not m:
+        return None
+    return m.group(1) + '_' + m.group(2)
+
+
+def ts_minutes(ts: str) -> int:
+    """时间戳转成分钟数，便于比较。"""
+    import calendar
+    import time as _time
+    try:
+        st = _time.strptime(ts, '%Y%m%d_%H%M')
+    except ValueError:
+        return 0
+    return calendar.timegm(st)
+
+
+def pick_closest(candidates: List[str], want: str) -> Optional[str]:
+    """挑时间戳最接近 want 的候选。"""
+    wt = ts_minutes(want)
+    best = None
+    best_diff = None
+    for c in candidates:
+        t = ts_of(c)
+        if not t:
+            continue
+        d = abs(ts_minutes(t) - wt)
+        if best_diff is None or d < best_diff:
+            best, best_diff = c, d
+    return best
 
 
 def load(path: str) -> Dict[Tuple[str, int], Dict[str, str]]:
@@ -130,10 +173,33 @@ VERDICT = {
 
 def main() -> int:
     args = parse_args()
-    us = load(args.us)
+
+    us_path = args.us
+    # 按时间戳配对：挑与美国侧最接近国内侧那一轮的美国数据。
+    # 两边快照差 50 分钟就能换掉 22% 的节点池，不配对的话一半的地址
+    # 只能判成「未测出」。
+    if args.us_candidates and args.us_release_url and args.cn_file_name:
+        cands = [c for c in args.us_candidates.split(',') if c.strip()]
+        want = ts_of(args.cn_file_name)
+        chosen = pick_closest(cands, want) if want else None
+        if chosen:
+            import urllib.request
+            url = '%s/%s' % (args.us_release_url.rstrip('/'), chosen)
+            print('按时间戳配对：国内 %s -> 美国 %s' % (want, chosen))
+            try:
+                with urllib.request.urlopen(url, timeout=60) as r:
+                    data = r.read()
+                with open(us_path, 'wb') as f:
+                    f.write(data)
+            except Exception as e:  # noqa: BLE001
+                print('下载 %s 失败（%s），退回用 %s' % (chosen, e, args.us))
+        else:
+            print('没找到可配对的美国侧资产，用 %s' % args.us)
+
+    us = load(us_path)
     cn = load(args.cn)
     if not us:
-        print("美国侧结果为空：%s" % args.us)
+        print("美国侧结果为空：%s" % us_path)
         return 1
     if not cn:
         print("国内侧结果为空：%s" % args.cn)

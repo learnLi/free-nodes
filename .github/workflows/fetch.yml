@@ -245,9 +245,15 @@ jobs:
           else
             gh release edit "$TAG" --notes-file notes.md
           fi
-          # 清理陈旧资产（本次不再生成的文件）
+          # 清理陈旧资产（本次不再生成的文件）。
+          # 但要放过带时间戳的历史副本：probe_<ts>.csv / crosscheck_<ts>.*
+          # 它们不在 dist/ 里，却是交叉比对按时间戳配对的依据。
           while read -r old; do
             [ -n "$old" ] || continue
+            case "$old" in
+              probe_[0-9]*_*.csv|crosscheck_[0-9]*_*.csv|crosscheck_[0-9]*_*.md)
+                continue ;;
+            esac
             if [ ! -f "$SRC/$old" ]; then
               echo "删除陈旧资产：$old"
               gh release delete-asset "$TAG" "$old" -y
@@ -256,6 +262,18 @@ jobs:
           mapfile -t assets < <(find "$SRC" -type f | sort)
           gh release upload "$TAG" "${assets[@]}" --clobber
           echo "已上传 ${#assets[@]} 个文件到 $TAG"
+
+      # 带时间戳的美国侧探测结果。交叉比对按时间戳与国内侧数据配对，
+      # 避免两边快照时间差太大导致节点池对不上（实测差 50 分钟能换掉 22% 的节点）
+      - name: 上传带时间戳的探测结果
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TS=$(date -u '+%Y%m%d_%H%M')
+          cp probe.csv "probe_${TS}.csv"
+          gh release upload latest "probe_${TS}.csv" --clobber
+          echo "已上传 probe_${TS}.csv（与国内侧 probe_domestic_<ts>.csv 按时间戳配对）"
 
       - name: 上传配置片段到 Release
         env:

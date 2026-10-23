@@ -115,7 +115,8 @@ if ! "$PYTHON" "$PROBE_PY" \
   echo "  探测过程报错（结果文件若已生成则继续）"
 fi
 
-STAMP=$(date '+%Y%m%d_%H%M')
+# 用 UTC，与 CI 侧的时间戳格式一致（两边才能配对）
+STAMP=$(date -u '+%Y%m%d_%H%M')
 if [ -f probe_domestic.csv ]; then
   cp probe_domestic.csv "probe_domestic_${STAMP}.csv"
   echo "[$(date '+%F %T')] 结果："

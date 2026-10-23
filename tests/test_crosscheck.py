@@ -149,6 +149,22 @@ with tempfile.TemporaryDirectory() as td:
     check("输出里提到清理数量", '失效的 proxy-group 引用' in r.stdout, True)
 
 print()
+print("=== 7. 按时间戳配对 ===")
+from crosscheck import pick_closest, ts_of, ts_minutes
+
+check("从文件名解析时间戳", ts_of('probe_20261023_1851.csv'), '20261023_1851')
+check("从国内文件名解析时间戳", ts_of('probe_domestic_20261023_1851.csv'), '20261023_1851')
+check("无时间戳返回 None", ts_of('probe.csv'), None)
+check("时间戳转分钟", ts_minutes('20261023_0000'), ts_minutes('20261023_0000'))
+
+cands = ['probe_20261023_1200.csv', 'probe_20261023_1851.csv',
+         'probe_20261023_1905.csv', 'probe.csv']
+check("挑最接近的一轮", pick_closest(cands, '20261023_1851'), 'probe_20261023_1851.csv')
+check("挑最接近的一轮(2)", pick_closest(cands, '20261023_1900'), 'probe_20261023_1905.csv')
+check("没有完全匹配时挑最近的", pick_closest(cands, '20261023_1000'), 'probe_20261023_1200.csv')
+check("无时间戳的候选被忽略", pick_closest(['probe.csv'], '20261023_1851'), None)
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)
