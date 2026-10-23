@@ -139,6 +139,17 @@ META_CIPHER_SS = """aes-128-ctr aes-128-cfb aes-128-gcm aes-128-ccm aes-128-gcm-
 FAKE_IPS = "8.8.8.8; 8.8.4.4; 4.2.2.2; 4.2.2.1; 114.114.114.114; 127.0.0.1; 0.0.0.0".split('; ')
 FAKE_DOMAINS = ".google.com .github.com".split()
 
+# 保留地址网段：这些地址作为公网代理服务器毫无意义。
+# 其中 127.0.0.0/8 特别重要——国内免费节点社区会植入指向 127.0.0.53
+# （systemd-resolved 的 DNS stub）的「哨兵节点」，用来检测客户端是否被
+# DNS 污染。原先的 FAKE_IPS 只列了 127.0.0.1 一个具体地址，漏掉了
+# 127.0.0.53，导致这类哨兵节点混进了发布的订阅（实测每次约 10 个）。
+FAKE_NETWORKS = [ipaddress.ip_network(n) for n in (
+    '127.0.0.0/8',      # 回环
+    '0.0.0.0/8',       # 本网络
+    '169.254.0.0/16',  # 链路本地
+)]
+
 FETCH_TIMEOUT = (6, 5)
 
 BANNED_WORDS = b64decodes('5rOV6L2uIOi9ruWtkCDova4g57uDIOawlCDlip8g5L2/5YqyIOWKsiDliqrlipsg5Yqg5rK5IOWlsyDmnYMg6L+Q5YqoIOaWsOmXuyDnv7vlopkg6Ieq55SxIG9uZ3RhaXdhbiBBbHZpbjk5OTkgbmV3cGFjIGZhbnFpYW5n').split()
@@ -631,6 +642,13 @@ class Node:
             server = self.data['server']
             if not isValidHost(server): return True
             if server in FAKE_IPS: return True
+            try:
+                ip = ipaddress.ip_address(server)
+            except ValueError:
+                ip = None
+            if ip is not None:
+                for net in FAKE_NETWORKS:
+                    if ip in net: return True
             for domain in FAKE_DOMAINS:
                 if server == domain.lstrip('.'): return True
                 if server.endswith(domain): return True

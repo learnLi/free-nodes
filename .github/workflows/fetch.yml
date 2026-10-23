@@ -52,6 +52,21 @@ jobs:
       - name: 抓取节点
         run: python ./fetch.py
 
+      # 可达性探测：只测量、不修改产物。
+      # runner 在美国，探到的是「海外可达」，不等于「中国大陆可达」。
+      # 探测失败不应影响主流程，因此 continue-on-error。
+      - name: 可达性探测
+        continue-on-error: true
+        run: |
+          python ./probe.py \
+            --input list.meta.yml \
+            --output probe.csv \
+            --timeout 3 \
+            --workers 64 \
+            --ref 1.1.1.1:443 \
+            --ref 8.8.8.8:443 \
+            --ref github.com:443
+
       # GitHub Release 的资产名不允许包含 "/"，因此顶层订阅与配置片段
       # 分装到两个 Release：latest（订阅）与 snippets（片段）。
       - name: 收集产物
@@ -60,7 +75,7 @@ jobs:
           rm -rf dist dist-snippets
           mkdir -p dist dist-snippets
           # 顶层订阅文件 -> Release: latest
-          for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv consensus.csv sources.csv; do
+          for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv consensus.csv sources.csv probe.csv probe_summary.json probe_summary.md; do
             if [ -f "$f" ]; then cp "$f" dist/; fi
           done
           # 配置片段 -> Release: snippets
@@ -129,6 +144,17 @@ jobs:
                 echo "${idx} | ${ident} | ${nodes} | ${addrs} | ${excl}"
               done
               echo '```'
+            fi
+            echo
+            echo "### 可达性探测（海外出口视角）"
+            echo
+            echo "CI runner 位于美国，探到的是**海外可达**，不等于中国大陆可达。"
+            echo "被墙 / 跨境拥塞的节点在这里依然显示为「活」。"
+            echo
+            if [ -f probe_summary.md ]; then
+              cat probe_summary.md
+            else
+              echo "_本次未完成探测_"
             fi
           } > notes.md
           cat notes.md
