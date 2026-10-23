@@ -53,7 +53,7 @@ jobs:
         run: python ./fetch.py
 
       # 可达性探测：只测量、不修改产物。
-      # runner 在美国，探到的是「海外可达」，不等于「中国大陆可达」。
+      # runner 在美国，探到的是「海外可达」，不等于「大陆可达」。
       # 探测失败不应影响主流程，因此 continue-on-error。
       - name: 可达性探测
         continue-on-error: true
@@ -71,7 +71,7 @@ jobs:
       # 分装到两个 Release：latest（订阅）与 snippets（片段）。
       # 按探测结论裁剪配置。保守策略：只剔除「确凿」的问题
       # （明文开放代理、端口无人监听、TLS 服务不符），
-      # TCP 超时与 QUIC 协议一律保留——前者可能只对中国 IP 放行，
+      # TCP 超时与 QUIC 协议一律保留——前者可能只对大陆 IP 放行，
       # 后者 TCP 探测不适用。
       #
       # 这里**不能**加 continue-on-error：裁剪失败却继续发布，等于把
@@ -267,7 +267,7 @@ jobs:
             echo
             echo "### 可达性探测（海外出口视角）"
             echo
-            echo "CI runner 位于美国，探到的是**海外可达**，不等于中国大陆可达。"
+            echo "CI runner 位于美国，探到的是**海外可达**，不等于大陆可达。"
             echo "被墙 / 跨境拥塞的节点在这里依然显示为「活」。"
             echo
             if [ -f probe_summary.md ]; then
@@ -280,7 +280,7 @@ jobs:
             echo
             echo "按探测结论剔除**确凿**的问题：明文开放代理、端口无人监听、"
             echo "TLS 服务不符。TCP 超时与 QUIC 协议一律保留——"
-            echo "超时可能意味着服务器只对中国 IP 放行，QUIC 则无法用 TCP 探测。"
+            echo "超时可能意味着服务器只对大陆 IP 放行，QUIC 则无法用 TCP 探测。"
             echo
             if ls pruned_*.csv >/dev/null 2>&1; then
               echo '```'

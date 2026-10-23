@@ -70,7 +70,7 @@ def decide(us_state: str, cn_state: str,
 
     # 延迟是硬指标：超过上限就不该进「大陆可用」列表。
     # 用**国内侧**的延迟——美国到亚洲天生就慢（200~400ms），
-    # 按美国侧筛会误杀「离美国远但离中国近」的好节点。
+    # 按美国侧筛会误杀「离美国远但离大陆近」的好节点。
     if (max_latency_ms and cn_latency is not None
             and cn_latency > max_latency_ms):
         return '延迟过高', 'drop'

@@ -105,7 +105,7 @@ https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.cn.yml
                              │  list.meta.us_<ts>.yml│
                              │         │            │
                              │         ▼            │
-                             │  ┌─── NAS（中国出口）───┐ │
+                             │  ┌─── NAS（大陆出口）───┐ │
                              │  │ 探测 Stage 1 产物   │ │
                              │  │ probe_domestic_<ts> │ │
                              │  └────────┬────────────┘ │
@@ -208,7 +208,7 @@ QUIC 部分不能用「只发一个 Initial 包」的简化做法：按 RFC 9000
 每次探测带三个**对照目标**（`1.1.1.1:443`、`8.8.8.8:443`、`github.com:443`），
 用来区分「节点死了」和「runner 整体网络不通」—— 对照全挂时本次结果不可信。
 
-> ⚠️ **边界**：CI runner 在**美国**，探到的是「**海外可达**」，不等于「中国大陆可达」。
+> ⚠️ **边界**：CI runner 在**美国**，探到的是「**海外可达**」，不等于「大陆可达」。
 > 这一点在设计里是刻意的 —— 见下面的三阶段流水线。
 
 ### 静态「过滤」
@@ -230,7 +230,7 @@ QUIC 部分不能用「只发一个 Initial 包」的简化做法：按 RFC 9000
 
 | 剔除 | 保留 |
 | :- | :- |
-| `Connection refused` / `reset by peer` | `timeout`（防火墙丢包，可能只对中国 IP 放行）|
+| `Connection refused` / `reset by peer` | `timeout`（防火墙丢包，可能只对大陆 IP 放行）|
 | TLS 被对端明确拒绝 | `Network is unreachable`（**探测端**没有该协议族的路由）|
 | 明文 HTTP / SOCKS 代理 | DNS 解析失败（探测端 DNS 的问题）|
 
@@ -284,7 +284,7 @@ filter:                     # Stage 1 与 Stage 3 共用
 > | `max_latency_ms_us` | `list.meta.yml`、`list.meta.us.yml` | 美国侧中位延迟 |
 >
 > 必须是两个值：美国到亚洲天生就慢（200~400ms），拿美国侧的延迟去筛
-> 「国内可用」那份，会误杀「离美国远但离中国近」的好节点。
+> 「国内可用」那份，会误杀「离美国远但离大陆近」的好节点。
 >
 > 实测国内延迟分布：p50 = 434ms、p75 = 573ms、p90 = 1282ms、p99 = 2559ms。
 > 1000ms 大约落在 p85 附近，会剔掉约 4% 的节点。想更宽松改 3000，
@@ -325,12 +325,12 @@ consensus:                   # 诊断用，不参与任何过滤
 
 ### 国内探测端（NAS）
 
-GitHub **没有**中国大陆区域的 runner（探针自报出口恒为美国，见 `probe_summary.md`）。
+GitHub **没有**大陆区域的 runner（探针自报出口恒为美国，见 `probe_summary.md`）。
 但**家里的设备反而是更好的探测点**：
 
 | 维度 | GitHub runner（美国） | NAS（国内） |
 | :- | :- | :- |
-| 出口路径 | 境外机房 → 境外节点 | **中国住宅宽带 → 境外节点**，与目标用户一致 |
+| 出口路径 | 境外机房 → 境外节点 | **大陆住宅宽带 → 境外节点**，与目标用户一致 |
 | IP 信誉 | Azure 机房段，部分节点直接拒绝 | **住宅 IP**，更可能被放行 |
 | IPv6 | **没有**（实测所有 IPv6 节点 `Network is unreachable`）| 家宽通常有公网 IPv6 |
 
@@ -391,7 +391,7 @@ cat ~/.ssh/nas_probe.pub    # 加到 GitHub 账号的 Settings → SSH keys
 
 | 项 | 结果 |
 | :- | :- |
-| 出口 IP | `113.75.38.207`（中国电信广州）—— 与同宽带的 PC 完全同一个出口 |
+| 出口 IP | `113.75.38.207`（广州电信）—— 与同宽带的 PC 完全同一个出口 |
 | 单轮耗时 | **51.9 秒**（441 节点） |
 | 流量 | 约 0.9 MB/轮 |
 | TCP 连通率 | 54.7% |
@@ -444,7 +444,7 @@ git clone --depth=1 git@github.com:learnLi/free-nodes.git
 cd free-nodes
 pip install -r requirements.txt
 
-# 中国大陆无代理时：先建空的 local_proxy.conf 让脚本走 ghproxy
+# 大陆无代理时：先建空的 local_proxy.conf 让脚本走 ghproxy
 touch local_proxy.conf
 
 python fetch.py
