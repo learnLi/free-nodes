@@ -24,13 +24,26 @@ cd "$REPO" || { echo "仓库目录不存在：$REPO"; exit 1; }
 
 BRANCH_PROBE="probe-domestic"
 
-echo "[$(date '+%F %T')] 更新节点列表"
-git fetch --depth=1 origin output || true
-git checkout -B output origin/output 2>/dev/null || true
-
+# 节点列表来源。国内访问 raw.githubusercontent.com 很不稳，默认走 jsDelivr CDN
+# （国内速度好）；也可以用 LIST_URL 覆盖，或设 LIST_URL=git 改从 output 分支取。
+LIST_URL="${LIST_URL:-https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.full.yml}"
 LIST="list.meta.full.yml"
-if [ ! -f "$LIST" ]; then
-  echo "找不到 $LIST（output 分支里应该有），退出"
+
+echo "[$(date '+%F %T')] 获取节点列表"
+if [ "$LIST_URL" = "git" ]; then
+  git fetch --depth=1 origin output || true
+  git checkout -B output origin/output 2>/dev/null || true
+else
+  curl -sL --max-time 120 "$LIST_URL" -o "$LIST" || true
+  if [ ! -s "$LIST" ]; then
+    echo "CDN 获取失败，回退到 git output 分支"
+    git fetch --depth=1 origin output || true
+    git checkout -B output origin/output 2>/dev/null || true
+  fi
+fi
+
+if [ ! -s "$LIST" ]; then
+  echo "拿不到 $LIST，退出"
   exit 1
 fi
 echo "节点列表：$LIST（$(grep -c 'name:' "$LIST" 2>/dev/null || echo '?') 项）"
