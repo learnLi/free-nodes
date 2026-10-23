@@ -182,6 +182,54 @@ check("n=0 全留", len(keep_recent(hist, 'CUR', 0)), 8)
 check("历史不足时也带本轮", keep_recent(['h1'], 'CUR', 6), ['h1', 'CUR'])
 
 print()
+print("=== 9. is_alive：握手失败不算活着 ===")
+from rounds import is_alive, median_latency
+check("TCP=Y 且 TLS=Y -> 活", is_alive({'TCP': 'Y', 'TLS': 'Y', 'QUIC': 'N/A'}), True)
+check("TCP=Y 且 TLS=N/A（协议不走 TLS）-> 活",
+      is_alive({'TCP': 'Y', 'TLS': 'N/A', 'QUIC': 'N/A'}), True)
+# 回归：TCP 通了但 TLS 握手超时/失败 -> 节点实际不可用
+check("TCP=Y 但 TLS=N（握手失败）-> 不活",
+      is_alive({'TCP': 'Y', 'TLS': 'N', 'QUIC': 'N/A'}), False)
+check("TCP=Y 但 TLS=N（握手超时）-> 不活",
+      is_alive({'TCP': 'Y', 'TLS': 'N', 'QUIC': 'N/A'}), False)
+check("QUIC=Y -> 活", is_alive({'TCP': 'N/A', 'TLS': 'N/A', 'QUIC': 'Y'}), True)
+check("QUIC=N -> 不活", is_alive({'TCP': 'N/A', 'TLS': 'N/A', 'QUIC': 'N'}), False)
+check("TCP=N -> 不活", is_alive({'TCP': 'N', 'TLS': 'N/A', 'QUIC': 'N/A'}), False)
+check("全 N/A -> 不活", is_alive({'TCP': 'N/A', 'TLS': 'N/A', 'QUIC': 'N/A'}), False)
+
+print()
+print("=== 10. 延迟中位数 ===")
+rounds = [
+    {('1.1.1.1', 443): {'alive': True, 'latency': 100.0}},
+    {('1.1.1.1', 443): {'alive': True, 'latency': 300.0}},
+    {('1.1.1.1', 443): {'alive': True, 'latency': 200.0}},
+    {('2.2.2.2', 443): {'alive': False, 'latency': 5000.0}},   # 超时不算
+]
+check("三轮 100/300/200 -> 中位 200",
+      median_latency(rounds, ('1.1.1.1', 443)), 200.0)
+check("只有失败轮次 -> None",
+      median_latency(rounds, ('2.2.2.2', 443)), None)
+check("不存在的地址 -> None", median_latency(rounds, ('9.9.9.9', 443)), None)
+rounds2 = [
+    {('1.1.1.1', 443): {'alive': True, 'latency': 100.0}},
+    {('1.1.1.1', 443): {'alive': True, 'latency': 400.0}},
+]
+check("两轮取平均", median_latency(rounds2, ('1.1.1.1', 443)), 250.0)
+
+print()
+print("=== 11. 延迟上限的判定 ===")
+check("延迟超限 -> 剔除",
+      decide('stable_alive', 'stable_alive', 2000.0, 1500)[1], 'drop')
+check("延迟在限内 -> 保留",
+      decide('stable_alive', 'stable_alive', 800.0, 1500)[1], 'keep')
+check("延迟为 None（没测出来）-> 不因延迟剔除",
+      decide('stable_alive', 'stable_alive', None, 1500)[1], 'keep')
+check("上限为 0 -> 不限制",
+      decide('stable_alive', 'stable_alive', 99999.0, 0)[1], 'keep')
+check("延迟超限的判定名固定",
+      decide('stable_alive', 'stable_alive', 2000.0, 1500)[0], '延迟过高')
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)

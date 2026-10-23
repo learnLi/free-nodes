@@ -23,6 +23,8 @@ DEFAULT_FILTER = {
     'min_rounds': 2,
     # 存活轮数占比达到多少算「跨轮全活」。1.0 = 每一轮都活
     'alive_ratio': 1.0,
+    # 国内延迟上限（毫秒）。超过则从「大陆可用」里剔除。0 = 不限制
+    'max_latency_ms': 0,
 }
 
 
@@ -69,6 +71,10 @@ def filter_settings(repo_root: str = REPO_ROOT) -> Dict[str, Any]:
         out['rounds'] = int(out['rounds'])
     except (TypeError, ValueError):
         out['rounds'] = DEFAULT_FILTER['rounds']
+    try:
+        out['max_latency_ms'] = int(out['max_latency_ms'])
+    except (TypeError, ValueError):
+        out['max_latency_ms'] = DEFAULT_FILTER['max_latency_ms']
     return out
 
 

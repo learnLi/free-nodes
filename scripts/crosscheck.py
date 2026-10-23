@@ -28,7 +28,8 @@ from typing import Dict, List, Optional, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from rounds import addr_of, classify, keep_recent, load_rounds  # noqa: E402
+from rounds import (addr_of, classify, keep_recent, load_rounds,
+                   median_latency)  # noqa: E402
 from prune import clean_group_refs  # noqa: E402
 from prefs import filter_settings, protocol_order, sort_proxies  # noqa: E402
 
@@ -49,14 +50,27 @@ def parse_args() -> argparse.Namespace:
                    help='存活占比阈值（默认取配置里的 filter.alive_ratio）')
     p.add_argument('--rounds', type=int, default=0,
                    help='只用最近 N 轮历史（0 = 全用；默认取配置里的 filter.rounds）')
+    p.add_argument('--max-latency-ms', type=int, default=0,
+                   help='国内延迟上限，超过则剔除（0 = 不限制；'
+                        '默认取配置里的 filter.max_latency_ms）')
     p.add_argument('--us-release-url', default='', help='Release 资产基础 URL')
     p.add_argument('--us-candidates', default='', help='美国侧候选资产名，逗号分隔')
     p.add_argument('--cn-file-name', default='', help='国内侧文件名（带时间戳）')
     return p.parse_args()
 
 
-def decide(us_state: str, cn_state: str) -> Tuple[str, str]:
-    """(美国跨轮状态, 国内跨轮状态) -> (判定, 动作)"""
+def decide(us_state: str, cn_state: str,
+           cn_latency: Optional[float] = None,
+           max_latency_ms: int = 0) -> Tuple[str, str]:
+    """(美国跨轮状态, 国内跨轮状态, 国内延迟中位数, 延迟上限) -> (判定, 动作)"""
+
+    # 延迟是硬指标：超过上限就不该进「大陆可用」列表。
+    # 用**国内侧**的延迟——美国到亚洲天生就慢（200~400ms），
+    # 按美国侧筛会误杀「离美国远但离中国近」的好节点。
+    if (max_latency_ms and cn_latency is not None
+            and cn_latency > max_latency_ms):
+        return '延迟过高', 'drop'
+
     if cn_state == 'stable_alive':
         return '国内跨轮全活', 'keep'
     if cn_state == 'stable_dead':
@@ -98,18 +112,21 @@ def main() -> int:
 
     rows: List[Dict] = []
     kept: List[Dict] = []
+    max_latency_ms = args.max_latency_ms or cfg.get('max_latency_ms', 0)
     for p in proxies:
         a = addr_of(p)
         us_state, us_seen, us_alive = classify(a, us_rounds,
                                                min_rounds, alive_ratio)
         cn_state, cn_seen, cn_alive = classify(a, cn_rounds,
                                                min_rounds, alive_ratio)
-        verdict, action = decide(us_state, cn_state)
+        cn_lat = median_latency(cn_rounds, a)
+        verdict, action = decide(us_state, cn_state, cn_lat, max_latency_ms)
         rows.append({
             '服务器': a[0], '端口': a[1], '类型': p.get('type', ''),
             '名称': p.get('name', ''),
             '美国': us_state, '美国轮数': us_seen, '美国存活': us_alive,
             '国内': cn_state, '国内轮数': cn_seen, '国内存活': cn_alive,
+            '国内延迟ms': '' if cn_lat is None else '%.0f' % cn_lat,
             '判定': verdict, '动作': action,
         })
         if action == 'keep':
@@ -149,6 +166,25 @@ def main() -> int:
     for v, n in verdicts.most_common():
         md.append('| %s | %d | %.1f%% |' % (v, n, n / total * 100 if total else 0))
     md.append('')
+
+    # 延迟分布（国内侧，中位数）
+    lats = sorted(float(r['国内延迟ms']) for r in rows
+                  if r['国内延迟ms'] != '' and r['国内延迟ms'] is not None)
+    if lats:
+        def pctile(p):
+            return lats[min(len(lats) - 1, int(len(lats) * p))]
+        md.append('## 国内延迟分布（中位数）')
+        md.append('')
+        md.append('| 分位 | 延迟 |')
+        md.append('| :- | ---: |')
+        for p, label in ((0.1, 'p10'), (0.5, 'p50（中位）'),
+                         (0.75, 'p75'), (0.9, 'p90'), (0.99, 'p99')):
+            md.append('| %s | %.0f ms |' % (label, pctile(p)))
+        if max_latency_ms:
+            over = sum(1 for x in lats if x > max_latency_ms)
+            md.append('')
+            md.append('延迟上限 **%d ms**，超过的 %d 个节点已剔除' % (max_latency_ms, over))
+        md.append('')
     md.append('## 分协议')
     md.append('')
     md.append('| 协议 | 节点数 | 保留 | 剔除 |')
