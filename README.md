@@ -274,26 +274,43 @@ GitHub **没有**中国大陆区域的 runner（探针自报出口恒为美国�
 | IP 信誉 | Azure 机房段，部分节点直接拒绝 | **住宅 IP**，更可能被放行 |
 | IPv6 | **没有**（实测所有 IPv6 节点 `Network is unreachable`）| 家宽通常有公网 IPv6 |
 
-NAS 侧只需要一个 cron 任务：
+NAS 侧只需要一个定时任务。**本项目实际部署用的是 Docker 版**：
 
 ```bash
-apt-get install -y python3-pip
-python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple \
-    aioquic PyYAML requests requests-file typing_extensions
-
 git clone --depth=1 https://github.com/learnLi/free-nodes.git
 cd free-nodes
+docker build -t free-nodes-probe -f docker/Dockerfile .
 ```
 
-> `aioquic` 依赖 `cryptography` 和 `pylsqpack`，aarch64 / arm64 都有预编译轮子，不用编译。
+分工是刻意分开的：
 
-`scripts/probe_domestic.sh` 会自动：拉 output 分支最新的 `list.meta.us_<ts>.yml` →
-探测 → 结果推回 `probe-domestic` 分支。
+| 谁 | 做什么 |
+| :- | :- |
+| **宿主机** | git：拉代码、取 output 分支的 Stage 1 产物、提交推送 |
+| **容器** | 探测：TCP 连接 + TLS 握手 + QUIC 握手 |
+
+仓库通过 `-v` 挂载到容器的 `/app`，所以 **`probe.py` 改了 git pull 一下就生效，
+不需要重建镜像**。入口脚本放在镜像的 `/entrypoint.sh`（不是 `/app`），避免被挂载覆盖。
+
+定时任务：
 
 ```cron
 # 每 6 小时一次；脚本内部有 0~15 分钟随机抖动，打散固定周期的外连特征
-17 */6 * * * /root/free-nodes/run_probe.sh >> /root/free-nodes/probe.log 2>&1
+17 */6 * * * /root/free-nodes/repo/docker/run.sh /root/free-nodes/repo /root/free-nodes >> /root/free-nodes/probe.log 2>&1
 ```
+
+> **为什么要有随机抖动**：住宅 IP 每 6 小时固定向几百个境外 IP 发连接，形态很规整。
+> 加上 0~15 分钟的随机等待，特征就没那么明显了。
+
+> **不用 Docker 的话**：`scripts/probe_domestic.sh` 是等价的原生脚本，
+> 只依赖 `python3` + 5 个 pip 包（`aioquic` / `PyYAML` / `requests` /
+> `requests-file` / `typing_extensions`；aarch64、arm64 都有预编译轮子，不用编译）。
+
+> **想在 1Panel 里管理**：1Panel 的「定时任务」支持 Shell 脚本类型，
+> 填上面那条 cron 命令即可。**注意别和 crontab 里的条目重复** ——
+> 1Panel 的任务也是写进 crontab 的，两边都配会跑两遍。
+> （1Panel v1 的 API 接口默认是关的，`ApiInterfaceStatus = disable`，
+> 所以只能从面板 UI 里建。）
 
 **推回 GitHub** 需要一把能 push 的 SSH 密钥：
 
