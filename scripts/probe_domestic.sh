@@ -135,8 +135,14 @@ if [ "${NO_PUSH:-0}" = "1" ]; then
 fi
 
 echo "[$(date '+%F %T')] 尝试推送"
-if ! git checkout -B "$BRANCH_PROBE" 2>/dev/null; then
-  git checkout -B "$BRANCH_PROBE" origin/"$BRANCH_PROBE" 2>/dev/null || true
+# 先把远端分支拉下来作为基线。少了这一步，git checkout -B 会从当前 HEAD
+# （通常是 main）开分支，推送时会被判为非快进而被拒绝。
+git fetch --depth=1 origin "$BRANCH_PROBE" 2>/dev/null || true
+if git checkout -B "$BRANCH_PROBE" "origin/$BRANCH_PROBE" 2>/dev/null; then
+  echo "  基于远端分支继续"
+else
+  git checkout -B "$BRANCH_PROBE"
+  echo "  远端分支不存在，新建"
 fi
 git add -A probe_domestic*.csv 2>/dev/null || true
 if git diff --cached --quiet; then
