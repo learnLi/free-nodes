@@ -150,6 +150,16 @@ fi
 # 必须用 -f：仓库的 .gitignore 里忽略了 probe_domestic*.csv
 #（避免误提交到 main），而这里就是要把它提交到数据分支
 git add -f probe_domestic*.csv 2>/dev/null || true
+
+# 清理过期的历史副本，只保留最近 KEEP_HISTORY 个。
+# 每 6 小时一个文件，一年下来会攒几十 MB。
+KEEP_HISTORY="${KEEP_HISTORY:-20}"
+ls -1t probe_domestic_*.csv 2>/dev/null | tail -n "+$((KEEP_HISTORY + 1))" | while read -r old; do
+  echo "  清理旧文件：$old"
+  git rm -q -f --cached "$old" 2>/dev/null || true
+  rm -f "$old"
+done
+git add -f probe_domestic*.csv 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "  无变化"
 else
