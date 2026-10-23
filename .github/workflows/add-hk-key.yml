@@ -1,0 +1,36 @@
+name: Add HK probe deploy key (one-off)
+
+# 一次性工作流：把香港探活 VPS 的公钥注册成仓库的 deploy key，
+# 这样它才能把 probe_hk_<ts>.csv 推到 probe-hk 分支。
+#
+# GITHUB_TOKEN 带 administration 权限时可以调用部署密钥管理接口，
+# 不用另发 PAT。用完即删。
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-hk-key.yml'
+
+permissions:
+  administration: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 注册 deploy key
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="hk-probe"
+          KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAuBI+Kw4kPYmk/koIAAlbU7GpzX18TN8yXE4fDLdIgv hk-probe"
+          REPO="${{ github.repository }}"
+          # 已存在就先删掉再添加，避免重复时报 422
+          for id in $(gh api "repos/${REPO}/keys" --jq ".[] | select(.title==\"${TITLE}\") | .id"); do
+            gh api -X DELETE "repos/${REPO}/keys/${id}"
+            echo "已删除旧的 deploy key ${id}"
+          done
+          gh api -X POST "repos/${REPO}/keys" \
+            -f title="$TITLE" -f key="$KEY" -F read_only=false
+          echo "已注册 deploy key：${TITLE}"
