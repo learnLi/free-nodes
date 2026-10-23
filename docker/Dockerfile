@@ -1,6 +1,7 @@
 # 国内可达性探测镜像
 #
-# 只做探测，不含 git：容器跑在 NAS 上，git 推送由宿主机的定时任务负责。
+# 容器只做探测。仓库通过 -v 挂载到 /app，所以 probe.py 随仓库更新即可生效，
+# 不需要重建镜像；/entrypoint.sh 放在镜像里，避免被挂载覆盖。
 #
 # 构建：docker build -t free-nodes-probe -f docker/Dockerfile .
 # 运行：见 docker/run.sh
@@ -10,7 +11,9 @@ FROM python:3.12-slim
 # aioquic 依赖 cryptography，slim 版（Debian）有现成的 manylinux wheel，
 # 不用编译——这是选 slim 而不是 alpine 的原因（alpine 的 musl wheel
 # 覆盖不如 Debian 全，cryptography 有时需要本地编译）
-RUN pip install --no-cache-dir \
+RUN apt-get update && apt-get install -y -q --no-install-recommends tzdata \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir \
         PyYAML \
         requests \
         requests-file \
@@ -18,17 +21,15 @@ RUN pip install --no-cache-dir \
         aioquic
 
 WORKDIR /app
+# 兜底：正常运行时 /app 会被仓库挂载覆盖，这里只是防止裸跑容器时找不到文件
 COPY probe.py /app/probe.py
-COPY docker/entrypoint.sh /app/entrypoint.sh
-RUN chmod +x /app/entrypoint.sh
+COPY docker/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-ENV LIST_URL="https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.full.yml" \
+ENV LIST=/in/list.meta.us.yml \
     PROBE_TIMEOUT=5 \
     WORKERS=64 \
     OUT_DIR=/out \
     TZ=Asia/Shanghai
 
-RUN apt-get update && apt-get install -y -q --no-install-recommends tzdata \
-    && rm -rf /var/lib/apt/lists/*
-
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]

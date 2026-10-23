@@ -1,69 +1,86 @@
 #!/bin/sh
-# NAS 宿主机侧的定时任务：跑容器 + 把结果推回 GitHub。
+# NAS 宿主机侧的定时任务入口（Docker 版）：
+#   git 拉代码 -> 取 Stage 1 产物 -> 容器内探测 -> 提交推送
 #
-# 群晖：任务计划 -> 用户定义的脚本 -> 计划任务（每 6 小时）
-# 威联：任务调度器 -> 创建任务 -> 类型选「Shell 脚本」
+# 分工：
+#   宿主机  git（拉代码、取 output 分支的 Stage 1 产物、提交推送）
+#   容器    探测（需要 Python 环境与网络）
+# 仓库的 probe.py 直接挂载进容器，代码更新不需要重建镜像。
 #
 # 用法：
-#   sh docker/run.sh [仓库目录] [输出目录]
-#
-# 依赖：docker、git。宿主机上需要有仓库的 SSH 部署密钥才能推送。
-
+#   sh docker/run.sh [仓库目录] [工作目录]
 set -e
 
-REPO="${1:-/volume1/free-nodes}"
-OUT_DIR="${2:-/volume1/free-nodes}"
+REPO="${1:-/root/free-nodes/repo}"
+WORK="${2:-/root/free-nodes}"
 IMAGE="${IMAGE:-free-nodes-probe:latest}"
 BRANCH="probe-domestic"
 
 cd "$REPO" || { echo "仓库目录不存在：$REPO"; exit 1; }
 
-# ---- 1. 探测（容器内完成）----
-echo "[$(date '+%F %T')] 运行探测容器"
-if ! command -v docker >/dev/null 2>&1; then
-  echo "找不到 docker"
-  exit 1
-fi
-if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
-  echo "镜像 $IMAGE 不存在，先构建："
-  echo "  docker build -t $IMAGE -f docker/Dockerfile ."
-  exit 1
-fi
+# ---- 1. 拉最新代码（probe.py 会随仓库更新，容器是挂载的，不用重建）----
+git config user.name 'NAS probe' 2>/dev/null || true
+git config user.email 'probe@nas.local' 2>/dev/null || true
+git config core.sshCommand "ssh -i /root/.ssh/nas_probe -o UserKnownHostsFile=/root/.ssh/github_known_hosts -o StrictHostKeyChecking=yes" 2>/dev/null || true
+git fetch --depth=1 origin main || true
+git checkout -B main origin/main 2>/dev/null || true
+git reset --hard origin/main 2>/dev/null || true
 
+# ---- 2. 取 Stage 1 产物（output 分支里最新的带时间戳副本）----
+git fetch --depth=1 origin \
+  "+refs/heads/output:refs/remotes/origin/output" 2>/dev/null || true
+LIST_NAME=$(git ls-tree --name-only origin/output 2>/dev/null \
+  | grep -oE 'list\.meta\.us_[0-9]{8}_[0-9]{4}\.yml' | sort | tail -1 || true)
+if [ -z "$LIST_NAME" ]; then
+  echo "output 分支里没有 Stage 1 产物（list.meta.us_<ts>.yml），跳过本次探测"
+  exit 1
+fi
+mkdir -p "$WORK/in" "$WORK/out"
+git show "origin/output:$LIST_NAME" > "$WORK/in/list.meta.us.yml" || exit 1
+STAMP=$(echo "$LIST_NAME" | sed -E 's/^list\.meta\.us_([0-9]{8}_[0-9]{4})\.yml$/\1/')
+echo "[$(date '+%F %T')] 探测 Stage 1 产物 $LIST_NAME（批次 $STAMP）"
+
+# ---- 3. 容器内探测 ----
+if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
+  echo "镜像 $IMAGE 不存在，构建中..."
+  docker build -t "$IMAGE" -f docker/Dockerfile . || exit 1
+fi
 docker run --rm \
-  -v "$OUT_DIR:/out" \
-  -e LIST_URL="${LIST_URL:-https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.full.yml}" \
+  -v "$REPO:/app:ro" \
+  -v "$WORK/in:/in:ro" \
+  -v "$WORK/out:/out" \
+  -e LIST=/in/list.meta.us.yml \
+  -e OUT_DIR=/out \
   -e PROBE_TIMEOUT="${PROBE_TIMEOUT:-5}" \
   -e WORKERS="${WORKERS:-64}" \
-  "$IMAGE"
+  -e TZ=Asia/Shanghai \
+  "$IMAGE" || exit 1
 
-if [ ! -f "$OUT_DIR/probe_domestic.csv" ]; then
+# ---- 4. 提交推送 ----
+if [ ! -f "$WORK/out/probe_domestic.csv" ]; then
   echo "没有生成 probe_domestic.csv"
   exit 1
 fi
-echo "[$(date '+%F %T')] 探测完成"
+# 结果按**列表的批次**命名，和美国侧的 probe_<ts>.csv 严格对应
+cp "$WORK/out/probe_domestic.csv" "./probe_domestic_${STAMP}.csv"
+cp "$WORK/out/probe_domestic.csv" ./probe_domestic.csv
 
-# ---- 2. 推送（宿主机负责，容器里没有 git）----
 if [ "${NO_PUSH:-0}" = "1" ]; then
-  echo "[$(date '+%F %T')] NO_PUSH=1，跳过推送。结果：$OUT_DIR/probe_domestic.csv"
+  echo "[$(date '+%F %T')] NO_PUSH=1，跳过推送。结果在 $WORK/out/"
   exit 0
 fi
 
-echo "[$(date '+%F %T')] 提交并推送"
-cp "$OUT_DIR/probe_domestic.csv" ./probe_domestic.csv
-cp "$OUT_DIR"/probe_domestic_*.csv ./ 2>/dev/null || true
-
 git checkout -B "$BRANCH" 2>/dev/null || true
-git add -f probe_domestic*.csv
+git add -f probe_domestic*.csv 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "  无变化"
 else
   git -c user.name="NAS probe" -c user.email="probe@nas.local" \
-    commit -m "probe: $(date '+%F %T') 国内可达性探测"
-  if git push origin "$BRANCH"; then
+    commit -m "probe: $(date '+%F %T') 国内可达性探测" || true
+  if git push origin HEAD:refs/heads/"$BRANCH"; then
     echo "  已推送 $BRANCH"
   else
-    echo "  推送失败（不影响本地结果）。可能没配 SSH 部署密钥。"
+    echo "  推送失败（不影响本地结果）"
     exit 1
   fi
 fi
