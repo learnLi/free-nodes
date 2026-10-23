@@ -137,14 +137,19 @@ fi
 echo "[$(date '+%F %T')] 尝试推送"
 # 先把远端分支拉下来作为基线。少了这一步，git checkout -B 会从当前 HEAD
 # （通常是 main）开分支，推送时会被判为非快进而被拒绝。
-git fetch --depth=1 origin "$BRANCH_PROBE" 2>/dev/null || true
-if git checkout -B "$BRANCH_PROBE" "origin/$BRANCH_PROBE" 2>/dev/null; then
+# 用显式 refspec，确保 remote-tracking ref 一定建出来。
+git fetch --depth=1 origin \
+  "+refs/heads/$BRANCH_PROBE:refs/remotes/origin/$BRANCH_PROBE" 2>/dev/null || true
+if git rev-parse --verify "origin/$BRANCH_PROBE" >/dev/null 2>&1; then
+  git checkout -B "$BRANCH_PROBE" "origin/$BRANCH_PROBE"
   echo "  基于远端分支继续"
 else
   git checkout -B "$BRANCH_PROBE"
   echo "  远端分支不存在，新建"
 fi
-git add -A probe_domestic*.csv 2>/dev/null || true
+# 必须用 -f：仓库的 .gitignore 里忽略了 probe_domestic*.csv
+#（避免误提交到 main），而这里就是要把它提交到数据分支
+git add -f probe_domestic*.csv 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "  无变化"
 else
