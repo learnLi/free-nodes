@@ -130,7 +130,7 @@ with tempfile.TemporaryDirectory() as td:
             'trojan://pw@9.9.9.9:443#timeout',   # timeout -> 保留
             'trojan://pw@1.1.1.1:443#alive',     # 正常 -> 保留
         ]) + '\n')
-    n = prune_v2ray(src, dst, PROBE, keep_plaintext=False)
+    n, _removed = prune_v2ray(src, dst, PROBE, keep_plaintext=False)
     out = open(dst, encoding='utf-8').read().splitlines()
     check("剔除 3 条", n, 3)
     check("剩余 2 条", len(out), 2)
@@ -143,7 +143,7 @@ with tempfile.TemporaryDirectory() as td:
     dst = os.path.join(td, 'out.txt')
     with open(src, 'w', encoding='utf-8') as f:
         f.write('http://u:p@11.1.1.1:9002\ntrojan://pw@1.1.1.1:443#alive\n')
-    n = prune_v2ray(src, dst, PROBE, keep_plaintext=True)
+    n, _removed = prune_v2ray(src, dst, PROBE, keep_plaintext=True)
     check("保留明文代理时只剔除确凿死的", n, 0)
 
 print()

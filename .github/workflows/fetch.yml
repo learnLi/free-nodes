@@ -87,7 +87,7 @@ jobs:
               --input "$f" \
               --output "$f.pruned" \
               --probe probe.csv \
-              --removed-report "pruned/$(echo "$f" | tr '/' '_').csv"
+              --removed-report "pruned_$(echo "$f" | tr '/' '_').csv"
             mv "$f.pruned" "$f"
           done
           # V2Ray 明文链接列表同样裁剪（明文开放代理 / 确凿已死）
@@ -95,7 +95,7 @@ jobs:
             cp list_raw.txt list_raw.full.txt
             python ./prune.py \
               --probe probe.csv \
-              --removed-report pruned/list_raw.txt.csv \
+              --removed-report pruned_list_raw.txt.csv \
               --v2ray-input list_raw.txt \
               --v2ray-output list_raw.pruned.txt
             mv list_raw.pruned.txt list_raw.txt
@@ -114,7 +114,7 @@ jobs:
           rm -rf dist dist-snippets
           mkdir -p dist dist-snippets
           # 顶层订阅文件 -> Release: latest
-          for f in list.txt list.meta.yml list.meta.full.yml list.yml list.yml.full.yml list_raw.txt list_result.csv consensus.csv sources.csv probe.csv probe_summary.json probe_summary.md; do
+          for f in list.txt list.meta.yml list.meta.full.yml list.yml list.yml.full.yml list_raw.txt list_raw.full.txt list_result.csv consensus.csv sources.csv probe.csv probe_summary.json probe_summary.md; do
             if [ -f "$f" ]; then cp "$f" dist/; fi
           done
           # 配置片段 -> Release: snippets
@@ -124,9 +124,10 @@ jobs:
             cp "$f" dist-snippets/
           done
           # 裁剪记录
-          if [ -d pruned ]; then
-            cp pruned/*.csv dist/ 2>/dev/null || true
-          fi
+          for f in pruned_*.csv; do
+            [ -f "$f" ] || continue
+            cp "$f" dist/
+          done
           echo "订阅文件 $(find dist -type f | wc -l) 个，片段 $(find dist-snippets -type f | wc -l) 个"
           ls -la dist/ dist-snippets/
 
@@ -206,9 +207,9 @@ jobs:
             echo "TLS 服务不符。TCP 超时与 QUIC 协议一律保留——"
             echo "超时可能意味着服务器只对中国 IP 放行，QUIC 则无法用 TCP 探测。"
             echo
-            if [ -d pruned ]; then
+            if ls pruned_*.csv >/dev/null 2>&1; then
               echo '```'
-              for f in pruned/*.csv; do
+              for f in pruned_*.csv; do
                 [ -f "$f" ] || continue
                 n=$(($(wc -l < "$f") - 1))
                 [ "$n" -gt 0 ] && echo "$(basename "$f") : 剔除 $n 个"

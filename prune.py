@@ -97,9 +97,12 @@ def extract_addr(url: str) -> Tuple[str, int]:
 
 
 def prune_v2ray(path: str, out_path: str, probe: Dict[Tuple[str, int], Dict[str, str]],
-                keep_plaintext: bool) -> int:
-    """按同样规则裁剪 V2Ray 明文链接列表，返回剔除条数。"""
-    removed = 0
+                keep_plaintext: bool) -> Tuple[int, List[Tuple[str, str, str]]]:
+    """按同样规则裁剪 V2Ray 明文链接列表。
+
+    返回 (剔除条数, [(名称, 类型, 原因), ...])。
+    """
+    removed: List[Tuple[str, str, str]] = []
     kept_lines: List[str] = []
     with open(path, encoding='utf-8') as f:
         lines = f.read().splitlines()
@@ -109,19 +112,22 @@ def prune_v2ray(path: str, out_path: str, probe: Dict[Tuple[str, int], Dict[str,
             continue
         scheme = url.split('://', 1)[0].lower() if '://' in url else ''
         if scheme in PLAINTEXT_TYPES and not keep_plaintext:
-            removed += 1
+            removed.append((url[:60], scheme.upper(),
+                            '明文 %s 代理（非免费节点，且代理方可见明文流量）'
+                            % scheme.upper()))
             continue
         server, port = extract_addr(url)
         row = probe.get((server, port)) if server else None
         if row is not None and row.get('TCP') == 'N':
             err = row.get('错误') or ''
             if any(m.lower() in err.lower() for m in DEAD_ERROR_MARKERS):
-                removed += 1
+                removed.append((url[:60], scheme.upper(),
+                                'TCP 连接被拒绝，端口无人监听'))
                 continue
         kept_lines.append(url)
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(kept_lines) + ('\n' if kept_lines else ''))
-    return removed
+    return len(removed), removed
 
 
 def load_probe(path: str) -> Dict[Tuple[str, int], Dict[str, str]]:
@@ -171,6 +177,17 @@ def decide(proxy: Dict[str, Any], probe: Dict[Tuple[str, int], Dict[str, str]],
     return True, ''
 
 
+def write_report(path: str, records: List[Tuple[str, str, str]]) -> None:
+    d = os.path.dirname(path)
+    if d:
+        os.makedirs(d, exist_ok=True)
+    with open(path, 'w', encoding='utf-8', newline='') as f:
+        w = csv.writer(f)
+        w.writerow(['名称', '类型', '剔除原因'])
+        for n, t, r in records:
+            w.writerow([n, t, r])
+
+
 def main() -> int:
     import yaml
     args = parse_args()
@@ -179,9 +196,17 @@ def main() -> int:
     # ---- V2Ray 明文链接列表 ----
     if args.v2ray_input and args.v2ray_output:
         if os.path.exists(args.v2ray_input):
-            n = prune_v2ray(args.v2ray_input, args.v2ray_output, probe,
-                            args.keep_plaintext_proxy)
+            n, removed = prune_v2ray(args.v2ray_input, args.v2ray_output, probe,
+                                     args.keep_plaintext_proxy)
+            write_report(args.removed_report, removed)
             print("裁剪 %s：剔除 %d 条链接" % (args.v2ray_input, n))
+            by_reason: Dict[str, int] = {}
+            for _, _, r in removed:
+                by_reason[r] = by_reason.get(r, 0) + 1
+            for r, c in sorted(by_reason.items(), key=lambda x: -x[1]):
+                print("  %-52s %d" % (r[:52], c))
+            if not removed:
+                print("  （无剔除）")
         else:
             print("跳过 V2Ray 列表（找不到 %s）" % args.v2ray_input)
 
@@ -217,15 +242,11 @@ def main() -> int:
         f.write(header)
         f.write(yaml.dump(data, allow_unicode=True, sort_keys=False).replace('!!str ', ''))
 
-    with open(args.removed_report, 'w', encoding='utf-8', newline='') as f:
-        w = csv.writer(f)
-        w.writerow(['名称', '类型', '剔除原因'])
-        for n, t, r in removed:
-            w.writerow([n, t, r])
+    write_report(args.removed_report, removed)
 
     print("裁剪 %s：%d -> %d 个节点（剔除 %d 个）" % (
         args.input, len(proxies), len(kept), len(removed)))
-    by_reason: Dict[str, int] = {}
+    by_reason = {}
     for _, _, r in removed:
         by_reason[r] = by_reason.get(r, 0) + 1
     for r, c in sorted(by_reason.items(), key=lambda x: -x[1]):
