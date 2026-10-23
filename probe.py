@@ -18,6 +18,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import socket
 import ssl
 import sys
@@ -171,33 +172,84 @@ def probe_one(proxy: Dict[str, Any], timeout: float) -> Dict[str, Any]:
     return row
 
 
+def _raw_http_ip(urls: List[str], timeout: float) -> str:
+    """用裸 TCP(+TLS) 请求 IP 回显服务，拿到**直连**出口。
+
+    探测本身走的是 socket.create_connection（裸 TCP，不走任何 HTTP 代理），
+    所以自报出口必须用同样的路径。urllib 会读取 http_proxy 环境变量，
+    在有代理的机器上它报的是**代理的**出口 IP，与探测实际走的路径不符——
+    那会让「从哪儿探的」这个前提失真。
+    """
+    import ssl
+    for url in urls:
+        try:
+            from urllib.parse import urlparse
+            p = urlparse(url)
+            host = p.hostname or ''
+            port = p.port or (443 if p.scheme == 'https' else 80)
+            ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
+            with socket.create_connection((host, port), timeout=timeout) as sock:
+                if p.scheme == 'https':
+                    sock = ctx.wrap_socket(sock, server_hostname=host)
+                req = ("GET %s HTTP/1.1\r\nHost: %s\r\n"
+                       "User-Agent: free-nodes-probe\r\nConnection: close\r\n\r\n"
+                       % (p.path or '/', host))
+                sock.sendall(req.encode())
+                buf = b''
+                while len(buf) < 4096:
+                    chunk = sock.recv(4096)
+                    if not chunk:
+                        break
+                    buf += chunk
+                body = buf.split(b'\r\n\r\n', 1)[-1].decode('utf-8', 'ignore').strip()
+                m = re.search(r'(\d{1,3}(?:\.\d{1,3}){3})', body)
+                if m:
+                    return m.group(1)
+        except Exception:  # noqa: BLE001
+            continue
+    return ''
+
+
 def detect_egress(timeout: float = 8.0) -> Dict[str, Any]:
     """探测发起方的公网出口 IP 与归属地。
 
     探针结果的一切解读都取决于「从哪儿探的」——海外出口探到的「通」
     不代表中国大陆可达。这个自报信息随每轮结果一起发布，让结论可核查。
+
+    优先用裸 TCP 查直连出口（与探测路径一致）；查不到再退回 urllib，
+    并明确标注 method='proxy'，因为那种情况下报的是代理出口，与探测
+    实际走的路径可能不同。
     """
     import json as _json
     import urllib.request
     out: Dict[str, Any] = {}
-    ip = ''
-    for url in ('https://api.ipify.org?format=json',
-                'https://ifconfig.co/json',
-                'https://api.ip.sb/geoip'):
-        try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'free-nodes-probe'})
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                data = _json.loads(r.read().decode('utf-8', 'ignore'))
-            ip = str(data.get('ip') or data.get('origin') or '').split(',')[0].strip()
-            if ip:
-                out['ip'] = ip
-                out['country'] = data.get('country') or data.get('country_name') or ''
-                out['city'] = data.get('city') or ''
-                out['org'] = data.get('org') or data.get('organization') or ''
-                break
-        except Exception:  # noqa: BLE001
-            continue
-    if ip and not out.get('country'):
+    ip = _raw_http_ip(['https://api.ipify.org/?format=json',
+                        'https://ifconfig.co/json'], timeout)
+    method = 'direct'
+    if not ip:
+        method = 'proxy'
+        for url in ('https://api.ipify.org?format=json',
+                    'https://ifconfig.co/json',
+                    'https://api.ip.sb/geoip'):
+            try:
+                req = urllib.request.Request(url, headers={'User-Agent': 'free-nodes-probe'})
+                with urllib.request.urlopen(req, timeout=timeout) as r:
+                    data = _json.loads(r.read().decode('utf-8', 'ignore'))
+                ip = str(data.get('ip') or data.get('origin') or '').split(',')[0].strip()
+                if ip:
+                    out['country'] = data.get('country') or data.get('country_name') or ''
+                    out['city'] = data.get('city') or ''
+                    out['org'] = data.get('org') or data.get('organization') or ''
+                    break
+            except Exception:  # noqa: BLE001
+                continue
+    if not ip:
+        return {}
+    out['ip'] = ip
+    out['method'] = method
+    if not out.get('country'):
         # 归属地接口失败时再单独查一次
         try:
             req = urllib.request.Request('https://ipwho.is/' + ip,
@@ -319,10 +371,11 @@ def main() -> int:
 
     # 同时输出一份 Markdown，方便直接贴进 Release 说明
     md = ['```', '指标 | 数值', '--- | ---']
-    md.append('探测出口 | %s %s %s' % (
+    md.append('探测出口 | %s %s %s（%s）' % (
         summary['egress'].get('ip', '未知'),
         summary['egress'].get('country', ''),
-        summary['egress'].get('city', '')))
+        summary['egress'].get('city', ''),
+        '直连' if summary['egress'].get('method') == 'direct' else '经代理'))
     md.append('总节点数 | %d' % summary['total'])
     md.append('TCP 可探测（已剔除 QUIC/UDP） | %d' % summary['tcp_applicable'])
     md.append('TCP 连通 | %d（%s）' % (summary['tcp_ok'], summary['tcp_rate']))
