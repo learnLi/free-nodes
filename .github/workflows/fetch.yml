@@ -11,6 +11,7 @@ on:
       - 'sources.list'
       - 'config.yml'
       - 'fetch_config.yml'
+      - 'fetch_config.local.yml'
       - 'abpwhite.txt'
       - 'fetch.py'
       - 'dynamic.py'
@@ -59,7 +60,7 @@ jobs:
           rm -rf dist dist-snippets
           mkdir -p dist dist-snippets
           # 顶层订阅文件 -> Release: latest
-          for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv; do
+          for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv consensus.csv; do
             if [ -f "$f" ]; then cp "$f" dist/; fi
           done
           # 配置片段 -> Release: snippets
@@ -94,6 +95,22 @@ jobs:
             echo "https://github.com/${{ github.repository }}/releases/download/snippets/nodes.meta.yml"
             echo "https://github.com/${{ github.repository }}/releases/download/snippets/adblock.yml"
             echo '```'
+            echo
+            echo "### 多源共识分布"
+            echo
+            echo "「独立来源」= 订阅 URL 按仓库归并后的数量（同一仓库的多个文件只算一个来源）。"
+            echo "被多个独立来源同时收录的节点，存活概率显著更高。"
+            echo
+            if [ -f consensus.csv ]; then
+              echo '```'
+              echo "独立来源数 | 节点数 | 占比 | 协议分布"
+              tail -n +2 consensus.csv | while IFS=, read -r n cnt pct detail; do
+                echo "${n} | ${cnt} | ${pct} | ${detail}"
+              done
+              echo '```'
+            else
+              echo "_本次未生成统计数据_"
+            fi
           } > notes.md
           cat notes.md
 

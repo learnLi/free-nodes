@@ -1,0 +1,14 @@
+# 本仓库自维护的配置覆盖层（不参与上游同步）
+#
+# 加载顺序：fetch_config.yml（上游，每日同步） -> 本文件 -> local_fetch_config.yml（本地调试）
+# 本文件的键会覆盖 fetch_config.yml 中的同名键。
+
+# === 多源共识 ===
+# 「独立来源」的判定：同一个仓库的多个 URL 归并为一个来源
+# （sources.list 里 free9999 有 3 条、proxypool 有 2 条，按 URL 计数会高估共识强度）
+consensus:
+  # 统计每个节点被几个独立来源收录，并输出 consensus.csv
+  # 本阶段只统计、不做任何过滤，先用真实分布决定阈值
+  enable_stats: true
+  # 后续启用过滤时的阈值（待统计数据确认后再打开）
+  min_sources: 0

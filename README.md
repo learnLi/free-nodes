@@ -111,10 +111,30 @@ list.txt        list.yml             list.meta.yml        snippets/*.yml
 
 | 文件 | 是否跟随上游同步 |
 | :- | :- |
-| `sources.list` / `config.yml` / `fetch_config.yml` / `abpwhite.txt` | ✅ 每日自动覆盖 |
+| `sources.list` / `fetch_config.yml` / `abpwhite.txt` | ✅ 每日自动覆盖 |
+| `config.yml` | ❌ **不覆盖**，由本仓库自行维护 |
 | `fetch.py` / `dynamic.py` | ❌ **不覆盖**，由本仓库自行维护 |
 
-这样既能持续获得上游的规则更新，又不会把本地对代码的改动冲掉。若要修改规则集，请直接改 `config.yml`（下次同步会覆盖，**建议提交到本仓库的规则定制分支，或在 `sync.yml` 中改为 patch 方式合并**）。
+`config.yml` 不再自动覆盖，是为了能自由定制分流规则与健康检查参数。代价是**会错过上游的规则更新**，
+所以 `sync.yml` 会额外产出一份**规则差异报告**（artifact `upstream-config-diff`），
+列出上游新增/删除了哪些规则，人工按需合并即可。
+
+本仓库自己的定制统一放在 `fetch_config.local.yml`（覆盖层，永不被同步覆盖），加载顺序：
+
+```
+fetch_config.yml（上游） → fetch_config.local.yml（本仓库） → local_fetch_config.yml（本地调试）
+```
+
+### 多源共识统计
+
+`fetch.py` 会统计每个节点被**几个独立来源**同时收录，输出到 `consensus.csv` 并附在 Release 说明里。
+
+这里的「独立来源」是**按仓库归并**后的计数 —— 同一个仓库的多个文件（同一份订阅的不同格式）
+只算一个来源。否则 `sources.list` 里 `free9999` 的 3 条、`proxypool` 的 2 条会灌水，
+把共识强度严重高估。当前 13 个订阅 URL 实际只对应 **8 个独立来源**。
+
+被多个独立来源同时收录的节点，存活概率显著更高——这是目前唯一**零带宽、零主动探测**
+的质量信号（本项目不做连通性探测，详见下方「安全须知」）。
 
 ---
 
@@ -140,7 +160,15 @@ python fetch.py
 | `local_NO_NODES` | 不抓节点，只跑规则部分 |
 | `local_NO_DYNAMIC` | 不抓动态节点 |
 | `local_NO_ADBLOCK` | 不抓广告规则 |
-| `local_fetch_config.yml` | 覆盖 `fetch_config.yml` 的配置 |
+| `local_fetch_config.yml` | 覆盖 `fetch_config.yml` 的配置（优先级最高） |
+
+### 跑测试
+
+```bash
+python tests/test_consensus.py
+```
+
+单元测试不联网，覆盖源身份归并、共识统计与直方图输出。
 
 ### 目录约定
 

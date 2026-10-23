@@ -13,6 +13,7 @@
 import yaml
 import json
 import base64
+import re
 from urllib.parse import quote, unquote, urlparse, ParseResult
 import ipaddress
 import requests
@@ -38,6 +39,7 @@ class TYPE_FETCH_CONFIG(TypedDict):
     name_map: Dict[str, str]
     categories: Dict[str, List[str]]
     categories_disp: Dict[str, str]
+    consensus: Dict[str, Any]
 
 FETCH_CONFIG: TYPE_FETCH_CONFIG = {
     'stop': False,
@@ -48,13 +50,17 @@ FETCH_CONFIG: TYPE_FETCH_CONFIG = {
     'abfwhite': [],
     'name_map': {},
     'categories': {},
-    'categories_disp': {}
+    'categories_disp': {},
+    'consensus': {'enable_stats': True, 'min_sources': 0}
 }
-for fn in ("fetch_config.yml", "local_fetch_config.yml"):
+# 配置加载顺序：上游配置 -> 本仓库覆盖层 -> 本地调试覆盖（后者优先）
+# fetch_config.local.yml 由本仓库维护，不参与上游同步，因此可安全承载本地定制
+for fn in ("fetch_config.yml", "fetch_config.local.yml", "local_fetch_config.yml"):
     try:
-        FETCH_CONFIG.update(yaml.safe_load(open(fn, encoding="utf-8").read()))
+        _conf = yaml.safe_load(open(fn, encoding="utf-8").read())
     except OSError:
-        pass
+        continue
+    if _conf: FETCH_CONFIG.update(_conf)
 try: PROXY = open("local_proxy.conf").read().strip()
 except OSError: LOCAL = False; PROXY = None
 else:
@@ -1092,6 +1098,71 @@ def extract(url: str) -> Union[Set[str], int]:
             urls.add(line+mark)
     return urls
 
+def source_identity(url: str) -> str:
+    """把订阅 URL 归并到「独立来源」粒度。
+
+    同一个仓库的多个文件（同一份订阅的不同格式）只算一个来源。
+    否则「多源共识」信号会被同一个仓库的多个 URL 灌水——
+    例如 sources.list 里 free9999 有 3 条、proxypool 有 2 条，
+    按 URL 计数会严重高估共识强度。
+    """
+    u = url.split('#', 1)[0]
+    if u.startswith('dynamic://'): return u
+    for pat, prefix in (
+        (r'https?://raw\.githubusercontent\.com/([^/]+)/([^/]+)/', 'github:'),
+        (r'https?://github\.com/([^/]+)/([^/]+)/',                'github:'),
+        (r'https?://gist\.githubusercontent\.com/([^/]+)/([0-9a-f]+)', 'gist:'),
+        (r'https?://gitlab\.com/([^/]+)/([^/]+)/',                'gitlab:'),
+    ):
+        m = re.match(pat, u)
+        if m: return prefix+m.group(1)+'/'+m.group(2)
+    return u
+
+
+def consensus_of(used: Dict[int, Dict[int, str]],
+                 source_ids: Dict[int, str]) -> Dict[int, Set[int]]:
+    """统计每个节点出现在哪些「独立来源」中。"""
+    ident_ids: Dict[str, int] = {}
+    for sid in sorted(source_ids):
+        ident_ids.setdefault(source_ids[sid], len(ident_ids))
+    res: Dict[int, Set[int]] = {}
+    for hashn, srcs in used.items():
+        res[hashn] = {ident_ids[source_ids[s]] for s in srcs if s in source_ids}
+    return res
+
+
+def write_consensus(merged: Dict[int, Node], used: Dict[int, Dict[int, str]],
+                    source_ids: Dict[int, str]):
+    """输出多源共识统计（仅统计，不改变任何过滤行为）。"""
+    cons = consensus_of(used, source_ids)
+    hist: Dict[int, int] = {}
+    proto: Dict[int, Dict[str, int]] = {}
+    for hashn, node in merged.items():
+        n = len(cons.get(hashn, ()))
+        hist[n] = hist.get(n, 0) + 1
+        proto.setdefault(n, {})
+        t = node.type
+        proto[n][t] = proto[n].get(t, 0) + 1
+    total = len(merged)
+    ident_count = len(set(source_ids.values()))
+
+    lines = ["独立来源数,节点数,占比,协议分布"]
+    for n in sorted(hist):
+        pct = (hist[n]/total*100) if total else 0
+        detail = ' '.join('%s=%d' % (k, v) for k, v in sorted(proto[n].items()))
+        lines.append("%d,%d,%.1f%%,%s" % (n, hist[n], pct, detail))
+    with open("consensus.csv", 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lines)+'\n')
+
+    print("\n=== 多源共识分布 ===")
+    print("订阅 URL %d 个，归并后独立来源 %d 个" % (len(source_ids), ident_count))
+    for n in sorted(hist):
+        pct = (hist[n]/total*100) if total else 0
+        print("  %d 个来源收录: %4d 个节点 (%.1f%%)  %s" % (
+            n, hist[n], pct, ' '.join('%s=%d' % (k, v) for k, v in sorted(proto[n].items()))))
+    return hist, ident_count
+
+
 merged: Dict[int, Node] = {}
 unknown: Set[str] = set()
 used: Dict[int, Dict[int, str]] = {}
@@ -1287,6 +1358,11 @@ def main():
     sources_final.sort()
     sources_obj = [Source(url) for url in (sources_final + AUTOFETCH)]
 
+    # 把每个订阅 URL 映射到「独立来源」身份，供多源共识统计使用
+    source_ids: Dict[int, str] = {}
+    for i, so in enumerate(sources_obj):
+        source_ids[i] = source_identity(so.url)
+
     print("开始抓取！")
     threads = [threading.Thread(target=_.get, daemon=True) for _ in sources_obj]
     for thread in threads: thread.start()
@@ -1336,6 +1412,12 @@ def main():
             if hashp in used:
                 src = ','.join([str(_) for _ in sorted(list(used[hashp]))])
                 p.data['name'] = src+'|'+p.data['name']
+
+    if not FETCH_CONFIG['stop'] and FETCH_CONFIG.get('consensus', {}).get('enable_stats', True):
+        try:
+            write_consensus(merged, used, source_ids)
+        except:
+            traceback.print_exc()
 
     print("\n正在写出 V2Ray 订阅...")
     txt = ""

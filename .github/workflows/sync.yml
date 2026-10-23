@@ -1,7 +1,10 @@
 name: Sync upstream config
 
-# 只同步上游「配置类」文件，代码（fetch.py / dynamic.py）由本仓库自行维护，
-# 避免上游更新把本地改动冲掉。详见 README 的「上游同步策略」。
+# 只同步上游「配置类」文件。
+#   同步：sources.list / fetch_config.yml / abpwhite.txt
+#   不同步：config.yml（本仓库自行维护，避免上游覆盖本地定制）
+#            fetch.py / dynamic.py（本仓库自行维护）
+# 上游 config.yml 的规则变化以「差异报告」形式产出，供人工跟进。
 
 on:
   schedule:
@@ -35,39 +38,83 @@ jobs:
 
       - name: 拉取上游快照
         run: |
+          set -euo pipefail
           git remote remove upstream 2>/dev/null || true
           git remote add upstream https://github.com/peasoft/NoMoreWalls.git
           git fetch --depth=1 upstream master
           echo "上游 commit：$(git rev-parse upstream/master)"
 
-      - name: 计算差异
+      - name: 同步配置类文件
         id: diff
         run: |
           set -euo pipefail
-          # 只同步这些「配置类」文件；fetch.py / dynamic.py 绝不覆盖
-          FILES="sources.list config.yml fetch_config.yml abpwhite.txt"
+          # 注意：config.yml 不在其中——本仓库自行维护
+          FILES="sources.list fetch_config.yml abpwhite.txt"
           git checkout upstream/master -- $FILES
           if git diff --quiet -- $FILES; then
-            echo "无变更" >> "$GITHUB_OUTPUT"
+            echo "changed" >> "$GITHUB_OUTPUT"
           else
-            echo "有变更" >> "$GITHUB_OUTPUT"
+            echo "changed" >> "$GITHUB_OUTPUT"
             git diff --stat -- $FILES | tee diff.txt
-            git diff -- $FILES | head -200 >> diff.txt
           fi
 
+      - name: 生成上游 config.yml 规则差异报告
+        run: |
+          set -euo pipefail
+          git show upstream/master:config.yml > upstream-config.yml
+          # 只比对 rules 段，proxy-groups / dns 差异单独看
+          extract_rules() {
+            sed -n '/^rules:/,$p' "$1" \
+              | grep -vE '^\s*#' | grep -v '^rules:' | grep -vE '^\s*$' | sort
+          }
+          extract_rules config.yml          > /tmp/local-rules.txt
+          extract_rules upstream-config.yml > /tmp/upstream-rules.txt
+          comm -13 /tmp/local-rules.txt /tmp/upstream-rules.txt > /tmp/rules-added.txt || true
+          comm -23 /tmp/local-rules.txt /tmp/upstream-rules.txt > /tmp/rules-removed.txt || true
+          {
+            echo "# 上游 config.yml 规则差异报告"
+            echo
+            echo "上游 commit: $(git rev-parse upstream/master)"
+            echo "本地规则数: $(wc -l < /tmp/local-rules.txt)"
+            echo "上游规则数: $(wc -l < /tmp/upstream-rules.txt)"
+            echo "上游新增: $(wc -l < /tmp/rules-added.txt) 条"
+            echo "上游删除: $(wc -l < /tmp/rules-removed.txt) 条"
+            echo
+            echo "## 新增规则"
+            cat /tmp/rules-added.txt
+            echo
+            echo "## 删除规则"
+            cat /tmp/rules-removed.txt
+          } | tee config-diff.txt
+          # 供 artifact 上传
+          cp /tmp/rules-added.txt /tmp/rules-removed.txt . 2>/dev/null || true
+          rm -f upstream-config.yml
+
       - name: 提交
-        if: steps.diff.outputs.changed == '有变更'
+        if: steps.diff.outputs.changed == 'changed'
         run: |
           set -euo pipefail
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add sources.list config.yml fetch_config.yml abpwhite.txt
+          git add sources.list fetch_config.yml abpwhite.txt
           git commit -m "sync upstream $(date '+%Y-%m-%d %H:%M:%S')  ($(git rev-parse --short upstream/master))"
           git show --stat --oneline HEAD | tee -a diff.txt
 
       - name: 推送
-        if: steps.diff.outputs.changed == '有变更'
+        if: steps.diff.outputs.changed == 'changed'
         run: |
           set -euo pipefail
           git pull --rebase origin main || true
           git push origin main
+
+      - name: 上传差异报告
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: upstream-config-diff
+          path: |
+            config-diff.txt
+            rules-added.txt
+            rules-removed.txt
+          retention-days: 30
+          if-no-files-found: ignore
