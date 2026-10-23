@@ -29,7 +29,8 @@ REPO="${1:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 cd "$REPO" || { echo "目录不存在：$REPO"; exit 1; }
 
 BRANCH_PROBE="probe-domestic"
-LIST_URL="${LIST_URL:-https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.full.yml}"
+# 回退用的 CDN 地址：默认指向 Stage 1 产物（list.meta.us.yml）
+LIST_URL="${LIST_URL:-https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.us.yml}"
 PROBE_TIMEOUT="${PROBE_TIMEOUT:-5}"
 WORKERS="${WORKERS:-64}"
 JITTER_MAX=$((15 * 60))
@@ -82,28 +83,30 @@ if [ "${INTERVAL_JITTER:-1}" = "1" ] && [ "$JITTER_MAX" -gt 0 ]; then
 fi
 
 # ---- 1. 取节点列表 ----
-LIST="list.meta.full.yml"
+LIST="list.meta.us.yml"
 STAMP=""
-echo "[$(date '+%F %T')] 获取节点列表"
-# 优先用 output 分支里最新的**带时间戳**的节点列表。
-# 时间戳代表「这批节点的版本」——NAS 用它探测，结果才能与同批的美国侧
-# probe.csv 严格对齐。否则两边探测的节点池不是同一批，交叉表里会有
-# 三成节点只能判成「未测出」。
+echo "[$(date '+%F %T')] 获取 Stage 1 产物"
+# Stage 1 是 CI 用美国侧多轮探测历史筛出的「确实能用」子集。
+# NAS 只探测这一份，探测量更小、结果更集中。
+#
+# 用 output 分支里最新的带时间戳副本，并用**它的时间戳**命名结果——
+# 时间戳代表「节点池版本」，这样 probe_domestic_<ts>.csv 与美国的
+# probe_<ts>.csv 严格对应同一批节点。
 git fetch --depth=1 origin \
   "+refs/heads/output:refs/remotes/origin/output" 2>/dev/null || true
 LIST_NAME=$(git ls-tree --name-only origin/output 2>/dev/null \
-  | grep -oE 'list_[0-9]{8}_[0-9]{4}\.full\.yml' | sort | tail -1 || true)
+  | grep -oE 'list\.meta\.us_[0-9]{8}_[0-9]{4}\.yml' | sort | tail -1 || true)
 if [ -n "$LIST_NAME" ]; then
-  STAMP=$(echo "$LIST_NAME" | sed -E 's/^list_([0-9]{8}_[0-9]{4})\.full\.yml$/\1/')
+  STAMP=$(echo "$LIST_NAME" | sed -E 's/^list\.meta\.us_([0-9]{8}_[0-9]{4})\.yml$/\1/')
   if git show "origin/output:$LIST_NAME" > "$LIST" 2>/dev/null && [ -s "$LIST" ]; then
-    echo "  用带时间戳的列表 $LIST_NAME（批次 $STAMP）"
+    echo "  用 Stage 1 产物 $LIST_NAME（批次 $STAMP）"
   else
     echo "  取 $LIST_NAME 失败，回退到 CDN"
     STAMP=""
     curl -sL --max-time 120 "$LIST_URL" -o "$LIST" || true
   fi
 else
-  echo "  output 分支里没有带时间戳的列表，回退到 CDN"
+  echo "  output 分支里没有带时间戳的 Stage 1 产物，回退到 CDN"
   curl -sL --max-time 120 "$LIST_URL" -o "$LIST" || true
 fi
 if [ ! -s "$LIST" ]; then

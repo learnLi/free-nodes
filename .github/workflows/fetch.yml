@@ -108,6 +108,37 @@ jobs:
             echo "$f: $(($(wc -l < "$f") - 1)) 个节点被剔除"
           done
 
+      # Stage 1：用美国侧的多轮探测历史筛出「确实能用」的子集，交给 NAS 做国内探测。
+      # 单轮探测噪声大——同一批地址连续几轮测下来，单轮说「活」的结果并不稳定。
+      # 跨轮一致的才是真信号。
+      - name: Stage 1：多轮一致性筛选
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          BASE="https://github.com/${{ github.repository }}/releases/latest/download"
+          N=${STAGE1_ROUNDS:-6}
+          MAPS=$(gh release view latest --json assets --jq '.assets[].name' \
+            | grep -oE '^probe_[0-9]{8}_[0-9]{4}\.csv$' | sort | tail -n "$N" || true)
+          HIST=""
+          for m in ${MAPS//,/ }; do
+            [ -n "$m" ] || continue
+            if curl -sL --max-time 60 "$BASE/$m" -o "$m" && [ -s "$m" ]; then
+              HIST="$HIST,$m"
+            fi
+          done
+          echo "历史轮次：${HIST#,}"
+          python3 ./scripts/stage1.py \
+            --input list.meta.yml \
+            --output list.meta.us.yml \
+            --probe probe.csv \
+            --history "${HIST#,}" \
+            --min-rounds "${STAGE1_MIN_ROUNDS:-2}" \
+            --report stage1.csv
+          python3 ./scripts/validate_config.py list.meta.us.yml
+          cp list.meta.us.yml "list.meta.us.$(cat .ts).yml"
+          cp stage1.csv "stage1.$(cat .ts).csv"
+
       # 配置一致性校验：Mihomo / Clash 遇到 proxy-group 引用了不存在的节点时，
       # 会拒绝加载整个配置，用户看到的是「订阅无效」。这类问题在 YAML 上
       # 看不出来，必须显式校验。校验不过就中止构建，绝不发布坏配置。
@@ -124,8 +155,12 @@ jobs:
           rm -rf dist dist-snippets
           mkdir -p dist dist-snippets
           # 顶层订阅文件 -> Release: latest
-          for f in list.txt list.meta.yml list.meta.full.yml list.yml list.yml.full.yml list_raw.txt list_raw.full.txt list_result.csv consensus.csv sources.csv probe.csv probe_summary.json probe_summary.md; do
+          for f in list.txt list.meta.yml list.meta.full.yml list.yml list.yml.full.yml list_raw.txt list_raw.full.txt list_result.csv consensus.csv sources.csv probe.csv probe_summary.json probe_summary.md list.meta.us.yml stage1.csv; do
             if [ -f "$f" ]; then cp "$f" dist/; fi
+          done
+          # 带时间戳的 Stage 1 产物，供 NAS 取用
+          for f in list.meta.us.*.yml stage1.*.csv; do
+            [ -f "$f" ] && cp "$f" dist/
           done
           # 配置片段 -> Release: snippets
           for f in snippets/*.yml; do
@@ -348,6 +383,8 @@ jobs:
           cp -r dist-snippets/. .output/snippets/
           # 带时间戳的节点列表：NAS 用它探测，结果才能与同批的美国数据对齐
           cp dist/list.meta.full.yml ".output/list_$(cat .ts).full.yml"
+          # Stage 1 产物的带时间戳副本：NAS 探测它，并用这里的时间戳命名结果
+          [ -f dist/list.meta.us.yml ] && cp dist/list.meta.us.yml ".output/list.meta.us_$(cat .ts).yml"
           cd .output
           git init -q -b output
           git config user.name "GitHub Actions"

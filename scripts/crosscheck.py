@@ -1,223 +1,109 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""中美探活结果交叉比对。
+"""Stage 3：结合中美两侧的多轮探测历史，产出「大陆可用」订阅。
 
-输入两份 probe.csv（同一 schema），按 (server, port) 关联，输出：
+判定分两层：
+  Stage 1（fetch.yml）用美国侧多轮历史筛出「确实能用」的子集，交给 NAS
+  Stage 2（NAS）在该子集上做国内探测，结果推回 probe-domestic 分支
+  Stage 3（本脚本）用中美两侧的多轮历史做最终判定，产出 list.meta.cn.yml
 
-  crosscheck.csv       每个地址的判定结果
-  crosscheck_summary.md 2x2 交叉表 + 分协议统计
-  list.meta.cn.yml     「国内可用」的节点子集（可选输出）
+为什么用多轮：单轮探测噪声很大。同一批地址连续几轮测下来，单轮说「活」的
+结果并不稳定；跨轮一致的才是真信号。实测 409 个地址连测 5 轮，
+314 个跨轮全活、87 个跨轮全死。
 
-判定逻辑（保守）：
+判定表（us = 美国侧跨轮状态，cn = 国内侧跨轮状态）：
 
-  美国 alive  = TCP 连通        （美国无 GFW 干扰，可信）
-  美国 dead   = 对端回 RST      （refused / reset by peer）
-  美国 unknown= 其余            （timeout / 无路由 / DNS 失败，不作死判定）
-  国内 alive  = TCP 连通
-  国内 blocked= 连不通         （含被 GFW RST 注入，无法与「端口关闭」区分）
-
-  美国 alive + 国内 alive  -> 可用，保留
-  美国 alive + 国内 blocked-> 大概率被墙，剔除（这是美国版留下的坑）
-  美国 dead  + 国内 alive  -> 被美国探活误杀，保留（这是美国版误杀的部分）
-  美国 dead  + 国内 blocked-> 真死，剔除
-  美国 unknown + 任意      -> 不确定，保留
+  cn=stable_alive  -> 保留   国内跨轮全活，这是真正的大陆可用节点
+  cn=stable_dead   -> 剔除   国内跨轮全死
+  cn=unknown + us=stable_alive -> 保留   国内没定论，但美国一直活
+  cn=unknown + us=stable_dead  -> 剔除
+  两端都 unknown    -> 保留   数据不足，保守
 """
 import argparse
 import csv
 import os
 import sys
-from collections import Counter, defaultdict
-from typing import Any, Dict, List, Optional, Tuple
+from collections import Counter
+from typing import Dict, List, Optional, Tuple
 
-# 复用 prune.py 里的组引用清理逻辑，避免两处实现分叉
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from rounds import addr_of, classify, load_rounds  # noqa: E402
 from prune import clean_group_refs  # noqa: E402
-
-# 美国侧：只有对端主动回 RST 才算确凿已死
-US_DEAD_MARKERS = ('refused', 'reset by peer')
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description='中美探活结果交叉比对')
-    p.add_argument('--us', required=True, help='美国侧 probe.csv')
-    p.add_argument('--cn', required=True, help='国内侧 probe.csv')
+    p = argparse.ArgumentParser(description='中美多轮探活交叉比对')
+    p.add_argument('--us', required=True, help='美国侧本轮 probe.csv')
+    p.add_argument('--cn', required=True, help='国内侧本轮 probe.csv')
+    p.add_argument('--us-history', default='', help='美国侧历史，逗号分隔')
+    p.add_argument('--cn-history', default='', help='国内侧历史，逗号分隔')
     p.add_argument('--out-csv', default='crosscheck.csv')
     p.add_argument('--out-md', default='crosscheck_summary.md')
-    p.add_argument('--out-cn-list', default='',
-                   help='输出「国内可用」节点子集的 Clash YAML 路径')
-    p.add_argument('--input-list', default='list.meta.full.yml',
-                   help='用于筛选国内可用子集的 Clash 配置')
-    p.add_argument('--min-us', action='store_true',
-                   help='剔除「国内被墙」的节点（默认只统计不剔除）')
-    p.add_argument('--us-release-url', default='',
-                   help='Release 资产的基础 URL，用于按时间戳配对下载')
-    p.add_argument('--us-candidates', default='',
-                   help='候选美国侧资产名，逗号分隔。给了就按时间戳挑最接近的一轮')
-    p.add_argument('--cn-file-name', default='',
-                   help='国内侧文件名（带时间戳），用于配对')
+    p.add_argument('--out-cn-list', default='', help='「大陆可用」子集的 YAML 路径')
+    p.add_argument('--input-list', default='list.meta.full.yml')
+    p.add_argument('--min-rounds', type=int, default=2,
+                   help='至少出现这么多轮才做判定（默认 2）')
+    p.add_argument('--alive-ratio', type=float, default=1.0,
+                   help='存活轮数占比达到多少算 stable_alive（默认 1.0 = 全活）')
+    p.add_argument('--us-release-url', default='', help='Release 资产基础 URL')
+    p.add_argument('--us-candidates', default='', help='美国侧候选资产名，逗号分隔')
+    p.add_argument('--cn-file-name', default='', help='国内侧文件名（带时间戳）')
     return p.parse_args()
 
 
-TS_RE = __import__('re').compile(r'_(\d{8})_(\d{4})\.csv$')
-
-
-def ts_of(name: str) -> Optional[str]:
-    """从文件名里取出时间戳（YYYYMMDD_HHMM）。"""
-    m = TS_RE.search(name)
-    if not m:
-        return None
-    return m.group(1) + '_' + m.group(2)
-
-
-def ts_minutes(ts: str) -> int:
-    """时间戳转成分钟数，便于比较。"""
-    import calendar
-    import time as _time
-    try:
-        st = _time.strptime(ts, '%Y%m%d_%H%M')
-    except ValueError:
-        return 0
-    return calendar.timegm(st)
-
-
-def pick_closest(candidates: List[str], want: str) -> Optional[str]:
-    """挑时间戳最接近 want 的候选。"""
-    wt = ts_minutes(want)
-    best = None
-    best_diff = None
-    for c in candidates:
-        t = ts_of(c)
-        if not t:
-            continue
-        d = abs(ts_minutes(t) - wt)
-        if best_diff is None or d < best_diff:
-            best, best_diff = c, d
-    return best
-
-
-def load(path: str) -> Dict[Tuple[str, int], Dict[str, str]]:
-    out: Dict[Tuple[str, int], Dict[str, str]] = {}
-    if not os.path.exists(path):
-        return out
-    with open(path, encoding='utf-8', newline='') as f:
-        for row in csv.DictReader(f):
-            try:
-                port = int(row.get('端口') or 0)
-            except (TypeError, ValueError):
-                continue
-            out[(row.get('服务器') or '', port)] = row
-    return out
-
-
-def us_status(row: Optional[Dict[str, str]]) -> str:
-    """alive / dead / unknown / n/a"""
-    if row is None:
-        return 'unknown'
-    tcp = row.get('TCP')
-    quic = row.get('QUIC', '')
-    if tcp == 'N/A':
-        # QUIC/UDP 协议：用 QUIC 探测结果判定
-        if quic == 'Y':
-            return 'alive'
-        if quic == 'N':
-            return 'dead'
-        return 'n/a'
-    if tcp == 'Y':
-        return 'alive'
-    if tcp == 'N':
-        err = (row.get('错误') or '').lower()
-        if any(m in err for m in US_DEAD_MARKERS):
-            return 'dead'
-    return 'unknown'
-
-
-def cn_status(row: Optional[Dict[str, str]]) -> str:
-    """alive / blocked / unknown / n/a"""
-    if row is None:
-        return 'unknown'
-    tcp = row.get('TCP')
-    quic = row.get('QUIC', '')
-    if tcp == 'N/A':
-        if quic == 'Y':
-            return 'alive'
-        if quic == 'N':
-            return 'blocked'
-        return 'n/a'
-    if tcp == 'Y':
-        return 'alive'
-    if tcp == 'N':
-        return 'blocked'
-    return 'unknown'
-
-
-# (美国状态, 国内状态) -> (判定, 动作)
-VERDICT = {
-    ('alive', 'alive'):   ('可用', 'keep'),
-    ('alive', 'blocked'): ('疑似被墙', 'drop'),
-    ('alive', 'unknown'): ('美国可用，国内未知', 'keep'),
-    ('alive', 'n/a'):    ('美国可用，国内未测(QUIC)', 'keep'),
-    ('dead', 'alive'):    ('被美国误杀', 'keep'),
-    ('dead', 'blocked'):  ('已死', 'drop'),
-    ('dead', 'unknown'):  ('美国判定已死', 'drop'),
-    ('dead', 'n/a'):      ('美国判定已死', 'drop'),
-    ('unknown', 'alive'): ('国内可用', 'keep'),
-    ('unknown', 'blocked'): ('国内不可达', 'keep'),
-    ('unknown', 'unknown'): ('两端都未测出', 'keep'),
-    ('unknown', 'n/a'):   ('两端都未测出', 'keep'),
-    ('n/a', 'alive'):     ('QUIC/UDP，仅国内可达', 'keep'),
-    ('n/a', 'blocked'):   ('QUIC/UDP', 'keep'),
-    ('n/a', 'unknown'):   ('QUIC/UDP，未测', 'keep'),
-    ('n/a', 'n/a'):       ('QUIC/UDP', 'keep'),
-}
+def decide(us_state: str, cn_state: str) -> Tuple[str, str]:
+    """(美国跨轮状态, 国内跨轮状态) -> (判定, 动作)"""
+    if cn_state == 'stable_alive':
+        return '国内跨轮全活', 'keep'
+    if cn_state == 'stable_dead':
+        return '国内跨轮全死', 'drop'
+    if us_state == 'stable_alive':
+        return '美国跨轮全活，国内未定', 'keep'
+    if us_state == 'stable_dead':
+        return '美国跨轮全死', 'drop'
+    return '两端都未定', 'keep'
 
 
 def main() -> int:
+    import yaml
     args = parse_args()
 
-    us_path = args.us
-    # 按时间戳配对：挑与美国侧最接近国内侧那一轮的美国数据。
-    # 两边快照差 50 分钟就能换掉 22% 的节点池，不配对的话一半的地址
-    # 只能判成「未测出」。
-    if args.us_candidates and args.us_release_url and args.cn_file_name:
-        cands = [c for c in args.us_candidates.split(',') if c.strip()]
-        want = ts_of(args.cn_file_name)
-        chosen = pick_closest(cands, want) if want else None
-        if chosen:
-            import urllib.request
-            url = '%s/%s' % (args.us_release_url.rstrip('/'), chosen)
-            print('按时间戳配对：国内 %s -> 美国 %s' % (want, chosen))
-            try:
-                with urllib.request.urlopen(url, timeout=60) as r:
-                    data = r.read()
-                with open(us_path, 'wb') as f:
-                    f.write(data)
-            except Exception as e:  # noqa: BLE001
-                print('下载 %s 失败（%s），退回用 %s' % (chosen, e, args.us))
-        else:
-            print('没找到可配对的美国侧资产，用 %s' % args.us)
-
-    us = load(us_path)
-    cn = load(args.cn)
-    if not us:
-        print("美国侧结果为空：%s" % us_path)
+    us_paths = [args.us] + [h for h in args.us_history.split(',') if h.strip()]
+    cn_paths = [args.cn] + [h for h in args.cn_history.split(',') if h.strip()]
+    us_rounds = load_rounds(us_paths)
+    cn_rounds = load_rounds(cn_paths)
+    if not us_rounds:
+        print('美国侧没有可用探测数据')
         return 1
-    if not cn:
-        print("国内侧结果为空：%s" % args.cn)
+    if not cn_rounds:
+        print('国内侧没有可用探测数据')
         return 1
+    print('美国侧 %d 轮，国内侧 %d 轮' % (len(us_rounds), len(cn_rounds)))
 
-    addrs = sorted(set(us) | set(cn))
-    rows: List[Dict[str, Any]] = []
-    for a in addrs:
-        u, c = us_status(us.get(a)), cn_status(cn.get(a))
-        verdict, action = VERDICT.get((u, c), ('未知', 'keep'))
-        meta = us.get(a) or cn.get(a) or {}
+    with open(args.input_list, encoding='utf-8') as f:
+        text = f.read()
+    data = yaml.safe_load(text) or {}
+    proxies = list(data.get('proxies') or [])
+
+    rows: List[Dict] = []
+    kept: List[Dict] = []
+    for p in proxies:
+        a = addr_of(p)
+        us_state, us_seen, us_alive = classify(a, us_rounds,
+                                               args.min_rounds, args.alive_ratio)
+        cn_state, cn_seen, cn_alive = classify(a, cn_rounds,
+                                               args.min_rounds, args.alive_ratio)
+        verdict, action = decide(us_state, cn_state)
         rows.append({
-            '服务器': a[0], '端口': a[1], '类型': meta.get('类型', ''),
-            '名称': meta.get('名称', ''),
-            '美国': u, '国内': c, '判定': verdict, '动作': action,
-            '美国错误': (us.get(a) or {}).get('错误', ''),
-            '国内错误': (cn.get(a) or {}).get('错误', ''),
+            '服务器': a[0], '端口': a[1], '类型': p.get('type', ''),
+            '名称': p.get('name', ''),
+            '美国': us_state, '美国轮数': us_seen, '美国存活': us_alive,
+            '国内': cn_state, '国内轮数': cn_seen, '国内存活': cn_alive,
+            '判定': verdict, '动作': action,
         })
+        if action == 'keep':
+            kept.append(p)
 
     with open(args.out_csv, 'w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
@@ -225,75 +111,50 @@ def main() -> int:
         for r in rows:
             w.writerow(r)
 
-    # ---- 统计 ----
     cross = Counter((r['美国'], r['国内']) for r in rows)
     verdicts = Counter(r['判定'] for r in rows)
     total = len(rows)
-    by_proto: Dict[str, Counter] = defaultdict(Counter)
+    by_proto: Dict[str, Counter] = {}
     for r in rows:
-        by_proto[r['类型'] or '?'][r['判定']] += 1
+        by_proto.setdefault(r['类型'] or '?', Counter())[r['判定']] += 1
 
-    md = ['# 中美探活交叉表', '']
-    md.append('| 美国 | 国内 | 节点数 | 占比 | 判定 |')
-    md.append('| :- | :- | ---: | ---: | :- |')
-    label = {'alive': '可用', 'dead': '判定已死', 'unknown': '未测出', 'n/a': '不适用(QUIC)'}
-    for u in ('alive', 'dead', 'unknown', 'n/a'):
-        for c in ('alive', 'blocked', 'unknown', 'n/a'):
-            n = cross.get((u, c), 0)
-            if not n:
-                continue
-            v = VERDICT.get((u, c), ('未知', ''))[0]
-            md.append('| %s | %s | %d | %.1f%% | %s |' % (
-                label[u], label.get(c, c), n, n / total * 100, v))
+    lbl = {'stable_alive': '跨轮全活', 'stable_dead': '跨轮全死',
+           'unknown': '未定'}
+    md = ['# 中美多轮探活交叉表', '']
+    md.append('参与判定的轮次：美国 %d 轮，国内 %d 轮' % (len(us_rounds), len(cn_rounds)))
+    md.append('')
+    md.append('| 美国 \\ 国内 | 跨轮全活 | 跨轮全死 | 未定 |')
+    md.append('| :- | ---: | ---: | ---: |')
+    for u in ('stable_alive', 'stable_dead', 'unknown'):
+        cells = [str(cross.get((u, c), 0)) for c in
+                 ('stable_alive', 'stable_dead', 'unknown')]
+        if sum(int(c) for c in cells) == 0:
+            continue
+        md.append('| %s | %s |' % (lbl[u], ' | '.join(cells)))
     md.append('')
     md.append('## 判定汇总')
     md.append('')
     md.append('| 判定 | 节点数 | 占比 |')
     md.append('| :- | ---: | ---: |')
     for v, n in verdicts.most_common():
-        md.append('| %s | %d | %.1f%% |' % (v, n, n / total * 100))
+        md.append('| %s | %d | %.1f%% |' % (v, n, n / total * 100 if total else 0))
     md.append('')
     md.append('## 分协议')
     md.append('')
-    md.append('| 协议 | 节点数 | 可用 | 被墙 | 已死 |')
-    md.append('| :- | ---: | ---: | ---: | ---: |')
+    md.append('| 协议 | 节点数 | 保留 | 剔除 |')
+    md.append('| :- | ---: | ---: | ---: |')
     for t in sorted(by_proto):
         c = by_proto[t]
-        md.append('| %s | %d | %d | %d | %d |' % (
-            t, sum(c.values()), c.get('可用', 0), c.get('疑似被墙', 0),
-            c.get('已死', 0)))
+        keep = sum(v for k, v in c.items() if k in ('国内跨轮全活', '美国跨轮全活，国内未定', '两端都未定'))
+        md.append('| %s | %d | %d | %d |' % (t, sum(c.values()), keep, sum(c.values()) - keep))
     md.append('')
     with open(args.out_md, 'w', encoding='utf-8') as f:
         f.write('\n'.join(md)+'\n')
-
     print('\n'.join(md))
 
-    # ---- 输出「国内可用」子集 ----
     if args.out_cn_list:
-        import yaml
-        keep_addrs = {(r['服务器'], str(r['端口'])) for r in rows
-                      if r['动作'] == 'keep'}
-        if args.min_us:
-            drop = {(r['服务器'], str(r['端口'])) for r in rows
-                    if r['判定'] == '疑似被墙'}
-            keep_addrs -= drop
-        if not os.path.exists(args.input_list):
-            # 静默跳过是这类问题最大的帮凶——必须报错
-            print("找不到 %s，无法生成子集" % args.input_list)
-            return 1
-        with open(args.input_list, encoding='utf-8') as f:
-            text = f.read()
-        data = yaml.safe_load(text) or {}
-        proxies = list(data.get('proxies') or [])
-        kept = [p for p in proxies
-                if (str(p.get('server', '')).strip('[]'),
-                    str(p.get('port', ''))) in keep_addrs]
         data['proxies'] = kept
-        # 剔除节点后必须同步清理 proxy-groups 的引用，否则 Clash / Mihomo
-        # 会报 "proxy <name> not found" 并拒绝加载整个配置
         dangling = clean_group_refs(data, kept)
-        if dangling:
-            print("同步清理了 %d 处失效的 proxy-group 引用" % dangling)
         header = ''
         if text.startswith('#'):
             for line in text.splitlines():
@@ -305,7 +166,9 @@ def main() -> int:
             f.write(header)
             f.write(yaml.dump(data, allow_unicode=True,
                               sort_keys=False).replace('!!str ', ''))
-        print("国内可用子集：%d -> %d 个节点 -> %s" % (
+        if dangling:
+            print('同步清理了 %d 处失效的 proxy-group 引用' % dangling)
+        print('大陆可用子集：%d -> %d 个节点 -> %s' % (
             len(proxies), len(kept), args.out_cn_list))
     return 0
 
