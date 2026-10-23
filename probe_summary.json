@@ -1,15 +1,15 @@
 {
   "total": 1799,
   "egress": {
-    "ip": "48.217.54.27",
+    "ip": "52.165.103.60",
     "method": "direct",
     "country": "United States",
-    "city": "Washington",
+    "city": "Des Moines",
     "org": "Microsoft Corporation"
   },
   "tcp_applicable": 1752,
-  "tcp_ok": 1571,
-  "tcp_rate": "89.7%",
+  "tcp_ok": 1568,
+  "tcp_rate": "89.5%",
   "tls_applicable": 986,
   "tls_ok": 864,
   "tls_rate": "87.6%",
@@ -22,21 +22,21 @@
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 2,
+      "ms": 7,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 3,
+      "ms": 11,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 5,
+      "ms": 28,
       "err": ""
     }
   ],
@@ -55,19 +55,19 @@
     },
     "ss": {
       "total": 273,
-      "ok": 226
+      "ok": 225
     },
     "trojan": {
       "total": 187,
-      "ok": 171
+      "ok": 170
     },
     "vless": {
       "total": 950,
-      "ok": 901
+      "ok": 903
     },
     "vmess": {
       "total": 241,
-      "ok": 176
+      "ok": 173
     }
   },
   "by_type_quic": {
