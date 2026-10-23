@@ -60,7 +60,7 @@ jobs:
           rm -rf dist dist-snippets
           mkdir -p dist dist-snippets
           # 顶层订阅文件 -> Release: latest
-          for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv consensus.csv; do
+          for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv consensus.csv sources.csv; do
             if [ -f "$f" ]; then cp "$f" dist/; fi
           done
           # 配置片段 -> Release: snippets
@@ -101,15 +101,34 @@ jobs:
             echo "「独立来源」= 订阅 URL 按仓库归并后的数量（同一仓库的多个文件只算一个来源）。"
             echo "被多个独立来源同时收录的节点，存活概率显著更高。"
             echo
+            echo "两个层级：**节点哈希**（当前去重口径，含传输层特征）与 "
+            echo "**服务器地址**（server:port，忽略传输特征）。"
+            echo "两者差距大，说明去重口径过严把同一台服务器拆成了多条。"
+            echo
             if [ -f consensus.csv ]; then
               echo '```'
-              echo "独立来源数 | 节点数 | 占比 | 协议分布"
-              tail -n +2 consensus.csv | while IFS=, read -r n cnt pct detail; do
-                echo "${n} | ${cnt} | ${pct} | ${detail}"
+              echo "层级 | 独立来源数 | 节点数 | 占比"
+              tail -n +2 consensus.csv | while IFS=, read -r level n cnt pct; do
+                [ -n "${level:-}" ] || continue
+                echo "${level} | ${n} | ${cnt} | ${pct}"
               done
               echo '```'
             else
               echo "_本次未生成统计数据_"
+            fi
+            echo
+            echo "### 各源贡献"
+            echo
+            echo "「独占地址数」= 该源提供的地址中，没有被其他独立来源收录的部分。"
+            echo
+            if [ -f sources.csv ]; then
+              echo '```'
+              echo "源 | 独立来源 | 节点数 | 地址数 | 独占地址数"
+              tail -n +2 sources.csv | while IFS=, read -r idx ident nodes addrs excl url; do
+                [ -n "${idx:-}" ] || continue
+                echo "${idx} | ${ident} | ${nodes} | ${addrs} | ${excl}"
+              done
+              echo '```'
             fi
           } > notes.md
           cat notes.md

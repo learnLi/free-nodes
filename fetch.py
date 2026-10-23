@@ -1132,7 +1132,7 @@ def consensus_of(used: Dict[int, Dict[int, str]],
 
 
 def write_consensus(merged: Dict[int, Node], used: Dict[int, Dict[int, str]],
-                    source_ids: Dict[int, str]):
+                    source_ids: Dict[int, str], source_urls: List[str]):
     """输出多源共识统计（仅统计，不改变任何过滤行为）。"""
     cons = consensus_of(used, source_ids)
     hist: Dict[int, int] = {}
@@ -1146,20 +1146,76 @@ def write_consensus(merged: Dict[int, Node], used: Dict[int, Dict[int, str]],
     total = len(merged)
     ident_count = len(set(source_ids.values()))
 
-    lines = ["独立来源数,节点数,占比,协议分布"]
+    # --- 第二层口径：服务器地址（server:port），忽略传输层特征 ---
+    # 节点哈希包含 ws 的 Host/path、grpc 的 service-name 等传输特征，
+    # 同一个物理服务器在不同源的订阅里字段可能不全，导致哈希对不上、
+    # 去重失败、共识被低估。地址级口径能反映「同一台服务器被几个源收录」。
+    addr_sources: Dict[str, Set[int]] = {}
+    source_addrs: Dict[int, Set[str]] = {}
+    hash_of_addr: Dict[str, Set[int]] = {}
+    for hashn, srcs in used.items():
+        node = merged.get(hashn)
+        if node is None: continue
+        addr = '%s:%s' % (node.data.get('server'), node.data.get('port'))
+        hash_of_addr.setdefault(addr, set()).add(hashn)
+        for s in srcs:
+            if s not in source_ids: continue
+            ident = source_ids[s]
+            addr_sources.setdefault(addr, set()).add(ident)
+            source_addrs.setdefault(s, set()).add(addr)
+
+    addr_hist: Dict[int, int] = {}
+    for addr, idents in addr_sources.items():
+        n = len(idents)
+        addr_hist[n] = addr_hist.get(n, 0) + 1
+    addr_total = len(addr_sources)
+    split_addrs = sum(1 for v in hash_of_addr.values() if len(v) > 1)
+
+    lines = ["层级,独立来源数,节点数,占比"]
     for n in sorted(hist):
         pct = (hist[n]/total*100) if total else 0
-        detail = ' '.join('%s=%d' % (k, v) for k, v in sorted(proto[n].items()))
-        lines.append("%d,%d,%.1f%%,%s" % (n, hist[n], pct, detail))
+        lines.append("节点哈希,%d,%d,%.1f%%" % (n, hist[n], pct))
+    for n in sorted(addr_hist):
+        pct = (addr_hist[n]/addr_total*100) if addr_total else 0
+        lines.append("服务器地址,%d,%d,%.1f%%" % (n, addr_hist[n], pct))
     with open("consensus.csv", 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines)+'\n')
 
+    # --- 源级统计：每个源贡献多少节点、其中多少是独占的 ---
+    ident_names: Dict[str, int] = {}
+    for s, ident in source_ids.items():
+        ident_names.setdefault(ident, len(ident_names))
+    ident_addrs: Dict[int, Set[str]] = {}
+    for s, addrs in source_addrs.items():
+        ident_addrs.setdefault(ident_names[source_ids[s]], set()).update(addrs)
+    # URL 放在最后一列：前面的字段是数字，URL 里若含逗号也不会影响解析
+    srows = ["源序号,独立来源,节点数,地址数,独占地址数,URL"]
+    for s in sorted(source_addrs):
+        addrs = source_addrs[s]
+        n_nodes = len([1 for h, ss in used.items() if s in ss])
+        ident = ident_names[source_ids[s]]
+        shared = set()
+        for other, oaddrs in ident_addrs.items():
+            if other != ident: shared |= (addrs & oaddrs)
+        srows.append("%d,%s,%d,%d,%d,%s" % (
+            s, source_ids[s], n_nodes, len(addrs), len(addrs - shared),
+            source_urls[s] if s < len(source_urls) else ''))
+    with open("sources.csv", 'w', encoding='utf-8') as f:
+        f.write('\n'.join(srows)+'\n')
+
     print("\n=== 多源共识分布 ===")
     print("订阅 URL %d 个，归并后独立来源 %d 个" % (len(source_ids), ident_count))
+    print("-- 节点哈希级（当前去重口径）--")
     for n in sorted(hist):
         pct = (hist[n]/total*100) if total else 0
         print("  %d 个来源收录: %4d 个节点 (%.1f%%)  %s" % (
             n, hist[n], pct, ' '.join('%s=%d' % (k, v) for k, v in sorted(proto[n].items()))))
+    print("-- 服务器地址级（server:port，忽略传输特征）--")
+    for n in sorted(addr_hist):
+        pct = (addr_hist[n]/addr_total*100) if addr_total else 0
+        print("  %d 个来源收录: %4d 个地址 (%.1f%%)" % (n, addr_hist[n], pct))
+    print("  去重口径过严导致同一地址被拆成多条哈希: %d 个地址" % split_addrs)
+    print("  地址数 %d / 节点哈希数 %d" % (addr_total, total))
     return hist, ident_count
 
 
@@ -1415,7 +1471,8 @@ def main():
 
     if not FETCH_CONFIG['stop'] and FETCH_CONFIG.get('consensus', {}).get('enable_stats', True):
         try:
-            write_consensus(merged, used, source_ids)
+            write_consensus(merged, used, source_ids,
+                            [so.url for so in sources_obj])
         except:
             traceback.print_exc()
 

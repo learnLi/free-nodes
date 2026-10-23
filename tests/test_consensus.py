@@ -99,31 +99,68 @@ print()
 print("=== 3. write_consensus() ===")
 
 
-def mk_node(t):
-    n = Node({"name": "x", "type": t, "server": "1.2.3.4", "port": 443})
-    return n
+def mk_node(t, server="1.2.3.4", port=443):
+    return Node({"name": "x", "type": t, "server": server, "port": port})
 
 
-merged = {1: mk_node("vmess"), 2: mk_node("vless"), 3: mk_node("trojan")}
+cwd = os.getcwd()
+
+# --- 用例 A：三个节点地址各不相同 ---
+merged = {
+    1: mk_node("vmess", "1.1.1.1"),
+    2: mk_node("vless", "2.2.2.2"),
+    3: mk_node("trojan", "3.3.3.3"),
+}
 used2 = {
-    1: {0: "a", 1: "b", 2: "c"},   # 节点 1 出现在 3 个身份各一次的来源里
+    1: {0: "a", 1: "b", 2: "c"},   # 节点 1 出现在 3 个不同身份的来源
     2: {0: "a"},                    # 节点 2 只在 1 个来源
     3: {0: "a", 2: "c"},            # 节点 3 在 2 个来源
 }
 sids = {0: "github:x/y", 1: "github:p/q", 2: "github:r/s"}
-cwd = os.getcwd()
+urls = ["https://example.invalid/0", "https://example.invalid/1",
+        "https://example.invalid/2"]
+
 with tempfile.TemporaryDirectory() as td:
     os.chdir(td)
     try:
-        hist, ident_count = write_consensus(merged, used2, sids)
+        hist, ident_count = write_consensus(merged, used2, sids, urls)
         check("独立来源数", ident_count, 3)
-        check("直方图 {3:1, 1:1, 2:1}", hist, {3: 1, 1: 1, 2: 1})
+        check("哈希级直方图 {3:1, 1:1, 2:1}", hist, {3: 1, 1: 1, 2: 1})
         rows = list(csv.reader(open("consensus.csv", encoding="utf-8")))
-        check("CSV 表头", rows[0],
-              ["独立来源数", "节点数", "占比", "协议分布"])
-        check("CSV 行数", len(rows), 4)
-        check("CSV 首行数据", rows[1][0:3], ["1", "1", "33.3%"])
-        check("CSV 末行数据", rows[3][0:3], ["3", "1", "33.3%"])
+        check("CSV 表头", rows[0], ["层级", "独立来源数", "节点数", "占比"])
+        check("CSV 行数（表头+3哈希级+3地址级）", len(rows), 7)
+        check("哈希级首行", rows[1], ["节点哈希", "1", "1", "33.3%"])
+        check("地址级首行", rows[4], ["服务器地址", "1", "1", "33.3%"])
+        srows = list(csv.reader(open("sources.csv", encoding="utf-8")))
+        check("sources.csv 表头", srows[0],
+              ["源序号", "独立来源", "节点数", "地址数", "独占地址数", "URL"])
+        check("sources.csv 行数（表头+3源）", len(srows), 4)
+        # 源 0 有 3 个地址：1.1.1.1（被 identity1/2 共有）、3.3.3.3（被 identity2 共有）、
+        # 2.2.2.2（只有源 0 有）-> 独占 1 个
+        check("源 0 独占地址数", srows[1][4], "1")
+        check("源 0 地址数", srows[1][3], "3")
+        check("源 0 节点数", srows[1][2], "3")
+        check("源 0 的 URL", srows[1][5], urls[0])
+    finally:
+        os.chdir(cwd)
+
+# --- 用例 B：两个哈希指向同一地址（去重口径过严被拆开） ---
+merged_b = {
+    1: mk_node("vmess", "9.9.9.9", 443),
+    2: mk_node("vless", "9.9.9.9", 443),
+}
+used_b = {1: {0: "a"}, 2: {1: "b"}}
+with tempfile.TemporaryDirectory() as td:
+    os.chdir(td)
+    try:
+        hist, ident_count = write_consensus(merged_b, used_b,
+                                            {0: "github:a/b", 1: "github:c/d"},
+                                            ["u0", "u1"])
+        check("同一地址拆成 2 个哈希时，哈希级计数", hist, {1: 2})
+        rows = list(csv.reader(open("consensus.csv", encoding="utf-8")))
+        addr_rows = [r for r in rows[1:] if r[0] == "服务器地址"]
+        check("地址级合并后只剩 1 个地址", len(addr_rows), 1)
+        check("地址级计数", addr_rows[0][2], "1")
     finally:
         os.chdir(cwd)
 
