@@ -81,6 +81,17 @@ if [ "${NO_PUSH:-0}" = "1" ]; then
 fi
 
 git checkout -B "$BRANCH" 2>/dev/null || true
+# 必须基于远端分支继续，否则推送会被判非快进：
+# 直接 checkout -B 会从当前 HEAD（main）开分支，丢掉远端分支上的提交历史。
+git fetch --depth=1 origin \
+  "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH" 2>/dev/null || true
+if git rev-parse --verify "origin/$BRANCH" >/dev/null 2>&1; then
+  git checkout -B "$BRANCH" "origin/$BRANCH"
+  echo "  基于远端分支继续"
+else
+  git checkout -B "$BRANCH"
+  echo "  远端分支不存在，新建"
+fi
 git add -f probe_domestic*.csv 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "  无变化"
