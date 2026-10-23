@@ -140,6 +140,10 @@ jobs:
           done
           echo "订阅文件 $(find dist -type f | wc -l) 个，片段 $(find dist-snippets -type f | wc -l) 个"
           ls -la dist/ dist-snippets/
+          # 本轮的时间戳：代表「这批节点的版本」。NAS 侧用同一批列表探测，
+          # 才能和本轮的 probe.csv 严格对齐（否则两边节点池不是同一批）
+          date -u '+%Y%m%d_%H%M' > .ts
+          echo "本轮时间戳：$(cat .ts)"
 
       - name: 生成 Release 说明
         run: |
@@ -270,7 +274,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          TS=$(date -u '+%Y%m%d_%H%M')
+          TS=$(cat .ts)
           cp probe.csv "probe_${TS}.csv"
           gh release upload latest "probe_${TS}.csv" --clobber
           echo "已上传 probe_${TS}.csv（与国内侧 probe_domestic_<ts>.csv 按时间戳配对）"
@@ -342,6 +346,8 @@ jobs:
           mkdir -p .output/snippets
           cp -r dist/. .output/
           cp -r dist-snippets/. .output/snippets/
+          # 带时间戳的节点列表：NAS 用它探测，结果才能与同批的美国数据对齐
+          cp dist/list.meta.full.yml ".output/list_$(cat .ts).full.yml"
           cd .output
           git init -q -b output
           git config user.name "GitHub Actions"

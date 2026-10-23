@@ -83,17 +83,28 @@ fi
 
 # ---- 1. 取节点列表 ----
 LIST="list.meta.full.yml"
+STAMP=""
 echo "[$(date '+%F %T')] 获取节点列表"
-if [ "$LIST_URL" = "git" ]; then
-  git fetch --depth=1 origin output || true
-  git checkout -B output origin/output 2>/dev/null || true
-else
-  curl -sL --max-time 120 "$LIST_URL" -o "$LIST" || true
-  if [ ! -s "$LIST" ]; then
-    echo "  CDN 获取失败，回退到 git output 分支"
-    git fetch --depth=1 origin output || true
-    git checkout -B output origin/output 2>/dev/null || true
+# 优先用 output 分支里最新的**带时间戳**的节点列表。
+# 时间戳代表「这批节点的版本」——NAS 用它探测，结果才能与同批的美国侧
+# probe.csv 严格对齐。否则两边探测的节点池不是同一批，交叉表里会有
+# 三成节点只能判成「未测出」。
+git fetch --depth=1 origin \
+  "+refs/heads/output:refs/remotes/origin/output" 2>/dev/null || true
+LIST_NAME=$(git ls-tree --name-only origin/output 2>/dev/null \
+  | grep -oE 'list_[0-9]{8}_[0-9]{4}\.full\.yml' | sort | tail -1 || true)
+if [ -n "$LIST_NAME" ]; then
+  STAMP=$(echo "$LIST_NAME" | sed -E 's/^list_([0-9]{8}_[0-9]{4})\.full\.yml$/\1/')
+  if git show "origin/output:$LIST_NAME" > "$LIST" 2>/dev/null && [ -s "$LIST" ]; then
+    echo "  用带时间戳的列表 $LIST_NAME（批次 $STAMP）"
+  else
+    echo "  取 $LIST_NAME 失败，回退到 CDN"
+    STAMP=""
+    curl -sL --max-time 120 "$LIST_URL" -o "$LIST" || true
   fi
+else
+  echo "  output 分支里没有带时间戳的列表，回退到 CDN"
+  curl -sL --max-time 120 "$LIST_URL" -o "$LIST" || true
 fi
 if [ ! -s "$LIST" ]; then
   echo "拿不到 $LIST，退出"
@@ -116,7 +127,7 @@ if ! "$PYTHON" "$PROBE_PY" \
 fi
 
 # 用 UTC，与 CI 侧的时间戳格式一致（两边才能配对）
-STAMP=$(date -u '+%Y%m%d_%H%M')
+STAMP="${STAMP:-$(date -u '+%Y%m%d_%H%M')}"
 if [ -f probe_domestic.csv ]; then
   cp probe_domestic.csv "probe_domestic_${STAMP}.csv"
   echo "[$(date '+%F %T')] 结果："
