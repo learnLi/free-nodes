@@ -409,6 +409,12 @@ www.gstatic.com:443 正常
 
 ---
 
+## 路线图
+
+项目的阶段划分、验收标准与待决策项见 **[docs/ROADMAP.md](docs/ROADMAP.md)**。
+
+---
+
 ## 上游同步策略
 
 `Sync upstream config` 工作流每天自动同步**配置类**文件：
