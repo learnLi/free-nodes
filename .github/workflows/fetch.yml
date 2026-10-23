@@ -285,7 +285,7 @@ jobs:
           gh release upload "$TAG" "${assets[@]}" --clobber
           echo "已上传 ${#assets[@]} 个文件到 $TAG"
 
-      - name: 自检：latest 指向必须正确
+      - name: 自检：产出必须齐全且指向正确
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -295,13 +295,23 @@ jobs:
             echo "::error::releases/latest 指向了 ${latest_tag}，应为 latest（订阅链接会 404）"
             exit 1
           fi
-          for asset in list.meta.yml list.yml list.txt; do
-            if ! gh release view latest --json assets --jq '.assets[].name' | grep -qx "$asset"; then
+          # 订阅资产必须齐全
+          assets=$(gh release view latest --json assets --jq '.assets[].name')
+          for asset in list.meta.yml list.yml list.txt list.meta.full.yml; do
+            if ! echo "$assets" | grep -qx "$asset"; then
               echo "::error::latest Release 缺少资产 ${asset}"
               exit 1
             fi
           done
-          echo "自检通过：releases/latest -> ${latest_tag}，订阅资产齐全"
+          # 配置片段必须齐全
+          snip=$(gh release view snippets --json assets --jq '.assets[].name' 2>/dev/null || echo "")
+          for asset in nodes.meta.yml adblock.yml proxy.yml direct.yml region.yml; do
+            if ! echo "$snip" | grep -qx "$asset"; then
+              echo "::error::snippets Release 缺少资产 ${asset}"
+              exit 1
+            fi
+          done
+          echo "自检通过：releases/latest -> ${latest_tag}，订阅与片段资产齐全"
 
       - name: 同步产物到 output 分支
         env:
