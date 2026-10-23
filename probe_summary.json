@@ -1,18 +1,18 @@
 {
   "total": 1799,
   "egress": {
-    "ip": "68.154.116.71",
+    "ip": "40.74.208.209",
     "method": "direct",
     "country": "United States",
-    "city": "Chase City",
+    "city": "San Antonio",
     "org": "Microsoft Corporation"
   },
   "tcp_applicable": 1752,
-  "tcp_ok": 1570,
-  "tcp_rate": "89.6%",
-  "tls_applicable": 988,
-  "tls_ok": 866,
-  "tls_rate": "87.7%",
+  "tcp_ok": 1567,
+  "tcp_rate": "89.4%",
+  "tls_applicable": 984,
+  "tls_ok": 858,
+  "tls_rate": "87.2%",
   "quic_applicable": 47,
   "quic_ok": 1,
   "quic_rate": "2.1%",
@@ -22,21 +22,21 @@
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 6,
+      "ms": 13,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 6,
+      "ms": 13,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 8,
+      "ms": 37,
       "err": ""
     }
   ],
@@ -59,15 +59,15 @@
     },
     "trojan": {
       "total": 187,
-      "ok": 171
+      "ok": 169
     },
     "vless": {
       "total": 950,
-      "ok": 902
+      "ok": 899
     },
     "vmess": {
       "total": 241,
-      "ok": 173
+      "ok": 175
     }
   },
   "by_type_quic": {
