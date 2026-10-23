@@ -52,9 +52,10 @@ jobs:
           FILES="sources.list fetch_config.yml abpwhite.txt"
           git checkout upstream/master -- $FILES
           if git diff --quiet -- $FILES; then
-            echo "changed" >> "$GITHUB_OUTPUT"
+            echo "changed=unchanged" >> "$GITHUB_OUTPUT"
+            echo "上游配置无变更，跳过提交"
           else
-            echo "changed" >> "$GITHUB_OUTPUT"
+            echo "changed=changed" >> "$GITHUB_OUTPUT"
             git diff --stat -- $FILES | tee diff.txt
           fi
 
@@ -97,6 +98,11 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add sources.list fetch_config.yml abpwhite.txt
+          # 双重保险：暂存区为空时不提交，直接跳过
+          if git diff --cached --quiet; then
+            echo "暂存区为空，跳过提交"
+            exit 0
+          fi
           git commit -m "sync upstream $(date '+%Y-%m-%d %H:%M:%S')  ($(git rev-parse --short upstream/master))"
           git show --stat --oneline HEAD | tee -a diff.txt
 
