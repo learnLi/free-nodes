@@ -19,6 +19,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # GitHub 默认用 `bash -e` 执行，gh api 一旦失败整个脚本就退出，
+          # 日志反而写不出来。这里显式关掉 errexit。
+          set +e
+          set -uo pipefail
           TITLE="hk-probe"
           KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAuBI+Kw4kPYmk/koIAAlbU7GpzX18TN8yXE4fDLdIgv hk-probe"
           REPO="${{ github.repository }}"
