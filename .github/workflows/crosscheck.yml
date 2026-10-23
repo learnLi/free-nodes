@@ -13,9 +13,13 @@ name: Cross-check (US vs CN)
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - 'probe-domestic'
+  schedule:
+    # 每 6 小时一次
+    - cron: '41 */6 * * *'
+# 注意：**不要**加 `push: branches: [probe-domestic]` 触发。
+# 本工作流会把结果推回 probe-domestic 分支，而那个 push 又会触发本工作流，
+# 形成自触发循环——concurrency 会把正在跑的那次取消掉，表现为推送步骤莫名失败。
+# 定时触发不依赖分支状态，没有这个问题。
 
 permissions:
   contents: write
