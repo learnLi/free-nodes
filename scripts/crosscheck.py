@@ -60,6 +60,13 @@ def parse_args() -> argparse.Namespace:
                    help='原版 Clash 配置（list.yml），用于产出老内核的大陆可用版')
     p.add_argument('--out-cn-list-clash', default='',
                    help='原版 Clash 大陆可用版的输出路径（list.cn.yml）')
+    p.add_argument('--hk', default='', help='香港视角的本轮 probe 文件')
+    p.add_argument('--hk-history', default='',
+                   help='香港视角的探测历史，逗号分隔')
+    p.add_argument('--out-hk-list', default='',
+                   help='香港桥接池版的输出路径（list.meta.hk.yml）')
+    p.add_argument('--max-latency-hk', type=int, default=0,
+                   help='香港延迟上限（默认取配置里的 filter.max_latency_ms_hk）')
     return p.parse_args()
 
 
@@ -100,6 +107,9 @@ def main() -> int:
                             args.cn, rounds_n)
     us_rounds = load_rounds(us_paths)
     cn_rounds = load_rounds(cn_paths)
+    hk_paths = keep_recent([h for h in args.hk_history.split(',') if h.strip()],
+                            args.hk, rounds_n) if args.hk else []
+    hk_rounds = load_rounds(hk_paths) if hk_paths else []
     if not us_rounds:
         print('美国侧没有可用探测数据')
         return 1
@@ -116,6 +126,7 @@ def main() -> int:
 
     rows: List[Dict] = []
     kept: List[Dict] = []
+    state_by_addr: Dict[Tuple[str, int], Tuple[str, str]] = {}
     max_latency_ms = args.max_latency_ms or cfg.get('max_latency_ms', 0)
     for p in proxies:
         a = addr_of(p)
@@ -125,6 +136,7 @@ def main() -> int:
                                                min_rounds, alive_ratio)
         cn_lat = median_latency(cn_rounds, a)
         verdict, action = decide(us_state, cn_state, cn_lat, max_latency_ms)
+        state_by_addr[(a[0], a[1])] = (us_state, cn_state)
         rows.append({
             '服务器': a[0], '端口': a[1], '类型': p.get('type', ''),
             '名称': p.get('name', ''),
@@ -201,6 +213,47 @@ def main() -> int:
     with open(args.out_md, 'w', encoding='utf-8') as f:
         f.write('\n'.join(md)+'\n')
     print('\n'.join(md))
+
+    # ---- 香港桥接池版 ----
+    # 桥接场景：节点是**香港 VPS 去连**的，所以
+    #   * 延迟必须按香港视角算（美国到亚洲天生慢，用美国数字会误杀好节点）
+    #   * 「大陆被墙」对它不成立——被墙的通常是欧美 IP，恰恰是香港最有价值的
+    #     一批，必须保留
+    # 剔除的只有两种：两端都探不通（真死）、香港延迟超限。
+    if args.out_hk_list and hk_rounds:
+        hk_max = args.max_latency_hk or cfg.get('max_latency_ms_hk', 0)
+        hk_kept: List[Dict] = []
+        hk_dead = hk_slow = 0
+        for p in proxies:
+            a = addr_of(p)
+            st = state_by_addr.get((a[0], a[1]))
+            if st and st[0] == 'stable_dead' and st[1] == 'stable_dead':
+                hk_dead += 1
+                continue
+            lat = median_latency(hk_rounds, a)
+            if hk_max and lat is not None and lat > hk_max:
+                hk_slow += 1
+                continue
+            hk_kept.append(p)
+        hk_kept = sort_proxies(hk_kept, protocol_order())
+        hk_data = dict(data)
+        hk_data['proxies'] = hk_kept
+        hk_dangling = clean_group_refs(hk_data, hk_kept)
+        hk_header = ''
+        if text.startswith('#'):
+            for line in text.splitlines():
+                if line.startswith('#'):
+                    hk_header += line + '\n'
+                else:
+                    break
+        with open(args.out_hk_list, 'w', encoding='utf-8') as f:
+            f.write(hk_header)
+            f.write(yaml.dump(hk_data, allow_unicode=True,
+                              sort_keys=False).replace('!!str ', ''))
+        print('香港桥接池子集：%d -> %d 个节点（真死 %d，香港延迟超限 %d）-> %s' % (
+            len(proxies), len(hk_kept), hk_dead, hk_slow, args.out_hk_list))
+        if hk_dangling:
+            print('  同步清理了 %d 处失效引用' % hk_dangling)
 
     if args.out_cn_list:
         # 按协议偏好排序：实测国内可用率 vmess 79% > vless 62% > trojan 53%

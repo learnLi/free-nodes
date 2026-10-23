@@ -289,6 +289,80 @@ with tempfile.TemporaryDirectory() as td:
         print('   stderr:', r.stderr[:300])
 
 print()
+print("=== 13. 香港桥接池版 ===")
+# 桥接场景：节点由香港 VPS 去连，所以
+#   * 延迟按香港视角算
+#   * 「大陆被墙」对它不成立，必须保留（那正是香港最有价值的一批）
+import subprocess
+with tempfile.TemporaryDirectory() as td:
+    lst = os.path.join(td, 'meta.yml')
+    with open(lst, 'w', encoding='utf-8') as f:
+        f.write("proxies:\n"
+                "- name: good\n  type: vless\n  server: 1.1.1.1\n  port: 443\n"
+                "- name: blocked_cn\n  type: vless\n  server: 2.2.2.2\n  port: 443\n"
+                "- name: dead\n  type: vless\n  server: 3.3.3.3\n  port: 443\n"
+                "- name: slow\n  type: vless\n  server: 4.4.4.4\n  port: 443\n"
+                "proxy-groups:\n"
+                "- name: g1\n  type: select\n"
+                "  proxies: [good, blocked_cn, dead, slow]\n")
+
+    def w(path, rows):
+        with open(path, 'w', encoding='utf-8', newline='') as f:
+            f.write("名称,类型,服务器,端口,TCP,TLS,QUIC,耗时ms,错误\n")
+            for r in rows:
+                f.write(r + "\n")
+
+    us1 = os.path.join(td, 'us1.csv')
+    us2 = os.path.join(td, 'us2.csv')
+    cn1 = os.path.join(td, 'cn1.csv')
+    cn2 = os.path.join(td, 'cn2.csv')
+    hk1 = os.path.join(td, 'hk1.csv')
+    # good: 两侧都活；blocked_cn: 美国活、大陆死；dead: 两侧都死；slow: 两侧都活但香港很慢
+    w(us1, ["good,vless,1.1.1.1,443,Y,Y,N/A,100,",
+             "blocked_cn,vless,2.2.2.2,443,Y,Y,N/A,100,",
+             "dead,vless,3.3.3.3,443,N,N/A,N/A,5002,timeout",
+             "slow,vless,4.4.4.4,443,Y,Y,N/A,100,"])
+    w(us2, ["good,vless,1.1.1.1,443,Y,Y,N/A,110,",
+             "blocked_cn,vless,2.2.2.2,443,Y,Y,N/A,110,",
+             "dead,vless,3.3.3.3,443,N,N/A,N/A,5002,timeout",
+             "slow,vless,4.4.4.4,443,Y,Y,N/A,110,"])
+    w(cn1, ["good,vless,1.1.1.1,443,Y,Y,N/A,120,",
+             "blocked_cn,vless,2.2.2.2,443,N,N/A,N/A,5002,timeout",
+             "dead,vless,3.3.3.3,443,N,N/A,N/A,5002,timeout",
+             "slow,vless,4.4.4.4,443,Y,Y,N/A,130,"])
+    w(cn2, ["good,vless,1.1.1.1,443,Y,Y,N/A,125,",
+             "blocked_cn,vless,2.2.2.2,443,N,N/A,N/A,5002,timeout",
+             "dead,vless,3.3.3.3,443,N,N/A,N/A,5002,timeout",
+             "slow,vless,4.4.4.4,443,Y,Y,N/A,135,"])
+    # 香港：good 120ms、blocked_cn 90ms（香港通！）、slow 3000ms（超限）
+    w(hk1, ["good,vless,1.1.1.1,443,Y,Y,N/A,120,",
+             "blocked_cn,vless,2.2.2.2,443,Y,Y,N/A,90,",
+             "slow,vless,4.4.4.4,443,Y,Y,N/A,3000,"])
+    out_hk = os.path.join(td, 'hk.yml')
+    r = subprocess.run([sys.executable, os.path.join(REPO_ROOT, 'scripts', 'crosscheck.py'),
+                        '--us', us1, '--us-history', us2,
+                        '--cn', cn1, '--cn-history', cn2,
+                        '--hk', hk1,
+                        '--out-csv', os.path.join(td, 'x.csv'),
+                        '--out-md', os.path.join(td, 'x.md'),
+                        '--input-list', lst,
+                        '--out-hk-list', out_hk,
+                        '--max-latency-hk', '500'],
+                       capture_output=True, text=True, encoding='utf-8')
+    check("退出码 0", r.returncode, 0)
+    if r.returncode == 0:
+        d = yaml.safe_load(open(out_hk, encoding='utf-8'))
+        names = [p['name'] for p in d['proxies']]
+        check("保留活的", 'good' in names, True)
+        check("保留「大陆被墙但香港通」的", 'blocked_cn' in names, True)
+        check("剔除两端都死的", 'dead' in names, False)
+        check("剔除香港延迟超限的", 'slow' in names, False)
+        check("组的引用同步清理",
+              sorted(d['proxy-groups'][0]['proxies']), ['blocked_cn', 'good'])
+    else:
+        print('   stderr:', r.stderr[:300])
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)

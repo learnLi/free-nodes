@@ -28,6 +28,10 @@ DEFAULT_FILTER = {
     # 美国侧延迟上限（毫秒）。用于「全量」和「美国侧筛选」两份订阅。
     # 0 = 不限制
     'max_latency_ms_us': 0,
+    # 香港侧延迟上限（毫秒）。用于「香港桥接池」那份订阅。
+    # 桥接场景下节点由香港 VPS 去连，所以延迟必须按香港视角算。
+    # 0 = 不限制
+    'max_latency_ms_hk': 0,
 }
 
 
@@ -82,6 +86,10 @@ def filter_settings(repo_root: str = REPO_ROOT) -> Dict[str, Any]:
         out['max_latency_ms_us'] = int(out['max_latency_ms_us'])
     except (TypeError, ValueError):
         out['max_latency_ms_us'] = DEFAULT_FILTER['max_latency_ms_us']
+    try:
+        out['max_latency_ms_hk'] = int(out['max_latency_ms_hk'])
+    except (TypeError, ValueError):
+        out['max_latency_ms_hk'] = DEFAULT_FILTER['max_latency_ms_hk']
     return out
 
 

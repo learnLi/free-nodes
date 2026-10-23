@@ -14,7 +14,11 @@ set -e
 REPO="${1:-/root/free-nodes/repo}"
 WORK="${2:-/root/free-nodes}"
 IMAGE="${IMAGE:-free-nodes-probe:latest}"
-BRANCH="probe-domestic"
+# 数据分支与文件名前缀。不同探测点用不同的：
+#   大陆 NAS -> probe-domestic / probe_domestic_<ts>.csv
+#   香港 VPS -> probe-hk        / probe_hk_<ts>.csv
+BRANCH="${BRANCH:-probe-domestic}"
+PREFIX="${PREFIX:-probe_domestic}"
 
 cd "$REPO" || { echo "仓库目录不存在：$REPO"; exit 1; }
 
@@ -72,8 +76,8 @@ if [ ! -f "$WORK/out/probe_domestic.csv" ]; then
   exit 1
 fi
 # 结果按**列表的批次**命名，和美国侧的 probe_<ts>.csv 严格对应
-cp "$WORK/out/probe_domestic.csv" "./probe_domestic_${STAMP}.csv"
-cp "$WORK/out/probe_domestic.csv" ./probe_domestic.csv
+cp "$WORK/out/probe_domestic.csv" "./${PREFIX}_${STAMP}.csv"
+cp "$WORK/out/probe_domestic.csv" "./${PREFIX}.csv"
 
 if [ "${NO_PUSH:-0}" = "1" ]; then
   echo "[$(date '+%F %T')] NO_PUSH=1，跳过推送。结果在 $WORK/out/"
@@ -92,7 +96,7 @@ else
   git checkout -B "$BRANCH"
   echo "  远端分支不存在，新建"
 fi
-git add -f probe_domestic*.csv 2>/dev/null || true
+git add -f ${PREFIX}*.csv 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "  无变化"
 else
