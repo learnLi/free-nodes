@@ -51,25 +51,27 @@ jobs:
       - name: 抓取节点
         run: python ./fetch.py
 
+      # GitHub Release 的资产名不允许包含 "/"，因此顶层订阅与配置片段
+      # 分装到两个 Release：latest（订阅）与 snippets（片段）。
       - name: 收集产物
-        id: collect
         run: |
           set -euo pipefail
-          mkdir -p dist
-          # 顶层订阅文件
+          rm -rf dist dist-snippets
+          mkdir -p dist dist-snippets
+          # 顶层订阅文件 -> Release: latest
           for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv; do
             if [ -f "$f" ]; then cp "$f" dist/; fi
           done
-          # 配置片段
-          cp -r snippets dist/snippets
-          # 去掉 dist 内不需要入库的模板残留
-          rm -f dist/snippets/_config.yml
-          echo "文件数：$(find dist -type f | wc -l)"
-          echo "体积：$(du -sh dist | cut -f1)"
-          ls -la dist/
+          # 配置片段 -> Release: snippets
+          for f in snippets/*.yml; do
+            [ -e "$f" ] || continue
+            [ "$(basename "$f")" = "example.yml" ] && continue
+            cp "$f" dist-snippets/
+          done
+          echo "订阅文件 $(find dist -type f | wc -l) 个，片段 $(find dist-snippets -type f | wc -l) 个"
+          ls -la dist/ dist-snippets/
 
       - name: 生成 Release 说明
-        id: notes
         run: |
           set -euo pipefail
           total=$(tail -n 1 list_result.csv | cut -d, -f3)
@@ -85,13 +87,22 @@ jobs:
             echo "Clash 原版 : https://github.com/${{ github.repository }}/releases/latest/download/list.yml"
             echo "V2Ray/通用 : https://github.com/${{ github.repository }}/releases/latest/download/list.txt"
             echo '```'
+            echo
+            echo "### 配置片段"
+            echo
+            echo '```'
+            echo "https://github.com/${{ github.repository }}/releases/download/snippets/nodes.meta.yml"
+            echo "https://github.com/${{ github.repository }}/releases/download/snippets/adblock.yml"
+            echo '```'
           } > notes.md
           cat notes.md
 
+      # 上传一个 Release，并清理本次不再产出的陈旧资产
       - name: 上传产物到 Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG: latest
+          SRC: dist
         run: |
           set -euo pipefail
           if ! gh release view "$TAG" >/dev/null 2>&1; then
@@ -102,20 +113,52 @@ jobs:
           else
             gh release edit "$TAG" --notes-file notes.md
           fi
-          # 用 find 展开，避免 gh 把目录当成单个资产
-          mapfile -t assets < <(find dist -type f | sort)
+          # 清理陈旧资产（本次不再生成的文件）
+          while read -r old; do
+            [ -n "$old" ] || continue
+            if [ ! -f "$SRC/$old" ]; then
+              echo "删除陈旧资产：$old"
+              gh release delete-asset "$TAG" "$old" -y
+            fi
+          done < <(gh release view "$TAG" --json assets --jq '.assets[].name')
+          mapfile -t assets < <(find "$SRC" -type f | sort)
           gh release upload "$TAG" "${assets[@]}" --clobber
-          echo "已上传 ${#assets[@]} 个文件"
+          echo "已上传 ${#assets[@]} 个文件到 $TAG"
+
+      - name: 上传配置片段到 Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: snippets
+          SRC: dist-snippets
+        run: |
+          set -euo pipefail
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "配置片段（proxy-providers / rule-providers）" \
+              --notes "供 Clash / Clash Meta 以 proxy-providers、rule-providers 方式引用的配置片段。" \
+              --target "$GITHUB_SHA"
+          fi
+          while read -r old; do
+            [ -n "$old" ] || continue
+            if [ ! -f "$SRC/$old" ]; then
+              echo "删除陈旧资产：$old"
+              gh release delete-asset "$TAG" "$old" -y
+            fi
+          done < <(gh release view "$TAG" --json assets --jq '.assets[].name')
+          mapfile -t assets < <(find "$SRC" -type f | sort)
+          gh release upload "$TAG" "${assets[@]}" --clobber
+          echo "已上传 ${#assets[@]} 个文件到 $TAG"
 
       - name: 同步产物到 output 分支
         env:
-          # GITHUB_TOKEN 不会自动注入到 run: 的环境变量，必须显式映射
+          # GITHUB_TOKEN 不会自动注入 run: 的环境变量，必须显式映射
           GH_PUSH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           rm -rf .output
-          mkdir -p .output
+          mkdir -p .output/snippets
           cp -r dist/. .output/
+          cp -r dist-snippets/. .output/snippets/
           cd .output
           git init -q -b output
           git config user.name "GitHub Actions"

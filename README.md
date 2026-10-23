@@ -24,8 +24,18 @@ https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.yml
 https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.yml
 ```
 
-**配置片段（rule-providers / proxy-providers）**：
-`https://github.com/learnLi/free-nodes/releases/latest/download/snippets/nodes.meta.yml`
+**配置片段（rule-providers / proxy-providers）** — 单独的 Release，路径保持 `snippets/` 目录语义：
+
+| 用途 | 链接 |
+| :- | :- |
+| 节点列表（Meta） | `https://github.com/learnLi/free-nodes/releases/download/snippets/nodes.meta.yml` |
+| 节点列表（原版 Clash） | `https://github.com/learnLi/free-nodes/releases/download/snippets/nodes.yml` |
+| 广告拦截 | `https://github.com/learnLi/free-nodes/releases/download/snippets/adblock.yml` |
+| 需代理域名 | `https://github.com/learnLi/free-nodes/releases/download/snippets/proxy.yml` |
+| 直连域名 | `https://github.com/learnLi/free-nodes/releases/download/snippets/direct.yml` |
+| 锁区域名 | `https://github.com/learnLi/free-nodes/releases/download/snippets/region.yml` |
+
+> Release 的资产名不允许包含 `/`，因此顶层订阅与配置片段分装在两个 Release（`latest` / `snippets`）中。
 
 > ⚠️ **Clash 原版与 Clash Meta 的节点数差异很大**。原版 Clash 不支持 vless / hysteria2 / tuic，
 > 拿到的节点通常只有 Meta 的 1/5 左右。请优先使用 Meta 内核（Clash Verge Rev / Mihomo Party / FlClash 等）。
