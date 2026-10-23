@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import re
-# import datetime
-# import requests
+import datetime
+import requests
 # import threading
 from typing import Callable, List, Union, Iterable
 from fetch import raw2fastly, session, LOCAL
@@ -86,9 +86,33 @@ from fetch import raw2fastly, session, LOCAL
 #         if line.startswith("https://image.fakeyou.top/"):
 #             return line.split('<')[0]+"#ignore=ss,vless"
 
+def clashfree() -> Union[str, None]:
+    """free-nodes/clashfree：每日更新的 Clash 配置，文件名带日期。
+
+    该仓库的命名规律是 clash%Y%m%d.yml，但**某些日期的文件是 0 字节**
+    （生成失败，实测 2026-10-20 / 10-21 两天为空）。sources.list 的 +date
+    机制只在 HTTP 非 200 时回退日期，遇到「存在但为空」的文件会拿到空订阅
+    然后直接跳过，所以这里自己回溯到最近一个非空文件。
+    """
+    base = "https://raw.githubusercontent.com/free-nodes/clashfree/main/clash%Y%m%d.yml"
+    d = datetime.datetime.now()
+    for i in range(8):
+        u = (d - datetime.timedelta(days=i)).strftime(base)
+        try:
+            r = session.get(u, timeout=15)
+        except requests.exceptions.RequestException:
+            continue
+        # 20 KB 起步：正常文件约 690 KB，空文件 0 字节
+        if r.status_code == 200 and len(r.content) > 20000:
+            return raw2fastly(u)
+    return None
+
+
 AUTOFUNTYPE = Callable[[], Union[str, Iterable[str], None]]
 AUTOURLS: List[AUTOFUNTYPE] = []
 AUTOFETCH: List[AUTOFUNTYPE] = []
+
+AUTOURLS.append(clashfree)
 
 if __name__ == '__main__':
     print("URL 抓取："+', '.join([_.__name__ for _ in AUTOURLS]))

@@ -105,3 +105,8 @@ https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.y
 # *https://raw.githubusercontent.com/RenaLio/Mux2sub/main/urllist # 挂了，谁叫你不控制抓取时长
 
 *https://gist.githubusercontent.com/peasoft/7907a8ee2a4fa5e80cd1bd006664442c/raw/
+
+# 注意：free-nodes/clashfree 没有列在这里，而是在 dynamic.py 里作为动态源实现。
+# 原因：它的文件名带日期（clash%Y%m%d.yml），且某些日期的文件是 0 字节，
+# sources.list 的 +date 机制只在 HTTP 非 200 时回退，遇到「存在但为空」
+# 会拿到空订阅直接跳过。dynamic.py 的 clashfree() 会回溯到最近一个非空文件。

@@ -144,10 +144,15 @@ FAKE_DOMAINS = ".google.com .github.com".split()
 # （systemd-resolved 的 DNS stub）的「哨兵节点」，用来检测客户端是否被
 # DNS 污染。原先的 FAKE_IPS 只列了 127.0.0.1 一个具体地址，漏掉了
 # 127.0.0.53，导致这类哨兵节点混进了发布的订阅（实测每次约 10 个）。
+# 192.0.2.0/24 等三个 TEST-NET 段是 RFC 5737 文档保留地址，一些订阅
+# 会拿它们当占位服务器（如 free-nodes/clashfree 实测有 192.0.2.1:1）。
 FAKE_NETWORKS = [ipaddress.ip_network(n) for n in (
     '127.0.0.0/8',      # 回环
     '0.0.0.0/8',       # 本网络
     '169.254.0.0/16',  # 链路本地
+    '192.0.2.0/24',    # TEST-NET-1  文档示例保留
+    '198.51.100.0/24', # TEST-NET-2  文档示例保留
+    '203.0.113.0/24',  # TEST-NET-3  文档示例保留
 )]
 
 FETCH_TIMEOUT = (6, 5)

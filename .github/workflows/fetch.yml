@@ -13,8 +13,7 @@ on:
       - 'fetch_config.yml'
       - 'fetch_config.local.yml'
       - 'abpwhite.txt'
-      - 'fetch.py'
-      - 'dynamic.py'
+      - '**.py'
       - 'requirements.txt'
       - '.github/workflows/fetch.yml'
 
