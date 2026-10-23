@@ -30,7 +30,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from rounds import addr_of, classify, load_rounds  # noqa: E402
 from prune import clean_group_refs  # noqa: E402
-from prefs import protocol_order, sort_proxies  # noqa: E402
+from prefs import filter_settings, protocol_order, sort_proxies  # noqa: E402
 
 
 def parse_args() -> argparse.Namespace:
@@ -43,10 +43,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument('--out-md', default='crosscheck_summary.md')
     p.add_argument('--out-cn-list', default='', help='「大陆可用」子集的 YAML 路径')
     p.add_argument('--input-list', default='list.meta.full.yml')
-    p.add_argument('--min-rounds', type=int, default=2,
-                   help='至少出现这么多轮才做判定（默认 2）')
-    p.add_argument('--alive-ratio', type=float, default=1.0,
-                   help='存活轮数占比达到多少算 stable_alive（默认 1.0 = 全活）')
+    p.add_argument('--min-rounds', type=int, default=0,
+                   help='至少出现这么多轮才做判定（默认取配置里的 filter.min_rounds）')
+    p.add_argument('--alive-ratio', type=float, default=0.0,
+                   help='存活占比阈值（默认取配置里的 filter.alive_ratio）')
+    p.add_argument('--rounds', type=int, default=0,
+                   help='只用最近 N 轮历史（0 = 全用；默认取配置里的 filter.rounds）')
     p.add_argument('--us-release-url', default='', help='Release 资产基础 URL')
     p.add_argument('--us-candidates', default='', help='美国侧候选资产名，逗号分隔')
     p.add_argument('--cn-file-name', default='', help='国内侧文件名（带时间戳）')
@@ -69,9 +71,17 @@ def decide(us_state: str, cn_state: str) -> Tuple[str, str]:
 def main() -> int:
     import yaml
     args = parse_args()
+    cfg = filter_settings()
+    min_rounds = args.min_rounds or cfg['min_rounds']
+    alive_ratio = args.alive_ratio or cfg['alive_ratio']
+    rounds_n = args.rounds or cfg['rounds']
 
-    us_paths = [args.us] + [h for h in args.us_history.split(',') if h.strip()]
-    cn_paths = [args.cn] + [h for h in args.cn_history.split(',') if h.strip()]
+    def tail(paths):
+        """只保留最近 N 轮（输入按时间从旧到新）。"""
+        return paths[-rounds_n:] if rounds_n > 0 else paths
+
+    us_paths = tail([args.us] + [h for h in args.us_history.split(',') if h.strip()])
+    cn_paths = tail([args.cn] + [h for h in args.cn_history.split(',') if h.strip()])
     us_rounds = load_rounds(us_paths)
     cn_rounds = load_rounds(cn_paths)
     if not us_rounds:
@@ -80,7 +90,8 @@ def main() -> int:
     if not cn_rounds:
         print('国内侧没有可用探测数据')
         return 1
-    print('美国侧 %d 轮，国内侧 %d 轮' % (len(us_rounds), len(cn_rounds)))
+    print('美国侧 %d 轮，国内侧 %d 轮（min_rounds=%d alive_ratio=%s）' % (
+        len(us_rounds), len(cn_rounds), min_rounds, alive_ratio))
 
     with open(args.input_list, encoding='utf-8') as f:
         text = f.read()
@@ -92,9 +103,9 @@ def main() -> int:
     for p in proxies:
         a = addr_of(p)
         us_state, us_seen, us_alive = classify(a, us_rounds,
-                                               args.min_rounds, args.alive_ratio)
+                                               min_rounds, alive_ratio)
         cn_state, cn_seen, cn_alive = classify(a, cn_rounds,
-                                               args.min_rounds, args.alive_ratio)
+                                               min_rounds, alive_ratio)
         verdict, action = decide(us_state, cn_state)
         rows.append({
             '服务器': a[0], '端口': a[1], '类型': p.get('type', ''),

@@ -37,7 +37,6 @@ jobs:
     timeout-minutes: 15
     env:
       TZ: Asia/Shanghai
-      ROUNDS: 6
 
     steps:
       - name: 迁出代码
@@ -66,7 +65,7 @@ jobs:
             exit 0
           }
           mkdir -p cn
-          N=$ROUNDS
+          N=$(python3 ./scripts/get_setting.py filter.rounds 6)
           # 取最近 N 轮带时间戳的国内探测结果
           MAPS=$(git ls-tree --name-only origin/probe-domestic \
             | grep -oE 'probe_domestic_[0-9]{8}_[0-9]{4}\.csv' | sort | tail -n "$N" || true)
@@ -104,7 +103,7 @@ jobs:
           fi
           # 取最近 N 轮带时间戳的美国探测结果
           MAPS=$(gh release view latest --json assets --jq '.assets[].name' \
-            | grep -oE '^probe_[0-9]{8}_[0-9]{4}\.csv$' | sort | tail -n "$ROUNDS" || true)
+            | grep -oE '^probe_[0-9]{8}_[0-9]{4}\.csv$' | sort | tail -n "$N" || true)
           for m in $MAPS; do
             curl -sL --max-time 60 "$BASE/$m" -o "us/$m" || true
           done
@@ -129,7 +128,7 @@ jobs:
             --out-md crosscheck_summary.md \
             --input-list list.meta.yml \
             --out-cn-list list.meta.cn.yml \
-            --min-rounds "${MIN_ROUNDS:-2}" \
+            --rounds "$N" \
             2>&1 | tee crosscheck.log
           rc=${PIPESTATUS[0]}
           echo "crosscheck 退出码：$rc"

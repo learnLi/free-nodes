@@ -25,6 +25,7 @@ from typing import Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from rounds import addr_of, classify, load_rounds  # noqa: E402
+from prefs import filter_settings  # noqa: E402
 
 # 复用 prune.py 的组引用清理逻辑
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -38,10 +39,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument('--probe', required=True, help='本轮 probe.csv')
     p.add_argument('--history', default='',
                    help='历史 probe 文件，逗号分隔（按时间从旧到新）')
-    p.add_argument('--min-rounds', type=int, default=2,
-                   help='至少出现这么多轮才做判定（默认 2）')
-    p.add_argument('--alive-ratio', type=float, default=1.0,
-                   help='存活轮数占比达到多少算 stable_alive（默认 1.0 = 全活）')
+    p.add_argument('--rounds', type=int, default=0,
+                   help='只用最近 N 轮历史（0 = 全用；默认取配置里的 filter.rounds）')
+    p.add_argument('--min-rounds', type=int, default=0,
+                   help='至少出现这么多轮才做判定（默认取配置里的 filter.min_rounds）')
+    p.add_argument('--alive-ratio', type=float, default=0.0,
+                   help='存活占比阈值（默认取配置里的 filter.alive_ratio）')
     p.add_argument('--report', default='stage1.csv', help='判定明细 CSV')
     p.add_argument('--drop-unknown', action='store_true',
                    help='连 unknown 也剔除（默认保守保留）')
@@ -51,15 +54,24 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     import yaml
     args = parse_args()
+    cfg = filter_settings()
+    min_rounds = args.min_rounds or cfg['min_rounds']
+    alive_ratio = args.alive_ratio or cfg['alive_ratio']
+    rounds_n = args.rounds or cfg['rounds']
 
     paths = [args.probe]
     if args.history:
-        paths += [h for h in args.history.split(',') if h.strip()]
+        hist = [h for h in args.history.split(',') if h.strip()]
+        # 只用最近 N 轮（历史按时间从旧到新传入）
+        if rounds_n > 0:
+            hist = hist[-rounds_n:]
+        paths += hist
     rounds = load_rounds(paths)
     if not rounds:
         print('没有可用的探测数据')
         return 1
-    print('载入 %d 轮探测数据' % len(rounds))
+    print('载入 %d 轮探测数据（min_rounds=%d alive_ratio=%s）' % (
+        len(rounds), min_rounds, alive_ratio))
 
     with open(args.input, encoding='utf-8') as f:
         text = f.read()
@@ -71,7 +83,7 @@ def main() -> int:
     stat = Counter()
     for p in proxies:
         a = addr_of(p)
-        state, seen, alive = classify(a, rounds, args.min_rounds, args.alive_ratio)
+        state, seen, alive = classify(a, rounds, min_rounds, alive_ratio)
         stat[state] += 1
         report.append([a[0], a[1], p.get('type', ''), p.get('name', ''),
                        state, seen, alive])

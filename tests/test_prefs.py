@@ -73,6 +73,35 @@ check('有默认顺序', len(DEFAULT_PROTOCOL_ORDER) > 0, True)
 check('默认顺序里 vmess 在前', DEFAULT_PROTOCOL_ORDER[0], 'vmess')
 
 print()
+print("=== 5. 筛选参数 ===")
+from prefs import DEFAULT_FILTER, filter_settings
+fs = filter_settings()
+check('拿到 rounds', 'rounds' in fs, True)
+check('拿到 min_rounds', 'min_rounds' in fs, True)
+check('拿到 alive_ratio', 'alive_ratio' in fs, True)
+check('rounds 是整数', isinstance(fs['rounds'], int), True)
+check('min_rounds 是整数', isinstance(fs['min_rounds'], int), True)
+check('alive_ratio 是浮点', isinstance(fs['alive_ratio'], float), True)
+check('默认 alive_ratio 为 1.0（跨轮全活）', DEFAULT_FILTER['alive_ratio'], 1.0)
+check('配置里的值生效', fs['rounds'], 6)
+
+print()
+print("=== 6. get_setting.py ===")
+import subprocess
+r = subprocess.run([sys.executable, os.path.join(REPO_ROOT, 'scripts', 'get_setting.py'),
+                    'filter.rounds', '6'], capture_output=True, text=True, encoding='utf-8')
+check('读到 filter.rounds', r.stdout.strip(), '6')
+r = subprocess.run([sys.executable, os.path.join(REPO_ROOT, 'scripts', 'get_setting.py'),
+                    'filter.alive_ratio', '1.0'], capture_output=True, text=True, encoding='utf-8')
+check('读到 filter.alive_ratio', r.stdout.strip(), '1.0')
+r = subprocess.run([sys.executable, os.path.join(REPO_ROOT, 'scripts', 'get_setting.py'),
+                    '不存在的键', '兜底'], capture_output=True, text=True, encoding='utf-8')
+check('取不到时用默认值', r.stdout.strip(), '兜底')
+r = subprocess.run([sys.executable, os.path.join(REPO_ROOT, 'scripts', 'get_setting.py'),
+                    'protocol_order'], capture_output=True, text=True, encoding='utf-8')
+check('列表用逗号连接', r.stdout.strip().startswith('vmess,vless'), True)
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)

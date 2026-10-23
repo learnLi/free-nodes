@@ -124,7 +124,7 @@ jobs:
         run: |
           set -euo pipefail
           BASE="https://github.com/${{ github.repository }}/releases/latest/download"
-          N=${STAGE1_ROUNDS:-6}
+          N=$(python3 ./scripts/get_setting.py filter.rounds 6)
           MAPS=$(gh release view latest --json assets --jq '.assets[].name' \
             | grep -oE '^probe_[0-9]{8}_[0-9]{4}\.csv$' | sort | tail -n "$N" || true)
           HIST=""
@@ -140,7 +140,7 @@ jobs:
             --output list.meta.us.yml \
             --probe probe.csv \
             --history "${HIST#,}" \
-            --min-rounds "${STAGE1_MIN_ROUNDS:-2}" \
+            --rounds "$N" \
             --report stage1.csv
           python3 ./scripts/validate_config.py list.meta.us.yml
           if [ ! -s .ts ]; then

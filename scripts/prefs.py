@@ -15,6 +15,16 @@ DEFAULT_PROTOCOL_ORDER = [
     'http', 'https', 'socks5', 'socks',
 ]
 
+# 筛选参数默认值
+DEFAULT_FILTER = {
+    # 参与判定的最近 N 轮探测历史
+    'rounds': 6,
+    # 至少出现这么多轮才做判定；只出现一轮的判为「未定」，保守保留
+    'min_rounds': 2,
+    # 存活轮数占比达到多少算「跨轮全活」。1.0 = 每一轮都活
+    'alive_ratio': 1.0,
+}
+
 
 def load_config(repo_root: str = REPO_ROOT) -> Dict[str, Any]:
     import yaml
@@ -37,6 +47,29 @@ def protocol_order(repo_root: str = REPO_ROOT) -> List[str]:
     if not isinstance(order, list) or not order:
         return list(DEFAULT_PROTOCOL_ORDER)
     return [str(x) for x in order]
+
+
+def filter_settings(repo_root: str = REPO_ROOT) -> Dict[str, Any]:
+    """筛选参数。CLI 参数没给时用这里的值。"""
+    out = dict(DEFAULT_FILTER)
+    f = load_config(repo_root).get('filter')
+    if isinstance(f, dict):
+        for k in out:
+            if k in f:
+                out[k] = f[k]
+    try:
+        out['min_rounds'] = int(out['min_rounds'])
+    except (TypeError, ValueError):
+        out['min_rounds'] = DEFAULT_FILTER['min_rounds']
+    try:
+        out['alive_ratio'] = float(out['alive_ratio'])
+    except (TypeError, ValueError):
+        out['alive_ratio'] = DEFAULT_FILTER['alive_ratio']
+    try:
+        out['rounds'] = int(out['rounds'])
+    except (TypeError, ValueError):
+        out['rounds'] = DEFAULT_FILTER['rounds']
+    return out
 
 
 def sort_key_factory(order: List[str]):
