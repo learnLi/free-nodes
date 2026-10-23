@@ -127,6 +127,81 @@ def tls_handshake(host: str, port: int, sni: str, timeout: float) -> Tuple[bool,
         return False, (time.monotonic() - start) * 1000, (type(e).__name__ + ': ' + str(e))[:60]
 
 
+def _quic_varint(n: int) -> bytes:
+    """QUIC 变长整数（2 位长度前缀）。
+
+    1 字节：6 位值    2 字节：14 位值
+    4 字节：30 位值   8 字节：62 位值
+    """
+    if n < 64:
+        return n.to_bytes(1, 'big')
+    if n < 16384:
+        return bytes([0x40 | (n >> 8)]) + (n & 0xFF).to_bytes(1, 'big')
+    if n < 1073741824:
+        return bytes([0x80 | (n >> 24)]) + (n & 0xFFFFFF).to_bytes(3, 'big')
+    return bytes([0xC0 | (n >> 56)]) + (n & 0x3FFFFFFFFFFFFFFF).to_bytes(7, 'big')
+
+
+def quic_probe(host: str, port: int, timeout: float) -> Tuple[bool, float, str]:
+    """QUIC over UDP 的存活探测。
+
+    hysteria2 / tuic 走 QUIC，TCP 探测对它们完全无效（服务端根本不监听 TCP），
+    会被误判成「已死」。
+
+    做法：发一个 QUIC v1 Initial 包，**不需要**构造真正的 TLS ClientHello——
+    按 RFC 9000，服务端收到 DCID 未知的 Initial 时**可以**回一个 Retry，
+    而 DCID 是明文放在头里的，所以不需要解密就能回包。用 PADDING 帧把包
+    撑到 1200 字节（QUIC 要求客户端 Initial 不小于 1200 字节）。
+
+    局限：回 Retry 是「可以」而非「必须」（RFC 9000 §17.2.5.2），
+    有些服务端（如 quic-go 默认配置）根本不发 Retry，而是直接丢弃。
+    因此「无响应」**不能**直接判定为已死——它同时可能是：
+      * 服务端不发 Retry（包构造没问题，但没回应）
+      * UDP 路径被阻断（GFW 对 QUIC 的干扰，或服务商的 UDP 限速）
+    真正确凿的死亡只有一种：ICMP port unreachable（表现为 refused）。
+    所以裁剪规则只认 refused，timeout 一律保留。
+    """
+    start = time.monotonic()
+    dcid = os.urandom(8)
+    scid = os.urandom(8)
+    padding = b'\x00' * 1200
+    # long header | type=Initial(0) | fixed bit | PN length=1
+    first = 0xC0 | 0x01
+    pkt = (bytes([first]) + b'\x00\x00\x00\x01'
+           + bytes([len(dcid)]) + dcid
+           + bytes([len(scid)]) + scid
+           + b'\x00'                      # token length = 0
+           + _quic_varint(1 + len(padding))  # length = PN(1) + payload
+           + b'\x00'                      # packet number
+           + padding)
+    try:
+        infos = socket.getaddrinfo(host, port, type=socket.SOCK_DGRAM)
+    except socket.gaierror as e:
+        return False, (time.monotonic() - start) * 1000, 'DNS 解析失败'
+    last_err = 'no response'
+    for family, socktype, proto, _, sockaddr in infos:
+        try:
+            s = socket.socket(family, socktype, proto)
+        except OSError as e:
+            last_err = (e.strerror or str(e))[:40]
+            continue
+        try:
+            s.settimeout(timeout)
+            s.sendto(pkt, sockaddr)
+            data, _ = s.recvfrom(2048)
+            return True, (time.monotonic() - start) * 1000, 'QUIC 响应 %d 字节' % len(data)
+        except socket.timeout:
+            last_err = 'timeout'
+        except OSError as e:
+            last_err = (e.strerror or str(e))[:40]
+        finally:
+            try:
+                s.close()
+            except OSError:
+                pass
+    return False, (time.monotonic() - start) * 1000, last_err
+
+
 def probe_one(proxy: Dict[str, Any], timeout: float) -> Dict[str, Any]:
     ptype = (proxy.get('type') or '').lower()
     host = strip_brackets(str(proxy.get('server') or ''))
@@ -141,6 +216,7 @@ def probe_one(proxy: Dict[str, Any], timeout: float) -> Dict[str, Any]:
         '端口': port,
         'TCP': '',
         'TLS': '',
+        'QUIC': '',
         '耗时ms': '',
         '错误': '',
     }
@@ -148,10 +224,13 @@ def probe_one(proxy: Dict[str, Any], timeout: float) -> Dict[str, Any]:
         row['错误'] = '地址不完整'
         return row
     if is_udp_protocol(ptype):
-        # QUIC over UDP，TCP 探测无意义
+        # QUIC over UDP：TCP 探测无意义，改用 QUIC Initial 探测
+        ok, ms, err = quic_probe(host, port, timeout)
         row['TCP'] = 'N/A'
         row['TLS'] = 'N/A'
-        row['错误'] = 'QUIC/UDP 协议，TCP 探测不适用'
+        row['QUIC'] = 'Y' if ok else 'N'
+        row['耗时ms'] = '%.0f' % ms
+        row['错误'] = err
         return row
 
     ok, ms, err = tcp_connect(host, port, timeout)
@@ -313,7 +392,7 @@ def main() -> int:
 
     rows.sort(key=lambda r: (r['类型'], r['服务器'], r['端口']))
 
-    fields = ['名称', '类型', '服务器', '端口', 'TCP', 'TLS', '耗时ms', '错误']
+    fields = ['名称', '类型', '服务器', '端口', 'TCP', 'TLS', 'QUIC', '耗时ms', '错误']
     with open(args.output, 'w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
@@ -325,6 +404,8 @@ def main() -> int:
     tcp_ok = [r for r in tcp_applicable if r['TCP'] == 'Y']
     tls_applicable = [r for r in rows if r['TLS'] in ('Y', 'N')]
     tls_ok = [r for r in tls_applicable if r['TLS'] == 'Y']
+    quic_applicable = [r for r in rows if r['QUIC'] in ('Y', 'N')]
+    quic_ok = [r for r in quic_applicable if r['QUIC'] == 'Y']
     udp_skipped = [r for r in rows if r['TCP'] == 'N/A']
 
     def pct(a: int, b: int) -> str:
@@ -333,10 +414,12 @@ def main() -> int:
     print()
     print("=== 探测结果 ===")
     print("总计节点        : %d" % len(rows))
-    print("TCP 可探测      : %d（QUIC/UDP 跳过 %d 个）" % (len(tcp_applicable), len(udp_skipped)))
+    print("TCP 可探测      : %d" % len(tcp_applicable))
     print("TCP 连通        : %d  (%s)" % (len(tcp_ok), pct(len(tcp_ok), len(tcp_applicable))))
     print("TLS 握手可测    : %d" % len(tls_applicable))
     print("TLS 握手成功    : %d  (%s)" % (len(tls_ok), pct(len(tls_ok), len(tls_applicable))))
+    print("QUIC 可探测     : %d（hysteria2/tuic 等 UDP 协议）" % len(quic_applicable))
+    print("QUIC 有响应     : %d  (%s)" % (len(quic_ok), pct(len(quic_ok), len(quic_applicable))))
 
     by_type: Dict[str, List[Dict[str, Any]]] = {}
     for r in tcp_applicable:
@@ -347,6 +430,16 @@ def main() -> int:
         for t in sorted(by_type):
             rs = by_type[t]
             ok = sum(1 for r in rs if r['TCP'] == 'Y')
+            print("  %-10s %4d/%4d  %s" % (t, ok, len(rs), pct(ok, len(rs))))
+    if quic_applicable:
+        print()
+        print("按协议（QUIC 响应率）：")
+        q_by_type: Dict[str, List[Dict[str, Any]]] = {}
+        for r in quic_applicable:
+            q_by_type.setdefault(r['类型'], []).append(r)
+        for t in sorted(q_by_type):
+            rs = q_by_type[t]
+            ok = sum(1 for r in rs if r['QUIC'] == 'Y')
             print("  %-10s %4d/%4d  %s" % (t, ok, len(rs), pct(ok, len(rs))))
 
     # 汇总成 JSON，方便后续步骤消费
@@ -359,12 +452,18 @@ def main() -> int:
         'tls_applicable': len(tls_applicable),
         'tls_ok': len(tls_ok),
         'tls_rate': pct(len(tls_ok), len(tls_applicable)),
+        'quic_applicable': len(quic_applicable),
+        'quic_ok': len(quic_ok),
+        'quic_rate': pct(len(quic_ok), len(quic_applicable)),
         'udp_skipped': len(udp_skipped),
         'refs': [{'host': h, 'port': p, 'ok': ok, 'ms': round(ms), 'err': err}
                  for h, p, ok, ms, err in refs],
         'by_type': {t: {'total': len(rs),
                         'ok': sum(1 for r in rs if r['TCP'] == 'Y')}
                     for t, rs in by_type.items()},
+        'by_type_quic': {t: {'total': len(rs),
+                              'ok': sum(1 for r in rs if r['QUIC'] == 'Y')}
+                          for t, rs in q_by_type.items()} if quic_applicable else {},
     }
     with open('probe_summary.json', 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
@@ -380,6 +479,8 @@ def main() -> int:
     md.append('TCP 可探测（已剔除 QUIC/UDP） | %d' % summary['tcp_applicable'])
     md.append('TCP 连通 | %d（%s）' % (summary['tcp_ok'], summary['tcp_rate']))
     md.append('TLS 握手成功 | %d（%s）' % (summary['tls_ok'], summary['tls_rate']))
+    md.append('QUIC 可探测（hysteria2/tuic 等 UDP） | %d' % summary['quic_applicable'])
+    md.append('QUIC 有响应 | %d（%s）' % (summary['quic_ok'], summary['quic_rate']))
     md.append('QUIC/UDP 跳过 | %d' % summary['udp_skipped'])
     md.append('')
     md.append('按协议 TCP 连通率：')

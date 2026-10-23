@@ -178,6 +178,13 @@ def decide(proxy: Dict[str, Any], probe: Dict[Tuple[str, int], Dict[str, str]],
         # timeout / 其他 -> 保留，国内可能仍然可用
         return True, ''
 
+    if row.get('TCP') == 'N/A' and row.get('QUIC') == 'N':
+        # QUIC/UDP 协议（hysteria2 / tuic）：TCP 判据不适用，
+        # 但若 UDP 也被明确拒绝（ICMP port unreachable），同样是端口无人监听
+        err = row.get('错误') or ''
+        if any(m.lower() in err.lower() for m in DEAD_ERROR_MARKERS):
+            return False, 'QUIC 探测被拒绝，端口无人监听'
+
     if row.get('TLS') == 'N':
         err = row.get('错误') or ''
         if any(m.lower() in err.lower() for m in TLS_REJECT_MARKERS):
