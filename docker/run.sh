@@ -34,7 +34,12 @@ fi
 # ---- 1. 拉最新代码（probe.py 会随仓库更新，容器是挂载的，不用重建）----
 git config user.name 'NAS probe' 2>/dev/null || true
 git config user.email 'probe@nas.local' 2>/dev/null || true
-git config core.sshCommand "ssh -i /root/.ssh/nas_probe -o UserKnownHostsFile=/root/.ssh/github_known_hosts -o StrictHostKeyChecking=yes" 2>/dev/null || true
+# 推送用的 SSH 身份。香港 VPS 上没有这把钥匙（那边不负责推送），
+# 所以这里必须先确认钥匙存在再设置，否则 core.sshCommand 指向
+# 一个不存在的文件，fetch 也会跟着失败。
+if [ -f /root/.ssh/nas_probe ]; then
+  git config core.sshCommand "ssh -i /root/.ssh/nas_probe -o UserKnownHostsFile=/root/.ssh/github_known_hosts -o StrictHostKeyChecking=yes" 2>/dev/null || true
+fi
 git fetch --depth=1 origin main || true
 git checkout -B main origin/main 2>/dev/null || true
 git reset --hard origin/main 2>/dev/null || true

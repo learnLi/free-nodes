@@ -14,7 +14,9 @@ on:
       - 'fetch_config.local.yml'
       - 'abpwhite.txt'
       - '**.py'
-      - '**.sh'
+      # 只盯真正影响产物的脚本，别让改个文档也跑一轮完整探测
+      - 'docker/**'
+      - 'scripts/**'
       - 'requirements.txt'
       - '.github/workflows/**'
 
