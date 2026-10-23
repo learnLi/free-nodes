@@ -79,3 +79,16 @@ def addr_of(proxy: Dict) -> Tuple[str, int]:
     except (TypeError, ValueError):
         port = 0
     return (str(proxy.get('server') or '').strip('[]'), port)
+
+
+def keep_recent(history: List[str], current: str, n: int) -> List[str]:
+    """保留本轮 + 最近 (n-1) 轮历史。
+
+    注意本轮必须放在**最后**。历史上如果写成 [本轮]+历史 再取尾部，
+    会在轮次很多时把本轮切掉——判定就少了最新的一轮数据。
+    """
+    if n > 0 and n > 1:
+        history = history[-(n - 1):]
+    elif n == 1:
+        history = []
+    return list(history) + [current]

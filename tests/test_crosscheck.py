@@ -170,6 +170,18 @@ with tempfile.TemporaryDirectory() as td:
     check_true("摘要含交叉表", '跨轮全活' in md)
 
 print()
+print("=== 7. 轮次选择：必须保留本轮 ===")
+from rounds import keep_recent
+hist = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7']
+check("n=6 保留本轮+5 轮历史", keep_recent(hist, 'CUR', 6),
+      ['h3', 'h4', 'h5', 'h6', 'h7', 'CUR'])
+check("本轮一定在最后", keep_recent(hist, 'CUR', 6)[-1], 'CUR')
+check("n=3 保留本轮+2 轮历史", keep_recent(hist, 'CUR', 3), ['h6', 'h7', 'CUR'])
+check("n=1 只留本轮", keep_recent(hist, 'CUR', 1), ['CUR'])
+check("n=0 全留", len(keep_recent(hist, 'CUR', 0)), 8)
+check("历史不足时也带本轮", keep_recent(['h1'], 'CUR', 6), ['h1', 'CUR'])
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)

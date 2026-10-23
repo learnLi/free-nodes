@@ -119,6 +119,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set +e
+          # shell 变量不跨步骤传递，这里要重新取一次
+          N=$(python3 ./scripts/get_setting.py filter.rounds 6)
           python3 ./scripts/crosscheck.py \
             --us us/probe_latest.csv \
             --us-history "$(ls -1 us/probe_2*.csv 2>/dev/null | paste -sd, -)" \

@@ -28,7 +28,7 @@ from typing import Dict, List, Optional, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from rounds import addr_of, classify, load_rounds  # noqa: E402
+from rounds import addr_of, classify, keep_recent, load_rounds  # noqa: E402
 from prune import clean_group_refs  # noqa: E402
 from prefs import filter_settings, protocol_order, sort_proxies  # noqa: E402
 
@@ -76,12 +76,10 @@ def main() -> int:
     alive_ratio = args.alive_ratio or cfg['alive_ratio']
     rounds_n = args.rounds or cfg['rounds']
 
-    def tail(paths):
-        """只保留最近 N 轮（输入按时间从旧到新）。"""
-        return paths[-rounds_n:] if rounds_n > 0 else paths
-
-    us_paths = tail([args.us] + [h for h in args.us_history.split(',') if h.strip()])
-    cn_paths = tail([args.cn] + [h for h in args.cn_history.split(',') if h.strip()])
+    us_paths = keep_recent([h for h in args.us_history.split(',') if h.strip()],
+                            args.us, rounds_n)
+    cn_paths = keep_recent([h for h in args.cn_history.split(',') if h.strip()],
+                            args.cn, rounds_n)
     us_rounds = load_rounds(us_paths)
     cn_rounds = load_rounds(cn_paths)
     if not us_rounds:

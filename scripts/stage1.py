@@ -24,7 +24,7 @@ from collections import Counter
 from typing import Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from rounds import addr_of, classify, load_rounds  # noqa: E402
+from rounds import addr_of, classify, keep_recent, load_rounds  # noqa: E402
 from prefs import filter_settings  # noqa: E402
 
 # 复用 prune.py 的组引用清理逻辑
@@ -59,13 +59,8 @@ def main() -> int:
     alive_ratio = args.alive_ratio or cfg['alive_ratio']
     rounds_n = args.rounds or cfg['rounds']
 
-    paths = [args.probe]
-    if args.history:
-        hist = [h for h in args.history.split(',') if h.strip()]
-        # 只用最近 N 轮（历史按时间从旧到新传入）
-        if rounds_n > 0:
-            hist = hist[-rounds_n:]
-        paths += hist
+    hist = [h for h in args.history.split(',') if h.strip()]
+    paths = keep_recent(hist, args.probe, rounds_n)
     rounds = load_rounds(paths)
     if not rounds:
         print('没有可用的探测数据')
