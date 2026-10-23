@@ -29,7 +29,8 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # 节点池加入 zixf 后从 ~440 涨到 ~2200，探测耗时相应变长
+    timeout-minutes: 30
     env:
       TZ: Asia/Shanghai
 

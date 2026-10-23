@@ -914,6 +914,22 @@ class Node:
             return False
         return True
 
+def _clean_node_lines(text: str) -> List[str]:
+    """从订阅内容里挑出节点行。
+
+    过滤掉订阅头部注释行（#profile-title / #subscription-userinfo /
+    #profile-web-page-url 等）——它们含 '://' 会被误当成节点，
+    混进订阅里还会在客户端里显示成乱码节点。
+    """
+    out: List[str] = []
+    for ln in text.splitlines():
+        ln = ln.strip()
+        if not ln or ln.startswith('#'):
+            continue
+        out.append(ln)
+    return out
+
+
 class Source():
     def __init__(self, url: Union[str, function]) -> None:
         self.url_source: Union[str, function, None]
@@ -1045,10 +1061,10 @@ class Source():
                     sub = config['proxies']
                 elif '://' in text:
                     # V2Ray raw list
-                    sub = text.strip().splitlines()
+                    sub = _clean_node_lines(text)
                 else:
-                    # V2Ray Sub
-                    sub = b64decodes(text.strip()).strip().splitlines()
+                    # V2Ray Sub（base64）
+                    sub = _clean_node_lines(b64decodes(text.strip()))
             elif not isinstance(text, (list, tuple)):
                 sub = list(text)
             else: sub = text # 动态节点抓取后直接传入列表
