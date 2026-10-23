@@ -87,6 +87,7 @@ jobs:
           echo "found=true" >> "$GITHUB_OUTPUT"
 
       - name: 取美国探活结果与节点列表
+        id: us
         if: steps.cn.outputs.found == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
