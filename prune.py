@@ -76,6 +76,8 @@ def parse_args() -> argparse.Namespace:
                    help='额外处理 V2Ray 明文链接列表（每行一条），按同样规则剔除')
     p.add_argument('--v2ray-output', default='',
                    help='V2Ray 明文链接列表的输出路径')
+    p.add_argument('--max-latency-ms', type=int, default=0,
+                   help='延迟上限（毫秒），超过则剔除。0 = 不限制')
     return p.parse_args()
 
 

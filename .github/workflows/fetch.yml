@@ -72,9 +72,12 @@ jobs:
       # 按探测结论裁剪配置。保守策略：只剔除「确凿」的问题
       # （明文开放代理、端口无人监听、TLS 服务不符），
       # TCP 超时与 QUIC 协议一律保留——前者可能只对中国 IP 放行，
-      # 后者 TCP 探测不适用。裁剪失败不影响主流程。
+      # 后者 TCP 探测不适用。
+      #
+      # 这里**不能**加 continue-on-error：裁剪失败却继续发布，等于把
+      # 未裁剪的配置发出去（里面还留着明文开放代理）。
+      # 裁剪失败就必须中止构建。
       - name: 按探测结果裁剪
-        continue-on-error: true
         run: |
           set -euo pipefail
           mkdir -p pruned
@@ -162,9 +165,14 @@ jobs:
       - name: 校验配置一致性
         run: |
           set -euo pipefail
+          # list.meta.full.yml / list.yml.full.yml 是「裁剪前」的留档，
+          # 里面本来就有明文代理，不检查它们。
           python3 ./scripts/validate_config.py \
-            list.meta.full.yml list.meta.yml list.yml.full.yml list.yml \
+            list.meta.full.yml list.yml.full.yml \
             snippets/nodes.meta.yml snippets/nodes.yml
+          # 已裁剪的产物：不允许出现明文 HTTP / SOCKS 代理
+          python3 ./scripts/validate_config.py --no-plaintext \
+            list.meta.yml list.yml
 
       - name: 收集产物
         run: |

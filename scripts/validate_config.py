@@ -22,10 +22,16 @@ BUILTIN = {'DIRECT', 'REJECT', 'PASS', 'COMPATIBLE', 'GLOBAL'}
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description='校验 Clash 配置')
     p.add_argument('files', nargs='+', help='要校验的 Clash YAML 文件')
+    p.add_argument('--no-plaintext', action='store_true',
+                   help='禁止出现明文 HTTP / SOCKS 代理节点（已裁剪的产物用）')
     return p.parse_args()
 
 
-def validate(path: str) -> List[str]:
+# 明文代理类型：代理方可见流量，且不是真正的「免费节点」
+PLAINTEXT_TYPES = {'http', 'https', 'socks5', 'socks'}
+
+
+def validate(path: str, no_plaintext: bool = False) -> List[str]:
     import yaml
     errs: List[str] = []
     with open(path, encoding='utf-8') as f:
@@ -46,6 +52,9 @@ def validate(path: str) -> List[str]:
         for field in ('type', 'server'):
             if not p.get(field):
                 errs.append('节点 %s 缺少 %s' % (n, field))
+        if no_plaintext and str(p.get('type') or '').lower() in PLAINTEXT_TYPES:
+            errs.append('节点 %s 是明文 %s 代理（不应出现在已裁剪的产物里）'
+                        % (n, p.get('type')))
         port = p.get('port')
         if not isinstance(port, int) or not (0 < port < 65536):
             errs.append('节点 %s 的 port 非法：%r' % (n, port))
@@ -86,7 +95,7 @@ def main() -> int:
     bad = 0
     for path in args.files:
         try:
-            errs = validate(path)
+            errs = validate(path, args.no_plaintext)
         except Exception as e:  # noqa: BLE001
             print("  %-34s 解析失败：%s" % (path.split('/')[-1], e))
             bad += 1

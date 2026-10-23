@@ -149,7 +149,7 @@ jobs:
             fi
           done
           # 产出必须自洽——Clash 遇到悬空引用会拒绝加载整个配置
-          python3 ./scripts/validate_config.py list.meta.cn.yml
+          python3 ./scripts/validate_config.py --no-plaintext list.meta.cn.yml
           echo "产出齐全"
 
       - name: 发布交叉结果
