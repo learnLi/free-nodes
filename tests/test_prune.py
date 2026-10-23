@@ -196,6 +196,42 @@ clean_group_refs(data2, [{'name': 'a'}])
 check("被清空的组拿到合法兜底成员", data2['proxy-groups'][0]['proxies'], ['DIRECT'])
 
 print()
+print("=== 10. 延迟上限 ===")
+# 延迟只对**成功**的探测有意义；失败时的耗时是超时上限（5 秒），不是延迟
+def row(tcp, tls, err, ms):
+    return {'服务器': '1.2.3.4', '端口': '443', '类型': 'vless', '名称': 'x',
+            'TCP': tcp, 'TLS': tls, 'QUIC': 'N/A', '耗时ms': ms, '错误': err}
+
+check("成功且延迟超限 -> 剔除",
+      decide(p('1.2.3.4', 443, 'vless'), {('1.2.3.4', 443): row('Y', 'Y', '', '2000')},
+             False, 1000)[0], False)
+check("成功且延迟在限内 -> 保留",
+      decide(p('1.2.3.4', 443, 'vless'), {('1.2.3.4', 443): row('Y', 'Y', '', '500')},
+             False, 1000)[0], True)
+check("上限为 0 -> 不限制",
+      decide(p('1.2.3.4', 443, 'vless'), {('1.2.3.4', 443): row('Y', 'Y', '', '99999')},
+             False, 0)[0], True)
+check("失败节点的耗时（超时值）不触发延迟剔除",
+      decide(p('1.2.3.4', 443, 'vless'), {('1.2.3.4', 443): row('N', 'N/A', 'timeout', '5002')},
+             False, 1000)[0], True)
+# 说明：prune.py（单轮、美国侧）对 TLS 失败只在**明确拒绝**时剔除——
+# 超时不剔，因为单轮证据弱、可能只是链路慢。
+# 而 rounds.is_alive（跨轮判定）把 TLS=N 一律算死。
+# 两者在「大陆可用」那份上结果一致；差别只在「全量」那份，
+# 而「全量」本就该宽松。
+check("TLS 握手超时（单轮证据弱）-> 保留",
+      decide(p('1.2.3.4', 443, 'vless'), {('1.2.3.4', 443): row('Y', 'N', 'timeout', '5002')},
+             False, 1000)[0], True)
+check("TLS 握手被明确拒绝 -> 剔除",
+      decide(p('1.2.3.4', 443, 'vless'),
+             {('1.2.3.4', 443): row('Y', 'N', 'ssl: [SSL: WRONG_VERSION_NUMBER]', '300')},
+             False, 1000)[0], False)
+check("剔除原因写明延迟",
+      '延迟' in decide(p('1.2.3.4', 443, 'vless'),
+                       {('1.2.3.4', 443): row('Y', 'Y', '', '2000')},
+                       False, 1000)[1], True)
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)

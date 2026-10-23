@@ -81,12 +81,15 @@ jobs:
           # 留档未裁剪版本，便于对照
           [ -f list.meta.yml ] && cp list.meta.yml list.meta.full.yml
           [ -f list.yml ] && cp list.yml list.yml.full.yml
+          # 美国侧延迟上限（「全量」这份订阅用美国出口的延迟判定）
+          MAXLAT_US=$(python3 ./scripts/get_setting.py filter.max_latency_ms_us 0)
           for f in list.meta.yml list.yml snippets/nodes.meta.yml snippets/nodes.yml; do
             [ -f "$f" ] || continue
             python ./prune.py \
               --input "$f" \
               --output "$f.pruned" \
               --probe probe.csv \
+              --max-latency-ms "$MAXLAT_US" \
               --removed-report "pruned_$(echo "$f" | tr '/' '_').csv"
             mv "$f.pruned" "$f"
           done
@@ -95,6 +98,7 @@ jobs:
             cp list_raw.txt list_raw.full.txt
             python ./prune.py \
               --probe probe.csv \
+              --max-latency-ms "$MAXLAT_US" \
               --removed-report pruned_list_raw.txt.csv \
               --v2ray-input list_raw.txt \
               --v2ray-output list_raw.pruned.txt
@@ -135,12 +139,14 @@ jobs:
             fi
           done
           echo "历史轮次：${HIST#,}"
+          MAXLAT_US=$(python3 ./scripts/get_setting.py filter.max_latency_ms_us 0)
           python3 ./scripts/stage1.py \
             --input list.meta.yml \
             --output list.meta.us.yml \
             --probe probe.csv \
             --history "${HIST#,}" \
             --rounds "$N" \
+            --max-latency-ms "$MAXLAT_US" \
             --report stage1.csv
           python3 ./scripts/validate_config.py list.meta.us.yml
           if [ ! -s .ts ]; then

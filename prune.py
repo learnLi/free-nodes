@@ -26,6 +26,9 @@ import os
 import sys
 from typing import Any, Dict, List, Set, Tuple
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scripts'))
+from rounds import row_latency  # noqa: E402
+
 # 明文代理类型
 PLAINTEXT_TYPES = {'http', 'https', 'socks5', 'socks'}
 
@@ -155,7 +158,8 @@ def load_probe(path: str) -> Dict[Tuple[str, int], Dict[str, str]]:
 
 
 def decide(proxy: Dict[str, Any], probe: Dict[Tuple[str, int], Dict[str, str]],
-           keep_plaintext: bool) -> Tuple[bool, str]:
+           keep_plaintext: bool,
+           max_latency_ms: int = 0) -> Tuple[bool, str]:
     """返回 (是否保留, 原因)。"""
     ptype = (proxy.get('type') or '').lower()
 
@@ -189,6 +193,13 @@ def decide(proxy: Dict[str, Any], probe: Dict[Tuple[str, int], Dict[str, str]],
         err = row.get('错误') or ''
         if any(m.lower() in err.lower() for m in TLS_REJECT_MARKERS):
             return False, 'TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务'
+
+    # 延迟上限。只对**成功**的探测有意义——失败时耗时记的是超时上限
+    # （5 秒），不是真实延迟，混进来会把分布图污染成假尖刺。
+    if max_latency_ms:
+        lat = row_latency(row)
+        if lat is not None and lat > max_latency_ms:
+            return False, '延迟过高（%.0fms > %dms）' % (lat, max_latency_ms)
 
     return True, ''
 
@@ -270,7 +281,8 @@ def main() -> int:
     kept: List[Dict[str, Any]] = []
     removed: List[Tuple[str, str, str]] = []
     for p in proxies:
-        ok, reason = decide(p, probe, args.keep_plaintext_proxy)
+        ok, reason = decide(p, probe, args.keep_plaintext_proxy,
+                            args.max_latency_ms)
         if ok:
             kept.append(p)
         else:

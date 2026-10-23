@@ -71,6 +71,24 @@ def load_rounds(paths: List[str]) -> List[Dict[Tuple[str, int], Dict[str, Any]]]
     return [load_round(p) for p in paths if os.path.exists(p)]
 
 
+def row_latency(row: Dict[str, str]) -> Optional[float]:
+    """一行探测结果里的延迟（毫秒）。只有**成功**的探测才算延迟。
+
+    失败（超时/被拒）的耗时记的是超时上限（5 秒），不是真实延迟。
+    """
+    if not row:
+        return None
+    if not is_alive(row):
+        return None
+    raw = row.get('耗时ms')
+    if not raw:
+        return None
+    try:
+        return float(raw)
+    except (TypeError, ValueError):
+        return None
+
+
 def median_latency(rounds: List[Dict[Tuple[str, int], Dict[str, Any]]],
                     addr: Tuple[str, int]) -> Optional[float]:
     """取该地址在各轮里成功探测到的延迟中位数。

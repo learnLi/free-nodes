@@ -24,7 +24,8 @@ from collections import Counter
 from typing import Dict, List
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from rounds import addr_of, classify, keep_recent, load_rounds  # noqa: E402
+from rounds import (addr_of, classify, keep_recent, load_rounds,
+                   median_latency)  # noqa: E402
 from prefs import filter_settings  # noqa: E402
 
 # 复用 prune.py 的组引用清理逻辑
@@ -45,6 +46,8 @@ def parse_args() -> argparse.Namespace:
                    help='至少出现这么多轮才做判定（默认取配置里的 filter.min_rounds）')
     p.add_argument('--alive-ratio', type=float, default=0.0,
                    help='存活占比阈值（默认取配置里的 filter.alive_ratio）')
+    p.add_argument('--max-latency-ms', type=int, default=0,
+                   help='延迟上限（毫秒），超过则剔除。0 = 不限制')
     p.add_argument('--report', default='stage1.csv', help='判定明细 CSV')
     p.add_argument('--drop-unknown', action='store_true',
                    help='连 unknown 也剔除（默认保守保留）')
@@ -58,6 +61,7 @@ def main() -> int:
     min_rounds = args.min_rounds or cfg['min_rounds']
     alive_ratio = args.alive_ratio or cfg['alive_ratio']
     rounds_n = args.rounds or cfg['rounds']
+    max_latency_ms = args.max_latency_ms or cfg.get('max_latency_ms_us', 0)
 
     hist = [h for h in args.history.split(',') if h.strip()]
     paths = keep_recent(hist, args.probe, rounds_n)
@@ -76,12 +80,18 @@ def main() -> int:
     kept: List[Dict] = []
     report: List[List] = []
     stat = Counter()
+    slow = 0
     for p in proxies:
         a = addr_of(p)
         state, seen, alive = classify(a, rounds, min_rounds, alive_ratio)
+        lat = median_latency(rounds, a)
         stat[state] += 1
         report.append([a[0], a[1], p.get('type', ''), p.get('name', ''),
-                       state, seen, alive])
+                       state, seen, alive,
+                       '' if lat is None else '%.0f' % lat])
+        if max_latency_ms and lat is not None and lat > max_latency_ms:
+            slow += 1
+            continue
         if state == 'stable_alive':
             kept.append(p)
         elif state == 'unknown' and not args.drop_unknown:
@@ -104,13 +114,16 @@ def main() -> int:
 
     with open(args.report, 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
-        w.writerow(['服务器', '端口', '类型', '名称', '判定', '出现轮数', '存活轮数'])
+        w.writerow(['服务器', '端口', '类型', '名称', '判定',
+                    '出现轮数', '存活轮数', '延迟ms'])
         for r in report:
             w.writerow(r)
 
     print('Stage 1：%d -> %d 个节点' % (len(proxies), len(kept)))
     for k in ('stable_alive', 'unknown', 'stable_dead'):
         print('  %-14s %d' % (k, stat.get(k, 0)))
+    if max_latency_ms:
+        print('  延迟超限(>%dms) %d' % (max_latency_ms, slow))
     if dangling:
         print('  同步清理了 %d 处失效的 proxy-group 引用' % dangling)
     return 0
