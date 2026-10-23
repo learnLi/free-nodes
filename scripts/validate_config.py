@@ -24,14 +24,22 @@ def parse_args() -> argparse.Namespace:
     p.add_argument('files', nargs='+', help='要校验的 Clash YAML 文件')
     p.add_argument('--no-plaintext', action='store_true',
                    help='禁止出现明文 HTTP / SOCKS 代理节点（已裁剪的产物用）')
+    p.add_argument('--no-meta-fields', action='store_true',
+                   help='禁止出现 Mihomo 专有字段（原版 Clash 的产物用）')
     return p.parse_args()
 
 
 # 明文代理类型：代理方可见流量，且不是真正的「免费节点」
 PLAINTEXT_TYPES = {'http', 'https', 'socks5', 'socks'}
 
+# Mihomo（Clash Meta）专有的代理组字段。原版 Clash 内核不认，
+# Go 的 YAML 解析会忽略未知字段——不会报错，但这些字段在老内核里无效
+META_ONLY_GROUP_FIELDS = ('lazy', 'max-failed-times',
+                          'unified-delay', 'dialer-proxy')
 
-def validate(path: str, no_plaintext: bool = False) -> List[str]:
+
+def validate(path: str, no_plaintext: bool = False,
+             no_meta_fields: bool = False) -> List[str]:
     import yaml
     errs: List[str] = []
     with open(path, encoding='utf-8') as f:
@@ -61,6 +69,11 @@ def validate(path: str, no_plaintext: bool = False) -> List[str]:
 
     gnames: Set[str] = set()
     for g in groups:
+        if no_meta_fields:
+            for k in META_ONLY_GROUP_FIELDS:
+                if k in g:
+                    errs.append('组 %s 含 Mihomo 专有字段 %s（原版 Clash 不认）'
+                                % (g.get('name'), k))
         n = str(g.get('name') or '')
         if not n:
             errs.append('有组缺少 name')
@@ -95,7 +108,7 @@ def main() -> int:
     bad = 0
     for path in args.files:
         try:
-            errs = validate(path, args.no_plaintext)
+            errs = validate(path, args.no_plaintext, args.no_meta_fields)
         except Exception as e:  # noqa: BLE001
             print("  %-34s 解析失败：%s" % (path.split('/')[-1], e))
             bad += 1

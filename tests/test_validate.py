@@ -126,6 +126,33 @@ proxy-groups:
     check("内置策略与组名引用不算错", validate(p), [])
 
 print()
+print("=== Mihomo 专有字段检查 ===")
+import tempfile, yaml as _y
+from validate_config import validate, META_ONLY_GROUP_FIELDS
+
+with tempfile.TemporaryDirectory() as td:
+    p = os.path.join(td, 'c.yml')
+    with open(p, 'w', encoding='utf-8') as f:
+        f.write("proxies:\n"
+                "- name: a\n  type: vmess\n  server: 1.2.3.4\n  port: 443\n"
+                "proxy-groups:\n"
+                "- name: g1\n  type: select\n  proxies: [a]\n")
+    check("干净配置无问题", validate(p, False, True), [])
+
+    with open(p, 'w', encoding='utf-8') as f:
+        f.write("proxies:\n"
+                "- name: a\n  type: vmess\n  server: 1.2.3.4\n  port: 443\n"
+                "proxy-groups:\n"
+                "- name: g1\n  type: url-test\n  url: https://x/\n"
+                "  interval: 600\n  tolerance: 20\n  lazy: true\n"
+                "  max-failed-times: 3\n  proxies: [a]\n")
+    errs = validate(p, False, True)
+    check("检出 lazy", any('lazy' in e for e in errs), True)
+    check("检出 max-failed-times", any('max-failed-times' in e for e in errs), True)
+    check("tolerance 不算 Mihomo 专有", any('tolerance' in e for e in errs), False)
+    check("不加开关则不报", validate(p, False, False), [])
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)

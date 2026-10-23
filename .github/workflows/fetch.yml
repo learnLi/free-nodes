@@ -172,7 +172,10 @@ jobs:
             snippets/nodes.meta.yml snippets/nodes.yml
           # 已裁剪的产物：不允许出现明文 HTTP / SOCKS 代理
           python3 ./scripts/validate_config.py --no-plaintext \
-            list.meta.yml list.yml
+            list.meta.yml
+          # 原版 Clash 的产物：还不允许出现 Mihomo 专有字段
+          python3 ./scripts/validate_config.py --no-plaintext --no-meta-fields \
+            list.yml
 
       - name: 收集产物
         run: |

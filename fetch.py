@@ -1668,6 +1668,15 @@ def main():
         dns_mode: Optional[str] = None
     else:
         conf['dns']['enhanced-mode'] = 'fake-ip'
+    # 原版 Clash（老内核）不认这些 Mihomo 专有字段。
+    # Go 的 YAML 解析会忽略未知字段，所以不会报错，但这些字段在老内核里
+    # 是**无效**的——写进去只会让人误以为老内核也有 lazy 的好处。
+    # 留在这里的 config.yml 是两种内核共用的，所以在这里剥掉。
+    META_ONLY_GROUP_FIELDS = ('lazy', 'max-failed-times',
+                              'unified-delay', 'dialer-proxy')
+    for group in conf.get('proxy-groups', []):
+        for k in META_ONLY_GROUP_FIELDS:
+            group.pop(k, None)
     with open("list.yml", 'w', encoding="utf-8") as f:
         f.write(datetime.datetime.now().strftime('# Update: %Y-%m-%d %H:%M\n'))
         f.write(yaml.dump(conf, allow_unicode=True).replace('!!str ',''))
