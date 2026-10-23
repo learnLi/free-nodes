@@ -134,37 +134,11 @@ jobs:
           gh release upload latest "crosscheck_${STAMP}.csv" "crosscheck_${STAMP}.md" --clobber
           echo "已上传到 latest Release"
 
-      # best-effort：把结果也回写到 probe-domestic 分支，方便用 git 看历史。
-      # 推不上去不影响主流程——交叉结果已经发布到 Release 了。
-      - name: 推送到 probe-domestic 分支
-        if: steps.cn.outputs.found == 'true'
-        continue-on-error: true
-        run: |
-          set -euo pipefail
-          echo "起点: $(git rev-parse --short HEAD) 分支=$(git rev-parse --abbrev-ref HEAD)"
-          # 显式 refspec，确保 remote-tracking ref 一定建出来
-          git fetch --depth=1 origin \
-            +refs/heads/probe-domestic:refs/remotes/origin/probe-domestic
-          git checkout -B probe-domestic refs/remotes/origin/probe-domestic
-          echo "切到: $(git rev-parse --short HEAD)"
-          cp crosscheck.csv crosscheck_summary.md list.meta.cn.yml .
-          # 逐个 add：git add 只要有一个 pathspec 不匹配就整体失败，
-          # 一个都不会被暂存。所以先逐个确认存在
-          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
-            if [ ! -s "$f" ]; then
-              echo "::error::缺少产出文件 $f"
-              exit 1
-            fi
-            git add -f "$f"
-          done
-          if git diff --cached --quiet; then
-            echo "无变化"
-          else
-            git -c user.name="GitHub Actions" -c user.email="actions@github.com" \
-              commit -m "crosscheck: $(date '+%Y-%m-%d %H:%M:%S')"
-            git push origin HEAD:refs/heads/probe-domestic
-            echo "已推送到 probe-domestic"
-          fi
+      # 交叉结果已经发布到 Release，这里不再回写分支。
+      # 分支 probe-domestic 只承担一个职责：**国内探活原始数据的通道**
+      # （NAS 推数据进来，工作流读数据出去）。回写结果到分支是冗余的，
+      # 而且在浅克隆 + 跨分支 fetch 的组合下反复出问题。
+      # 需要看历史就看 Release 里的 crosscheck_<时间戳>.csv / .md 资产。
 
       - name: 上传运行日志
         if: always()
