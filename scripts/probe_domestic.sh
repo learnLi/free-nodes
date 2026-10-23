@@ -24,15 +24,26 @@
 set -e
 
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
-REPO="${1:-$SCRIPT_DIR}"
+# 默认工作目录：脚本的上级目录（仓库根）。传参可覆盖。
+REPO="${1:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 cd "$REPO" || { echo "目录不存在：$REPO"; exit 1; }
 
 BRANCH_PROBE="probe-domestic"
 LIST_URL="${LIST_URL:-https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.full.yml}"
-PROBE_PY="${PROBE_PY:-$SCRIPT_DIR/probe.py}"
 PROBE_TIMEOUT="${PROBE_TIMEOUT:-5}"
 WORKERS="${WORKERS:-64}"
 JITTER_MAX=$((15 * 60))
+
+# probe.py 的位置：先找工作目录下的（仓库根），再找脚本同级，最后从 CDN 取
+if [ -n "${PROBE_PY:-}" ]; then
+  :
+elif [ -f "$REPO/probe.py" ]; then
+  PROBE_PY="$REPO/probe.py"
+elif [ -f "$SCRIPT_DIR/probe.py" ]; then
+  PROBE_PY="$SCRIPT_DIR/probe.py"
+else
+  PROBE_PY="$REPO/probe.py"
+fi
 
 # ---- 0. 环境预检 ----
 PYTHON="${PYTHON:-python3}"
