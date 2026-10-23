@@ -317,7 +317,7 @@ jobs:
           # 名单必须写全：漏一个，那份订阅就会被当成「陈旧资产」删掉。
           # 漏了 list.cn.yml 时，它会在每轮 CI 里短暂 404，
           # 碰上 crosscheck 失败更是会一直缺失到下一轮成功为止。
-          CROSSCHECK_ASSETS="crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml list.meta.hk.yml"
+          CROSSCHECK_ASSETS="crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml "
           # 清理前记下它们存在哪些，清理后逐一核对 ——
           # 豁免名单写漏了，这一步会当场报错，而不是等到用户发现链接 404。
           BEFORE=""
@@ -328,17 +328,40 @@ jobs:
           done
           echo "crosscheck 的资产（清理前存在）：${BEFORE:-（无）}"
 
+          # 带时间戳的历史副本只保留最近 N 轮。
+          # 交叉比对按时间戳配对，只需要最近 N 轮；再往前的是历史包袱 ——
+          # 留着只会让 Release 越滚越大（每轮 CI 涨 8 个资产）。
+          # shell 变量不跨步骤，这里要自己取一次。
+          N=$(python3 ./scripts/get_setting.py filter.rounds 6)
+          KEEP=""
+          for m in $(gh release view "$TAG" --json assets --jq '.assets[].name' \
+              | grep -oE '^probe_[0-9]{8}_[0-9]{4}\.csv$' | sort | tail -n "$N" || true); do
+            KEEP="$KEEP $m"
+          done
+          for m in $(gh release view "$TAG" --json assets --jq '.assets[].name' \
+              | grep -oE '^crosscheck_[0-9]{8}_[0-9]{4}\.(csv|md)$' | sort | tail -n "$N" || true); do
+            KEEP="$KEEP $m"
+          done
+          echo "保留的历史副本（最近 $N 轮）：$KEEP"
+
           # 清理陈旧资产（本次不再生成的文件）。
           # 但要放过两类不属于本步骤的资产：
           #   1) 带时间戳的历史副本（probe_<ts>.csv / crosscheck_<ts>.*）——
           #      它们不在 dist/ 里，却是交叉比对按时间戳配对的依据
-          #   2) crosscheck job 产出的交叉表与三份子集——由另一个工作流上传，
+          #   2) crosscheck job 产出的交叉表与两份子集——由另一个工作流上传，
           #      这里不能删
           while read -r old; do
             [ -n "$old" ] || continue
             case "$old" in
-              probe_[0-9]*_*.csv|crosscheck_[0-9]*_*.csv|crosscheck_[0-9]*_*.md) continue ;;
-              crosscheck.csv|crosscheck_summary.md|list.meta.cn.yml|list.cn.yml|list.meta.hk.yml) continue ;;
+              probe_[0-9]*_*.csv|crosscheck_[0-9]*_*.csv|crosscheck_[0-9]*_*.md)
+                # 只留最近 N 轮，更早的删掉
+                keep=no
+                for k in $KEEP; do
+                  if [ "$old" = "$k" ]; then keep=yes; break; fi
+                done
+                if [ "$keep" = "yes" ]; then continue; fi
+                ;;
+              crosscheck.csv|crosscheck_summary.md|list.meta.cn.yml|list.cn.yml) continue ;;
             esac
             if [ ! -f "$SRC/$old" ]; then
               echo "删除陈旧资产：$old"
@@ -444,7 +467,7 @@ jobs:
           set -euo pipefail
           # 先把远端 output 分支整份拉下来，**不要**清空重建。
           # output 分支上还有 crosscheck 工作流发布的
-          # list.meta.cn.yml / list.meta.hk.yml / crosscheck.csv ——
+          # list.meta.cn.yml / list.cn.yml / crosscheck.csv ——
           # 那是「备用通道」的一部分，清掉会让订阅链接 404。
           rm -rf .output
           if ! git clone --depth=1 --branch output \

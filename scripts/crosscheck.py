@@ -60,8 +60,6 @@ def parse_args() -> argparse.Namespace:
                    help='原版 Clash 配置（list.yml），用于产出老内核的大陆可用版')
     p.add_argument('--out-cn-list-clash', default='',
                    help='原版 Clash 大陆可用版的输出路径（list.cn.yml）')
-    p.add_argument('--out-hk-list', default='',
-                   help='香港桥接池版的输出路径（list.meta.hk.yml）')
     return p.parse_args()
 
 
@@ -205,66 +203,6 @@ def main() -> int:
     with open(args.out_md, 'w', encoding='utf-8') as f:
         f.write('\n'.join(md)+'\n')
     print('\n'.join(md))
-
-    # ---- 香港桥接池版 ----
-    # 桥接场景：节点是**香港 VPS 去连**的，所以
-    #   * 延迟必须按香港视角算（美国到亚洲天生慢，用美国数字会误杀好节点）
-    #   * 「大陆被墙」对它不成立——被墙的通常是欧美 IP，恰恰是香港最有价值的
-    #     一批，必须保留
-    # 剔除的只有一种：中美两端都探不通（真死）。
-    #
-    # 为什么不按「大陆可达」筛：香港的节点是**香港 VPS 去连**的，
-    # 大陆被墙的节点恰恰是香港最有价值的一批，必须保留。
-    # 延迟也不在这里筛 —— 没有香港侧的探测数据，拿美国的延迟代替会
-    # 误杀「离美国远但离香港近」的好节点。
-    if args.out_hk_list:
-        hk_kept: List[Dict] = []
-        hk_dead = 0
-        for p in proxies:
-            a = addr_of(p)
-            st = state_by_addr.get((a[0], a[1]))
-            if st and st[0] == 'stable_dead' and st[1] == 'stable_dead':
-                hk_dead += 1
-                continue
-            hk_kept.append(p)
-        hk_kept = sort_proxies(hk_kept, protocol_order())
-        hk_data = dict(data)
-        hk_data['proxies'] = hk_kept
-        hk_dangling = clean_group_refs(hk_data, hk_kept)
-        hk_header = ''
-        if text.startswith('#'):
-            for line in text.splitlines():
-                if line.startswith('#'):
-                    hk_header += line + '\n'
-                else:
-                    break
-        with open(args.out_hk_list, 'w', encoding='utf-8') as f:
-            f.write(hk_header)
-            f.write(yaml.dump(hk_data, allow_unicode=True,
-                              sort_keys=False).replace('!!str ', ''))
-        print('香港桥接池子集：%d -> %d 个节点（两端都探不通 %d）-> %s' % (
-            len(proxies), len(hk_kept), hk_dead, args.out_hk_list))
-        if hk_dangling:
-            print('  同步清理了 %d 处失效引用' % hk_dangling)
-
-        # 把香港视角的结论补进汇总报告
-        hk_md = ['', '## 香港桥接池视角', '']
-        hk_md.append('香港的节点由**香港 VPS 去连**，所以判定标准与大陆不同：')
-        hk_md.append('')
-        hk_md.append('- 「大陆被墙」对它不成立 —— 被墙的往往是欧美 IP，')
-        hk_md.append('  恰恰是香港最有价值的一批，必须保留；')
-        hk_md.append('- 延迟不在这份订阅里筛：没有香港侧的探测数据，')
-        hk_md.append('  拿美国的延迟代替会误杀「离美国远但离香港近」的好节点。')
-        hk_md.append('')
-        hk_md.append('判定依据：中、美两侧的多轮探活结论。只剔除「两端都探不通」的节点。')
-        hk_md.append('')
-        hk_md.append('| 项 | 数量 |')
-        hk_md.append('| :- | ---: |')
-        hk_md.append('| 候选节点 | %d |' % len(proxies))
-        hk_md.append('| 保留 | %d |' % len(hk_kept))
-        hk_md.append('| 两端都探不通（剔除）| %d |' % hk_dead)
-        with open(args.out_md, 'a', encoding='utf-8') as f:
-            f.write('\n'.join(hk_md) + '\n')
 
     if args.out_cn_list:
         # 按协议偏好排序：实测国内可用率 vmess 79% > vless 62% > trojan 53%

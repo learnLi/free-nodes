@@ -20,7 +20,6 @@
 | Clash Verge Rev / Mihomo Party / FlClash / Clash Meta for Android | **Clash Meta (Mihomo)** | **`list.meta.cn.yml`** | `list.meta.yml` |
 | 老版 Clash for Windows / Clash（经典内核） | **原版 Clash** | **`list.cn.yml`** | `list.yml` |
 | v2rayN / v2rayNG / Nekoray / sing-box | — | `list.txt` | — |
-| **境外桥接池**（节点由香港/境外机器去连） | **Clash Meta (Mihomo)** | **`list.meta.hk.yml`** | — |
 
 > **为什么原版 Clash 要单独一份**：`list.meta.cn.yml` 里含 `flow`、`grpc-opts`、
 > `obfs`、`client-fingerprint`、`xhttp-opts` 等 **Meta 专有字段**，
@@ -37,7 +36,6 @@
 | :- | :-: | :- |
 | **`list.meta.cn.yml`** | ~1100 | **Clash Meta，大陆可用（推荐）** —— 中美多轮联合判定 + 延迟上限 + 协议偏好排序 |
 | **`list.cn.yml`** | ~430 | **原版 Clash，大陆可用** |
-| **`list.meta.hk.yml`** | ~1400 | **Clash Meta，境外桥接池专用** —— 给「香港 VPS 做桥接」这类场景 |
 | `list.meta.yml` | ~1550 | Clash Meta，全量（美国侧视角筛的）|
 | `list.meta.us.yml` | ~1400 | Clash Meta，美国侧多轮筛选 |
 | `list.yml` | ~600 | 原版 Clash，全量 |
@@ -51,8 +49,6 @@
 https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.cn.yml
 # 原版 Clash（老内核）—— 大陆可用
 https://github.com/learnLi/free-nodes/releases/latest/download/list.cn.yml
-# 境外桥接池专用
-https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.hk.yml
 # 全量
 https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.yml
 https://github.com/learnLi/free-nodes/releases/latest/download/list.yml
@@ -65,7 +61,6 @@ https://github.com/learnLi/free-nodes/releases/latest/download/list.txt
 
 ```
 https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.cn.yml
-https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.hk.yml
 https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.cn.yml
 ```
 
@@ -343,22 +338,6 @@ consensus:                   # 诊断用，不参与任何过滤
 美国  85.8%     ← 中间是跨洋损耗
 大陆  ~55%      ← 差的那 42% 正是被墙的
 ```
-
-### 境外桥接池那份（`list.meta.hk.yml`）
-
-给「香港 VPS 做桥接」这类场景：节点是**境外机器去连**的，所以判定标准
-和「大陆可用」那份不一样：
-
-| | `list.meta.cn.yml` | `list.meta.hk.yml` |
-| :- | :- | :- |
-| 连接方 | 大陆用户 | 境外的桥接机器 |
-| 大陆被墙的节点 | 剔除 | **保留** —— 恰恰是境外最有价值的一批 |
-| 延迟上限 | 国内侧 1000ms | 不筛（没有境外侧的探测数据）|
-| 剔除条件 | 国内跨轮全死 / 延迟超限 | **中美两端都探不通** |
-
-延迟为什么不筛：拿美国侧的延迟当香港的用会误杀「离美国远但离香港近」的
-好节点（美国到亚洲天生就慢 200~400ms），而香港侧没有探测数据，
-宁可不筛也不误杀。
 
 ### 国内探测端（NAS）
 

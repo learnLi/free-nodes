@@ -129,9 +129,6 @@ jobs:
           set +e
           # shell 变量不跨步骤传递，这里要重新取一次
           N=$(python3 ./scripts/get_setting.py filter.rounds 6)
-          # 香港桥接池版：给香港 VPS 用的那份订阅。
-          # 判定只看「中美两端都探不通」，不按延迟筛（没有香港侧数据）。
-          HK_ARGS=(--out-hk-list list.meta.hk.yml)
           python3 ./scripts/crosscheck.py \
             --us us/probe_latest.csv \
             --us-history "$(ls -1 us/probe_2*.csv 2>/dev/null | paste -sd, -)" \
@@ -144,7 +141,6 @@ jobs:
             --input-list-clash list.yml \
             --out-cn-list-clash list.cn.yml \
             --rounds "$N" \
-            "${HK_ARGS[@]}" \
             2>&1 | tee crosscheck.log
           rc=${PIPESTATUS[0]}
           echo "crosscheck 退出码：$rc"
@@ -153,7 +149,7 @@ jobs:
             echo "::error::交叉比对失败，日志已上传到 Release 的 crosscheck.log"
             exit 1
           fi
-          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml list.meta.hk.yml; do
+          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml; do
             if [ ! -s "$f" ]; then
               echo "::error::缺少产出文件 $f"
               gh release upload latest crosscheck.log --clobber || true
@@ -163,10 +159,6 @@ jobs:
           # 产出必须自洽——Clash 遇到悬空引用会拒绝加载整个配置
           python3 ./scripts/validate_config.py --no-plaintext list.meta.cn.yml
           python3 ./scripts/validate_config.py --no-plaintext --no-meta-fields list.cn.yml
-          # 香港桥接池版（如果香港侧数据就绪）
-          if [ -s list.meta.hk.yml ]; then
-            python3 ./scripts/validate_config.py --no-plaintext list.meta.hk.yml
-          fi
           echo "产出齐全"
 
       - name: 发布交叉结果
@@ -175,7 +167,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml list.meta.hk.yml; do
+          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml; do
             [ -f "$f" ] || continue
             gh release upload latest "$f" --clobber
             echo "  已上传 $f"
@@ -206,11 +198,13 @@ jobs:
           cd .output
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          for f in list.meta.cn.yml list.cn.yml list.meta.hk.yml crosscheck.csv crosscheck_summary.md; do
+          for f in list.meta.cn.yml list.cn.yml crosscheck.csv crosscheck_summary.md; do
             if [ -f "../$f" ]; then
               cp "../$f" .
             fi
           done
+          # 已经不再产出的文件，顺手从 output 分支上清掉
+          rm -f list.meta.hk.yml
           git add -A
           if git diff --cached --quiet; then
             echo "output 分支无变化"
