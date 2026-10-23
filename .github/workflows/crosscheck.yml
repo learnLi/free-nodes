@@ -103,6 +103,12 @@ jobs:
             echo "::error::取不到 list.meta.yml"
             exit 1
           fi
+          # 原版 Clash（老内核）的那份，用来产出老内核的大陆可用版
+          curl -sL --max-time 60 "$BASE/list.yml" -o list.yml
+          if [ ! -s list.yml ]; then
+            echo "::error::取不到 list.yml"
+            exit 1
+          fi
           # 取最近 N 轮带时间戳的美国探测结果
           MAPS=$(gh release view latest --json assets --jq '.assets[].name' \
             | grep -oE '^probe_[0-9]{8}_[0-9]{4}\.csv$' | sort | tail -n "$N" || true)
@@ -132,6 +138,8 @@ jobs:
             --out-md crosscheck_summary.md \
             --input-list list.meta.yml \
             --out-cn-list list.meta.cn.yml \
+            --input-list-clash list.yml \
+            --out-cn-list-clash list.cn.yml \
             --rounds "$N" \
             2>&1 | tee crosscheck.log
           rc=${PIPESTATUS[0]}
@@ -141,7 +149,7 @@ jobs:
             echo "::error::交叉比对失败，日志已上传到 Release 的 crosscheck.log"
             exit 1
           fi
-          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
+          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml; do
             if [ ! -s "$f" ]; then
               echo "::error::缺少产出文件 $f"
               gh release upload latest crosscheck.log --clobber || true
@@ -149,7 +157,7 @@ jobs:
             fi
           done
           # 产出必须自洽——Clash 遇到悬空引用会拒绝加载整个配置
-          python3 ./scripts/validate_config.py --no-plaintext list.meta.cn.yml
+          python3 ./scripts/validate_config.py --no-plaintext list.meta.cn.yml list.cn.yml
           echo "产出齐全"
 
       - name: 发布交叉结果
@@ -158,7 +166,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
+          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml; do
             [ -f "$f" ] || continue
             gh release upload latest "$f" --clobber
             echo "  已上传 $f"

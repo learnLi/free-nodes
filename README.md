@@ -11,21 +11,49 @@
 
 ## 订阅链接
 
+### 先看你用的是什么内核
+
+**不同内核要用不同的订阅文件** —— 用错了会加载失败或功能缺失。
+
+| 你的客户端 | 内核 | 大陆可用（推荐） | 全量 |
+| :- | :- | :- | :- |
+| Clash Verge Rev / Mihomo Party / FlClash / Clash Meta for Android | **Clash Meta (Mihomo)** | **`list.meta.cn.yml`** | `list.meta.yml` |
+| 老版 Clash for Windows / Clash（经典内核） | **原版 Clash** | **`list.cn.yml`** | `list.yml` |
+| v2rayN / v2rayNG / Nekoray / sing-box | — | `list.txt` | — |
+
+> **为什么原版 Clash 要单独一份**：`list.meta.cn.yml` 里含 `flow`、`grpc-opts`、
+> `obfs`、`client-fingerprint`、`xhttp-opts` 等 **Meta 专有字段**，
+> 原版 Clash 内核不认识，导入会直接报配置错误。
+> `list.cn.yml` 是同样一批节点、同样经过中美判定与延迟筛选，
+> 但只含老内核认识的字段（`alpn` / `alterId` / `cipher` / `network` / …）。
+>
+> 两份的节点数不同是正常的：原版 Clash 不支持 vless / hysteria2 / tuic，
+> 它的候选池本来就小一圈（但判定用的是同一批地址，结论一致）。
+
+### 全部订阅
+
 | 订阅 | 节点数 | 用途 |
 | :- | :-: | :- |
-| **`list.meta.cn.yml`** | ~130 | **大陆可用（推荐）** —— 中美多轮联合判定 + 延迟上限 + 协议偏好排序 |
-| `list.meta.yml` | ~380 | 全量（Clash Meta）—— 给全球用户 / 不确定自己要什么的人 |
-| `list.meta.us.yml` | ~300 | 美国侧多轮筛选后的子集 |
-| `list.yml` | ~120 | 全量（原版 Clash，只支持 ss/trojan/vmess）|
+| **`list.meta.cn.yml`** | ~120 | **Clash Meta，大陆可用（推荐）** —— 中美多轮联合判定 + 延迟上限 + 协议偏好排序 |
+| **`list.cn.yml`** | ~40 | **原版 Clash，大陆可用** |
+| `list.meta.yml` | ~370 | Clash Meta，全量（美国侧视角筛的）|
+| `list.meta.us.yml` | ~290 | Clash Meta，美国侧多轮筛选 |
+| `list.yml` | ~110 | 原版 Clash，全量 |
 | `list.txt` | ~450 条 | V2Ray / 通用（Base64）|
+| `list_raw.txt` | ~450 行 | V2Ray 明文（查看用）|
 
 **主通道（GitHub Releases）** — 稳定 URL，无需跟随分支：
 
 ```
+# Clash Meta（Mihomo）—— 大陆可用
 https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.cn.yml
+# 原版 Clash（老内核）—— 大陆可用
+https://github.com/learnLi/free-nodes/releases/latest/download/list.cn.yml
+# 全量
 https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.yml
-https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.us.yml
 https://github.com/learnLi/free-nodes/releases/latest/download/list.yml
+# 其他
+https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.us.yml
 https://github.com/learnLi/free-nodes/releases/latest/download/list.txt
 ```
 
@@ -87,10 +115,10 @@ https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.cn.yml
 
 | 阶段 | 做什么 | 产物 |
 | :- | :- | :- |
-| 全量 | 抓取 + 单轮裁剪（剔明文代理、确凿已死） | `list.meta.yml` |
+| 全量 | 抓取 + 单轮裁剪（剔明文代理、确凿已死、延迟超限） | `list.meta.yml`（Meta）/ `list.yml`（原版 Clash）|
 | **Stage 1** | 用**美国侧多轮历史**筛出跨轮一致的 | `list.meta.us.yml` |
 | **Stage 2** | NAS 在 Stage 1 产物上做国内探测 | `probe_domestic_<ts>.csv` |
-| **Stage 3** | 中美**多轮**历史联合判定 | `list.meta.cn.yml` |
+| **Stage 3** | 中美**多轮**历史联合判定 | `list.meta.cn.yml`（Meta）/ `list.cn.yml`（原版 Clash）|
 
 ### 为什么用多轮而不是单轮
 

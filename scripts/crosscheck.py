@@ -56,6 +56,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument('--us-release-url', default='', help='Release 资产基础 URL')
     p.add_argument('--us-candidates', default='', help='美国侧候选资产名，逗号分隔')
     p.add_argument('--cn-file-name', default='', help='国内侧文件名（带时间戳）')
+    p.add_argument('--input-list-clash', default='',
+                   help='原版 Clash 配置（list.yml），用于产出老内核的大陆可用版')
+    p.add_argument('--out-cn-list-clash', default='',
+                   help='原版 Clash 大陆可用版的输出路径（list.cn.yml）')
     return p.parse_args()
 
 
@@ -219,6 +223,50 @@ def main() -> int:
             print('同步清理了 %d 处失效的 proxy-group 引用' % dangling)
         print('大陆可用子集：%d -> %d 个节点 -> %s' % (
             len(proxies), len(kept), args.out_cn_list))
+
+    # ---- 原版 Clash（老内核）的大陆可用版 ----
+    # 原版 Clash 不认识 flow / grpc-opts / obfs / client-fingerprint 等
+    # Meta 专有字段，用 list.meta.cn.yml 会加载失败，所以要单独出一份。
+    # 判定是按地址做的，两份订阅的节点是同一批，直接套用即可。
+    if args.out_cn_list_clash and args.input_list_clash:
+        if not os.path.exists(args.input_list_clash):
+            print('找不到 %s，跳过原版 Clash 版' % args.input_list_clash)
+            return 0
+        with open(args.input_list_clash, encoding='utf-8') as f:
+            ctext = f.read()
+        cdata = yaml.safe_load(ctext) or {}
+        cproxies = list(cdata.get('proxies') or [])
+        # 地址 -> 判定结果
+        verdict_by_addr = {}
+        for r in rows:
+            verdict_by_addr[(r['服务器'], r['端口'])] = r['动作']
+        ckeep = []
+        cdrop = 0
+        for p in cproxies:
+            a = addr_of(p)
+            action = verdict_by_addr.get((a[0], a[1]), 'keep')
+            if action == 'keep':
+                ckeep.append(p)
+            else:
+                cdrop += 1
+        ckeep = sort_proxies(ckeep, protocol_order())
+        cdata['proxies'] = ckeep
+        cdangling = clean_group_refs(cdata, ckeep)
+        cheader = ''
+        if ctext.startswith('#'):
+            for line in ctext.splitlines():
+                if line.startswith('#'):
+                    cheader += line + '\n'
+                else:
+                    break
+        with open(args.out_cn_list_clash, 'w', encoding='utf-8') as f:
+            f.write(cheader)
+            f.write(yaml.dump(cdata, allow_unicode=True,
+                              sort_keys=False).replace('!!str ', ''))
+        if cdangling:
+            print('原版 Clash 版同步清理了 %d 处失效引用' % cdangling)
+        print('原版 Clash 大陆可用子集：%d -> %d 个节点（剔除 %d）-> %s' % (
+            len(cproxies), len(ckeep), cdrop, args.out_cn_list_clash))
     return 0
 
 

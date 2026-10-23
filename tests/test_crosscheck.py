@@ -230,6 +230,65 @@ check("延迟超限的判定名固定",
       decide('stable_alive', 'stable_alive', 2000.0, 1500)[0], '延迟过高')
 
 print()
+print("=== 12. 原版 Clash（老内核）的大陆可用版 ===")
+# 原版 Clash 不认识 flow / grpc-opts / obfs / client-fingerprint 等
+# Meta 专有字段，用 list.meta.cn.yml 会加载失败，必须单独出一份。
+# 回归：verdict 查找的端口类型必须与 rows 里的一致（都用 int），
+# 否则原版 Clash 版会一个都剔不掉。
+import subprocess
+with tempfile.TemporaryDirectory() as td:
+    meta = os.path.join(td, 'meta.yml')
+    clash = os.path.join(td, 'clash.yml')
+    with open(meta, 'w', encoding='utf-8') as f:
+        f.write("proxies:\n"
+                "- name: a\n  type: vless\n  server: 1.1.1.1\n  port: 443\n"
+                "- name: b\n  type: vless\n  server: 2.2.2.2\n  port: 443\n"
+                "proxy-groups:\n"
+                "- name: g1\n  type: select\n  proxies: [a, b]\n")
+    with open(clash, 'w', encoding='utf-8') as f:
+        f.write("proxies:\n"
+                "- name: a\n  type: vmess\n  server: 1.1.1.1\n  port: 443\n"
+                "- name: b\n  type: vmess\n  server: 2.2.2.2\n  port: 443\n"
+                "proxy-groups:\n"
+                "- name: g1\n  type: select\n  proxies: [a, b]\n")
+    # 需要**两轮**才判定：min_rounds=2 时只出现一轮的判「未定」，保守保留。
+    # 两轮里 a 都活、b 都死 -> b 判死
+    def write_probe(path, latency):
+        with open(path, 'w', encoding='utf-8', newline='') as f:
+            f.write("名称,类型,服务器,端口,TCP,TLS,QUIC,耗时ms,错误\n")
+            f.write("a,vless,1.1.1.1,443,Y,Y,N/A,%d,\n" % latency)
+            f.write("b,vless,2.2.2.2,443,N,N/A,N/A,5002,timeout\n")
+    us1 = os.path.join(td, 'us1.csv')
+    us2 = os.path.join(td, 'us2.csv')
+    cn1 = os.path.join(td, 'cn1.csv')
+    cn2 = os.path.join(td, 'cn2.csv')
+    write_probe(us1, 100)
+    write_probe(us2, 110)
+    write_probe(cn1, 120)
+    write_probe(cn2, 130)
+    out_meta = os.path.join(td, 'cn_meta.yml')
+    out_clash = os.path.join(td, 'cn_clash.yml')
+    r = subprocess.run([sys.executable, os.path.join(REPO_ROOT, 'scripts', 'crosscheck.py'),
+                        '--us', us1, '--us-history', us2,
+                        '--cn', cn1, '--cn-history', cn2,
+                        '--out-csv', os.path.join(td, 'x.csv'),
+                        '--out-md', os.path.join(td, 'x.md'),
+                        '--input-list', meta, '--out-cn-list', out_meta,
+                        '--input-list-clash', clash, '--out-cn-list-clash', out_clash],
+                       capture_output=True, text=True, encoding='utf-8')
+    check("退出码 0", r.returncode, 0)
+    if r.returncode == 0:
+        dm = yaml.safe_load(open(out_meta, encoding='utf-8'))
+        dc = yaml.safe_load(open(out_clash, encoding='utf-8'))
+        check("Meta 版只留活的", [p['name'] for p in dm['proxies']], ['a'])
+        check("原版 Clash 版也只留活的（端口类型对齐）",
+              [p['name'] for p in dc['proxies']], ['a'])
+        check("原版 Clash 版的组引用同步清理",
+              dc['proxy-groups'][0]['proxies'], ['a'])
+    else:
+        print('   stderr:', r.stderr[:300])
+
+print()
 if FAILED:
     print("FAILED: %d 项 -> %s" % (len(FAILED), FAILED))
     sys.exit(1)
