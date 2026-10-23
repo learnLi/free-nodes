@@ -171,7 +171,14 @@ fetch_config.yml（上游） → fetch_config.local.yml（本仓库） → local
 本项目在本地运行时探针基本无效：直连 TCP 出国会被墙（对照目标会全部超时）。
 要得到有效数据必须在 CI 或具备出境能力的机器上跑。
 
-### 国内探活：NAS 方案
+### 国内探活（可选，NAS 方案）
+
+> **默认不启用。** 上游 NoMoreWalls 本身不做任何节点质量判断，节点可用性由客户端的
+> `fallback` / `url-test` 组实测决定。本仓库的探活只用来剔除**确凿已死**的节点
+> 和明文开放代理，不需要为「国内优化」额外投入。
+>
+> 下面这套 NAS 方案是给愿意多花点力气的人准备的**可选路径**，没有定时调度，
+> 不部署 NAS 就完全用不到。
 
 GitHub **没有**中国大陆区域的 runner（探针自报出口恒为美国，见 `probe_summary.md`）。
 但**家里的 NAS 反而是更好的探测点**：
@@ -210,7 +217,7 @@ NAS 侧脚本：[`scripts/probe_domestic.sh`](scripts/probe_domestic.sh)
 国内侧的价值在于识别「被墙」和「被美国误杀」。
 
 脚本：[`scripts/crosscheck.py`](scripts/crosscheck.py)，
-工作流：[`.github/workflows/crosscheck.yml`](.github/workflows/crosscheck.yml)（每 6 小时跑一次）。
+工作流：[`.github/workflows/crosscheck.yml`](.github/workflows/crosscheck.yml)（仅手动触发）。
 
 ### 假节点过滤的一处补漏
 

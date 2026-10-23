@@ -4,12 +4,14 @@ name: Cross-check (US vs CN)
 #   美国侧 —— GitHub Actions 产出（无 GFW 干扰，「已死」判定可信）
 #   国内侧 —— NAS 推送到 probe-domestic 分支的 probe_domestic.csv
 #
-# 国内侧结果不存在时，本工作流安静跳过，不报错。
+# 这是**可选**方案，默认不运行：没有定时调度，只有手动触发或
+# probe-domestic 分支有更新时才跑。NAS 侧脚本见
+# scripts/probe_domestic.sh（不部署 NAS 就完全用不到）。
+#
+# 注意原项目（上游 NoMoreWalls）本身不做任何节点质量判断，
+# 节点可用性由客户端的 fallback / url-test 组实测决定。
 
 on:
-  schedule:
-    # 每 6 小时一次
-    - cron: '41 */6 * * *'
   workflow_dispatch:
   push:
     branches:
