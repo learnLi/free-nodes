@@ -26,16 +26,20 @@ dns:
     'geosite:googlefcm': 'https://doh.pub/dns-query'
 
 proxy-providers:
-  NoMoreWalls:
+  free-nodes:
     type: http
     # 不用本项目的订阅可以把链接换掉
-    url: "https://ghproxy.net/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.meta.yml"
+    url: "https://ghproxy.net/https://raw.githubusercontent.com/learnLi/free-nodes/output/snippets/nodes.meta.yml"
     interval: 3600  # 1 小时自动更新一次
-    path: ./proxy_providers/NoMoreWalls.yml
+    path: ./proxy_providers/free-nodes.yml
     health-check:
       enable: true
       interval: 600
-      url: https://www.google.com/
+      # 用 gstatic 的 204 空响应，比 google.com 的整页 HTML 轻得多
+      url: https://www.gstatic.com/generate_204
+      timeout: 5000
+      # 连续失败这么多次后不再探测该节点
+      max-failed-times: 3
 
 proxy-groups:
   - name: 🚀 选择代理
@@ -47,20 +51,25 @@ proxy-groups:
 
   - name: ♻ 自动选择
     type: fallback
-    url: https://www.google.com/
-    interval: 300
-    use: [NoMoreWalls]
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    timeout: 5000
+    # 只在组真正被使用时才触发探测，避免开机并发探测全部节点
+    lazy: true
+    use: [free-nodes]
 
   - name: 🔰 延迟最低
     type: url-test
-    url: https://www.google.com/
-    interval: 300
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    timeout: 5000
     tolerance: 20
-    use: [NoMoreWalls]
+    lazy: true
+    use: [free-nodes]
 
   - name: ✅ 手动选择
     type: select
-    use: [NoMoreWalls]
+    use: [free-nodes]
 
   - name: 🌐 突破锁区
     type: select
@@ -99,35 +108,35 @@ rule-providers:
     type: http
     behavior: classical
     path: ./rule_providers/adblock.yml
-    url: "https://ghproxy.net/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/adblock.yml"
+    url: "https://ghproxy.net/https://raw.githubusercontent.com/learnLi/free-nodes/output/snippets/adblock.yml"
     interval: 21600 # 6h
     format: yaml
   proxy:
     type: http
     behavior: classical
     path: ./rule_providers/proxy.yml
-    url: "https://ghproxy.net/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/proxy.yml"
+    url: "https://ghproxy.net/https://raw.githubusercontent.com/learnLi/free-nodes/output/snippets/proxy.yml"
     interval: 86400 # 24h
     format: yaml
   direct:
     type: http
     behavior: classical
     path: ./rule_providers/direct.yml
-    url: "https://ghproxy.net/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/direct.yml"
+    url: "https://ghproxy.net/https://raw.githubusercontent.com/learnLi/free-nodes/output/snippets/direct.yml"
     interval: 86400 # 24h
     format: yaml
   region:
     type: http
     behavior: classical
     path: ./rule_providers/region.yml
-    url: "https://ghproxy.net/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/region.yml"
+    url: "https://ghproxy.net/https://raw.githubusercontent.com/learnLi/free-nodes/output/snippets/region.yml"
     interval: 86400 # 24h
     format: yaml
   malware:
     type: http
     behavior: classical
     path: ./rule_providers/malware.yml
-    url: "https://ghproxy.net/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/malware.yml"
+    url: "https://ghproxy.net/https://raw.githubusercontent.com/learnLi/free-nodes/output/snippets/malware.yml"
     interval: 86400 # 24h
     format: yaml
 

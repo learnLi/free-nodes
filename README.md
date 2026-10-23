@@ -1,28 +1,33 @@
 # free-nodes
 
-> 自动抓取并合并互联网上公开的免费节点，按格式输出为 V2Ray / Clash / Clash Meta 订阅。
+> 自动抓取并合并互联网上公开的免费节点，**用中美双出口的多轮探测**筛出真正
+> 能用的节点，输出 Clash Meta / Clash / V2Ray 订阅。
 
-抓取、合并、去重、分类、分流规则整理全流程在 GitHub Actions 上跑，产物通过 **GitHub Releases** 与 **output 分支** 双通道分发，仓库本身不保存生成物。
+核心代码与规则集源自 [peasoft/NoMoreWalls](https://github.com/peasoft/NoMoreWalls)（反 996 许可证）。
+上游只做「抓取 + 合并 + 按名称分类」，**不判断节点是否可用**；本项目加了一整条
+**探测 → 筛选 → 分发**的流水线。
 
 ---
 
 ## 订阅链接
 
+| 订阅 | 节点数 | 用途 |
+| :- | :-: | :- |
+| **`list.meta.cn.yml`** | ~200 | **大陆可用（推荐）** —— 中美多轮联合判定 + 协议偏好排序 |
+| `list.meta.yml` | ~380 | 全量（Clash Meta）—— 给全球用户 / 不确定自己要什么的人 |
+| `list.meta.us.yml` | ~300 | 美国侧多轮筛选后的子集 |
+| `list.yml` | ~120 | 全量（原版 Clash，只支持 ss/trojan/vmess）|
+| `list.txt` | ~450 条 | V2Ray / 通用（Base64）|
+
 **主通道（GitHub Releases）** — 稳定 URL，无需跟随分支：
 
-| 客户端 | 链接 |
-| :- | :- |
-| **Clash Meta（大陆可用，推荐）** | `https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.cn.yml` |
-| Clash Meta（全量） | `https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.yml` |
-| Clash Meta（美国侧筛选） | `https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.us.yml` |
-| Clash 原版 | `https://github.com/learnLi/free-nodes/releases/latest/download/list.yml` |
-| V2Ray / 通用 | `https://github.com/learnLi/free-nodes/releases/latest/download/list.txt` |
-| 明文（查看用） | `https://github.com/learnLi/free-nodes/releases/latest/download/list_raw.txt` |
-
-> `list.meta.cn.yml` 是**中美多轮联合判定**后的子集，专门给中国大陆用户。
-> 它剔掉了「国内被墙」和「两端都没响应」的节点，实测从 376 个缩到 253 个，
-> 而其中能用的比例大幅提升。详细的判定过程见
-> [交叉表](https://github.com/learnLi/free-nodes/releases/latest/download/crosscheck_summary.md)。
+```
+https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.cn.yml
+https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.yml
+https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.us.yml
+https://github.com/learnLi/free-nodes/releases/latest/download/list.yml
+https://github.com/learnLi/free-nodes/releases/latest/download/list.txt
+```
 
 **备用通道（output 分支）** — 走 raw.githubusercontent / jsDelivr：
 
@@ -31,323 +36,281 @@ https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.cn.yml
 https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.cn.yml
 ```
 
-**配置片段（rule-providers / proxy-providers）** — 单独的 Release，路径保持 `snippets/` 目录语义：
+**配置片段（rule-providers / proxy-providers）** — 单独的 Release：
 
 | 用途 | 链接 |
 | :- | :- |
-| 节点列表（Meta） | `https://github.com/learnLi/free-nodes/releases/download/snippets/nodes.meta.yml` |
-| 节点列表（原版 Clash） | `https://github.com/learnLi/free-nodes/releases/download/snippets/nodes.yml` |
-| 广告拦截 | `https://github.com/learnLi/free-nodes/releases/download/snippets/adblock.yml` |
-| 需代理域名 | `https://github.com/learnLi/free-nodes/releases/download/snippets/proxy.yml` |
-| 直连域名 | `https://github.com/learnLi/free-nodes/releases/download/snippets/direct.yml` |
-| 锁区域名 | `https://github.com/learnLi/free-nodes/releases/download/snippets/region.yml` |
+| 节点列表（Meta） | `.../releases/download/snippets/nodes.meta.yml` |
+| 节点列表（原版 Clash） | `.../releases/download/snippets/nodes.yml` |
+| 广告拦截 | `.../releases/download/snippets/adblock.yml` |
+| 需代理域名 | `.../releases/download/snippets/proxy.yml` |
+| 直连域名 | `.../releases/download/snippets/direct.yml` |
+| 锁区域名 | `.../releases/download/snippets/region.yml` |
 
 > Release 的资产名不允许包含 `/`，因此顶层订阅与配置片段分装在两个 Release（`latest` / `snippets`）中。
-> `snippets` 被标记为**预发布**——这是必要的：GitHub 的 `releases/latest` 取「最近发布的非预发布」，
-> 若不标记，片段 Release 会顶掉订阅 Release，导致 `/releases/latest/download/list.*` 全部 404。
-> 工作流内已加入自检断言，指向错误会直接让构建失败。
-
-> ⚠️ **Clash 原版与 Clash Meta 的节点数差异很大**。原版 Clash 不支持 vless / hysteria2 / tuic，
-> 拿到的节点通常只有 Meta 的 1/5 左右。请优先使用 Meta 内核（Clash Verge Rev / Mihomo Party / FlClash 等）。
+>
+> 交叉表（判定过程）：`.../releases/latest/download/crosscheck_summary.md`
 
 ---
 
 ## 使用方法
 
-1. 从上表复制对应链接，在客户端里添加为订阅。
-2. Clash Meta 用户把订阅类型选为 **Meta**。
-3. 导入后建议：
+1. 从上表复制对应链接，在客户端里添加为订阅。Clash Meta 用户把订阅类型选为 **Meta**。
+2. 导入后建议：
    - `🐟 漏网之鱼` 保持 `DIRECT`
-   - 如果遇到跳转反诈中心，把 `❓ 疑似国内` 切换到 `🚀 选择代理`
+   - 遇到跳转反诈中心时，把 `❓ 疑似国内` 切到 `🚀 选择代理`
    - 想自动选快节点，用 `♻ 自动选择` / `🔰 延迟最低` 组（依赖客户端自身的 health-check）
-
-> **关于节点可用性**：本项目**不做连通性探测**，所有节点都是静态收集后原样分发。
-> 公开免费节点存活率极低（通常几天内掉到 20% 以下），出现大量不可用节点属正常现象。
 
 ---
 
 ## 三阶段筛选流水线
 
 ```
-                    ┌──────────────────── GitHub Actions（美国出口）────────────────────┐
-  抓节点 ──▶ 探测(US) ──▶ 单轮裁剪 ──▶ Stage 1 多轮一致性筛选 ──▶ Stage 3 中美多轮判定
-             (probe.py)   (prune.py)    (stage1.py)                  (crosscheck.py)
-                              │              │                            │
-                    list.meta.yml      list.meta.us.yml          list.meta.cn.yml
-                        376 个             306 个                  253 个
-                              │              │                            │
-                              │              ▼                            │
-                              │        output 分支                        │
-                              │      list.meta.us_<ts>.yml                │
-                              │              │                            │
-                              │              ▼                            │
-                              │        ┌──────── NAS（中国出口）────────┐  │
-                              │        │ 探测 Stage 1 产物              │  │
-                              │        │ probe_domestic_<ts>.csv       │  │
-                              │        └───────────┬──────────────────┘  │
-                              │                    │ 推到 probe-domestic │
-                              │                    ▼                     │
-                              └────────────── 交叉比对 ◀───────────────────┘
+              ┌───────────── GitHub Actions（美国出口）─────────────┐
+ 抓节点 ─▶ 探测(US) ─▶ 单轮裁剪 ─▶ Stage 1 ─▶ Stage 3
+            probe.py    prune.py   stage1.py  crosscheck.py
+                             │         │            │
+                     list.meta.yml  list.meta.us.yml  list.meta.cn.yml
+                             │         │            │
+                             │         ▼            │
+                             │   output 分支        │
+                             │  list.meta.us_<ts>.yml│
+                             │         │            │
+                             │         ▼            │
+                             │  ┌─── NAS（中国出口）───┐ │
+                             │  │ 探测 Stage 1 产物   │ │
+                             │  │ probe_domestic_<ts> │ │
+                             │  └────────┬────────────┘ │
+                             │           ▼              │
+                             └───── 交叉比对 ◀───────────┘
 ```
 
-| 阶段 | 做什么 | 产物 | 节点数 |
-| :- | :- | :- | :-: |
-| 全量 | 抓取 + 单轮裁剪（剔明文代理、确凿已死） | `list.meta.yml` | 376 |
-| **Stage 1** | 用**美国侧多轮历史**筛出跨轮一致的 | `list.meta.us.yml` | 306 |
-| **Stage 2** | NAS 在 Stage 1 产物上做国内探测 | `probe_domestic_<ts>.csv` | — |
-| **Stage 3** | 中美**多轮**历史联合判定 | `list.meta.cn.yml` | **253** |
+| 阶段 | 做什么 | 产物 |
+| :- | :- | :- |
+| 全量 | 抓取 + 单轮裁剪（剔明文代理、确凿已死） | `list.meta.yml` |
+| **Stage 1** | 用**美国侧多轮历史**筛出跨轮一致的 | `list.meta.us.yml` |
+| **Stage 2** | NAS 在 Stage 1 产物上做国内探测 | `probe_domestic_<ts>.csv` |
+| **Stage 3** | 中美**多轮**历史联合判定 | `list.meta.cn.yml` |
 
-**为什么用多轮而不是单轮**：单轮探测噪声很大。同一批 409 个地址连测 5 轮，
-单轮说「活」的结果并不稳定；跨轮一致的才是真信号。实测：
+### 为什么用多轮而不是单轮
+
+单轮探测噪声很大。同一批 409 个地址连测 5 轮，单轮说「活」的结果并不稳定；
+**跨轮一致的才是真信号**。实测（美国 5 轮 + 国内 3 轮）：
 
 ```
 美国跨 5 轮全活 314 / 全死 87 / 不定 8
 中美交叉：真·大陆可用 120，美国说活国内说死 109，美国误杀 10
 ```
 
-Stage 1 一道就把 hysteria2 从 42 砍到 1（这批 UDP 节点两端都无响应，服务器
-本身就没在跑），Stage 3 再把被墙的 ss / trojan 剔掉。
-
-**时间戳的含义是「节点池的版本」**，不是「探测时刻」。CI 抓完节点算出时间戳
-`ts`，把这个时间戳同时用于：发布的 `list_<ts>.full.yml`、`probe_<ts>.csv`、
-`list.meta.us_<ts>.yml`。NAS 探测 `list.meta.us_<ts>.yml` 并把结果命名为
-`probe_domestic_<ts>.csv` —— 于是两侧严格对应同一批节点。
-
-> 如果时间戳表示「探测时刻」就会错位：NAS 探测时 output 分支上的列表往往是
-> 上一版（CI 那一轮还没推完），两边探测的节点池不是同一批。实测这种情况下
-> 节点池只重叠 78%，交叉表里 **32% 的节点只能判成「未测出」**，「可用」数
-> 被稀释到 110；改成按节点池版本对齐后重叠 **100%**，「可用」数 110 → 201。
+也就是说 —— **单轮美国探测会误导 27% 的节点**（美国说活、国内被墙），
+而「美国跨轮全死」也不能当判死用（其中 10 个国内是活的）。
 
 ### 判定表
 
 | 美国 \ 国内 | 跨轮全活 | 跨轮全死 | 未定 |
-| :- | ---: | ---: | ---: |
+| :- | ---: | ---: | :-: |
 | **跨轮全活** | ✅ 保留（真正的大陆可用） | ❌ 剔除 | ✅ 保留 |
 | **跨轮全死** | ✅ 保留（**被美国侧误杀**） | ❌ 剔除 | ❌ 剔除 |
-| **未定** | ✅ 保留 | ❌ 剔除 | ✅ 保留（数据不足，保守） |
+| **未定** | ✅ 保留 | ❌ 剔除 | ✅ 保留（数据不足，保守）|
 
-### 各阶段订阅
+### 时间戳的含义是「节点池的版本」
 
-| 订阅 | 用途 |
-| :- | :- |
-| `list.meta.yml` | 全量（Clash Meta）—— 给全球用户 / 不确定自己要什么的人 |
-| `list.meta.us.yml` | 美国侧多轮筛选后的子集 |
-| `list.meta.cn.yml` | **大陆可用**（中美多轮联合判定）—— 给国内用户 |
-| `list.yml` | 全量（原版 Clash，只支持 ss/trojan/vmess）|
-
-## 架构
+这是整套东西能对上的关键：
 
 ```
-sources.list (订阅源清单)  ──┐
-dynamic.py   (动态抓取函数) ──┤
-                              ↓
-                         fetch.py  (单文件核心)
-                              ↓
-        解析 → 归一化 → 去重合并 → 静态过滤 → 按名称分地区
-                              ↓
-   ┌──────────────┬───────────────────┬────────────────────┐
-list.txt        list.yml             list.meta.yml        snippets/*.yml
-(V2Ray Base64)  (Clash 原版)          (Clash Meta)       (配置片段)
+CI 抓节点 ─▶ 算出时间戳 ts
+              ├─▶ 发布 list_<ts>.full.yml   到 output 分支
+              ├─▶ 发布 list.meta.us_<ts>.yml 到 output 分支
+              └─▶ 发布 probe_<ts>.csv        到 Release
+NAS 拉 output 分支最新的 list.meta.us_<ts>.yml ─▶ 探测
+              └─▶ 结果命名 probe_domestic_<ts>.csv ─▶ 推到 probe-domestic 分支
+交叉比对按 ts 配对 probe_domestic_<ts>.csv ↔ probe_<ts>.csv
 ```
 
-| 文件 | 作用 |
-| :- | :- |
-| `fetch.py` | 核心逻辑：协议解析、去重、分类、规则生成、产物写出 |
-| `dynamic.py` | 动态订阅源（需要运行时抓取网页才能拿到 URL 的源） |
-| `sources.list` | 订阅源清单，支持 `!` `*` `+date` `#max=N&ignore=xxx` 等指令 |
-| `config.yml` | Clash 基础配置与分流规则（约 2000 条） |
-| `fetch_config.yml` | 抓取行为开关：名称脱敏、地区分类词表、广告规则源等 |
-| `abpwhite.txt` | 广告规则白名单（本地副本） |
-| `snippets/example.yml` | `snippets/rules_online.yml` 的模板 |
+**如果时间戳表示「探测时刻」就会错位**：NAS 探测时 output 分支上的列表往往是上一版
+（CI 那一轮还没推完），两边探测的节点池不是同一批。实测这种情况下节点池只重叠
+**78%**，交叉表里 **32% 的节点只能判成「未测出」**，「可用」数被稀释到 110；
+改成按节点池版本对齐后重叠 **100%**，「可用」数 110 → 201。
 
-### 产物如何分流
+### 分协议的国内可用率
 
-| 产物 | 覆盖范围 |
-| :- | :- |
-| `list.meta.yml` | vmess / ss / ssr / trojan / vless / hysteria2 / tuic |
-| `list.yml` | vmess / ss / ssr / trojan（原版 Clash 能力有限） |
-| `list.txt` | 上述全部 + http / https / socks5 |
+| 协议 | 可用率 | 说明 |
+| :- | :-: | :- |
+| http / socks5 | 100% | 明文开放代理，**已被剔除**，不进入推荐订阅 |
+| **vmess** | **84.6%** | 最稳 |
+| vless | 54.5% | |
+| trojan | 31.4% | |
+| **ss** | **25.0%** | 无 TLS、协议特征明显，最容易被 GFW 识别 |
+| **hysteria2** | **2.5%** | QUIC/UDP，服务器两端都无响应 |
 
-### 静态「过滤」都做了什么
-
-这些**都不是**连通性测试，全部基于节点字段本身：
-
-- **假节点剔除** — 服务器地址是 `8.8.8.8` / `127.0.0.1` / `0.0.0.0` 等占位符、域名是 `.google.com` 之类的假域名、端口 < 20
-- **SNI 修正** — SNI 含 `google.com` 的节点改为 `www.bing.com`（这类服务端并非面向国内设计，用 Google SNI 容易被污染）
-- **协议兼容性判定** — cipher 是否在目标客户端白名单内、SSR 的 obfs/protocol 是否兼容、reality 的 public-key 长度是否合法
-- **地区归类** — 纯**按节点名称关键词**匹配（`香港` / `🇭🇰` → HK），与节点实际位置无关，仅供快速筛选
+> **协议选择比节点数量重要得多。** `ss` 占节点总量的 12%，可用率只有 25%。
+> 节点列表按这个偏好排序（见 `protocol_order`）。
 
 ---
 
-## 上游同步策略
+## 技术细节
 
-核心代码与规则集源自 [peasoft/NoMoreWalls](https://github.com/peasoft/NoMoreWalls)（MIT 之外的**反 996 许可证**）。
+### 探测方法
 
-`Sync upstream config` 工作流每天自动同步**配置类**文件：
+`probe.py` 对每个节点做：
 
-| 文件 | 是否跟随上游同步 |
+| 协议 | 探测方式 |
 | :- | :- |
-| `sources.list` / `fetch_config.yml` / `abpwhite.txt` | ✅ 每日自动覆盖 |
-| `config.yml` | ❌ **不覆盖**，由本仓库自行维护 |
-| `fetch.py` / `dynamic.py` | ❌ **不覆盖**，由本仓库自行维护 |
+| vmess / vless / ss / ssr | TCP 连接 + TLS 握手（走 TLS 的协议才做握手）|
+| trojan | TCP 连接 + TLS 握手 |
+| **hysteria2 / tuic** | **QUIC Initial 探测**（aioquic 做真实 TLS 1.3 握手）|
 
-`config.yml` 不再自动覆盖，是为了能自由定制分流规则与健康检查参数。代价是**会错过上游的规则更新**，
-所以 `sync.yml` 会额外产出一份**规则差异报告**（artifact `upstream-config-diff`），
-列出上游新增/删除了哪些规则，人工按需合并即可。
+QUIC 部分不能用「只发一个 Initial 包」的简化做法：按 RFC 9000 §17.2.5.2，回 Retry 是
+「**可以**」而非「**必须**」，quic-go 等服务端默认直接丢弃 —— 实测美国侧 46 个 QUIC
+节点只有 2 个有响应。必须做完整握手才有意义。
 
-本仓库自己的定制统一放在 `fetch_config.local.yml`（覆盖层，永不被同步覆盖），加载顺序：
+每次探测带三个**对照目标**（`1.1.1.1:443`、`8.8.8.8:443`、`github.com:443`），
+用来区分「节点死了」和「runner 整体网络不通」—— 对照全挂时本次结果不可信。
 
+> ⚠️ **边界**：CI runner 在**美国**，探到的是「**海外可达**」，不等于「中国大陆可达」。
+> 这一点在设计里是刻意的 —— 见下面的三阶段流水线。
+
+### 静态「过滤」
+
+这些**都不是**连通性测试，全部基于节点字段本身：
+
+- **假节点剔除** — 占位符地址（`8.8.8.8` / `127.0.0.0/8` / `0.0.0.0/8` / `169.254.0.0/16` /
+  RFC 5737 文档保留网段）、假域名（`.google.com` / `.github.com`）、端口 < 20
+  > 其中 `127.0.0.53`（systemd-resolved 的 DNS stub）特别重要：国内社区会植入指向它的
+  > **哨兵节点**来检测客户端是否被 DNS 污染。上游只列了 `127.0.0.1`，漏掉了它。
+- **SNI 修正** — SNI 含 `google.com` 的节点改为 `www.bing.com`（这类服务端并非面向国内设计）
+- **协议兼容性判定** — cipher 是否在目标客户端白名单内、SSR 的 obfs/protocol 是否兼容、
+  reality 的 public-key 长度是否合法
+- **地区归类** — 纯**按节点名称关键词**匹配，与节点实际位置无关，仅供快速筛选
+
+### 单轮裁剪（`prune.py`）
+
+只剔除**确凿**的问题，判据是「路径通、但服务不在」（对端主动回 RST）：
+
+| 剔除 | 保留 |
+| :- | :- |
+| `Connection refused` / `reset by peer` | `timeout`（防火墙丢包，可能只对中国 IP 放行）|
+| TLS 被对端明确拒绝 | `Network is unreachable`（**探测端**没有该协议族的路由）|
+| 明文 HTTP / SOCKS 代理 | DNS 解析失败（探测端 DNS 的问题）|
+
+> 这里踩过一个坑：`Network is unreachable` 曾被当成「节点已死」，
+> 结果**一次性误杀全部 IPv6 节点** —— GitHub 的 runner 根本没有 IPv6 出口。
+
+### 配置一致性校验（硬门禁）
+
+`scripts/validate_config.py` 会在构建时校验发布的所有配置：组引用是否都能解析、
+组名/节点名是否重复、节点字段是否完整、port 是否合法、rules 引用的策略组是否存在、
+`url-test`/`fallback` 组有没有 `url`。
+
+**Mihomo / Clash 遇到 proxy-group 引用了不存在的节点时，会直接报
+`proxy <name> not found` 并拒绝加载整个配置** —— 用户在客户端里看到的就是「订阅无效」，
+而在 YAML 上完全看不出来。校验不过就**中止构建，绝不发布坏配置**。
+
+### 客户端健康检查调优
+
+上游的 `config.yml` 里两个自动选组都是 `interval: 300` + `url: https://www.google.com/`
++ `include-all: true`（探测全部节点）。现在有几百个节点，客户端启动时并发探测全部
+是开机卡顿的主因。调优（`lazy` 与 `max-failed-times` 是 Mihomo 字段，原版 Clash 会忽略）：
+
+| 项 | 上游 | 现在 |
+| :- | :- | :- |
+| `url` | `https://www.google.com/` | `https://www.gstatic.com/generate_204`（204 空响应）|
+| `interval` | 300 | 600 |
+| `timeout` | 未设 | 5000 |
+| `lazy` | 未设 | **`true`** —— 只在组真正被使用时才探测 |
+| `max-failed-times` | 未设 | **3** —— 连续失败 3 次后不再探测 |
+
+---
+
+## 配置
+
+**所有可调参数集中在 [`fetch_config.local.yml`](fetch_config.local.yml)**，改完直接生效
+（CI 与 NAS 每次跑都重新读它）：
+
+```yaml
+filter:                     # Stage 1 与 Stage 3 共用
+  rounds: 6                  # 参与判定的最近 N 轮探测历史
+  min_rounds: 2              # 至少这么多轮才判定（只出现一轮的判「未定」，保守保留）
+  alive_ratio: 1.0           # 存活占比阈值：1.0 = 跨轮全活；调到 0.7 更宽松
+
+protocol_order:              # 节点排序依据实测国内可用率
+  - vmess
+  - vless
+  - trojan
+  - hysteria2
+  - ss
+  - ...
+
+consensus:                   # 诊断用，不参与任何过滤
+  enable_stats: true
+  min_sources: 0
 ```
-fetch_config.yml（上游） → fetch_config.local.yml（本仓库） → local_fetch_config.yml（本地调试）
-```
 
-### 多源共识统计
+> `alive_ratio` 调到 0.7 会更宽松（允许 70% 的轮次存活即算稳定），节点更多但
+> 质量下降。随着历史积累，1.0 的门槛会自然变严，节点数缓慢下降 —— 这是好事，
+> 说明淘汰机制在工作。
 
-`fetch.py` 会统计每个节点被**几个独立来源**同时收录，输出到 `consensus.csv` 并附在 Release 说明里。
+### 为什么还保留「多源共识」统计
 
-这里的「独立来源」是**按仓库归并**后的计数 —— 同一个仓库的多个文件（同一份订阅的不同格式）
-只算一个来源。否则 `sources.list` 里 `free9999` 的 3 条、`proxypool` 的 2 条会灌水，
-把共识强度严重高估。当前 13 个订阅 URL 实际只对应 **8 个独立来源**。
+`fetch.py` 会统计每个节点被**几个独立来源**收录（`consensus.csv` / `sources.csv`）。
+「独立来源」按**仓库归并**计数 —— 同一仓库的多个文件只算一个来源。
 
-被多个独立来源同时收录的节点，存活概率显著更高——这是目前唯一**零带宽、零主动探测**
-的质量信号（本项目不做连通性探测，详见下方「安全须知」）。
+但实测结论是**这个信号不可用**：8 个独立来源之间几乎零重叠（独占率 95~100%），
+98.1% 的节点只被一个源收录。换 `server:port` 口径也没改善 —— 因为那不是口径问题，
+是**源生态本身长尾**。统计代码保留作为诊断数据，**不用于任何过滤**。
 
-### 实测结论：共识信号在当前源结构下不可用
+---
 
-2026-10-23 的实测数据（8 个独立来源、475 个服务器地址）：
+## 部署
 
-```
-节点哈希,1,510,98.1%      ← 绝大多数节点只被一个源收录
-节点哈希,2,10,1.9%
-服务器地址,1,463,97.5%    ← 换成 server:port 口径，几乎没变化
-服务器地址,2,12,2.5%
-```
-
-而且每个源的**独占率高得离谱**：SS-Collector 230/238、shaoyouvip 73/77、TGParse 38/38。
-
-**这 8 个源各自抓的是完全不同的节点池，彼此几乎零重叠**——所以「多源共识」这个信号
-在当前源结构下根本不存在。统计代码保留了下来（`consensus.csv` / `sources.csv`），
-但**不用于任何过滤**。
-
-### 可达性探测（海外出口视角）
-
-`probe.py` 对发布配置里的每个节点做 TCP 连接探测，对走 TLS 的协议追加一次 TLS 握手，
-输出 `probe.csv` / `probe_summary.md` / `probe_summary.json`。
-
-> ⚠️ **边界必须说清楚**：CI runner 在**美国**，探到的是「**海外可达**」，不等于「中国大陆可达」。
-> 服务器关机的节点会被过滤掉（TCP 连不上），但「服务器活着、被墙或跨境拥塞」的节点
-> 在这里依然显示为「活」——探针对此无能为力。
->
-> 另外 `hysteria2` / `tuic` 走 QUIC（UDP），TCP 探测对它们无意义，会标为 `N/A`
-> 并从统计中剔除，否则会凭空产生大量「死节点」。
-
-每次探测都带三个**对照目标**（`1.1.1.1:443`、`8.8.8.8:443`、`github.com:443`），
-用来区分「节点死了」和「runner 整体网络不通」——对照全挂时，本次结果不可信。
-
-本项目在本地运行时探针基本无效：直连 TCP 出国会被墙（对照目标会全部超时）。
-要得到有效数据必须在 CI 或具备出境能力的机器上跑。
-
-### 国内探活（可选，NAS 方案）
-
-> **默认不启用。** 上游 NoMoreWalls 本身不做任何节点质量判断，节点可用性由客户端的
-> `fallback` / `url-test` 组实测决定。本仓库的探活只用来剔除**确凿已死**的节点
-> 和明文开放代理，不需要为「国内优化」额外投入。
->
-> 下面这套 NAS 方案是给愿意多花点力气的人准备的**可选路径**，没有定时调度，
-> 不部署 NAS 就完全用不到。
+### 国内探测端（NAS）
 
 GitHub **没有**中国大陆区域的 runner（探针自报出口恒为美国，见 `probe_summary.md`）。
-但**家里的 NAS 反而是更好的探测点**：
+但**家里的设备反而是更好的探测点**：
 
 | 维度 | GitHub runner（美国） | NAS（国内） |
 | :- | :- | :- |
 | 出口路径 | 境外机房 → 境外节点 | **中国住宅宽带 → 境外节点**，与目标用户一致 |
 | IP 信誉 | Azure 机房段，部分节点直接拒绝 | **住宅 IP**，更可能被放行 |
-| IPv6 | **没有**（实测所有 IPv6 节点返回 `Network is unreachable`） | 家宽通常有公网 IPv6（电信/联通给 /56） |
+| IPv6 | **没有**（实测所有 IPv6 节点 `Network is unreachable`）| 家宽通常有公网 IPv6 |
 
-架构是**各司其职**，NAS 只需要跑一个 cron 任务：
-
-```
-GitHub Actions（美国）                     NAS（国内）
-  抓节点 → 探活(US) → 裁剪 → 发布 output  ──▶  拉 output 分支
-                                              跑 probe.py（直连，不走代理）
-                                              写 probe_domestic.csv
-  交叉比对 workflow  ◀── 推回 probe-domestic 分支
-  产出 crosscheck.csv + list.meta.cn.yml
-```
-
-NAS 侧脚本：[`scripts/probe_domestic.sh`](scripts/probe_domestic.sh)
-（只依赖 `git` + `python3`，不需要 Docker、不需要 GitHub Actions）
-
-### 部署到 NAS
-
-**不需要做成独立项目** —— 仓库里已经有现成脚本，NAS 上放一个文件就能跑。
-
-#### 方式一：原生脚本（最简单）
-
-NAS 需要：SSH、`python3`、`pip`、能直连境外。装依赖：
+NAS 侧只需要一个 cron 任务：
 
 ```bash
 apt-get install -y python3-pip
 python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple \
     aioquic PyYAML requests requests-file typing_extensions
-```
 
-（`aioquic` 依赖 `cryptography` 和 `pylsqpack`，aarch64 / arm64 都有预编译轮子，不用编译。）
-
-然后克隆仓库并跑：
-
-```bash
 git clone --depth=1 https://github.com/learnLi/free-nodes.git
 cd free-nodes
-INTERVAL_JITTER=1 NO_PUSH=1 sh scripts/probe_domestic.sh   # 先试跑，不推送
 ```
 
-#### 方式二：Docker（环境更干净）
+> `aioquic` 依赖 `cryptography` 和 `pylsqpack`，aarch64 / arm64 都有预编译轮子，不用编译。
 
-[`docker/Dockerfile`](docker/Dockerfile) + [`docker/entrypoint.sh`](docker/entrypoint.sh)
-+ [`docker/run.sh`](docker/run.sh)。容器只做探测（不含 git），推送由宿主机负责：
-
-```bash
-docker build -t free-nodes-probe -f docker/Dockerfile .
-sh docker/run.sh /volume1/free-nodes
-```
-
-> 用 `python:3.12-slim` 而不是 alpine：alpine 的 musl 轮子覆盖不如 Debian 全，
-> `cryptography` 有时需要本地编译。
-
-#### 定时任务
+`scripts/probe_domestic.sh` 会自动：拉 output 分支最新的 `list.meta.us_<ts>.yml` →
+探测 → 结果推回 `probe-domestic` 分支。
 
 ```cron
 # 每 6 小时一次；脚本内部有 0~15 分钟随机抖动，打散固定周期的外连特征
 17 */6 * * * /root/free-nodes/run_probe.sh >> /root/free-nodes/probe.log 2>&1
 ```
 
-#### 推回 GitHub
-
-NAS 需要一把能 push 的 SSH 密钥：
+**推回 GitHub** 需要一把能 push 的 SSH 密钥：
 
 ```bash
 ssh-keygen -t ed25519 -C 'nas-probe' -f ~/.ssh/nas_probe -N ''
-cat ~/.ssh/nas_probe.pub
+cat ~/.ssh/nas_probe.pub    # 加到 GitHub 账号的 Settings → SSH keys
 ```
 
-把公钥加到 **GitHub 账号的 Settings → SSH and GPG keys**（不是仓库的 deploy key ——
-deploy key 需要仓库 admin 权限，而账号自己的 SSH key 只要账号所有者就能加），
-然后：
-
-```sshconfig
-Host github.com
-  User git
-  IdentityFile ~/.ssh/nas_probe
-  IdentitiesOnly yes
-```
-
+> 加到**账号**的 SSH keys，不是仓库的 Deploy keys —— 后者需要仓库 admin 权限。
+>
 > 建议同时用 `ssh-keyscan github.com` 固定主机密钥，并与 GitHub 官方公布的指纹核对
 > （ED25519 `SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM`，
 > RSA `SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU`）。
 
-### 实测参考：Orange Pi 3（aarch64）+ Ubuntu 22.04
+也提供了 Docker 方案（[`docker/`](docker/)）：容器只做探测（不含 git），推送由宿主机负责。
+
+#### 实测参考：Orange Pi 3（aarch64）+ Ubuntu 22.04
 
 | 项 | 结果 |
 | :- | :- |
@@ -355,8 +318,7 @@ Host github.com
 | 单轮耗时 | **51.9 秒**（441 节点） |
 | 流量 | 约 0.9 MB/轮 |
 | TCP 连通率 | 54.7% |
-| QUIC 响应率 | 1/46（2.2%） |
-| `pip install` | 清华源，aarch64 轮子直接可用，无需编译 |
+| QUIC 响应率 | 1/46（2.2%）|
 
 GFW 干扰特征（用于自检探针出口是否正常）：
 
@@ -368,186 +330,34 @@ GFW 干扰特征（用于自检探针出口是否正常）：
 www.gstatic.com:443 正常
 ```
 
-### 中美交叉表怎么读
+---
 
-**关键陷阱**：GFW 的 RST 注入，和「服务端端口没开」在客户端看来完全一样，都是
-`Connection reset by peer`。所以国内侧的失败**不能**用来判定节点已死。
+## 上游同步策略
 
-| | 国内可用 | 国内不可用 |
-| :- | :-: | :-: |
-| **美国可用** | ✅ 真正可用 | ⚠️ 疑似被墙 → **应剔除**（美国版留下的坑） |
-| **美国不可用** | 🔥 被美国误杀 → **应保留** | ❌ 真死 → 剔除 |
+`Sync upstream config` 工作流每天自动同步**配置类**文件：
 
-所以**裁剪判据继续只用美国侧结果**（那边没有 GFW 干扰，`refused` 才是可信的"已死"）；
-国内侧的价值在于识别「被墙」和「被美国误杀」。
-
-脚本：[`scripts/crosscheck.py`](scripts/crosscheck.py)，
-工作流：[`.github/workflows/crosscheck.yml`](.github/workflows/crosscheck.yml)（每 6 小时跑一次）。
-
-### 实测结果（2026-10-23，配对后）
-
-探测点：国内 = 中国电信广州 `113.75.38.207`（NAS / Orange Pi 3）；美国 = Azure（出口随轮次变化）。
-
-```
-TCP 节点   美国 85.8%  中国 ~55%      差 30 个百分点  → 差值就是「被墙」的部分
-QUIC 节点  美国  1/46   中国  1/46     完全一致        → 是「服务器没在跑」
-```
-
-这个对照把两类问题分得很干净：
-
-- **TCP 侧中美有差** → 服务器活着，但国内连不上（被墙 / 跨境拥塞）
-- **QUIC 侧中美一致地没响应** → 服务器本身就没在跑
-
-结论：**hysteria2 / tuic 在免费节点圈子里「配置多、活得少」** —— 40 个 QUIC 节点里
-39 个两端都无响应，交叉表里被判为「已死」并从「国内可用」子集里剔除。
-
-### 中美数据怎么对齐（关键）
-
-时间戳表示的是「**节点池的版本**」，不是「探测时刻」：
-
-```
-CI 抓节点 → 算出时间戳 ts → 发布 list_<ts>.full.yml 到 output 分支
-                                        → 探测 → 发布 probe_<ts>.csv 到 Release
-NAS 拉 output 分支最新的 list_<ts>.full.yml → 用同一批节点探测
-                                        → 结果命名 probe_domestic_<ts>.csv
-交叉比对按 ts 配对 probe_domestic_<ts>.csv ↔ probe_<ts>.csv
-```
-
-**如果时间戳表示「探测时刻」就会错位**：NAS 探测时 output 分支上的列表往往是
-上一版（CI 那一轮还没推完），于是两边探测的**节点池不是同一批**。实测这种情况下
-节点池只重叠 78%，交叉表里 **32% 的节点只能判成「未测出」**，「可用」数被稀释到 110。
-改成按节点池版本对齐后，重叠 **100%**，「未测出」降到 8%，**「可用」数 110 → 201**。
-
-### 分协议的国内可用率
-
-| 协议 | 总数 | 可用 | 可用率 | 被墙 | 已死 |
-| :- | :-: | :-: | :-: | :-: | :-: |
-| http / socks5 | 53 | 53 | 100% | 0 | 0 |
-| **vmess** | 13 | 11 | **84.6%** | 0 | 0 |
-| vless | 200 | 109 | 54.5% | 55 | 17 |
-| trojan | 51 | 16 | 31.4% | 25 | 0 |
-| **ss** | 52 | 13 | **25.0%** | 37 | 0 |
-| **hysteria2** | 40 | 1 | **2.5%** | 0 | 39 |
-| hysteria (v1) | 2 | 0 | 0% | 0 | 2 |
-
-> **协议选择比节点数量重要得多。** `ss` 占节点总量的 12%，可用率只有 25%——
-> Shadowsocks 无 TLS、协议特征明显，是 GFW 最容易识别的类型。
-
-### QUIC 探测怎么做的
-
-`hysteria2` / `tuic` 走 QUIC over UDP，服务端根本不监听 TCP，TCP 探测会把它们
-全部误判成「已死」（占节点总量的 10.8%，一直是盲区）。
-
-探测方式用 `aioquic` 做一次**真实的 QUIC + TLS 1.3 握手**：
-
-| 探测结果 | 判定 |
+| 文件 | 是否跟随上游同步 |
 | :- | :- |
-| 握手成功 | 活 |
-| 收到 alert / ALPN 不匹配 | 活（收到了对端的包） |
-| `timeout`（无任何响应） | **无法判定** —— 可能 UDP 被阻断，也可能对端不接受我们的 ClientHello |
-| `refused` | 端口不可达，可判死 |
+| `sources.list` / `fetch_config.yml` / `abpwhite.txt` | ✅ 每日自动覆盖 |
+| `config.yml` | ❌ **不覆盖**，由本仓库自行维护 |
+| `fetch.py` / `dynamic.py` | ❌ **不覆盖**，由本仓库自行维护 |
 
-中途试过更简单的方案：只发一个裸 QUIC Initial 包，**不构造 TLS ClientHello**，
-按 RFC 9000 §17.2.5.2 服务端「可以」回 Retry（DCID 是明文的不需要解密）。
-但实测美国侧 46 个节点只有 2 个有响应 —— **回 Retry 是「可以」而非「必须」**，
-quic-go 等服务端默认直接丢弃。所以这条路不可行，必须做完整握手。
+`config.yml` 不再自动覆盖，是为了能自由定制分流规则与健康检查参数。代价是**会错过上游的
+规则更新**，所以 `sync.yml` 会额外产出一份**规则差异报告**（artifact `upstream-config-diff`），
+列出上游新增/删除了哪些规则，人工按需合并。
 
-### 「国内可用」子集
+本仓库自己的定制统一放在 `fetch_config.local.yml`，加载顺序：
 
-`list.meta.cn.yml` —— 剔除被墙和已死节点后的子集（当前 249 个节点，全量 441 个）。
-
-它是**单次快照**，网络波动会让今天能用的明天不能用。等 NAS 积累多轮数据后，
-应该取「跨多轮都可用」的交集/多数，而不是单点结果。
-
-### 假节点过滤的一处补漏
-
-国内免费节点社区会植入指向 `127.0.0.53`（systemd-resolved 的 DNS stub）的**哨兵节点**，
-节点名固定为「防范境外势力渗透」，用来检测客户端是否被 DNS 污染。
-上游的 `FAKE_IPS` 只列了 `127.0.0.1` 这一个具体地址，`127.0.0.53` 漏网——
-实测每次有约 10 个这类节点混进发布的订阅。
-
-本仓库把保留地址改为按网段判定（`127.0.0.0/8`、`0.0.0.0/8`、`169.254.0.0/16`），
-这类哨兵节点不再进入任何输出。
-
-### 客户端健康检查调优
-
-上游的 `config.yml` 里，`♻ 自动选择`（fallback）和 `🔰 延迟最低`（url-test）两个组
-都是 `interval: 300` + `url: https://www.google.com/`，且 `include-all: true`
-（即探测全部节点）。现在有 369 个节点，客户端启动时会并发探测全部 —— 这是开机卡顿的主因。
-
-本仓库的调优（`config.yml` 已改为自行维护，不会被上游同步覆盖）：
-
-| 项 | 上游 | 现在 | 理由 |
-| :- | :- | :- | :- |
-| `url` | `https://www.google.com/` | `https://www.gstatic.com/generate_204` | 后者返回 204 空响应，前者要传整页 HTML |
-| `interval` | 300 | 600 | 探测频率减半 |
-| `timeout` | 未设 | 5000 | 单次探测超时上限（毫秒） |
-| `lazy` | 未设 | `true` | **只在代理组真正被使用时才探测**，启动时不再并发探全部节点 |
-| `max-failed-times` | 未设 | 3 | 连续失败 3 次后不再探测该节点 |
-
-最后两项是关键：国内网络下大量节点是「**被墙**」而不是「关闭」，这类节点会一直失败；
-不设上限就会持续消耗探测资源。
-
-> `lazy` 与 `max-failed-times` 是 **Mihomo（Clash Meta）** 的字段。
-> 原版 Clash 不认识这两个字段会直接忽略，不影响使用。
-
-### 按探测结论裁剪
-
-`prune.py` 读入 `probe.csv`，对 Clash 配置做**保守**裁剪。只剔除三类「确凿」的问题：
-
-| 剔除条件 | 依据 |
-| :- | :- |
-| 明文 HTTP / SOCKS 代理 | 公开开放的代理服务器（实测节点里有一批 `US_speednode_XXXX`，全部指向 `138.199.35.x:9002`），代理方可见明文流量，且本就不是「免费节点」 |
-| TCP 连接被**拒绝** | 端口无人监听，确凿已死 |
-| TLS 握手被对端**明确拒绝** | `SSLV3_ALERT_HANDSHAKE_FAILURE` / `WRONG_VERSION_NUMBER` 等，该端口跑的不是预期的 TLS 服务 |
-
-以下情况**一律保留**：
-
-- **TCP 超时** —— 可能是防火墙丢包，也可能服务器只放行中国大陆 IP，对国内用户仍然可用。
-  仅凭美国出口的超时无法判定其已死，误杀风险高。
-- **QUIC / UDP 协议** —— `hysteria2` / `tuic` 无法用 TCP 探测，从未被探测过。
-- **探测端自身的网络能力问题** —— 这类错误反映的是探测端或链路侧，不是节点的问题：
-  | 错误 | 含义 |
-  | :- | :- |
-  | `Network is unreachable` / `No route to host` | 探测端没有该协议族的路由 |
-  | `Name or service not known` | 探测端 DNS 解析失败 |
-
-  > 实测踩过的坑：**GitHub 的 runner 没有 IPv6 出口**，所有 IPv6 节点都报
-  > `Network is unreachable`。若把它当成「节点已死」，会一次性误杀全部 IPv6 节点
-  > —— 而 IPv6 节点对有 IPv6 的国内用户完全可用。
-
-判据只有一条：**路径通、但服务不在**（对端主动回 RST，即 `Connection refused`
-/ `Connection reset by peer`）才算确凿已死。
-
-未裁剪版本以 `list.meta.full.yml` / `list.yml.full.yml` 一并发布，便于对照；
-每个文件被剔除的节点及原因记录在 `pruned_*.csv` 里。
-
-> 裁剪的前提是「探测结论可信」。对照目标全挂时（runner 网络异常），
-> 裁剪结果同样不可信——`probe_summary.md` 里的对照表就是为此准备的。
-
-### 配置一致性校验（硬门禁）
-
-裁剪节点后，`proxy-groups` 里指向被剔除节点的引用必须同步清理。
-**Mihomo / Clash 遇到 proxy-group 引用了不存在的节点时，会直接报
-`proxy <name> not found` 并拒绝加载整个配置** —— 用户在客户端里看到的就是
-「订阅无效」，而在 YAML 上完全看不出来。
-
-`scripts/validate_config.py` 会在构建时校验发布的所有配置，检查项：
-
-1. `proxy-groups` 里的每个引用都能解析（节点 / 其他组 / 内置策略）
-2. 组名、节点名不重复
-3. 每个节点有 name / type / server / port，且 port 合法
-4. `rules` 里引用的策略组都存在
-5. `url-test` / `fallback` 组必须有 `url`
-
-**校验不过就中止构建，绝不发布坏配置。**
+```
+fetch_config.yml（上游） → fetch_config.local.yml（本仓库） → local_fetch_config.yml（本地调试）
+```
 
 ---
 
 ## 本地开发
 
 ```bash
-git clone git@github.com:learnLi/free-nodes.git --depth=1
+git clone --depth=1 git@github.com:learnLi/free-nodes.git
 cd free-nodes
 pip install -r requirements.txt
 
@@ -566,19 +376,45 @@ python fetch.py
 | `local_NO_NODES` | 不抓节点，只跑规则部分 |
 | `local_NO_DYNAMIC` | 不抓动态节点 |
 | `local_NO_ADBLOCK` | 不抓广告规则 |
-| `local_fetch_config.yml` | 覆盖 `fetch_config.yml` 的配置（优先级最高） |
+| `local_fetch_config.yml` | 覆盖配置（优先级最高）|
 
 ### 跑测试
 
 ```bash
 python tests/test_consensus.py
+python tests/test_crosscheck.py
+python tests/test_dynamic.py
+python tests/test_fake_filter.py
+python tests/test_prefs.py
+python tests/test_probe.py
+python tests/test_prune.py
+python tests/test_quic.py
+python tests/test_validate.py
 ```
 
-单元测试不联网，覆盖源身份归并、共识统计与直方图输出。
+9 个文件、约 240 项断言，**全部离线**（不联网）。
 
 ### 目录约定
 
-生成物（`list*`、`snippets/` 下除 `example.yml` 外）**不进 git**，由 CI 打包上传。需要本地复现时请自行 `git checkout` 或从 Release 下载。
+```
+fetch.py                  核心：协议解析、去重、分类、规则生成、产物写出
+dynamic.py                动态订阅源
+probe.py                  可达性探测（TCP / TLS / QUIC）
+prune.py                  按探测结论裁剪
+scripts/
+  rounds.py               多轮探测的公共逻辑
+  stage1.py               Stage 1：美国多轮一致性筛选
+  crosscheck.py           Stage 3：中美多轮联合判定
+  prefs.py                读配置（协议偏好、筛选参数）
+  get_setting.py          给 shell 读配置用
+  validate_config.py      配置一致性校验
+  probe_domestic.sh       NAS 侧探测脚本
+docker/                   Docker 方案
+tests/                    单元测试
+```
+
+生成物（`list*` / `snippets/` 下除 `example.yml` 外 / `consensus.csv` 等）**不进 git**，
+由 CI 打包上传到 Release。
 
 ---
 
@@ -586,22 +422,29 @@ python tests/test_consensus.py
 
 | 工作流 | 触发 | 作用 |
 | :- | :- | :- |
-| `Fetch` | 每 3 小时（`17 */3 * * *`）+ 手动 | 抓取 → 打包 → 上传 Release → 强制推送 `output` 分支 |
-| `Sync upstream config` | 每天 03:23 + 手动 | 同步上游配置类文件 |
+| `Fetch` | 每 3 小时 + 手动 | 抓取 → 探测(US) → 裁剪 → Stage 1 → 发布 → 输出分支 |
+| `Cross-check` | 由 Fetch 调用（每 3 小时）+ 定时（每 6 小时）+ 手动 | 取中美多轮数据 → 联合判定 → 发布大陆可用订阅 |
+| `Sync upstream config` | 每天 + 手动 | 同步上游配置类文件，产出规则差异报告 |
 
-两个工作流都配置了 `concurrency` 与 `timeout-minutes`，避免任务撞车或挂死。
+三个工作流都配了 `concurrency` 与 `timeout-minutes`。`Cross-check` 作为可复用工作流
+被 `Fetch` 调用时，**并发组必须与调用方区分开**（`${{ github.workflow }}-xcheck-...`），
+否则会去抢调用方正持有的锁，表现为 job 根本不出现。
 
 ---
 
 ## 安全须知
 
-- 本项目**不审计**来自第三方的节点内容。免费节点由陌生人自建，流量经过其服务器，**请勿用于敏感通信**。
-- 订阅内容来自多个第三方仓库，其中任何一方被投毒，都可能向你的客户端注入指向攻击者服务器的节点。
+- 本项目**不审计**来自第三方的节点内容。免费节点由陌生人自建，流量经过其服务器，
+  **请勿用于敏感通信**。
+- 订阅内容来自多个第三方仓库，其中任何一方被投毒，都可能向你的客户端注入指向
+  攻击者服务器的节点。
 - 广告拦截规则同样来自远程列表，理论上可被用于屏蔽正常站点。
+- 明文 HTTP / SOCKS 开放代理**已被剔除**（代理方可见明文流量，且本就不是「免费节点」）。
 - 请自行评估风险。本仓库仅供学习交流使用。
 
 ---
 
 ## 许可证
 
-[反 996 许可证 v1.0](LICENSE.md)（继承自上游）。上游项目的许可证明确禁止实行 996 工作制的公司使用，请知悉。
+[反 996 许可证 v1.0](LICENSE.md)（继承自上游）。上游项目的许可证明确禁止实行 996 工作制的
+公司使用，请知悉。
