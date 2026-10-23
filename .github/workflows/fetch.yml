@@ -69,13 +69,40 @@ jobs:
 
       # GitHub Release 的资产名不允许包含 "/"，因此顶层订阅与配置片段
       # 分装到两个 Release：latest（订阅）与 snippets（片段）。
+      # 按探测结论裁剪配置。保守策略：只剔除「确凿」的问题
+      # （明文开放代理、端口无人监听、TLS 服务不符），
+      # TCP 超时与 QUIC 协议一律保留——前者可能只对中国 IP 放行，
+      # 后者 TCP 探测不适用。裁剪失败不影响主流程。
+      - name: 按探测结果裁剪
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          mkdir -p pruned
+          # 留档未裁剪版本，便于对照
+          [ -f list.meta.yml ] && cp list.meta.yml list.meta.full.yml
+          [ -f list.yml ] && cp list.yml list.yml.full.yml
+          for f in list.meta.yml list.yml snippets/nodes.meta.yml snippets/nodes.yml; do
+            [ -f "$f" ] || continue
+            python ./prune.py \
+              --input "$f" \
+              --output "$f.pruned" \
+              --probe probe.csv \
+              --removed-report "pruned/$(echo "$f" | tr '/' '_').csv"
+            mv "$f.pruned" "$f"
+          done
+          echo "--- 裁剪结果汇总 ---"
+          for f in pruned/*.csv; do
+            [ -f "$f" ] || continue
+            echo "$f: $(($(wc -l < "$f") - 1)) 个节点被剔除"
+          done
+
       - name: 收集产物
         run: |
           set -euo pipefail
           rm -rf dist dist-snippets
           mkdir -p dist dist-snippets
           # 顶层订阅文件 -> Release: latest
-          for f in list.txt list.meta.yml list.yml list_raw.txt list_result.csv consensus.csv sources.csv probe.csv probe_summary.json probe_summary.md; do
+          for f in list.txt list.meta.yml list.meta.full.yml list.yml list.yml.full.yml list_raw.txt list_result.csv consensus.csv sources.csv probe.csv probe_summary.json probe_summary.md; do
             if [ -f "$f" ]; then cp "$f" dist/; fi
           done
           # 配置片段 -> Release: snippets
@@ -84,6 +111,10 @@ jobs:
             [ "$(basename "$f")" = "example.yml" ] && continue
             cp "$f" dist-snippets/
           done
+          # 裁剪记录
+          if [ -d pruned ]; then
+            cp pruned/*.csv dist/ 2>/dev/null || true
+          fi
           echo "订阅文件 $(find dist -type f | wc -l) 个，片段 $(find dist-snippets -type f | wc -l) 个"
           ls -la dist/ dist-snippets/
 
@@ -155,6 +186,22 @@ jobs:
               cat probe_summary.md
             else
               echo "_本次未完成探测_"
+            fi
+            echo
+            echo "### 裁剪统计"
+            echo
+            echo "按探测结论剔除**确凿**的问题：明文开放代理、端口无人监听、"
+            echo "TLS 服务不符。TCP 超时与 QUIC 协议一律保留——"
+            echo "超时可能意味着服务器只对中国 IP 放行，QUIC 则无法用 TCP 探测。"
+            echo
+            if [ -d pruned ]; then
+              echo '```'
+              for f in pruned/*.csv; do
+                [ -f "$f" ] || continue
+                n=$(($(wc -l < "$f") - 1))
+                [ "$n" -gt 0 ] && echo "$(basename "$f") : 剔除 $n 个"
+              done
+              echo '```'
             fi
           } > notes.md
           cat notes.md
