@@ -25,6 +25,10 @@ RUN chmod +x /app/entrypoint.sh
 ENV LIST_URL="https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.full.yml" \
     PROBE_TIMEOUT=5 \
     WORKERS=64 \
-    OUT_DIR=/out
+    OUT_DIR=/out \
+    TZ=Asia/Shanghai
+
+RUN apt-get update && apt-get install -y -q --no-install-recommends tzdata \
+    && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["/app/entrypoint.sh"]
