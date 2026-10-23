@@ -15,7 +15,7 @@ on:
       - 'abpwhite.txt'
       - '**.py'
       - 'requirements.txt'
-      - '.github/workflows/fetch.yml'
+      - '.github/workflows/**'
 
 # 同一分支上的手动触发与定时触发互斥，避免两个任务同时推送
 concurrency:
