@@ -66,6 +66,25 @@ check("TCP timeout 保留", keep(p('9.9.9.9', 443, 'vless'), PROBE), True)
 check("TLS timeout 保留", keep(p('7.7.7.7', 443, 'trojan'), PROBE), True)
 
 print()
+print("=== 3b. 探测端网络能力问题必须保留 ===")
+# 回归：GitHub runner 没有 IPv6 出口，所有 IPv6 节点都报
+# "Network is unreachable"。若据此裁剪，会误杀全部 IPv6 节点。
+PROBE_NET = {
+    ('2001:db8::1', 443): {'服务器': '2001:db8::1', '端口': '443', '类型': 'vless',
+                           'TCP': 'N', 'TLS': '', '错误': 'Network is unreachable'},
+    ('2001:db8::2', 443): {'服务器': '2001:db8::2', '端口': '443', '类型': 'trojan',
+                           'TCP': 'N', 'TLS': '', '错误': 'No route to host'},
+    ('1.2.3.9', 443): {'服务器': '1.2.3.9', '端口': '443', '类型': 'vmess',
+                       'TCP': 'N', 'TLS': '', '错误': 'Name or service not known'},
+}
+check("Network is unreachable 保留", keep(
+    p('2001:db8::1', 443, 'vless'), PROBE_NET), True)
+check("No route to host 保留", keep(
+    p('2001:db8::2', 443, 'trojan'), PROBE_NET), True)
+check("DNS 解析失败保留", keep(
+    p('1.2.3.9', 443, 'vmess'), PROBE_NET), True)
+
+print()
 print("=== 4. TLS 被明确拒绝 ===")
 check("SSL 握手告警被剔除", keep(p('1.2.3.4', 443, 'trojan'), PROBE), False)
 

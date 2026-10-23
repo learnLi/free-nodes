@@ -30,12 +30,21 @@ from typing import Any, Dict, List, Set, Tuple
 PLAINTEXT_TYPES = {'http', 'https', 'socks5', 'socks'}
 
 # 「确凿已死」的错误特征
+#
+# 判据是「路径通、但服务不在」：对端主动回了 RST，说明网络路径没问题，
+# 只是那个端口没有服务在监听。
+#
+# 刻意**不**包含下面这些，它们反映的是探测端或网络侧的问题，不是节点的问题：
+#   timeout                  —— 防火墙丢包，节点可能只对中国 IP 放行
+#   Network is unreachable  —— 探测端没有该协议族的路由。实测 GitHub 的
+#                              runner 就没有 IPv6 出口，所有 IPv6 节点都报
+#                              这句，若据此裁剪会误杀全部 IPv6 节点
+#   No route to host        —— 同上，路径不可达
+#   Host is unreachable     —— ICMP 不可达，主机本身可能活着
+#   Name or service not known —— DNS 解析失败，可能是探测端 DNS 的问题
 DEAD_ERROR_MARKERS = (
     'refused',          # Connection refused
     'reset by peer',    # Connection reset by peer
-    'No route to host',
-    'Network is unreachable',
-    'Host is unreachable',
 )
 
 # 对端明确拒绝 TLS —— 说明该端口不是预期的 TLS 服务

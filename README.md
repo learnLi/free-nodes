@@ -196,6 +196,18 @@ fetch_config.yml（上游） → fetch_config.local.yml（本仓库） → local
 - **TCP 超时** —— 可能是防火墙丢包，也可能服务器只放行中国大陆 IP，对国内用户仍然可用。
   仅凭美国出口的超时无法判定其已死，误杀风险高。
 - **QUIC / UDP 协议** —— `hysteria2` / `tuic` 无法用 TCP 探测，从未被探测过。
+- **探测端自身的网络能力问题** —— 这类错误反映的是探测端或链路侧，不是节点的问题：
+  | 错误 | 含义 |
+  | :- | :- |
+  | `Network is unreachable` / `No route to host` | 探测端没有该协议族的路由 |
+  | `Name or service not known` | 探测端 DNS 解析失败 |
+
+  > 实测踩过的坑：**GitHub 的 runner 没有 IPv6 出口**，所有 IPv6 节点都报
+  > `Network is unreachable`。若把它当成「节点已死」，会一次性误杀全部 IPv6 节点
+  > —— 而 IPv6 节点对有 IPv6 的国内用户完全可用。
+
+判据只有一条：**路径通、但服务不在**（对端主动回 RST，即 `Connection refused`
+/ `Connection reset by peer`）才算确凿已死。
 
 未裁剪版本以 `list.meta.full.yml` / `list.yml.full.yml` 一并发布，便于对照；
 每个文件被剔除的节点及原因记录在 `pruned_*.csv` 里。
