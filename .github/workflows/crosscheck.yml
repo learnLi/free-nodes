@@ -155,6 +155,17 @@ jobs:
           set +e
           # shell 变量不跨步骤传递，这里要重新取一次
           N=$(python3 ./scripts/get_setting.py filter.rounds 6)
+          # 香港视角的参数。
+          # --out-hk-list 一定要给：没有香港探测数据时也要产出这份订阅
+          # （剔除「两端都探不通」的节点即可）；有数据时再加上香港延迟阈值。
+          HK_ARGS=(--out-hk-list list.meta.hk.yml)
+          if [ -s hk/probe_hk_latest.csv ]; then
+            HK_ARGS+=(--hk hk/probe_hk_latest.csv
+                      --hk-history "$(ls -1 hk/probe_hk_2*.csv 2>/dev/null | paste -sd, -)")
+            echo "香港侧数据就绪，带上香港延迟阈值"
+          else
+            echo "没有香港侧数据，本次只按「两端都探不通」筛"
+          fi
           python3 ./scripts/crosscheck.py \
             --us us/probe_latest.csv \
             --us-history "$(ls -1 us/probe_2*.csv 2>/dev/null | paste -sd, -)" \
@@ -167,6 +178,7 @@ jobs:
             --input-list-clash list.yml \
             --out-cn-list-clash list.cn.yml \
             --rounds "$N" \
+            "${HK_ARGS[@]}" \
             2>&1 | tee crosscheck.log
           rc=${PIPESTATUS[0]}
           echo "crosscheck 退出码：$rc"
@@ -175,7 +187,7 @@ jobs:
             echo "::error::交叉比对失败，日志已上传到 Release 的 crosscheck.log"
             exit 1
           fi
-          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml; do
+          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml list.cn.yml list.meta.hk.yml; do
             if [ ! -s "$f" ]; then
               echo "::error::缺少产出文件 $f"
               gh release upload latest crosscheck.log --clobber || true
@@ -208,6 +220,40 @@ jobs:
           cp crosscheck_summary.md "crosscheck_${STAMP}.md"
           gh release upload latest "crosscheck_${STAMP}.csv" "crosscheck_${STAMP}.md" --clobber
           echo "已上传到 latest Release"
+
+      # 「大陆可用」「香港桥接池」这两份订阅也要进 output 分支 ——
+      # README 里承诺的备用通道（raw.githubusercontent / jsDelivr）走的就是它，
+      # 少了这一步那些链接会 404。
+      - name: 同步交叉结果到 output 分支
+        if: steps.cn.outputs.found == 'true'
+        env:
+          GH_PUSH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          rm -rf .output
+          if ! git clone --depth=1 --branch output \
+              "https://x-access-token:${GH_PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+              .output 2>/dev/null; then
+            mkdir -p .output
+            git -C .output init -q -b output
+          fi
+          cd .output
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          for f in list.meta.cn.yml list.cn.yml list.meta.hk.yml crosscheck.csv crosscheck_summary.md; do
+            if [ -f "../$f" ]; then
+              cp "../$f" .
+            fi
+          done
+          git add -A
+          if git diff --cached --quiet; then
+            echo "output 分支无变化"
+          else
+            git commit -q -m "crosscheck: $(date '+%Y-%m-%d %H:%M:%S') 交叉判定结果"
+            git push -f "https://x-access-token:${GH_PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+              HEAD:refs/heads/output
+            echo "output 分支已更新"
+          fi
 
       - name: 上传运行日志
         if: always()

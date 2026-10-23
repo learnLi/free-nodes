@@ -315,13 +315,13 @@ jobs:
           # 但要放过两类不属于本步骤的资产：
           #   1) 带时间戳的历史副本（probe_<ts>.csv / crosscheck_<ts>.*）——
           #      它们不在 dist/ 里，却是交叉比对按时间戳配对的依据
-          #   2) crosscheck job 产出的交叉表与「大陆可用」子集——
+          #   2) crosscheck job 产出的交叉表与「大陆可用」「香港桥接池」子集——
           #      由另一个工作流上传，这里不能删
           while read -r old; do
             [ -n "$old" ] || continue
             case "$old" in
               probe_[0-9]*_*.csv|crosscheck_[0-9]*_*.csv|crosscheck_[0-9]*_*.md) continue ;;
-              crosscheck.csv|crosscheck_summary.md|list.meta.cn.yml) continue ;;
+              crosscheck.csv|crosscheck_summary.md|list.meta.cn.yml|list.meta.hk.yml) continue ;;
             esac
             if [ ! -f "$SRC/$old" ]; then
               echo "删除陈旧资产：$old"
@@ -417,23 +417,38 @@ jobs:
           GH_PUSH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
+          # 先把远端 output 分支整份拉下来，**不要**清空重建。
+          # output 分支上还有 crosscheck 工作流发布的
+          # list.meta.cn.yml / list.meta.hk.yml / crosscheck.csv ——
+          # 那是「备用通道」的一部分，清掉会让订阅链接 404。
           rm -rf .output
-          mkdir -p .output/snippets
-          cp -r dist/. .output/
-          cp -r dist-snippets/. .output/snippets/
-          # 带时间戳的节点列表：NAS 用它探测，结果才能与同批的美国数据对齐
-          cp dist/list.meta.full.yml ".output/list_$(cat .ts).full.yml"
-          # Stage 1 产物的带时间戳副本：NAS 探测它，并用这里的时间戳命名结果
-          [ -f dist/list.meta.us.yml ] && cp dist/list.meta.us.yml ".output/list.meta.us_$(cat .ts).yml"
+          if ! git clone --depth=1 --branch output \
+              "https://x-access-token:${GH_PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+              .output 2>/dev/null; then
+            mkdir -p .output
+            git -C .output init -q -b output
+          fi
           cd .output
-          git init -q -b output
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+          mkdir -p snippets
+          cp -r ../dist/. .
+          cp -r ../dist-snippets/. snippets/
+          # 带时间戳的节点列表：NAS 用它探测，结果才能与同批的美国数据对齐
+          cp ../dist/list.meta.full.yml "list_$(cat ../.ts).full.yml"
+          # Stage 1 产物的带时间戳副本：NAS 探测它，并用这里的时间戳命名结果
+          if [ -f ../dist/list.meta.us.yml ]; then
+            cp ../dist/list.meta.us.yml "list.meta.us_$(cat ../.ts).yml"
+          fi
           git add -A
-          git commit -q -m "build: $(date '+%Y-%m-%d %H:%M:%S') 自动构建产物"
-          git push -f "https://x-access-token:${GH_PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
-            HEAD:refs/heads/output
-          echo "output 分支已更新"
+          if git diff --cached --quiet; then
+            echo "output 分支无变化"
+          else
+            git commit -q -m "build: $(date '+%Y-%m-%d %H:%M:%S') 自动构建产物"
+            git push -f "https://x-access-token:${GH_PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+              HEAD:refs/heads/output
+            echo "output 分支已更新"
+          fi
 
       - name: 上传运行日志
         if: always()

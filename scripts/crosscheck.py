@@ -220,7 +220,11 @@ def main() -> int:
     #   * 「大陆被墙」对它不成立——被墙的通常是欧美 IP，恰恰是香港最有价值的
     #     一批，必须保留
     # 剔除的只有两种：两端都探不通（真死）、香港延迟超限。
-    if args.out_hk_list and hk_rounds:
+    #
+    # 没有香港探测数据时**照样产出**这份订阅：延迟阈值跳过（没有香港延迟
+    # 可判），「两端都探不通」的筛选照常生效。等香港侧数据到位，
+    # 延迟阈值会自动生效。
+    if args.out_hk_list:
         hk_max = args.max_latency_hk or cfg.get('max_latency_ms_hk', 0)
         hk_kept: List[Dict] = []
         hk_dead = hk_slow = 0
@@ -252,8 +256,33 @@ def main() -> int:
                               sort_keys=False).replace('!!str ', ''))
         print('香港桥接池子集：%d -> %d 个节点（真死 %d，香港延迟超限 %d）-> %s' % (
             len(proxies), len(hk_kept), hk_dead, hk_slow, args.out_hk_list))
+        if not hk_rounds:
+            print('  没有香港探测数据，本次未套用香港延迟阈值（%d ms）' % hk_max)
         if hk_dangling:
             print('  同步清理了 %d 处失效引用' % hk_dangling)
+
+        # 把香港视角的结论补进汇总报告
+        hk_md = ['', '## 香港桥接池视角', '']
+        hk_md.append('香港的节点由**香港 VPS 去连**，所以判定标准与大陆不同：')
+        hk_md.append('')
+        hk_md.append('- 「大陆被墙」对它不成立 —— 被墙的往往是欧美 IP，')
+        hk_md.append('  恰恰是香港最有价值的一批，必须保留；')
+        hk_md.append('- 延迟必须按香港视角算（美国到亚洲天生慢，用美国数字会误杀好节点）。')
+        hk_md.append('')
+        if hk_rounds:
+            hk_md.append('参与判定的轮次：香港 %d 轮' % len(hk_rounds))
+        else:
+            hk_md.append('**本次没有香港探测数据**，延迟阈值（%d ms）未生效；' % hk_max)
+            hk_md.append('只剔除了「中美两端都探不通」的节点。')
+        hk_md.append('')
+        hk_md.append('| 项 | 数量 |')
+        hk_md.append('| :- | ---: |')
+        hk_md.append('| 候选节点 | %d |' % len(proxies))
+        hk_md.append('| 保留 | %d |' % len(hk_kept))
+        hk_md.append('| 两端都探不通（剔除）| %d |' % hk_dead)
+        hk_md.append('| 香港延迟超限（剔除）| %d |' % hk_slow)
+        with open(args.out_md, 'a', encoding='utf-8') as f:
+            f.write('\n'.join(hk_md) + '\n')
 
     if args.out_cn_list:
         # 按协议偏好排序：实测国内可用率 vmess 79% > vless 62% > trojan 53%
