@@ -1,8 +1,10 @@
 name: Sync upstream config
 
 # 只同步上游「配置类」文件。
-#   同步：sources.list / fetch_config.yml / abpwhite.txt
-#   不同步：config.yml（本仓库自行维护，避免上游覆盖本地定制）
+#   同步：fetch_config.yml / abpwhite.txt
+#   不同步：sources.list（本仓库自行维护 —— 上游的清单里没有本仓库
+#            自己筛出来的源，每天覆盖会把它们抹掉）
+#            config.yml（本仓库自行维护，避免上游覆盖本地定制）
 #            fetch.py / dynamic.py（本仓库自行维护）
 # 上游 config.yml 的规则变化以「差异报告」形式产出，供人工跟进。
 
@@ -48,14 +50,14 @@ jobs:
         id: diff
         run: |
           set -euo pipefail
-          # 注意：config.yml 不在其中——本仓库自行维护
-          FILES="sources.list fetch_config.yml abpwhite.txt"
+          # 注意：config.yml 与 sources.list 不在其中——本仓库自行维护
+          FILES="fetch_config.yml abpwhite.txt"
           git checkout upstream/master -- $FILES
           # git checkout 会同时更新 index 和工作区，所以判据必须是
           # --cached（index vs HEAD），用 git diff（工作区 vs index）
           # 永远看不到变化，同步就成了空转。
           #
-          # 上游的 sources.list 没有末尾换行，本地有。不统一的话每次同步
+          # 上游的文件没有末尾换行，本地有。不统一的话每次同步
           # 都会产生一个内容其实没变的「假差异」。
           for f in $FILES; do
             if [ -s "$f" ] && [ -n "$(tail -c 1 "$f")" ]; then
@@ -109,7 +111,7 @@ jobs:
           set -euo pipefail
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add sources.list fetch_config.yml abpwhite.txt
+          git add fetch_config.yml abpwhite.txt
           # 双重保险：暂存区为空时不提交，直接跳过
           if git diff --cached --quiet; then
             echo "暂存区为空，跳过提交"

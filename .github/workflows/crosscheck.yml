@@ -84,32 +84,6 @@ jobs:
           fi
           echo "found=true" >> "$GITHUB_OUTPUT"
 
-      - name: 取香港侧探测历史
-        id: hk
-        if: steps.cn.outputs.found == 'true'
-        continue-on-error: true
-        run: |
-          set -euo pipefail
-          git fetch --depth=1 origin             "+refs/heads/probe-hk:refs/remotes/origin/probe-hk" 2>/dev/null || {
-            echo "香港探活分支尚不存在，跳过香港视角"
-            echo "found=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          }
-          mkdir -p hk
-          N=$(python3 ./scripts/get_setting.py filter.rounds 6)
-          MAPS=$(git ls-tree --name-only origin/probe-hk             | grep -oE 'probe_hk_[0-9]{8}_[0-9]{4}\.csv' | sort | tail -n "$N" || true)
-          for m in $MAPS; do
-            git show "origin/probe-hk:$m" > "hk/$m" 2>/dev/null || true
-          done
-          git show origin/probe-hk:probe_hk.csv > hk/probe_hk_latest.csv 2>/dev/null || true
-          COUNT=$(ls -1 hk/*.csv 2>/dev/null | wc -l)
-          echo "香港侧轮次：$COUNT"
-          if [ "$COUNT" -eq 0 ]; then
-            echo "found=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          echo "found=true" >> "$GITHUB_OUTPUT"
-
       - name: 取美国侧探测历史与节点列表
         id: us
         if: steps.cn.outputs.found == 'true'
@@ -155,17 +129,9 @@ jobs:
           set +e
           # shell 变量不跨步骤传递，这里要重新取一次
           N=$(python3 ./scripts/get_setting.py filter.rounds 6)
-          # 香港视角的参数。
-          # --out-hk-list 一定要给：没有香港探测数据时也要产出这份订阅
-          # （剔除「两端都探不通」的节点即可）；有数据时再加上香港延迟阈值。
+          # 香港桥接池版：给香港 VPS 用的那份订阅。
+          # 判定只看「中美两端都探不通」，不按延迟筛（没有香港侧数据）。
           HK_ARGS=(--out-hk-list list.meta.hk.yml)
-          if [ -s hk/probe_hk_latest.csv ]; then
-            HK_ARGS+=(--hk hk/probe_hk_latest.csv
-                      --hk-history "$(ls -1 hk/probe_hk_2*.csv 2>/dev/null | paste -sd, -)")
-            echo "香港侧数据就绪，带上香港延迟阈值"
-          else
-            echo "没有香港侧数据，本次只按「两端都探不通」筛"
-          fi
           python3 ./scripts/crosscheck.py \
             --us us/probe_latest.csv \
             --us-history "$(ls -1 us/probe_2*.csv 2>/dev/null | paste -sd, -)" \

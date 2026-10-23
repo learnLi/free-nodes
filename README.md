@@ -20,6 +20,7 @@
 | Clash Verge Rev / Mihomo Party / FlClash / Clash Meta for Android | **Clash Meta (Mihomo)** | **`list.meta.cn.yml`** | `list.meta.yml` |
 | 老版 Clash for Windows / Clash（经典内核） | **原版 Clash** | **`list.cn.yml`** | `list.yml` |
 | v2rayN / v2rayNG / Nekoray / sing-box | — | `list.txt` | — |
+| **境外桥接池**（节点由香港/境外机器去连） | **Clash Meta (Mihomo)** | **`list.meta.hk.yml`** | — |
 
 > **为什么原版 Clash 要单独一份**：`list.meta.cn.yml` 里含 `flow`、`grpc-opts`、
 > `obfs`、`client-fingerprint`、`xhttp-opts` 等 **Meta 专有字段**，
@@ -34,13 +35,14 @@
 
 | 订阅 | 节点数 | 用途 |
 | :- | :-: | :- |
-| **`list.meta.cn.yml`** | ~120 | **Clash Meta，大陆可用（推荐）** —— 中美多轮联合判定 + 延迟上限 + 协议偏好排序 |
-| **`list.cn.yml`** | ~40 | **原版 Clash，大陆可用** |
-| `list.meta.yml` | ~370 | Clash Meta，全量（美国侧视角筛的）|
-| `list.meta.us.yml` | ~290 | Clash Meta，美国侧多轮筛选 |
-| `list.yml` | ~110 | 原版 Clash，全量 |
-| `list.txt` | ~450 条 | V2Ray / 通用（Base64）|
-| `list_raw.txt` | ~450 行 | V2Ray 明文（查看用）|
+| **`list.meta.cn.yml`** | ~1100 | **Clash Meta，大陆可用（推荐）** —— 中美多轮联合判定 + 延迟上限 + 协议偏好排序 |
+| **`list.cn.yml`** | ~430 | **原版 Clash，大陆可用** |
+| **`list.meta.hk.yml`** | ~1400 | **Clash Meta，境外桥接池专用** —— 给「香港 VPS 做桥接」这类场景 |
+| `list.meta.yml` | ~1550 | Clash Meta，全量（美国侧视角筛的）|
+| `list.meta.us.yml` | ~1400 | Clash Meta，美国侧多轮筛选 |
+| `list.yml` | ~600 | 原版 Clash，全量 |
+| `list.txt` | ~2100 条 | V2Ray / 通用（Base64）|
+| `list_raw.txt` | ~2100 行 | V2Ray 明文（查看用）|
 
 **主通道（GitHub Releases）** — 稳定 URL，无需跟随分支：
 
@@ -49,6 +51,8 @@
 https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.cn.yml
 # 原版 Clash（老内核）—— 大陆可用
 https://github.com/learnLi/free-nodes/releases/latest/download/list.cn.yml
+# 境外桥接池专用
+https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.hk.yml
 # 全量
 https://github.com/learnLi/free-nodes/releases/latest/download/list.meta.yml
 https://github.com/learnLi/free-nodes/releases/latest/download/list.yml
@@ -61,6 +65,7 @@ https://github.com/learnLi/free-nodes/releases/latest/download/list.txt
 
 ```
 https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.cn.yml
+https://raw.githubusercontent.com/learnLi/free-nodes/output/list.meta.hk.yml
 https://cdn.jsdelivr.net/gh/learnLi/free-nodes@output/list.meta.cn.yml
 ```
 
@@ -323,7 +328,7 @@ consensus:                   # 诊断用，不参与任何过滤
 
 ## 部署
 
-### 三个探测视角
+### 两个探测视角
 
 延迟该在哪儿测，取决于**节点最终由谁去连**：
 
@@ -331,18 +336,29 @@ consensus:                   # 诊断用，不参与任何过滤
 | :- | :- | :- |
 | CI（美国）| **服务器死没死** | 没有墙干扰，判死最准 |
 | NAS（大陆）| **大陆被墙** | 只有墙的视角才有这个信息 |
-| VPS（香港）| **香港延迟高不高** | 桥接池的节点就是香港去连的 |
 
 实测 TCP 可连率（同一批节点）：
 
 ```
-香港  97.3%     ← 节点本身几乎全是活的
 美国  85.8%     ← 中间是跨洋损耗
 大陆  ~55%      ← 差的那 42% 正是被墙的
 ```
 
-**美国侧的延迟数字对香港没有参考价值**（美国到亚洲天生慢 200~400ms），
-所以 `list.meta.hk.yml` 用的是香港自己测的延迟。
+### 境外桥接池那份（`list.meta.hk.yml`）
+
+给「香港 VPS 做桥接」这类场景：节点是**境外机器去连**的，所以判定标准
+和「大陆可用」那份不一样：
+
+| | `list.meta.cn.yml` | `list.meta.hk.yml` |
+| :- | :- | :- |
+| 连接方 | 大陆用户 | 境外的桥接机器 |
+| 大陆被墙的节点 | 剔除 | **保留** —— 恰恰是境外最有价值的一批 |
+| 延迟上限 | 国内侧 1000ms | 不筛（没有境外侧的探测数据）|
+| 剔除条件 | 国内跨轮全死 / 延迟超限 | **中美两端都探不通** |
+
+延迟为什么不筛：拿美国侧的延迟当香港的用会误杀「离美国远但离香港近」的
+好节点（美国到亚洲天生就慢 200~400ms），而香港侧没有探测数据，
+宁可不筛也不误杀。
 
 ### 国内探测端（NAS）
 
@@ -442,13 +458,29 @@ www.gstatic.com:443 正常
 
 | 文件 | 是否跟随上游同步 |
 | :- | :- |
-| `sources.list` / `fetch_config.yml` / `abpwhite.txt` | ✅ 每日自动覆盖 |
+| `fetch_config.yml` / `abpwhite.txt` | ✅ 每日自动覆盖 |
+| `sources.list` | ❌ **不覆盖**，由本仓库自行维护 —— 上游的清单里没有本仓库自己筛出来的源，每天覆盖会把它们抹掉 |
 | `config.yml` | ❌ **不覆盖**，由本仓库自行维护 |
 | `fetch.py` / `dynamic.py` | ❌ **不覆盖**，由本仓库自行维护 |
 
 `config.yml` 不再自动覆盖，是为了能自由定制分流规则与健康检查参数。代价是**会错过上游的
 规则更新**，所以 `sync.yml` 会额外产出一份**规则差异报告**（artifact `upstream-config-diff`），
 列出上游新增/删除了哪些规则，人工按需合并。
+
+`sources.list` 不再自动覆盖，是因为上游的源清单和本仓库的实际用源已经不一样了 ——
+本仓库会**自己评估、增删源**（见下面的「订阅源」）。被上游覆盖等于把评估结果清零。
+
+### 订阅源
+
+`fetch.py` 抓取的源写在 [`sources.list`](sources.list) 里。本仓库在评估之后新增的源：
+
+| 源 | 节点数 | 说明 |
+| :- | :-: | :- |
+| `chenzhihan1751-cyber/node-sub-zixf` | 1793 | 聚合 9 个公开源（含本仓库已有的 peasoft、ripaojiedian，另 7 个是新的）|
+| `MatinGhanbari/v2ray-configs` | 200 | 独立源，与本仓库原有源零重叠 |
+
+评估方式：在境外机器上实测这两个源的样本节点可用率与重叠度，确认有增量价值后
+才写进 `sources.list`。合并去重后的节点池从 520 涨到 2262。
 
 本仓库自己的定制统一放在 `fetch_config.local.yml`，加载顺序：
 
@@ -489,6 +521,7 @@ python tests/test_consensus.py
 python tests/test_crosscheck.py
 python tests/test_dynamic.py
 python tests/test_fake_filter.py
+python tests/test_parse.py
 python tests/test_prefs.py
 python tests/test_probe.py
 python tests/test_prune.py
@@ -496,7 +529,7 @@ python tests/test_quic.py
 python tests/test_validate.py
 ```
 
-9 个文件、约 240 项断言，**全部离线**（不联网）。
+10 个文件、约 250 项断言，**全部离线**（不联网）。
 
 ### 目录约定
 
