@@ -93,6 +93,8 @@ jobs:
           set -euo pipefail
           BASE="https://github.com/${{ github.repository }}/releases/latest/download"
           mkdir -p us
+          # shell 变量不跨步骤传递，这里要自己取一次
+          N=$(python3 ./scripts/get_setting.py filter.rounds 6)
           # 节点列表是生成物，不在 git 里，必须从 Release 取。
           # 用**已裁剪**的 list.meta.yml：未裁剪版里还留着明文 HTTP 代理，
           # 不该出现在「大陆可用」订阅里。
