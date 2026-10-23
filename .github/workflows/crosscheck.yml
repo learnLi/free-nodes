@@ -132,8 +132,12 @@ jobs:
           echo "当前分支: $(git rev-parse --abbrev-ref HEAD) @ $(git rev-parse --short HEAD)"
           cp crosscheck.csv crosscheck_summary.md list.meta.cn.yml .
           # 逐个 add：git add 只要有一个 pathspec 不匹配就整体失败，
-          # 一个都不会被暂存
+          # 一个都不会被暂存。所以先逐个确认存在
           for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
+            if [ ! -s "$f" ]; then
+              echo "::error::缺少产出文件 $f"
+              exit 1
+            fi
             git add -f "$f"
           done
           if git diff --cached --quiet; then
