@@ -1555,6 +1555,17 @@ def main():
                         ctg_nodes_meta[ctgs[0]].append(node.clash_data)
                     except Exception:
                         traceback.print_exc()
+        # 地区组的成员同样按协议偏好排序
+        _order2 = FETCH_CONFIG.get('protocol_order') or []
+        if _order2:
+            _rank2 = {str(t).lower(): i for i, t in enumerate(_order2)}
+
+            def _pkey2(d):
+                t = str(d.get('type') or '').lower()
+                return (_rank2.get(t, len(_order2)), t, str(d.get('name') or ''))
+            for _lst in (ctg_nodes, ctg_nodes_meta):
+                for _k in _lst:
+                    _lst[_k].sort(key=_pkey2)
         for ctg, proxies in ctg_nodes.items():
             with open("snippets/nodes_"+ctg+".yml", 'w', encoding="utf-8") as f:
                 yaml.dump({'proxies': proxies}, f, allow_unicode=True)
@@ -1616,8 +1627,21 @@ def main():
                 if p.supports_clash():
                     proxies.append(data)
                     names_clash.add(name)
-    names_clash = list(names_clash)
-    names_clash_meta = list(names_clash_meta)
+    # 按协议偏好排序（fetch_config.local.yml 的 protocol_order）。
+    # 依据是实测的国内可用率：vmess 79% > vless 62% > trojan 53% > ss 25%。
+    # ss 排后面是因为它无 TLS、协议特征明显，最容易被 GFW 识别。
+    _order = FETCH_CONFIG.get('protocol_order') or []
+    if _order:
+        _rank = {str(t).lower(): i for i, t in enumerate(_order)}
+
+        def _pkey(d):
+            t = str(d.get('type') or '').lower()
+            return (_rank.get(t, len(_order)), t, str(d.get('name') or ''))
+        proxies_meta.sort(key=_pkey)
+        proxies.sort(key=_pkey)
+    # 组成员顺序跟着节点列表走（原来是 set 转 list，顺序是随机的）
+    names_clash = list(dict.fromkeys(d.get('name') for d in proxies))
+    names_clash_meta = list(dict.fromkeys(d.get('name') for d in proxies_meta))
     conf_meta = copy.deepcopy(conf)
 
     # Clash

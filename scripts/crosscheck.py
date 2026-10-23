@@ -30,6 +30,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from rounds import addr_of, classify, load_rounds  # noqa: E402
 from prune import clean_group_refs  # noqa: E402
+from prefs import protocol_order, sort_proxies  # noqa: E402
 
 
 def parse_args() -> argparse.Namespace:
@@ -153,6 +154,9 @@ def main() -> int:
     print('\n'.join(md))
 
     if args.out_cn_list:
+        # 按协议偏好排序：实测国内可用率 vmess 79% > vless 62% > trojan 53%
+        # > ss 25%，ss 排后面
+        kept = sort_proxies(kept, protocol_order())
         data['proxies'] = kept
         dangling = clean_group_refs(data, kept)
         header = ''

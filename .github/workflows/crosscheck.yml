@@ -94,10 +94,12 @@ jobs:
           set -euo pipefail
           BASE="https://github.com/${{ github.repository }}/releases/latest/download"
           mkdir -p us
-          # 节点列表是生成物，不在 git 里，必须从 Release 取
-          curl -sL --max-time 60 "$BASE/list.meta.full.yml" -o list.meta.full.yml
-          if [ ! -s list.meta.full.yml ]; then
-            echo "::error::取不到 list.meta.full.yml"
+          # 节点列表是生成物，不在 git 里，必须从 Release 取。
+          # 用**已裁剪**的 list.meta.yml：未裁剪版里还留着明文 HTTP 代理，
+          # 不该出现在「大陆可用」订阅里。
+          curl -sL --max-time 60 "$BASE/list.meta.yml" -o list.meta.yml
+          if [ ! -s list.meta.yml ]; then
+            echo "::error::取不到 list.meta.yml"
             exit 1
           fi
           # 取最近 N 轮带时间戳的美国探测结果
@@ -110,7 +112,7 @@ jobs:
           curl -sL --max-time 60 "$BASE/probe.csv" -o us/probe_latest.csv
           COUNT=$(ls -1 us/*.csv 2>/dev/null | wc -l)
           echo "美国侧轮次：$COUNT"
-          echo "节点列表 $(wc -c < list.meta.full.yml) 字节"
+          echo "节点列表 $(wc -c < list.meta.yml) 字节"
 
       - name: 交叉比对
         if: steps.cn.outputs.found == 'true'
@@ -125,7 +127,7 @@ jobs:
             --cn-history "$(ls -1 cn/probe_domestic_2*.csv 2>/dev/null | paste -sd, -)" \
             --out-csv crosscheck.csv \
             --out-md crosscheck_summary.md \
-            --input-list list.meta.full.yml \
+            --input-list list.meta.yml \
             --out-cn-list list.meta.cn.yml \
             --min-rounds "${MIN_ROUNDS:-2}" \
             2>&1 | tee crosscheck.log

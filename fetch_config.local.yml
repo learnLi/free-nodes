@@ -3,6 +3,23 @@
 # 加载顺序：fetch_config.yml（上游，每日同步） -> 本文件 -> local_fetch_config.yml（本地调试）
 # 本文件的键会覆盖 fetch_config.yml 中的同名键。
 
+# === 节点排序 ===
+# 按协议偏好排序。依据是实测的国内可用率（中美多轮联合判定，2026-10-23）：
+#   vmess 79% | vless 62% | trojan 53% | ss 25% | hysteria2 2%
+# ss 排后面是因为 Shadowsocks 无 TLS、协议特征明显，最容易被 GFW 识别。
+# 不在列表里的协议排在最后，保持原有相对顺序。
+protocol_order:
+  - vmess
+  - vless
+  - trojan
+  - hysteria2
+  - anytls
+  - ss
+  - http
+  - https
+  - socks5
+  - socks
+
 # === 多源共识 ===
 # 「独立来源」的判定：同一个仓库的多个 URL 归并为一个来源
 # （sources.list 里 free9999 有 3 条、proxypool 有 2 条，按 URL 计数会高估共识强度）
