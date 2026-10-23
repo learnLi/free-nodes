@@ -4,9 +4,10 @@ name: Cross-check (US vs CN)
 #   美国侧 —— GitHub Actions 产出（无 GFW 干扰，「已死」判定可信）
 #   国内侧 —— NAS 推送到 probe-domestic 分支的 probe_domestic.csv
 #
-# 这是**可选**方案，默认不运行：没有定时调度，只有手动触发或
-# probe-domestic 分支有更新时才跑。NAS 侧脚本见
-# scripts/probe_domestic.sh（不部署 NAS 就完全用不到）。
+# 这是**可选**方案：需要国内探活数据（NAS 推送到 probe-domestic 分支）
+# 才有意义。没数据时会安静跳过。
+# 触发方式：手动、被 Fetch 用 workflow_call 调用、每 6 小时定时。
+# NAS 侧脚本见 scripts/probe_domestic.sh（不部署 NAS 就完全用不到）。
 #
 # 注意原项目（上游 NoMoreWalls）本身不做任何节点质量判断，
 # 节点可用性由客户端的 fallback / url-test 组实测决定。
@@ -31,7 +32,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  # 注意：被 Fetch 用 workflow_call 调用时，github.workflow 解析成**调用方**
+  # 的名字（Fetch）。如果直接用 ${{ github.workflow }}-${{ github.ref }}，
+  # 就会和调用方 Fetch 的工作流级 concurrency 撞同一个组——被调用方去抢
+  # 调用方正持有的锁，直接死锁（表现为 crosscheck job 根本不出现）。
+  # 所以这里加一个固定后缀区分。
+  group: ${{ github.workflow }}-xcheck-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
