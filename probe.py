@@ -142,41 +142,32 @@ def _quic_varint(n: int) -> bytes:
     return bytes([0xC0 | (n >> 56)]) + (n & 0x3FFFFFFFFFFFFFFF).to_bytes(7, 'big')
 
 
-def quic_probe(host: str, port: int, timeout: float) -> Tuple[bool, float, str]:
-    """QUIC over UDP 的存活探测。
+def _quic_initial_probe(host: str, port: int, timeout: float) -> Tuple[bool, float, str]:
+    """裸 QUIC Initial 探测（不依赖 aioquic）。
 
-    hysteria2 / tuic 走 QUIC，TCP 探测对它们完全无效（服务端根本不监听 TCP），
-    会被误判成「已死」。
+    发一个 QUIC v1 Initial 包，用 PADDING 帧撑到 1200 字节（QUIC 硬性要求）。
+    按 RFC 9000 §17.2.5.2，服务端收到 DCID 未知的 Initial 时「可以」回一个
+    Retry，而 DCID 是明文放在头里的，不需要解密就能回包。
 
-    做法：发一个 QUIC v1 Initial 包，**不需要**构造真正的 TLS ClientHello——
-    按 RFC 9000，服务端收到 DCID 未知的 Initial 时**可以**回一个 Retry，
-    而 DCID 是明文放在头里的，所以不需要解密就能回包。用 PADDING 帧把包
-    撑到 1200 字节（QUIC 要求客户端 Initial 不小于 1200 字节）。
-
-    局限：回 Retry 是「可以」而非「必须」（RFC 9000 §17.2.5.2），
-    有些服务端（如 quic-go 默认配置）根本不发 Retry，而是直接丢弃。
-    因此「无响应」**不能**直接判定为已死——它同时可能是：
-      * 服务端不发 Retry（包构造没问题，但没回应）
-      * UDP 路径被阻断（GFW 对 QUIC 的干扰，或服务商的 UDP 限速）
-    真正确凿的死亡只有一种：ICMP port unreachable（表现为 refused）。
-    所以裁剪规则只认 refused，timeout 一律保留。
+    局限：回 Retry 是「可以」而非「必须」，quic-go 等服务端默认直接丢弃。
+    实测美国侧 46 个 QUIC 节点只有 2 个有响应——所以这个方法只能当兜底，
+    真正判定要靠完整的 TLS 握手。
     """
     start = time.monotonic()
     dcid = os.urandom(8)
     scid = os.urandom(8)
     padding = b'\x00' * 1200
-    # long header | type=Initial(0) | fixed bit | PN length=1
     first = 0xC0 | 0x01
     pkt = (bytes([first]) + b'\x00\x00\x00\x01'
            + bytes([len(dcid)]) + dcid
            + bytes([len(scid)]) + scid
-           + b'\x00'                      # token length = 0
-           + _quic_varint(1 + len(padding))  # length = PN(1) + payload
-           + b'\x00'                      # packet number
+           + b'\x00'
+           + _quic_varint(1 + len(padding))
+           + b'\x00'
            + padding)
     try:
         infos = socket.getaddrinfo(host, port, type=socket.SOCK_DGRAM)
-    except socket.gaierror as e:
+    except socket.gaierror:
         return False, (time.monotonic() - start) * 1000, 'DNS 解析失败'
     last_err = 'no response'
     for family, socktype, proto, _, sockaddr in infos:
@@ -200,6 +191,67 @@ def quic_probe(host: str, port: int, timeout: float) -> Tuple[bool, float, str]:
             except OSError:
                 pass
     return False, (time.monotonic() - start) * 1000, last_err
+
+
+def _quic_handshake_probe(host: str, port: int,
+                          timeout: float) -> Tuple[bool, float, str]:
+    """用 aioquic 做一次真实的 QUIC + TLS 1.3 握手。
+
+    这是判定 hysteria2 / tuic 是否存活的可靠方法：握手失败（比如 ALPN 不匹配
+    收到 no_application_protocol alert）同样证明对端在跑 QUIC 服务，
+    只有「完全没有响应」才说明没收到任何包。
+
+    分类：
+      timeout            -> 没有任何响应（可能是 UDP 路径被阻断，也可能对端
+                            不接受我们的 ClientHello）—— 无法判定，不裁剪
+      refused / 其它 OSError -> 端口不可达，可以判死
+      其它异常           -> 收到了对端的包 -> 活的
+    """
+    import asyncio
+    import ssl
+    from aioquic.asyncio.client import connect
+    from aioquic.quic.configuration import QuicConfiguration
+
+    cfg = QuicConfiguration(is_client=True, alpn_protocols=['h3'])
+    cfg.verify_mode = ssl.CERT_NONE
+
+    async def go():
+        try:
+            async with connect(host, port, configuration=cfg,
+                               wait_connected=False) as client:
+                await asyncio.wait_for(client.wait_connected(), timeout)
+            return True, '握手成功', ''
+        except (asyncio.TimeoutError, socket.timeout):
+            return False, 'timeout', '超时（无响应）'
+        except OSError as e:
+            msg = (e.strerror or str(e))[:50]
+            refused = 'refused' in msg.lower() or 'unreachable' in msg.lower()
+            return (not refused), 'os-error', msg
+        except Exception as e:  # noqa: BLE001
+            # 收到了对端的包（alert / 协议不匹配）也算活
+            return True, '有响应', (type(e).__name__ + ': ' + str(e))[:60]
+
+    start = time.monotonic()
+    try:
+        ok, tag, msg = asyncio.run(go())
+    except Exception as e:  # noqa: BLE001
+        return False, (time.monotonic() - start) * 1000, 'outer: ' + type(e).__name__
+    return ok, (time.monotonic() - start) * 1000, ('%s %s' % (tag, msg)).strip()
+
+
+def quic_probe(host: str, port: int, timeout: float) -> Tuple[bool, float, str]:
+    """QUIC over UDP 的存活探测。
+
+    hysteria2 / tuic 走 QUIC，TCP 探测对它们完全无效（服务端根本不监听 TCP），
+    会被误判成「已死」。
+
+    优先用 aioquic 做真实握手；没装 aioquic 时退回裸 Initial 探测。
+    """
+    try:
+        import aioquic  # noqa: F401
+    except ImportError:
+        return _quic_initial_probe(host, port, timeout)
+    return _quic_handshake_probe(host, port, max(timeout, 5.0))
 
 
 def probe_one(proxy: Dict[str, Any], timeout: float) -> Dict[str, Any]:
