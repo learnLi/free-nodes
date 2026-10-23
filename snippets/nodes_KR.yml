@@ -1,0 +1,101 @@
+proxies:
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | 19EBD7
+  network: ws
+  port: 443
+  server: seoul01.zgjok.com
+  servername: seoul01.zgjok.com
+  tls: true
+  type: vmess
+  uuid: 182f1650-ca13-480c-b0b4-1ca44ed0504e
+  ws-opts:
+    headers:
+      Host: seoul01.zgjok.com
+    path: /henis01
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | CCD3E7
+  network: ws
+  port: 443
+  server: seoul02.zgjok.com
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
+  ws-opts:
+    headers:
+      Host: seoul02.zgjok.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国-001
+  network: tcp
+  port: 123
+  server: 43.108.103.167
+  tls: false
+  type: vmess
+  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷 韩国|@ripaojiedian
+  network: ws
+  port: 443
+  server: 8nTzyR5KNivfabaT.v.3dns.vip
+  servername: 8nTzyR5KNivfabaT.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 8nTzyR5KNivfabaT.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-43.201.103.12-0926
+  network: ws
+  port: 29930
+  server: 43.201.103.12
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: f46b2e2a-e02c-437a-833c-023410840a80
+  ws-opts:
+    headers:
+      Host: 43.201.103.12
+    path: /f46b2e2a-e02c-437a-833c-023410840a80
+- name: 韩国|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 11171
+  server: 63182sh8-4d7b.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 🇰🇷[www.v2nodes.com] trojan-KR-...
+  password: 28c4a59d-c2a0-4d6c-ba7d-db6a354990de
+  port: 24999
+  server: tjhg.m2k699.com
+  skip-cert-verify: true
+  sni: www.itunes.com
+  type: trojan
+- cipher: aes-256-gcm
+  name: 🇰🇷KR-141.164.45.187-0265
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  server: 141.164.45.187
+  type: ss
+- cipher: aes-256-cfb
+  name: 🇰🇷KR-211.178.105.134-0214
+  password: qwerREWQ@@
+  port: 6123
+  server: 211.178.105.134
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1602... #1'
+  password: 585f0e10-7b51-4f2e-a13d-479b045171bd
+  port: 22078
+  server: ruot.ayucloudservices.nl
+  type: ss

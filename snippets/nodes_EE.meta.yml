@@ -1,0 +1,35 @@
+proxies:
+- alterId: 0
+  cipher: auto
+  name: TR 🇹🇷 | @Raydikalx | 8549EE
+  network: tcp
+  port: 5384
+  server: dashboard.afrastore.top
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 63a01857-93c1-490b-95f5-991bd79116c5
+- name: '🇪🇪 爱沙尼亚 | EST #1'
+  network: ws
+  port: 443
+  server: 130.78.190.134
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chromefp=chrome
+- name: 🇪🇪EE_1|1.7MB/s
+  port: 9443
+  server: 95.153.32.2
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇪🇪EE_2|1.9MB/s
+  port: 9443
+  server: 192.159.101.174
+  skip-cert-verify: true
+  tls: true
+  type: http

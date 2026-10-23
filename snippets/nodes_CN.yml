@@ -1,0 +1,104 @@
+proxies:
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 1E4B91
+  network: tcp
+  port: 50015
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 9e63ca55-1ff9-453b-ae80-75947b8596d3
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 2F6F5A
+  network: tcp
+  port: 50014
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+- alterId: 64
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 460F20
+  network: tcp
+  port: 45020
+  server: 183.236.51.23
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 5B9FA3
+  network: tcp
+  port: 38320
+  server: 124.151.45.60
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: d643d6ea-2e48-4ad5-b96e-d11b889cc6a6
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | C42AD2
+  network: tcp
+  port: 50017
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: e37149b8-63df-4b4e-bd17-d7fc0b3009db
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | EA8CD3
+  network: ws
+  port: 33412
+  server: ct3.ainivp.com
+  tls: true
+  type: vmess
+  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
+  ws-opts:
+    headers:
+      Host: ct3.ainivp.com
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.243.185.128-1207
+  network: http
+  port: 47365
+  server: 47.243.185.128
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: fb695171-6b24-4255-9893-8921f53a0548
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.244.120.197-5480
+  network: ws
+  port: 36703
+  server: 47.244.120.197
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  ws-opts:
+    path: /arki?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-8.218.83.148-1351
+  network: http
+  port: 63239
+  server: 8.218.83.148
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: bc035c93-4a47-4f06-8833-fadc03527539
+- alterId: 64
+  cipher: auto
+  name: 🇨🇳_CN_中国
+  network: tcp
+  port: 50002
+  server: 112.132.215.108
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
