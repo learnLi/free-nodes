@@ -1,34 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 19EBD7
-  network: ws
-  port: 443
-  server: seoul01.zgjok.com
-  servername: seoul01.zgjok.com
-  tls: true
-  type: vmess
-  uuid: 182f1650-ca13-480c-b0b4-1ca44ed0504e
-  ws-opts:
-    headers:
-      Host: seoul01.zgjok.com
-    path: /henis01
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | CCD3E7
-  network: ws
-  port: 443
-  server: seoul02.zgjok.com
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  ws-opts:
-    headers:
-      Host: seoul02.zgjok.com
-    path: /
-- alterId: 0
-  cipher: auto
   name: 🇰🇷 韩国-001
   network: tcp
   port: 123
@@ -51,21 +23,6 @@ proxies:
     headers:
       Host: 8nTzyR5KNivfabaT.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-43.201.103.12-0926
-  network: ws
-  port: 29930
-  server: 43.201.103.12
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: f46b2e2a-e02c-437a-833c-023410840a80
-  ws-opts:
-    headers:
-      Host: 43.201.103.12
-    path: /f46b2e2a-e02c-437a-833c-023410840a80
 - name: '🇰🇷 韩国 | KOR #1 #1'
   network: ws
   port: 443

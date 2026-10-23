@@ -1,4 +1,19 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼TW-220.130.80.179-1292
+  network: ws
+  port: 443
+  server: 220.130.80.179
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: ceb8a7f4-a45b-48a7-8f8e-ca7124a5ebee
+  ws-opts:
+    headers:
+      Host: v2ray2.udpgw.com
+    path: /howdy
 - name: 台湾|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092

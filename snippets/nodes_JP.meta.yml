@@ -1,14 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | BF7213
-  network: tcp
-  port: 18112
-  server: 161.33.185.151
-  servername: ''
-  tls: false
+  name: JP 🇯🇵 | @Raydikalx | 3C89BD
+  network: ws
+  port: 443
+  server: UcKniXjfd2JOKBmx.v.3dns.vip
+  tls: true
   type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: UcKniXjfd2JOKBmx.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -179,6 +182,19 @@ proxies:
   tls: false
   type: vless
   uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+- client-fingerprint: firefox
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  network: ws
+  port: 443
+  server: 43.170.8.95
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
 - name: 日本2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092

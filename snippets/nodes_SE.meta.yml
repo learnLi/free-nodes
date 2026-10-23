@@ -1,14 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 72E4B5
-  network: httpupgrade
-  port: 443
-  server: defe.sync-bridge.ir
-  servername: defe.sync-bridge.ir
-  tls: true
-  type: vmess
-  uuid: 386c5322-48aa-4fc1-814f-2ff6c34d77e0
 - name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   network: ws
   port: 2053
@@ -35,6 +25,17 @@ proxies:
     path: /announcement?ed=2048fp=random
 - name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   network: ws
+  port: 14430
+  server: 193.188.21.253
+  tls: false
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  ws-opts:
+    headers:
+      Host: 193.188.21.253
+    path: /vless
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
+  network: ws
   port: 2053
   server: 5.189.254.168
   servername: cf3.schzyc.cc.cd
@@ -45,7 +46,7 @@ proxies:
     headers:
       Host: cf3.schzyc.cc.cd
     path: /proxyip=ProxyIP.CMLiussss.netfp=chrome
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
   port: 443
   server: 94.143.231.146
   tls: false
@@ -86,12 +87,6 @@ proxies:
   skip-cert-verify: true
   type: anytls
   udp: true
-- cipher: aes-256-gcm
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  password: AxIYWtskJWIIaefW
-  port: 8388
-  server: 70.34.212.124
-  type: ss
 - name: 🇸🇪SE_1|3.0MB/s
   password: None
   port: 443
