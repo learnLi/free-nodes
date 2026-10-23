@@ -127,21 +127,26 @@ jobs:
             gh release upload latest "$f" --clobber
             echo "  已上传 $f"
           done
+          # 带时间戳的历史副本，用来观察「国内可用」集合随时间的变化
+          STAMP=$(date -u '+%Y%m%d_%H%M')
+          cp crosscheck.csv "crosscheck_${STAMP}.csv"
+          cp crosscheck_summary.md "crosscheck_${STAMP}.md"
+          gh release upload latest "crosscheck_${STAMP}.csv" "crosscheck_${STAMP}.md" --clobber
           echo "已上传到 latest Release"
 
+      # best-effort：把结果也回写到 probe-domestic 分支，方便用 git 看历史。
+      # 推不上去不影响主流程——交叉结果已经发布到 Release 了。
       - name: 推送到 probe-domestic 分支
         if: steps.cn.outputs.found == 'true'
+        continue-on-error: true
         run: |
           set -euo pipefail
-          # 由 push 触发时，checkout 出来的 HEAD 就是 probe-domestic 的最新提交；
-          # 手动触发时 HEAD 是 main，需要显式切过去。
-          # 用 FETCH_HEAD 而不是 origin/probe-domestic——浅克隆下
-          # remote-tracking ref 不一定存在。
-          if [ "${GITHUB_REF_NAME:-}" != "probe-domestic" ]; then
-            git fetch --depth=1 origin probe-domestic
-            git checkout -B probe-domestic FETCH_HEAD
-          fi
-          echo "当前分支: $(git rev-parse --abbrev-ref HEAD) @ $(git rev-parse --short HEAD)"
+          echo "起点: $(git rev-parse --short HEAD) 分支=$(git rev-parse --abbrev-ref HEAD)"
+          # 显式 refspec，确保 remote-tracking ref 一定建出来
+          git fetch --depth=1 origin \
+            +refs/heads/probe-domestic:refs/remotes/origin/probe-domestic
+          git checkout -B probe-domestic refs/remotes/origin/probe-domestic
+          echo "切到: $(git rev-parse --short HEAD)"
           cp crosscheck.csv crosscheck_summary.md list.meta.cn.yml .
           # 逐个 add：git add 只要有一个 pathspec 不匹配就整体失败，
           # 一个都不会被暂存。所以先逐个确认存在
