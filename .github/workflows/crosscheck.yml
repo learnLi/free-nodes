@@ -1,0 +1,122 @@
+name: Cross-check (US vs CN)
+
+# 交叉比对两边的探活结果：
+#   美国侧 —— GitHub Actions 产出（无 GFW 干扰，「已死」判定可信）
+#   国内侧 —— NAS 推送到 probe-domestic 分支的 probe_domestic.csv
+#
+# 国内侧结果不存在时，本工作流安静跳过，不报错。
+
+on:
+  schedule:
+    # 每 6 小时一次
+    - cron: '41 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - 'probe-domestic'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  crosscheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: 迁出代码
+        uses: actions/checkout@v7
+
+      - name: 设置时区
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+      - name: 安装 Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.x'
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 取国内探活结果
+        id: cn
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 origin probe-domestic 2>/dev/null || {
+            echo "国内探活分支尚不存在，跳过本次交叉比对"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          }
+          git show origin/probe-domestic:probe_domestic.csv > probe_domestic.csv
+          echo "国内侧结果：$(wc -l < probe_domestic.csv) 行"
+          echo "found=true" >> "$GITHUB_OUTPUT"
+
+      - name: 取美国探活结果
+        if: steps.cn.outputs.found == 'true'
+        run: |
+          set -euo pipefail
+          curl -sL --max-time 60 \
+            "https://github.com/${{ github.repository }}/releases/latest/download/probe.csv" \
+            -o probe_us.csv
+          wc -l < probe_us.csv
+
+      - name: 交叉比对
+        if: steps.cn.outputs.found == 'true'
+        run: |
+          set -euo pipefail
+          python3 ./scripts/crosscheck.py \
+            --us probe_us.csv \
+            --cn probe_domestic.csv \
+            --out-csv crosscheck.csv \
+            --out-md crosscheck_summary.md \
+            --input-list list.meta.full.yml \
+            --out-cn-list list.meta.cn.yml
+
+      - name: 发布交叉结果
+        if: steps.cn.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          for f in crosscheck.csv crosscheck_summary.md list.meta.cn.yml; do
+            [ -f "$f" ] || continue
+            if gh release view latest >/dev/null 2>&1; then
+              gh release upload latest "$f" --clobber
+            fi
+          done
+          echo "已上传到 latest Release"
+
+      - name: 推送到 probe-domestic 分支
+        if: steps.cn.outputs.found == 'true'
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 origin probe-domestic
+          git checkout -B probe-domestic origin/probe-domestic
+          cp crosscheck.csv crosscheck_summary.md . 2>/dev/null || true
+          [ -f list.meta.cn.yml ] && cp list.meta.cn.yml . || true
+          git add -A crosscheck* list.meta.cn.yml 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "无变化"
+          else
+            git -c user.name="GitHub Actions" -c user.email="actions@github.com" \
+              commit -m "crosscheck: $(date '+%Y-%m-%d %H:%M:%S')"
+            git push origin probe-domestic
+          fi
+
+      - name: 上传运行日志
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: crosscheck-logs
+          path: |
+            crosscheck.csv
+            crosscheck_summary.md
+          retention-days: 14
+          if-no-files-found: ignore

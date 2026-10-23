@@ -171,6 +171,47 @@ fetch_config.yml（上游） → fetch_config.local.yml（本仓库） → local
 本项目在本地运行时探针基本无效：直连 TCP 出国会被墙（对照目标会全部超时）。
 要得到有效数据必须在 CI 或具备出境能力的机器上跑。
 
+### 国内探活：NAS 方案
+
+GitHub **没有**中国大陆区域的 runner（探针自报出口恒为美国，见 `probe_summary.md`）。
+但**家里的 NAS 反而是更好的探测点**：
+
+| 维度 | GitHub runner（美国） | NAS（国内） |
+| :- | :- | :- |
+| 出口路径 | 境外机房 → 境外节点 | **中国住宅宽带 → 境外节点**，与目标用户一致 |
+| IP 信誉 | Azure 机房段，部分节点直接拒绝 | **住宅 IP**，更可能被放行 |
+| IPv6 | **没有**（实测所有 IPv6 节点返回 `Network is unreachable`） | 家宽通常有公网 IPv6（电信/联通给 /56） |
+
+架构是**各司其职**，NAS 只需要跑一个 cron 任务：
+
+```
+GitHub Actions（美国）                     NAS（国内）
+  抓节点 → 探活(US) → 裁剪 → 发布 output  ──▶  拉 output 分支
+                                              跑 probe.py（直连，不走代理）
+                                              写 probe_domestic.csv
+  交叉比对 workflow  ◀── 推回 probe-domestic 分支
+  产出 crosscheck.csv + list.meta.cn.yml
+```
+
+NAS 侧脚本：[`scripts/probe_domestic.sh`](scripts/probe_domestic.sh)
+（只依赖 `git` + `python3`，不需要 Docker、不需要 GitHub Actions）
+
+### 中美交叉表怎么读
+
+**关键陷阱**：GFW 的 RST 注入，和「服务端端口没开」在客户端看来完全一样，都是
+`Connection reset by peer`。所以国内侧的失败**不能**用来判定节点已死。
+
+| | 国内可用 | 国内不可用 |
+| :- | :-: | :-: |
+| **美国可用** | ✅ 真正可用 | ⚠️ 疑似被墙 → **应剔除**（美国版留下的坑） |
+| **美国不可用** | 🔥 被美国误杀 → **应保留** | ❌ 真死 → 剔除 |
+
+所以**裁剪判据继续只用美国侧结果**（那边没有 GFW 干扰，`refused` 才是可信的"已死"）；
+国内侧的价值在于识别「被墙」和「被美国误杀」。
+
+脚本：[`scripts/crosscheck.py`](scripts/crosscheck.py)，
+工作流：[`.github/workflows/crosscheck.yml`](.github/workflows/crosscheck.yml)（每 6 小时跑一次）。
+
 ### 假节点过滤的一处补漏
 
 国内免费节点社区会植入指向 `127.0.0.53`（systemd-resolved 的 DNS stub）的**哨兵节点**，
