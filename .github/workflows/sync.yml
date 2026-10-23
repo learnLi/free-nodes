@@ -51,12 +51,24 @@ jobs:
           # 注意：config.yml 不在其中——本仓库自行维护
           FILES="sources.list fetch_config.yml abpwhite.txt"
           git checkout upstream/master -- $FILES
-          if git diff --quiet -- $FILES; then
+          # git checkout 会同时更新 index 和工作区，所以判据必须是
+          # --cached（index vs HEAD），用 git diff（工作区 vs index）
+          # 永远看不到变化，同步就成了空转。
+          #
+          # 上游的 sources.list 没有末尾换行，本地有。不统一的话每次同步
+          # 都会产生一个内容其实没变的「假差异」。
+          for f in $FILES; do
+            if [ -s "$f" ] && [ -n "$(tail -c 1 "$f")" ]; then
+              printf '\n' >> "$f"
+              git add "$f"
+            fi
+          done
+          if git diff --cached --quiet -- $FILES; then
             echo "changed=unchanged" >> "$GITHUB_OUTPUT"
             echo "上游配置无变更，跳过提交"
           else
             echo "changed=changed" >> "$GITHUB_OUTPUT"
-            git diff --stat -- $FILES | tee diff.txt
+            git diff --cached --stat -- $FILES | tee diff.txt
           fi
 
       - name: 生成上游 config.yml 规则差异报告
