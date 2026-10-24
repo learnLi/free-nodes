@@ -71,35 +71,19 @@ proxies:
     headers:
       Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-160.251.64.80-1063
+- name: '🇯🇵 日本 | JPN #1'
   network: ws
   port: 443
-  server: new3.hucloud-dns.xyz
-  servername: ''
-  skip-cert-verify: true
+  server: 3.112.67.101
+  servername: snip.edgeoneai.cc.cd
   tls: true
-  type: vmess
-  uuid: 2926bbcf-eef0-4d0d-d8a7-400e417608aa
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   ws-opts:
     headers:
-      Host: new3.hucloud-dns.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-172.111.146.64-4847
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  ws-opts:
-    path: /vmess/
-- name: '🇯🇵 日本 | JPN #1'
+      Host: snip.edgeoneai.cc.cd
+    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chromefp=chrome
+- name: '🇯🇵 日本 | JPN #1 #1'
   network: ws
   port: 443
   server: 13.158.39.80
@@ -127,7 +111,7 @@ proxies:
   name: '🇯🇵 日本 | JPN #3'
   network: ws
   port: 443
-  server: 3.112.67.101
+  server: 45.8.173.253
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -136,7 +120,49 @@ proxies:
   ws-opts:
     headers:
       Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@vpn748359672.opengw.net:1458?ed=2560fp=chrome
+    path: /
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #4'
+  network: ws
+  port: 443
+  server: 13.231.172.130
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #5'
+  network: ws
+  port: 443
+  server: 43.165.180.254
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #6'
+  network: ws
+  port: 443
+  server: 60.130.209.253
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /fp=chrome
 - name: 🇯🇵[www.v2nodes.com] vless-JP
   network: ws
   port: 443
@@ -163,18 +189,24 @@ proxies:
       Host: tn1r.eu.cc
     path: /id-pusat
 - name: 🇯🇵[www.v2nodes.com] vless-JP-1...
+  network: ws
   port: 443
-  server: 104.16.111.102
-  tls: false
+  server: 104.16.10.72
+  servername: jp3.yohototo.top
+  tls: true
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #14'
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxywsfp=chrome
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
   port: 443
   server: 137.220.221.179
   tls: false
   type: vless
   uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
   network: ws
   port: 443
   server: 43.170.8.95
@@ -186,7 +218,7 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxywsfp=firefox
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
   port: 35544
   server: funagfrdfs.alixxplay.com
   tls: false
@@ -237,7 +269,7 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1598...
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1598... #1'
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   port: 8388
   server: 191.223.221.53

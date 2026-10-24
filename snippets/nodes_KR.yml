@@ -1,6 +1,19 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | A99D73
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
   name: 🇰🇷 韩国-001
   network: tcp
   port: 123
@@ -43,10 +56,4 @@ proxies:
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-0174
-  password: TEzjfAYq2IjtuoS
-  port: 6679
-  server: 141.164.45.187
   type: ss

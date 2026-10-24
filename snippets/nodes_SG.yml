@@ -1,14 +1,55 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | A4790F
-  network: tcp
-  port: 47014
-  server: fer-5.povrak.ir
-  servername: ''
-  tls: false
+  name: SG 🇸🇬 | @Raydikalx | 1735A6
+  network: ws
+  port: 443
+  server: 2nj8qyoHuZwgCP8J.v.3dns.vip
+  servername: 2nj8qyoHuZwgCP8J.v.3dns.vip
+  tls: true
   type: vmess
-  uuid: d4aa69e8-2739-42b3-9cd4-af1e4fb04ad5
+  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
+  ws-opts:
+    headers:
+      Host: 2nj8qyoHuZwgCP8J.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | C62756
+  network: ws
+  port: 8443
+  server: 206.238.239.109
+  tls: true
+  type: vmess
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  ws-opts:
+    headers:
+      Host: uk.frnhk.xyz
+    path: /London31
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | EB3982
+  network: tcp
+  port: 35007
+  server: 13.140.83.196
+  servername: 13.140.83.196
+  tls: true
+  type: vmess
+  uuid: 0bef47fa-3632-424e-bcc3-899be654774f
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | F58635
+  network: ws
+  port: 443
+  server: Aim7HqTuvNOofcsx.v.3dns.vip
+  servername: Aim7HqTuvNOofcsx.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: Aim7HqTuvNOofcsx.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
@@ -39,19 +80,47 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /ws-vmess
+- alterId: 64
+  cipher: auto
+  name: 🇸🇬SG-118.107.46.173-7677
+  network: ws
+  port: 443
+  server: 118.107.46.173
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    path: /path/080712342310
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-18.143.123.35-1433
+  name: 🇸🇬SG-15.235.147.186-0025
   network: ws
   port: 80
-  server: 18.143.123.35
+  server: 15.235.147.186
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 68df4838-46d0-4b5b-c3f0-a40ec7063245
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
   ws-opts:
-    path: /
+    headers:
+      Host: 15.235.147.186
+    path: /sshkit/Ertusg86/635014638c264/
+- alterId: 64
+  cipher: auto
+  name: 🇸🇬SG-202.79.171.157-2654
+  network: ws
+  port: 443
+  server: 202.79.171.157
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: fb3583a3-7717-4fe5-9146-3301861f9f41
+  ws-opts:
+    path: /path/243535322906
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -77,6 +146,17 @@ proxies:
   port: 8080
   server: 68.183.227.4
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬SG_2|2.3MB/s
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: 817aa69.default.nintendo.com:112719
+    mode: tls
+  port: 2377
+  server: 18.143.63.164
+  type: ss
+  udp: true
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1559... #1'
   password: qpSevKaUXYQKvSjp
