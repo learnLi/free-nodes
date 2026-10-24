@@ -1,13 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | EE5C14
-  network: tcp
-  port: 443
-  server: tlash.jahannetface.sbs
-  tls: false
-  type: vmess
-  uuid: 7c12b328-75d8-4dd8-9670-21122f24f0c5
 - name: '🇪🇪 爱沙尼亚 | EST #1'
   network: ws
   port: 443
@@ -20,7 +11,7 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chromefp=chrome
-- name: 🇪🇪EE_1|3.0MB/s
+- name: 🇪🇪EE_2|1.7MB/s
   port: 9443
   server: 95.153.31.66
   skip-cert-verify: true
