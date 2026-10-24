@@ -1,84 +1,129 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 29A266
+  name: 'EPODONIOS #929'
   network: tcp
-  port: 180
-  server: 82.198.246.97
-  servername: null
+  port: 22324
+  server: 172.111.38.100
+  servername: ''
   tls: false
   type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 61DE70
+  name: US 🇺🇸 | @Raydikalx | 0E8B4A
   network: tcp
   port: 443
-  server: 165.140.217.30
+  server: 165.140.217.2
   servername: ''
   tls: false
   type: vmess
   uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
 - alterId: 0
   cipher: auto
-  name: 'US 🇺🇸 | @Raydikalx | 8C331C #1'
+  name: US 🇺🇸 | @Raydikalx | 205480
   network: tcp
-  port: 48111
-  server: 129.146.143.80
-  servername: 129.146.143.80
+  port: 180
+  server: 82.198.246.233
+  servername: null
   tls: false
   type: vmess
-  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
-- alterId: 2
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 9212EB
-  network: ws
-  port: 22643
-  server: tk.hzlt.tkddns.xyz
-  servername: zxjp-c.tkong.cc
-  tls: true
-  type: vmess
-  uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
-  ws-opts:
-    headers:
-      Host: zxjp-c.tkong.cc
-    path: /
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | E86D90
-  network: ws
-  port: 52008
-  server: 38.95.119.243
+  name: US 🇺🇸 | @Raydikalx | 49700F
+  network: tcp
+  port: 8881
+  server: 165.22.47.62
   servername: ''
   tls: false
   type: vmess
-  uuid: 5d7acc8e-f539-44e0-d255-41fc14cfc877
-  ws-opts:
-    path: /
+  uuid: db5afae4-ac23-41a6-8378-f307a9a47436
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | F6BBC9
+  name: US 🇺🇸 | @Raydikalx | AA510F
+  network: tcp
+  port: 180
+  server: 82.198.246.37
+  servername: null
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | C438F1
+  network: tcp
+  port: 20001
+  server: 74.211.102.179
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 7f5f0705-3dfb-4f56-9657-c95cade2ba83
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | D53482
+  network: xhttp
+  port: 443
+  server: nice.iranapplecenter.com
+  servername: default.ssl.fastly.net
+  tls: true
+  type: vmess
+  uuid: 6ba68c69-e108-502d-7b1c-e806fbc3cccd
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | E148A7
   network: ws
-  port: 28167
-  server: 142.171.48.179
+  port: 40443
+  server: 163.245.196.106
   servername: ''
   tls: false
   type: vmess
-  uuid: a0181cb3-fcc5-4a0a-9e71-db943a2309fa
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
-    headers:
-      Host: gw.alicdn.com
+    path: /user_xexevil tel
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | E4121F
+  network: ws
+  port: 8080
+  server: 185.227.252.204
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 3b8687aa-e824-4a29-a6f7-d21297545c3f
+  ws-opts:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇺🇸 United States-1525
-  network: grpc
-  port: 2087
-  server: elma.ns.cloudflare.com
-  servername: 1fdSNA119228928OpS2smTaB228aAsDDsd1ea11442027589.1-senator.info
-  tls: true
+  name: US4
+  network: tcp
+  port: 2053
+  server: 45.39.255.99
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 2a3263e2-891c-4446-b474-a8c63acb6e25
+  uuid: d49a2534-7ac4-429f-879d-de48296d19b4
+- alterId: 0
+  cipher: auto
+  name: US5
+  network: tcp
+  port: 180
+  server: 82.198.246.97
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- alterId: 0
+  cipher: auto
+  name: vmess-1827161859
+  network: tcp
+  port: 18000
+  server: 38.91.107.49
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
   name: 🇺🇸 美国2|@ripaojiedian
@@ -111,47 +156,75 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇺🇸US-103.224.182.217-1395
+  name: 🇺🇸US-103.224.182.210-0628
   network: ws
   port: 443
-  server: lg10.cfcdn1.xyz
-  servername: lg10.cfcdn1.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-  ws-opts:
-    headers:
-      Host: lg10.cfcdn1.xyz
-    path: /A2DJOPFT
-- alterId: 64
-  cipher: auto
-  name: 🇺🇸US-142.4.110.10-0735
-  network: ws
-  port: 30000
-  server: 142.4.110.10
+  server: hms082.gwdef.sbs
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 08fc4943-4c7a-4a69-9265-fb961eaea917
+  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
   ws-opts:
     headers:
-      Host: www.25208010.xyz
-    path: /path/1703755625558
+      Host: gwdef.sbs
+    path: /linkws
 - alterId: 64
   cipher: auto
-  name: 🇺🇸US-142.4.112.7-8116
+  name: 🇺🇸US-148.135.33.140-0745
   network: ws
   port: 443
-  server: 142.4.112.7
+  server: 148.135.33.140
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
-    path: /path/1689849487190
+    headers:
+      Host: www.31270022.xyz
+    path: /path/1704188270531
+- alterId: 64
+  cipher: auto
+  name: 🇺🇸US-154.85.1.128-7531
+  network: ws
+  port: 443
+  server: 154.85.1.128
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    path: /path/1684580752213
+- alterId: 4
+  cipher: auto
+  name: 🇺🇸US-157.254.193.68-4713
+  network: ws
+  port: 10020
+  server: 157.254.193.68
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: f1f45005-f074-430b-a4db-7109f50c3bce
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸US-162.0.232.36-4548
+  network: ws
+  port: 443
+  server: hohm.microsoft.com
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+  ws-opts:
+    headers:
+      Host: fr1.trump2023.org
+    path: /9JZFDTKE
 - alterId: 64
   cipher: auto
   name: 🇺🇸US-23.224.101.102-1128
@@ -169,19 +242,45 @@ proxies:
     path: /footers
 - alterId: 64
   cipher: auto
-  name: 🇺🇸US-45.58.174.92-0756
+  name: 🇺🇸US-23.224.110.182-7126
   network: ws
   port: 443
-  server: 45.58.174.92
+  server: 23.224.110.182
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
+    path: /path/080712342310
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸US-38.173.110.65-4322
+  network: ws
+  port: 443
+  server: tw02.nttkk.com
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 3a9c0d0c-e0fd-3145-a414-ec265e7010b7
+  ws-opts:
     headers:
-      Host: www.74386585.xyz
-    path: /path/1704188270531
+      Host: tw02.nttkk.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸US-38.59.243.133-7053
+  network: ws
+  port: 80
+  server: 38.59.243.133
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 58c76d75-563c-4694-84c4-a798d55e90ed
+  ws-opts:
+    path: /
 - alterId: 0
   cipher: auto
   name: 🇺🇸US-5.34.178.157-0020
@@ -197,21 +296,19 @@ proxies:
     headers:
       Host: 5.34.178.157
     path: /vpnjantit
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: 🇺🇸US-54.215.31.113-0812
+  name: 🇺🇸US-74.217.179.133-6916
   network: ws
-  port: 8080
-  server: www.darkroom.lol
+  port: 443
+  server: 74.217.179.133
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
-    headers:
-      Host: www.darkroom.lol
-    path: /
+    path: /path/1685783030182
 - name: 美国2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -228,34 +325,20 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇺🇸 美国 CloudFlare节点
-  password: humanity
+- name: '🇺🇸 美国 | USA #33'
+  password: va3E77I9fZCnCVcGKkxBCfz5
   port: 443
-  server: 108.162.194.134
-  skip-cert-verify: false
-  sni: www.pleadcourt.org
-  type: trojan
-- alpn:
-  - http/1.1
-  name: '🇺🇸 美国 | USA #20'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.45.38
+  server: vpn.liumr.top
   skip-cert-verify: true
-  sni: www.trusteeforward.com
+  sni: vpn.liumr.top
   type: trojan
   udp: true
-  ws-opts:
-    headers:
-      Host: www.trusteeforward.com
-    path: /assignment
-- name: '🇺🇸 美国 | USA #24'
+- name: 🇺🇸US美国丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.45.38
+  server: 216.24.57.7
   skip-cert-verify: true
-  sni: www.trusteeforward.com
+  sni: www.ignitelimit.com
   type: trojan
 - name: 🇺🇸[www.v2nodes.com] trojan-US-...
   password: 600421cf-11d7-429f-a65b-c30397f1bc03
@@ -269,10 +352,10 @@ proxies:
   server: blog.findlocaljobnetworkandbuildcommunityconnections.com
   type: trojan
 - cipher: aes-256-gcm
-  name: 'EPODONIOS #50'
-  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
-  port: 18443
-  server: 195.133.5.194
+  name: 'EPODONIOS #33'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.215.132.9
   type: ss
 - cipher: aes-128-gcm
   name: shadowsocks-1827146051
@@ -323,6 +406,12 @@ proxies:
   server: 173.244.56.9
   type: ss
 - cipher: aes-128-gcm
+  name: shadowsocks-1827146742
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.244
+  type: ss
+- cipher: aes-128-gcm
   name: shadowsocks-1827146815
   password: shadowsocks
   port: 443
@@ -341,16 +430,28 @@ proxies:
   server: 45.86.51.18
   type: ss
 - cipher: aes-256-gcm
+  name: shadowsocks-1875023024
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 193.151.163.18
+  type: ss
+- cipher: aes-256-gcm
   name: shadowsocks-1875129451
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 193.151.160.18
   type: ss
 - cipher: aes-256-gcm
-  name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #12'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.45
+  name: shadowsocks-1887075356
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+  port: 18443
+  server: 195.133.5.194
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇷🇺 俄罗斯 | RUS
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  port: 18443
+  server: 176.32.33.153
   type: ss
 - cipher: aes-256-gcm
   name: 🇺🇸US-15.204.247.206-0167
@@ -377,12 +478,6 @@ proxies:
   server: 216.105.168.18
   type: ss
 - cipher: aes-256-gcm
-  name: '🇺🇸[www.v2nodes.com] ss-US-1602... #3'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.151.163.18
-  type: ss
-- cipher: aes-256-gcm
   name: '🇺🇸[www.v2nodes.com] ss-US-1602... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
@@ -400,21 +495,9 @@ proxies:
   port: 12996
   server: 64.42.181.102
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇺🇸[www.v2nodes.com] ss-US-1603... #6'
-  password: gWXhRbGoI53aSRV8fv9alMwr
-  port: 443
-  server: 216.128.153.186
-  type: ss
 - cipher: aes-256-gcm
-  name: '🇺🇸[www.v2nodes.com] ss-US-1603... #7'
+  name: '🇺🇸[www.v2nodes.com] ss-US-1603... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 185.230.230.18
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇺🇸[www.v2nodes.com] ss-US-1603... #8'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.215.132.18
   type: ss

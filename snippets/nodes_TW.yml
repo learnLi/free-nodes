@@ -1,31 +1,31 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 82C740
+  name: TW 🇹🇼 | @Raydikalx | 9DA953
   network: ws
   port: 443
-  server: 654168416355441.oylfmxz.cn
-  servername: 654168416355441.oylfmxz.cn
+  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
   tls: true
   type: vmess
   uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
     headers:
-      Host: 654168416355441.oylfmxz.cn
+      Host: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
     path: /
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | C124EF
+  name: 🇹🇼TW-165.154.246.107-4317
   network: ws
-  port: 443
-  server: 654168416355441.d6f54hd1j.cc
+  port: 80
+  server: 165.154.246.107
+  servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
   ws-opts:
     headers:
-      Host: 654168416355441.d6f54hd1j.cc
+      Host: tms.dingtalk.com
     path: /
 - name: 台湾|@ripaojiedian
   network: tcp

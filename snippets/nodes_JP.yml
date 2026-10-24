@@ -1,36 +1,31 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 161464
+  name: JP 🇯🇵 | @Raydikalx | 75C7ED
   network: ws
-  port: 443
-  server: tokyo02.zgjok.com
-  servername: tokyo02.zgjok.com
-  tls: true
-  type: vmess
-  uuid: 3fe113f9-e564-4111-b8c7-11f597687689
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 56BDCB
-  network: tcp
-  port: 18112
-  server: 161.33.135.142
+  port: 80
+  server: 168.138.43.75
   servername: ''
   tls: false
   type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  ws-opts:
+    headers:
+      Host: None
+    path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | F79E1F
-  network: tcp
-  port: 18112
-  server: 168.110.60.104
-  servername: null
-  tls: false
+  name: JP 🇯🇵 | @Raydikalx | E6D44D
+  network: ws
+  port: 2083
+  server: 140.238.55.84
+  servername: or.521166.xyz
+  skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  ws-opts:
+    path: /or3
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -78,18 +73,18 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-138.2.52.176-1057
+  name: 🇯🇵JP-160.251.64.80-1063
   network: ws
-  port: 24429
-  server: 138.2.52.176
+  port: 443
+  server: new3.hucloud-dns.xyz
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 8d5ca59e-8e3e-4a10-e023-53cfcd87a72b
+  uuid: 2926bbcf-eef0-4d0d-d8a7-400e417608aa
   ws-opts:
     headers:
-      Host: 138.2.52.176
+      Host: new3.hucloud-dns.xyz
     path: /
 - alterId: 0
   cipher: auto
@@ -104,21 +99,6 @@ proxies:
   uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   ws-opts:
     path: /vmess/
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-35.78.82.77-4647
-  network: ws
-  port: 12889
-  server: gtm1.ktmwan.net
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 4941aa8d-07d2-408c-be2c-117debecba30
-  ws-opts:
-    headers:
-      Host: gtm1.ktmwan.net
-    path: /
 - name: 日本2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -127,7 +107,7 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
+- name: 🇯🇵[www.v2nodes.com] trojan-JP-...
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 45.32.52.173
@@ -164,7 +144,7 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1598... #1'
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1598...
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   port: 8388
   server: 191.223.221.53

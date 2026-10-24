@@ -1,13 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 9E4ECB
+  name: SG 🇸🇬 | @Raydikalx | A4790F
   network: tcp
-  port: 53385
-  server: x-ui.zxhh.top
+  port: 47014
+  server: fer-5.povrak.ir
+  servername: ''
   tls: false
   type: vmess
-  uuid: 6aac0241-0c66-4bec-942d-e8a8d9b11a3a
+  uuid: d4aa69e8-2739-42b3-9cd4-af1e4fb04ad5
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
@@ -51,21 +52,6 @@ proxies:
   uuid: 68df4838-46d0-4b5b-c3f0-a40ec7063245
   ws-opts:
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-47.129.129.227-1549
-  network: ws
-  port: 9111
-  server: st-1.dnspro.icu
-  servername: hkt02.dnspro.icu
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
-  ws-opts:
-    headers:
-      Host: st-1.dnspro.icu
-    path: /iso
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -74,26 +60,6 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇸🇬 新加坡 | SGP #13'
-  password: '!!str 123456'
-  port: 2096
-  server: 104.18.35.86
-  skip-cert-verify: true
-  sni: 321dfbc6.uir-9i6.pages.dev
-  type: trojan
-- name: 🇸🇬 新加坡 | SGP 4
-  network: ws
-  password: '!!str 123456'
-  port: 2096
-  server: 104.18.35.86
-  skip-cert-verify: true
-  sni: 321dfbc6.uir-9i6.pages.dev
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: 321dfbc6.uir-9i6.pages.dev
-    path: /
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
   password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
   port: 443
@@ -112,7 +78,7 @@ proxies:
   server: 68.183.227.4
   type: ss
 - cipher: aes-256-gcm
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1559...
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1559... #1'
   password: qpSevKaUXYQKvSjp
   port: 8388
   server: 139.180.220.175

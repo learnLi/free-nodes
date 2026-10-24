@@ -1,15 +1,27 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 06B8FE
+  name: CN 🇨🇳 | @Raydikalx | 09B96A
   network: ws
   port: 10086
   server: 120.48.133.162
   servername: ''
   tls: false
   type: vmess
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
-  ws-opts: {}
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
+  ws-opts:
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 44F22F
+  network: tcp
+  port: 30830
+  server: v30.hdacd.com
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
   name: CN 🇨🇳 | @Raydikalx | 557B30
@@ -33,46 +45,15 @@ proxies:
   uuid: 148e82ae-5014-4a1a-a783-dd63fa9cdc9d
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | A15219
-  network: tcp
-  port: 50017
-  server: 36.133.78.37
-  tls: false
-  type: vmess
-  uuid: abcb006d-739f-4cec-b13f-12c10d334d92
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | B9C3BB
-  network: tcp
-  port: 50014
-  server: 36.133.78.37
-  tls: false
-  type: vmess
-  uuid: f114d414-1535-4321-856c-29979eeed799
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-47.242.95.19-2367
+  name: 🇨🇳CN-47.242.61.125-6650
   network: http
-  port: 40988
-  server: 47.242.95.19
-  servername: ''
-  skip-cert-verify: true
+  port: 51784
+  server: 47.242.61.125
+  servername: 47.242.61.125
+  skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 1e60b35a-db17-4283-8b99-7358ee7d5fd5
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-47.244.120.197-0187
-  network: ws
-  port: 36703
-  server: 47.244.120.197
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  ws-opts:
-    path: /
+  uuid: 431c4c01-b596-4d12-a9e6-4f7f21fe82ba
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-47.244.120.197-4839
@@ -88,7 +69,7 @@ proxies:
     path: /arki?ed=2048
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.244.120.197-4840
+  name: '🇨🇳CN-47.244.120.197-4840 #1'
   network: ws
   port: 44867
   server: 47.244.120.197
@@ -99,19 +80,6 @@ proxies:
   uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
   ws-opts:
     path: /arki?ed=2048
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-47.254.89.211-7539
-  network: ws
-  port: 80
-  server: 47.254.89.211
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 203b2ab2-4994-4193-8193-6631a575edb0
-  ws-opts:
-    path: /GSoTl9ZoYG5V2R0k4tUTGI8k
 - alterId: 64
   cipher: auto
   name: 🇨🇳_CN_中国
@@ -121,16 +89,13 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: '2'
+- alterId: 0
   cipher: auto
-  name: 🇳🇱NL_2|2.5MB/s
-  network: tcp
-  port: 30829
-  server: v29.hdacd.com
-  servername: v29.hdacd.com
-  skip-cert-verify: false
+  name: '🇨🇳_CN_中国 #1'
+  network: ws
+  port: 10086
+  server: 120.48.133.162
   tls: false
   type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  xudp: true
+  uuid: a01e5d56-464f-45b9-b600-164db4700162
+  ws-opts: {}

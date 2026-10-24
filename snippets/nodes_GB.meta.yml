@@ -1,28 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | B548C8
-  network: ws
-  port: 443
-  server: IiIIIi9.huANgShAnG.us.cI
-  servername: IiiIIi9.HuaNgshaNG.us.Ci
-  tls: true
-  type: vmess
-  uuid: dd39bb7d-2bea-41b5-be20-fa228a45f639
-  ws-opts:
-    headers:
-      Host: IIiiiI9.HUangsHANG.us.cI
-    path: /vitRvGVofV7ia41dH
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | D632BF
+  name: GB 🇬🇧 | @Raydikalx | 88F306
   network: tcp
-  port: 2053
-  server: uk.connfull.org
+  port: 34204
+  server: 206.245.166.132
   servername: ''
-  tls: true
+  tls: false
   type: vmess
-  uuid: 262ce956-68fd-48af-918e-bd829819030c
+  uuid: f004547b-58ec-4536-9608-0d68982ea904
 - alpn:
   - h2
   - http/1.1
@@ -143,20 +129,6 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- client-fingerprint: chrome
-  name: '🇬🇧 英国 | GBR #2'
-  network: ws
-  port: 443
-  server: wwww.qarvian.ir
-  servername: firefox.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9f5f0438-0d05-44a0-b9bd-a2b91780b2a0
-  ws-opts:
-    headers:
-      Host: albaniaoijji.global.ssl.fastly.net
-    path: /
 - name: 🇬🇧[www.v2nodes.com] vless-GB-1...
   network: ws
   port: 443
@@ -170,7 +142,7 @@ proxies:
       Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #13'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #15'
   network: ws
   port: 443
   server: 146.75.59.186
@@ -182,35 +154,66 @@ proxies:
     headers:
       Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
     path: /
-- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #14'
+- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #16'
   port: 10002
   server: connect.hondamotor.site
   tls: false
   type: vless
   uuid: c6362720-0931-4b91-b187-d8ecf3149734
-- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #15'
+- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #17'
   port: 1222
   server: 23.81.36.148
   tls: false
   type: vless
   uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #17'
+- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
   port: 8443
   server: node-uk.connectsuite.org
   tls: true
   type: vless
   uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+- client-fingerprint: chrome
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
+  network: ws
+  port: 443
+  server: wwww.qarvian.ir
+  servername: firefox.com
+  tls: true
+  type: vless
+  uuid: 9f5f0438-0d05-44a0-b9bd-a2b91780b2a0
+  ws-opts:
+    headers:
+      Host: albaniaoijji.global.ssl.fastly.net
+    path: /
+- encryption: none
+  name: 🇬🇧_GB_英国
+  network: tcp
+  port: 22222
+  server: 51.24.209.55
+  tls: false
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- encryption: none
+  name: '🇬🇧_GB_英国 #1'
+  network: tcp
+  port: 22223
+  server: 51.24.209.55
+  tls: false
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- encryption: none
+  name: '🇬🇧_GB_英国 #2'
+  network: tcp
+  port: 22224
+  server: 51.24.209.55
+  tls: false
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - cipher: aes-128-gcm
   name: shadowsocks-1827146143
   password: shadowsocks
   port: 443
   server: 141.98.101.181
-  type: ss
-- cipher: aes-256-gcm
-  name: shadowsocks-1827147261
-  password: g5h5jleTRSyO3Rk4
-  port: 80
-  server: 149.102.132.184
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.10-0106
@@ -283,12 +286,6 @@ proxies:
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.180
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.181-0087
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.181
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.184-0072
@@ -393,12 +390,6 @@ proxies:
   server: 82.38.31.208
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.210-0050
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.210
-  type: ss
-- cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.212-0069
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
@@ -471,12 +462,6 @@ proxies:
   server: 82.38.31.47
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.48-0115
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.48
-  type: ss
-- cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.49-0105
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
@@ -500,23 +485,11 @@ proxies:
   port: 8080
   server: 82.38.31.66
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.82-0111
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.82
-  type: ss
 - cipher: aes-256-gcm
   name: 🇬🇧GB-94.156.250.148-0145
   password: RexnBgU7EV5ADxG
   port: 7001
   server: 94.156.250.148
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇬🇧[www.v2nodes.com] ss-GB-1451...
-  password: shadowsocks
-  port: 443
-  server: 158.173.24.73
   type: ss
 - cipher: aes-256-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1602... #1'
@@ -531,43 +504,17 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇬🇧GB_1|1.7MB/s
+- name: 🇬🇧GB_1|1.4MB/s
   password: None
   port: 443
-  server: 185.164.138.156
+  server: 212.102.63.61
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_2|1.2MB/s
-  password: None
-  port: 443
-  server: 212.102.63.31
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_3|1.6MB/s
-  port: 9443
-  server: 84.233.178.33
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_4|1.8MB/s
-  port: 443
-  server: 84.17.50.193
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_5|2.6MB/s
-  password: None
-  port: 443
-  server: 212.102.63.1
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_6|1.6MB/s
+- name: 🇬🇧GB_2|1.8MB/s
   password: None
   port: 9443
-  server: 84.17.50.214
+  server: 37.120.233.34
   skip-cert-verify: true
   tls: true
   type: http
