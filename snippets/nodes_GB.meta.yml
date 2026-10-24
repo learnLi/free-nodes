@@ -1,7 +1,7 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 360227
+  name: 'GB 🇬🇧 | @Raydikalx | 360227 #1'
   network: ws
   port: 80
   server: 57.129.132.223
@@ -146,7 +146,7 @@ proxies:
       Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #11'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #14'
   network: ws
   port: 443
   server: 146.75.59.186
@@ -158,7 +158,7 @@ proxies:
     headers:
       Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
     path: /
-- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #12'
+- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #15'
   port: 10002
   server: connect.hondamotor.site
   tls: false
@@ -168,7 +168,7 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: chrome
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #15'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #18'
   network: tcp
   port: 8443
   server: node-uk.connectsuite.org
@@ -176,8 +176,20 @@ proxies:
   tls: true
   type: vless
   uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
+  network: ws
+  port: 443
+  server: wwww.qarvian.ir
+  servername: firefox.com
+  tls: true
+  type: vless
+  uuid: 9f5f0438-0d05-44a0-b9bd-a2b91780b2a0
+  ws-opts:
+    headers:
+      Host: albaniaoijji.global.ssl.fastly.net
+    path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
   network: ws
   port: 443
   server: wwww.qarvian.ir
@@ -189,6 +201,25 @@ proxies:
     headers:
       Host: albaniaoijji.global.ssl.fastly.net
     path: /
+- alpn:
+  - h2
+  - http/1.1
+  - h3
+  client-fingerprint: chrome
+  name: 🇬🇧GB_2|1.6MB/s
+  network: ws
+  password: 8yup05o4lz0csoxb
+  port: 2083
+  server: 216.24.57.225
+  skip-cert-verify: true
+  sni: fin.netvia.ir
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/62.0.3202.94 Safari/537.36
+    path: /YaujaGsyr
 - cipher: aes-128-gcm
   name: shadowsocks-1827146143
   password: shadowsocks
@@ -514,29 +545,36 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇬🇧GB_1|1.4MB/s
+- name: 🇬🇧GB_4|1.7MB/s
+  password: None
+  port: 443
+  server: 37.120.233.50
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇬🇧GB_5|2.9MB/s
   port: 443
   server: 185.164.138.156
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_2|2.2MB/s
-  port: 9443
-  server: 84.233.178.33
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_3|3.4MB/s
+- name: 🇬🇧GB_6|2.9MB/s
   password: None
   port: 443
-  server: 212.102.63.31
+  server: 212.102.63.61
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇬🇧GB_4|3.1MB/s
+- name: 🇬🇧GB_7|1.7MB/s
   password: None
   port: 443
   server: 212.102.63.1
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇬🇧GB_8|2.7MB/s
+  port: 443
+  server: 84.17.50.193
   skip-cert-verify: true
   tls: true
   type: http

@@ -1,7 +1,7 @@
 proxies:
 - alterId: 32
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 6D2CCE
+  name: 'US 🇺🇸 | @Raydikalx | 6D2CCE #1'
   network: ws
   port: 443
   server: 77.83.141.171
@@ -50,7 +50,7 @@ proxies:
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | F4AE80
+  name: 'US 🇺🇸 | @Raydikalx | F4AE80 #1'
   network: ws
   port: 443
   server: 66.241.124.229
@@ -210,24 +210,9 @@ proxies:
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     path: /path/1683881458407
-- alterId: 4
-  cipher: auto
-  name: 🇺🇸US-192.96.204.250-4443
-  network: ws
-  port: 443
-  server: 192.96.204.250
-  servername: usa-washington.lvuft.com
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: usa-washington.lvuft.com
-    path: /ws
 - alterId: 64
   cipher: auto
-  name: 🇺🇸US-198.2.208.68-7258
+  name: '🇺🇸US-198.2.208.68-7258 #1'
   network: ws
   port: 443
   server: 198.2.208.68
@@ -298,6 +283,21 @@ proxies:
     headers:
       Host: tw02.nttkk.com
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸US-5.34.178.157-0013
+  network: ws
+  port: 10000
+  server: 5.34.178.157
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: c6a44394-4f83-11ed-af9f-bb261eedc702
+  ws-opts:
+    headers:
+      Host: 5.34.178.157
+    path: /vpnjantit
 - name: 美国2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -343,7 +343,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: 🇺🇸 美国 | USA 24
+- name: '🇺🇸 美国 | USA 24 #1'
   network: ws
   password: humanity
   port: 443
@@ -356,6 +356,18 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
+- name: 🇺🇸US-66.23.203.21-4911
+  password: ae7eb4dwyaz25pxwgq59
+  port: 59689
+  server: 66.23.203.21
+  type: trojan
+- name: 🇺🇸US美国丨yoyapai.com\r
+  password: humanity
+  port: 443
+  server: 216.24.57.7
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
 - name: 🇺🇸[www.v2nodes.com] trojan-US-...
   password: dba20dcb635e430fa4d3bfc303a149d2
   port: 443
@@ -404,6 +416,12 @@ proxies:
   server: 173.244.56.9
   type: ss
 - cipher: aes-128-gcm
+  name: shadowsocks-1827146742
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.244
+  type: ss
+- cipher: aes-128-gcm
   name: shadowsocks-1827146815
   password: shadowsocks
   port: 443
@@ -445,6 +463,12 @@ proxies:
   port: 9102
   server: 167.88.61.14
   type: ss
+- cipher: aes-128-gcm
+  name: 🇺🇸US-173.244.56.6-0093
+  password: shadowsocks
+  port: 443
+  server: 173.244.56.6
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇺🇸US-198.98.53.130-0178
   password: eDfN7SODQceIOmIAbtJJtK
@@ -456,12 +480,6 @@ proxies:
   password: hCCWOcIsK5wrFz4OX70rWf
   port: 443
   server: 216.105.168.18
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇺🇸US-37.19.198.244-0143
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.244
   type: ss
 - cipher: aes-256-gcm
   name: '🇺🇸[www.v2nodes.com] ss-US-1602... #1'

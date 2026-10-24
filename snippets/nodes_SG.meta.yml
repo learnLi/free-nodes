@@ -1,19 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C62756
-  network: ws
-  port: 8443
-  server: 206.238.239.109
-  tls: true
-  type: vmess
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  ws-opts:
-    headers:
-      Host: uk.frnhk.xyz
-    path: /London31
-- alterId: 0
-  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -42,19 +29,6 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /ws-vmess
-- alterId: 64
-  cipher: auto
-  name: 🇸🇬SG-118.107.46.173-7677
-  network: ws
-  port: 443
-  server: 118.107.46.173
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    path: /path/080712342310
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-15.235.147.186-0025
@@ -291,7 +265,7 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG #...'
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #1'
   network: ws
   port: 443
   server: 172.64.152.241
@@ -303,19 +277,7 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=chromefp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG #... #1'
-  network: ws
-  port: 2082
-  server: 104.18.0.181
-  servername: hhlfy.twiladaphne.ndjp.net
-  tls: false
-  type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  ws-opts:
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-    path: /fp
-- name: '🇸🇬[www.v2nodes.com] vless-SG #... #3'
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #2'
   network: ws
   port: 443
   server: 185.193.29.123
@@ -351,7 +313,13 @@ proxies:
     headers:
       Host: parsa-panel-u48we.wotic15356.workers.dev
     path: /pulsefp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG #... #8'
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #7'
+  port: 2082
+  server: 104.18.0.181
+  tls: false
+  type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #9'
   network: ws
   port: 443
   server: ccc.010304.xyz
@@ -457,20 +425,20 @@ proxies:
     headers:
       Host: lucasjow.us.ci
     path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub?ed=2048security=tls
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #15'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #16'
   port: 16263
   server: 47.237.74.17
   tls: false
   type: vless
   uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #19'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #20'
   port: 12512
   server: 46.137.202.178
   tls: false
   type: vless
   uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
 - encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #21'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #22'
   network: ws
   port: 8443
   server: 172.67.155.65
@@ -485,18 +453,6 @@ proxies:
     path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub?ed=2048
 - name: 🇸🇬[www.v2nodes.com] vless-SG-9...
   network: ws
-  port: 8080
-  server: 172.64.150.43
-  servername: hhlfy.twiladaphne.ndjp.net
-  tls: false
-  type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  ws-opts:
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-    path: /sg-melbi
-- name: '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
-  network: ws
   port: 443
   server: 188.114.97.6
   servername: courses.mftplus.qzz.io
@@ -509,7 +465,7 @@ proxies:
     path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=fp=unsafe
 - client-fingerprint: unsafe
   encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #4'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
   network: ws
   port: 443
   server: 188.114.97.6
@@ -547,7 +503,7 @@ proxies:
   server: 68.183.227.4
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇸🇬SG_2|2.3MB/s
+  name: 🇸🇬SG_1|1.8MB/s
   password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
   port: 2377
   server: 18.143.63.164

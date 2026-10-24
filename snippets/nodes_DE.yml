@@ -70,28 +70,6 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 4C5D05
-  network: ws
-  port: 10000
-  server: 51.75.74.253
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 678a8a2c-aca8-11f1-b342-afa6288e22f8
-  ws-opts:
-    path: /vpnjantit
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 5BA70C
-  network: tcp
-  port: 2096
-  server: 185.204.171.3
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: d36f4d3c-07c0-4694-bde6-69643162f082
-- alterId: 0
-  cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 85167A
   network: tcp
   port: 8081
@@ -134,6 +112,16 @@ proxies:
   uuid: ee2a9739-67c1-1cc8-8233-cf0b47895920
 - alterId: 0
   cipher: auto
+  name: 'DE 🇩🇪 | @Raydikalx | B946DD #1'
+  network: tcp
+  port: 42812
+  server: 195.26.26.7
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 5e109cd6-e8b0-4957-a9bb-71aa68b56f6d
+- alterId: 0
+  cipher: auto
   name: DE 🇩🇪 | @Raydikalx | BB13BB
   network: ws
   port: 443
@@ -158,18 +146,9 @@ proxies:
   uuid: 22f938a5-ca11-4e04-aef5-05a297544916
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | D9E7C7
-  network: tcp
-  port: 2110
-  server: 178.105.168.171
-  tls: false
-  type: vmess
-  uuid: 06d4d001-4168-4876-9416-7caecf578f40
-- alterId: 0
-  cipher: auto
   grpc-opts:
     grpc-service-name: Telegram=@Net2ray
-  name: DE 🇩🇪 | @Raydikalx | F68888
+  name: 'DE 🇩🇪 | @Raydikalx | F68888 #1'
   network: grpc
   port: 46277
   server: 136.243.83.105
@@ -177,16 +156,6 @@ proxies:
   tls: true
   type: vmess
   uuid: aa8a26cd-94f4-4f11-a3b3-48f30a127627
-- alterId: 0
-  cipher: auto
-  name: 'EPODONIOS #1036'
-  network: tcp
-  port: 42812
-  server: 195.26.26.7
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 5e109cd6-e8b0-4957-a9bb-71aa68b56f6d
 - alterId: 0
   cipher: auto
   name: Global 🌐 | @Raydikalx | 6A50DE
@@ -204,7 +173,7 @@ proxies:
   - ''
   alterId: 0
   cipher: auto
-  name: 🇩🇪 德国 | DEU
+  name: '🇩🇪 德国 | DEU #4'
   port: 19552
   server: 195.26.26.7
   skip-cert-verify: true
@@ -214,10 +183,11 @@ proxies:
   uuid: 483a9bd7-a1d3-4cc9-ad90-761e063943c7
 - alterId: 0
   cipher: auto
-  name: '🇩🇪 德国 | DEU #4'
+  name: '🇩🇪 德国 | DEU #6'
   network: tcp
   port: 19552
   server: 195.26.26.7
+  skip-cert-verify: true
   tls: false
   type: vmess
   uuid: 483a9bd7-a1d3-4cc9-ad90-761e063943c7
@@ -236,7 +206,7 @@ proxies:
     path: /
 - alpn:
   - http/1.1
-  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
+  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #5'
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   port: 443
   server: de12.dedushka.top
@@ -244,30 +214,24 @@ proxies:
   type: trojan
 - alpn:
   - http/1.1
-  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #2'
+  name: '🇩🇪[www.v2nodes.com] trojan-DE-... #6'
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   port: 443
   server: de5.dedushka.top
   skip-cert-verify: false
   sni: de5.dedushka.top
   type: trojan
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #7'
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   port: 443
   server: it1.dedushka.top
   sni: it1.dedushka.top
   type: trojan
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #4'
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #8'
   password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
   port: 443
   server: de4.dedushka.top
   sni: de4.dedushka.top
-  type: trojan
-- name: '🇳🇱[www.v2nodes.com] trojan-NL-... #7'
-  password: happybirthdaydaniel
-  port: 25267
-  server: de-bots4.h1cloud.net
-  sni: t.me/FuckTheWall
   type: trojan
 - cipher: chacha20-ietf-poly1305
   name: 🇩🇪DE-57.129.113.16-0165
@@ -276,7 +240,7 @@ proxies:
   server: 57.129.113.16
   type: ss
 - cipher: aes-256-gcm
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1602...
+  name: '🇩🇪[www.v2nodes.com] ss-DE-1602... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 185.176.204.18

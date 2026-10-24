@@ -1,19 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C62756
-  network: ws
-  port: 8443
-  server: 206.238.239.109
-  tls: true
-  type: vmess
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  ws-opts:
-    headers:
-      Host: uk.frnhk.xyz
-    path: /London31
-- alterId: 0
-  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -42,19 +29,6 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /ws-vmess
-- alterId: 64
-  cipher: auto
-  name: 🇸🇬SG-118.107.46.173-7677
-  network: ws
-  port: 443
-  server: 118.107.46.173
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    path: /path/080712342310
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-15.235.147.186-0025
@@ -96,7 +70,7 @@ proxies:
   server: 68.183.227.4
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇸🇬SG_2|2.3MB/s
+  name: 🇸🇬SG_1|1.8MB/s
   password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
   port: 2377
   server: 18.143.63.164

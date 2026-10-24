@@ -58,6 +58,19 @@ proxies:
     headers:
       Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
     path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-172.111.146.64-0135
+  network: ws
+  port: 80
+  server: 172.111.146.64
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
+  ws-opts:
+    path: /
 - name: 日本2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -97,16 +110,16 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
+  name: 🇯🇵JP-191.223.221.53-0161
+  password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
+  port: 8388
+  server: 191.223.221.53
+  type: ss
+- cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1598...
-  password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
-  port: 8388
-  server: 191.223.221.53
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'

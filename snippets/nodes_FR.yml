@@ -13,20 +13,6 @@ proxies:
   uuid: 1233c26d-95d1-459f-a1bb-7ca12bd5a124
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 9FDBC9
-  network: ws
-  port: 80
-  server: 145.239.55.210
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 479526cd-5011-43cf-a788-504da95e07c2
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-    path: /
-- alterId: 0
-  cipher: auto
   name: 🇫🇷FR-145.239.55.210-0162
   network: ws
   port: 80
@@ -42,19 +28,6 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-152.228.191.232-6696
-  network: ws
-  port: 443
-  server: 152.228.191.232
-  servername: lg30.cfcdn3.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    path: /ray
-- alterId: 0
-  cipher: auto
   name: 🇫🇷FR-54.37.131.126-0200
   network: ws
   port: 80
@@ -68,21 +41,39 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
     path: /
-- name: 🇫🇷FR_1|2.0MB/s
-  network: ws
+- name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 162.159.36.20
-  skip-cert-verify: false
-  sni: www.calmlunch.com
+  server: 104.16.174.36
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
   type: trojan
-  ws-opts:
-    path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #11'
+- name: 🇫🇷FR法国丨yoyapai.com\r
+  password: humanity
+  port: 443
+  server: 104.18.152.207
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+- name: 🇫🇷FR法國丨yoyapai.com\r
+  password: humanity
+  port: 443
+  server: 104.26.15.137
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+- name: '🇫🇷FR法國丨yoyapai.com\r #1'
+  password: humanity
+  port: 443
+  server: 104.17.111.4
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
   network: ws
   password: humanity
   port: 443
-  server: 45.87.41.18
+  server: 185.255.179.166
   skip-cert-verify: false
   sni: www.calmlunch.com
   type: trojan
@@ -94,7 +85,8 @@ proxies:
   network: ws
   password: humanity
   port: 443
-  server: www.calmlunch.com
+  server: 45.87.41.18
+  skip-cert-verify: false
   sni: www.calmlunch.com
   type: trojan
   ws-opts:
@@ -102,6 +94,17 @@ proxies:
       Host: www.calmlunch.com
     path: /assignment
 - name: '🇫🇷[www.v2nodes.com] trojan-FR-... #13'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.calmlunch.com
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
   network: ws
   password: humanity
   port: 2053
@@ -113,7 +116,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #15'
   network: ws
   password: humanity
   port: 443
@@ -125,14 +128,14 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #15'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #16'
   password: humanity
   port: 443
   server: 165.215.250.14
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #16'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #17'
   network: ws
   password: humanity
   port: 443
@@ -144,7 +147,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #17'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #18'
   network: ws
   password: humanity
   port: 443
@@ -156,7 +159,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #18'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #19'
   network: ws
   password: humanity
   port: 443
@@ -167,6 +170,20 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
+- alpn:
+  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
+  network: ws
+  password: humanity
+  port: 8443
+  server: 212.227.144.37
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
 - name: '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
   network: ws
   password: humanity
@@ -179,27 +196,31 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #9'
-  network: ws
+- name: 🇫🇷法国丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 185.255.179.166
-  skip-cert-verify: false
-  sni: www.calmlunch.com
+  server: 104.18.152.73
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
   type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: '🏳[www.v2nodes.com] trojan- #4'
-  network: ws
+- name: '🇫🇷法国丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 185.220.100.168
-  skip-cert-verify: false
-  sni: www.calmlunch.com
+  server: 104.18.152.152
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
   type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
+- name: '🇫🇷法国丨yoyapai.com\r #2'
+  password: humanity
+  port: 443
+  server: 104.18.22.63
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+- name: '🇫🇷法国丨yoyapai.com\r #3'
+  password: humanity
+  port: 443
+  server: 104.18.152.133
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
