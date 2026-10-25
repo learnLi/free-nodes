@@ -1,6 +1,24 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 8C0385
+  network: tcp
+  port: 36154
+  server: 13.140.91.117
+  tls: false
+  type: vmess
+  uuid: b2fd9449-458a-4243-bbf9-5735070d6817
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | C8F906
+  network: raw
+  port: 22324
+  server: 172.237.70.226
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -29,6 +47,32 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /ws-vmess
+- alterId: 64
+  cipher: auto
+  name: 🇸🇬SG-118.107.46.173-8092
+  network: ws
+  port: 443
+  server: 118.107.46.173
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    path: /path/080712342310
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-146.190.82.241-1844
+  network: ws
+  port: 80
+  server: 146.190.82.241
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
+  ws-opts:
+    path: /
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-15.235.147.186-0039
@@ -42,7 +86,19 @@ proxies:
   uuid: 6fea1649-425b-4092-bf53-29792152c925
   ws-opts:
     path: /sshkit/Ertusg86/635014638c264/
-- name: '🇸🇬 新加坡 | SGP #3'
+- name: '🇸🇬 新加坡 | SGP #1 #1'
+  network: ws
+  port: 8080
+  server: 104.18.35.86
+  servername: hhlfy.twiladaphne.ndjp.net
+  tls: false
+  type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  ws-opts:
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+    path: /sg-melbi
+- name: '🇸🇬 新加坡 | SGP #2'
   network: ws
   port: 2082
   server: 104.18.35.86
@@ -56,11 +112,18 @@ proxies:
       Host: hhlfy.twiladaphne.ndjp.net
     path: /fp
 - name: 🇸🇬[www.v2nodes.com] vless-SG
+  network: ws
   port: 443
-  server: 43.174.193.1
+  server: 172.64.152.241
+  servername: ccc.010304.xyz
+  skip-cert-verify: false
   tls: false
   type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fpsecurity=tls
 - name: '🇸🇬[www.v2nodes.com] vless-SG #...'
   network: ws
   port: 443
@@ -75,36 +138,12 @@ proxies:
       Host: notls.lukongtou.eu.org
     path: Telegram-WangCai2🇨🇳security=tls
 - name: '🇸🇬[www.v2nodes.com] vless-SG #... #2'
-  network: ws
-  port: 8080
-  server: 104.18.35.86
-  servername: hhlfy.twiladaphne.ndjp.net
-  tls: false
-  type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  ws-opts:
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-    path: /sg-melbi
-- name: '🇸🇬[www.v2nodes.com] vless-SG #... #3'
   port: 443
   server: 104.21.91.244
   tls: false
   type: vless
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
-- name: '🇸🇬[www.v2nodes.com] vless-SG #... #4'
-  network: ws
-  port: 443
-  server: 172.64.152.241
-  servername: ccc.010304.xyz
-  tls: true
-  type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  ws-opts:
-    headers:
-      Host: ccc.010304.xyz
-    path: /fp=chromefp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG #... #5'
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #3'
   network: ws
   port: 443
   server: ccc.010304.xyz
@@ -114,6 +153,18 @@ proxies:
   uuid: d342d11e-d224-4463-b982-532309285094
   ws-opts:
     path: /fp=chrome
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #4'
+  network: ws
+  port: 2053
+  server: vl.cocopon.top
+  servername: vl.cocopon.top
+  tls: true
+  type: vless
+  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
+  ws-opts:
+    headers:
+      Host: vl.cocopon.top
+    path: /fp=random
 - encryption: none
   name: '🇸🇬[www.v2nodes.com] vless-SG #1'
   network: ws
@@ -193,28 +244,7 @@ proxies:
     headers:
       Host: vl.cocopon.top
     path: /
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #16'
-  port: 16263
-  server: 47.237.74.17
-  tls: false
-  type: vless
-  uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #17'
-  network: ws
-  port: 2096
-  server: 139.162.27.96
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.dev
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
   network: ws
   port: 2096
   server: 139.162.27.96
@@ -227,7 +257,28 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.devfp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #21'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #15'
+  port: 16263
+  server: 47.237.74.17
+  tls: false
+  type: vless
+  uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #16'
+  network: ws
+  port: 2096
+  server: 139.162.27.96
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #20'
   port: 12512
   server: 46.137.202.178
   tls: false
@@ -288,7 +339,7 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇸🇬 新加坡 | SGP #5'
+- name: '🇸🇬 新加坡 | SGP #4'
   password: '!!str 123456'
   port: 2096
   server: 104.18.35.86
@@ -308,14 +359,14 @@ proxies:
     headers:
       Host: 321dfbc6.uir-9i6.pages.dev
     path: /
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
   sni: 139.180.146.200
   type: trojan
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  name: '🇸🇬 新加坡 | SGP #4'
+  name: '🇸🇬 新加坡 | SGP #3'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
   server: 13.212.245.120
@@ -324,7 +375,7 @@ proxies:
   tls: false
   type: hysteria2
 - cipher: chacha20-ietf
-  name: 'EPODONIOS #30'
+  name: 'EPODONIOS #28'
   password: asd123456
   port: 8388
   server: 103.36.91.32
@@ -358,24 +409,9 @@ proxies:
   port: 8388
   server: 139.180.220.175
   type: ss
-- name: 🇸🇬SG_1|1016KB/s
-  password: '!!str 1234'
-  port: 2080
-  server: 18.143.144.220
-  skip-cert-verify: true
-  type: http
-  udp: true
-  username: '1234'
-- name: 🇸🇬SG_2|1.2MB/s
-  password: '!!str 1234'
-  port: 2080
-  server: 13.229.236.228
-  skip-cert-verify: true
-  type: http
-  username: '1234'
-- name: 🇸🇬SG_3|2.6MB/s
-  port: 9443
-  server: 152.233.9.239
+- name: 🇸🇬SG_1|2.7MB/s
+  port: 443
+  server: 156.146.56.97
   skip-cert-verify: true
   tls: true
   type: http

@@ -1,6 +1,81 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 707229
+  network: tcp
+  port: 45653
+  server: 94.232.247.165
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | D56E69
+  network: ws
+  port: 52620
+  server: 38.60.176.80
+  tls: false
+  type: vmess
+  uuid: d60c7a89-40d9-4f09-e8f8-591932ce79ef
+  ws-opts:
+    path: /8704a4ad
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-145.239.55.210-0164
+  network: ws
+  port: 80
+  server: 145.239.55.210
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  ws-opts:
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-172.232.44.160-7871
+  network: ws
+  port: 443
+  server: 172.232.44.160
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: cae7fe63-6ff7-4443-b532-019fee32a119
+  ws-opts:
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-51.159.155.52-0686
+  network: http
+  port: 3389
+  server: 51.159.155.52
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-54.37.131.126-0166
+  network: ws
+  port: 80
+  server: 54.37.131.126
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
+  ws-opts:
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+    path: /
+- alterId: 0
+  cipher: auto
   name: 🇫🇷FR-57.128.164.21-0178
   network: ws
   port: 80
@@ -26,42 +101,7 @@ proxies:
     headers:
       Host: Appxdn.global.ssl.fastly.net
     path: /fp=chrome
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  network: ws
-  port: 8443
-  server: 179.255.176.28
-  servername: fra.yandex-api.store
-  tls: true
-  type: vless
-  uuid: 69da3674-4941-468b-96f0-c17cf5b0a047
-  ws-opts:
-    path: /assetsfp=firefox
-- client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
-  network: ws
-  port: 443
-  server: 199.232.78.160
-  servername: cdn.akamai.steamstatic.com
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-    path: /
-- client-fingerprint: firefox
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
-  network: ws
-  port: 8443
-  server: 179.255.176.28
-  servername: fra.yandex-api.store
-  tls: true
-  type: vless
-  uuid: 69da3674-4941-468b-96f0-c17cf5b0a047
-  ws-opts:
-    path: /assets
-- encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
   network: ws
   port: 14430
   server: 138.124.70.41
@@ -73,6 +113,50 @@ proxies:
     headers:
       Host: 138.124.70.41
     path: /vless
+- client-fingerprint: chrome
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #11'
+  network: ws
+  port: 443
+  server: 199.232.78.160
+  servername: cdn.akamai.steamstatic.com
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+    path: /
+- encryption: none
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #15'
+  network: ws
+  port: 80
+  server: 152.228.162.19
+  tls: false
+  type: vless
+  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
+  ws-opts:
+    path: /vless/
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+  network: ws
+  port: 8443
+  server: 179.255.176.28
+  servername: fra.yandex-api.store
+  tls: true
+  type: vless
+  uuid: 69da3674-4941-468b-96f0-c17cf5b0a047
+  ws-opts:
+    path: /assetsfp=firefox
+- client-fingerprint: firefox
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  network: ws
+  port: 8443
+  server: 179.255.176.28
+  servername: fra.yandex-api.store
+  tls: true
+  type: vless
+  uuid: 69da3674-4941-468b-96f0-c17cf5b0a047
+  ws-opts:
+    path: /assets
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -125,14 +209,14 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #13'
   password: humanity
   port: 443
   server: 165.215.250.14
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #13'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
   network: ws
   password: humanity
   port: 443
@@ -144,7 +228,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #15'
   network: ws
   password: humanity
   port: 443
@@ -156,7 +240,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #15'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #17'
   network: ws
   password: humanity
   port: 443
@@ -167,6 +251,18 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #3'
+  network: ws
+  password: humanity
+  port: 443
+  server: 141.193.213.172
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
 - name: '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
   network: ws
   password: humanity
@@ -193,43 +289,40 @@ proxies:
 - name: 🇫🇷法国丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.73
+  server: 104.18.152.152
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.152
+  server: 104.18.152.73
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #2'
   password: humanity
   port: 443
-  server: 104.18.152.133
+  server: 104.18.22.63
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #3'
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.18.152.133
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🏳[www.v2nodes.com] trojan- #6'
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.220.100.168
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
+- name: FR_speednode_0012
+  password: 'null'
+  port: 23856
+  server: 51.159.225.196
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: 'null'
 - name: FR_speednode_0013
   port: 8090
   server: 83.206.1.225
@@ -252,16 +345,29 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_3|1.9MB/s
+- name: 🇫🇷FR_4|2.4MB/s
+  password: None
+  port: 6103
+  server: 87.98.174.157
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇫🇷FR_6|3.3MB/s
   port: 443
-  server: 103.82.101.43
+  server: 141.94.16.4
   skip-cert-verify: true
-  sni: 76d1d3ecadca44efa2339867d7dfc9a1-8e928736d0f8dbdc.apache-iv.com
   tls: true
   type: http
-- name: 🇫🇷FR_4|2.2MB/s
+- name: 🇫🇷FR_9|2.5MB/s
   port: 8090
-  server: 82.96.128.175
+  server: 80.124.109.22
   skip-cert-verify: true
   tls: true
   type: http
+- name: 🇫🇷FR_7|2.1MB/s|S001-260618
+  port: 1081
+  server: 107.191.47.162
+  skip-cert-verify: true
+  sub_tag: S001-260618
+  type: socks5
+  udp: true

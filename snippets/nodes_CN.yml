@@ -1,16 +1,7 @@
 proxies:
-- alterId: 64
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 4629B3
-  network: tcp
-  port: 54602
-  server: 183.240.235.170
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
-  name: 'EPODONIOS #952'
+  name: CN 🇨🇳 | @Raydikalx | 09B96A
   network: ws
   port: 10086
   server: 120.48.133.162
@@ -20,6 +11,44 @@ proxies:
   uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   ws-opts:
     path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 2F6F5A
+  network: tcp
+  port: 50014
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 373F55
+  network: ws
+  port: 10086
+  server: 120.48.133.162
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2b910c43-51e3-4b15-9be8-b658106ba35e
+  ws-opts: {}
+- alterId: 64
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 3C2253
+  network: tcp
+  port: 34602
+  server: 183.240.235.170
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | BF3C4C
+  network: tcp
+  port: 18007
+  server: 120.233.7.221
+  tls: false
+  type: vmess
+  uuid: 21dcbec8-eee8-3d20-82b6-f8c16fe6dc8d
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-47.244.120.197-0196
@@ -37,15 +66,30 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.218.85.43-1291
-  network: http
-  port: 43645
-  server: 8.218.85.43
+  name: 🇨🇳CN-47.244.120.197-5303
+  network: ws
+  port: 44867
+  server: 47.244.120.197
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 0cd2e2c0-ef4f-4a49-a89f-ee2552aed247
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  ws-opts:
+    path: /arki?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.89.231.138-7426
+  network: ws
+  port: 443
+  server: 47.89.231.138
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 82f58397-480e-4975-b3ec-fea904dc5912
+  ws-opts:
+    path: /O0emfe0pBfYovpz5526rhq
 - alterId: 64
   cipher: auto
   name: 🇨🇳_CN_中国

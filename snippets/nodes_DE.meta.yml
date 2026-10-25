@@ -1,43 +1,34 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 1F6992
-  network: raw
-  port: 2110
-  server: lucas.ehsanazizi-speed-server.com
-  tls: false
-  type: vmess
-  uuid: 06d4d001-4168-4876-9416-7caecf578f40
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 226785
-  network: ws
-  port: 2053
-  server: 104.105.18.214
-  servername: deapp.jisuyun.top
-  tls: true
-  type: vmess
-  uuid: 9a1a05d9-69be-45d3-e326-c6621edf7b31
-  ws-opts:
-    headers:
-      Host: deapp.jisuyun.top
-    path: /devm
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 2343B2
+  name: DE 🇩🇪 | @Raydikalx | 18DB33
   network: tcp
-  port: 9443
-  server: ar.paydar.site
+  port: 41797
+  server: gtgrtgg.vurneq.ir
   servername: ''
   tls: false
   type: vmess
-  uuid: b092208e-5589-4206-ab8e-d15df701b958
+  uuid: b31c579c-fede-421d-8361-fd84405ec4c2
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 395AFD
+  name: DE 🇩🇪 | @Raydikalx | 1E5553
   network: ws
   port: 443
-  server: 194.164.192.16
+  server: qexQourmGimzvkWY.v.3dns.vip
+  servername: qexQourmGimzvkWY.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: qexQourmGimzvkWY.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 29DD5D
+  network: ws
+  port: 443
+  server: 5.39.249.167
   servername: ''
   tls: true
   type: vmess
@@ -46,6 +37,20 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 31A870
+  network: ws
+  port: 16632
+  server: m.cnmjin.net
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f3485652-a8ee-4f31-9af3-821c53f2bb82
+  ws-opts:
+    headers:
+      Host: 38f5eab4e496b3c8c927160a60d5865b.mobgslb.tbcache.com
+    path: /
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 449E8B
@@ -62,6 +67,16 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 44FBCF
+  network: tcp
+  port: 16513
+  server: ::ffff:3981:3258
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 5f77f446-6b97-4f39-b9b1-af353e3c4d50
+- alterId: 0
+  cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 4B0F38
   network: ws
   port: 443
@@ -76,43 +91,70 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 5AC1D0
-  network: tcp
-  port: 50407
-  server: gerall-1.povrak.ir
-  tls: false
+  name: DE 🇩🇪 | @Raydikalx | 4CD3F9
+  network: httpupgrade
+  port: 443
+  server: 193.148.253.210
+  servername: 193.148.253.210
+  tls: true
   type: vmess
-  uuid: cdfcb2be-db05-4f55-b6fc-6bf46199acd7
+  uuid: 4878b80d-7602-499c-b742-b09ac4355e0b
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 83131A
+  name: DE 🇩🇪 | @Raydikalx | 60EF89
   network: tcp
-  port: 50407
-  server: gerdi-1.povrak.ir
-  tls: false
-  type: vmess
-  uuid: 28cb6438-bd95-47d8-858e-8af01d1910de
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | A93900
-  network: tcp
-  port: 38998
-  server: 178.83.45.29
+  port: 47907
+  server: 212.224.88.117
   servername: ''
   tls: false
   type: vmess
-  uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f
+  uuid: dbbd9c3f-d4cf-48bb-8bb4-2912a04dc8d5
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | F3F3FC
+  name: DE 🇩🇪 | @Raydikalx | 75FC71
   network: tcp
-  port: 22324
-  server: 185.177.229.128
+  port: 3667
+  server: 9a4d24108299de09.drwsh.org
   servername: ''
-  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  uuid: 7fce633b-3ef1-4f2e-9db1-b704bd4e0526
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 7F4759
+  network: tcp
+  port: 37523
+  server: 144.225.65.202
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 481074b2-ad8e-4c3f-bb75-b5d3b3d64559
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 81AAC3
+  network: ws
+  port: 16632
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: 6011f1c0-0fcc-4153-b848-972da6dec0f1
+  ws-opts:
+    headers:
+      Host: 6907bbf8a71b1370e29aa5fd2b77b347.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | D12FB5
+  network: ws
+  port: 28267
+  server: 176.65.140.210
+  tls: false
+  type: vmess
+  uuid: e2ab9425-a3d5-4001-8b31-6a259935fe72
+  ws-opts:
+    headers:
+      Host: bobo.badrangteb.ir
+    path: /
 - alpn:
   - h2
   - http/1.1
@@ -258,6 +300,26 @@ proxies:
   type: vless
   udp: true
   uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇩🇪DE_10|2.4MB/s
+  network: ws
+  port: 2083
+  server: 140.225.208.50
+  servername: speedtestmark.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  ws-opts:
+    headers:
+      Host: ''
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/57.0.2987.133 Safari/537.36
+    path: /vless-ws
+  xudp: true
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: v1.segment.0K8-XZZ0rlAKn8bua_kT_XN4DhMIEkBSlndsx9DI7S1J.ts
@@ -270,10 +332,53 @@ proxies:
   type: vless
   uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
 - alpn:
+  - h3
+  - h2
   - http/1.1
   client-fingerprint: chrome
   encryption: none
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #18'
+  name: 🇩🇪DE_9|2.3MB/s
+  network: ws
+  port: 2083
+  server: 185.133.35.56
+  servername: titp.iranroyalzhin.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2445edef-76b7-4713-87b9-ed6aa0b1a2c9
+  ws-opts:
+    headers:
+      Host: titp.iranroyalzhin.ir
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/51.0.2704.106 Safari/537.36
+    path: /
+  xudp: true
+- name: 🇩🇪[www.v2nodes.com] vless-DE-1...
+  network: ws
+  port: 8443
+  server: 104.17.74.206
+  servername: free.sahanwickramasinghe.me
+  tls: true
+  type: vless
+  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
+  ws-opts:
+    headers:
+      Host: free.sahanwickramasinghe.me
+    path: /fp=chrome
+- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #10'
+  network: ws
+  port: 443
+  server: 903.rtgpu.com
+  tls: false
+  type: vless
+  uuid: c6438331-a79b-4471-fd5e-42c2eeac29fa
+  ws-opts:
+    path: /nmd2security=tls
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #22'
   network: ws
   port: 443
   server: uiuxtestsdcv-development-r6dg9.lucity.app
@@ -286,25 +391,15 @@ proxies:
     headers:
       Host: uiuxtestsdcv-development-r6dg9.lucity.app
     path: /ws/58b06206-cd53-23d6-279a-0f0dd259cb0a
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #20'
+- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
   port: 443
   server: 45.144.30.86
   tls: false
   type: vless
   uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
-- encryption: none
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #21'
-  network: ws
-  port: 443
-  server: 903.rtgpu.com
-  tls: true
-  type: vless
-  uuid: c6438331-a79b-4471-fd5e-42c2eeac29fa
-  ws-opts:
-    path: /nmd2
 - alpn:
   - http/1.1
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   network: ws
   port: 443
   server: uiuxtestsdcv-development-r6dg9.lucity.app
@@ -317,37 +412,6 @@ proxies:
     headers:
       Host: uiuxtestsdcv-development-r6dg9.lucity.app
     path: /ws/58b06206-cd53-23d6-279a-0f0dd259cb0afp=chrome
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #8'
-  network: ws
-  port: 443
-  server: 903.rtgpu.com
-  tls: false
-  type: vless
-  uuid: c6438331-a79b-4471-fd5e-42c2eeac29fa
-  ws-opts:
-    path: /nmd2security=tls
-- client-fingerprint: chrome
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
-  network: ws
-  port: 8443
-  server: 104.17.74.206
-  servername: free.sahanwickramasinghe.me
-  tls: true
-  type: vless
-  uuid: c136a12c-4260-48a7-a1e6-fbda83a11045
-  ws-opts:
-    headers:
-      Host: free.sahanwickramasinghe.me
-    path: /
-- name: '🏳[www.v2nodes.com] vless- #15'
-  network: tcp
-  port: 27774
-  server: 5.175.205.190
-  tls: false
-  type: vless
-  uuid: 653137c6-474e-4a3d-9a20-5a5afb3d4a4f
-  ws-opts:
-    path: /
 - name: '🇩🇪 德国 | DEU #11'
   password: e2c626bcab2143cf
   port: 20029
@@ -405,6 +469,12 @@ proxies:
   server: de6.dedushka.top
   sni: de6.dedushka.top
   type: trojan
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #4'
+  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
+  port: 443
+  server: de4.dedushka.top
+  sni: de4.dedushka.top
+  type: trojan
 - name: '@KAFING_2'
   obfs: salamander
   obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
@@ -425,12 +495,12 @@ proxies:
   sni: gift-catalog.aroonia.ir
   tls: false
   type: hysteria2
-- name: 🇩🇪192088 | ⚡️Telegram = t.me/v...
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+- name: 🍄‍🟫97@oneclickvpnkeys
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
   port: 443
-  server: 35.158.96.132
+  server: 64.188.98.171
   skip-cert-verify: true
-  sni: vpn-de-002.fastervpn.world
+  sni: germany3.h2corp.local
   tls: false
   type: hysteria2
 - cipher: chacha20-ietf-poly1305
@@ -453,37 +523,38 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇩🇪DE_3|3.0MB/s
-  password: None
-  port: 443
-  server: 79.127.156.177
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇩🇪DE_4|1.2MB/s
-  password: None
-  port: 443
-  server: 213.109.163.119
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇩🇪DE_5|2.0MB/s
-  password: None
+- name: DK_speednode_0009
   port: 9002
-  server: 158.173.154.2
+  server: 158.173.154.1
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇩🇪DE_6|3.6MB/s
+  udp: true
+- name: GB_speednode_0018
   password: None
-  port: 443
-  server: 193.233.75.115
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇩🇪DE_7|2.6MB/s
   port: 9443
   server: 213.177.229.161
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: 🇩🇪DE_6|2.5MB/s
+  password: None
+  port: 443
+  server: 87.249.132.97
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇩🇪DE_7|2.7MB/s
+  port: 9002
+  server: 158.173.154.3
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: '🇩🇪DE_8|1.7MB/s #1'
+  password: None
+  port: 443
+  server: 149.36.50.129
   skip-cert-verify: true
   tls: true
   type: http
