@@ -1,18 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 30981F
-  network: ws
-  port: 443
-  server: renderer-stream-2-114.mirra.now
-  servername: renderer-stream-2-114.mirra.now
-  tls: true
-  type: vmess
-  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-114.mirra.now
-    path: /api/v1/gpu-stream/socket
 - alpn:
   - h2
   - http/1.1
@@ -94,22 +80,6 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇷🇺RU_1|2.5MB/s
-  network: ws
-  port: 443
-  server: 46.243.142.104
-  servername: santehdv.site
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9ba53795-4356-40ab-8067-76ec2ae2a3d8
-  ws-opts:
-    headers:
-      Host: santehdv.site
-    path: /media/stream/qUWu2oaFgxAw
 - name: 🇷🇺[www.v2nodes.com] vless-RU-1...
   network: ws
   port: 8443
@@ -123,7 +93,7 @@ proxies:
 - client-fingerprint: random
   grpc-opts:
     grpc-service-name: grpc-ru
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
   network: grpc
   port: 443
   server: xsru1.ddnsfree.com
@@ -132,7 +102,7 @@ proxies:
   type: vless
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
 - client-fingerprint: random
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #3'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
   network: ws
   port: 8443
   server: 194.87.143.165
@@ -150,18 +120,5 @@ proxies:
   server: giftcard.gisora.ir
   skip-cert-verify: false
   sni: giftcard.gisora.ir
-  tls: false
-  type: hysteria2
-- name: 🐙97@oneclickvpnkeys
-  password: 41edb44c8e
-  port: 11592
-  server: 103.88.243.142
-  sni: srv-17e124.21freedom.net
-  tls: false
-  type: hysteria2
-- name: 🐙99@oneclickvpnkeys
-  password: 41edb44c8e
-  port: 11592
-  server: srv-17e124.21freedom.net
   tls: false
   type: hysteria2
