@@ -35,19 +35,6 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 30FA14
-  network: ws
-  port: 2052
-  server: 104.20.25.166
-  tls: false
-  type: vmess
-  uuid: d6b6d982-d52f-465a-b988-85670b23f64a
-  ws-opts:
-    headers:
-      Host: cdn2.freegradely.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
   name: CA 🇨🇦 | @Raydikalx | 35E5CE
   network: ws
   port: 2086
@@ -57,20 +44,6 @@ proxies:
   uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
   ws-opts:
     path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 68D797
-  network: ws
-  port: 443
-  server: 172.66.0.1
-  servername: vmess.lbw666.dpdns.org
-  tls: true
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  ws-opts:
-    headers:
-      Host: vmess.lbw666.dpdns.org
-    path: /ws
 - alterId: 0
   cipher: auto
   name: CA 🇨🇦 | @Raydikalx | B26A65
@@ -96,16 +69,6 @@ proxies:
   uuid: 1da61ced-8e67-4e34-9fda-b9aac4bda9ca
   ws-opts:
     path: /download
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | FD802D
-  network: xhttp
-  port: 443
-  server: www.speedtest.net
-  servername: 01f0d251bf4a5bcb.monfira.ir
-  tls: true
-  type: vmess
-  uuid: bb46ca03-b177-432d-8900-4c173632b6d6
 - alterId: 0
   cipher: auto
   name: CN 🇨🇳 | @Raydikalx | 86D34C
@@ -313,29 +276,6 @@ proxies:
   uuid: 607e263f-8fef-453d-9b5e-86de48938414
 - alterId: 0
   cipher: auto
-  name: 'EPODONIOS #925'
-  network: tcp
-  port: 52080
-  server: 185.212.149.7
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: ec3c8b97-f308-4fee-aa16-95e2c7595acd
-- alterId: 0
-  cipher: auto
-  name: 'EPODONIOS #926'
-  network: ws
-  port: 80
-  server: 132.145.80.230
-  servername: kr02.a0a.xyz
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
   name: 'EPODONIOS #927'
   network: tcp
   port: 57891
@@ -500,16 +440,6 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | 8E6478
-  network: tcp
-  port: 64586
-  server: Nls1.zelnora.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: c5813e87-5253-40a1-8d11-957ae2c78958
-- alterId: 0
-  cipher: auto
   name: SG 🇸🇬 | @Raydikalx | 3AD363
   network: tcp
   port: 18000
@@ -568,19 +498,6 @@ proxies:
   uuid: 077fd3d8-cfaf-5a9c-533b-a9de5603c254
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 9053F6
-  network: ws
-  port: 443
-  server: 147.45.125.231
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
   name: US20
   network: tcp
   port: 22324
@@ -603,30 +520,6 @@ proxies:
     headers:
       Host: rib9jxayoqjgn2kw.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: vmess-1913366976
-  network: ws
-  port: 2083
-  server: 104.21.0.1
-  servername: or3.sfacg.uk
-  tls: true
-  type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  ws-opts:
-    headers:
-      Host: or3.sfacg.uk
-    path: /or3
-- alterId: 0
-  cipher: auto
-  name: 未知125
-  network: tcp
-  port: 64586
-  server: Nls1.zelnora.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 241d92cd-34a9-4e4b-bed4-2bea4d2b5fba
 - alterId: 0
   cipher: none
   name: 未知25
@@ -734,21 +627,6 @@ proxies:
     headers:
       Host: 162.19.224.175
     path: /vmess
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #5'
-  network: ws
-  port: 443
-  server: 47.243.65.243
-  servername: lcv8v9l7oyamxxfz.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: lcv8v9l7oyamxxfz.v.3dns.vip
-    path: /ws-vmess
 - alterId: 0
   cipher: auto
   name: 🇭🇰 香港2|@ripaojiedian
@@ -905,45 +783,6 @@ proxies:
   - ''
   alterId: 0
   cipher: auto
-  name: '🇺🇸 美国 | USA #11'
-  port: 8080
-  server: 206.1.101.206
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 01c3e638-85d9-4907-a7cc-9c951a98d255
-- alterId: 0
-  cipher: auto
-  name: '🇺🇸 美国 | USA #12'
-  network: tcp
-  port: 8080
-  server: 206.1.101.206
-  tls: false
-  type: vmess
-  uuid: 01c3e638-85d9-4907-a7cc-9c951a98d255
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: '🇺🇸 美国 | USA #14'
-  network: ws
-  port: 443
-  server: US032021.ssgreen.org
-  servername: US032021.ssgreen.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: e3618355-34af-4f6e-8bbd-b84ed4f2ec32
-  ws-opts:
-    headers:
-      Host: US032021.ssgreen.org
-    path: /wes
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
   name: '🇺🇸 美国 | USA #24'
   network: ws
   port: 443
@@ -957,24 +796,6 @@ proxies:
   ws-opts:
     headers:
       Host: US032024.ssgreen.org
-    path: /wes
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: '🇺🇸 美国 | USA #30'
-  network: ws
-  port: 443
-  server: US122207.ssgreen.org
-  servername: US122207.ssgreen.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 98267316-8f95-45fc-a1bb-52ba34c1e6df
-  ws-opts:
-    headers:
-      Host: US122207.ssgreen.org
     path: /wes
 - alpn:
   - ''
@@ -2103,23 +1924,6 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
   encryption: none
-  name: 'EPODONIOS #198'
-  network: ws
-  port: 443
-  server: 69.46.46.123
-  servername: sr-production-c685.up.railway.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 18758b47-442c-ce87-982f-95da64c3228b
-  ws-opts:
-    headers:
-      Host: sr-production-c685.up.railway.app
-    path: /ws/18758b47-442c-ce87-982f-95da64c3228b
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
   name: 'EPODONIOS #199'
   network: ws
   port: 443
@@ -2370,22 +2174,6 @@ proxies:
     headers:
       Host: parsi.parsi.sbs
     path: /
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  name: 'EPODONIOS #223'
-  network: xhttp
-  port: 443
-  server: 199.232.20.113
-  servername: www.firefox.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 2373eb03-66b2-4f42-bb40-95db8b210877
-  ws-opts:
-    headers:
-      Host: fcdsxalkkkp.global.ssl.fastly.net
 - encryption: none
   name: 'EPODONIOS #225'
   network: ws
@@ -2398,6 +2186,24 @@ proxies:
     headers:
       Host: parsi.parsi.sbs
     path: /
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: 'EPODONIOS #230'
+  network: ws
+  port: 443
+  server: 104.19.250.20
+  servername: bahari.kiamobilepart.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 24d49ddd-67c1-4821-b5b9-f12107366978
+  ws-opts:
+    headers:
+      Host: bahari.kiamobilepart.com
+    path: /api
 - encryption: none
   name: 'EPODONIOS #231'
   network: ws
@@ -2575,6 +2381,23 @@ proxies:
     headers:
       Host: ad-005.zen2bswa.info
     path: /
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: 'EPODONIOS #263'
+  network: ws
+  port: 443
+  server: 188.114.96.9
+  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  ws-opts:
+    headers:
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
 - encryption: none
   name: 'EPODONIOS #264'
   network: ws
@@ -2691,24 +2514,6 @@ proxies:
     headers:
       Host: mos.rfiksma.top
     path: /
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
-  name: 'EPODONIOS #296'
-  network: xhttp
-  port: 443
-  server: 199.232.20.113
-  servername: google.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 30ed2f7b-35c1-49ca-8d9f-687983382360
-  ws-opts:
-    headers:
-      Host: fcdsxalkkkp.global.ssl.fastly.net
 - encryption: none
   name: 'EPODONIOS #299'
   network: ws
@@ -2721,21 +2526,6 @@ proxies:
     headers:
       Host: azsv1.drpingservice.com
     path: /
-- client-fingerprint: chrome
-  encryption: none
-  name: 'EPODONIOS #305'
-  network: ws
-  port: 2096
-  server: 45.81.58.159
-  servername: e832b8629fff3263.hozheen.ir
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 359b9ad3-0009-4655-8872-d0ab566751d3
-  ws-opts:
-    headers:
-      Host: newgen14.hozheen.ir
-    path: /ws?ed=2560
 - encryption: none
   name: 'EPODONIOS #308'
   network: ws
@@ -2874,18 +2664,6 @@ proxies:
     headers:
       Host: armenia.chatgpt.com.siasia.ir
     path: /join-proSSH-join-proSSH-join-proSSH-join-proSSH-join-proSSH-join-proSSH-join-proSSH-join-proSSH-join-proSSH-join-proSSH
-- name: 'EPODONIOS #332'
-  network: ws
-  port: 2083
-  server: 154.218.15.250
-  servername: proxy-1cu.pages.dev
-  tls: true
-  type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  ws-opts:
-    headers:
-      Host: proxy-1cu.pages.dev
-    path: /
 - encryption: none
   name: 'EPODONIOS #334'
   network: xhttp
@@ -3467,6 +3245,19 @@ proxies:
     headers:
       Host: refighehosein.salamdadash123.workers.dev
     path: /
+- encryption: none
+  name: 'EPODONIOS #419'
+  network: ws
+  port: 443
+  server: 164.92.239.67
+  servername: cf3.schzyc.cc.cd
+  tls: true
+  type: vless
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  ws-opts:
+    headers:
+      Host: cf3.schzyc.cc.cd
+    path: /proxyip=ProxyIP.CMLiussss.netfp=chrome
 - alpn:
   - http/1.1
   client-fingerprint: chrome
@@ -3976,6 +3767,23 @@ proxies:
 - alpn:
   - http/1.1
   client-fingerprint: chrome
+  encryption: none
+  name: 'EPODONIOS #491'
+  network: ws
+  port: 443
+  server: 69.46.46.102
+  servername: maple-atlas-b6b2-production.up.railway.app
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 6e55c426-4c88-61ff-409c-c938db3d4cae
+  ws-opts:
+    headers:
+      Host: maple-atlas-b6b2-production.up.railway.app
+    path: /ws/6e55c426-4c88-61ff-409c-c938db3d4cae
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
   encryption: mlkem768x25519plus.native.0rtt.shwrr-SZXMfmu3Vc_3Ts3xVnLkri_jVutSWXpmT0KCc
   name: 'EPODONIOS #520'
   network: ws
@@ -4450,18 +4258,6 @@ proxies:
     headers:
       Host: 51.75.118.151
     path: /mb-vless
-- encryption: none
-  name: 'EPODONIOS #582'
-  network: ws
-  port: 443
-  server: 95.129.236.252
-  servername: azs.benz.ink
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 851ed0d8-a37b-452d-8ef2-5b6c2d28a060
-  ws-opts:
-    path: /api/v2/camera/events/8f4c2d
 - name: 'EPODONIOS #589'
   network: ws
   port: 80
@@ -5503,23 +5299,6 @@ proxies:
     headers:
       Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
     path: /
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
-  name: 'EPODONIOS #761'
-  network: ws
-  port: 443
-  server: 69.46.46.123
-  servername: norl-production-dc09.up.railway.app
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: ccaf200f-e758-7629-152a-fcf7333d3d3a
-  ws-opts:
-    headers:
-      Host: norl-production-dc09.up.railway.app
-    path: /ws/ccaf200f-e758-7629-152a-fcf7333d3d3a
 - encryption: none
   name: 'EPODONIOS #765'
   network: ws
@@ -5707,21 +5486,6 @@ proxies:
     headers:
       Host: felex.felexstudio.online
     path: /api/v4/logs/entry/c5600b9c
-- client-fingerprint: unsafe
-  encryption: none
-  name: 'EPODONIOS #783'
-  network: ws
-  port: 443
-  server: 104.21.221.158
-  servername: ccc.010304.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  ws-opts:
-    headers:
-      Host: ccc.010304.xyz
-    path: /fp=chrome
 - client-fingerprint: chrome
   encryption: none
   name: 'EPODONIOS #784'
@@ -5805,6 +5569,21 @@ proxies:
     headers:
       Host: jolly-fog-9e08-ppal03.revog68198.workers.dev
     path: /?ed=2560
+- client-fingerprint: chrome
+  encryption: none
+  name: 'EPODONIOS #796'
+  network: ws
+  port: 443
+  server: 43.174.193.1
+  servername: ccc.010304.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /
 - encryption: none
   name: 'EPODONIOS #797'
   network: ws
@@ -5988,6 +5767,36 @@ proxies:
   tls: false
   type: vless
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- client-fingerprint: chrome
+  encryption: none
+  name: 'EPODONIOS #838'
+  network: ws
+  port: 443
+  server: 104.18.41.190
+  servername: lucasjow.us.ci
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  ws-opts:
+    headers:
+      Host: lucasjow.us.ci
+    path: /cart/docs/www/proxyip=108.160.132.132
+- client-fingerprint: chrome
+  encryption: none
+  name: 'EPODONIOS #839'
+  network: ws
+  port: 443
+  server: 104.18.43.174
+  servername: lucasjow.us.ci
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  ws-opts:
+    headers:
+      Host: lucasjow.us.ci
+    path: /
 - client-fingerprint: chrome
   encryption: none
   name: 'EPODONIOS #840'
@@ -6252,18 +6061,6 @@ proxies:
     headers:
       Host: api.artaluxa.ir
     path: /
-- encryption: none
-  name: 'EPODONIOS #880'
-  network: xhttp
-  port: 800
-  server: 217.216.82.85
-  tls: false
-  type: vless
-  uuid: f7008e87-05d3-43e5-ab8b-6515a2af19eb
-  ws-opts:
-    headers:
-      Host: us.samanehha.io
-    path: /?ed=2048
 - alpn:
   - http/1.1
   client-fingerprint: chrome
@@ -6365,19 +6162,6 @@ proxies:
     headers:
       Host: green-flower-361d.iamxenor.workers.dev
     path: /eyJqdW5rIjoiYUVJQnRNVEk1MlJKUiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
-- client-fingerprint: chrome
-  name: 'EPODONIOS #898'
-  network: ws
-  port: 443
-  server: 2.26.30.216
-  servername: edgetunnel-4uw.pages.dev
-  tls: true
-  type: vless
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  ws-opts:
-    headers:
-      Host: edgetunnel-4uw.pages.dev
-    path: /
 - alpn:
   - http/1.1
   client-fingerprint: chrome
@@ -6466,6 +6250,19 @@ proxies:
     headers:
       Host: 3.V.v.V.v.V.v.V-_-_-V2ray-_-_-V.v.V.v.arV2ray.Host.
     path: /telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray,telegram-ArV2ray?ed=2048
+- encryption: none
+  name: 'EPODONIOS #912'
+  network: ws
+  port: 443
+  server: 200.165.231.209
+  servername: wstg.datasynctrue.online
+  tls: true
+  type: vless
+  uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
+  ws-opts:
+    headers:
+      Host: wstg.datasynctrue.online
+    path: /api/connect
 - name: 'EPODONIOS #951'
   network: ws
   port: 8880
@@ -6837,18 +6634,6 @@ proxies:
     headers:
       Host: sweet-sun-c70f.317-ba5.workers.dev
     path: /pyip=ProxyIP.SG.CMLiussss.net
-- name: vless-1827961865
-  network: ws
-  port: 443
-  server: 104.16.10.84
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
 - name: vless-1828374419
   network: ws
   port: 8080
@@ -6894,6 +6679,19 @@ proxies:
   uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
   ws-opts:
     path: /vless
+- client-fingerprint: chrome
+  name: vless-1853491997
+  network: ws
+  port: 443
+  server: 104.16.10.63
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
 - name: vless-1879632052
   network: ws
   port: 443
@@ -6921,17 +6719,6 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxyws
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: cdn.v2.StreamService
-  name: vless-1916642716
-  network: grpc
-  port: 443
-  server: 31.59.218.35
-  servername: g-ee1.hat.onl
-  tls: true
-  type: vless
-  uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
 - client-fingerprint: chrome
   name: vless-1918538536
   network: ws
@@ -7367,16 +7154,6 @@ proxies:
     headers:
       Host: uiuxtestsdcv-development-r6dg9.lucity.app
     path: /ws/58b06206-cd53-23d6-279a-0f0dd259cb0a
-- encryption: none
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #19'
-  network: ws
-  port: 443
-  server: 903.rtgpu.com
-  tls: true
-  type: vless
-  uuid: c6438331-a79b-4471-fd5e-42c2eeac29fa
-  ws-opts:
-    path: /nmd2
 - alpn:
   - http/1.1
   name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
@@ -7392,15 +7169,6 @@ proxies:
     headers:
       Host: uiuxtestsdcv-development-r6dg9.lucity.app
     path: /ws/58b06206-cd53-23d6-279a-0f0dd259cb0afp=chrome
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
-  network: ws
-  port: 443
-  server: 903.rtgpu.com
-  tls: false
-  type: vless
-  uuid: c6438331-a79b-4471-fd5e-42c2eeac29fa
-  ws-opts:
-    path: /nmd2security=tls
 - name: '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   network: tcp
   port: 27774
@@ -7425,16 +7193,6 @@ proxies:
     headers:
       Host: finp2g.yandex-api.store
     path: /assets
-- name: '🇫🇷 法国 | FRA #1'
-  network: ws
-  port: 8443
-  server: 179.255.176.28
-  servername: fra.yandex-api.store
-  tls: true
-  type: vless
-  uuid: 69da3674-4941-468b-96f0-c17cf5b0a047
-  ws-opts:
-    path: /assetsfp=firefox
 - name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
   port: 443
@@ -7447,17 +7205,6 @@ proxies:
     headers:
       Host: Appxdn.global.ssl.fastly.net
     path: /fp=chrome
-- client-fingerprint: firefox
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
-  network: ws
-  port: 8443
-  server: 179.255.176.28
-  servername: fra.yandex-api.store
-  tls: true
-  type: vless
-  uuid: 69da3674-4941-468b-96f0-c17cf5b0a047
-  ws-opts:
-    path: /assets
 - client-fingerprint: chrome
   name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
   network: ws
@@ -7588,6 +7335,28 @@ proxies:
   network: tcp
   port: 443
   server: s151.gogocs.xyz
+  servername: u695098u54d73951s298.kukuss.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  ws-opts:
+    headers:
+      Host: 54d73951s298.kukuss.top
+    path: ''
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: 🇭🇰 HK VLESS-44 | free-nodes
+  network: tcp
+  port: 443
+  server: s299.kukuss.top
   servername: u695098u54d73951s298.kukuss.top
   skip-cert-verify: false
   tfo: false
@@ -7751,18 +7520,19 @@ proxies:
     headers:
       Host: tn1r.eu.cc
     path: /id-pusat
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+- name: 🇯🇵[www.v2nodes.com] vless-JP-1...
   network: ws
   port: 443
-  server: 104.16.10.185
+  server: 104.17.50.53
   servername: jp3.yohototo.top
-  tls: true
+  skip-cert-verify: false
+  tls: false
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
       Host: jp3.yohototo.top
-    path: /tyxywsfp=chrome
+    path: /tyxywssecurity=tls
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   network: ws
   port: 80
@@ -7984,45 +7754,6 @@ proxies:
   tls: true
   type: vless
   uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  name: '🇷🇺 俄罗斯 | RUS #8'
-  network: ws
-  port: 443
-  server: 46.243.142.104
-  servername: santehdv.site
-  tls: true
-  type: vless
-  uuid: 9ba53795-4356-40ab-8067-76ec2ae2a3d8
-  ws-opts:
-    headers:
-      Host: santehdv.site
-    path: /media/stream/qUWu2oaFgxAw
-- name: '🇸🇪 瑞典 | SWE #1'
-  network: ws
-  port: 2096
-  server: 191.44.114.179
-  servername: st33614.rumedia-cdn.com
-  tls: true
-  type: vless
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
-  ws-opts:
-    headers:
-      Host: st33614.rumedia-cdn.com
-    path: /cdn/v3/livefp=firefox
-- name: '🇸🇪 瑞典 | SWE #1 #1'
-  network: ws
-  port: 8443
-  server: 195.72.60.249
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fp=chrome
 - name: '🇸🇪 瑞典 | SWE #2'
   network: ws
   port: 443
@@ -8035,30 +7766,6 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chrome
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇸🇪 瑞典 | SWE #3'
-  network: grpc
-  port: 443
-  server: 150.241.72.161
-  servername: b6i5po18lw.hat.onl
-  tls: true
-  type: vless
-  uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: live.gpuwxc84nl.chunk-4022.m4s
-  name: '🇸🇪 瑞典 | SWE 2 #1'
-  network: grpc
-  port: 443
-  server: 150.241.72.161
-  servername: b6i5po18lw.hat.onl
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7f6adf9d-42f1-4fec-ab22-fb7f66bf3adc
 - name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
   network: ws
   port: 443
@@ -8143,6 +7850,14 @@ proxies:
     headers:
       Host: vms.lifetime06.workers.dev
     path: /
+- name: '🇸🇬[www.v2nodes.com] vless-SG #1'
+  port: 443
+  server: 43.174.193.1
+  tls: false
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    path: /
 - name: '🇸🇬[www.v2nodes.com] vless-SG #6'
   network: ws
   port: 8080
@@ -8189,18 +7904,6 @@ proxies:
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   ws-opts:
     path: /fp
-- name: 🇹🇭[www.v2nodes.com] vless-TH-1...
-  network: ws
-  port: 443
-  server: 104.16.10.185
-  servername: v2ray.simspeedup.com
-  tls: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  ws-opts:
-    headers:
-      Host: v2ray.simspeedup.com
-    path: /wsfp=unsafe
 - name: '🇹🇷 土耳其 | TUR #1'
   network: ws
   port: 443
@@ -8447,20 +8150,6 @@ proxies:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇺🇸 美国 | USA #27'
-  network: ws
-  port: 8080
-  server: mira.sheikhiedu.ir
-  servername: mira.sheikhiedu.ir
-  tls: false
-  type: vless
-  udp: true
-  uuid: 530baed3-3c7f-4b73-b8ce-5dba0d8fddfb
-  ws-opts:
-    headers:
-      Host: mira.sheikhiedu.ir
-    path: /cfd
-- client-fingerprint: chrome
   name: '🇺🇸 美国 | USA #29'
   network: ws
   port: 443
@@ -8694,6 +8383,18 @@ proxies:
   password: nzrc4ma4087c1ukr
   port: 2083
   server: 104.18.154.96
+  skip-cert-verify: false
+  sni: dl2.rahetejarat.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: dl1.rahetejarat.com
+    path: /WWEiIlL225IiiILl
+- name: 'EPODONIOS #108'
+  network: httpupgrade
+  password: nzrc4ma4087c1ukr
+  port: 2083
+  server: 188.114.96.1
   skip-cert-verify: false
   sni: dl2.rahetejarat.com
   type: trojan
@@ -9012,18 +8713,6 @@ proxies:
     headers:
       Host: www.creationlong.org
     path: /assignment
-- name: 'EPODONIOS #86'
-  network: ws
-  password: humanity
-  port: 443
-  server: 154.81.141.42
-  skip-cert-verify: false
-  sni: www.pleadcourt.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.pleadcourt.org
-    path: /assignment
 - name: 'EPODONIOS #87'
   network: ws
   password: humanity
@@ -9035,6 +8724,17 @@ proxies:
   ws-opts:
     headers:
       Host: www.calmlunch.com
+    path: /assignment
+- name: 'EPODONIOS #89'
+  network: ws
+  password: humanity
+  port: 443
+  server: 172.64.145.133
+  sni: www.pleadcourt.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.pleadcourt.org
     path: /assignment
 - name: 'EPODONIOS #91'
   network: ws
@@ -9111,20 +8811,10 @@ proxies:
   port: 8443
   server: official.taipeicitygovernment.com.ua
   type: trojan
-- name: ⚡ b2n.ir/v2ray-configs | 35
-  password: FC60532879
-  port: 443
-  server: helpful-possum.rooster465.autos
-  type: trojan
 - name: ⚡ b2n.ir/v2ray-configs | 786
   password: 6e3b4240-38f9-4321-9b3c-bc669a34b848
   port: 443
   server: 141.94.76.177
-  type: trojan
-- name: ⚡ b2n.ir/v2ray-configs | 922
-  password: Trojan@82164024
-  port: 443
-  server: in.tronsg.com
   type: trojan
 - name: ❓未知丨yoyapai.com\r
   password: humanity
@@ -9137,13 +8827,6 @@ proxies:
   password: humanity
   port: 443
   server: 104.18.152.143
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-- name: '❓未知丨yoyapai.com\r #2'
-  password: humanity
-  port: 443
-  server: 104.18.12.149
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -9168,13 +8851,6 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🇨🇦CA加拿大丨yoyapai.com\r #1'
-  password: humanity
-  port: 443
-  server: 104.18.152.219
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
 - name: '🇨🇦CA加拿大丨yoyapai.com\r #10'
   password: humanity
   port: 443
@@ -9186,6 +8862,20 @@ proxies:
   password: humanity
   port: 443
   server: 104.16.174.37
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+- name: '🇨🇦CA加拿大丨yoyapai.com\r #12'
+  password: humanity
+  port: 443
+  server: 104.16.174.101
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+- name: '🇨🇦CA加拿大丨yoyapai.com\r #2'
+  password: humanity
+  port: 443
+  server: 104.18.152.77
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -9258,12 +8948,6 @@ proxies:
     headers:
       Host: de01.node.qixi.best
     path: /download
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
-  password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA
-  port: 443
-  server: de6.dedushka.top
-  sni: de6.dedushka.top
-  type: trojan
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -9342,13 +9026,6 @@ proxies:
   skip-cert-verify: true
   sni: www.itunes.com
   type: trojan
-- name: '🇮🇳 印度 | IND #1'
-  password: Trojan@82164024
-  port: 443
-  server: in.tronsg.com
-  skip-cert-verify: true
-  sni: in.tronsg.com
-  type: trojan
 - name: '🇯🇵 日本 | JPN #7'
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   port: 24999
@@ -9401,14 +9078,6 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🇹🇼 🇨🇳 台湾 | TWN #3'
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
-  port: 24999
-  server: tjtw.m2k699.com
-  skip-cert-verify: true
-  sni: www.itunes.com
-  type: trojan
-  udp: true
 - name: 🇺🇸US美国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -9491,12 +9160,6 @@ proxies:
   server: 74.234.59.81
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 'EPODONIOS #8'
-  password: xAYXtB+XMdfWWOlmL8PWcOZEPfKHKVv7NcTY6jpcL/A=
-  port: 15731
-  server: 31.76.11.83
-  type: ss
-- cipher: chacha20-ietf-poly1305
   name: 'EPODONIOS #9'
   password: ytw2awn
   port: 443
@@ -9519,12 +9182,6 @@ proxies:
   password: pKEW8JPByTVTLtM
   port: 443
   server: 167.88.62.68
-  type: ss
-- cipher: aes-256-gcm
-  name: ⚡ b2n.ir/v2ray-configs | 512
-  password: pKEW8JPByTVTLtM
-  port: 443
-  server: 193.108.117.75
   type: ss
 - cipher: aes-256-gcm
   name: ⚡ b2n.ir/v2ray-configs | 829
@@ -9581,12 +9238,6 @@ proxies:
   server: dns8.m3hrzd.ir
   type: ss
   udp: true
-- cipher: aes-256-gcm
-  name: 🇵🇭[www.v2nodes.com] ss-PH-1540...
-  password: kDWvXYZoTBcGkC4
-  port: 8882
-  server: 149.104.109.252
-  type: ss
 - cipher: aes-256-gcm
   name: '🇷🇺 俄罗斯 | RUS #13'
   password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
@@ -9656,12 +9307,9 @@ proxy-groups:
   name: ♻ 自动选择
   proxies:
   - CA 🇨🇦 | @Raydikalx | 014451
-  - CA 🇨🇦 | @Raydikalx | 30FA14
   - CA 🇨🇦 | @Raydikalx | 35E5CE
-  - CA 🇨🇦 | @Raydikalx | 68D797
   - CA 🇨🇦 | @Raydikalx | B26A65
   - CA 🇨🇦 | @Raydikalx | D1F63B
-  - CA 🇨🇦 | @Raydikalx | FD802D
   - CN 🇨🇳 | @Raydikalx | 86D34C
   - DE 🇩🇪 | @Raydikalx | 0A7D80
   - DE 🇩🇪 | @Raydikalx | 0FB228
@@ -9678,8 +9326,6 @@ proxy-groups:
   - 'EPODONIOS #918'
   - 'EPODONIOS #919'
   - 'EPODONIOS #923'
-  - 'EPODONIOS #925'
-  - 'EPODONIOS #926'
   - 'EPODONIOS #927'
   - 'EPODONIOS #930'
   - 'EPODONIOS #931'
@@ -9695,17 +9341,13 @@ proxy-groups:
   - IR 🇮🇷 | @Raydikalx | 720279
   - IR 🇮🇷 | @Raydikalx | E6F119
   - KR 🇰🇷 | @Raydikalx | 21E816
-  - NL 🇳🇱 | @Raydikalx | 8E6478
   - SG 🇸🇬 | @Raydikalx | 3AD363
   - US 🇺🇸 | @Raydikalx | 0A41FD
   - US 🇺🇸 | @Raydikalx | 0B7B7C
   - US 🇺🇸 | @Raydikalx | 243A7B
   - US 🇺🇸 | @Raydikalx | 58A0C9
-  - US 🇺🇸 | @Raydikalx | 9053F6
   - US20
   - vmess-1905115834
-  - vmess-1913366976
-  - 未知125
   - 未知25
   - 未知65
   - 未知72
@@ -9714,7 +9356,6 @@ proxy-groups:
   - '🇨🇳_CN_中国 #1'
   - 🇪🇸ES-212.227.228.91-0207
   - 🇫🇷FR-162.19.224.175-1333
-  - '🇭🇰 香港 | HKG #5'
   - 🇭🇰 香港2|@ripaojiedian
   - 🇭🇰 香港3|@ripaojiedian
   - 🇭🇰 香港4|@ripaojiedian
@@ -9726,11 +9367,7 @@ proxy-groups:
   - 🇳🇱 荷兰 | NLD 4
   - 🇸🇬 新加坡|@ripaojiedian
   - 🇸🇬SG-15.235.147.186-0221
-  - '🇺🇸 美国 | USA #11'
-  - '🇺🇸 美国 | USA #12'
-  - '🇺🇸 美国 | USA #14'
   - '🇺🇸 美国 | USA #24'
-  - '🇺🇸 美国 | USA #30'
   - '🇺🇸 美国 | USA #31'
   - 🇺🇸 美国2|@ripaojiedian
   - 🇺🇸 美国|@ripaojiedian
@@ -9810,7 +9447,6 @@ proxy-groups:
   - 'EPODONIOS #194'
   - 'EPODONIOS #195'
   - 'EPODONIOS #196'
-  - 'EPODONIOS #198'
   - 'EPODONIOS #199'
   - 'EPODONIOS #201'
   - 'EPODONIOS #202'
@@ -9830,8 +9466,8 @@ proxy-groups:
   - 'EPODONIOS #220'
   - 'EPODONIOS #221'
   - 'EPODONIOS #222'
-  - 'EPODONIOS #223'
   - 'EPODONIOS #225'
+  - 'EPODONIOS #230'
   - 'EPODONIOS #231'
   - 'EPODONIOS #234'
   - 'EPODONIOS #243'
@@ -9845,6 +9481,7 @@ proxy-groups:
   - 'EPODONIOS #260'
   - 'EPODONIOS #261'
   - 'EPODONIOS #262'
+  - 'EPODONIOS #263'
   - 'EPODONIOS #264'
   - 'EPODONIOS #265'
   - 'EPODONIOS #269'
@@ -9853,9 +9490,7 @@ proxy-groups:
   - 'EPODONIOS #284'
   - 'EPODONIOS #285'
   - 'EPODONIOS #293'
-  - 'EPODONIOS #296'
   - 'EPODONIOS #299'
-  - 'EPODONIOS #305'
   - 'EPODONIOS #308'
   - 'EPODONIOS #312'
   - 'EPODONIOS #314'
@@ -9866,7 +9501,6 @@ proxy-groups:
   - 'EPODONIOS #325'
   - 'EPODONIOS #329'
   - 'EPODONIOS #331'
-  - 'EPODONIOS #332'
   - 'EPODONIOS #334'
   - 'EPODONIOS #337'
   - 'EPODONIOS #339'
@@ -9907,6 +9541,7 @@ proxy-groups:
   - 'EPODONIOS #412'
   - 'EPODONIOS #413'
   - 'EPODONIOS #418'
+  - 'EPODONIOS #419'
   - 'EPODONIOS #421'
   - 'EPODONIOS #422'
   - 'EPODONIOS #423'
@@ -9943,6 +9578,7 @@ proxy-groups:
   - 'EPODONIOS #484'
   - 'EPODONIOS #485'
   - 'EPODONIOS #486'
+  - 'EPODONIOS #491'
   - 'EPODONIOS #520'
   - 'EPODONIOS #521'
   - 'EPODONIOS #525'
@@ -9979,7 +9615,6 @@ proxy-groups:
   - 'EPODONIOS #574'
   - 'EPODONIOS #580'
   - 'EPODONIOS #581'
-  - 'EPODONIOS #582'
   - 'EPODONIOS #589'
   - 'EPODONIOS #598'
   - 'EPODONIOS #603'
@@ -10052,7 +9687,6 @@ proxy-groups:
   - 'EPODONIOS #754'
   - 'EPODONIOS #756'
   - 'EPODONIOS #760'
-  - 'EPODONIOS #761'
   - 'EPODONIOS #765'
   - 'EPODONIOS #766'
   - 'EPODONIOS #769'
@@ -10066,13 +9700,13 @@ proxy-groups:
   - 'EPODONIOS #780'
   - 'EPODONIOS #781'
   - 'EPODONIOS #782'
-  - 'EPODONIOS #783'
   - 'EPODONIOS #784'
   - 'EPODONIOS #787'
   - 'EPODONIOS #788'
   - 'EPODONIOS #789'
   - 'EPODONIOS #793'
   - 'EPODONIOS #794'
+  - 'EPODONIOS #796'
   - 'EPODONIOS #797'
   - 'EPODONIOS #800'
   - 'EPODONIOS #801'
@@ -10087,6 +9721,8 @@ proxy-groups:
   - 'EPODONIOS #833'
   - 'EPODONIOS #834'
   - 'EPODONIOS #835'
+  - 'EPODONIOS #838'
+  - 'EPODONIOS #839'
   - 'EPODONIOS #840'
   - 'EPODONIOS #841'
   - 'EPODONIOS #842'
@@ -10107,7 +9743,6 @@ proxy-groups:
   - 'EPODONIOS #872'
   - 'EPODONIOS #876'
   - 'EPODONIOS #877'
-  - 'EPODONIOS #880'
   - 'EPODONIOS #882'
   - 'EPODONIOS #885'
   - 'EPODONIOS #887'
@@ -10116,13 +9751,13 @@ proxy-groups:
   - 'EPODONIOS #895'
   - 'EPODONIOS #896'
   - 'EPODONIOS #897'
-  - 'EPODONIOS #898'
   - 'EPODONIOS #901'
   - 'EPODONIOS #902'
   - 'EPODONIOS #903'
   - 'EPODONIOS #904'
   - 'EPODONIOS #906'
   - 'EPODONIOS #907'
+  - 'EPODONIOS #912'
   - 'EPODONIOS #951'
   - 'EPODONIOS #952'
   - 'EPODONIOS #954'
@@ -10153,14 +9788,13 @@ proxy-groups:
   - 'EPODONIOS #997'
   - 'EPODONIOS #998'
   - 'EPODONIOS #999'
-  - vless-1827961865
   - vless-1828374419
   - vless-1831071997
   - vless-1832764135
   - vless-1853463879
+  - vless-1853491997
   - vless-1879632052
   - vless-1897614124
-  - vless-1916642716
   - vless-1918538536
   - vless-1918538539
   - vless-1918538544
@@ -10194,14 +9828,10 @@ proxy-groups:
   - 🇩🇪 德国 | DEU 3
   - 🇩🇪DE_5|1.8MB/s
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #15'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #19'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
-  - '🇫🇷 法国 | FRA #1'
   - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
   - 🇬🇧[www.v2nodes.com] vless-GB-1...
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #12'
@@ -10212,6 +9842,7 @@ proxy-groups:
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
   - 🇭🇰 HK VLESS-20 | free-nodes
+  - 🇭🇰 HK VLESS-44 | free-nodes
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
@@ -10225,7 +9856,7 @@ proxy-groups:
   - '🇯🇵 日本 | JPN #4'
   - 🇯🇵[www.v2nodes.com] vless-JP
   - '🇯🇵[www.v2nodes.com] vless-JP #1'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 🇯🇵[www.v2nodes.com] vless-JP-1...
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #9'
@@ -10245,12 +9876,7 @@ proxy-groups:
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
   - 🇷🇸 塞尔维亚 | SRB
   - '🇷🇸 塞尔维亚 | SRB #1'
-  - '🇷🇺 俄罗斯 | RUS #8'
-  - '🇸🇪 瑞典 | SWE #1'
-  - '🇸🇪 瑞典 | SWE #1 #1'
   - '🇸🇪 瑞典 | SWE #2'
-  - '🇸🇪 瑞典 | SWE #3'
-  - '🇸🇪 瑞典 | SWE 2 #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
   - '🇸🇬 新加坡 | SGP #1 #1'
   - '🇸🇬 新加坡 | SGP #2'
@@ -10258,11 +9884,11 @@ proxy-groups:
   - '🇸🇬 新加坡 | SGP #4'
   - '🇸🇬 新加坡 | SGP #5'
   - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇸🇬[www.v2nodes.com] vless-SG #1'
   - '🇸🇬[www.v2nodes.com] vless-SG #6'
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
   - 🇸🇬[www.v2nodes.com] vless-SG-8...
   - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
-  - 🇹🇭[www.v2nodes.com] vless-TH-1...
   - '🇹🇷 土耳其 | TUR #1'
   - 🇺🇸 US VLESS-28 | free-nodes
   - 🇺🇸 US VLESS-74 | free-nodes
@@ -10281,7 +9907,6 @@ proxy-groups:
   - '🇺🇸 美国 | USA #21'
   - '🇺🇸 美国 | USA #22'
   - '🇺🇸 美国 | USA #23'
-  - '🇺🇸 美国 | USA #27'
   - '🇺🇸 美国 | USA #29'
   - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #3 #1'
@@ -10301,6 +9926,7 @@ proxy-groups:
   - '🏳[www.v2nodes.com] vless- #56'
   - 'EPODONIOS #104'
   - 'EPODONIOS #107'
+  - 'EPODONIOS #108'
   - 'EPODONIOS #110'
   - 'EPODONIOS #111'
   - 'EPODONIOS #112'
@@ -10325,8 +9951,8 @@ proxy-groups:
   - 'EPODONIOS #76'
   - 'EPODONIOS #77'
   - 'EPODONIOS #85'
-  - 'EPODONIOS #86'
   - 'EPODONIOS #87'
+  - 'EPODONIOS #89'
   - 'EPODONIOS #91'
   - 'EPODONIOS #92'
   - FR法国丨yoyapai.com\r
@@ -10337,18 +9963,16 @@ proxy-groups:
   - ⚡ b2n.ir/v2ray-configs | 160
   - ⚡ b2n.ir/v2ray-configs | 231
   - ⚡ b2n.ir/v2ray-configs | 248
-  - ⚡ b2n.ir/v2ray-configs | 35
   - ⚡ b2n.ir/v2ray-configs | 786
-  - ⚡ b2n.ir/v2ray-configs | 922
   - ❓未知丨yoyapai.com\r
   - '❓未知丨yoyapai.com\r #1'
-  - '❓未知丨yoyapai.com\r #2'
   - '❓未知丨yoyapai.com\r #3'
   - 🇧🇷BR巴西圣保罗丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
-  - '🇨🇦CA加拿大丨yoyapai.com\r #1'
   - '🇨🇦CA加拿大丨yoyapai.com\r #10'
   - '🇨🇦CA加拿大丨yoyapai.com\r #11'
+  - '🇨🇦CA加拿大丨yoyapai.com\r #12'
+  - '🇨🇦CA加拿大丨yoyapai.com\r #2'
   - '🇨🇦CA加拿大丨yoyapai.com\r #3'
   - '🇨🇦CA加拿大丨yoyapai.com\r #4'
   - '🇨🇦CA加拿大丨yoyapai.com\r #5'
@@ -10358,7 +9982,6 @@ proxy-groups:
   - '🇨🇦CA加拿大丨yoyapai.com\r #9'
   - '🇩🇪 德国 | DEU #10'
   - 🇩🇪 德国 | DEU 8
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
   - '🇫🇷FR法國丨yoyapai.com\r #1'
@@ -10369,7 +9992,6 @@ proxy-groups:
   - 🇬🇧GB_2|1.6MB/s
   - '🇭🇰 香港 | HKG #11'
   - '🇭🇰[www.v2nodes.com] trojan-HK-... #1'
-  - '🇮🇳 印度 | IND #1'
   - '🇯🇵 日本 | JPN #7'
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
@@ -10377,7 +9999,6 @@ proxy-groups:
   - '🇸🇬 新加坡 | SGP #7'
   - 🇸🇬 新加坡 | SGP 4
   - 🇹🇷TR土耳其丨yoyapai.com\r
-  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - 🇺🇸US美国丨yoyapai.com\r
   - '🏳[www.v2nodes.com] trojan- #6'
   - 🇱🇻hysteria
@@ -10390,12 +10011,10 @@ proxy-groups:
   - 'EPODONIOS #28'
   - 'EPODONIOS #37'
   - 'EPODONIOS #7'
-  - 'EPODONIOS #8'
   - 'EPODONIOS #9'
   - shadowsocks-1827966278
   - shadowsocks-1870576143
   - ⚡ b2n.ir/v2ray-configs | 249
-  - ⚡ b2n.ir/v2ray-configs | 512
   - ⚡ b2n.ir/v2ray-configs | 829
   - 🇪🇸ES-5.188.181.201-5231
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #10'
@@ -10405,7 +10024,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #8'
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #9'
   - '🇳🇱 荷兰 | NLD #7'
-  - 🇵🇭[www.v2nodes.com] ss-PH-1540...
   - '🇷🇺 俄罗斯 | RUS #13'
   - 🇸🇬 新加坡 | SGP 2
   - '🇺🇸 美国 | USA #28'
@@ -10423,12 +10041,9 @@ proxy-groups:
   name: 🔰 延迟最低
   proxies:
   - CA 🇨🇦 | @Raydikalx | 014451
-  - CA 🇨🇦 | @Raydikalx | 30FA14
   - CA 🇨🇦 | @Raydikalx | 35E5CE
-  - CA 🇨🇦 | @Raydikalx | 68D797
   - CA 🇨🇦 | @Raydikalx | B26A65
   - CA 🇨🇦 | @Raydikalx | D1F63B
-  - CA 🇨🇦 | @Raydikalx | FD802D
   - CN 🇨🇳 | @Raydikalx | 86D34C
   - DE 🇩🇪 | @Raydikalx | 0A7D80
   - DE 🇩🇪 | @Raydikalx | 0FB228
@@ -10445,8 +10060,6 @@ proxy-groups:
   - 'EPODONIOS #918'
   - 'EPODONIOS #919'
   - 'EPODONIOS #923'
-  - 'EPODONIOS #925'
-  - 'EPODONIOS #926'
   - 'EPODONIOS #927'
   - 'EPODONIOS #930'
   - 'EPODONIOS #931'
@@ -10462,17 +10075,13 @@ proxy-groups:
   - IR 🇮🇷 | @Raydikalx | 720279
   - IR 🇮🇷 | @Raydikalx | E6F119
   - KR 🇰🇷 | @Raydikalx | 21E816
-  - NL 🇳🇱 | @Raydikalx | 8E6478
   - SG 🇸🇬 | @Raydikalx | 3AD363
   - US 🇺🇸 | @Raydikalx | 0A41FD
   - US 🇺🇸 | @Raydikalx | 0B7B7C
   - US 🇺🇸 | @Raydikalx | 243A7B
   - US 🇺🇸 | @Raydikalx | 58A0C9
-  - US 🇺🇸 | @Raydikalx | 9053F6
   - US20
   - vmess-1905115834
-  - vmess-1913366976
-  - 未知125
   - 未知25
   - 未知65
   - 未知72
@@ -10481,7 +10090,6 @@ proxy-groups:
   - '🇨🇳_CN_中国 #1'
   - 🇪🇸ES-212.227.228.91-0207
   - 🇫🇷FR-162.19.224.175-1333
-  - '🇭🇰 香港 | HKG #5'
   - 🇭🇰 香港2|@ripaojiedian
   - 🇭🇰 香港3|@ripaojiedian
   - 🇭🇰 香港4|@ripaojiedian
@@ -10493,11 +10101,7 @@ proxy-groups:
   - 🇳🇱 荷兰 | NLD 4
   - 🇸🇬 新加坡|@ripaojiedian
   - 🇸🇬SG-15.235.147.186-0221
-  - '🇺🇸 美国 | USA #11'
-  - '🇺🇸 美国 | USA #12'
-  - '🇺🇸 美国 | USA #14'
   - '🇺🇸 美国 | USA #24'
-  - '🇺🇸 美国 | USA #30'
   - '🇺🇸 美国 | USA #31'
   - 🇺🇸 美国2|@ripaojiedian
   - 🇺🇸 美国|@ripaojiedian
@@ -10577,7 +10181,6 @@ proxy-groups:
   - 'EPODONIOS #194'
   - 'EPODONIOS #195'
   - 'EPODONIOS #196'
-  - 'EPODONIOS #198'
   - 'EPODONIOS #199'
   - 'EPODONIOS #201'
   - 'EPODONIOS #202'
@@ -10597,8 +10200,8 @@ proxy-groups:
   - 'EPODONIOS #220'
   - 'EPODONIOS #221'
   - 'EPODONIOS #222'
-  - 'EPODONIOS #223'
   - 'EPODONIOS #225'
+  - 'EPODONIOS #230'
   - 'EPODONIOS #231'
   - 'EPODONIOS #234'
   - 'EPODONIOS #243'
@@ -10612,6 +10215,7 @@ proxy-groups:
   - 'EPODONIOS #260'
   - 'EPODONIOS #261'
   - 'EPODONIOS #262'
+  - 'EPODONIOS #263'
   - 'EPODONIOS #264'
   - 'EPODONIOS #265'
   - 'EPODONIOS #269'
@@ -10620,9 +10224,7 @@ proxy-groups:
   - 'EPODONIOS #284'
   - 'EPODONIOS #285'
   - 'EPODONIOS #293'
-  - 'EPODONIOS #296'
   - 'EPODONIOS #299'
-  - 'EPODONIOS #305'
   - 'EPODONIOS #308'
   - 'EPODONIOS #312'
   - 'EPODONIOS #314'
@@ -10633,7 +10235,6 @@ proxy-groups:
   - 'EPODONIOS #325'
   - 'EPODONIOS #329'
   - 'EPODONIOS #331'
-  - 'EPODONIOS #332'
   - 'EPODONIOS #334'
   - 'EPODONIOS #337'
   - 'EPODONIOS #339'
@@ -10674,6 +10275,7 @@ proxy-groups:
   - 'EPODONIOS #412'
   - 'EPODONIOS #413'
   - 'EPODONIOS #418'
+  - 'EPODONIOS #419'
   - 'EPODONIOS #421'
   - 'EPODONIOS #422'
   - 'EPODONIOS #423'
@@ -10710,6 +10312,7 @@ proxy-groups:
   - 'EPODONIOS #484'
   - 'EPODONIOS #485'
   - 'EPODONIOS #486'
+  - 'EPODONIOS #491'
   - 'EPODONIOS #520'
   - 'EPODONIOS #521'
   - 'EPODONIOS #525'
@@ -10746,7 +10349,6 @@ proxy-groups:
   - 'EPODONIOS #574'
   - 'EPODONIOS #580'
   - 'EPODONIOS #581'
-  - 'EPODONIOS #582'
   - 'EPODONIOS #589'
   - 'EPODONIOS #598'
   - 'EPODONIOS #603'
@@ -10819,7 +10421,6 @@ proxy-groups:
   - 'EPODONIOS #754'
   - 'EPODONIOS #756'
   - 'EPODONIOS #760'
-  - 'EPODONIOS #761'
   - 'EPODONIOS #765'
   - 'EPODONIOS #766'
   - 'EPODONIOS #769'
@@ -10833,13 +10434,13 @@ proxy-groups:
   - 'EPODONIOS #780'
   - 'EPODONIOS #781'
   - 'EPODONIOS #782'
-  - 'EPODONIOS #783'
   - 'EPODONIOS #784'
   - 'EPODONIOS #787'
   - 'EPODONIOS #788'
   - 'EPODONIOS #789'
   - 'EPODONIOS #793'
   - 'EPODONIOS #794'
+  - 'EPODONIOS #796'
   - 'EPODONIOS #797'
   - 'EPODONIOS #800'
   - 'EPODONIOS #801'
@@ -10854,6 +10455,8 @@ proxy-groups:
   - 'EPODONIOS #833'
   - 'EPODONIOS #834'
   - 'EPODONIOS #835'
+  - 'EPODONIOS #838'
+  - 'EPODONIOS #839'
   - 'EPODONIOS #840'
   - 'EPODONIOS #841'
   - 'EPODONIOS #842'
@@ -10874,7 +10477,6 @@ proxy-groups:
   - 'EPODONIOS #872'
   - 'EPODONIOS #876'
   - 'EPODONIOS #877'
-  - 'EPODONIOS #880'
   - 'EPODONIOS #882'
   - 'EPODONIOS #885'
   - 'EPODONIOS #887'
@@ -10883,13 +10485,13 @@ proxy-groups:
   - 'EPODONIOS #895'
   - 'EPODONIOS #896'
   - 'EPODONIOS #897'
-  - 'EPODONIOS #898'
   - 'EPODONIOS #901'
   - 'EPODONIOS #902'
   - 'EPODONIOS #903'
   - 'EPODONIOS #904'
   - 'EPODONIOS #906'
   - 'EPODONIOS #907'
+  - 'EPODONIOS #912'
   - 'EPODONIOS #951'
   - 'EPODONIOS #952'
   - 'EPODONIOS #954'
@@ -10920,14 +10522,13 @@ proxy-groups:
   - 'EPODONIOS #997'
   - 'EPODONIOS #998'
   - 'EPODONIOS #999'
-  - vless-1827961865
   - vless-1828374419
   - vless-1831071997
   - vless-1832764135
   - vless-1853463879
+  - vless-1853491997
   - vless-1879632052
   - vless-1897614124
-  - vless-1916642716
   - vless-1918538536
   - vless-1918538539
   - vless-1918538544
@@ -10961,14 +10562,10 @@ proxy-groups:
   - 🇩🇪 德国 | DEU 3
   - 🇩🇪DE_5|1.8MB/s
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #15'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #19'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
-  - '🇫🇷 法国 | FRA #1'
   - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
   - 🇬🇧[www.v2nodes.com] vless-GB-1...
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #12'
@@ -10979,6 +10576,7 @@ proxy-groups:
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
   - 🇭🇰 HK VLESS-20 | free-nodes
+  - 🇭🇰 HK VLESS-44 | free-nodes
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
@@ -10992,7 +10590,7 @@ proxy-groups:
   - '🇯🇵 日本 | JPN #4'
   - 🇯🇵[www.v2nodes.com] vless-JP
   - '🇯🇵[www.v2nodes.com] vless-JP #1'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 🇯🇵[www.v2nodes.com] vless-JP-1...
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #9'
@@ -11012,12 +10610,7 @@ proxy-groups:
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
   - 🇷🇸 塞尔维亚 | SRB
   - '🇷🇸 塞尔维亚 | SRB #1'
-  - '🇷🇺 俄罗斯 | RUS #8'
-  - '🇸🇪 瑞典 | SWE #1'
-  - '🇸🇪 瑞典 | SWE #1 #1'
   - '🇸🇪 瑞典 | SWE #2'
-  - '🇸🇪 瑞典 | SWE #3'
-  - '🇸🇪 瑞典 | SWE 2 #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
   - '🇸🇬 新加坡 | SGP #1 #1'
   - '🇸🇬 新加坡 | SGP #2'
@@ -11025,11 +10618,11 @@ proxy-groups:
   - '🇸🇬 新加坡 | SGP #4'
   - '🇸🇬 新加坡 | SGP #5'
   - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇸🇬[www.v2nodes.com] vless-SG #1'
   - '🇸🇬[www.v2nodes.com] vless-SG #6'
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
   - 🇸🇬[www.v2nodes.com] vless-SG-8...
   - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
-  - 🇹🇭[www.v2nodes.com] vless-TH-1...
   - '🇹🇷 土耳其 | TUR #1'
   - 🇺🇸 US VLESS-28 | free-nodes
   - 🇺🇸 US VLESS-74 | free-nodes
@@ -11048,7 +10641,6 @@ proxy-groups:
   - '🇺🇸 美国 | USA #21'
   - '🇺🇸 美国 | USA #22'
   - '🇺🇸 美国 | USA #23'
-  - '🇺🇸 美国 | USA #27'
   - '🇺🇸 美国 | USA #29'
   - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #3 #1'
@@ -11068,6 +10660,7 @@ proxy-groups:
   - '🏳[www.v2nodes.com] vless- #56'
   - 'EPODONIOS #104'
   - 'EPODONIOS #107'
+  - 'EPODONIOS #108'
   - 'EPODONIOS #110'
   - 'EPODONIOS #111'
   - 'EPODONIOS #112'
@@ -11092,8 +10685,8 @@ proxy-groups:
   - 'EPODONIOS #76'
   - 'EPODONIOS #77'
   - 'EPODONIOS #85'
-  - 'EPODONIOS #86'
   - 'EPODONIOS #87'
+  - 'EPODONIOS #89'
   - 'EPODONIOS #91'
   - 'EPODONIOS #92'
   - FR法国丨yoyapai.com\r
@@ -11104,18 +10697,16 @@ proxy-groups:
   - ⚡ b2n.ir/v2ray-configs | 160
   - ⚡ b2n.ir/v2ray-configs | 231
   - ⚡ b2n.ir/v2ray-configs | 248
-  - ⚡ b2n.ir/v2ray-configs | 35
   - ⚡ b2n.ir/v2ray-configs | 786
-  - ⚡ b2n.ir/v2ray-configs | 922
   - ❓未知丨yoyapai.com\r
   - '❓未知丨yoyapai.com\r #1'
-  - '❓未知丨yoyapai.com\r #2'
   - '❓未知丨yoyapai.com\r #3'
   - 🇧🇷BR巴西圣保罗丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
-  - '🇨🇦CA加拿大丨yoyapai.com\r #1'
   - '🇨🇦CA加拿大丨yoyapai.com\r #10'
   - '🇨🇦CA加拿大丨yoyapai.com\r #11'
+  - '🇨🇦CA加拿大丨yoyapai.com\r #12'
+  - '🇨🇦CA加拿大丨yoyapai.com\r #2'
   - '🇨🇦CA加拿大丨yoyapai.com\r #3'
   - '🇨🇦CA加拿大丨yoyapai.com\r #4'
   - '🇨🇦CA加拿大丨yoyapai.com\r #5'
@@ -11125,7 +10716,6 @@ proxy-groups:
   - '🇨🇦CA加拿大丨yoyapai.com\r #9'
   - '🇩🇪 德国 | DEU #10'
   - 🇩🇪 德国 | DEU 8
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
   - '🇫🇷FR法國丨yoyapai.com\r #1'
@@ -11136,7 +10726,6 @@ proxy-groups:
   - 🇬🇧GB_2|1.6MB/s
   - '🇭🇰 香港 | HKG #11'
   - '🇭🇰[www.v2nodes.com] trojan-HK-... #1'
-  - '🇮🇳 印度 | IND #1'
   - '🇯🇵 日本 | JPN #7'
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
@@ -11144,7 +10733,6 @@ proxy-groups:
   - '🇸🇬 新加坡 | SGP #7'
   - 🇸🇬 新加坡 | SGP 4
   - 🇹🇷TR土耳其丨yoyapai.com\r
-  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - 🇺🇸US美国丨yoyapai.com\r
   - '🏳[www.v2nodes.com] trojan- #6'
   - 🇱🇻hysteria
@@ -11157,12 +10745,10 @@ proxy-groups:
   - 'EPODONIOS #28'
   - 'EPODONIOS #37'
   - 'EPODONIOS #7'
-  - 'EPODONIOS #8'
   - 'EPODONIOS #9'
   - shadowsocks-1827966278
   - shadowsocks-1870576143
   - ⚡ b2n.ir/v2ray-configs | 249
-  - ⚡ b2n.ir/v2ray-configs | 512
   - ⚡ b2n.ir/v2ray-configs | 829
   - 🇪🇸ES-5.188.181.201-5231
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #10'
@@ -11172,7 +10758,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #8'
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #9'
   - '🇳🇱 荷兰 | NLD #7'
-  - 🇵🇭[www.v2nodes.com] ss-PH-1540...
   - '🇷🇺 俄罗斯 | RUS #13'
   - 🇸🇬 新加坡 | SGP 2
   - '🇺🇸 美国 | USA #28'
@@ -11188,12 +10773,9 @@ proxy-groups:
 - name: ✅ 手动选择
   proxies:
   - CA 🇨🇦 | @Raydikalx | 014451
-  - CA 🇨🇦 | @Raydikalx | 30FA14
   - CA 🇨🇦 | @Raydikalx | 35E5CE
-  - CA 🇨🇦 | @Raydikalx | 68D797
   - CA 🇨🇦 | @Raydikalx | B26A65
   - CA 🇨🇦 | @Raydikalx | D1F63B
-  - CA 🇨🇦 | @Raydikalx | FD802D
   - CN 🇨🇳 | @Raydikalx | 86D34C
   - DE 🇩🇪 | @Raydikalx | 0A7D80
   - DE 🇩🇪 | @Raydikalx | 0FB228
@@ -11210,8 +10792,6 @@ proxy-groups:
   - 'EPODONIOS #918'
   - 'EPODONIOS #919'
   - 'EPODONIOS #923'
-  - 'EPODONIOS #925'
-  - 'EPODONIOS #926'
   - 'EPODONIOS #927'
   - 'EPODONIOS #930'
   - 'EPODONIOS #931'
@@ -11227,17 +10807,13 @@ proxy-groups:
   - IR 🇮🇷 | @Raydikalx | 720279
   - IR 🇮🇷 | @Raydikalx | E6F119
   - KR 🇰🇷 | @Raydikalx | 21E816
-  - NL 🇳🇱 | @Raydikalx | 8E6478
   - SG 🇸🇬 | @Raydikalx | 3AD363
   - US 🇺🇸 | @Raydikalx | 0A41FD
   - US 🇺🇸 | @Raydikalx | 0B7B7C
   - US 🇺🇸 | @Raydikalx | 243A7B
   - US 🇺🇸 | @Raydikalx | 58A0C9
-  - US 🇺🇸 | @Raydikalx | 9053F6
   - US20
   - vmess-1905115834
-  - vmess-1913366976
-  - 未知125
   - 未知25
   - 未知65
   - 未知72
@@ -11246,7 +10822,6 @@ proxy-groups:
   - '🇨🇳_CN_中国 #1'
   - 🇪🇸ES-212.227.228.91-0207
   - 🇫🇷FR-162.19.224.175-1333
-  - '🇭🇰 香港 | HKG #5'
   - 🇭🇰 香港2|@ripaojiedian
   - 🇭🇰 香港3|@ripaojiedian
   - 🇭🇰 香港4|@ripaojiedian
@@ -11258,11 +10833,7 @@ proxy-groups:
   - 🇳🇱 荷兰 | NLD 4
   - 🇸🇬 新加坡|@ripaojiedian
   - 🇸🇬SG-15.235.147.186-0221
-  - '🇺🇸 美国 | USA #11'
-  - '🇺🇸 美国 | USA #12'
-  - '🇺🇸 美国 | USA #14'
   - '🇺🇸 美国 | USA #24'
-  - '🇺🇸 美国 | USA #30'
   - '🇺🇸 美国 | USA #31'
   - 🇺🇸 美国2|@ripaojiedian
   - 🇺🇸 美国|@ripaojiedian
@@ -11342,7 +10913,6 @@ proxy-groups:
   - 'EPODONIOS #194'
   - 'EPODONIOS #195'
   - 'EPODONIOS #196'
-  - 'EPODONIOS #198'
   - 'EPODONIOS #199'
   - 'EPODONIOS #201'
   - 'EPODONIOS #202'
@@ -11362,8 +10932,8 @@ proxy-groups:
   - 'EPODONIOS #220'
   - 'EPODONIOS #221'
   - 'EPODONIOS #222'
-  - 'EPODONIOS #223'
   - 'EPODONIOS #225'
+  - 'EPODONIOS #230'
   - 'EPODONIOS #231'
   - 'EPODONIOS #234'
   - 'EPODONIOS #243'
@@ -11377,6 +10947,7 @@ proxy-groups:
   - 'EPODONIOS #260'
   - 'EPODONIOS #261'
   - 'EPODONIOS #262'
+  - 'EPODONIOS #263'
   - 'EPODONIOS #264'
   - 'EPODONIOS #265'
   - 'EPODONIOS #269'
@@ -11385,9 +10956,7 @@ proxy-groups:
   - 'EPODONIOS #284'
   - 'EPODONIOS #285'
   - 'EPODONIOS #293'
-  - 'EPODONIOS #296'
   - 'EPODONIOS #299'
-  - 'EPODONIOS #305'
   - 'EPODONIOS #308'
   - 'EPODONIOS #312'
   - 'EPODONIOS #314'
@@ -11398,7 +10967,6 @@ proxy-groups:
   - 'EPODONIOS #325'
   - 'EPODONIOS #329'
   - 'EPODONIOS #331'
-  - 'EPODONIOS #332'
   - 'EPODONIOS #334'
   - 'EPODONIOS #337'
   - 'EPODONIOS #339'
@@ -11439,6 +11007,7 @@ proxy-groups:
   - 'EPODONIOS #412'
   - 'EPODONIOS #413'
   - 'EPODONIOS #418'
+  - 'EPODONIOS #419'
   - 'EPODONIOS #421'
   - 'EPODONIOS #422'
   - 'EPODONIOS #423'
@@ -11475,6 +11044,7 @@ proxy-groups:
   - 'EPODONIOS #484'
   - 'EPODONIOS #485'
   - 'EPODONIOS #486'
+  - 'EPODONIOS #491'
   - 'EPODONIOS #520'
   - 'EPODONIOS #521'
   - 'EPODONIOS #525'
@@ -11511,7 +11081,6 @@ proxy-groups:
   - 'EPODONIOS #574'
   - 'EPODONIOS #580'
   - 'EPODONIOS #581'
-  - 'EPODONIOS #582'
   - 'EPODONIOS #589'
   - 'EPODONIOS #598'
   - 'EPODONIOS #603'
@@ -11584,7 +11153,6 @@ proxy-groups:
   - 'EPODONIOS #754'
   - 'EPODONIOS #756'
   - 'EPODONIOS #760'
-  - 'EPODONIOS #761'
   - 'EPODONIOS #765'
   - 'EPODONIOS #766'
   - 'EPODONIOS #769'
@@ -11598,13 +11166,13 @@ proxy-groups:
   - 'EPODONIOS #780'
   - 'EPODONIOS #781'
   - 'EPODONIOS #782'
-  - 'EPODONIOS #783'
   - 'EPODONIOS #784'
   - 'EPODONIOS #787'
   - 'EPODONIOS #788'
   - 'EPODONIOS #789'
   - 'EPODONIOS #793'
   - 'EPODONIOS #794'
+  - 'EPODONIOS #796'
   - 'EPODONIOS #797'
   - 'EPODONIOS #800'
   - 'EPODONIOS #801'
@@ -11619,6 +11187,8 @@ proxy-groups:
   - 'EPODONIOS #833'
   - 'EPODONIOS #834'
   - 'EPODONIOS #835'
+  - 'EPODONIOS #838'
+  - 'EPODONIOS #839'
   - 'EPODONIOS #840'
   - 'EPODONIOS #841'
   - 'EPODONIOS #842'
@@ -11639,7 +11209,6 @@ proxy-groups:
   - 'EPODONIOS #872'
   - 'EPODONIOS #876'
   - 'EPODONIOS #877'
-  - 'EPODONIOS #880'
   - 'EPODONIOS #882'
   - 'EPODONIOS #885'
   - 'EPODONIOS #887'
@@ -11648,13 +11217,13 @@ proxy-groups:
   - 'EPODONIOS #895'
   - 'EPODONIOS #896'
   - 'EPODONIOS #897'
-  - 'EPODONIOS #898'
   - 'EPODONIOS #901'
   - 'EPODONIOS #902'
   - 'EPODONIOS #903'
   - 'EPODONIOS #904'
   - 'EPODONIOS #906'
   - 'EPODONIOS #907'
+  - 'EPODONIOS #912'
   - 'EPODONIOS #951'
   - 'EPODONIOS #952'
   - 'EPODONIOS #954'
@@ -11685,14 +11254,13 @@ proxy-groups:
   - 'EPODONIOS #997'
   - 'EPODONIOS #998'
   - 'EPODONIOS #999'
-  - vless-1827961865
   - vless-1828374419
   - vless-1831071997
   - vless-1832764135
   - vless-1853463879
+  - vless-1853491997
   - vless-1879632052
   - vless-1897614124
-  - vless-1916642716
   - vless-1918538536
   - vless-1918538539
   - vless-1918538544
@@ -11726,14 +11294,10 @@ proxy-groups:
   - 🇩🇪 德国 | DEU 3
   - 🇩🇪DE_5|1.8MB/s
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #15'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #19'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #8'
-  - '🇫🇷 法国 | FRA #1'
   - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
   - 🇬🇧[www.v2nodes.com] vless-GB-1...
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #12'
@@ -11744,6 +11308,7 @@ proxy-groups:
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
   - 🇭🇰 HK VLESS-20 | free-nodes
+  - 🇭🇰 HK VLESS-44 | free-nodes
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
@@ -11757,7 +11322,7 @@ proxy-groups:
   - '🇯🇵 日本 | JPN #4'
   - 🇯🇵[www.v2nodes.com] vless-JP
   - '🇯🇵[www.v2nodes.com] vless-JP #1'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 🇯🇵[www.v2nodes.com] vless-JP-1...
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #9'
@@ -11777,12 +11342,7 @@ proxy-groups:
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
   - 🇷🇸 塞尔维亚 | SRB
   - '🇷🇸 塞尔维亚 | SRB #1'
-  - '🇷🇺 俄罗斯 | RUS #8'
-  - '🇸🇪 瑞典 | SWE #1'
-  - '🇸🇪 瑞典 | SWE #1 #1'
   - '🇸🇪 瑞典 | SWE #2'
-  - '🇸🇪 瑞典 | SWE #3'
-  - '🇸🇪 瑞典 | SWE 2 #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
   - '🇸🇬 新加坡 | SGP #1 #1'
   - '🇸🇬 新加坡 | SGP #2'
@@ -11790,11 +11350,11 @@ proxy-groups:
   - '🇸🇬 新加坡 | SGP #4'
   - '🇸🇬 新加坡 | SGP #5'
   - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇸🇬[www.v2nodes.com] vless-SG #1'
   - '🇸🇬[www.v2nodes.com] vless-SG #6'
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
   - 🇸🇬[www.v2nodes.com] vless-SG-8...
   - '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
-  - 🇹🇭[www.v2nodes.com] vless-TH-1...
   - '🇹🇷 土耳其 | TUR #1'
   - 🇺🇸 US VLESS-28 | free-nodes
   - 🇺🇸 US VLESS-74 | free-nodes
@@ -11813,7 +11373,6 @@ proxy-groups:
   - '🇺🇸 美国 | USA #21'
   - '🇺🇸 美国 | USA #22'
   - '🇺🇸 美国 | USA #23'
-  - '🇺🇸 美国 | USA #27'
   - '🇺🇸 美国 | USA #29'
   - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #3 #1'
@@ -11833,6 +11392,7 @@ proxy-groups:
   - '🏳[www.v2nodes.com] vless- #56'
   - 'EPODONIOS #104'
   - 'EPODONIOS #107'
+  - 'EPODONIOS #108'
   - 'EPODONIOS #110'
   - 'EPODONIOS #111'
   - 'EPODONIOS #112'
@@ -11857,8 +11417,8 @@ proxy-groups:
   - 'EPODONIOS #76'
   - 'EPODONIOS #77'
   - 'EPODONIOS #85'
-  - 'EPODONIOS #86'
   - 'EPODONIOS #87'
+  - 'EPODONIOS #89'
   - 'EPODONIOS #91'
   - 'EPODONIOS #92'
   - FR法国丨yoyapai.com\r
@@ -11869,18 +11429,16 @@ proxy-groups:
   - ⚡ b2n.ir/v2ray-configs | 160
   - ⚡ b2n.ir/v2ray-configs | 231
   - ⚡ b2n.ir/v2ray-configs | 248
-  - ⚡ b2n.ir/v2ray-configs | 35
   - ⚡ b2n.ir/v2ray-configs | 786
-  - ⚡ b2n.ir/v2ray-configs | 922
   - ❓未知丨yoyapai.com\r
   - '❓未知丨yoyapai.com\r #1'
-  - '❓未知丨yoyapai.com\r #2'
   - '❓未知丨yoyapai.com\r #3'
   - 🇧🇷BR巴西圣保罗丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
-  - '🇨🇦CA加拿大丨yoyapai.com\r #1'
   - '🇨🇦CA加拿大丨yoyapai.com\r #10'
   - '🇨🇦CA加拿大丨yoyapai.com\r #11'
+  - '🇨🇦CA加拿大丨yoyapai.com\r #12'
+  - '🇨🇦CA加拿大丨yoyapai.com\r #2'
   - '🇨🇦CA加拿大丨yoyapai.com\r #3'
   - '🇨🇦CA加拿大丨yoyapai.com\r #4'
   - '🇨🇦CA加拿大丨yoyapai.com\r #5'
@@ -11890,7 +11448,6 @@ proxy-groups:
   - '🇨🇦CA加拿大丨yoyapai.com\r #9'
   - '🇩🇪 德国 | DEU #10'
   - 🇩🇪 德国 | DEU 8
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
   - '🇫🇷FR法國丨yoyapai.com\r #1'
@@ -11901,7 +11458,6 @@ proxy-groups:
   - 🇬🇧GB_2|1.6MB/s
   - '🇭🇰 香港 | HKG #11'
   - '🇭🇰[www.v2nodes.com] trojan-HK-... #1'
-  - '🇮🇳 印度 | IND #1'
   - '🇯🇵 日本 | JPN #7'
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #12'
@@ -11909,7 +11465,6 @@ proxy-groups:
   - '🇸🇬 新加坡 | SGP #7'
   - 🇸🇬 新加坡 | SGP 4
   - 🇹🇷TR土耳其丨yoyapai.com\r
-  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - 🇺🇸US美国丨yoyapai.com\r
   - '🏳[www.v2nodes.com] trojan- #6'
   - 🇱🇻hysteria
@@ -11922,12 +11477,10 @@ proxy-groups:
   - 'EPODONIOS #28'
   - 'EPODONIOS #37'
   - 'EPODONIOS #7'
-  - 'EPODONIOS #8'
   - 'EPODONIOS #9'
   - shadowsocks-1827966278
   - shadowsocks-1870576143
   - ⚡ b2n.ir/v2ray-configs | 249
-  - ⚡ b2n.ir/v2ray-configs | 512
   - ⚡ b2n.ir/v2ray-configs | 829
   - 🇪🇸ES-5.188.181.201-5231
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #10'
@@ -11937,7 +11490,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #8'
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #9'
   - '🇳🇱 荷兰 | NLD #7'
-  - 🇵🇭[www.v2nodes.com] ss-PH-1540...
   - '🇷🇺 俄罗斯 | RUS #13'
   - 🇸🇬 新加坡 | SGP 2
   - '🇺🇸 美国 | USA #28'
@@ -11999,7 +11551,7 @@ proxy-groups:
   - '🇯🇵 日本 | JPN #4'
   - 🇯🇵[www.v2nodes.com] vless-JP
   - '🇯🇵[www.v2nodes.com] vless-JP #1'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  - 🇯🇵[www.v2nodes.com] vless-JP-1...
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #9'
@@ -12013,17 +11565,11 @@ proxy-groups:
   - US 🇺🇸 | @Raydikalx | 0B7B7C
   - US 🇺🇸 | @Raydikalx | 243A7B
   - US 🇺🇸 | @Raydikalx | 58A0C9
-  - US 🇺🇸 | @Raydikalx | 9053F6
   - US20
-  - '🇺🇸 美国 | USA #11'
-  - '🇺🇸 美国 | USA #12'
-  - '🇺🇸 美国 | USA #14'
   - '🇺🇸 美国 | USA #24'
-  - '🇺🇸 美国 | USA #30'
   - '🇺🇸 美国 | USA #31'
   - 🇺🇸 美国2|@ripaojiedian
   - 🇺🇸 美国|@ripaojiedian
-  - '🇷🇺 俄罗斯 | RUS #8'
   - 🇺🇸 US VLESS-28 | free-nodes
   - 🇺🇸 US VLESS-74 | free-nodes
   - 🇺🇸 US VLESS-83 | free-nodes
@@ -12041,7 +11587,6 @@ proxy-groups:
   - '🇺🇸 美国 | USA #21'
   - '🇺🇸 美国 | USA #22'
   - '🇺🇸 美国 | USA #23'
-  - '🇺🇸 美国 | USA #27'
   - '🇺🇸 美国 | USA #29'
   - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #3 #1'
@@ -12062,7 +11607,7 @@ proxy-groups:
   type: select
 - name: 🇨🇳 台湾
   proxies:
-  - '🇹🇼 🇨🇳 台湾 | TWN #3'
+  - DIRECT
   type: select
 - name: 🇨🇳 中国
   proxies:
@@ -12072,12 +11617,12 @@ proxy-groups:
 - name: 🇭🇰 香港
   proxies:
   - HK 🇭🇰 | @Raydikalx | CB4912
-  - '🇭🇰 香港 | HKG #5'
   - 🇭🇰 香港2|@ripaojiedian
   - 🇭🇰 香港3|@ripaojiedian
   - 🇭🇰 香港4|@ripaojiedian
   - 🇭🇰 香港5|@ripaojiedian
   - 🇭🇰 HK VLESS-20 | free-nodes
+  - 🇭🇰 HK VLESS-44 | free-nodes
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
@@ -12087,16 +11632,14 @@ proxy-groups:
 - name: 🇨🇦 加拿大
   proxies:
   - CA 🇨🇦 | @Raydikalx | 014451
-  - CA 🇨🇦 | @Raydikalx | 30FA14
   - CA 🇨🇦 | @Raydikalx | 35E5CE
-  - CA 🇨🇦 | @Raydikalx | 68D797
   - CA 🇨🇦 | @Raydikalx | B26A65
   - CA 🇨🇦 | @Raydikalx | D1F63B
-  - CA 🇨🇦 | @Raydikalx | FD802D
   - 🇨🇦CA加拿大丨yoyapai.com\r
-  - '🇨🇦CA加拿大丨yoyapai.com\r #1'
   - '🇨🇦CA加拿大丨yoyapai.com\r #10'
   - '🇨🇦CA加拿大丨yoyapai.com\r #11'
+  - '🇨🇦CA加拿大丨yoyapai.com\r #12'
+  - '🇨🇦CA加拿大丨yoyapai.com\r #2'
   - '🇨🇦CA加拿大丨yoyapai.com\r #3'
   - '🇨🇦CA加拿大丨yoyapai.com\r #4'
   - '🇨🇦CA加拿大丨yoyapai.com\r #5'
@@ -12109,9 +11652,7 @@ proxy-groups:
   proxies:
   - FR 🇫🇷 | @Raydikalx | 5E85BD
   - 🇫🇷FR-162.19.224.175-1333
-  - '🇫🇷 法国 | FRA #1'
   - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
   - FR法国丨yoyapai.com\r
   - 🇫🇷FR法国丨yoyapai.com\r
@@ -12133,6 +11674,7 @@ proxy-groups:
   - '🇸🇬 新加坡 | SGP #4'
   - '🇸🇬 新加坡 | SGP #5'
   - 🇸🇬[www.v2nodes.com] vless-SG
+  - '🇸🇬[www.v2nodes.com] vless-SG #1'
   - '🇸🇬[www.v2nodes.com] vless-SG #6'
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
   - 🇸🇬[www.v2nodes.com] vless-SG-8...
@@ -12182,14 +11724,11 @@ proxy-groups:
   - 🇩🇪 德国 | DEU 3
   - 🇩🇪DE_5|1.8MB/s
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #15'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #19'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #15'
   - '🇩🇪 德国 | DEU #10'
   - 🇩🇪 德国 | DEU 8
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
   type: select
 rules:
 - IP-CIDR,60.190.139.164/32,⛔ 广告拦截
