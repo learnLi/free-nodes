@@ -1,19 +1,71 @@
 proxies:
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: 🇨🇳CN-223.111.122.199-0005
-  network: ws
-  port: 38080
-  server: 223.111.122.199
-  servername: ''
-  skip-cert-verify: true
+  name: CN 🇨🇳 | @Raydikalx | 4629B3
+  network: tcp
+  port: 54602
+  server: 183.240.235.170
   tls: false
   type: vmess
-  uuid: 6248895b-4255-4f07-9479-d198bc1eb8db
-  ws-opts:
-    headers:
-      Host: www.189.cn
-    path: /guolicheng/us1
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 64
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 841FF2
+  network: tcp
+  port: 35601
+  server: 120.232.153.40
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 96B332
+  network: tcp
+  port: 50017
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 23b5790c-4e96-49fa-95fc-9079ce9cf43c
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 9BF1B1
+  network: tcp
+  port: 50015
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 23b5790c-4e96-49fa-95fc-9079ce9cf43c
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | CE5A05
+  network: tcp
+  port: 50011
+  server: 36.134.35.36
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | DFBBF8
+  network: tcp
+  port: 50011
+  server: 36.133.78.37
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.242.1.160-1786
+  network: http
+  port: 36298
+  server: 47.242.1.160
+  servername: 47.242.1.160
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 6cea7176-148d-4f51-9bf4-313199c839ba
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-47.244.120.197-0168
@@ -29,32 +81,15 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.89.231.138-7010
-  network: ws
-  port: 80
-  server: 47.89.231.138
-  servername: ''
-  skip-cert-verify: true
+  name: 🇨🇳CN-8.210.236.45-1758
+  network: http
+  port: 61228
+  server: 8.210.236.45
+  servername: 8.210.236.45
+  skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 82f58397-480e-4975-b3ec-fea904dc5912
-  ws-opts:
-    path: /O0emfe0pBfYovpz5526rhq
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-47.89.244.218-0492
-  network: ws
-  port: 443
-  server: 53vXOVarmgcreAsv.v.3dns.vip
-  servername: 53vXOVarmgcreAsv.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 53vXOVarmgcreAsv.v.3dns.vip
-    path: /ws-vmess
+  uuid: 7e0ee5c7-46ff-42f8-ab7c-06d8227da454
 - alterId: 64
   cipher: auto
   name: 🇨🇳_CN_中国

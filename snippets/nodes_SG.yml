@@ -1,6 +1,30 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 000AB8
+  network: ws
+  port: 30330
+  server: 47.129.115.96
+  servername: sg-transit-3.nebulacloud.win
+  tls: true
+  type: vmess
+  uuid: dfa9f875-3805-49d9-8636-46b6899be24e
+  ws-opts:
+    headers:
+      Host: sg-transit-3.nebulacloud.win
+    path: /ca/getData
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 5DDFCC
+  network: none
+  port: 29521
+  server: 47.236.207.245
+  servername: 47.236.207.245
+  tls: false
+  type: vmess
+  uuid: f1bb29bf-a342-44d4-9ac5-5ca4566a216a
+- alterId: 0
+  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -29,6 +53,19 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-15.235.147.186-0018
+  network: ws
+  port: 80
+  server: 15.235.147.186
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  ws-opts:
+    path: /sshkit/Ertusg86/635014638c264/
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-15.235.147.186-0025

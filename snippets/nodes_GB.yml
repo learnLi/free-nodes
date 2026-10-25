@@ -1,7 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 'GB 🇬🇧 | @Raydikalx | 360227 #1'
+  name: GB 🇬🇧 | @Raydikalx | 0177E7
+  network: tcp
+  port: 2053
+  server: uk.connfull.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: d8d43cb7-2c08-4e08-969b-a0766a34d59a
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 360227
   network: ws
   port: 80
   server: 57.129.132.223
@@ -13,25 +23,44 @@ proxies:
     headers:
       Host: viber.com
     path: /vmess/
-- alpn:
-  - h2
-  - http/1.1
-  - h3
-  client-fingerprint: chrome
-  name: 🇬🇧GB_2|1.6MB/s
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 4EC290
   network: ws
-  password: 8yup05o4lz0csoxb
-  port: 2083
-  server: 216.24.57.225
-  skip-cert-verify: true
-  sni: fin.netvia.ir
-  type: trojan
-  udp: true
+  port: 443
+  server: me.kalakatha.org
+  servername: me.kalakatha.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/62.0.3202.94 Safari/537.36
-    path: /YaujaGsyr
+      Host: me.kalakatha.org
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 7C100E
+  network: ws
+  port: 443
+  server: 6c00bf1f-a569-4d54-9f71-a13611801867.661.qzz.io
+  servername: 6c00bf1f-a569-4d54-9f71-a13611801867.661.qzz.io
+  tls: true
+  type: vmess
+  uuid: 0c6b96bc-5e3a-4500-8497-6dead1965609
+  ws-opts:
+    headers:
+      Host: 6c00bf1f-a569-4d54-9f71-a13611801867.661.qzz.io
+    path: /KHtPvNZl371C8NsbbZ1wwDhJ3
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | F23548
+  network: raw
+  port: 2053
+  server: node-uk.connectsuite.org
+  servername: node-uk.connectsuite.org
+  tls: true
+  type: vmess
+  uuid: 72f2cbe4-2874-45b7-b6aa-b93077c10c72
 - cipher: aes-128-gcm
   name: shadowsocks-1827146143
   password: shadowsocks
@@ -55,12 +84,6 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.149
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.155-0101
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.155
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.159-0116
@@ -332,17 +355,17 @@ proxies:
   port: 8080
   server: 82.38.31.66
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.82-0121
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.82
-  type: ss
 - cipher: aes-256-gcm
   name: 🇬🇧GB-94.156.250.148-0163
   password: RexnBgU7EV5ADxG
   port: 7001
   server: 94.156.250.148
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1451...
+  password: shadowsocks
+  port: 443
+  server: 158.173.24.73
   type: ss
 - cipher: aes-256-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1602... #1'

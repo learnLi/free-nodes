@@ -1,6 +1,30 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 000AB8
+  network: ws
+  port: 30330
+  server: 47.129.115.96
+  servername: sg-transit-3.nebulacloud.win
+  tls: true
+  type: vmess
+  uuid: dfa9f875-3805-49d9-8636-46b6899be24e
+  ws-opts:
+    headers:
+      Host: sg-transit-3.nebulacloud.win
+    path: /ca/getData
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 5DDFCC
+  network: none
+  port: 29521
+  server: 47.236.207.245
+  servername: 47.236.207.245
+  tls: false
+  type: vmess
+  uuid: f1bb29bf-a342-44d4-9ac5-5ca4566a216a
+- alterId: 0
+  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -29,6 +53,19 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-15.235.147.186-0018
+  network: ws
+  port: 80
+  server: 15.235.147.186
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  ws-opts:
+    path: /sshkit/Ertusg86/635014638c264/
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-15.235.147.186-0025
@@ -68,33 +105,6 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chrome
-- name: '🇸🇬 新加坡 | SGP #10'
-  network: ws
-  port: 8080
-  server: 104.18.35.86
-  servername: hhlfy.twiladaphne.ndjp.net
-  tls: false
-  type: vless
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  ws-opts:
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-    path: /sg-melbi
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #11'
-  network: ws
-  port: 443
-  server: 104.18.44.61
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
 - name: '🇸🇬 新加坡 | SGP #2'
   network: ws
   port: 443
@@ -155,20 +165,6 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chrome
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #6'
-  network: ws
-  port: 443
-  server: 104.18.46.214
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
 - name: '🇸🇬 新加坡 | SGP #7'
   network: ws
   port: 443
@@ -181,34 +177,19 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #8'
+- name: '🇸🇬 新加坡 | SGP #8'
   network: ws
-  port: 443
-  server: 172.64.156.236
-  servername: snip.edgeoneai.cc.cd
-  tls: true
+  port: 2082
+  server: 104.18.35.86
+  servername: hhlfy.twiladaphne.ndjp.net
+  tls: false
   type: vless
   udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   ws-opts:
     headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #9'
-  network: ws
-  port: 443
-  server: 104.18.44.58
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
+      Host: hhlfy.twiladaphne.ndjp.net
+    path: /fp
 - alpn:
   - h3
   - h2
@@ -265,6 +246,17 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
     path: /fp=chrome
+- name: 🇸🇬[www.v2nodes.com] vless-SG
+  network: ws
+  port: 8880
+  server: 88.216.69.30
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: vms.lifetime06.workers.dev
+    path: /
 - name: '🇸🇬[www.v2nodes.com] vless-SG #... #1'
   network: ws
   port: 443
@@ -290,6 +282,18 @@ proxies:
     headers:
       Host: notls.lukongtou.eu.org
     path: Telegram-WangCai2🇨🇳security=tls
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #4'
+  network: ws
+  port: 8080
+  server: 172.67.71.187
+  servername: hhlfy.twiladaphne.ndjp.net
+  tls: false
+  type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  ws-opts:
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+    path: /sg-melbi
 - name: '🇸🇬[www.v2nodes.com] vless-SG #... #5'
   network: ws
   port: 8880
@@ -329,17 +333,6 @@ proxies:
   uuid: d342d11e-d224-4463-b982-532309285094
   ws-opts:
     path: /fp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG #1'
-  network: ws
-  port: 8880
-  server: 88.216.69.30
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime06.workers.dev
-    path: /
 - client-fingerprint: chrome
   encryption: none
   name: '🇸🇬[www.v2nodes.com] vless-SG #2'
@@ -395,7 +388,7 @@ proxies:
 - name: '🇸🇬[www.v2nodes.com] vless-SG #6'
   network: ws
   port: 8080
-  server: 172.67.71.187
+  server: 104.18.35.86
   servername: hhlfy.twiladaphne.ndjp.net
   tls: false
   type: vless
@@ -425,32 +418,35 @@ proxies:
     headers:
       Host: lucasjow.us.ci
     path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub?ed=2048security=tls
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #16'
+- encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #18'
+  network: tcp
   port: 16263
   server: 47.237.74.17
   tls: false
   type: vless
   uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #20'
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #19'
+  network: ws
+  port: 2096
+  server: 139.162.27.96
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.dev
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #23'
   port: 12512
   server: 46.137.202.178
   tls: false
   type: vless
   uuid: 2a6c617d-98e4-49c3-95ab-76f02fcf0150
-- encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #22'
-  network: ws
-  port: 8443
-  server: 172.67.155.65
-  servername: lucasjow.us.ci
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  ws-opts:
-    headers:
-      Host: lucasjow.us.ci
-    path: /?B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub?ed=2048
 - name: 🇸🇬[www.v2nodes.com] vless-SG-9...
   network: ws
   port: 443
@@ -514,3 +510,17 @@ proxies:
   port: 8388
   server: 139.180.220.175
   type: ss
+- name: 🇸🇬SG_1|1.5MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 13.214.213.66
+  skip-cert-verify: true
+  type: http
+  username: '1234'
+- name: 🇸🇬SG_2|2.7MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 13.212.249.115
+  skip-cert-verify: true
+  type: http
+  username: '1234'

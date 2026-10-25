@@ -1,1 +1,22 @@
-proxies: []
+proxies:
+- alterId: 1
+  cipher: auto
+  name: Global 🌐 | @Raydikalx | A3CCEE
+  network: ws
+  port: 43960
+  server: pp1.zhengzhongfeizhu.xyz
+  tls: false
+  type: vmess
+  uuid: 177501cc-f0c2-3cc3-b9a7-8c1e8e27655f
+  ws-opts:
+    headers:
+      Host: pp1.zhengzhongfeizhu.xyz
+    path: /j20-sp1
+- name: 🇪🇪EE_1|2.6MB/s|K001-260618
+  port: 9443
+  server: 95.153.32.2
+  skip-cert-verify: true
+  sub_tag: K001-260618
+  tls: true
+  type: http
+  udp: true

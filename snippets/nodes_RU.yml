@@ -1,24 +1,15 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 6530E7
-  network: tcp
-  port: 44368
-  server: 45.136.244.204
-  tls: false
-  type: vmess
-  uuid: d5862d3a-154f-43c9-bfa4-335361c020ba
-- alterId: 0
-  cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 876A78
+  name: RU 🇷🇺 | @Raydikalx | 30981F
   network: ws
   port: 443
-  server: YyYYuUI.iRAn1912.dpDNs.oRG
-  servername: ''
+  server: renderer-stream-2-114.mirra.now
+  servername: renderer-stream-2-114.mirra.now
   tls: true
   type: vmess
-  uuid: 4a7baca1-8048-4a91-8316-595b36657a54
+  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
   ws-opts:
     headers:
-      Host: YYyYUui.iran1912.dpdNS.OrG
-    path: /TaBvkrUbsyvsvinsGGg
+      Host: renderer-stream-2-114.mirra.now
+    path: /api/v1/gpu-stream/socket
