@@ -1,23 +1,13 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 2CCD6C
+  name: CN 🇨🇳 | @Raydikalx | 6C11D3
   network: tcp
-  port: 50014
+  port: 50012
   server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: e37149b8-63df-4b4e-bd17-d7fc0b3009db
-- alterId: 64
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 65879E
-  network: tcp
-  port: 51193
-  server: 183.238.202.173
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
 - alterId: 0
   cipher: auto
   name: CN 🇨🇳 | @Raydikalx | 86D34C
@@ -34,20 +24,37 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-223.111.202.139-1603
+  name: 🇨🇳CN-223.111.122.199-0004
   network: ws
-  port: 63088
-  server: 223.111.202.139
+  port: 38080
+  server: 223.111.122.199
   servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: e159f409-af0e-38b6-b34e-404a98089471
+  uuid: 6248895b-4255-4f07-9479-d198bc1eb8db
   ws-opts:
-    path: /mugua
+    headers:
+      Host: www.189.cn
+    path: /guolicheng/us2
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.244.120.197-0168
+  name: 🇨🇳CN-47.237.12.29-0480
+  network: ws
+  port: 443
+  server: 6JiziO8PxQAXBAtZ.v.3dns.vip
+  servername: 6JiziO8PxQAXBAtZ.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 6JiziO8PxQAXBAtZ.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.244.120.197-5322
   network: ws
   port: 44867
   server: 47.244.120.197
@@ -57,25 +64,13 @@ proxies:
   type: vmess
   uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
   ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-8.210.131.2-1542
-  network: http
-  port: 31357
-  server: 8.210.131.2
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 618c0914-e31e-4b82-8289-2e7a47e48dfd
+    path: /arki?ed=2048
 - alterId: 64
   cipher: auto
   name: 🇨🇳_CN_中国
   network: tcp
   port: 50002
   server: 112.132.215.108
-  servername: ''
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
@@ -89,3 +84,19 @@ proxies:
   type: vmess
   uuid: a01e5d56-464f-45b9-b600-164db4700162
   ws-opts: {}
+- alterId: 0
+  cipher: auto
+  name: '🇭🇰 香港 | HKG #9'
+  network: ws
+  port: 443
+  server: 47.243.153.153
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: i2psm3knof5qjjix.v.3dns.vip
+    path: /ws-vmess

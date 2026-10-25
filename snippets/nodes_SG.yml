@@ -1,6 +1,16 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 3AD363
+  network: tcp
+  port: 18000
+  server: ww11.levikogjgfdd.ir
+  servername: null
+  tls: false
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- alterId: 0
+  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -31,7 +41,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-15.235.147.186-0018
+  name: 🇸🇬SG-15.235.147.186-0221
   network: ws
   port: 80
   server: 15.235.147.186
@@ -41,7 +51,7 @@ proxies:
   type: vmess
   uuid: 6fea1649-425b-4092-bf53-29792152c925
   ws-opts:
-    path: /sshkit/Ertusg86/635014638c264/
+    path: /
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -50,26 +60,63 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
-  password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
-  port: 443
-  server: 43.156.36.253
+- name: '🇸🇬 新加坡 | SGP #7'
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
   type: trojan
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
+- name: 🇸🇬 新加坡 | SGP 4
+  network: ws
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: 321dfbc6.uir-9i6.pages.dev
+    path: /
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
   sni: 139.180.146.200
   type: trojan
-- cipher: aes-256-gcm
-  name: 'EPODONIOS #41'
-  password: qpSevKaUXYQKvSjp
+- name: '🏳[www.v2nodes.com] trojan- #10'
+  password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
+  port: 443
+  server: 43.156.36.253
+  type: trojan
+- cipher: chacha20-ietf
+  name: 'EPODONIOS #30'
+  password: asd123456
   port: 8388
-  server: 139.180.220.175
+  server: 103.36.91.32
   type: ss
 - cipher: rc4-md5
   name: shadowsocks-1827147315
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 68.183.227.4
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇬 新加坡 | SGP 2
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: 817aa69.default.nintendo.com:112719
+    mode: tls
+  port: 2377
+  server: 13.215.227.70
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1559... #1'
+  password: qpSevKaUXYQKvSjp
+  port: 8388
+  server: 139.180.220.175
   type: ss
