@@ -1,18 +1,35 @@
 proxies:
-- alterId: 1
+- alterId: 0
   cipher: auto
-  name: 🇹🇼TW-1.161.186.146-1948
+  name: TW 🇹🇼 | @Raydikalx | 4300A9
   network: ws
-  port: 64443
-  server: 1.161.186.146
+  port: 443
+  server: 654168416355441.d6f54hd1j.cc
+  servername: 654168416355441.d6f54hd1j.cc
+  tls: true
+  type: vmess
+  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
+  ws-opts:
+    headers:
+      Host: 654168416355441.d6f54hd1j.cc
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼TW-104.29.64.2-1072
+  network: ws
+  port: 443
+  server: 104.29.64.2
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: cb7001c7-e495-41ac-b942-f25f60523414
+  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
   ws-opts:
-    path: /clientarea
-- name: '🇹🇼 🇨🇳 台湾 | TWN #1'
+    headers:
+      Host: fr2.cfcdn4.xyz
+    path: /ray
+- client-fingerprint: chrome
+  name: 🇹🇼 🇨🇳 台湾 | TWN
   network: ws
   port: 443
   server: 59.125.69.24
@@ -23,7 +40,7 @@ proxies:
   ws-opts:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
 - name: 🇹🇼[www.v2nodes.com] vless-TW-1...
   network: ws
   port: 443
@@ -51,19 +68,3 @@ proxies:
   skip-cert-verify: true
   sni: www.itunes.com
   type: trojan
-- name: 🇹🇼 🇨🇳 台湾 | TWN
-  password: 0324fbc29561
-  port: 443
-  server: 684616s4.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  type: anytls
-  udp: true
-- name: 🇹🇼 🇨🇳 台湾 | TWN 2
-  password: 0324fbc29561
-  port: 443
-  server: er8u54dh.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  type: anytls
-  udp: true

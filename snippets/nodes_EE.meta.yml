@@ -1,7 +1,8 @@
 proxies:
 - alpn:
   - http/1.1
-  name: '🇪🇪 爱沙尼亚 | EST #1'
+  client-fingerprint: firefox
+  name: 🇪🇪 爱沙尼亚 | EST
   network: ws
   port: 443
   server: 194.55.239.89
@@ -12,26 +13,43 @@ proxies:
   ws-opts:
     headers:
       Host: broadcast.liveflow.space
-    path: /live.stream.v1.Broadcast/fp=firefox
-- client-fingerprint: firefox
-  name: '🇪🇪 爱沙尼亚 | EST #2'
+    path: /live.stream.v1.Broadcast/
+- name: '🇪🇪 爱沙尼亚 | EST #1'
   network: ws
   port: 8443
   server: 13.143.239.69
   servername: ee4.pad-sservice.lat
   tls: true
   type: vless
-  udp: true
   uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   ws-opts:
     headers:
       Host: ee4.pad-sservice.lat
-    path: /EE4W
-- client-fingerprint: chrome
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  port: 25895
-  server: ee.h1cloud.net
-  servername: www.samsung.com
+    path: /EE4Wfp=firefox
+- client-fingerprint: firefox
+  name: '🇪🇪 爱沙尼亚 | EST #3'
+  network: ws
+  port: 8443
+  server: 179.254.126.223
+  servername: ee2.pad-sservice.lat
   tls: true
   type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  udp: true
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  ws-opts:
+    headers:
+      Host: ee2.pad-service.com
+    path: /EE2W
+- name: 🇪🇪EE_1|2.1MB/s
+  port: 9443
+  server: 95.153.32.2
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇪🇪EE_2|3.3MB/s
+  password: None
+  port: 9443
+  server: 95.153.31.66
+  skip-cert-verify: true
+  tls: true
+  type: http
