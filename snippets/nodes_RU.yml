@@ -1,6 +1,28 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: RU 🇷🇺 | @Raydikalx | 00FA89
+  network: ws
+  port: 2086
+  server: admin.arzonhost.ir
+  tls: false
+  type: vmess
+  uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
+  ws-opts:
+    headers:
+      Host: admin.arzonhost.ir
+    path: /
+- alterId: 0
+  cipher: auto
+  name: RU 🇷🇺 | @Raydikalx | 6530E7
+  network: tcp
+  port: 44368
+  server: 45.136.244.204
+  tls: false
+  type: vmess
+  uuid: d5862d3a-154f-43c9-bfa4-335361c020ba
+- alterId: 0
+  cipher: auto
   name: 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享)
   network: ws
   port: 2083

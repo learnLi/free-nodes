@@ -1,35 +1,22 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 6006A2
+  name: JP 🇯🇵 | @Raydikalx | 284FFD
   network: tcp
-  port: 10001
-  server: tyo2.australiacaregroup.site
+  port: 20401
+  server: gz1.polymarket.party
   tls: false
   type: vmess
   uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | E6D44D
-  network: ws
-  port: 2083
-  server: 140.238.55.84
-  servername: or.521166.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  ws-opts:
-    path: /or3
-- alterId: 1
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | FCCC21
+  name: JP 🇯🇵 | @Raydikalx | B7250A
   network: tcp
-  port: 11777
-  server: r8f4n-g05.jp02-e3-vm0.entry.fr0528.art
+  port: 36011
+  server: gz1.polymarket.party
   tls: false
   type: vmess
-  uuid: 8ee65c79-4487-32ff-b896-62c8dce05921
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -90,7 +77,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP_85_@Surfboardv2ray
+  name: '🇯🇵JP_85_@Surfboardv2ray #1'
   network: ws
   port: 80
   server: 168.138.43.75
@@ -110,7 +97,7 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇯🇵 日本 | JPN #5'
+- name: '🇯🇵 日本 | JPN #4'
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   port: 24999
   server: tjrb.m2k699.com
@@ -124,6 +111,12 @@ proxies:
   port: 443
   server: 149.22.87.241
   type: ss
+- cipher: aes-256-gcm
+  name: shadowsocks-1827146658
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
+  type: ss
 - cipher: aes-128-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
   password: shadowsocks
@@ -131,15 +124,9 @@ proxies:
   server: 149.22.87.240
   type: ss
 - cipher: aes-256-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #2'
   password: 3eOFeNssde7PYYMv
-  port: 80
+  port: 443
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm

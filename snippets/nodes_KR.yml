@@ -1,15 +1,28 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 35AD74
+  name: KR 🇰🇷 | @Raydikalx | 6C9897
   network: ws
   port: 20086
   server: 183.109.131.75
+  servername: ''
   tls: false
   type: vmess
   uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
   ws-opts:
-    path: /
+    path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | D518F1
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: kr02.a0a.xyz
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
   name: 🇰🇷 韩国-001
@@ -34,6 +47,34 @@ proxies:
     headers:
       Host: 8nTzyR5KNivfabaT.v.3dns.vip
     path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-131.186.24.103-2158
+  network: ws
+  port: 443
+  server: 131.186.24.103
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+  ws-opts:
+    path: /reffs7y26g0ua
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-92.223.61.25-0789
+  network: ws
+  port: 80
+  server: 92.223.61.25
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 22aa72b1-605b-4807-8a81-fb414cbb409c
+  ws-opts:
+    headers:
+      Host: mizban888.servecounterstrike.com
+    path: /
 - name: 韩国|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -48,10 +89,3 @@ proxies:
   port: 6123
   server: 211.178.105.134
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #1'
-  password: bf5129f1-31f5-4edf-a07a-27ec31b26c1d
-  port: 2096
-  server: 43.201.148.241
-  type: ss
-  udp: true
