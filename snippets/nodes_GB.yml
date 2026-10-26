@@ -1,55 +1,41 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 052C6E
+  name: GB 🇬🇧 | @Raydikalx | 559B18
   network: tcp
-  port: 17356
-  server: freedom.vipgsmteam.info
+  port: 2080
+  server: ovhpok.goalir.co.uk
   servername: ''
   tls: false
   type: vmess
-  uuid: f95cb5ae-1b06-4a57-aba0-30afe12d23ed
+  uuid: e62985fa-5d1e-4836-854a-1d90a5c63991
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 593440
+  name: GB 🇬🇧 | @Raydikalx | AF47F3
   network: ws
   port: 443
-  server: ggbnhj.932.pp.ua
-  servername: ggbnhj.932.pp.ua
+  server: n1761214911.74qxv.top
+  servername: n1761214911.74qxv.top
   tls: true
   type: vmess
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
+  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
   ws-opts:
     headers:
-      Host: ggbnhj.932.pp.ua
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 7C100E
-  network: ws
-  port: 443
-  server: 6c00bf1f-a569-4d54-9f71-a13611801867.661.qzz.io
-  servername: 6c00bf1f-a569-4d54-9f71-a13611801867.661.qzz.io
-  tls: true
-  type: vmess
-  uuid: 0c6b96bc-5e3a-4500-8497-6dead1965609
-  ws-opts:
-    headers:
-      Host: 6c00bf1f-a569-4d54-9f71-a13611801867.661.qzz.io
-    path: /KHtPvNZl371C8NsbbZ1wwDhJ3
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | D76E32
-  network: ws
-  port: 80
-  server: ddd47481-0d6f-08b9-7209-b0ddc0c5fa45.oneplus.pub
-  tls: false
-  type: vmess
-  uuid: 46cfcfe1-e450-459d-a3ab-9406011ab3eb
-  ws-opts:
-    headers:
-      Host: tms.dingtalk.com
+      Host: n1761214911.74qxv.top
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧GB-198.244.148.214-7108
+  network: ws
+  port: 443
+  server: 198.244.148.214
+  servername: lg30.cfcdn3.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    path: /ray
 - alterId: 0
   cipher: auto
   name: 🇬🇧GB-57.129.132.223-0111
@@ -66,11 +52,24 @@ proxies:
       Host: google.com
     path: /
 - cipher: aes-128-gcm
-  name: 'EPODONIOS #31'
+  name: 'EPODONIOS #26'
   password: shadowsocks
   port: 443
   server: 141.98.101.181
   type: ss
+- cipher: aes-256-gcm
+  name: shadowsocks-1875022976
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.176.206.9
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇬🇧 英国 | GBR #5'
+  password: uvKNudV-N8AUCrykPiyznA
+  port: 56137
+  server: 177.202.111.22
+  type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-178.83.185.156-0141
   password: oZIoA69Q8yhcQV8ka3Pa3A
@@ -371,15 +370,15 @@ proxies:
   port: 8080
   server: 82.38.31.82
   type: ss
+- cipher: aes-256-gcm
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1247... #1'
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 94.156.250.148
+  type: ss
 - cipher: aes-128-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1451... #1'
   password: shadowsocks
   port: 443
   server: 158.173.24.73
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1602... #1'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.176.206.9
   type: ss

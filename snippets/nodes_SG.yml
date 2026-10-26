@@ -1,13 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 8C0385
+  name: SG 🇸🇬 | @Raydikalx | 71C46C
   network: tcp
-  port: 36154
-  server: 13.140.91.117
-  tls: false
+  port: 36806
+  server: 13.140.95.133
+  servername: 13.140.95.133
+  tls: true
   type: vmess
-  uuid: b2fd9449-458a-4243-bbf9-5735070d6817
+  uuid: 19c73baa-5897-4a99-94fb-8f33de4a8767
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
@@ -40,6 +41,21 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
+  name: 🇸🇬SG-139.180.211.152-0853
+  network: ws
+  port: 18063
+  server: 139.180.211.152
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 0d4f647b-0d96-4820-9de8-0186156185dd
+  ws-opts:
+    headers:
+      Host: m.zoom.us
+    path: /Dialog Zoom
+- alterId: 0
+  cipher: auto
   name: 🇸🇬SG-15.235.147.186-0039
   network: ws
   port: 80
@@ -59,7 +75,7 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇸🇬 新加坡 | SGP 4
+- name: 🇸🇬 新加坡 | SGP 2
   network: ws
   password: '!!str 123456'
   port: 2096
@@ -72,13 +88,18 @@ proxies:
       Host: 321dfbc6.uir-9i6.pages.dev
     path: /
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
+  password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
+  port: 443
+  server: 43.156.36.253
+  type: trojan
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
   sni: 139.180.146.200
   type: trojan
 - cipher: chacha20-ietf
-  name: 'EPODONIOS #28'
+  name: 'EPODONIOS #30'
   password: asd123456
   port: 8388
   server: 103.36.91.32
@@ -90,7 +111,7 @@ proxies:
   server: 68.183.227.4
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇸🇬 新加坡 | SGP 2
+  name: '🇸🇬 新加坡 | SGP 2 #1'
   password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
   port: 2377
   server: 13.215.227.70

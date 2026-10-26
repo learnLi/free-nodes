@@ -1,22 +1,99 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 284FFD
-  network: tcp
-  port: 20401
-  server: gz1.polymarket.party
-  tls: false
+  name: JP 🇯🇵 | @Raydikalx | D48DE2
+  network: ws
+  port: 443
+  server: J3Nz0zA0r13AoVhH.v.3dns.vip
+  servername: J3Nz0zA0r13AoVhH.v.3dns.vip
+  tls: true
   type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | B7250A
-  network: tcp
-  port: 36011
-  server: gz1.polymarket.party
+  name: JP 🇯🇵 | @Raydikalx | E40342
+  network: raw
+  port: 18112
+  server: 168.110.60.104
   tls: false
   type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  name: '🇯🇵 日本 | JPN #4'
+  network: ws
+  port: 443
+  server: JP032004.ssgreen.org
+  servername: JP032004.ssgreen.org
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 3a331c35-433c-4609-a86a-9f9bc3c9b6c8
+  ws-opts:
+    headers:
+      Host: JP032004.ssgreen.org
+    path: /wes
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  name: '🇯🇵 日本 | JPN #5'
+  network: ws
+  port: 443
+  server: JP032012.ssgreen.org
+  servername: JP032012.ssgreen.org
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 0cf58a80-6fc7-40d1-b491-cb1c42cc8777
+  ws-opts:
+    headers:
+      Host: JP032012.ssgreen.org
+    path: /wes
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  name: '🇯🇵 日本 | JPN #6'
+  network: ws
+  port: 443
+  server: JP032002.ssgreen.org
+  servername: JP032002.ssgreen.org
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: dfc42b51-1262-4c1b-b14d-2b80f32a4f5d
+  ws-opts:
+    headers:
+      Host: JP032002.ssgreen.org
+    path: /wes
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  name: '🇯🇵 日本 | JPN #7'
+  network: ws
+  port: 443
+  server: JP032007.ssgreen.org
+  servername: JP032007.ssgreen.org
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 2458b4f7-1f67-4b26-876c-4080c086cce9
+  ws-opts:
+    headers:
+      Host: JP032007.ssgreen.org
+    path: /wes
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -77,7 +154,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: '🇯🇵JP_85_@Surfboardv2ray #1'
+  name: 🇯🇵JP_85_@Surfboardv2ray
   network: ws
   port: 80
   server: 168.138.43.75
@@ -115,13 +192,6 @@ proxies:
       Host: tn1r.eu.cc
     path: /id-pusat
 - name: 🇯🇵[www.v2nodes.com] vless-JP-1...
-  port: 443
-  server: 104.16.111.102
-  tls: false
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-- client-fingerprint: unsafe
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
   network: ws
   port: 443
   server: 104.16.111.102
@@ -132,13 +202,34 @@ proxies:
   ws-opts:
     headers:
       Host: jp3.yohototo.top
-    path: /tyxyws
+    path: /tyxywsfp=unsafe
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
+  network: ws
+  port: 443
+  server: 141.11.139.215
+  servername: ccc.010304.xyz
+  tls: false
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chromesecurity=tls
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
   port: 443
   server: 137.220.221.179
   tls: false
   type: vless
   uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- encryption: none
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #13'
+  network: tcp
+  port: 47878
+  server: 152.69.195.67
+  servername: 152.69.195.67
+  tls: false
+  type: vless
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #14'
   network: ws
   port: 443
@@ -151,43 +242,18 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=chrome
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   network: ws
   port: 443
-  server: 141.11.139.215
-  servername: ccc.010304.xyz
-  tls: false
-  type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  ws-opts:
-    headers:
-      Host: ccc.010304.xyz
-    path: /fp=chromesecurity=tls
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
-  network: ws
-  port: 443
-  server: 104.17.50.53
+  server: 104.21.0.87
   servername: jp3.yohototo.top
-  skip-cert-verify: false
-  tls: false
+  tls: true
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
       Host: jp3.yohototo.top
-    path: /tyxywssecurity=tls
-- name: 🇯🇵[www.v2nodes.com] vless-JP-4...
-  network: ws
-  port: 443
-  server: kclx.eu.org
-  servername: kclx.eu.org
-  tls: true
-  type: vless
-  uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
-  ws-opts:
-    headers:
-      Host: kclx.eu.org
-    path: /154.16.10.34-8080fp=chrome
+    path: /tyxywsfp=unsafe
 - name: 日本2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -196,14 +262,26 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇯🇵 日本 | JPN #4'
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
-  port: 24999
-  server: tjrb.m2k699.com
-  skip-cert-verify: true
-  sni: www.itunes.com
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  port: 8886
+  server: 45.32.52.173
+  sni: 45.32.52.173
   type: trojan
-  udp: true
+- name: '🇯🇵 日本 | JPN #1'
+  password: wvA0PtDIuFbSqooIC2goKzFr
+  port: 443
+  server: 38.175.202.26
+  skip-cert-verify: true
+  sni: bing.com
+  tls: false
+  type: hysteria2
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146270
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
+  type: ss
 - cipher: aes-128-gcm
   name: shadowsocks-1827146287
   password: shadowsocks
@@ -211,21 +289,15 @@ proxies:
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146658
+  name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-128-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
-  password: shadowsocks
   port: 443
-  server: 149.22.87.240
+  server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #2'
   password: 3eOFeNssde7PYYMv
-  port: 443
+  port: 80
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm

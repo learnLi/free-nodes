@@ -1,36 +1,55 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 09B96A
-  network: ws
-  port: 10086
-  server: 120.48.133.162
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 7E86B3
+  name: CN 🇨🇳 | @Raydikalx | 889406
   network: tcp
-  port: 50013
+  port: 50012
   server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: 9e63ca55-1ff9-453b-ae80-75947b8596d3
+  uuid: 148e82ae-5014-4a1a-a783-dd63fa9cdc9d
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.243.36.34-1286
+  name: CN 🇨🇳 | @Raydikalx | 8C5ED9
+  network: tcp
+  port: 50017
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | FC1C27
+  network: ws
+  port: 10086
+  server: 39.108.113.127
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 7547daaa-1577-49b0-9519-bd1823add1a7
+  ws-opts: {}
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.242.56.3-1282
   network: http
-  port: 55986
-  server: 47.243.36.34
+  port: 37064
+  server: 47.242.56.3
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 87ed289f-cae3-49b4-bbe3-23da298c0e81
+  uuid: d2a10a17-6191-472c-896b-782331f49fb9
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.242.65.80-1140
+  network: http
+  port: 62307
+  server: 47.242.65.80
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 48f3fa93-1722-4f8d-af74-fcc54c2f21d5
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-47.244.120.197-0196
@@ -46,6 +65,45 @@ proxies:
     headers:
       Host: 47.244.120.197
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.254.89.211-7442
+  network: ws
+  port: 80
+  server: 47.254.89.211
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 203b2ab2-4994-4193-8193-6631a575edb0
+  ws-opts:
+    path: /GSoTl9ZoYG5V2R0k4tUTGI8k
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-8.210.234.189-1273
+  network: http
+  port: 46644
+  server: 8.210.234.189
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: c25a1c9a-1c71-4c58-afba-66eed738b22b
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-8.210.24.181-0729
+  network: ws
+  port: 443
+  server: 8.210.24.181
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: 6jdvarazgu3qqr6q.v.3dns.vip
+    path: /ws-vmess
 - alterId: 64
   cipher: auto
   name: 🇨🇳_CN_中国
@@ -55,3 +113,13 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: '🇨🇳_CN_中国 #1'
+  network: ws
+  port: 10086
+  server: 120.48.133.162
+  tls: false
+  type: vmess
+  uuid: a01e5d56-464f-45b9-b600-164db4700162
+  ws-opts: {}
