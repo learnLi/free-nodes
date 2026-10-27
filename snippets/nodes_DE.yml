@@ -1,83 +1,178 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 0A5F4D
+  name: DE 🇩🇪 | @Raydikalx | 06B610
   network: tcp
-  port: 33554
-  server: 195.26.26.74
+  port: 36393
+  server: gerall-1.povrak.ir
   servername: ''
   tls: false
   type: vmess
-  uuid: b2619c4b-2f47-4464-8de9-bb0576be7687
+  uuid: b1ac6a13-64c8-46f6-8d18-50680461ad77
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 71FE83
+  name: DE 🇩🇪 | @Raydikalx | 226785
   network: ws
-  port: 16626
+  port: 2053
+  server: 104.105.18.214
+  servername: deapp.jisuyun.top
+  tls: true
+  type: vmess
+  uuid: 9a1a05d9-69be-45d3-e326-c6621edf7b31
+  ws-opts:
+    headers:
+      Host: deapp.jisuyun.top
+    path: /devm
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 268407
+  network: ws
+  port: 16632
   server: planb.mojcn.com.linuxlh.xin
   tls: false
   type: vmess
-  uuid: cefbe234-bcc6-4558-ab7b-1030e331e6a5
+  uuid: 97c638c6-86d5-4cf6-b70b-114c6809b637
   ws-opts:
     headers:
-      Host: d052c66d50dcf7c3cfab75ed7f8e8322.mobgslb.tbcache.com
+      Host: 407a2bc6d452ff93e6d7b73078539d9e.mobgslb.tbcache.com
     path: /
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 875613
+  name: DE 🇩🇪 | @Raydikalx | 2D9D41
   network: ws
   port: 443
-  server: 94.159.105.148
+  server: 111.88.74.167
   servername: renderer-stream-2-62.mirra.now
   tls: true
   type: vmess
   uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | B723A3
+  name: DE 🇩🇪 | @Raydikalx | 42459D
+  network: tcp
+  port: 2070
+  server: esc.georkup.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 4d765598-33d4-4ef5-87d6-b3fa61918875
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 5526C0
   network: ws
   port: 443
-  server: RwDPpwUUu6WYSFPU.v.3dns.vip
-  servername: RwDPpwUUu6WYSFPU.v.3dns.vip
+  server: kBd17k34BR3HAOJ2.v.3dns.vip
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: e4cfeb24-c58f-4813-b0c8-d2b6b52cd244
   ws-opts:
     headers:
-      Host: RwDPpwUUu6WYSFPU.v.3dns.vip
+      Host: kBd17k34BR3HAOJ2.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | FA5C19
-  network: ws
-  port: 443
-  server: EwKrslzTlAZVqwb1.v.3dns.vip
-  servername: EwKrslzTlAZVqwb1.v.3dns.vip
+  name: DE 🇩🇪 | @Raydikalx | 5FD42D
+  network: tcp
+  port: 54978
+  server: riga-nin.neninet.ir
+  servername: riga-nin.neninet.ir
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: EwKrslzTlAZVqwb1.v.3dns.vip
-    path: /ws-vmess
+  uuid: 475e7934-442f-40c5-972b-12f6e0a5a05d
 - alterId: 0
   cipher: auto
-  name: 未知94
+  name: DE 🇩🇪 | @Raydikalx | 91C643
+  network: httpupgrade
+  port: 5056
+  server: 169.40.32.48
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f54e93d1-cd8e-434f-8122-4887e62c97f5
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 9F8065
+  network: tcp
+  port: 37523
+  server: 144.225.65.202
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: b85ba3bc-bac6-4cfc-b8be-fe16a7dac1b1
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | A43192
   network: ws
-  port: 443
-  server: 95.85.233.138
+  port: 28267
+  server: 176.65.140.210
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 18c1c45d-95bf-435b-ae4c-7eb96f793af4
+  ws-opts:
+    headers:
+      Host: bobo.badrangteb.ir
+    path: /
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | C631A4
+  network: tcp
+  port: 2053
+  server: de.connfull.org
   servername: ''
   tls: true
   type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: 64f18876-ce22-4172-a596-d8c1be125e78
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | D9E7C7
+  network: raw
+  port: 2110
+  server: 178.105.168.171
+  tls: false
+  type: vmess
+  uuid: 06d4d001-4168-4876-9416-7caecf578f40
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | EFF254
+  network: ws
+  port: 443
+  server: 142.132.178.99
+  servername: apjhdggyx.com
+  tls: true
+  type: vmess
+  uuid: 5f72f180-b21b-4b7a-8484-240759012604
   ws-opts:
     headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
+      Host: apjhdggyx.com
+    path: /5f72f180-b21b-4b7a-8484-240759096785
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | F5D497
+  network: ws
+  port: 16617
+  server: planb.mojcn.com.linuxlh.xin
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: ca68cf56-7c3c-4127-816e-7442de9176b7
+  ws-opts:
+    headers:
+      Host: 7ddc7ef7c7f198c5e7dbed9634157ca7.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | DEC616
+  network: tcp
+  port: 36822
+  server: dashboard.nixonvhost.top
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f5a1ea85-6a36-41d1-ac46-b971ef23a42f
 - alterId: 0
   cipher: auto
   name: '🇩🇪 德国 | DEU #3'
@@ -89,30 +184,17 @@ proxies:
   uuid: 6cdfc27b-a0cc-4ea1-802a-e98552be430d
 - alterId: 0
   cipher: auto
-  name: 🇩🇪DE-167.235.192.0-4942
+  name: 🇩🇪DE-5.75.173.189-3840
   network: ws
-  port: 25052
-  server: 167.235.192.0
+  port: 80
+  server: 5.75.173.189
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: cbeff4ce-adcb-4e25-a42b-b4e5463b0d93
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
   ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪DE-78.47.131.39-2567
-  network: ws
-  port: 8081
-  server: 78.47.131.39
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 822a646e-6f69-4758-9008-494e137e26ac
-  ws-opts:
-    path: /@hashmakvpn 🇩🇪
+    path: /telegram-id-@privatevpns
 - name: '🇳🇱[www.v2nodes.com] trojan-NL-... #1'
   password: happybirthdaydaniel
   port: 25267
@@ -120,13 +202,6 @@ proxies:
   skip-cert-verify: true
   sni: t.me/FuckTheWall
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: '🇩🇪 德国 | DEU #15'
-  password: uvKNudV-N8AUCrykPiyznA
-  port: 56137
-  server: 37.153.158.167
-  type: ss
-  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇩🇪DE-57.129.113.16-0196
   password: NcAXc0UZI6yQJE1p8QmOv8

@@ -1,21 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 6EC259
-  network: ws
-  port: 443
-  server: JBQ4dPDPuJFzj4KV.v.3dns.vip
-  servername: JBQ4dPDPuJFzj4KV.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 1d84e480-8fd2-4fae-96de-e46fe36ffe86
-  ws-opts:
-    headers:
-      Host: JBQ4dPDPuJFzj4KV.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
   name: 🇰🇷 韩国|@ripaojiedian
   network: ws
   port: 443
@@ -31,7 +16,11 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR_1|1.1MB/s
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: 🇰🇷KR_1|1.0MB/s
   network: http
   port: 80
   server: 43.155.199.22
@@ -75,3 +64,14 @@ proxies:
   port: 7001
   server: 141.164.45.187
   type: ss
+- cipher: aes-256-gcm
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  password: PCnnH6SQSnfoS27
+  port: 8091
+  server: 141.164.45.187
+  type: ss
+- name: 🇰🇷KR_2|4.9MB/s
+  port: 1080
+  server: 144.24.94.153
+  skip-cert-verify: true
+  type: http
