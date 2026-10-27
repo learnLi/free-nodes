@@ -1,11 +1,21 @@
 proxies:
 - alterId: 0
-  cipher: aes-128-gcm
-  name: IR 🇮🇷 | @Raydikalx | 9EED75
+  cipher: auto
+  name: FI 🇫🇮 | @Raydikalx | 71EE19
   network: tcp
-  port: 1027
-  server: s1.connect.bloroxy.net
-  servername: none
+  port: 39458
+  server: fintest3.povrak.ir
+  servername: ''
   tls: false
   type: vmess
-  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3
+  uuid: 5551d2e8-d3d4-42d2-95c8-fb780b4f6e6d
+- alterId: 0
+  cipher: auto
+  name: PL 🇵🇱 | @Raydikalx | FA5EE0
+  network: tcp
+  port: 2086
+  server: 178.95.176.16
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b

@@ -1,44 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 290599
-  network: none
-  port: 8443
-  server: 13.250.114.194
-  tls: false
-  type: vmess
-  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
-- alterId: 0
-  cipher: auto
-  name: 'SG 🇸🇬 | @Raydikalx | C62756 #1'
-  network: ws
-  port: 8443
-  server: 206.238.239.109
+  name: SG 🇸🇬 | @Raydikalx | EB3982
+  network: tcp
+  port: 35007
+  server: 13.140.83.196
+  servername: 13.140.83.196
   tls: true
   type: vmess
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  ws-opts:
-    headers:
-      Host: uk.frnhk.xyz
-    path: /London31
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C8F906
-  network: raw
-  port: 22324
-  server: 172.237.70.226
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E246D9
-  network: tcp
-  port: 53386
-  server: 213.35.103.177
-  tls: false
-  type: vmess
-  uuid: 32e75662-c1ed-4e8d-f78c-3dcc685cc795
+  uuid: 0bef47fa-3632-424e-bcc3-899be654774f
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
@@ -71,34 +41,6 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-129.150.44.64-2651
-  network: ws
-  port: 46075
-  server: 129.150.44.64
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: da257e73-f02b-45ab-9916-7baf154c47a3
-  ws-opts:
-    path: /jhndsmlanj11223
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-13.214.25.83-1229
-  network: ws
-  port: 9111
-  server: st-1.dnspro.icu
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
-  ws-opts:
-    headers:
-      Host: st-1.dnspro.icu
-    path: /iso
-- alterId: 0
-  cipher: auto
   name: 🇸🇬SG-15.235.147.186-0057
   network: ws
   port: 80
@@ -124,45 +66,7 @@ proxies:
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
     path: /fp
-- name: '🇸🇬[www.v2nodes.com] vless-SG #...'
-  network: ws
-  port: 8080
-  server: 104.18.0.181
-  servername: hhlfy.twiladaphne.ndjp.net
-  tls: false
-  type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  ws-opts:
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-    path: /sg-melbi
-- name: '🇸🇬[www.v2nodes.com] vless-SG #... #1'
-  network: ws
-  port: 443
-  server: 43.174.193.1
-  servername: ccc.010304.xyz
-  tls: true
-  type: vless
-  uuid: d342d11e-d224-4463-b982-532309285094
-  ws-opts:
-    headers:
-      Host: ccc.010304.xyz
-    path: /fp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG #... #2'
-  network: ws
-  port: 443
-  server: 104.17.3.81
-  servername: nautica-cff.kloningstrife002.workers.dev
-  tls: true
-  type: vless
-  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
-  ws-opts:
-    headers:
-      Host: nautica-cff.kloningstrife002.workers.dev
-    path: /138.2.74.219-28616fp=chrome
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG #1'
+- name: 🇸🇬[www.v2nodes.com] vless-SG
   network: ws
   port: 443
   server: chatgpt.com
@@ -173,10 +77,8 @@ proxies:
   ws-opts:
     headers:
       Host: ccc.010304.xyz
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
+    path: /fp=chrome
+- name: '🇸🇬[www.v2nodes.com] vless-SG #...'
   network: ws
   port: 443
   server: 172.64.152.241
@@ -187,20 +89,8 @@ proxies:
   ws-opts:
     headers:
       Host: ccc.010304.xyz
-    path: /fp
-- encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG #3'
-  network: ws
-  port: 8880
-  server: 185.162.229.40
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime61.workers.dev
-    path: /
-- name: '🇸🇬[www.v2nodes.com] vless-SG #4'
+    path: /fpfp=chrome
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #1'
   network: ws
   port: 8080
   server: 172.67.71.187
@@ -212,8 +102,99 @@ proxies:
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
     path: /sg-melbi
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #2'
+  network: ws
+  port: 8880
+  server: 185.162.229.40
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: vms.lifetime61.workers.dev
+    path: /
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #3'
+  network: ws
+  port: 443
+  server: 43.174.193.1
+  servername: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chrome
+- alpn:
+  - http/1.1
+  client-fingerprint: randomized
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
+  network: ws
+  port: 8443
+  server: 172.66.44.124
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+  tls: true
+  type: vless
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  ws-opts:
+    headers:
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
+    path: /9BozNyvQ8VdRvsYX?ed=2560
 - client-fingerprint: chrome
+  name: '🇸🇬[www.v2nodes.com] vless-SG #3'
+  network: ws
+  port: 2096
+  server: 104.18.47.140
+  servername: rainfall0705.cc.cd
+  tls: true
+  type: vless
+  uuid: 341832cc-ba98-425b-8225-b3db621a0da3
+  ws-opts:
+    headers:
+      Host: rainfall0705.cc.cd
+    path: /
+- encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG #4'
+  network: ws
+  port: 443
+  server: 185.193.29.123
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  ws-opts:
+    headers:
+      Host: notls.lukongtou.eu.org
+    path: Telegram-WangCai2🇨🇳
+- encryption: none
   name: '🇸🇬[www.v2nodes.com] vless-SG #5'
+  network: ws
+  port: 8080
+  server: 104.18.26.94
+  servername: www.gov.se
+  tls: false
+  type: vless
+  uuid: 989d58b8-d2ea-4d28-b5ff-0f3cd078f2cf
+  ws-opts:
+    headers:
+      Host: sdf23g-billowing-moon-348e.mzm468gc.workers.dev
+    path: /
+- encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG #6'
+  network: ws
+  port: 80
+  server: e33xr.qzz.io
+  tls: false
+  type: vless
+  uuid: e081da45-9fae-4687-9376-f9a6a0dbbe83
+  ws-opts:
+    headers:
+      Host: e33xr.qzz.io
+    path: /id-amz
+- client-fingerprint: chrome
+  name: '🇸🇬[www.v2nodes.com] vless-SG #7'
   network: ws
   port: 443
   server: 43.174.193.1
@@ -225,18 +206,20 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #12'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #14'
   port: 16263
   server: 47.237.74.17
   tls: false
   type: vless
   uuid: c538c9dd-2e3f-488f-a8ca-ac5b7c0773f3
 - client-fingerprint: chrome
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #13'
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #15'
   network: ws
   port: 2096
   server: 139.162.27.96
   servername: free-server.techsonic.dev
+  skip-cert-verify: false
   tls: true
   type: vless
   uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
@@ -244,7 +227,7 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.dev
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #17'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #19'
   port: 12512
   server: 46.137.202.178
   tls: false
@@ -262,6 +245,18 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.devfp=chrome
+- encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #21'
+  network: ws
+  port: 8880
+  server: 63.141.128.30
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: vms.lifetime42.workers.dev
+    path: /
 - name: 🇸🇬[www.v2nodes.com] vless-SG-8...
   network: ws
   port: 443
@@ -274,20 +269,30 @@ proxies:
     headers:
       Host: cf-socks.caoyuwu.eu.org
     path: /fp=chromefp=chrome
-- client-fingerprint: chrome
+- encryption: none
   name: '🇸🇬[www.v2nodes.com] vless-SG-8... #1'
   network: ws
-  port: 443
-  server: 172.67.152.148
-  servername: cf-socks.caoyuwu.eu.org
-  tls: true
+  port: 8880
+  server: chat.openai.com
+  tls: false
   type: vless
-  uuid: 9cdcbaf0-d244-4f37-b227-90166e43f5b5
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: cf-socks.caoyuwu.eu.org
-    path: /fp=chrome
+      Host: vms.lifetime29.workers.dev
+    path: /
 - name: '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
+  network: ws
+  port: 2082
+  server: 104.17.162.11
+  tls: false
+  type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  ws-opts:
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+    path: /
+- name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
   network: ws
   port: 443
   server: 216.173.67.59
@@ -300,18 +305,6 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  servername: courses.mftplus.qzz.io
-  tls: true
-  type: vless
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
-  ws-opts:
-    headers:
-      Host: courses.mftplus.qzz.io
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=fp=unsafe
 - name: '🇸🇬[www.v2nodes.com] vless-SG-9... #3'
   network: ws
   port: 8880
@@ -325,15 +318,15 @@ proxies:
     path: /
 - name: '🇸🇬[www.v2nodes.com] vless-SG-9... #4'
   network: ws
-  port: 2082
-  server: 104.17.162.11
+  port: 8080
+  server: 172.64.150.43
   tls: false
   type: vless
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   ws-opts:
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-    path: /
+    path: /sg-melbi
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -342,36 +335,15 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
-  password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
-  port: 443
-  server: 43.156.36.253
-  type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
   sni: 139.180.146.200
   type: trojan
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
-  name: '🇸🇬 新加坡 | SGP #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 47.131.226.239
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
 - cipher: rc4-md5
   name: shadowsocks-1827147315
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 68.183.227.4
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1559...
-  password: qpSevKaUXYQKvSjp
-  port: 8388
-  server: 139.180.220.175
   type: ss

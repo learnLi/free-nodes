@@ -1,41 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 'RU 🇷🇺 | @Raydikalx | 05FC9A #1'
-  network: tcp
-  port: 24212
-  server: 158.160.180.165
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c58c1205-b308-416f-8503-c04557abf93d
-- alterId: 0
-  cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 876A78
-  network: ws
-  port: 443
-  server: YyYYuUI.iRAn1912.dpDNs.oRG
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 4a7baca1-8048-4a91-8316-595b36657a54
-  ws-opts:
-    headers:
-      Host: YYyYUui.iran1912.dpdNS.OrG
-    path: /TaBvkrUbsyvsvinsGGg
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享)
-  network: ws
-  port: 2083
-  server: 162.159.135.234
-  tls: true
-  type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  ws-opts:
-    headers:
-      Host: or3.sfacg.uk
-    path: /or3
 - alpn:
   - h2
   - http/1.1
@@ -117,7 +80,7 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+- name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
   network: ws
   port: 8443
   server: 194.87.143.165
@@ -130,7 +93,7 @@ proxies:
 - client-fingerprint: random
   grpc-opts:
     grpc-service-name: grpc-ru
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #6'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #8'
   network: grpc
   port: 443
   server: xsru1.ddnsfree.com
@@ -139,7 +102,7 @@ proxies:
   type: vless
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
 - client-fingerprint: random
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #7'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #9'
   network: ws
   port: 8443
   server: 194.87.143.165
@@ -159,9 +122,3 @@ proxies:
   sni: giftcard.gisora.ir
   tls: false
   type: hysteria2
-- name: 🇷🇺RU_4|1.0MB/s
-  port: 1446
-  server: 46.29.166.134
-  skip-cert-verify: true
-  tls: true
-  type: http

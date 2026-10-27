@@ -1,6 +1,45 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 071DE1
+  network: ws
+  port: 443
+  server: 212.135.211.242
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 235e318a-8bcb-4480-b256-7b65cc5d0b0a
+  ws-opts:
+    headers:
+      Host: aus.lovehk.xyz
+    path: /Sydney3
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D1FFD7
+  network: ws
+  port: 10021
+  server: 138.2.49.230
+  tls: false
+  type: vmess
+  uuid: a12e496e-f89a-434a-8011-108846f0e412
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D48DE2
+  network: ws
+  port: 443
+  server: J3Nz0zA0r13AoVhH.v.3dns.vip
+  servername: J3Nz0zA0r13AoVhH.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
   network: ws
   port: 443
@@ -46,19 +85,32 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-138.2.52.176-1152
+  name: 🇯🇵JP-147.78.244.7-1644
   network: ws
-  port: 24429
-  server: 138.2.52.176
+  port: 443
+  server: 147.78.244.7
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: c2907a9a-5024-41fd-be3c-30885585e3ef
+  ws-opts:
+    headers:
+      Host: virmach.qweasdzxc.gq
+    path: /
+- alterId: 2
+  cipher: auto
+  name: 🇯🇵JP-153.122.173.53-3384
+  network: ws
+  port: 32407
+  server: 153.122.173.53
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 8d5ca59e-8e3e-4a10-e023-53cfcd87a72b
+  uuid: 26c5fdc7-b3be-3482-9a45-d97b958a889a
   ws-opts:
-    headers:
-      Host: 138.2.52.176
-    path: /
+    path: /v2ray
 - alterId: 0
   cipher: auto
   name: 🇯🇵JP-172.111.146.64-5708
@@ -72,6 +124,14 @@ proxies:
   uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   ws-opts:
     path: /vmess/
+- name: 日本2|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 10125
+  server: 63182sh8-4d7b.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
@@ -97,22 +157,15 @@ proxies:
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146658
+  name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
-  port: 80
+  port: 443
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
-  name: '🇯🇵 日本 | JPN #1'
-  password: BeaUf9c0AEWH40Pu
-  port: 8388
-  server: 154.36.158.197
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
-  port: 443
+  port: 80
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
@@ -120,4 +173,10 @@ proxies:
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   port: 8388
   server: 191.223.221.53
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'
+  password: BeaUf9c0AEWH40Pu
+  port: 8388
+  server: 154.36.158.197
   type: ss

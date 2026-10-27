@@ -1,44 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 290599
-  network: none
-  port: 8443
-  server: 13.250.114.194
-  tls: false
-  type: vmess
-  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
-- alterId: 0
-  cipher: auto
-  name: 'SG 🇸🇬 | @Raydikalx | C62756 #1'
-  network: ws
-  port: 8443
-  server: 206.238.239.109
+  name: SG 🇸🇬 | @Raydikalx | EB3982
+  network: tcp
+  port: 35007
+  server: 13.140.83.196
+  servername: 13.140.83.196
   tls: true
   type: vmess
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  ws-opts:
-    headers:
-      Host: uk.frnhk.xyz
-    path: /London31
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C8F906
-  network: raw
-  port: 22324
-  server: 172.237.70.226
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E246D9
-  network: tcp
-  port: 53386
-  server: 213.35.103.177
-  tls: false
-  type: vmess
-  uuid: 32e75662-c1ed-4e8d-f78c-3dcc685cc795
+  uuid: 0bef47fa-3632-424e-bcc3-899be654774f
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
@@ -71,34 +41,6 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-129.150.44.64-2651
-  network: ws
-  port: 46075
-  server: 129.150.44.64
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: da257e73-f02b-45ab-9916-7baf154c47a3
-  ws-opts:
-    path: /jhndsmlanj11223
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-13.214.25.83-1229
-  network: ws
-  port: 9111
-  server: st-1.dnspro.icu
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
-  ws-opts:
-    headers:
-      Host: st-1.dnspro.icu
-    path: /iso
-- alterId: 0
-  cipher: auto
   name: 🇸🇬SG-15.235.147.186-0057
   network: ws
   port: 80
@@ -120,11 +62,6 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
-  password: WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0
-  port: 443
-  server: 43.156.36.253
-  type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
@@ -136,10 +73,4 @@ proxies:
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 68.183.227.4
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1559...
-  password: qpSevKaUXYQKvSjp
-  port: 8388
-  server: 139.180.220.175
   type: ss
