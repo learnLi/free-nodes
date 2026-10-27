@@ -1,33 +1,18 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 4300A9
+  name: TW
   network: ws
   port: 443
-  server: 654168416355441.d6f54hd1j.cc
-  servername: 654168416355441.d6f54hd1j.cc
+  server: 24864168545164.oylfmxz.cn
+  servername: 24864168545164.oylfmxz.cn
   tls: true
   type: vmess
-  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
     headers:
-      Host: 654168416355441.d6f54hd1j.cc
+      Host: 24864168545164.oylfmxz.cn
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-104.29.64.2-1072
-  network: ws
-  port: 443
-  server: 104.29.64.2
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
-  ws-opts:
-    headers:
-      Host: fr2.cfcdn4.xyz
-    path: /ray
 - name: 台湾|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092

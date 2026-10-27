@@ -1,52 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 18C67C
-  network: tcp#🎡90@oneclickvpnkeys
-  port: 4433
-  server: 45.32.57.118
-  tls: false
-  type: vmess
-  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 284FFD
-  network: tcp
-  port: 20401
-  server: gz1.polymarket.party
-  tls: false
-  type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | F79E1F
-  network: tcp
-  port: 18112
-  server: 168.110.60.104
-  servername: null
-  tls: false
-  type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: '🇯🇵 日本 | JPN #6'
-  network: ws
-  port: 443
-  server: JP032001.ssgreen.org
-  servername: JP032001.ssgreen.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 4097bca4-d1fd-4710-a403-ff3491b70cad
-  ws-opts:
-    headers:
-      Host: JP032001.ssgreen.org
-    path: /wes
-- alterId: 0
-  cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
   network: ws
   port: 443
@@ -90,14 +44,34 @@ proxies:
     headers:
       Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
     path: /ws-vmess
-- name: 日本2|@ripaojiedian
-  network: tcp
-  password: AA885B42-133C-3828-FB69-E45105C06092
-  port: 10125
-  server: 63182sh8-4d7b.aws-agent.net
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-138.2.52.176-1152
+  network: ws
+  port: 24429
+  server: 138.2.52.176
+  servername: ''
   skip-cert-verify: true
-  sni: m.ctrip.com
-  type: trojan
+  tls: false
+  type: vmess
+  uuid: 8d5ca59e-8e3e-4a10-e023-53cfcd87a72b
+  ws-opts:
+    headers:
+      Host: 138.2.52.176
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-172.111.146.64-5708
+  network: ws
+  port: 80
+  server: 172.111.146.64
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
+  ws-opts:
+    path: /vmess/
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
@@ -123,15 +97,22 @@ proxies:
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146336
+  name: shadowsocks-1827146658
   password: 3eOFeNssde7PYYMv
-  port: 443
+  port: 80
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
+  name: '🇯🇵 日本 | JPN #1'
+  password: BeaUf9c0AEWH40Pu
+  port: 8388
+  server: 154.36.158.197
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
-  port: 80
+  port: 443
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
@@ -139,10 +120,4 @@ proxies:
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   port: 8388
   server: 191.223.221.53
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'
-  password: BeaUf9c0AEWH40Pu
-  port: 8388
-  server: 154.36.158.197
   type: ss

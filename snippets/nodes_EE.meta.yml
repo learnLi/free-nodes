@@ -1,20 +1,27 @@
 proxies:
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇪🇪 爱沙尼亚 | EST
+- alterId: 0
+  cipher: aes-128-gcm
+  name: IR 🇮🇷 | @Raydikalx | 9EED75
+  network: tcp
+  port: 1027
+  server: s1.connect.bloroxy.net
+  servername: none
+  tls: false
+  type: vmess
+  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3
+- name: '🇪🇪 爱沙尼亚 | EST #1'
   network: ws
-  port: 443
-  server: 194.55.239.89
-  servername: broadcast.liveflow.space
+  port: 8443
+  server: 179.254.126.223
+  servername: ee2.pad-sservice.lat
   tls: true
   type: vless
-  uuid: 073b7df7-5527-45a2-ba29-183b85c39071
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   ws-opts:
     headers:
-      Host: broadcast.liveflow.space
-    path: /live.stream.v1.Broadcast/
-- name: '🇪🇪 爱沙尼亚 | EST #1'
+      Host: ee2.pad-service.com
+    path: /EE2Wfp=firefox
+- name: '🇪🇪 爱沙尼亚 | EST #1 #1'
   network: ws
   port: 8443
   server: 13.143.239.69
@@ -26,27 +33,44 @@ proxies:
     headers:
       Host: ee4.pad-sservice.lat
     path: /EE4Wfp=firefox
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇪🇪 爱沙尼亚 | EST #2'
+  network: ws
+  port: 8443
+  server: est.luxes.network
+  servername: est.luxes.network
+  tls: true
+  type: vless
+  udp: true
+  uuid: a9e5d7ed-ce1a-48eb-9767-4de54fcfaba7
+  ws-opts:
+    headers:
+      Host: est.luxes.network
+    path: /assets
+- client-fingerprint: chrome
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  port: 25895
+  server: ee.h1cloud.net
+  servername: www.samsung.com
+  tls: true
+  type: vless
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
 - client-fingerprint: firefox
-  name: '🇪🇪 爱沙尼亚 | EST #3'
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   network: ws
   port: 8443
   server: 179.254.126.223
   servername: ee2.pad-sservice.lat
   tls: true
   type: vless
-  udp: true
   uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
   ws-opts:
     headers:
       Host: ee2.pad-service.com
     path: /EE2W
-- name: 🇪🇪EE_1|2.1MB/s
-  port: 9443
-  server: 95.153.32.2
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇪🇪EE_2|3.3MB/s
+- name: 🇪🇪EE_1|2.7MB/s
   password: None
   port: 9443
   server: 95.153.31.66
