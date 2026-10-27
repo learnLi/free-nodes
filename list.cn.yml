@@ -100,6 +100,16 @@ proxies:
     path: /?ed=2048&Telegram🇨🇳 @VPNine1
 - alterId: 0
   cipher: auto
+  name: CA 🇨🇦 | @Raydikalx | B3799F
+  network: httpupgrade
+  port: 80
+  server: fr3.musktrump.top
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 77e34e38-0ec2-3865-ab0c-2651a83c3c82
+- alterId: 0
+  cipher: auto
   name: 'CA 🇨🇦 | @Raydikalx | B449CD #1'
   network: ws
   port: 443
@@ -327,16 +337,6 @@ proxies:
     path: /ws?ed=2048
 - alterId: 0
   cipher: auto
-  name: 'EPODONIOS #950'
-  network: tcp
-  port: 13668
-  server: 185.19.33.15
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 909b3050-8a0f-4c7e-b928-77ad8d656736
-- alterId: 0
-  cipher: auto
   name: 'EPODONIOS #951'
   network: tcp
   port: 27235
@@ -390,16 +390,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 05a178f9-e6ba-4006-93d7-3d980cdc3a76
-- alterId: 0
-  cipher: auto
-  name: 'EPODONIOS #966'
-  network: tcp
-  port: 13668
-  server: 185.19.33.15
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: b6897279-58af-4c4e-8c98-0b7854c647f8
 - alterId: 0
   cipher: auto
   name: 'EPODONIOS #967'
@@ -481,26 +471,6 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 049278
-  network: tcp
-  port: 21018
-  server: dog-hk.kunlun01dns.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 1AAC90
-  network: tcp
-  port: 16115
-  server: zfd-hkv2.kunlun01dns.com
-  servername: zfd-hkv2.kunlun01dns.com
-  tls: false
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-- alterId: 0
-  cipher: auto
   name: HK 🇭🇰 | @Raydikalx | 1B63F0
   network: tcp
   port: 16116
@@ -543,6 +513,20 @@ proxies:
   tls: false
   type: vmess
   uuid: 185b8bb1-5690-49de-9832-e6d5d356e95c
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | 1F9134
+  network: ws
+  port: 8880
+  server: amir.amirport.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e60024fd-287e-440f-a121-bb2d5ada75e1
+  ws-opts:
+    headers:
+      Host: amir.amirport.ir
+    path: /
 - alterId: 0
   cipher: auto
   name: 'IR 🇮🇷 | @Raydikalx | 797632 #1'
@@ -623,18 +607,6 @@ proxies:
     path: /htun
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 275065
-  network: ws
-  port: 8443
-  server: v2ray1.dozapp.xyz
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  ws-opts:
-    path: /lMnsZUN4/
-- alterId: 0
-  cipher: auto
   name: 'US 🇺🇸 | @Raydikalx | 2D3F12 #1'
   network: xhttp
   port: 443
@@ -655,26 +627,6 @@ proxies:
   uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
   ws-opts:
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: vmess-1853976461
-  network: tcp
-  port: 1234
-  server: 45.90.106.24
-  servername: 45.90.106.24
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: vmess-1927196133
-  network: tcp
-  port: 10087
-  server: 43.130.35.53
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
 - alterId: 0
   cipher: auto
   name: vmess-1928159406
@@ -789,21 +741,6 @@ proxies:
   type: vmess
   uuid: a01e5d56-464f-45b9-b600-164db4700162
   ws-opts: {}
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #4'
-  network: ws
-  port: 443
-  server: lcv8v9l7oyamxxfz.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: lcv8v9l7oyamxxfz.v.3dns.vip
-    path: /ws-vmess
 - alterId: 0
   cipher: auto
   name: 🇭🇰 香港2|@ripaojiedian
@@ -997,21 +934,6 @@ proxies:
     headers:
       Host: nat12.9966338.xyz
     path: /vvvvvvvvv
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-104.18.28.19-0032
-  network: ws
-  port: 80
-  server: 104.18.28.19
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 35556863-22b9-40b9-8722-a192b8526edc
-  ws-opts:
-    headers:
-      Host: fr1.cachexy.ga
-    path: /p9Dq67Nx/
 - alterId: 0
   cipher: auto
   name: '🏁RELAY-104.19.40.211-2612 #1'
@@ -1365,19 +1287,6 @@ proxies:
     headers:
       Host: go.appsflyer.com.r3xxe.eu.cc
     path: /ca-cl
-- alpn:
-  - http/1.1
-  name: 'EPODONIOS #61'
-  network: ws
-  password: MiTiVPN
-  port: 443
-  server: 151.101.56.230
-  sni: ssl.fastly.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: MiTiVPN-MiTiVPN-MiTiVPN---MiTiVPN--MiTiVPN.global.ssl.fastly.net
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
 - name: 'EPODONIOS #65'
   network: ws
   password: bpb-trojan
@@ -1450,30 +1359,6 @@ proxies:
     headers:
       Host: www.ignitelimit.com
     path: /assignment
-- alpn:
-  - http/1.1
-  name: 'EPODONIOS #77'
-  network: ws
-  password: humanity
-  port: 443
-  server: 109.234.211.232
-  skip-cert-verify: false
-  sni: www.pleadcourt.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.pleadcourt.org
-    path: /assignment
-- name: 'EPODONIOS #85'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.18.9.83
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    path: /assignment
 - name: 'EPODONIOS #92'
   network: ws
   password: humanity
@@ -1523,14 +1408,6 @@ proxies:
   server: 104.16.174.36
   skip-cert-verify: true
   sni: www.ignitelimit.com
-  type: trojan
-- name: trojan-1894600734
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.67.200.219
-  skip-cert-verify: true
-  sni: www.calmlunch.com
   type: trojan
 - name: trojan-1903654553
   network: ws
@@ -1765,12 +1642,6 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  port: 8886
-  server: 45.32.52.173
-  sni: 45.32.52.173
-  type: trojan
 - name: 🇱🇹 立陶宛(mibei77.com 米贝节点分享)
   password: humanity
   port: 443
@@ -1845,18 +1716,6 @@ proxies:
     headers:
       Host: au5.yang-1989.xyz
     path: /iw8i
-- name: 🇺🇸 美国 | USA 8
-  network: ws
-  password: humanity
-  port: 443
-  server: 172.67.231.254
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
 - name: 🇺🇸US美国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -1903,12 +1762,6 @@ proxies:
   server: 20.123.1.55
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 'EPODONIOS #14'
-  password: uvKNudV-N8AUCrykPiyznA
-  port: 56137
-  server: 87.236.166.178
-  type: ss
-- cipher: chacha20-ietf-poly1305
   name: 'EPODONIOS #15'
   password: BhYMkBpjAjE6ixSw
   port: 443
@@ -1919,12 +1772,6 @@ proxies:
   password: b39m1ZYI0Hkk8ieb
   port: 443
   server: 20.164.212.103
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 'EPODONIOS #21'
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 193.29.139.132
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 'EPODONIOS #28'
@@ -1950,23 +1797,11 @@ proxies:
   port: 443
   server: 102.133.227.3
   type: ss
-- cipher: rc4-md5
-  name: shadowsocks-1827966278
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 169.150.210.233
-  type: ss
 - cipher: aes-256-cfb
   name: shadowsocks-1827969068
   password: qwerREWQ@@
   port: 4652
   server: 218.237.185.234
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1832968048
-  password: xAYXtB+XMdfWWOlmL8PWcOZEPfKHKVv7NcTY6jpcL/A=
-  port: 15731
-  server: 31.76.11.83
   type: ss
 - cipher: aes-256-gcm
   name: shadowsocks-1928705747
@@ -2075,18 +1910,6 @@ proxies:
   type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-5711
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 141.164.45.187
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇱[www.v2nodes.com] ss-NL-1604...
-  password: AwW1fV6oDDQKh8r2znmptv59tPgt4eHVTgFaTqgKS2jiSdikJ7GyGCBYehDaK38S8yMgHFdbJqcTmRJSfYS5CFw345bNhFZa
-  port: 43385
-  server: sql.popmintxo.cc
-  type: ss
-- cipher: aes-256-gcm
   name: '🇷🇺 俄罗斯 | RUS #3'
   password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
   port: 18443
@@ -2117,6 +1940,7 @@ proxy-groups:
   - 'CA 🇨🇦 | @Raydikalx | 7EDCAD #1'
   - 'CA 🇨🇦 | @Raydikalx | 98D7B9 #1'
   - 'CA 🇨🇦 | @Raydikalx | A9CC45 #1'
+  - CA 🇨🇦 | @Raydikalx | B3799F
   - 'CA 🇨🇦 | @Raydikalx | B449CD #1'
   - 'CA 🇨🇦 | @Raydikalx | C5497C #1'
   - CA 🇨🇦 | @Raydikalx | D614C7
@@ -2134,25 +1958,22 @@ proxy-groups:
   - 'EPODONIOS #945'
   - 'EPODONIOS #946'
   - 'EPODONIOS #949'
-  - 'EPODONIOS #950'
   - 'EPODONIOS #951'
   - 'EPODONIOS #952'
   - 'EPODONIOS #959'
   - 'EPODONIOS #963'
   - 'EPODONIOS #964'
-  - 'EPODONIOS #966'
   - 'EPODONIOS #967'
   - 'EPODONIOS #970'
   - 'EPODONIOS #971'
   - 'FI 🇫🇮 | @Raydikalx | A8E03B #1'
   - GB 🇬🇧 | @Raydikalx | 0A41FD
   - GB 🇬🇧 | @Raydikalx | 69DFE1
-  - HK 🇭🇰 | @Raydikalx | 049278
-  - HK 🇭🇰 | @Raydikalx | 1AAC90
   - HK 🇭🇰 | @Raydikalx | 1B63F0
   - HK 🇭🇰 | @Raydikalx | BB260B
   - 'IN 🇮🇳 | @Raydikalx | 85A904 #1'
   - IR 🇮🇷 | @Raydikalx | 0EB096
+  - IR 🇮🇷 | @Raydikalx | 1F9134
   - 'IR 🇮🇷 | @Raydikalx | 797632 #1'
   - IR 🇮🇷 | @Raydikalx | 9EED75
   - IR 🇮🇷 | @Raydikalx | A44433
@@ -2160,11 +1981,8 @@ proxy-groups:
   - 'RU 🇷🇺 | @Raydikalx | 05FC9A #1'
   - TR 🇹🇷 | @Raydikalx | E59E35
   - 'US 🇺🇸 | @Raydikalx | 0B7B7C #1'
-  - US 🇺🇸 | @Raydikalx | 275065
   - 'US 🇺🇸 | @Raydikalx | 2D3F12 #1'
   - US 🇺🇸 | @Raydikalx | CE2CEA
-  - vmess-1853976461
-  - vmess-1927196133
   - vmess-1928159406
   - vmess-1928914205
   - '未知159 #1'
@@ -2174,7 +1992,6 @@ proxy-groups:
   - 🇨🇳CN-47.238.94.29-0503
   - 🇨🇳_CN_中国
   - '🇨🇳_CN_中国 #1'
-  - '🇭🇰 香港 | HKG #4'
   - 🇭🇰 香港2|@ripaojiedian
   - 🇭🇰 香港3|@ripaojiedian
   - 🇭🇰 香港5|@ripaojiedian
@@ -2188,7 +2005,6 @@ proxy-groups:
   - 🇺🇸 美国|@ripaojiedian
   - '🏁RELAY-104.16.89.44-5074 #1'
   - 🏁RELAY-104.17.163.16-0852
-  - 🏁RELAY-104.18.28.19-0032
   - '🏁RELAY-104.19.40.211-2612 #1'
   - '🏁RELAY-104.31.16.46-8192 #1'
   - '🏁RELAY-104.31.16.53-8186 #1'
@@ -2217,21 +2033,17 @@ proxy-groups:
   - 'EPODONIOS #53'
   - 'EPODONIOS #57'
   - 'EPODONIOS #60'
-  - 'EPODONIOS #61'
   - 'EPODONIOS #65'
   - 'EPODONIOS #67'
   - 'EPODONIOS #69'
   - 'EPODONIOS #70'
   - 'EPODONIOS #71'
   - 'EPODONIOS #72'
-  - 'EPODONIOS #77'
-  - 'EPODONIOS #85'
   - 'EPODONIOS #92'
   - 'EPODONIOS #96'
   - 'EPODONIOS #98'
   - 'EPODONIOS #99'
   - FR法国丨yoyapai.com\r
-  - trojan-1894600734
   - trojan-1903654553
   - trojan-1909176998
   - trojan-1926812821
@@ -2264,7 +2076,6 @@ proxy-groups:
   - '🇫🇷法国丨yoyapai.com\r #2'
   - '🇫🇷法国丨yoyapai.com\r #3'
   - '🇬🇧 英国 | GBR #8'
-  - '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   - 🇱🇹 立陶宛(mibei77.com 米贝节点分享)
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
@@ -2275,24 +2086,19 @@ proxy-groups:
   - '🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
   - '🇺🇸 美国 | USA #2'
   - 🇺🇸 美国 | USA 2
-  - 🇺🇸 美国 | USA 8
   - 🇺🇸US美国丨yoyapai.com\r
   - '🏳[www.v2nodes.com] trojan- #4'
   - 'EPODONIOS #10'
   - 'EPODONIOS #11'
   - 'EPODONIOS #12'
   - 'EPODONIOS #125'
-  - 'EPODONIOS #14'
   - 'EPODONIOS #15'
   - 'EPODONIOS #19'
-  - 'EPODONIOS #21'
   - 'EPODONIOS #28'
   - 'EPODONIOS #37'
   - 'EPODONIOS #64'
   - 'EPODONIOS #9'
-  - shadowsocks-1827966278
   - shadowsocks-1827969068
-  - shadowsocks-1832968048
   - shadowsocks-1928705747
   - '🇬🇧 英国 | GBR #1 #1'
   - '🇬🇧 英国 | GBR #2'
@@ -2309,8 +2115,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #4'
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #9'
   - '🇯🇵 日本 | JPN #1'
-  - 🇰🇷KR-141.164.45.187-5711
-  - 🇳🇱[www.v2nodes.com] ss-NL-1604...
   - '🇷🇺 俄罗斯 | RUS #3'
   - '🇺🇸 美国 | USA #6'
   timeout: 5000
@@ -2325,6 +2129,7 @@ proxy-groups:
   - 'CA 🇨🇦 | @Raydikalx | 7EDCAD #1'
   - 'CA 🇨🇦 | @Raydikalx | 98D7B9 #1'
   - 'CA 🇨🇦 | @Raydikalx | A9CC45 #1'
+  - CA 🇨🇦 | @Raydikalx | B3799F
   - 'CA 🇨🇦 | @Raydikalx | B449CD #1'
   - 'CA 🇨🇦 | @Raydikalx | C5497C #1'
   - CA 🇨🇦 | @Raydikalx | D614C7
@@ -2342,25 +2147,22 @@ proxy-groups:
   - 'EPODONIOS #945'
   - 'EPODONIOS #946'
   - 'EPODONIOS #949'
-  - 'EPODONIOS #950'
   - 'EPODONIOS #951'
   - 'EPODONIOS #952'
   - 'EPODONIOS #959'
   - 'EPODONIOS #963'
   - 'EPODONIOS #964'
-  - 'EPODONIOS #966'
   - 'EPODONIOS #967'
   - 'EPODONIOS #970'
   - 'EPODONIOS #971'
   - 'FI 🇫🇮 | @Raydikalx | A8E03B #1'
   - GB 🇬🇧 | @Raydikalx | 0A41FD
   - GB 🇬🇧 | @Raydikalx | 69DFE1
-  - HK 🇭🇰 | @Raydikalx | 049278
-  - HK 🇭🇰 | @Raydikalx | 1AAC90
   - HK 🇭🇰 | @Raydikalx | 1B63F0
   - HK 🇭🇰 | @Raydikalx | BB260B
   - 'IN 🇮🇳 | @Raydikalx | 85A904 #1'
   - IR 🇮🇷 | @Raydikalx | 0EB096
+  - IR 🇮🇷 | @Raydikalx | 1F9134
   - 'IR 🇮🇷 | @Raydikalx | 797632 #1'
   - IR 🇮🇷 | @Raydikalx | 9EED75
   - IR 🇮🇷 | @Raydikalx | A44433
@@ -2368,11 +2170,8 @@ proxy-groups:
   - 'RU 🇷🇺 | @Raydikalx | 05FC9A #1'
   - TR 🇹🇷 | @Raydikalx | E59E35
   - 'US 🇺🇸 | @Raydikalx | 0B7B7C #1'
-  - US 🇺🇸 | @Raydikalx | 275065
   - 'US 🇺🇸 | @Raydikalx | 2D3F12 #1'
   - US 🇺🇸 | @Raydikalx | CE2CEA
-  - vmess-1853976461
-  - vmess-1927196133
   - vmess-1928159406
   - vmess-1928914205
   - '未知159 #1'
@@ -2382,7 +2181,6 @@ proxy-groups:
   - 🇨🇳CN-47.238.94.29-0503
   - 🇨🇳_CN_中国
   - '🇨🇳_CN_中国 #1'
-  - '🇭🇰 香港 | HKG #4'
   - 🇭🇰 香港2|@ripaojiedian
   - 🇭🇰 香港3|@ripaojiedian
   - 🇭🇰 香港5|@ripaojiedian
@@ -2396,7 +2194,6 @@ proxy-groups:
   - 🇺🇸 美国|@ripaojiedian
   - '🏁RELAY-104.16.89.44-5074 #1'
   - 🏁RELAY-104.17.163.16-0852
-  - 🏁RELAY-104.18.28.19-0032
   - '🏁RELAY-104.19.40.211-2612 #1'
   - '🏁RELAY-104.31.16.46-8192 #1'
   - '🏁RELAY-104.31.16.53-8186 #1'
@@ -2425,21 +2222,17 @@ proxy-groups:
   - 'EPODONIOS #53'
   - 'EPODONIOS #57'
   - 'EPODONIOS #60'
-  - 'EPODONIOS #61'
   - 'EPODONIOS #65'
   - 'EPODONIOS #67'
   - 'EPODONIOS #69'
   - 'EPODONIOS #70'
   - 'EPODONIOS #71'
   - 'EPODONIOS #72'
-  - 'EPODONIOS #77'
-  - 'EPODONIOS #85'
   - 'EPODONIOS #92'
   - 'EPODONIOS #96'
   - 'EPODONIOS #98'
   - 'EPODONIOS #99'
   - FR法国丨yoyapai.com\r
-  - trojan-1894600734
   - trojan-1903654553
   - trojan-1909176998
   - trojan-1926812821
@@ -2472,7 +2265,6 @@ proxy-groups:
   - '🇫🇷法国丨yoyapai.com\r #2'
   - '🇫🇷法国丨yoyapai.com\r #3'
   - '🇬🇧 英国 | GBR #8'
-  - '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   - 🇱🇹 立陶宛(mibei77.com 米贝节点分享)
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
@@ -2483,24 +2275,19 @@ proxy-groups:
   - '🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
   - '🇺🇸 美国 | USA #2'
   - 🇺🇸 美国 | USA 2
-  - 🇺🇸 美国 | USA 8
   - 🇺🇸US美国丨yoyapai.com\r
   - '🏳[www.v2nodes.com] trojan- #4'
   - 'EPODONIOS #10'
   - 'EPODONIOS #11'
   - 'EPODONIOS #12'
   - 'EPODONIOS #125'
-  - 'EPODONIOS #14'
   - 'EPODONIOS #15'
   - 'EPODONIOS #19'
-  - 'EPODONIOS #21'
   - 'EPODONIOS #28'
   - 'EPODONIOS #37'
   - 'EPODONIOS #64'
   - 'EPODONIOS #9'
-  - shadowsocks-1827966278
   - shadowsocks-1827969068
-  - shadowsocks-1832968048
   - shadowsocks-1928705747
   - '🇬🇧 英国 | GBR #1 #1'
   - '🇬🇧 英国 | GBR #2'
@@ -2517,8 +2304,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #4'
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #9'
   - '🇯🇵 日本 | JPN #1'
-  - 🇰🇷KR-141.164.45.187-5711
-  - 🇳🇱[www.v2nodes.com] ss-NL-1604...
   - '🇷🇺 俄罗斯 | RUS #3'
   - '🇺🇸 美国 | USA #6'
   timeout: 5000
@@ -2533,6 +2318,7 @@ proxy-groups:
   - 'CA 🇨🇦 | @Raydikalx | 7EDCAD #1'
   - 'CA 🇨🇦 | @Raydikalx | 98D7B9 #1'
   - 'CA 🇨🇦 | @Raydikalx | A9CC45 #1'
+  - CA 🇨🇦 | @Raydikalx | B3799F
   - 'CA 🇨🇦 | @Raydikalx | B449CD #1'
   - 'CA 🇨🇦 | @Raydikalx | C5497C #1'
   - CA 🇨🇦 | @Raydikalx | D614C7
@@ -2550,25 +2336,22 @@ proxy-groups:
   - 'EPODONIOS #945'
   - 'EPODONIOS #946'
   - 'EPODONIOS #949'
-  - 'EPODONIOS #950'
   - 'EPODONIOS #951'
   - 'EPODONIOS #952'
   - 'EPODONIOS #959'
   - 'EPODONIOS #963'
   - 'EPODONIOS #964'
-  - 'EPODONIOS #966'
   - 'EPODONIOS #967'
   - 'EPODONIOS #970'
   - 'EPODONIOS #971'
   - 'FI 🇫🇮 | @Raydikalx | A8E03B #1'
   - GB 🇬🇧 | @Raydikalx | 0A41FD
   - GB 🇬🇧 | @Raydikalx | 69DFE1
-  - HK 🇭🇰 | @Raydikalx | 049278
-  - HK 🇭🇰 | @Raydikalx | 1AAC90
   - HK 🇭🇰 | @Raydikalx | 1B63F0
   - HK 🇭🇰 | @Raydikalx | BB260B
   - 'IN 🇮🇳 | @Raydikalx | 85A904 #1'
   - IR 🇮🇷 | @Raydikalx | 0EB096
+  - IR 🇮🇷 | @Raydikalx | 1F9134
   - 'IR 🇮🇷 | @Raydikalx | 797632 #1'
   - IR 🇮🇷 | @Raydikalx | 9EED75
   - IR 🇮🇷 | @Raydikalx | A44433
@@ -2576,11 +2359,8 @@ proxy-groups:
   - 'RU 🇷🇺 | @Raydikalx | 05FC9A #1'
   - TR 🇹🇷 | @Raydikalx | E59E35
   - 'US 🇺🇸 | @Raydikalx | 0B7B7C #1'
-  - US 🇺🇸 | @Raydikalx | 275065
   - 'US 🇺🇸 | @Raydikalx | 2D3F12 #1'
   - US 🇺🇸 | @Raydikalx | CE2CEA
-  - vmess-1853976461
-  - vmess-1927196133
   - vmess-1928159406
   - vmess-1928914205
   - '未知159 #1'
@@ -2590,7 +2370,6 @@ proxy-groups:
   - 🇨🇳CN-47.238.94.29-0503
   - 🇨🇳_CN_中国
   - '🇨🇳_CN_中国 #1'
-  - '🇭🇰 香港 | HKG #4'
   - 🇭🇰 香港2|@ripaojiedian
   - 🇭🇰 香港3|@ripaojiedian
   - 🇭🇰 香港5|@ripaojiedian
@@ -2604,7 +2383,6 @@ proxy-groups:
   - 🇺🇸 美国|@ripaojiedian
   - '🏁RELAY-104.16.89.44-5074 #1'
   - 🏁RELAY-104.17.163.16-0852
-  - 🏁RELAY-104.18.28.19-0032
   - '🏁RELAY-104.19.40.211-2612 #1'
   - '🏁RELAY-104.31.16.46-8192 #1'
   - '🏁RELAY-104.31.16.53-8186 #1'
@@ -2633,21 +2411,17 @@ proxy-groups:
   - 'EPODONIOS #53'
   - 'EPODONIOS #57'
   - 'EPODONIOS #60'
-  - 'EPODONIOS #61'
   - 'EPODONIOS #65'
   - 'EPODONIOS #67'
   - 'EPODONIOS #69'
   - 'EPODONIOS #70'
   - 'EPODONIOS #71'
   - 'EPODONIOS #72'
-  - 'EPODONIOS #77'
-  - 'EPODONIOS #85'
   - 'EPODONIOS #92'
   - 'EPODONIOS #96'
   - 'EPODONIOS #98'
   - 'EPODONIOS #99'
   - FR法国丨yoyapai.com\r
-  - trojan-1894600734
   - trojan-1903654553
   - trojan-1909176998
   - trojan-1926812821
@@ -2680,7 +2454,6 @@ proxy-groups:
   - '🇫🇷法国丨yoyapai.com\r #2'
   - '🇫🇷法国丨yoyapai.com\r #3'
   - '🇬🇧 英国 | GBR #8'
-  - '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   - 🇱🇹 立陶宛(mibei77.com 米贝节点分享)
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
   - '🇳🇱[www.v2nodes.com] trojan-NL-... #4'
@@ -2691,24 +2464,19 @@ proxy-groups:
   - '🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
   - '🇺🇸 美国 | USA #2'
   - 🇺🇸 美国 | USA 2
-  - 🇺🇸 美国 | USA 8
   - 🇺🇸US美国丨yoyapai.com\r
   - '🏳[www.v2nodes.com] trojan- #4'
   - 'EPODONIOS #10'
   - 'EPODONIOS #11'
   - 'EPODONIOS #12'
   - 'EPODONIOS #125'
-  - 'EPODONIOS #14'
   - 'EPODONIOS #15'
   - 'EPODONIOS #19'
-  - 'EPODONIOS #21'
   - 'EPODONIOS #28'
   - 'EPODONIOS #37'
   - 'EPODONIOS #64'
   - 'EPODONIOS #9'
-  - shadowsocks-1827966278
   - shadowsocks-1827969068
-  - shadowsocks-1832968048
   - shadowsocks-1928705747
   - '🇬🇧 英国 | GBR #1 #1'
   - '🇬🇧 英国 | GBR #2'
@@ -2725,8 +2493,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #4'
   - '🇮🇹[www.v2nodes.com] ss-IT-1602... #9'
   - '🇯🇵 日本 | JPN #1'
-  - 🇰🇷KR-141.164.45.187-5711
-  - 🇳🇱[www.v2nodes.com] ss-NL-1604...
   - '🇷🇺 俄罗斯 | RUS #3'
   - '🇺🇸 美国 | USA #6'
   type: select
@@ -2777,13 +2543,11 @@ proxy-groups:
   - 🇯🇵 日本2|@ripaojiedian
   - 🇯🇵 日本3|@ripaojiedian
   - 🇯🇵 日本|@ripaojiedian
-  - '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   - '🇯🇵 日本 | JPN #1'
   type: select
 - name: 🇺🇸 美国
   proxies:
   - 'US 🇺🇸 | @Raydikalx | 0B7B7C #1'
-  - US 🇺🇸 | @Raydikalx | 275065
   - 'US 🇺🇸 | @Raydikalx | 2D3F12 #1'
   - US 🇺🇸 | @Raydikalx | CE2CEA
   - 🇺🇸 美国2|@ripaojiedian
@@ -2793,7 +2557,6 @@ proxy-groups:
   - '🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
   - '🇺🇸 美国 | USA #2'
   - 🇺🇸 美国 | USA 2
-  - 🇺🇸 美国 | USA 8
   - 🇺🇸US美国丨yoyapai.com\r
   - '🇮🇹 意大利 | ITA #13'
   - '🇺🇸 美国 | USA #6'
@@ -2810,11 +2573,8 @@ proxy-groups:
   type: select
 - name: 🇭🇰 香港
   proxies:
-  - HK 🇭🇰 | @Raydikalx | 049278
-  - HK 🇭🇰 | @Raydikalx | 1AAC90
   - HK 🇭🇰 | @Raydikalx | 1B63F0
   - HK 🇭🇰 | @Raydikalx | BB260B
-  - '🇭🇰 香港 | HKG #4'
   - 🇭🇰 香港2|@ripaojiedian
   - 🇭🇰 香港3|@ripaojiedian
   type: select
@@ -2826,6 +2586,7 @@ proxy-groups:
   - 'CA 🇨🇦 | @Raydikalx | 7EDCAD #1'
   - 'CA 🇨🇦 | @Raydikalx | 98D7B9 #1'
   - 'CA 🇨🇦 | @Raydikalx | A9CC45 #1'
+  - CA 🇨🇦 | @Raydikalx | B3799F
   - 'CA 🇨🇦 | @Raydikalx | B449CD #1'
   - 'CA 🇨🇦 | @Raydikalx | C5497C #1'
   - CA 🇨🇦 | @Raydikalx | D614C7
@@ -2875,7 +2636,7 @@ proxy-groups:
   type: select
 - name: 🇰🇷 韩国
   proxies:
-  - 🇰🇷KR-141.164.45.187-5711
+  - DIRECT
   type: select
 - name: 🇷🇺 俄罗斯
   proxies:
