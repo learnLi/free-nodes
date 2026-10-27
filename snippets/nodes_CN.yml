@@ -1,21 +1,78 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 1F0947
+  name: CN 🇨🇳 | @Raydikalx | 1778F4
   network: tcp
-  port: 50015
+  port: 50017
   server: 36.133.78.37
   tls: false
   type: vmess
   uuid: 148e82ae-5014-4a1a-a783-dd63fa9cdc9d
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.218.63.184-1684
-  network: http
-  port: 20113
-  server: 8.218.63.184
+  name: CN 🇨🇳 | @Raydikalx | 6A8D34
+  network: tcp
+  port: 50018
+  server: 36.133.78.37
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | C8DC82
+  network: tcp
+  port: 50016
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 9e63ca55-1ff9-453b-ae80-75947b8596d3
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | DFBBF8
+  network: tcp
+  port: 50011
+  server: 36.133.78.37
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.244.120.197-0647
+  network: ws
+  port: 36703
+  server: 47.244.120.197
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: cdc72c7d-6ab8-4cb4-a0f7-18b0ec7bfbfa
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  ws-opts:
+    path: /arki
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.76.57.83-0615
+  network: ws
+  port: 443
+  server: 47.76.57.83
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: vah4urdzl3jdx5r2.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-8.210.48.219-1582
+  network: http
+  port: 26812
+  server: 8.210.48.219
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: cbe5ac22-eb42-4ca9-9fdc-283e57f98008

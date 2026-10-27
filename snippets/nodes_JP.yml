@@ -1,43 +1,22 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 071DE1
-  network: ws
-  port: 443
-  server: 212.135.211.242
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 235e318a-8bcb-4480-b256-7b65cc5d0b0a
-  ws-opts:
-    headers:
-      Host: aus.lovehk.xyz
-    path: /Sydney3
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | D1FFD7
-  network: ws
-  port: 10021
-  server: 138.2.49.230
+  name: JP 🇯🇵 | @Raydikalx | 284FFD
+  network: tcp
+  port: 20401
+  server: gz1.polymarket.party
   tls: false
   type: vmess
-  uuid: a12e496e-f89a-434a-8011-108846f0e412
-  ws-opts:
-    path: /
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | D48DE2
-  network: ws
-  port: 443
-  server: J3Nz0zA0r13AoVhH.v.3dns.vip
-  servername: J3Nz0zA0r13AoVhH.v.3dns.vip
-  tls: true
+  name: JP 🇯🇵 | @Raydikalx | E40342
+  network: raw
+  port: 18112
+  server: 168.110.60.104
+  tls: false
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
-    path: /ws-vmess
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -85,35 +64,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-147.78.244.7-1644
-  network: ws
-  port: 443
-  server: 147.78.244.7
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c2907a9a-5024-41fd-be3c-30885585e3ef
-  ws-opts:
-    headers:
-      Host: virmach.qweasdzxc.gq
-    path: /
-- alterId: 2
-  cipher: auto
-  name: 🇯🇵JP-153.122.173.53-3384
-  network: ws
-  port: 32407
-  server: 153.122.173.53
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 26c5fdc7-b3be-3482-9a45-d97b958a889a
-  ws-opts:
-    path: /v2ray
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-172.111.146.64-5708
+  name: 🇯🇵JP-172.111.146.64-0162
   network: ws
   port: 80
   server: 172.111.146.64
@@ -123,7 +74,7 @@ proxies:
   type: vmess
   uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   ws-opts:
-    path: /vmess/
+    path: /
 - name: 日本2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -163,12 +114,6 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1598... #1'
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
   port: 8388
@@ -179,4 +124,10 @@ proxies:
   password: BeaUf9c0AEWH40Pu
   port: 8388
   server: 154.36.158.197
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #10'
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
   type: ss
