@@ -1,33 +1,32 @@
 proxies:
-- alterId: 0
+- alterId: 1
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 38AE0B
+  name: 🇹🇼TW-1.161.186.146-1973
   network: ws
-  port: 80
-  server: mdk.mdmekjll.best
-  servername: mdk.mdmekjll.best
-  tls: false
-  type: vmess
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
-  ws-opts:
-    headers:
-      Host: mdk.mdmekjll.best
-    path: /game/resources
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-211.72.35.110-4720
-  network: ws
-  port: 443
-  server: 211.72.35.110
-  servername: woidenca1.jsworld.eu.org
-  skip-cert-verify: false
+  port: 64443
+  server: 1.161.186.146
+  servername: ''
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: e87f326f-55ac-487f-a3d1-57c592bb663a
+  uuid: cb7001c7-e495-41ac-b942-f25f60523414
+  ws-opts:
+    path: /clientarea
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼TW-36.224.140.13-4779
+  network: ws
+  port: 11463
+  server: tw4.594888.xyz
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: dd7639cf-66dd-3038-ab0e-cefe7e9ef9fb
   ws-opts:
     headers:
-      Host: woidenca1.jsworld.eu.org
-    path: /nishikata3
+      Host: tw4.594888.xyz
+    path: /v2ray
 - name: 台湾|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092

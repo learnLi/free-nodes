@@ -1,17 +1,14 @@
 proxies:
-- client-fingerprint: chrome
-  name: 🇪🇪EE_1|3.0MB/s
-  port: 25895
-  server: 79.182.39.232
-  servername: www.samsung.com
+- name: 🇪🇪EE_1|1.0MB/s
+  password: None
+  port: 9443
+  server: 95.153.31.66
+  skip-cert-verify: true
   tls: true
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-- name: 🇪🇪201602 | ⚡️Telegram = t.me/S...
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  port: 4443
-  server: ee2.obxodvpn.us
-  skip-cert-verify: false
-  sni: nl1.obxodvpn.us
-  tls: false
-  type: hysteria2
+  type: http
+- name: 🇪🇪EE_2|1.9MB/s
+  port: 9443
+  server: 95.153.32.2
+  skip-cert-verify: true
+  tls: true
+  type: http
