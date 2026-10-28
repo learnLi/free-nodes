@@ -1,19 +1,33 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇹🇼TW-211.72.35.110-5208
+  name: TW 🇹🇼 | @Raydikalx | 38AE0B
+  network: ws
+  port: 80
+  server: mdk.mdmekjll.best
+  servername: mdk.mdmekjll.best
+  tls: false
+  type: vmess
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  ws-opts:
+    headers:
+      Host: mdk.mdmekjll.best
+    path: /game/resources
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼TW-211.72.35.110-4720
   network: ws
   port: 443
   server: 211.72.35.110
-  servername: euserv1.aifx.eu.org
+  servername: woidenca1.jsworld.eu.org
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 3953ce0d-25df-4427-8371-a8ac26cc36fe
+  uuid: e87f326f-55ac-487f-a3d1-57c592bb663a
   ws-opts:
     headers:
-      Host: euserv1.aifx.eu.org
-    path: /nishikata
+      Host: woidenca1.jsworld.eu.org
+    path: /nishikata3
 - name: 台湾|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -22,7 +36,7 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇹🇼[www.v2nodes.com] trojan-TW-...
+- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #1'
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   port: 24999
   server: 188.253.7.44
