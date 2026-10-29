@@ -1,26 +1,34 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 19EBD7
+  name: KR 🇰🇷 | @Raydikalx | 21E816
   network: ws
   port: 443
-  server: seoul01.zgjok.com
-  servername: seoul01.zgjok.com
+  server: JBQ4dPDPuJFzj4KV.v.3dns.vip
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 182f1650-ca13-480c-b0b4-1ca44ed0504e
+  uuid: 1d84e480-8fd2-4fae-96de-e46fe36ffe86
   ws-opts:
     headers:
-      Host: seoul01.zgjok.com
-    path: /henis01
-- alpn:
-  - ''
-  alterId: 0
+      Host: JBQ4dPDPuJFzj4KV.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
   cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /
+  name: KR 🇰🇷 | @Raydikalx | CCD3E7
+  network: ws
+  port: 443
+  server: seoul02.zgjok.com
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
+  ws-opts:
+    headers:
+      Host: seoul02.zgjok.com
+    path: /
+- alterId: 0
+  cipher: auto
   name: '🇰🇷 韩国 | KOR #1'
   network: http
   port: 80
@@ -28,7 +36,6 @@ proxies:
   skip-cert-verify: true
   tls: false
   type: vmess
-  udp: true
   uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
 - alterId: 0
   cipher: auto
@@ -47,26 +54,39 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-146.56.166.153-0092
-  network: ws
-  port: 443
-  server: 146.56.166.153
+  name: 🇰🇷KR-150.230.249.15-1465
+  network: http
+  port: 46842
+  server: 150.230.249.15
   servername: ''
   skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
-  network: ws
-  port: 25555
-  server: 152.69.226.63
   tls: false
-  type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  type: vmess
+  uuid: 4530b5ee-ced4-4e64-9285-1867fc5df7f8
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-52.78.213.224-2221
+  network: ws
+  port: 80
+  server: 52.78.213.224
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 6f442823-6b73-4b31-f1f5-aa1e907b051e
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-54.180.114.77-5994
+  network: ws
+  port: 42517
+  server: 54.180.114.77
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
   ws-opts:
     path: /
 - name: 韩国|@ripaojiedian
@@ -78,7 +98,7 @@ proxies:
   sni: m.ctrip.com
   type: trojan
 - cipher: aes-256-cfb
-  name: 🇰🇷KR-211.178.105.134-0246
+  name: shadowsocks-1827145973
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134

@@ -15,15 +15,6 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 6530E7
-  network: tcp
-  port: 44368
-  server: 45.136.244.204
-  tls: false
-  type: vmess
-  uuid: d5862d3a-154f-43c9-bfa4-335361c020ba
-- alterId: 0
-  cipher: auto
   name: RU 🇷🇺 | @Raydikalx | B3BBEF
   network: ws
   port: 443
@@ -35,21 +26,8 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺RU-91.193.181.192-3134
-  network: ws
-  port: 8090
-  server: 91.193.181.192
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 08bc30e1-be39-4eb4-e887-e6579be15a45
-  ws-opts:
-    path: /
 - cipher: aes-256-gcm
-  name: 🇷🇺RU-91.206.92.238-0249
+  name: 🇷🇺RU-91.206.92.238-0257
   password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
   port: 18443
   server: 91.206.92.238
