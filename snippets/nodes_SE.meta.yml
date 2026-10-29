@@ -1,23 +1,19 @@
 proxies:
-- http-opts:
-    headers:
-      Host:
-      - play.googleapis.com
-    method: GET
-    path:
-    - /
-  name: '🇸🇪 瑞典 | SWE #2'
-  network: http
-  port: 443
-  server: 51.20.192.255
+- name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  network: ws
+  port: 14430
+  server: 5.178.109.174
   tls: false
   type: vless
-  udp: true
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  ws-opts:
+    headers:
+      Host: 5.178.109.174
+    path: /vless
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: live.gpuwxc84nl.chunk-4022.m4s
-  name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   network: grpc
   port: 443
   server: 150.241.72.161
@@ -48,21 +44,15 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
-- name: 🇸🇪SE_1|1.0MB/s
+- name: 🇸🇪SE_1|3.8MB/s
   port: 443
   server: 146.70.242.146
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇸🇪SE_2|1.5MB/s
+- name: 🇸🇪SE_2|2.5MB/s
   port: 443
   server: 149.50.216.65
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇸🇪SE_3|1.3MB/s
-  port: 443
-  server: 217.210.129.243
   skip-cert-verify: true
   tls: true
   type: http

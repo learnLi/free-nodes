@@ -1,44 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 2AF607
-  network: ws
-  port: 443
-  server: seoul02.zgjok.com
-  servername: seoul02.zgjok.com
-  tls: true
-  type: vmess
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  ws-opts: {}
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 6EC259
-  network: ws
-  port: 443
-  server: JBQ4dPDPuJFzj4KV.v.3dns.vip
-  servername: JBQ4dPDPuJFzj4KV.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 1d84e480-8fd2-4fae-96de-e46fe36ffe86
-  ws-opts:
-    headers:
-      Host: JBQ4dPDPuJFzj4KV.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | D518F1
-  network: ws
-  port: 80
-  server: 132.145.80.230
-  servername: kr02.a0a.xyz
-  tls: false
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
   name: 🇰🇷 韩国|@ripaojiedian
   network: ws
   port: 443
@@ -54,9 +16,9 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-13.125.24.112-4244
+  name: 🇰🇷KR-13.125.24.112-4249
   network: ws
-  port: 49517
+  port: 42517
   server: 13.125.24.112
   servername: ''
   skip-cert-verify: true
@@ -67,19 +29,19 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-132.145.80.230-1048
+  name: 🇰🇷KR-146.56.166.153-0092
   network: ws
-  port: 80
-  server: 132.145.80.230
+  port: 443
+  server: 146.56.166.153
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   ws-opts:
     headers:
-      Host: kr02.a0a.xyz
-    path: /cctv13.m3u8
+      Host: lg30.cfcdn3.xyz
+    path: /ray
 - name: 韩国|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -95,8 +57,14 @@ proxies:
   server: 211.178.105.134
   type: ss
 - cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-5300
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
   password: TEzjfAYq2IjtuoS
-  port: 6679
+  port: 6697
+  server: 141.164.45.187
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
+  password: Y6R9pAtvxxzmGC
+  port: 5001
   server: 141.164.45.187
   type: ss

@@ -1,13 +1,42 @@
 proxies:
-- name: 🇪🇪EE_1|1.0MB/s
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | 0CBEEB
+  network: tcp
+  port: 443
+  server: irc.jahancloud.cfd
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 24b73122-9c73-45ae-871d-1837e427a9bf
+- alterId: 0
+  cipher: auto
+  name: NL 🇳🇱 | @Raydikalx | 94C8EE
+  network: tcp
+  port: 2044
+  server: 53f3167b1b943c53.vira-ai.dns.8.8.8.8.ir-service.connectoo.my.id
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6bf2145c-75ea-48bc-b10a-84265c8d0973
+- client-fingerprint: chrome
+  name: '🇪🇪 爱沙尼亚 | EST #1'
+  port: 443
+  server: 31.76.70.90
+  servername: 597dad6b.con.fernarchive.online
+  tls: true
+  type: vless
+  uuid: abca037b-bee5-41cc-a888-0668e4c66176
+- name: 🇪🇪EE_2|2.0MB/s
   password: None
   port: 9443
   server: 95.153.31.66
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇪🇪EE_2|1.9MB/s
-  port: 9443
+- name: 🇪🇪EE_3|3.6MB/s
+  password: None
+  port: 443
   server: 95.153.32.2
   skip-cert-verify: true
   tls: true
