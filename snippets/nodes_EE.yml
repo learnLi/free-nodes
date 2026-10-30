@@ -1,11 +1,24 @@
 proxies:
 - alterId: 0
-  cipher: aes-128-gcm
-  name: IR 🇮🇷 | @Raydikalx | 9EED75
+  cipher: auto
+  name: Global 🌐 | @Raydikalx | 94EE6D
+  network: ws
+  port: 56830
+  server: vpnu.loungers.cc
+  tls: true
+  type: vmess
+  uuid: d2e92a19-f50c-426e-cd15-03ece7f4f3b1
+  ws-opts:
+    headers:
+      Host: vpnu.loungers.cc
+    path: /ws/x-ui
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | EE8178
   network: tcp
-  port: 1027
-  server: s1.connect.bloroxy.net
-  servername: none
+  port: 5065
+  server: 94.139.179.124
+  servername: ''
   tls: false
   type: vmess
-  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3
+  uuid: 9cb5e799-f308-4d52-b761-9b4e9c2ff842

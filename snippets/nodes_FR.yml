@@ -1,7 +1,21 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0241
+  name: FR 🇫🇷 | @Raydikalx | 58B0B7
+  network: ws
+  port: 2053
+  server: cf.levikogjgfdd.ir
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 9a1a05d9-69be-45d3-e326-c6621edf7b31
+  ws-opts:
+    headers:
+      Host: deapp.jisuyun.top
+    path: /devm
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-145.239.55.210-0257
   network: ws
   port: 80
   server: 145.239.55.210
@@ -29,36 +43,6 @@ proxies:
     headers:
       Host: pelang.org
     path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-54.37.131.126-0240
-  network: ws
-  port: 80
-  server: 54.37.131.126
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-57.128.164.21-0932
-  network: ws
-  port: 80
-  server: 57.128.164.21
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: bda82bcd-f6e2-46ae-9552-673f0b87ac30
-  ws-opts:
-    headers:
-      Host: https.http.www.net.com.ramseyv2.ir.
-    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -91,42 +75,6 @@ proxies:
   network: ws
   password: humanity
   port: 443
-  server: 185.255.179.166
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #11'
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.225.68.232
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
-  network: ws
-  password: humanity
-  port: 443
-  server: 45.87.41.18
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #13'
-  network: ws
-  password: humanity
-  port: 443
   server: www.calmlunch.com
   sni: www.calmlunch.com
   type: trojan
@@ -134,7 +82,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #11'
   network: ws
   password: humanity
   port: 2053
@@ -146,7 +94,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #15'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
   network: ws
   password: humanity
   port: 443
@@ -158,26 +106,14 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #16'
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.220.100.168
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #17'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #13'
   password: humanity
   port: 443
   server: 165.215.250.14
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #18'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
   network: ws
   password: humanity
   port: 443
@@ -189,13 +125,23 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- alpn:
-  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #5'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
   network: ws
   password: humanity
-  port: 8443
-  server: 212.227.144.37
+  port: 443
+  server: 185.220.100.168
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: '%2Fassignment'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.255.179.166
   skip-cert-verify: false
   sni: www.calmlunch.com
   type: trojan
@@ -203,16 +149,11 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
-  password: humanity
-  port: 443
-  server: 5.44.46.142
-  type: trojan
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #9'
   network: ws
   password: humanity
   port: 443
-  server: 185.220.100.168
+  server: 45.87.41.18
   skip-cert-verify: false
   sni: www.calmlunch.com
   type: trojan
@@ -248,3 +189,27 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- name: '🏳[www.v2nodes.com] trojan- #8'
+  network: ws
+  password: humanity
+  port: 443
+  server: 185.225.68.232
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- cipher: aes-256-gcm
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1608...
+  password: SnOSRfo0h6mnWehTG_Xang
+  port: 53567
+  server: node11.botkeep.cloud
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🏳[www.v2nodes.com] ss- #12'
+  password: 6heexyz
+  port: 443
+  server: 54.36.174.134
+  type: ss

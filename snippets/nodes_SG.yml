@@ -1,30 +1,7 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 3577BA
-  network: ws
-  port: 55002
-  server: 45.127.32.220
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: b25731af-0428-4274-be5d-31a273a8d632
-  ws-opts:
-    headers:
-      Host: www.bing.com
-    path: b25731af-0428-4274-be5d-31a273a8d632-vm
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 8C0385
-  network: tcp
-  port: 36154
-  server: 13.140.91.117
-  tls: false
-  type: vmess
-  uuid: b2fd9449-458a-4243-bbf9-5735070d6817
-- alterId: 0
-  cipher: auto
-  name: vmess-1837386984
+  name: SG 🇸🇬 | @Raydikalx | 32C65E
   network: tcp
   port: 18000
   server: 149.88.23.202
@@ -32,6 +9,64 @@ proxies:
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 39E775
+  network: tcp
+  port: 36154
+  server: 13.140.91.117
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 54327b73-3ce6-437d-9d00-3d6398d9f9f5
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 5DDFCC
+  network: none
+  port: 29521
+  server: 47.236.207.245
+  servername: 47.236.207.245
+  tls: false
+  type: vmess
+  uuid: f1bb29bf-a342-44d4-9ac5-5ca4566a216a
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 9DDCC3
+  network: ws
+  port: 443
+  server: 8.219.97.17
+  servername: wjofhsqteueywxeq.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
+  ws-opts:
+    headers:
+      Host: wjofhsqteueywxeq.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | E09534
+  network: ws
+  port: 52935
+  server: 52.74.177.147
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: c685dd34-b84e-484d-b3f5-efd0a27ad2d5
+  ws-opts:
+    headers:
+      Host: sg-transit-1.nebulacloud.win
+    path: /getData/fr
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | EB3982
+  network: tcp
+  port: 35007
+  server: 13.140.83.196
+  servername: 13.140.83.196
+  tls: true
+  type: vmess
+  uuid: 0bef47fa-3632-424e-bcc3-899be654774f
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
@@ -64,17 +99,19 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-174.138.25.187-1831
+  name: 🇸🇬SG-139.180.211.152-1181
   network: ws
-  port: 8880
-  server: 174.138.25.187
+  port: 16737
+  server: 139.180.211.152
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
+  uuid: 1458e38c-9f71-4c3c-aa70-aaccda6789dd
   ws-opts:
-    path: /hkaa0
+    headers:
+      Host: m.twitter.com
+    path: /
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -83,10 +120,36 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
+- name: 🇸🇬 新加坡 | SGP
+  network: ws
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: 321dfbc6.uir-9i6.pages.dev
+    path: /
+- name: '🇸🇬 新加坡 | SGP #1'
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  type: trojan
+- name: 🇸🇬[www.v2nodes.com] trojan-SG-...
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  port: 8886
+  server: 139.180.146.200
+  type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
+  sni: 139.180.146.200
   type: trojan
 - cipher: rc4-md5
   name: shadowsocks-1827147315

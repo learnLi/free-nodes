@@ -1,14 +1,27 @@
 proxies:
 - alterId: 0
-  cipher: aes-128-gcm
-  name: IR 🇮🇷 | @Raydikalx | 9EED75
+  cipher: auto
+  name: Global 🌐 | @Raydikalx | 94EE6D
+  network: ws
+  port: 56830
+  server: vpnu.loungers.cc
+  tls: true
+  type: vmess
+  uuid: d2e92a19-f50c-426e-cd15-03ece7f4f3b1
+  ws-opts:
+    headers:
+      Host: vpnu.loungers.cc
+    path: /ws/x-ui
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | EE8178
   network: tcp
-  port: 1027
-  server: s1.connect.bloroxy.net
-  servername: none
+  port: 5065
+  server: 94.139.179.124
+  servername: ''
   tls: false
   type: vmess
-  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3
+  uuid: 9cb5e799-f308-4d52-b761-9b4e9c2ff842
 - client-fingerprint: chrome
   name: '🇪🇪 爱沙尼亚 | EST #1'
   network: xhttp
@@ -25,26 +38,15 @@ proxies:
     path: /ShamanXHTTP2026
 - client-fingerprint: chrome
   name: '🇪🇪 爱沙尼亚 | EST #2'
-  network: xhttp
   port: 443
   server: 31.76.70.90
   servername: 597dad6b.con.fernarchive.online
   tls: true
   type: vless
-  udp: true
   uuid: abca037b-bee5-41cc-a888-0668e4c66176
-  xhttp-opts:
-    path: /conv4/stream/77dd2aeeb94331fbff325bb48850392b
 - name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   port: 25895
   server: ee.h1cloud.net
   tls: false
   type: vless
   uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-- name: 🇪🇪EE_1|1.0MB/s
-  password: None
-  port: 443
-  server: 95.153.32.2
-  skip-cert-verify: true
-  tls: true
-  type: http

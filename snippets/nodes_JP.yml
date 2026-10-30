@@ -1,14 +1,36 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 4C7D0D
-  network: tcp
-  port: 18112
-  server: oc.imfun.fun
-  servername: oc.imfun.fun
-  tls: false
+  name: JP 🇯🇵 | @Raydikalx | 4F9D7D
+  network: ws
+  port: 13118
+  server: 140.83.57.20
+  servername: sg.11160321.de5.net
+  tls: true
   type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  ws-opts:
+    headers:
+      Host: sg.11160321.de5.net
+    path: /
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  name: '🇯🇵 日本 | JPN #8'
+  network: ws
+  port: 443
+  server: JP032010.ssgreen.org
+  servername: JP032010.ssgreen.org
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 47a2aa0a-fea0-43f3-bfcc-aa322c2a4769
+  ws-opts:
+    headers:
+      Host: JP032010.ssgreen.org
+    path: /wes
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -54,6 +76,21 @@ proxies:
     headers:
       Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
     path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-152.69.204.164-1001
+  network: ws
+  port: 2095
+  server: 152.69.204.164
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e94c706a-235f-4663-e214-edfa052f256e
+  ws-opts:
+    headers:
+      Host: els200.jklist.ga
+    path: /
 - name: 日本2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -76,7 +113,6 @@ proxies:
   skip-cert-verify: true
   sni: 43.167.186.78
   type: trojan
-  udp: true
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   network: ws
   password: 0400697c-b581-4575-9d2f-0bbd4659312d
@@ -105,7 +141,7 @@ proxies:
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146658
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196
@@ -121,10 +157,4 @@ proxies:
   password: shadowsocks
   port: 443
   server: 149.22.87.204
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #4'
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
   type: ss

@@ -1,46 +1,35 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 9BE918
-  network: raw
-  port: 35034
-  server: 165.154.195.38
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- alterId: 64
-  cipher: auto
-  name: 🇹🇼TW-61.216.85.68-1514
+  name: TW 🇹🇼 | @Raydikalx | B2E097
   network: ws
   port: 443
-  server: 61.216.85.68
+  server: 9641684.sdf65h4.top
   servername: ''
-  skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 5ba738e7-0abf-4935-b67e-d404a083d6a6
+  uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
   ws-opts:
     headers:
-      Host: www.88612860.xyz
-    path: /path/243535322906
+      Host: 9641684.sdf65h4.top
+    path: /
 - name: '🇹🇼 🇨🇳 台湾 | TWN #1'
   network: ws
   port: 443
-  server: 59.125.69.22
-  servername: tse1.mm.bing.net
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
   tls: true
   type: vless
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   ws-opts:
     headers:
-      Host: tse1.mm.bing.net
+      Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
 - client-fingerprint: chrome
   name: '🇹🇼 🇨🇳 台湾 | TWN #2'
   network: ws
   port: 443
-  server: 60.248.219.53
+  server: 59.125.69.23
   servername: ty986gfazs.cainiaohub.xyz
   tls: true
   type: vless
@@ -50,10 +39,25 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- name: 🇹🇼[www.v2nodes.com] vless-TW-1...
+- client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN #3'
   network: ws
   port: 443
-  server: 59.125.69.23
+  server: 59.125.69.22
+  servername: tse1.mm.bing.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: tse1.mm.bing.net
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- client-fingerprint: chrome
+  name: '🇹🇼[www.v2nodes.com] vless-TW-1... #2'
+  network: ws
+  port: 443
+  server: 60.248.219.53
   servername: ty986gfazs.cainiaohub.xyz
   tls: true
   type: vless
@@ -61,7 +65,7 @@ proxies:
   ws-opts:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
 - name: 台湾|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -70,16 +74,8 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #1'
+- name: 🇹🇼[www.v2nodes.com] trojan-TW-...
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   port: 24999
   server: 188.253.7.44
   type: trojan
-- name: 🇹🇼 🇨🇳 台湾 | TWN
-  password: 0324fbc29561
-  port: 443
-  server: 684616s4.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  type: anytls
-  udp: true
