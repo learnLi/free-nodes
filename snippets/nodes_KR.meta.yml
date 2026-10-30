@@ -1,27 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 35AD74
-  network: ws
-  port: 20086
-  server: 183.109.131.75
-  tls: false
-  type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | A27025
-  network: tcp
-  port: 3141
-  server: sh.australiacaregroup.site
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-- alterId: 0
-  cipher: auto
   name: 🇰🇷 韩国|@ripaojiedian
   network: ws
   port: 443
@@ -50,19 +29,6 @@ proxies:
     headers:
       Host: cc.1808.cf
     path: /2yevws
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-211.177.40.235-7366
-  network: ws
-  port: 30001
-  server: 211.177.40.235
-  servername: p3.chigua.tk
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  ws-opts:
-    path: /vmess
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   network: ws
   port: 25555
@@ -80,6 +46,16 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
+  name: '🇰🇷 韩国 | KOR #1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 3.35.214.122
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
@@ -87,10 +63,10 @@ proxies:
   server: 211.178.105.134
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #1'
+  name: '🇰🇷 韩国 | KOR #3'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 3.36.108.120
+  server: 3.35.214.122
   type: ss
   udp: true
 - cipher: aes-256-gcm

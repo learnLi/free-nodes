@@ -1,82 +1,89 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 021751
+  name: US 🇺🇸 | @Raydikalx | 01EE5E
   network: ws
-  port: 443
-  server: sparman-production-4426.up.railway.app
-  servername: sparman-production-4426.up.railway.app
-  tls: true
-  type: vmess
-  uuid: 777cc639-7b19-4626-bde7-d301ae639c17
-  ws-opts:
-    headers:
-      Host: sparman-production-4426.up.railway.app
-    path: /gw/4454ff2f-4af5-4cce-8f8c-bf74c57e8c74?ed=2560
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 2AC401
-  network: tcp
-  port: 10001
-  server: jp121.vatilon.cc
-  skip-cert-verify: true
+  port: 2052
+  server: mahilu.site
   tls: false
   type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+  uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+  ws-opts:
+    headers:
+      Host: mahilu.site
+    path: /
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | B10A60
-  network: tcp
-  port: 4584
-  server: mhzedir.qzz.io
-  servername: mhzedir.qzz.io
+  name: US 🇺🇸 | @Raydikalx | 289671
+  network: ws
+  port: 443
+  server: aksai.org
+  servername: null
   tls: true
   type: vmess
-  uuid: 7f84b1ef-b804-4d50-9079-17183bf46172
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: aksai.org
+    path: /linkvws
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | C895A6
+  name: US 🇺🇸 | @Raydikalx | 5C888A
+  network: tcp
+  port: 8881
+  server: 108.61.205.144
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: db5afae4-ac23-41a6-8378-f307a9a47436
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | 801724
+  network: ws
+  port: 443
+  server: 167.88.63.59
+  servername: null
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: vspeedfast.org
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | 9053F6
+  network: ws
+  port: 443
+  server: 147.45.125.231
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | C0EB3C
   network: tcp
   port: 180
   server: 82.198.246.97
-  servername: support.zoom.us.tianjiu.pages.dev
+  servername: null
   tls: false
   type: vmess
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | CA5DA4
-  network: tcp
-  port: 443
-  server: 165.140.217.141
+  name: US 🇺🇸 | @Raydikalx | DBBA21
+  network: ws
+  port: 80
+  server: us-23.hihu.net
   servername: ''
   tls: false
   type: vmess
-  uuid: b65a2d69-5634-42a2-e4be-54e8a6176900
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | DB3486
-  network: ws
-  port: 443
-  server: XSmlqR4AuuOPMsMN.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: edd281f6-71e4-4c1e-ac6b-a1c52e2e1270
-  ws-opts:
-    headers:
-      Host: XSmlqR4AuuOPMsMN.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | E728C9
-  network: none
-  port: 57933
-  server: 72.249.206.49
-  servername: 72.249.206.49
-  tls: false
-  type: vmess
-  uuid: c2f9731b-4978-4e22-9aab-fa699c4ae2ed
+  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
+  ws-opts: {}
 - alterId: 0
   cipher: auto
   name: 🇺🇸 US美国(mibei77.com 米贝节点分享)
@@ -90,6 +97,16 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
     path: /ws?ed=2048
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 United States-7725
+  network: grpc
+  port: 2087
+  server: elma.ns.cloudflare.com
+  servername: 1fdSNA119228928OpS2smTaB228aAsDDsd1ea1457657142.1-senator.info
+  tls: true
+  type: vmess
+  uuid: 2a3263e2-891c-4446-b474-a8c63acb6e25
 - alterId: 0
   cipher: auto
   name: 🇺🇸 美国2|@ripaojiedian
@@ -120,36 +137,62 @@ proxies:
     headers:
       Host: 53vXOVarmgcreAsv.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: 🇺🇸US-129.159.33.199-1543
-  network: ws
-  port: 45328
-  server: 129.159.33.199
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 842c33ff-31b5-410c-a96e-0cb52a99a6da
-  ws-opts:
-    headers:
-      Host: 129.159.33.199
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸US-15.204.64.214-1183
+  name: 🇺🇸US-137.175.15.199-8351
   network: ws
   port: 443
-  server: 15.204.64.214
+  server: 137.175.15.199
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    path: /path/1684063265777
+- alterId: 64
+  cipher: auto
+  name: 🇺🇸US-142.171.141.211-1032
+  network: ws
+  port: 443
+  server: 142.171.141.211
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     headers:
-      Host: yichueng.org
-    path: linkvws
+      Host: www.53649262.xyz
+    path: /path/1703924658447
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸US-192.3.150.233-7997
+  network: ws
+  port: 8443
+  server: 192.3.150.233
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: a6a37e04-5e81-44c9-be53-baa3ff46eb8b
+  ws-opts:
+    path: /8cda48b3
+- alterId: 4
+  cipher: auto
+  name: 🇺🇸US-192.96.204.250-5155
+  network: ws
+  port: 443
+  server: 192.96.204.250
+  servername: usa-washington.lvuft.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  ws-opts:
+    headers:
+      Host: usa-washington.lvuft.com
+    path: /ws
 - alterId: 0
   cipher: auto
   name: 🇺🇸US-23.158.72.131-0948
@@ -167,20 +210,33 @@ proxies:
     path: /870ao26f
 - alterId: 0
   cipher: auto
-  name: 🇺🇸US-45.76.71.233-2744
+  name: 🇺🇸US-38.11.7.80-1411
   network: ws
-  port: 46983
-  server: 45.76.71.233
+  port: 443
+  server: vsg1.0bad.com
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  ws-opts:
+    headers:
+      Host: vsg1.0bad.com
+    path: /chat
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸US-5.78.63.45-1471
+  network: http
+  port: 47783
+  server: 5.78.63.45
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 69099258-1476-46dd-a51b-84e915e941be
-  ws-opts:
-    path: /1tGK82lU/
+  uuid: 5b4203d5-422f-4ce4-ca25-ecdbfee45a46
 - alterId: 0
   cipher: auto
-  name: '🇺🇸US-51.81.220.195-3474 #1'
+  name: 🇺🇸US-51.81.220.195-3217
   network: ws
   port: 80
   server: 51.81.220.195
@@ -190,7 +246,7 @@ proxies:
   type: vmess
   uuid: 6fea1649-425b-4092-bf53-29792152c925
   ws-opts:
-    path: /sshkit/Uvuwbwb/6373b77a048a6/
+    path: /sshkit/Yarayauj/6349911f83b31/
 - name: 美国2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -215,7 +271,7 @@ proxies:
   type: trojan
 - grpc-opts:
     grpc-service-name: grpc-video-call
-  name: 🇷🇺 俄罗斯 | RUS 2
+  name: '🇷🇺 俄罗斯 | RUS 3 #2'
   network: grpc
   password: Pass-Client-1
   port: 8446
@@ -237,19 +293,19 @@ proxies:
   skip-cert-verify: true
   sni: www.calmlunch.com
   type: trojan
-- name: 🇺🇸 美国 | USA
-  password: humanity
-  port: 443
-  server: 104.17.121.43
+- name: '🇺🇸 美国 | USA #17'
+  password: trojan
+  port: 8443
+  server: 104.18.35.86
   skip-cert-verify: true
-  sni: www.calmlunch.com
+  sni: longwanghen.pages.dev
   type: trojan
-- name: '🇺🇸 美国 | USA #19'
+- name: '🇺🇸 美国 | USA #9'
   password: humanity
   port: 443
-  server: 162.159.91.211
+  server: 162.159.228.224
   skip-cert-verify: true
-  sni: www.calmlunch.com
+  sni: www.pleadcourt.org
   type: trojan
 - alpn:
   - http/1.1
@@ -267,57 +323,62 @@ proxies:
     path: /assignment
 - name: 🇺🇸 美国 | USA 3
   network: ws
-  password: trojan
-  port: 8443
-  server: 104.18.35.86
-  skip-cert-verify: true
-  sni: longwanghen.pages.dev
-  type: trojan
-  ws-opts:
-    headers:
-      Host: longwanghen.pages.dev
-    path: /
-- alpn:
-  - http/1.1
-  name: '🇺🇸 美国 | USA 3 #1'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.21.33.59
-  skip-cert-verify: true
-  sni: www.pleadcourt.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.pleadcourt.org
-    path: /assignment
-- name: '🇺🇸 美国 | USA 3 #2'
-  network: ws
   password: humanity
   port: 443
   server: 162.159.91.211
   skip-cert-verify: true
   sni: www.calmlunch.com
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: www.calmlunch.com
     path: /assignment
 - alpn:
   - http/1.1
-  name: 🇺🇸 美国 | USA 6
+  name: 🇺🇸 美国 | USA 4
   network: ws
   password: humanity
   port: 443
-  server: 104.18.45.38
+  server: 162.159.228.224
   skip-cert-verify: true
-  sni: www.trusteeforward.com
+  sni: www.pleadcourt.org
   type: trojan
+  udp: true
   ws-opts:
     headers:
-      Host: www.trusteeforward.com
+      Host: www.pleadcourt.org
     path: /assignment
+- name: 🇺🇸 美国 | USA 8
+  network: ws
+  password: trojan
+  port: 8443
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: longwanghen.pages.dev
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: longwanghen.pages.dev
+    path: /
+- name: 🇺🇸US-216.152.156.212-0186
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.156.212
+  sni: courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+  type: trojan
+- name: 🇺🇸US-216.152.156.65-0189
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.156.65
+  sni: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+  type: trojan
+- name: 🇺🇸US-66.163.114.166-0190
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.114.166
+  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
+  type: trojan
 - name: 🇺🇸US美国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -328,73 +389,121 @@ proxies:
 - name: 🇺🇸[www.v2nodes.com] trojan-US-...
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 216.152.155.176
+  server: 216.152.155.158
   skip-cert-verify: false
-  sni: blog.nextjobopportunityandclaimyouridealrole.com
+  sni: resources.nextjobopportunityandclaimyouridealrole.com
   type: trojan
 - name: '🇺🇸[www.v2nodes.com] trojan-US-... #1'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.131
-  type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #10'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 216.152.156.42
   sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
   type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #10'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.155.176
+  skip-cert-verify: false
+  sni: blog.nextjobopportunityandclaimyouridealrole.com
+  type: trojan
 - name: '🇺🇸[www.v2nodes.com] trojan-US-... #11'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 66.163.112.242
+  server: 216.152.155.131
   type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #13'
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #12'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 169.197.140.214
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #15'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.121
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #16'
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 169.197.140.169
+  sni: api.discoverfreshgraduatejobsstartyourprofessionaljourney.com
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #18'
+  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 66.163.122.81
   sni: courses.searchnationwidecareerchangehelperandguidancetoday.com
   type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #16'
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #19'
+  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 66.163.112.121
+  server: 216.152.155.23
+  skip-cert-verify: false
+  sni: courses.nextjobopportunityandclaimyouridealrole.com
   type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #17'
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #20'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 66.163.112.76
+  server: 216.152.156.42
   type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #18'
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #22'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 169.197.140.169
   type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #19'
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #23'
   network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.25
+  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #24'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.13
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #25'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.171
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #8'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.112.76
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #9'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 66.163.122.113
   skip-cert-verify: false
   sni: api.searchnationwidecareerchangehelperandguidancetoday.com
   type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #7'
+- name: '🏳[www.v2nodes.com] trojan- #12'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 66.163.114.245
-  type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #9'
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.155.158
-  skip-cert-verify: false
-  sni: resources.nextjobopportunityandclaimyouridealrole.com
+  server: 66.163.112.242
   type: trojan
 - cipher: aes-128-gcm
   name: shadowsocks-1827146051
   password: shadowsocks
   port: 443
   server: 37.19.198.243
+  type: ss
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146122
+  password: shadowsocks
+  port: 443
+  server: 37.19.198.236
+  type: ss
+- cipher: aes-128-gcm
+  name: shadowsocks-1827146131
+  password: shadowsocks
+  port: 443
+  server: 156.146.38.169
   type: ss
 - cipher: aes-128-gcm
   name: shadowsocks-1827146248
@@ -407,12 +516,6 @@ proxies:
   password: shadowsocks
   port: 443
   server: 173.244.56.6
-  type: ss
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146549
-  password: shadowsocks
-  port: 443
-  server: 156.146.38.170
   type: ss
 - cipher: aes-128-gcm
   name: shadowsocks-1827146556
@@ -451,40 +554,16 @@ proxies:
   server: 185.230.230.18
   type: ss
 - cipher: aes-256-gcm
+  name: shadowsocks-1875023024
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 193.151.163.18
+  type: ss
+- cipher: aes-256-gcm
   name: shadowsocks-1875129451
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 193.151.160.18
-  type: ss
-- cipher: aes-256-gcm
-  name: shadowsocks-1875129452
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 95.215.201.18
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇮🇹[www.v2nodes.com] ss-IT-1602... #4'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.72
-  type: ss
-- cipher: aes-256-cfb
-  name: '🇺🇸 美国 | USA #3'
-  password: amazonskr05
-  port: 443
-  server: 54.83.84.17
-  type: ss
-- cipher: aes-256-cfb
-  name: '🇺🇸 美国 | USA #6'
-  password: amazonskr05
-  port: 443
-  server: 54.237.60.0
-  type: ss
-- cipher: aes-256-cfb
-  name: '🇺🇸 美国 | USA #7'
-  password: amazonskr05
-  port: 443
-  server: 54.91.51.67
   type: ss
 - cipher: aes-256-gcm
   name: 🇺🇸US-15.204.247.206-0248
@@ -493,20 +572,8 @@ proxies:
   server: 15.204.247.206
   type: ss
 - cipher: aes-256-gcm
-  name: 🇺🇸US-193.151.163.18-0143
+  name: 🇺🇸US-95.215.201.18-0139
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 193.151.163.18
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇺🇸US-37.19.198.236-5563
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.236
-  type: ss
-- cipher: aes-128-gcm
-  name: 🇺🇸US-37.19.198.244-0244
-  password: shadowsocks
-  port: 443
-  server: 37.19.198.244
+  server: 95.215.201.18
   type: ss
