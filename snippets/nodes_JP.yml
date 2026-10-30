@@ -1,17 +1,35 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | A940D6
+  name: JP 🇯🇵 | @Raydikalx | 15C632
   network: ws
-  port: 80
-  server: 168.138.43.75
+  port: 17577
+  server: 206.190.237.167
+  servername: ''
   tls: false
   type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  uuid: 3ceb8486-fb82-462c-e989-89182fe660a5
   ws-opts:
-    headers:
-      Host: 168.138.43.75
-    path: /cctv13.m3u8
+    path: /3ceb8486
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 284FFD
+  network: tcp
+  port: 20401
+  server: gz1.polymarket.party
+  tls: false
+  type: vmess
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 3812CF
+  network: tcp
+  port: 53225
+  server: jpaws.ccwink.photos
+  servername: gw.alicdn.com
+  tls: true
+  type: vmess
+  uuid: a157bb84-dd84-4ad8-86b0-0656bc76e4d1
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -59,45 +77,33 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-109.123.230.157-0989
+  name: 🇯🇵JP-150.230.221.227-0331
   network: ws
-  port: 80
-  server: 109.123.230.157
+  port: 2095
+  server: 150.230.221.227
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 59517e0b-ae1c-41d3-9c44-c44cea6f7546
+  uuid: e94c706a-235f-4663-e214-edfa052f256e
   ws-opts:
     headers:
-      Host: internet.life.com.by
-    path: /takeshi.wiki
+      Host: els200.jklist.ga
+    path: /
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-141.147.181.219-2542
-  network: ws
-  port: 443
-  server: 141.147.181.219
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 0b873cff-11ab-4716-c41a-04f886135091
-  ws-opts:
-    path: /roewesu
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP_85_@Surfboardv2ray
+  name: 🇯🇵JP-168.138.43.75-0938
   network: ws
   port: 80
   server: 168.138.43.75
   servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
   uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
     headers:
-      Host: None
+      Host: 168.138.43.75
     path: /cctv13.m3u8
 - name: 日本2|@ripaojiedian
   network: tcp
@@ -114,15 +120,23 @@ proxies:
   skip-cert-verify: false
   sni: APkD964o1oghlTghHt0L0Of.pAgeS.Dev
   type: trojan
-- name: '🇯🇵 日本 | JPN #5'
+- name: '🇯🇵 日本 | JPN #2'
   password: 9646699a-18b0-4ebc-9f53-453cc1c8e637
   port: 8443
   server: 43.167.186.78
   skip-cert-verify: true
   sni: 43.167.186.78
   type: trojan
-  udp: true
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
+  network: ws
+  password: 0400697c-b581-4575-9d2f-0bbd4659312d
+  port: 20230
+  server: jp005.421421.xyz
+  sni: www.alibaba.com
+  type: trojan
+  ws-opts:
+    path: /
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #2'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 45.32.52.173
@@ -141,26 +155,8 @@ proxies:
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: 🇯🇵JP-84.247.155.196-0239
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
+  name: shadowsocks-1827146658
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #17'
-  password: BeaUf9c0AEWH40Pu
-  port: 8388
-  server: 154.36.158.197
-  type: ss
-- cipher: aes-128-gcm
-  name: '🏳[www.v2nodes.com] ss- #18'
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
   type: ss

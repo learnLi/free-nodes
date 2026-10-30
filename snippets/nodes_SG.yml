@@ -1,35 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 0024A0
-  network: tcp
-  port: 36154
-  server: 13.140.91.117
-  tls: false
-  type: vmess
-  uuid: 3796d9ef-02ac-447c-a8bf-30789f5c58b3
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 0B5874
-  network: tcp
-  port: 56268
-  server: 13.140.91.129
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: d7b9fe42-6116-466e-b0b5-bd83ff827a91
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5DDFCC
-  network: none
-  port: 29521
-  server: 47.236.207.245
-  servername: 47.236.207.245
-  tls: false
-  type: vmess
-  uuid: f1bb29bf-a342-44d4-9ac5-5ca4566a216a
-- alterId: 0
-  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -58,6 +29,19 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: '🇸🇬SG-139.99.61.53-5263 #1'
+  network: ws
+  port: 80
+  server: 139.99.61.53
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: ce3868a4-e2ca-4a6f-8731-e7e88d098886
+  ws-opts:
+    path: /
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -65,18 +49,6 @@ proxies:
   server: 7d0a2gz0-7a0c.aws-agent.net
   skip-cert-verify: true
   sni: m.ctrip.com
-  type: trojan
-- name: 🇸🇬 SG新加坡(mibei77.com 米贝节点分享)
-  password: '!!str 123456'
-  port: 443
-  server: 104.16.246.173
-  skip-cert-verify: false
-  sni: now-pages-sub-em4.pages.dev
-  type: trojan
-- name: '🏳[www.v2nodes.com] trojan- #17'
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  port: 8886
-  server: 139.180.146.200
   type: trojan
 - cipher: rc4-md5
   name: shadowsocks-1827147315

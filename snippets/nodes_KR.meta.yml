@@ -1,42 +1,25 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 21E816
+  name: KR 🇰🇷 | @Raydikalx | 35AD74
   network: ws
-  port: 443
-  server: JBQ4dPDPuJFzj4KV.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
+  port: 20086
+  server: 183.109.131.75
+  tls: false
   type: vmess
-  uuid: 1d84e480-8fd2-4fae-96de-e46fe36ffe86
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
   ws-opts:
-    headers:
-      Host: JBQ4dPDPuJFzj4KV.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | CCD3E7
-  network: ws
-  port: 443
-  server: seoul02.zgjok.com
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  ws-opts:
-    headers:
-      Host: seoul02.zgjok.com
     path: /
 - alterId: 0
   cipher: auto
-  name: '🇰🇷 韩国 | KOR #1'
-  network: http
-  port: 80
-  server: 43.155.199.22
-  skip-cert-verify: true
+  name: KR 🇰🇷 | @Raydikalx | A27025
+  network: tcp
+  port: 3141
+  server: sh.australiacaregroup.site
+  servername: ''
   tls: false
   type: vmess
-  uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
 - alterId: 0
   cipher: auto
   name: 🇰🇷 韩国|@ripaojiedian
@@ -54,39 +37,39 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-150.230.249.15-1465
-  network: http
-  port: 46842
-  server: 150.230.249.15
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 4530b5ee-ced4-4e64-9285-1867fc5df7f8
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-52.78.213.224-2221
+  name: 🇰🇷KR-146.56.166.153-0083
   network: ws
-  port: 80
-  server: 52.78.213.224
+  port: 443
+  server: 146.56.166.153
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 6f442823-6b73-4b31-f1f5-aa1e907b051e
+  uuid: acc94bf4-94c1-4a08-8b79-9be2b76499b6
   ws-opts:
-    path: /
+    headers:
+      Host: cc.1808.cf
+    path: /2yevws
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-54.180.114.77-5994
+  name: 🇰🇷KR-211.177.40.235-7366
   network: ws
-  port: 42517
-  server: 54.180.114.77
-  servername: ''
-  skip-cert-verify: true
-  tls: false
+  port: 30001
+  server: 211.177.40.235
+  servername: p3.chigua.tk
+  skip-cert-verify: false
+  tls: true
   type: vmess
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
+  ws-opts:
+    path: /vmess
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
+  network: ws
+  port: 25555
+  server: 152.69.226.63
+  tls: false
+  type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
 - name: 韩国|@ripaojiedian
@@ -102,4 +85,17 @@ proxies:
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 3.36.108.120
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  server: 141.164.45.187
   type: ss

@@ -1,35 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 0024A0
-  network: tcp
-  port: 36154
-  server: 13.140.91.117
-  tls: false
-  type: vmess
-  uuid: 3796d9ef-02ac-447c-a8bf-30789f5c58b3
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 0B5874
-  network: tcp
-  port: 56268
-  server: 13.140.91.129
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: d7b9fe42-6116-466e-b0b5-bd83ff827a91
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5DDFCC
-  network: none
-  port: 29521
-  server: 47.236.207.245
-  servername: 47.236.207.245
-  tls: false
-  type: vmess
-  uuid: f1bb29bf-a342-44d4-9ac5-5ca4566a216a
-- alterId: 0
-  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -58,19 +29,32 @@ proxies:
     headers:
       Host: ASaqYIDZa9WDQ9Kq.v.3dns.vip
     path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: '🇸🇬SG-139.99.61.53-5263 #1'
+  network: ws
+  port: 80
+  server: 139.99.61.53
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: ce3868a4-e2ca-4a6f-8731-e7e88d098886
+  ws-opts:
+    path: /
 - client-fingerprint: chrome
   name: 🇸🇬 新加坡 | SGP
   network: ws
   port: 443
-  server: 172.64.159.157
-  servername: gy-cffc3-node-project-lb5p6r204ts3xuoz.pages.dev
+  server: 172.64.158.47
+  servername: gy-cffc4-node-project-lb5p6r204ts3xuoz.pages.dev
   tls: true
   type: vless
   uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
   ws-opts:
     headers:
-      Host: gy-cffc3-node-project-lb5p6r204ts3xuoz.pages.dev
-    path: /photos/list/feedback/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
+      Host: gy-cffc4-node-project-lb5p6r204ts3xuoz.pages.dev
+    path: /site/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
 - name: '🇸🇬 新加坡 | SGP #1'
   network: ws
   port: 443
@@ -84,22 +68,21 @@ proxies:
       Host: wallweb-4r0.pages.dev
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #12'
+  name: '🇸🇬 新加坡 | SGP #10'
   network: ws
   port: 443
-  server: 172.64.144.37
-  servername: gy-cffc5-node-project-lb5p6r204ts3xuoz.pages.dev
+  server: 104.18.37.0
+  servername: gy-cffc2-node-project-lb5p6r204ts3xuoz.pages.dev
   tls: true
   type: vless
-  udp: true
   uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
   ws-opts:
     headers:
-      Host: gy-cffc5-node-project-lb5p6r204ts3xuoz.pages.dev
-    path: /game/acg/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
+      Host: gy-cffc2-node-project-lb5p6r204ts3xuoz.pages.dev
+    path: /tag/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
 - name: '🇸🇬 新加坡 | SGP #13'
   network: ws
-  port: 8080
+  port: 2082
   server: 104.18.35.86
   servername: hhlfy.twiladaphne.ndjp.net
   tls: false
@@ -109,36 +92,8 @@ proxies:
   ws-opts:
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-    path: /sg-melbi
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #14'
-  network: ws
-  port: 443
-  server: 172.64.151.94
-  servername: gy-cffc6-node-project-lb5p6r204ts3xuoz.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
-  ws-opts:
-    headers:
-      Host: gy-cffc6-node-project-lb5p6r204ts3xuoz.pages.dev
-    path: /documents/download/readme/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #15'
-  network: ws
-  port: 443
-  server: 8.39.125.54
-  servername: gy-cffc5-node-project-lb5p6r204ts3xuoz.pages.dev
-  tls: true
-  type: vless
-  udp: true
-  uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
-  ws-opts:
-    headers:
-      Host: gy-cffc5-node-project-lb5p6r204ts3xuoz.pages.dev
-    path: /jump.html/about/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
-- name: '🇸🇬 新加坡 | SGP #2'
+    path: /fp
+- name: '🇸🇬 新加坡 | SGP #2 #1'
   network: ws
   port: 2083
   server: 104.18.35.86
@@ -150,21 +105,69 @@ proxies:
     headers:
       Host: vlsovip.1d.mom
     path: /fp=unsafefp=chrome
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #3'
+- name: '🇸🇬 新加坡 | SGP #3'
   network: ws
   port: 443
-  server: 172.64.158.47
-  servername: gy-cffc4-node-project-lb5p6r204ts3xuoz.pages.dev
+  server: 172.64.144.37
+  servername: gy-cffc5-node-project-lb5p6r204ts3xuoz.pages.dev
   tls: true
   type: vless
   uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
   ws-opts:
     headers:
-      Host: gy-cffc4-node-project-lb5p6r204ts3xuoz.pages.dev
-    path: /site/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
+      Host: gy-cffc5-node-project-lb5p6r204ts3xuoz.pages.dev
+    path: /game/acg/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560fp=chrome
+- name: '🇸🇬 新加坡 | SGP #4'
+  network: ws
+  port: 8080
+  server: 104.18.35.86
+  servername: hhlfy.twiladaphne.ndjp.net
+  tls: false
+  type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  ws-opts:
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
+    path: /sg-melbi
+- name: '🇸🇬 新加坡 | SGP #5'
+  network: ws
+  port: 443
+  server: 172.64.151.94
+  servername: gy-cffc6-node-project-lb5p6r204ts3xuoz.pages.dev
+  tls: true
+  type: vless
+  uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
+  ws-opts:
+    headers:
+      Host: gy-cffc6-node-project-lb5p6r204ts3xuoz.pages.dev
+    path: /documents/download/readme/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560fp=chrome
+- name: '🇸🇬 新加坡 | SGP #6'
+  network: ws
+  port: 443
+  server: 8.39.125.54
+  servername: gy-cffc5-node-project-lb5p6r204ts3xuoz.pages.dev
+  tls: true
+  type: vless
+  uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
+  ws-opts:
+    headers:
+      Host: gy-cffc5-node-project-lb5p6r204ts3xuoz.pages.dev
+    path: /jump.html/about/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560fp=chrome
 - client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #4'
+  name: '🇸🇬 新加坡 | SGP #7'
+  network: ws
+  port: 443
+  server: 172.64.159.157
+  servername: gy-cffc3-node-project-lb5p6r204ts3xuoz.pages.dev
+  tls: true
+  type: vless
+  uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
+  ws-opts:
+    headers:
+      Host: gy-cffc3-node-project-lb5p6r204ts3xuoz.pages.dev
+    path: /photos/list/feedback/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
+- client-fingerprint: chrome
+  name: '🇸🇬 新加坡 | SGP #8'
   network: ws
   port: 443
   server: 172.64.155.111
@@ -177,7 +180,7 @@ proxies:
       Host: gy-cffc4-node-project-lb5p6r204ts3xuoz.pages.dev
     path: /thread/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
 - client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #5'
+  name: '🇸🇬 新加坡 | SGP #9'
   network: ws
   port: 443
   server: 104.18.45.184
@@ -189,32 +192,12 @@ proxies:
     headers:
       Host: gy-cffc3-node-project-lb5p6r204ts3xuoz.pages.dev
     path: /ranking/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #7'
-  network: ws
-  port: 443
-  server: 104.18.37.0
-  servername: gy-cffc2-node-project-lb5p6r204ts3xuoz.pages.dev
-  tls: true
-  type: vless
-  uuid: cf92529d-9c4a-4d71-ab87-ae784a2da6bb
-  ws-opts:
-    headers:
-      Host: gy-cffc2-node-project-lb5p6r204ts3xuoz.pages.dev
-    path: /tag/proxyip=ProxyIP.KR.CMLiussss.net?ed=2560
 - name: 🇸🇬[www.v2nodes.com] vless-SG
-  network: ws
   port: 443
-  server: 104.26.4.2
-  servername: ccc.010304.xyz
-  skip-cert-verify: false
-  tls: true
+  server: 172.64.153.153
+  tls: false
   type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
-  ws-opts:
-    headers:
-      Host: ccc.010304.xyz
-    path: /fp=chromefp=chrome
 - name: '🇸🇬[www.v2nodes.com] vless-SG #...'
   network: ws
   port: 443
@@ -239,16 +222,47 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG #1'
-  port: 443
-  server: 172.64.153.153
+- name: '🇸🇬[www.v2nodes.com] vless-SG #... #2'
+  network: ws
+  port: 8880
+  server: 185.162.229.50
   tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: vms.lifetime61.workers.dev
+    path: /
+- name: '🇸🇬[www.v2nodes.com] vless-SG #1'
+  network: ws
+  port: 443
+  server: 104.26.4.2
+  servername: ccc.010304.xyz
+  skip-cert-verify: false
+  tls: true
   type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
   ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chromefp=chrome
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
+  network: ws
+  port: 443
+  server: 172.64.153.153
+  servername: ccc.010304.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
     path: /
 - client-fingerprint: chrome
-  name: '🇸🇬[www.v2nodes.com] vless-SG #2'
+  name: '🇸🇬[www.v2nodes.com] vless-SG #3'
   network: ws
   port: 443
   server: 172.67.76.40
@@ -262,7 +276,7 @@ proxies:
     path: /
 - client-fingerprint: chrome
   encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG #3'
+  name: '🇸🇬[www.v2nodes.com] vless-SG #4'
   network: ws
   port: 443
   server: 172.66.0.162
@@ -274,23 +288,14 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /
-- encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG #4'
-  network: ws
-  port: 8880
-  server: 185.162.229.50
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime61.workers.dev
-    path: /
-- name: 🇸🇬[www.v2nodes.com] vless-SG-1...
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG #5'
   network: ws
   port: 443
-  server: 104.18.40.100
+  server: 104.18.35.15
   servername: ccc.010304.xyz
+  skip-cert-verify: false
   tls: true
   type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -298,19 +303,6 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  network: ws
-  port: 2096
-  server: 139.162.27.96
-  servername: free-server.techsonic.dev
-  skip-cert-verify: false
-  tls: false
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.devsecurity=tls
 - encryption: none
   name: '🇸🇬[www.v2nodes.com] vless-SG-1... #14'
   network: ws
@@ -325,6 +317,31 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.dev
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
+  network: ws
+  port: 2096
+  server: 139.162.27.96
+  servername: free-server.techsonic.dev
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.devsecurity=tls
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
+  network: ws
+  port: 443
+  server: 104.18.40.100
+  servername: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chrome
 - name: '🇸🇬[www.v2nodes.com] vless-SG-1... #9'
   network: ws
   port: 443
@@ -332,7 +349,7 @@ proxies:
   tls: false
   type: vless
   uuid: 270c3fa5-0293-4d68-875c-6cdc3bdc5b84
-- name: 🇸🇬[www.v2nodes.com] vless-SG-9...
+- name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
   network: ws
   port: 8080
   server: 172.64.150.43
@@ -344,7 +361,7 @@ proxies:
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
     path: /sg-melbi
-- name: '🇸🇬[www.v2nodes.com] vless-SG-9... #2'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-9... #3'
   network: ws
   port: 443
   server: 43.174.193.1
@@ -356,9 +373,7 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=chromesecurity=tls
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #3'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-9... #4'
   network: ws
   port: 2082
   server: 172.64.150.28
@@ -369,7 +384,7 @@ proxies:
   ws-opts:
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-    path: /fp
+    path: /fpfp=chrome
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -378,21 +393,36 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇸🇬 SG新加坡(mibei77.com 米贝节点分享)
-  password: '!!str 123456'
-  port: 443
-  server: 104.16.246.173
-  skip-cert-verify: false
-  sni: now-pages-sub-em4.pages.dev
-  type: trojan
-- name: '🏳[www.v2nodes.com] trojan- #17'
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  port: 8886
-  server: 139.180.146.200
-  type: trojan
 - cipher: rc4-md5
   name: shadowsocks-1827147315
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 68.183.227.4
   type: ss
+- name: 🇸🇬SG_2|1.8MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 52.221.234.145
+  skip-cert-verify: true
+  type: http
+  username: '1234'
+- name: 🇸🇬SG_3|1.7MB/s
+  port: 9443
+  server: 152.233.9.239
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇸🇬SG_4|2.5MB/s
+  password: None
+  port: 443
+  server: 154.26.139.24
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇸🇬SG_5|2.8MB/s
+  password: '!!str 1234'
+  port: 2080
+  server: 13.250.8.222
+  skip-cert-verify: true
+  type: http
+  username: '1234'
