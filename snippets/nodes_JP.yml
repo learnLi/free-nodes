@@ -1,17 +1,16 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 4F9D7D
+  name: JP 🇯🇵 | @Raydikalx | C61C47
   network: ws
-  port: 13118
-  server: 140.83.57.20
-  servername: sg.11160321.de5.net
-  tls: true
+  port: 8555
+  server: 54.168.242.25
+  tls: false
   type: vmess
-  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
+  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
   ws-opts:
     headers:
-      Host: sg.11160321.de5.net
+      Host: a.189.cn
     path: /
 - alpn:
   - ''
@@ -78,19 +77,28 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-152.69.204.164-1001
-  network: ws
-  port: 2095
-  server: 152.69.204.164
+  name: 🇯🇵JP-103.127.243.60-1094
+  network: http
+  port: 55386
+  server: 103.127.243.60
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: e94c706a-235f-4663-e214-edfa052f256e
+  uuid: 22d4ef9c-b269-4f82-9f59-6c2c0d8ce16d
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-152.69.197.74-2442
+  network: ws
+  port: 12345
+  server: 152.69.197.74
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: b8a6bf58-485a-4046-b386-b3661bf65eff
   ws-opts:
-    headers:
-      Host: els200.jklist.ga
-    path: /
+    path: /bb
 - name: 日本2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092

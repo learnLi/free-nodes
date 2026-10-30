@@ -11,64 +11,6 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 39E775
-  network: tcp
-  port: 36154
-  server: 13.140.91.117
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 54327b73-3ce6-437d-9d00-3d6398d9f9f5
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5DDFCC
-  network: none
-  port: 29521
-  server: 47.236.207.245
-  servername: 47.236.207.245
-  tls: false
-  type: vmess
-  uuid: f1bb29bf-a342-44d4-9ac5-5ca4566a216a
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 9DDCC3
-  network: ws
-  port: 443
-  server: 8.219.97.17
-  servername: wjofhsqteueywxeq.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  ws-opts:
-    headers:
-      Host: wjofhsqteueywxeq.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E09534
-  network: ws
-  port: 52935
-  server: 52.74.177.147
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: c685dd34-b84e-484d-b3f5-efd0a27ad2d5
-  ws-opts:
-    headers:
-      Host: sg-transit-1.nebulacloud.win
-    path: /getData/fr
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | EB3982
-  network: tcp
-  port: 35007
-  server: 13.140.83.196
-  servername: 13.140.83.196
-  tls: true
-  type: vmess
-  uuid: 0bef47fa-3632-424e-bcc3-899be654774f
-- alterId: 0
-  cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
   network: ws
   port: 443
@@ -99,19 +41,17 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-139.180.211.152-1181
+  name: 🇸🇬SG-139.99.61.53-0380
   network: ws
-  port: 16737
-  server: 139.180.211.152
-  servername: ''
-  skip-cert-verify: true
+  port: 80
+  server: 139.99.61.53
+  servername: 139.99.61.53
+  skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 1458e38c-9f71-4c3c-aa70-aaccda6789dd
+  uuid: 60f30e26-0af7-4b64-ba94-71450ed77e23
   ws-opts:
-    headers:
-      Host: m.twitter.com
-    path: /
+    path: /vmess
 - client-fingerprint: chrome
   name: '🇸🇬 新加坡 | SGP #3'
   network: ws
@@ -171,6 +111,19 @@ proxies:
   uuid: 9cdcbaf0-d244-4f37-b227-90166e43f5b5
   ws-opts:
     path: /fp=chromesecurity=tls
+- client-fingerprint: chrome
+  name: '🇸🇬[www.v2nodes.com] vless-SG #1'
+  network: ws
+  port: 443
+  server: www.5199dy.com
+  servername: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /
 - name: '🇸🇬[www.v2nodes.com] vless-SG #2'
   network: ws
   port: 443
@@ -206,24 +159,14 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.devsecurity=tls
-- client-fingerprint: firefox
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
-  network: tcp
-  port: 443
-  server: 45.77.40.28
-  servername: sg003.zestapp778.com
-  tls: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #11'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
   network: ws
   port: 443
   server: v2.drsachi.com
   tls: false
   type: vless
   uuid: 270c3fa5-0293-4d68-875c-6cdc3bdc5b84
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #19'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #20'
   port: 443
   server: chatgpt.com
   tls: false
@@ -266,15 +209,14 @@ proxies:
 - name: '🇸🇬[www.v2nodes.com] vless-SG-9... #3'
   network: ws
   port: 2082
-  server: 104.18.35.86
-  servername: hhlfy.twiladaphne.ndjp.net
+  server: 104.19.95.153
   tls: false
   type: vless
   uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   ws-opts:
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-    path: /fp
+    path: /
 - encryption: none
   name: '🇸🇬[www.v2nodes.com] vless-SG-9... #4'
   network: ws
@@ -314,11 +256,6 @@ proxies:
   server: 104.18.35.86
   skip-cert-verify: true
   sni: 321dfbc6.uir-9i6.pages.dev
-  type: trojan
-- name: 🇸🇬[www.v2nodes.com] trojan-SG-...
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  port: 8886
-  server: 139.180.146.200
   type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437

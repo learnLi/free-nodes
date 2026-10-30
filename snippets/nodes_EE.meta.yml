@@ -1,41 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: Global 🌐 | @Raydikalx | 94EE6D
-  network: ws
-  port: 56830
-  server: vpnu.loungers.cc
-  tls: true
-  type: vmess
-  uuid: d2e92a19-f50c-426e-cd15-03ece7f4f3b1
-  ws-opts:
-    headers:
-      Host: vpnu.loungers.cc
-    path: /ws/x-ui
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | EE8178
-  network: tcp
-  port: 5065
-  server: 94.139.179.124
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 9cb5e799-f308-4d52-b761-9b4e9c2ff842
-- client-fingerprint: chrome
-  name: '🇪🇪 爱沙尼亚 | EST #1'
-  network: xhttp
-  port: 34451
-  server: ee-2e06d85dc0.shamanapp.online
-  servername: ee-2e06d85dc0.shamanapp.online
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
-  xhttp-opts:
-    host: ee-2e06d85dc0.shamanapp.online
-    mode: stream-up
-    path: /ShamanXHTTP2026
 - client-fingerprint: chrome
   name: '🇪🇪 爱沙尼亚 | EST #2'
   port: 443
@@ -44,9 +7,10 @@ proxies:
   tls: true
   type: vless
   uuid: abca037b-bee5-41cc-a888-0668e4c66176
-- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  port: 25895
-  server: ee.h1cloud.net
-  tls: false
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+- name: 🇪🇪EE_1|1.9MB/s
+  password: None
+  port: 443
+  server: 95.153.32.2
+  skip-cert-verify: true
+  tls: true
+  type: http
