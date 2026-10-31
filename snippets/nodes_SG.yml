@@ -1,14 +1,23 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 32C65E
-  network: tcp
-  port: 18000
-  server: 149.88.23.202
-  servername: 149.88.23.202
+  name: SG 🇸🇬 | @Raydikalx | 290599
+  network: none
+  port: 8443
+  server: 13.250.114.194
   tls: false
   type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 9ABAB4
+  network: tcp
+  port: 52364
+  server: hong.1.povrak.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
@@ -52,6 +61,34 @@ proxies:
   uuid: 60f30e26-0af7-4b64-ba94-71450ed77e23
   ws-opts:
     path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-15.235.184.36-2991
+  network: ws
+  port: 80
+  server: 15.235.184.36
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 7ce525f5-3a9b-4627-ae0e-3ca0b57519e3
+  ws-opts:
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-188.166.186.249-0036
+  network: ws
+  port: 443
+  server: univstar.188.166.186.249.sslip.io
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
+  ws-opts:
+    headers:
+      Host: goodfamily19.site
+    path: /wmzmvws
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -59,6 +96,13 @@ proxies:
   server: 7d0a2gz0-7a0c.aws-agent.net
   skip-cert-verify: true
   sni: m.ctrip.com
+  type: trojan
+- name: 🇸🇬 SG新加坡(mibei77.com 米贝节点分享)
+  password: e7TTceggMwUMg+aFN:F4
+  port: 443
+  server: 172.66.47.18
+  skip-cert-verify: false
+  sni: APkD964o1oghlTghHt0L0Of.pAgeS.Dev
   type: trojan
 - name: 🇸🇬 新加坡 | SGP
   network: ws
@@ -68,18 +112,10 @@ proxies:
   skip-cert-verify: true
   sni: 321dfbc6.uir-9i6.pages.dev
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: 321dfbc6.uir-9i6.pages.dev
     path: /
-- name: '🇸🇬 新加坡 | SGP #1'
-  password: '!!str 123456'
-  port: 2096
-  server: 104.18.35.86
-  skip-cert-verify: true
-  sni: 321dfbc6.uir-9i6.pages.dev
-  type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
@@ -91,4 +127,10 @@ proxies:
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 68.183.227.4
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇸🇬[www.v2nodes.com] ss-SG-1559...
+  password: qpSevKaUXYQKvSjp
+  port: 8388
+  server: 139.180.220.175
   type: ss

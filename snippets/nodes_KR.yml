@@ -1,30 +1,28 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 6C9897
+  name: KR 🇰🇷 | @Raydikalx | 0752C6
   network: ws
-  port: 20086
-  server: 183.109.131.75
+  port: 443
+  server: chuncheon02.zgjok.com
+  servername: chuncheon02.zgjok.com
+  tls: true
+  type: vmess
+  uuid: d1a1cb91-0f1f-41eb-a307-631bba00f1bb
+  ws-opts:
+    headers:
+      Host: chuncheon02.zgjok.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | ED5343
+  network: tcp
+  port: 8888
+  server: 146.56.112.110
   servername: ''
   tls: false
   type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  ws-opts:
-    path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 86E5FC
-  network: ws
-  port: 443
-  server: ISroIsuAGFSTPkPJ.v.3dns.vip
-  servername: ISroIsuAGFSTPkPJ.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: a263bd66-828f-45ee-9197-ffc801ab019c
-  ws-opts:
-    headers:
-      Host: ISroIsuAGFSTPkPJ.v.3dns.vip
-    path: /ws-vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
 - alterId: 0
   cipher: auto
   name: 🇰🇷 韩国|@ripaojiedian
@@ -42,19 +40,17 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-43.201.103.12-1178
+  name: 🇰🇷KR-131.186.24.103-2518
   network: ws
-  port: 29930
-  server: 43.201.103.12
+  port: 443
+  server: 131.186.24.103
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: f46b2e2a-e02c-437a-833c-023410840a80
+  uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
   ws-opts:
-    headers:
-      Host: 43.201.103.12
-    path: /f46b2e2a-e02c-437a-833c-023410840a80
+    path: /reffs7y26g0ua
 - name: 韩国|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -70,7 +66,7 @@ proxies:
   server: 211.178.105.134
   type: ss
 - cipher: aes-256-gcm
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
   password: TEzjfAYq2IjtuoS
   port: 6697
   server: 141.164.45.187

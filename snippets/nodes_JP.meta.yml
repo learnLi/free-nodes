@@ -1,35 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | C61C47
+  name: JP 🇯🇵 | @Raydikalx | 79F85B
   network: ws
-  port: 8555
-  server: 54.168.242.25
+  port: 2082
+  server: tgqyjc2024.qyjc.xyz
   tls: false
   type: vmess
-  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  uuid: 1e3e82b2-36c0-44aa-80ad-5c3f693824f1
   ws-opts:
     headers:
-      Host: a.189.cn
-    path: /
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: '🇯🇵 日本 | JPN #8'
-  network: ws
-  port: 443
-  server: JP032010.ssgreen.org
-  servername: JP032010.ssgreen.org
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 47a2aa0a-fea0-43f3-bfcc-aa322c2a4769
-  ws-opts:
-    headers:
-      Host: JP032010.ssgreen.org
-    path: /wes
+      Host: hongkong.tgqyjc2024.qyjc666.xyz
+    path: /?ed=2048
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -77,137 +59,121 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-103.127.243.60-1094
-  network: http
-  port: 55386
-  server: 103.127.243.60
+  name: 🇯🇵JP-152.69.204.164-0935
+  network: ws
+  port: 2095
+  server: 152.69.204.164
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 22d4ef9c-b269-4f82-9f59-6c2c0d8ce16d
+  uuid: e94c706a-235f-4663-e214-edfa052f256e
+  ws-opts:
+    headers:
+      Host: els200.jklist.ga
+    path: /
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-152.69.197.74-2442
+  name: 🇯🇵JP-168.138.43.75-0160
   network: ws
-  port: 12345
-  server: 152.69.197.74
+  port: 80
+  server: 168.138.43.75
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: b8a6bf58-485a-4046-b386-b3661bf65eff
-  ws-opts:
-    path: /bb
-- client-fingerprint: random
-  name: '🇯🇵 日本 | JPN #10'
-  network: ws
-  port: 443
-  server: 185.125.101.159
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: b782eda8-7846-437c-ab93-07c3476c2887
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
     headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048
-- client-fingerprint: random
-  name: '🇯🇵 日本 | JPN #11'
+      Host: 168.138.43.75
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-172.111.146.64-5659
   network: ws
-  port: 443
-  server: 91.239.6.47
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: b782eda8-7846-437c-ab93-07c3476c2887
+  port: 80
+  server: 172.111.146.64
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
   ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048
-- client-fingerprint: random
-  name: '🇯🇵 日本 | JPN #12'
-  network: ws
-  port: 443
-  server: 103.11.78.25
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: b782eda8-7846-437c-ab93-07c3476c2887
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048
-- client-fingerprint: random
-  name: '🇯🇵 日本 | JPN #3'
+    path: /vmess/
+- name: '🇯🇵 日本 | JPN #1'
   network: ws
   port: 443
   server: 104.18.33.121
   servername: jp-osa.862400.xyz
   tls: true
   type: vless
-  udp: true
   uuid: b782eda8-7846-437c-ab93-07c3476c2887
   ws-opts:
     headers:
       Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇯🇵 日本 | JPN #4'
-  network: grpc
+    path: /announcement?ed=2048fp=random
+- name: '🇯🇵 日本 | JPN #10'
+  network: ws
   port: 443
-  server: 31.76.91.31
-  servername: b.jp-1.bnc-gt.co.uk
+  server: 103.11.78.25
+  servername: jp-osa.862400.xyz
   tls: true
   type: vless
-  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
-- client-fingerprint: random
-  name: '🇯🇵 日本 | JPN #6'
+  uuid: b782eda8-7846-437c-ab93-07c3476c2887
+  ws-opts:
+    headers:
+      Host: jp-osa.862400.xyz
+    path: /announcement?ed=2048fp=random
+- name: '🇯🇵 日本 | JPN #4'
   network: ws
   port: 443
   server: 159.65.30.83
   servername: jp-osa.862400.xyz
   tls: true
   type: vless
-  udp: true
   uuid: b782eda8-7846-437c-ab93-07c3476c2887
   ws-opts:
     headers:
       Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048
-- client-fingerprint: random
-  name: '🇯🇵 日本 | JPN #7'
+    path: /announcement?ed=2048fp=random
+- name: '🇯🇵 日本 | JPN #5'
   network: ws
   port: 443
   server: 178.208.86.182
   servername: jp-osa.862400.xyz
   tls: true
   type: vless
-  udp: true
   uuid: b782eda8-7846-437c-ab93-07c3476c2887
   ws-opts:
     headers:
       Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇯🇵 日本 | JPN #9'
-  network: grpc
+    path: /announcement?ed=2048fp=random
+- name: '🇯🇵 日本 | JPN #8'
+  network: ws
   port: 443
-  server: jp-1.bnc-gt.co.uk
-  servername: b.jp-1.bnc-gt.co.uk
+  server: 185.125.101.159
+  servername: jp-osa.862400.xyz
   tls: true
   type: vless
-  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
+  uuid: b782eda8-7846-437c-ab93-07c3476c2887
+  ws-opts:
+    headers:
+      Host: jp-osa.862400.xyz
+    path: /announcement?ed=2048fp=random
+- name: '🇯🇵 日本 | JPN #9'
+  network: ws
+  port: 443
+  server: 91.239.6.47
+  servername: jp-osa.862400.xyz
+  tls: true
+  type: vless
+  uuid: b782eda8-7846-437c-ab93-07c3476c2887
+  ws-opts:
+    headers:
+      Host: jp-osa.862400.xyz
+    path: /announcement?ed=2048fp=random
 - client-fingerprint: firefox
   grpc-opts:
-    grpc-mode: gun
     grpc-service-name: grpc
   name: 🇯🇵 日本 | JPN 2
   network: grpc
@@ -216,20 +182,6 @@ proxies:
   servername: b.jp-1.bnc-gt.co.uk
   tls: true
   type: vless
-  udp: true
-  uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: grpc
-  name: 🇯🇵 日本 | JPN 7
-  network: grpc
-  port: 443
-  server: jp-1.bnc-gt.co.uk
-  servername: b.jp-1.bnc-gt.co.uk
-  tls: true
-  type: vless
-  udp: true
   uuid: 7b22dce8-7ebd-425b-8ca4-7b6190321985
 - name: 🇯🇵[www.v2nodes.com] vless-JP
   network: ws
@@ -259,6 +211,27 @@ proxies:
 - name: 🇯🇵[www.v2nodes.com] vless-JP-1...
   network: ws
   port: 443
+  server: 104.16.10.2
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxywsfp=chrome
+- encryption: none
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #12'
+  network: tcp
+  port: 47878
+  server: 152.69.195.67
+  servername: 152.69.195.67
+  tls: false
+  type: vless
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  network: ws
+  port: 443
   server: 172.64.190.13
   servername: jp3.yohototo.top
   skip-cert-verify: false
@@ -269,17 +242,21 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxywsfp=unsafe
-- encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
-  network: tcp
+- client-fingerprint: chrome
+  name: 🇯🇵[www.v2nodes.com] vless-JP-4...
+  network: ws
   port: 443
-  server: 137.220.221.179
-  tls: false
+  server: kclx.eu.org
+  servername: kclx.eu.org
+  tls: true
   type: vless
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+  uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
+  ws-opts:
+    headers:
+      Host: kclx.eu.org
+    path: /154.16.10.34-8080
 - alpn:
   - http/1.1
-  client-fingerprint: unsafe
   name: 🇯🇵[www.v2nodes.com] vless-JP-7...
   network: ws
   port: 443
@@ -291,7 +268,28 @@ proxies:
   ws-opts:
     headers:
       Host: mellow-pine-465b-4e9d050c.pages.dev
+    path: /e47f26811455/proxyip=146.190.100.44?u=dailydoseofvpnfp=unsafe
+- alpn:
+  - http/1.1
+  client-fingerprint: unsafe
+  name: '🇯🇵[www.v2nodes.com] vless-JP-7... #1'
+  network: ws
+  port: 443
+  server: bro-per-bro.cc.cd
+  servername: mellow-pine-465b-4e9d050c.pages.dev
+  tls: true
+  type: vless
+  uuid: 4cf798ba-5c0a-40a8-a985-263e4c164f9c
+  ws-opts:
+    headers:
+      Host: mellow-pine-465b-4e9d050c.pages.dev
     path: /e47f26811455/proxyip=146.190.100.44?u=dailydoseofvpn
+- name: '🏳[www.v2nodes.com] vless- #15'
+  port: 443
+  server: 137.220.221.179
+  tls: false
+  type: vless
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
 - name: 日本2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -300,14 +298,7 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇯🇵 JP日本(mibei77.com 米贝节点分享)
-  password: e7TTceggMwUMg+aFN:F4
-  port: 443
-  server: 172.66.47.18
-  skip-cert-verify: false
-  sni: APkD964o1oghlTghHt0L0Of.pAgeS.Dev
-  type: trojan
-- name: '🇯🇵 日本 | JPN #1'
+- name: '🇯🇵 日本 | JPN #1 #1'
   password: 9646699a-18b0-4ebc-9f53-453cc1c8e637
   port: 8443
   server: 43.167.186.78
@@ -315,15 +306,6 @@ proxies:
   sni: 43.167.186.78
   type: trojan
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
-  network: ws
-  password: 0400697c-b581-4575-9d2f-0bbd4659312d
-  port: 20230
-  server: jp005.421421.xyz
-  sni: www.alibaba.com
-  type: trojan
-  ws-opts:
-    path: /
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #2'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 45.32.52.173
@@ -342,7 +324,7 @@ proxies:
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1544...
+  name: shadowsocks-1827146658
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196

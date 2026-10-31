@@ -1,18 +1,28 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 154336
+  name: DE 🇩🇪 | @Raydikalx | 1DFB18
   network: ws
-  port: 28267
-  server: 176.65.140.210
+  port: 443
+  server: Qmh49RE8c0DCqpFU.v.3dns.vip
+  servername: Qmh49RE8c0DCqpFU.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: Qmh49RE8c0DCqpFU.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 257DE0
+  network: tcp
+  port: 64628
+  server: vpnhub.armanspeed.ir
   servername: ''
   tls: false
   type: vmess
-  uuid: 3a98c196-7408-4c49-bbbf-da50188b14e0
-  ws-opts:
-    headers:
-      Host: bobo.badrangteb.ir
-    path: /
+  uuid: 38915005-5fe4-486e-b10b-be29f1d9ada2
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 2A5766
@@ -42,96 +52,36 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 568088
+  name: DE 🇩🇪 | @Raydikalx | 40F392
   network: ws
-  port: 443
-  server: 2.27.16.177
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 7E0FB0
-  network: ws
-  port: 16626
-  server: 162.19.192.89
+  port: 23981
+  server: 176.65.140.210
   tls: false
   type: vmess
-  uuid: 62e0878c-ff8c-4a67-b18f-89886e24750c
+  uuid: e2ab9425-a3d5-4001-8b31-6a259935fe72
   ws-opts:
     headers:
-      Host: 706a0a2fb2f7729acf9a103060a7abc3.mobgslb.tbcache.com
+      Host: bobo.badrangteb.ir
     path: /
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 8AE67C
-  network: ws
-  port: 25025
-  server: superpanel.sobu.ir
+  name: DE 🇩🇪 | @Raydikalx | 76271E
+  network: tcp
+  port: 64852
+  server: gerdi-1.povrak.ir
   servername: ''
   tls: false
   type: vmess
-  uuid: ff2c2fe9-264c-4e6c-8daa-8ebfce7fef0e
-  ws-opts:
-    path: /
+  uuid: e98033da-3f98-47ae-9922-e82814b8e3cc
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 911D03
+  name: DE 🇩🇪 | @Raydikalx | C2C0E5
   network: tcp
-  port: 33554
-  server: 195.26.26.74
-  servername: ''
+  port: 1003
+  server: 3.79.184.50
   tls: false
   type: vmess
-  uuid: 75cde4fc-36de-46c3-b7d9-a4605160fba3
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 997268
-  network: tcp
-  port: 57160
-  server: 57.131.168.202
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: fdc80741-a32b-4890-a6a1-5ea8b3e60ab1
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 9B59E1
-  network: ws
-  port: 16632
-  server: 162.19.192.89
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: d52b72b0-a509-490a-adae-23da2348d29c
-  ws-opts:
-    headers:
-      Host: 82d16f3a12ad1d0871e0270510bf2ef6.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | A8A74B
-  network: tcp
-  port: 34597
-  server: 178.104.201.75
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | A8D567
-  network: tcp
-  port: 28110
-  server: 91.107.255.181
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 9b4cf5b4-7fd9-436b-a441-6e9dfe601bf9
+  uuid: 86ddeb8d-288e-4399-b496-3e8f2ca45247
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | C89FE0
@@ -142,30 +92,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 3d94220c-a974-49ca-a1a3-d7e3c7359ccd
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | C971ED
-  network: tcp
-  port: 80
-  server: 178.105.210.96
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 78fb1a62-b276-4a13-ab57-f2b87d0f37a5
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | CB49DC
-  network: ws
-  port: 443
-  server: 194.164.192.16
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | EC21A7
@@ -196,14 +122,37 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: TR 🇹🇷 | @Raydikalx | FB3DE7
+  name: FI 🇫🇮 | @Raydikalx | ADE185
   network: tcp
-  port: 2053
-  server: 206.1.98.53
+  port: 56755
+  server: FiNl1-ReAlIy.12l.iR
   servername: ''
   tls: false
   type: vmess
-  uuid: 8020664a-510d-40f3-b111-0d277bda9ed7
+  uuid: 199951ee-5936-43f7-b183-273295263314
+- alterId: 0
+  cipher: auto
+  name: NL 🇳🇱 | @Raydikalx | C86DED
+  network: tcp
+  port: 44845
+  server: 185.19.33.52
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6c7b2de1-ed4a-4eee-b926-b298e2968e89
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪DE-51.75.70.34-7392
+  network: ws
+  port: 443
+  server: 51.75.70.34
+  servername: lg30.cfcdn3.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    path: /ray
 - alterId: 0
   cipher: auto
   name: 🇩🇪DE-57.129.59.195-1265
@@ -219,27 +168,7 @@ proxies:
     headers:
       Host: kampong.org
     path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪DE-91.107.166.231-2598
-  network: ws
-  port: 8081
-  server: 91.107.166.231
-  servername: snapp.ir
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 822a646e-6f69-4758-9008-494e137e26ac
-  ws-opts:
-    path: /@hashmakvpn 🇩🇪
-- name: 🇩🇪DE德国丨yoyapai.com\r
-  password: humanity
-  port: 443
-  server: 88.198.82.150
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #2'
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #4'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 193.108.119.15
@@ -251,10 +180,4 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 185.176.204.18
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇩🇪DE-57.129.113.16-0278
-  password: NcAXc0UZI6yQJE1p8QmOv8
-  port: 8388
-  server: 57.129.113.16
   type: ss
