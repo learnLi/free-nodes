@@ -1,4 +1,13 @@
 proxies:
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | FF5D14
+  network: tcp
+  port: 11775
+  server: g03.jp02-e3-vm0.entry.fr0528.art
+  tls: false
+  type: vmess
+  uuid: a85150ba-dae3-3055-8984-700faca4d576
 - alterId: 0
   cipher: auto
   name: 🇯🇵 日本2|@ripaojiedian
@@ -44,19 +53,6 @@ proxies:
     headers:
       Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-172.111.146.64-0173
-  network: ws
-  port: 80
-  server: 172.111.146.64
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 05b8c783-7f59-47f9-9923-06a465679f6a
-  ws-opts:
-    path: /
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
@@ -69,12 +65,6 @@ proxies:
   port: 443
   server: 149.22.87.240
   type: ss
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146287
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
-  type: ss
 - cipher: aes-256-gcm
   name: shadowsocks-1827146658
   password: 3eOFeNssde7PYYMv
@@ -82,13 +72,13 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #2'
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
   port: 443
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'
   password: BeaUf9c0AEWH40Pu
   port: 8388
   server: 154.36.158.197

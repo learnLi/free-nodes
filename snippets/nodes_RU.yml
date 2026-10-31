@@ -1,17 +1,29 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇷🇺RU-45.129.2.237-2590
+  name: RU 🇷🇺 | @Raydikalx | 1E4B3A
   network: ws
-  port: 10258
-  server: 45.129.2.237
-  servername: ''
-  skip-cert-verify: true
-  tls: false
+  port: 443
+  server: renderer-stream-2-62.mirra.now
+  servername: renderer-stream-2-62.mirra.now
+  tls: true
   type: vmess
-  uuid: add194d6-192c-4ea3-a5af-eea994390831
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
-    path: /
+    path: /api/v1/gpu-stream/socket
+- name: 🇷🇺 俄罗斯 V2CROSS.COM
+  password: humanity
+  port: 443
+  server: 194.55.164.118
+  skip-cert-verify: true
+  sni: www.cordweave.com
+  type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
+  password: VVlAff77CnAU43Aoc5j15Y
+  port: 5112
+  server: 90.156.203.62
+  type: ss
 - cipher: aes-256-gcm
   name: '🇷🇺[www.v2nodes.com] ss-RU-1609... #1'
   password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
