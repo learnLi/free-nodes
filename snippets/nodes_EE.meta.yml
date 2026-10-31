@@ -1,40 +1,13 @@
 proxies:
-- client-fingerprint: chrome
-  name: '🇪🇪 爱沙尼亚 | EST #2'
-  port: 443
-  server: 31.76.70.90
-  servername: 597dad6b.con.fernarchive.online
-  tls: true
-  type: vless
-  uuid: abca037b-bee5-41cc-a888-0668e4c66176
-- client-fingerprint: firefox
-  encryption: none
-  name: 🇪🇪EE_2|1.4MB/s
+- name: 🇪🇪EE_2|1.4MB/s
   network: ws
   port: 2083
   server: 5.1.40.6
   servername: speedtestmark.com
   tls: true
   type: vless
-  udp: true
   uuid: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
   ws-opts:
     headers:
       Host: ''
-      User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko)
-        Chrome/49.0.2623.112 Safari/537.36
-    path: /vless-ws
-  xudp: true
-- name: 🇪🇪EE_1|1.4MB/s
-  password: None
-  port: 9443
-  server: 192.159.101.174
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇪🇪EE_3|2.6MB/s
-  port: 9443
-  server: 95.153.31.66
-  skip-cert-verify: true
-  tls: true
-  type: http
+    path: /vless-wsfp=firefox

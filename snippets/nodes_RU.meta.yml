@@ -1,4 +1,17 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺RU-45.129.2.237-2590
+  network: ws
+  port: 10258
+  server: 45.129.2.237
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: add194d6-192c-4ea3-a5af-eea994390831
+  ws-opts:
+    path: /
 - alpn:
   - h2
   - http/1.1
@@ -171,20 +184,10 @@ proxies:
   uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
   ws-opts:
     path: /fp=chrome
-- client-fingerprint: firefox
-  encryption: none
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #4'
-  network: tcp
-  port: 443
-  server: 149.33.15.213
-  servername: swz.proxyplankton.ru
-  tls: true
-  type: vless
-  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
 - client-fingerprint: random
   grpc-opts:
     grpc-service-name: grpc-ru
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #6'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #10'
   network: grpc
   port: 443
   server: xsru1.ddnsfree.com
@@ -194,7 +197,7 @@ proxies:
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
 - client-fingerprint: chrome
   encryption: none
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #7'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #11'
   network: ws
   port: 8443
   server: 194.87.143.165
@@ -204,16 +207,33 @@ proxies:
   uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
   ws-opts:
     path: /
-- name: 🇷🇺RU_1|2.4MB/s
-  password: None
-  port: 8443
-  server: 87.242.85.187
-  skip-cert-verify: true
+- client-fingerprint: firefox
+  encryption: none
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #8'
+  network: tcp
+  port: 443
+  server: 149.33.15.213
+  servername: swz.proxyplankton.ru
   tls: true
-  type: http
-- name: 🇷🇺RU_2|1.9MB/s
-  port: 1446
-  server: 46.29.166.134
-  skip-cert-verify: true
+  type: vless
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: vlgrpc
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #9'
+  network: grpc
+  port: 443
+  server: 201.24.121.243
+  servername: kk-ru24a1.testkknegr.online
+  skip-cert-verify: false
   tls: true
-  type: http
+  type: vless
+  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+- cipher: aes-256-gcm
+  name: '🇷🇺[www.v2nodes.com] ss-RU-1609... #1'
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+  port: 18443
+  server: 185.22.155.121
+  type: ss
