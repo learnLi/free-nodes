@@ -1,15 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 290599
-  network: none
-  port: 8443
-  server: 13.250.114.194
-  tls: false
-  type: vmess
-  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
-- alterId: 0
-  cipher: auto
   name: SG 🇸🇬 | @Raydikalx | 4B1992
   network: ws
   port: 443
@@ -20,6 +11,53 @@ proxies:
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     path: /
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 66F131
+  network: ws
+  port: 443
+  server: lwipvaij2t3liyj4.v.3dns.vip
+  servername: lwipvaij2t3liyj4.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: b664cc36-4896-454b-bb9c-1377c76176de
+  ws-opts:
+    headers:
+      Host: lwipvaij2t3liyj4.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | E93E65
+  network: ws
+  port: 443
+  server: 5FPTMOqdtsxQRFmA.v.3dns.vip
+  servername: 5FPTMOqdtsxQRFmA.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
+  ws-opts:
+    headers:
+      Host: 5FPTMOqdtsxQRFmA.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | ECBB87
+  network: raw
+  port: 22324
+  server: magicvip.iddns.ir
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: vmess-1837386984
+  network: tcp
+  port: 18000
+  server: 149.88.23.202
+  servername: 149.88.23.202
+  tls: false
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
   name: 🇸🇬 新加坡2|@ripaojiedian
@@ -67,17 +105,17 @@ proxies:
     path: /vmess
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-180.215.130.123-5093
+  name: 🇸🇬SG-174.138.25.187-1660
   network: ws
-  port: 46452
-  server: 180.215.130.123
+  port: 8880
+  server: 174.138.25.187
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: c5414fe0-018b-473a-aa3b-f210f2ba42f5
+  uuid: a5c804aa-8a4d-4fd2-97a1-4f0cc1384953
   ws-opts:
-    path: /
+    path: /hkaa0
 - name: 新加坡|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -128,14 +166,7 @@ proxies:
   skip-cert-verify: false
   sni: www.cordweave.com
   type: trojan
-- name: '🇸🇬 新加坡 | SGP #2'
-  password: humanity
-  port: 443
-  server: 194.114.138.162
-  skip-cert-verify: true
-  sni: www.cordweave.com
-  type: trojan
-- name: '🇸🇬 新加坡 | SGP 2 #1'
+- name: 🇸🇬 新加坡 | SGP 2
   network: ws
   password: humanity
   port: 443
@@ -143,16 +174,20 @@ proxies:
   skip-cert-verify: true
   sni: www.cordweave.com
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: www.cordweave.com
     path: /assignment
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
+- name: 🇸🇬[www.v2nodes.com] trojan-SG-...
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
   sni: 139.180.146.200
+  type: trojan
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  port: 8886
+  server: 139.180.146.200
   type: trojan
 - cipher: rc4-md5
   name: shadowsocks-1827147315

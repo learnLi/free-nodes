@@ -23,6 +23,34 @@ proxies:
     headers:
       Host: 8nTzyR5KNivfabaT.v.3dns.vip
     path: /ws-vmess
+- alterId: 64
+  cipher: auto
+  name: 🇰🇷KR-104.37.215.102-1417
+  network: ws
+  port: 443
+  server: 104.37.215.102
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.31733109.xyz
+    path: /path/191019072927
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-146.56.40.117-0720
+  network: ws
+  port: 27675
+  server: 146.56.40.117
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 053ca0f4-057e-493d-ad30-5ba51f00f59c
+  ws-opts:
+    path: /
 - name: 韩国|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -50,6 +78,26 @@ proxies:
   port: 443
   server: 54.116.249.102
   skip-cert-verify: false
+  sni: www.cordweave.com
+  type: trojan
+- name: 🇰🇷 韩国 | KOR
+  network: ws
+  password: humanity
+  port: 443
+  server: 64.110.82.71
+  skip-cert-verify: true
+  sni: www.cordweave.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.cordweave.com
+    path: /assignment
+- name: '🇰🇷 韩国 | KOR #1'
+  password: humanity
+  port: 443
+  server: 64.110.82.71
+  skip-cert-verify: true
   sni: www.cordweave.com
   type: trojan
 - cipher: aes-256-cfb

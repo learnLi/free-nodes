@@ -1,14 +1,56 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 052C6E
+  name: GB 🇬🇧 | @Raydikalx | 391F0C
   network: tcp
-  port: 17356
-  server: freedom.vipgsmteam.info
+  port: 8080
+  server: 212.74.39.88
   servername: ''
   tls: false
   type: vmess
-  uuid: f95cb5ae-1b06-4a57-aba0-30afe12d23ed
+  uuid: abe912e7-45d9-44d5-b079-c6933b853a56
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 593440
+  network: ws
+  port: 443
+  server: ggbnhj.932.pp.ua
+  servername: ggbnhj.932.pp.ua
+  tls: true
+  type: vmess
+  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
+  ws-opts:
+    headers:
+      Host: ggbnhj.932.pp.ua
+    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | AC88EF
+  network: ws
+  port: 443
+  server: jjjk.191268.xyz
+  servername: null
+  tls: true
+  type: vmess
+  uuid: 5cccb4da-8aee-4b01-be84-2056265e52dc
+  ws-opts:
+    headers:
+      Host: jjjk.191268.xyz
+    path: /AwUJyGh9Ym6vVzg35A6ueyyZnWd
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | FC31EF
+  network: ws
+  port: 443
+  server: 186.190.211.67
+  servername: pahobac.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: pahobac.org
+    path: /linkvws
 - name: 🇬🇧 GB英国(mibei77.com 米贝节点分享)
   password: humanity
   port: 443
@@ -87,12 +129,6 @@ proxies:
   name: 🇬🇧GB-82.38.31.174-0161
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 443
-  server: 82.38.31.174
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.174-0169
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
   server: 82.38.31.174
   type: ss
 - cipher: chacha20-ietf-poly1305

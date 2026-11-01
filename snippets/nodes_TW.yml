@@ -1,19 +1,40 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇹🇼TW-104.29.64.25-4912
-  network: ws
-  port: 443
-  server: 104.29.64.25
+  name: TW 🇹🇼 | @Raydikalx | 224E00
+  network: tcp
+  port: 794
+  server: 2.27.174.110
   servername: ''
-  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | C14692
+  network: ws
+  port: 53617
+  server: az-1.linkaa.xyz
+  servername: az-1.linkaa.xyz
+  tls: false
+  type: vmess
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
   ws-opts:
     headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
+      Host: az-1.linkaa.xyz
+    path: /game/resources
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | F017DE
+  network: ws
+  port: 443
+  server: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
+  servername: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
+  tls: true
+  type: vmess
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    path: /
 - name: 台湾|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092

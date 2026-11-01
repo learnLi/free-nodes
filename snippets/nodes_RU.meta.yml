@@ -1,38 +1,10 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 5A2815
+  name: RU 🇷🇺 | @Raydikalx | D784E0
   network: ws
   port: 443
-  server: renderer-stream-2-114.mirra.now
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-114.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 623201
-  network: ws
-  port: 443
-  server: 80.240.252.241
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 942D77
-  network: ws
-  port: 443
-  server: 194.87.71.141
+  server: 194.226.142.120
   servername: renderer-stream-2-62.mirra.now
   tls: true
   type: vmess
@@ -43,17 +15,18 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: 🇷🇺RU-45.136.245.240-2649
+  name: RU 🇷🇺 | @Raydikalx | F7FC5B
   network: ws
-  port: 12910
-  server: 45.136.245.240
+  port: 443
+  server: 5.188.26.85
   servername: ''
-  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 8259cb1c-dd6c-4739-9c88-af550d977525
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
-    path: /
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - alpn:
   - h2
   - http/1.1
@@ -216,20 +189,6 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- client-fingerprint: chrome
-  name: '🇷🇺 俄罗斯 | RUS #3'
-  network: ws
-  port: 443
-  server: 185.229.9.135
-  servername: business.lesotorg-kirov.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8f763a7f-4cda-4db1-90e3-9aeae0860dc0
-  ws-opts:
-    headers:
-      Host: business.lesotorg-kirov.ru
-    path: /chws
 - name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
   network: ws
   port: 8443
@@ -242,26 +201,26 @@ proxies:
     headers:
       Host: 194.87.143.165
     path: /fp=random
-- client-fingerprint: random
-  encryption: none
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #10'
+- client-fingerprint: chrome
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #5'
   network: ws
-  port: 8443
-  server: 194.87.143.165
-  servername: wsru1.wba-pn.ru
+  port: 443
+  server: 185.229.9.135
+  servername: business.lesotorg-kirov.ru
   tls: true
   type: vless
-  uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
+  uuid: 8f763a7f-4cda-4db1-90e3-9aeae0860dc0
   ws-opts:
     headers:
-      Host: 194.87.143.165
-    path: /
+      Host: business.lesotorg-kirov.ru
+    path: /chws
 - alpn:
   - h2
   client-fingerprint: chrome
+  encryption: none
   grpc-opts:
     grpc-service-name: vlgrpc
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #8'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #7'
   network: grpc
   port: 443
   server: 201.24.121.243
@@ -273,7 +232,7 @@ proxies:
 - client-fingerprint: random
   grpc-opts:
     grpc-service-name: grpc-ru
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #9'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #8'
   network: grpc
   port: 443
   server: xsru1.ddnsfree.com
@@ -309,14 +268,8 @@ proxies:
   server: 90.156.203.62
   type: ss
 - cipher: aes-256-gcm
-  name: '🇷🇺[www.v2nodes.com] ss-RU-1609... #1'
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1609...
   password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
   port: 18443
   server: 185.22.155.121
   type: ss
-- name: 🇷🇺RU_1|3.0MB/s
-  port: 1446
-  server: 46.29.166.134
-  skip-cert-verify: true
-  tls: true
-  type: http
