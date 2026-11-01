@@ -1,43 +1,13 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 0C8076
+  name: CN 🇨🇳 | @Raydikalx | 8C48FF
   network: tcp
-  port: 50011
-  server: 36.133.79.17
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 1b30f413-2865-4d40-9146-4207778718cd
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 1F0947
-  network: tcp
-  port: 50015
+  port: 50012
   server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: 148e82ae-5014-4a1a-a783-dd63fa9cdc9d
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 518B7B
-  network: tcp
-  port: 50011
-  server: 157.148.7.136
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 1b30f413-2865-4d40-9146-4207778718cd
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | E61E07
-  network: tcp
-  port: 50013
-  server: 36.133.78.37
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+  uuid: e37149b8-63df-4b4e-bd17-d7fc0b3009db
 - alterId: 0
   cipher: auto
   name: CN 🇨🇳 | @Raydikalx | FC1C27
@@ -49,6 +19,39 @@ proxies:
   type: vmess
   uuid: 7547daaa-1577-49b0-9519-bd1823add1a7
   ws-opts: {}
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.242.65.80-1786
+  network: http
+  port: 62307
+  server: 47.242.65.80
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 48f3fa93-1722-4f8d-af74-fcc54c2f21d5
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.242.95.19-1825
+  network: http
+  port: 40988
+  server: 47.242.95.19
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 1e60b35a-db17-4283-8b99-7358ee7d5fd5
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.243.185.128-1776
+  network: http
+  port: 47365
+  server: 47.243.185.128
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: fb695171-6b24-4255-9893-8921f53a0548
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-47.243.194.125-3089
@@ -66,17 +69,15 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.244.120.197-0269
-  network: ws
-  port: 36703
-  server: 47.244.120.197
+  name: 🇨🇳CN-47.243.36.34-1934
+  network: http
+  port: 55986
+  server: 47.243.36.34
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  ws-opts:
-    path: /
+  uuid: 87ed289f-cae3-49b4-bbe3-23da298c0e81
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-47.244.120.197-6088
@@ -107,30 +108,30 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.209.113.77-0022
+  name: 🇨🇳CN-59.63.154.101-1829
   network: ws
-  port: 443
-  server: 8.209.113.77
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-8.210.20.159-2665
-  network: http
-  port: 45751
-  server: 8.210.20.159
+  port: 43815
+  server: blog.voewl.com
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 3a0d252e-cddf-4695-ab0f-95a0ce7abcc0
+  uuid: 7a9f026f-f7a8-40ca-f2f9-3b380c287c0d
+  ws-opts:
+    headers:
+      Host: blog.voewl.com
+    path: /abc
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-8.210.248.210-1793
+  network: http
+  port: 54570
+  server: 8.210.248.210
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: aa1d02a4-60e6-4671-8107-4d5e6bacd265
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-8.217.186.60-3088
@@ -148,10 +149,55 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
+  name: 🇨🇳CN-8.218.195.61-1251
+  network: ws
+  port: 443
+  server: 8.218.195.61
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: EX1oGt73NzPQKAc2.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-8.219.105.225-0261
+  network: ws
+  port: 443
+  server: 8.219.105.225
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /
+- alterId: 0
+  cipher: auto
   name: 🇨🇳CN-8.219.108.81-0074
   network: ws
   port: 443
   server: 8.219.108.81
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-8.219.173.108-0069
+  network: ws
+  port: 443
+  server: 8.219.173.108
   servername: ''
   skip-cert-verify: true
   tls: true
@@ -195,11 +241,3 @@ proxies:
   type: vmess
   uuid: a01e5d56-464f-45b9-b600-164db4700162
   ws-opts: {}
-- name: '🇨🇳 CN_147 #1'
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 30298
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-  udp: true

@@ -1,17 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | D784E0
+  name: RU 🇷🇺 | @Raydikalx | 30981F
   network: ws
   port: 443
-  server: 194.226.142.120
-  servername: renderer-stream-2-62.mirra.now
+  server: renderer-stream-2-114.mirra.now
+  servername: renderer-stream-2-114.mirra.now
   tls: true
   type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
   ws-opts:
     headers:
-      Host: renderer-stream-2-62.mirra.now
+      Host: renderer-stream-2-114.mirra.now
     path: /api/v1/gpu-stream/socket
 - alpn:
   - h2
@@ -175,20 +175,6 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - http/1.1
-  name: 🇷🇺RU_1|1.8MB/s
-  network: ws
-  port: 443
-  server: 185.229.9.135
-  servername: business.lesotorg-kirov.ru
-  tls: true
-  type: vless
-  uuid: d8a47403-5dbf-4450-8640-0134719b1d86
-  ws-opts:
-    headers:
-      Host: business.lesotorg-kirov.ru
-    path: /chwsfp=qq
 - name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
   network: ws
   port: 443
@@ -201,22 +187,25 @@ proxies:
     headers:
       Host: business.lesotorg-kirov.ru
     path: /chwsfp=chrome
-- client-fingerprint: chrome
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
-  port: 26424
-  server: 45.12.75.242
-  servername: ya.ru
+- client-fingerprint: random
+  grpc-opts:
+    grpc-service-name: grpc-ru
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #10'
+  network: grpc
+  port: 443
+  server: xsru1.ddnsfree.com
+  servername: xsru1.ddnsfree.com
   tls: true
   type: vless
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
-- name: '🇷🇺[www.v2nodes.com] vless-RU-1... #3'
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+- name: '🇷🇺[www.v2nodes.com] vless-RU-1... #6'
   port: 443
   server: app-tw-113.statsmarket-wb.com
   tls: false
   type: vless
   uuid: 07680ffb-0666-4836-b6ad-ec0de62bc38f
 - client-fingerprint: chrome
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #5'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #8'
   network: ws
   port: 443
   server: 185.229.9.135
@@ -234,7 +223,7 @@ proxies:
   encryption: none
   grpc-opts:
     grpc-service-name: vlgrpc
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #7'
+  name: '🏳[www.v2nodes.com] vless- #29'
   network: grpc
   port: 443
   server: 201.24.121.243
@@ -243,23 +232,26 @@ proxies:
   tls: true
   type: vless
   uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
-- client-fingerprint: random
-  grpc-opts:
-    grpc-service-name: grpc-ru
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #8'
-  network: grpc
-  port: 443
-  server: xsru1.ddnsfree.com
-  servername: xsru1.ddnsfree.com
-  tls: true
-  type: vless
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
 - name: 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享)
   password: humanity
   port: 443
   server: 104.19.64.105
   skip-cert-verify: true
   sni: www.calmlunch.com
+  type: trojan
+- name: '🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享) #1'
+  password: humanity
+  port: 443
+  server: 217.26.26.14
+  skip-cert-verify: false
+  sni: www.cordweave.com
+  type: trojan
+- name: '🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享) #2'
+  password: humanity
+  port: 2053
+  server: 201.24.57.254
+  skip-cert-verify: false
+  sni: www.cordweave.com
   type: trojan
 - cipher: chacha20-ietf-poly1305
   name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
