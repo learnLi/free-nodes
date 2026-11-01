@@ -1,11 +1,25 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TR 🇹🇷 | @Raydikalx | 8549EE
+  name: IT 🇮🇹 | @Raydikalx | D0BEEA
   network: tcp
-  port: 5384
-  server: dashboard.afrastore.top
+  port: 22324
+  server: 89.41.172.85
   servername: ''
   tls: false
   type: vmess
-  uuid: 63a01857-93c1-490b-95f5-991bd79116c5
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- name: 🇪🇪EE_1|2.8MB/s
+  password: None
+  port: 9443
+  server: 95.153.32.2
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇪🇪EE_2|2.3MB/s
+  password: None
+  port: 9443
+  server: 95.153.31.66
+  skip-cert-verify: true
+  tls: true
+  type: http
