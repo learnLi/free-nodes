@@ -1,18 +1,14 @@
 proxies:
 - alterId: 0
-  cipher: auto
-  name: ES 🇪🇸 | @Raydikalx | EEA146
-  network: ws
-  port: 443
-  server: 66.163.118.73
-  servername: null
-  tls: true
+  cipher: aes-128-gcm
+  name: IR 🇮🇷 | @Raydikalx | 9EED75
+  network: tcp
+  port: 1027
+  server: s1.connect.bloroxy.net
+  servername: none
+  tls: false
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: mygptagent.org
-    path: /linkvws
+  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3
 - alterId: 0
   cipher: auto
   name: IT 🇮🇹 | @Raydikalx | D0BEEA
@@ -25,7 +21,6 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - client-fingerprint: firefox
   grpc-opts:
-    grpc-mode: gun
     grpc-service-name: FoxSiberia103
   name: 🇪🇪 爱沙尼亚 | EST
   network: grpc
@@ -34,21 +29,9 @@ proxies:
   servername: datacore-tech.ru
   tls: true
   type: vless
-  udp: true
   uuid: 0b25cbd7-30e3-4659-92be-05b33b53c9d1
 - client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇪🇪 爱沙尼亚 | EST #1'
-  network: grpc
-  port: 8443
-  server: 188.225.62.72
-  servername: datacore-tech.ru
-  tls: true
-  type: vless
-  uuid: 0b25cbd7-30e3-4659-92be-05b33b53c9d1
-- client-fingerprint: firefox
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
   network: tcp
   port: 57043
   server: 179.253.179.109
@@ -58,16 +41,3 @@ proxies:
   uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
   ws-opts:
     path: /
-- name: 🇪🇪EE_1|1.2MB/s
-  password: None
-  port: 9443
-  server: 95.153.31.66
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇪🇪EE_2|1.1MB/s
-  port: 9443
-  server: 192.159.101.174
-  skip-cert-verify: true
-  tls: true
-  type: http

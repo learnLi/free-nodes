@@ -1,93 +1,16 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 334327
+  name: 🇫🇷FR-146.59.92.219-3283
   network: ws
-  port: 443
-  server: 90.127.143.135
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 548D11
-  network: ws
-  port: 2095
-  server: www.asamping.ir
-  servername: www.asamping.ir
-  tls: false
-  type: vmess
-  uuid: a55cdc40-5af5-4f02-9a46-41685120fe6f
-  ws-opts:
-    headers:
-      Host: www.asamping.ir
-    path: /
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B67A73
-  network: tcp
-  port: 22324
-  server: 23.162.152.6
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | FC3EC2
-  network: tcp
-  port: 2053
-  server: fr.connfull.org
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 500e29aa-c40b-43e1-905c-e6e7ac4a5b83
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0204
-  network: ws
-  port: 80
-  server: 145.239.55.210
+  port: 2096
+  server: 146.59.92.219
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  uuid: aca71b13-ec8a-466d-c28f-43516d3cf246
   ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-152.228.191.232-7215
-  network: ws
-  port: 443
-  server: 152.228.191.232
-  servername: lg30.cfcdn3.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-54.37.131.126-0181
-  network: ws
-  port: 80
-  server: 54.37.131.126
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
     path: /
 - name: FR法国丨yoyapai.com\r
   password: humanity
@@ -120,22 +43,24 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.26.15.137
+  server: 104.17.111.4
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
+- alpn:
+  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
+  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #10'
   network: ws
   password: humanity
-  port: 443
-  server: 45.87.41.18
+  port: 8443
+  server: 212.227.144.37
   skip-cert-verify: false
   sni: www.calmlunch.com
   type: trojan
@@ -147,7 +72,8 @@ proxies:
   network: ws
   password: humanity
   port: 443
-  server: www.calmlunch.com
+  server: 45.87.41.18
+  skip-cert-verify: false
   sni: www.calmlunch.com
   type: trojan
   ws-opts:
@@ -155,6 +81,17 @@ proxies:
       Host: www.calmlunch.com
     path: /assignment
 - name: '🇫🇷[www.v2nodes.com] trojan-FR-... #12'
+  network: ws
+  password: humanity
+  port: 443
+  server: www.calmlunch.com
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
+    path: /assignment
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #13'
   network: ws
   password: humanity
   port: 2053
@@ -166,7 +103,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #13'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
   network: ws
   password: humanity
   port: 443
@@ -178,7 +115,7 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #14'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #15'
   network: ws
   password: humanity
   port: 443
@@ -190,14 +127,14 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #15'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #16'
   password: humanity
   port: 443
   server: 165.215.250.14
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #16'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #17'
   network: ws
   password: humanity
   port: 443
@@ -209,19 +146,19 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #7'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #18'
   network: ws
   password: humanity
   port: 443
-  server: 185.255.179.166
-  skip-cert-verify: false
+  server: 165.215.250.14
+  skip-cert-verify: true
   sni: www.calmlunch.com
   type: trojan
   ws-opts:
     headers:
       Host: www.calmlunch.com
-    path: /assignment
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
+    path: '%2Fassignment'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #6'
   network: ws
   password: humanity
   port: 443
@@ -233,13 +170,11 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: /assignment
-- alpn:
-  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #9'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
   network: ws
   password: humanity
-  port: 8443
-  server: 212.227.144.37
+  port: 443
+  server: 185.255.179.166
   skip-cert-verify: false
   sni: www.calmlunch.com
   type: trojan
@@ -276,7 +211,7 @@ proxies:
   sni: www.ignitelimit.com
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-54.36.174.140-0466
+  name: 🇫🇷FR-54.36.174.140-0203
   password: 6heexyz
   port: 443
   server: 54.36.174.140
@@ -286,10 +221,4 @@ proxies:
   password: lF3nRjH58koKTe-_VtABbg
   port: 20222
   server: 51.75.118.5
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇵🇱[www.v2nodes.com] ss-PL-1273... #1'
-  password: 6heexyz
-  port: 443
-  server: 54.36.174.134
   type: ss

@@ -1,13 +1,15 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 168118
-  network: tcp
-  port: 80
-  server: 217.142.138.61
+  name: KR 🇰🇷 | @Raydikalx | 35AD74
+  network: ws
+  port: 20086
+  server: 183.109.131.75
   tls: false
   type: vmess
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  ws-opts:
+    path: /
 - alterId: 0
   cipher: auto
   name: 🇰🇷 韩国|@ripaojiedian
@@ -38,19 +40,6 @@ proxies:
     headers:
       Host: www.31733109.xyz
     path: /path/191019072927
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-146.56.40.117-0720
-  network: ws
-  port: 27675
-  server: 146.56.40.117
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 053ca0f4-057e-493d-ad30-5ba51f00f59c
-  ws-opts:
-    path: /
 - name: 韩国|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -76,6 +65,13 @@ proxies:
 - name: '🇰🇷 KR韩国(mibei77.com 米贝节点分享) #2'
   password: humanity
   port: 443
+  server: 103.218.173.218
+  skip-cert-verify: false
+  sni: www.cordweave.com
+  type: trojan
+- name: '🇰🇷 KR韩国(mibei77.com 米贝节点分享) #3'
+  password: humanity
+  port: 443
   server: 54.116.249.102
   skip-cert-verify: false
   sni: www.cordweave.com
@@ -88,18 +84,18 @@ proxies:
   skip-cert-verify: true
   sni: www.cordweave.com
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: www.cordweave.com
     path: /assignment
-- name: '🇰🇷 韩国 | KOR #1'
-  password: humanity
-  port: 443
-  server: 64.110.82.71
+- name: '🇰🇷 韩国 | KOR #3'
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 29628
+  server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
-  sni: www.cordweave.com
+  sni: cm.g.doubleclick.net
   type: trojan
+  udp: true
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
@@ -107,20 +103,26 @@ proxies:
   server: 211.178.105.134
   type: ss
 - cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-5420
+  name: 🇰🇷KR-141.164.45.187-0460
+  password: Y6R9pAtvxxzmGC
+  port: 8888
+  server: 141.164.45.187
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇰🇷KR-141.164.45.187-6025
   password: TEzjfAYq2IjtuoS
   port: 6679
   server: 141.164.45.187
   type: ss
 - cipher: aes-256-gcm
   name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  password: Y6R9pAtvxxzmGC
-  port: 8888
+  password: RexnBgU7EV5ADxG
+  port: 7001
   server: 141.164.45.187
   type: ss
 - cipher: aes-256-gcm
   name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
-  password: RexnBgU7EV5ADxG
-  port: 7001
+  password: Y6R9pAtvxxzmGC
+  port: 5001
   server: 141.164.45.187
   type: ss

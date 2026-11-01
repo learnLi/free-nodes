@@ -1,35 +1,38 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 43B697
-  network: ws
-  port: 8034
-  server: 120.232.202.14
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 2881d1b1-c6e7-4e2e-a9b6-3a7e3f32d4fb
-  ws-opts:
-    headers:
-      Host: tms.dingtalk.com
-    path: /3ff53f15-4c9a-45b0-99ad-c8dfa3825d8f
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 557B30
-  network: ws
-  port: 10086
-  server: 120.48.133.162
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  ws-opts:
-    path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 6A8D34
+  name: CN 🇨🇳 | @Raydikalx | 0C8076
   network: tcp
-  port: 50018
+  port: 50011
+  server: 36.133.79.17
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 1F0947
+  network: tcp
+  port: 50015
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 148e82ae-5014-4a1a-a783-dd63fa9cdc9d
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 518B7B
+  network: tcp
+  port: 50011
+  server: 157.148.7.136
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | E61E07
+  network: tcp
+  port: 50013
   server: 36.133.78.37
   servername: ''
   tls: false
@@ -37,82 +40,112 @@ proxies:
   uuid: 1b30f413-2865-4d40-9146-4207778718cd
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-43.100.32.4-5187
+  name: CN 🇨🇳 | @Raydikalx | FC1C27
+  network: ws
+  port: 10086
+  server: 39.108.113.127
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 7547daaa-1577-49b0-9519-bd1823add1a7
+  ws-opts: {}
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.243.194.125-3089
   network: ws
   port: 443
-  server: n1747624260.4u9ma.icu
+  server: 47.243.194.125
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   ws-opts:
     headers:
-      Host: n1747624260.4u9ma.icu
+      Host: nycqg19zkwacpm1b.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.244.120.197-0269
+  network: ws
+  port: 36703
+  server: 47.244.120.197
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  ws-opts:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.76.57.83-0634
+  name: 🇨🇳CN-47.244.120.197-6088
   network: ws
-  port: 443
-  server: 47.76.57.83
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: vah4urdzl3jdx5r2.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-8.210.131.2-2073
-  network: http
-  port: 31357
-  server: 8.210.131.2
+  port: 44867
+  server: 47.244.120.197
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 618c0914-e31e-4b82-8289-2e7a47e48dfd
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  ws-opts:
+    path: /arki
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.217.13.103-0662
+  name: 🇨🇳CN-47.88.79.34-1231
   network: ws
   port: 443
-  server: 8.217.13.103
-  servername: qtkdr8jxe3wefxjm.v.3dns.vip
-  skip-cert-verify: false
+  server: 47.88.79.34
+  servername: ''
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
   ws-opts:
     headers:
-      Host: qtkdr8jxe3wefxjm.v.3dns.vip
+      Host: rib9jxayoqjgn2kw.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.218.83.148-7170
-  network: http
-  port: 63239
-  server: 8.218.83.148
-  servername: 8.218.83.148
-  skip-cert-verify: false
-  tls: false
+  name: 🇨🇳CN-8.209.113.77-0022
+  network: ws
+  port: 443
+  server: 8.209.113.77
+  servername: ''
+  skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: bc035c93-4a47-4f06-8833-fadc03527539
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.218.86.250-7187
+  name: 🇨🇳CN-8.210.20.159-2665
   network: http
-  port: 22362
-  server: 8.218.86.250
-  servername: 8.218.86.250
-  skip-cert-verify: false
+  port: 45751
+  server: 8.210.20.159
+  servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 72356bf7-487b-42c0-a7f2-845136b33503
+  uuid: 3a0d252e-cddf-4695-ab0f-95a0ce7abcc0
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-8.217.186.60-3088
+  network: ws
+  port: 443
+  server: 8.217.186.60
+  servername: euu1yalfmcqvljex.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
+  ws-opts:
+    headers:
+      Host: euu1yalfmcqvljex.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-8.219.108.81-0074
@@ -162,3 +195,11 @@ proxies:
   type: vmess
   uuid: a01e5d56-464f-45b9-b600-164db4700162
   ws-opts: {}
+- name: '🇨🇳 CN_147 #1'
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 30298
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+  udp: true

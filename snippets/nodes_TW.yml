@@ -1,40 +1,32 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 224E00
-  network: tcp
-  port: 794
-  server: 2.27.174.110
+  name: 🇹🇼TW-165.154.226.45-4890
+  network: ws
+  port: 80
+  server: 165.154.226.45
   servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: fd2c3c77-1984-4f7c-befe-efba034e1f3c
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | C14692
-  network: ws
-  port: 53617
-  server: az-1.linkaa.xyz
-  servername: az-1.linkaa.xyz
-  tls: false
-  type: vmess
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
-  ws-opts:
-    headers:
-      Host: az-1.linkaa.xyz
-    path: /game/resources
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | F017DE
-  network: ws
-  port: 443
-  server: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
-  servername: dee2309db4se3grs6e8hg4w61sd53g1.oylfmxz.cn
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
   ws-opts:
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼TW-36.224.168.226-4908
+  network: ws
+  port: 11463
+  server: tw4.594888.xyz
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: dd7639cf-66dd-3038-ab0e-cefe7e9ef9fb
+  ws-opts:
+    headers:
+      Host: tw4.594888.xyz
+    path: /v2ray
 - name: 台湾|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -43,3 +35,27 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
+- name: '🇹🇼 🇨🇳 台湾 | TWN #1'
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 22003
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+  udp: true
+- name: '🇹🇼 🇨🇳 台湾 | TWN #2'
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 45502
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+  udp: true
+- name: '🇹🇼 🇨🇳 台湾 | TWN #3'
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 54815
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+  udp: true

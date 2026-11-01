@@ -1,18 +1,14 @@
 proxies:
 - alterId: 0
-  cipher: auto
-  name: ES 🇪🇸 | @Raydikalx | EEA146
-  network: ws
-  port: 443
-  server: 66.163.118.73
-  servername: null
-  tls: true
+  cipher: aes-128-gcm
+  name: IR 🇮🇷 | @Raydikalx | 9EED75
+  network: tcp
+  port: 1027
+  server: s1.connect.bloroxy.net
+  servername: none
+  tls: false
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: mygptagent.org
-    path: /linkvws
+  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3
 - alterId: 0
   cipher: auto
   name: IT 🇮🇹 | @Raydikalx | D0BEEA
