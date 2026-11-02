@@ -1,28 +1,29 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | CD4BBF
-  network: tcp
-  port: 38854
-  server: 94.131.9.155
+  name: FR 🇫🇷 | @Raydikalx | 3FDDAA
+  network: ws
+  port: 18901
+  server: 2001:bc8:32d7:1a9::2
   servername: ''
   tls: false
   type: vmess
-  uuid: 00abfc28-d7d2-4787-f2a3-da1c2f38d7b8
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  ws-opts:
+    path: /github.com/Alvin9999-newpac/fanqiang?ed
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-51.195.140.208-1401
+  name: FR 🇫🇷 | @Raydikalx | EDC9C9
   network: ws
-  port: 443
-  server: univstar.51.195.140.208.sslip.io
+  port: 2082
+  server: 5.196.29.123
   servername: ''
-  skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
   ws-opts:
     headers:
-      Host: goodfamily19.site
+      Host: google.com
     path: /
 - name: FR法国丨yoyapai.com\r
   password: humanity
@@ -155,6 +156,13 @@ proxies:
   ws-opts:
     headers:
       Host: www.calmlunch.com
+    path: '%2Fassignment'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #19'
+  password: humanity
+  port: 443
+  server: 5.44.46.142
+  type: trojan
+  ws-opts:
     path: '%2Fassignment'
 - name: '🇫🇷[www.v2nodes.com] trojan-FR-... #8'
   network: ws

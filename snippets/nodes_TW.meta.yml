@@ -1,33 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | C124EF
-  network: ws
-  port: 443
-  server: 654168416355441.d6f54hd1j.cc
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
-  ws-opts:
-    headers:
-      Host: 654168416355441.d6f54hd1j.cc
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-211.72.35.110-5513
-  network: ws
-  port: 443
-  server: 211.72.35.110
-  servername: euserv1.aifx.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 3953ce0d-25df-4427-8371-a8ac26cc36fe
-  ws-opts:
-    headers:
-      Host: euserv1.aifx.eu.org
-    path: /nishikata
 - client-fingerprint: chrome
   name: '🇹🇼 🇨🇳 台湾 | TWN #1'
   network: ws
@@ -84,24 +55,19 @@ proxies:
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: '🇹🇼 🇨🇳 台湾 | TWN #2'
-  password: CQUPACy34t6Tjx8FdQdkCiYW
-  port: 20000
-  server: 47.129.112.129
+- name: 🇹🇼 🇨🇳 台湾 | TWN 2
+  password: 92a1538c-7801-4cca-ab98-6a9062aa507c
+  port: 56464
+  server: 9g96ulhy68tttw4t94.luoyun2.com
   skip-cert-verify: true
-  sni: sg-transit-3.nebulacloud.win
-  tls: false
-  type: hysteria2
-- alpn:
-  - h3
-  auth: CQUPACy34t6Tjx8FdQdkCiYW
-  down: 200
-  name: 🇹🇼 🇨🇳 台湾 | TWN 2
-  password: CQUPACy34t6Tjx8FdQdkCiYW
-  port: 20000
-  server: 47.129.112.129
-  skip-cert-verify: true
-  sni: sg-transit-3.nebulacloud.win
-  type: hysteria2
+  sni: de915.luoyun2.com
+  type: anytls
   udp: true
-  up: 100
+- name: 🇹🇼 🇨🇳 台湾 | TWN 3
+  password: 92a1538c-7801-4cca-ab98-6a9062aa507c
+  port: 48311
+  server: 995ys2dcfwzzz.luoyun2.com
+  skip-cert-verify: true
+  sni: byhk1007.luoyun2.com
+  type: anytls
+  udp: true

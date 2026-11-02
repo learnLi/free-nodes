@@ -1,15 +1,25 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: Global 🌐 | @Raydikalx | B0EED0
+  name: EE 🇪🇪 | @Raydikalx | 3F4820
   network: ws
-  port: 80
-  server: us65.netfilx.live
+  port: 443
+  server: 185.4.73.45
   servername: ''
-  tls: false
+  tls: true
   type: vmess
-  uuid: 60f12435-bb55-4da2-cb7d-4fea34ecfa37
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: us65.netfilx.live
-    path: /
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: aes-128-gcm
+  name: IR 🇮🇷 | @Raydikalx | 9EED75
+  network: tcp
+  port: 1027
+  server: s1.connect.bloroxy.net
+  servername: none
+  tls: false
+  type: vmess
+  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3

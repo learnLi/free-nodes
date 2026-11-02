@@ -1,28 +1,39 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: Global 🌐 | @Raydikalx | B0EED0
+  name: EE 🇪🇪 | @Raydikalx | 3F4820
   network: ws
-  port: 80
-  server: us65.netfilx.live
+  port: 443
+  server: 185.4.73.45
   servername: ''
-  tls: false
+  tls: true
   type: vmess
-  uuid: 60f12435-bb55-4da2-cb7d-4fea34ecfa37
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: us65.netfilx.live
-    path: /
-- name: 🇪🇪EE_1|1.8MB/s
-  port: 9443
-  server: 95.153.31.66
-  skip-cert-verify: true
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: aes-128-gcm
+  name: IR 🇮🇷 | @Raydikalx | 9EED75
+  network: tcp
+  port: 1027
+  server: s1.connect.bloroxy.net
+  servername: none
+  tls: false
+  type: vmess
+  uuid: a8db1a30-f66a-428e-ad1d-4f17c76b57e3
+- client-fingerprint: chrome
+  name: 🇪🇪 爱沙尼亚 | EST
+  port: 25895
+  server: 79.182.39.232
+  servername: www.samsung.com
   tls: true
-  type: http
-- name: 🇪🇪EE_2|1.0MB/s
-  password: None
-  port: 9443
-  server: 95.153.31.66
-  skip-cert-verify: true
-  tls: true
-  type: http
+  type: vless
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  port: 443
+  server: 185.225.205.53
+  tls: false
+  type: vless
+  uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b

@@ -1,25 +1,11 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 000AB8
-  network: ws
-  port: 30330
-  server: 47.129.115.96
-  servername: sg-transit-3.nebulacloud.win
-  tls: true
-  type: vmess
-  uuid: dfa9f875-3805-49d9-8636-46b6899be24e
-  ws-opts:
-    headers:
-      Host: sg-transit-3.nebulacloud.win
-    path: /ca/getData
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 0F0D25
+  name: SG 🇸🇬 | @Raydikalx | 1C3F85
   network: ws
   port: 443
   server: wjofHsQtEuEywxEq.v.3dns.vip
-  servername: null
+  servername: wjofHsQtEuEywxEq.v.3dns.vip
   tls: true
   type: vmess
   uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
@@ -29,7 +15,21 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: '🇸🇬SG-139.99.61.154-1869 #1'
+  name: SG 🇸🇬 | @Raydikalx | B86E69
+  network: ws
+  port: 53437
+  server: az-1.linkaa.xyz
+  servername: az-1.linkaa.xyz
+  tls: false
+  type: vmess
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  ws-opts:
+    headers:
+      Host: az-1.linkaa.xyz
+    path: /game/resources
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-139.99.61.154-1869
   network: ws
   port: 80
   server: 139.99.61.154
@@ -42,6 +42,19 @@ proxies:
     headers:
       Host: 139.99.61.154
     path: /vmess
+- alterId: 64
+  cipher: auto
+  name: 🇸🇬SG-159.223.94.156-5989
+  network: ws
+  port: 80
+  server: 159.223.94.156
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 533724ad-58ef-4147-88dc-9da523c15fc4
+  ws-opts:
+    path: /anti13.zingfast.vn
 - name: 新加坡1|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -80,13 +93,7 @@ proxies:
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 149.28.130.108
-  sni: searchcreativejobsandshowcaseyourartistictalents.com
-  type: trojan
-- name: '🏳[www.v2nodes.com] trojan- #4'
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200

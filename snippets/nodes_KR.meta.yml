@@ -14,47 +14,6 @@ proxies:
     headers:
       Host: kr02.a0a.xyz
     path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-146.56.40.117-0814
-  network: ws
-  port: 27675
-  server: 146.56.40.117
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 053ca0f4-057e-493d-ad30-5ba51f00f59c
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-54.180.114.77-6434
-  network: ws
-  port: 42517
-  server: 54.180.114.77
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-92.223.61.25-1482
-  network: ws
-  port: 80
-  server: 92.223.61.25
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 22aa72b1-605b-4807-8a81-fb414cbb409c
-  ws-opts:
-    headers:
-      Host: mizban888.servecounterstrike.com
-    path: /
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   network: ws
   port: 25555
@@ -90,7 +49,7 @@ proxies:
   name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 43.200.245.225
+  server: 43.202.1.87
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -101,7 +60,7 @@ proxies:
   type: ss
 - cipher: aes-256-gcm
   name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
-  password: Y6R9pAtvxxzmGC
-  port: 8888
+  password: KixLvKzwjekG00rm
+  port: 8000
   server: 141.164.45.187
   type: ss

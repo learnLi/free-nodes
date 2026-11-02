@@ -1,15 +1,41 @@
 proxies:
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #7'
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | CD2072
   network: tcp
+  port: 41353
+  server: 77.221.141.134
+  tls: true
+  type: vmess
+  uuid: 655f6f7a-a288-39e1-9e82-b60cd4e81529
+- alpn:
+  - h2
+  - http/1.1
+  name: 🇸🇪 瑞典 | SWE
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: connect-se.mimowhat.online
+  skip-cert-verify: true
+  sni: connect-se.mimowhat.online
+  type: trojan
+  udp: true
+- name: '🇸🇪 瑞典 | SWE #3'
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: connect-se.mimowhat.online
+  skip-cert-verify: true
+  sni: connect-se.mimowhat.online
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #5'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 167.88.61.198
   skip-cert-verify: false
   sni: cdn.browseseniorrolesandenhanceyourcareertoday.com
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1608...
-  password: MODziWLa9qMuW-4yPa0rfw
+- cipher: aes-256-gcm
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  password: AxIYWtskJWIIaefW
   port: 8388
-  server: msk2.rvpn.app
+  server: 70.34.212.124
   type: ss
