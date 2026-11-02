@@ -1,64 +1,45 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | ABFDC7
+  name: JP 🇯🇵 | @Raydikalx | 368E3D
   network: ws
-  port: 2083
-  server: or.521166.xyz
-  servername: or.521166.xyz
-  tls: true
+  port: 25686
+  server: 140.83.51.161
+  servername: 140.83.51.161
+  tls: false
   type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  ws-opts:
-    path: /or3
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本2|@ripaojiedian
-  network: ws
-  port: 443
-  server: kQov7UKaDknXb8a3.v.3dns.vip
-  servername: kQov7UKaDknXb8a3.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
   ws-opts:
     headers:
-      Host: kQov7UKaDknXb8a3.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
+      Host: 140.83.51.161
+    path: /cctv13.m3u8
+- alterId: 1
   cipher: auto
-  name: 🇯🇵 日本3|@ripaojiedian
-  network: ws
-  port: 443
-  server: kneNaKHeSXnZH259.v.3dns.vip
-  servername: kneNaKHeSXnZH259.v.3dns.vip
-  skip-cert-verify: false
+  name: JP 🇯🇵 | @Raydikalx | 821B75
+  network: tcp
+  port: 21584
+  server: hhz4qxs-g04.jp03-j7-vm0.entry.fr0528.art
+  servername: hhz4qxs-g04.jp03-j7-vm0.entry.fr0528.art
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kneNaKHeSXnZH259.v.3dns.vip
-    path: /ws-vmess
+  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本|@ripaojiedian
+  name: 'JP 🇯🇵 | @Raydikalx | A27658 #1'
   network: ws
   port: 443
-  server: Z9FfBx3zs2q5O0BG.v.3dns.vip
-  servername: Z9FfBx3zs2q5O0BG.v.3dns.vip
-  skip-cert-verify: false
+  server: 212.135.211.242
+  servername: ''
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
   ws-opts:
     headers:
-      Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
-    path: /ws-vmess
+      Host: aus.lovehk.xyz
+    path: /Sydney3
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-168.138.43.75-1365
+  name: 🇯🇵JP-168.138.43.75-1314
   network: ws
   port: 80
   server: 168.138.43.75
@@ -71,6 +52,22 @@ proxies:
     headers:
       Host: 168.138.43.75
     path: /cctv13.m3u8
+- name: 日本1|@ripaojiedian
+  network: tcp
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 24914
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+- name: 日本2|@ripaojiedian
+  network: tcp
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 18295
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
 - name: 日本3|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -86,24 +83,6 @@ proxies:
   skip-cert-verify: false
   sni: www.cordweave.com
   type: trojan
-- name: '🇯🇵 日本 | JPN #2'
-  network: tcp
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 18295
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-  udp: true
-- name: '🇯🇵 日本 | JPN #3'
-  network: tcp
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 24914
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-  udp: true
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   password: d050aca3-9df2-4461-90ec-92373c1d7636
   port: 44184
@@ -116,27 +95,27 @@ proxies:
   sni: 45.32.52.173
   type: trojan
 - cipher: aes-128-gcm
-  name: shadowsocks-1827146270
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
-- cipher: aes-128-gcm
   name: shadowsocks-1827146287
   password: shadowsocks
   port: 443
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146658
+  name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
-  port: 80
+  port: 443
   server: 84.247.155.196
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
-  port: 443
+  port: 80
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm

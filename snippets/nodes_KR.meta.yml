@@ -1,22 +1,7 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 韩国|@ripaojiedian
-  network: ws
-  port: 443
-  server: 8nTzyR5KNivfabaT.v.3dns.vip
-  servername: 8nTzyR5KNivfabaT.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 8nTzyR5KNivfabaT.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-132.145.80.230-0188
+  name: 🇰🇷KR-132.145.80.230-1237
   network: ws
   port: 80
   server: 132.145.80.230
@@ -28,6 +13,47 @@ proxies:
   ws-opts:
     headers:
       Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-146.56.40.117-0814
+  network: ws
+  port: 27675
+  server: 146.56.40.117
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 053ca0f4-057e-493d-ad30-5ba51f00f59c
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-54.180.114.77-6434
+  network: ws
+  port: 42517
+  server: 54.180.114.77
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-92.223.61.25-1482
+  network: ws
+  port: 80
+  server: 92.223.61.25
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 22aa72b1-605b-4807-8a81-fb414cbb409c
+  ws-opts:
+    headers:
+      Host: mizban888.servecounterstrike.com
     path: /
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
   network: ws
@@ -38,15 +64,7 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
-- name: '🇰🇷 韩国 | KOR #1'
-  network: tcp
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 18572
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-- name: 🇰🇷KR_1|3.5MB/s
+- name: 韩国1|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 29628
@@ -54,28 +72,36 @@ proxies:
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-  udp: true
+- name: 韩国2|@ripaojiedian
+  network: tcp
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 18572
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
   type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-0475
-  password: Y6R9pAtvxxzmGC
-  port: 8888
-  server: 141.164.45.187
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 43.200.245.225
   type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-3146
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 141.164.45.187
-  type: ss
+  udp: true
 - cipher: aes-256-gcm
   name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
   password: TEzjfAYq2IjtuoS
   port: 6679
+  server: 141.164.45.187
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
+  password: Y6R9pAtvxxzmGC
+  port: 8888
   server: 141.164.45.187
   type: ss

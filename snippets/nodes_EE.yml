@@ -1,11 +1,15 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: LV 🇱🇻 | @Raydikalx | 9EE900
-  network: tcp
-  port: 51401
-  server: lito.1.povrak.ir
+  name: Global 🌐 | @Raydikalx | B0EED0
+  network: ws
+  port: 80
+  server: us65.netfilx.live
   servername: ''
   tls: false
   type: vmess
-  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
+  uuid: 60f12435-bb55-4da2-cb7d-4fea34ecfa37
+  ws-opts:
+    headers:
+      Host: us65.netfilx.live
+    path: /

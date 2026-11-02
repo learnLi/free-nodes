@@ -1,64 +1,45 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | ABFDC7
+  name: JP 🇯🇵 | @Raydikalx | 368E3D
   network: ws
-  port: 2083
-  server: or.521166.xyz
-  servername: or.521166.xyz
-  tls: true
+  port: 25686
+  server: 140.83.51.161
+  servername: 140.83.51.161
+  tls: false
   type: vmess
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  ws-opts:
-    path: /or3
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵 日本2|@ripaojiedian
-  network: ws
-  port: 443
-  server: kQov7UKaDknXb8a3.v.3dns.vip
-  servername: kQov7UKaDknXb8a3.v.3dns.vip
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
   ws-opts:
     headers:
-      Host: kQov7UKaDknXb8a3.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
+      Host: 140.83.51.161
+    path: /cctv13.m3u8
+- alterId: 1
   cipher: auto
-  name: 🇯🇵 日本3|@ripaojiedian
-  network: ws
-  port: 443
-  server: kneNaKHeSXnZH259.v.3dns.vip
-  servername: kneNaKHeSXnZH259.v.3dns.vip
-  skip-cert-verify: false
+  name: JP 🇯🇵 | @Raydikalx | 821B75
+  network: tcp
+  port: 21584
+  server: hhz4qxs-g04.jp03-j7-vm0.entry.fr0528.art
+  servername: hhz4qxs-g04.jp03-j7-vm0.entry.fr0528.art
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: kneNaKHeSXnZH259.v.3dns.vip
-    path: /ws-vmess
+  uuid: d687b024-a5cf-3433-8d06-1c99e2e28821
 - alterId: 0
   cipher: auto
-  name: 🇯🇵 日本|@ripaojiedian
+  name: 'JP 🇯🇵 | @Raydikalx | A27658 #1'
   network: ws
   port: 443
-  server: Z9FfBx3zs2q5O0BG.v.3dns.vip
-  servername: Z9FfBx3zs2q5O0BG.v.3dns.vip
-  skip-cert-verify: false
+  server: 212.135.211.242
+  servername: ''
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
   ws-opts:
     headers:
-      Host: Z9FfBx3zs2q5O0BG.v.3dns.vip
-    path: /ws-vmess
+      Host: aus.lovehk.xyz
+    path: /Sydney3
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-168.138.43.75-1365
+  name: 🇯🇵JP-168.138.43.75-1314
   network: ws
   port: 80
   server: 168.138.43.75
@@ -71,20 +52,7 @@ proxies:
     headers:
       Host: 168.138.43.75
     path: /cctv13.m3u8
-- client-fingerprint: random
-  name: 🇯🇵 日本 | JPN
-  network: ws
-  port: 443
-  server: 193.122.115.184
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 9c55c7eb-d53e-40fa-a0c9-e25d2a345073
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048
-- name: '🇯🇵 日本 | JPN #4'
+- name: 🇯🇵 日本 | JPN 4
   network: ws
   port: 443
   server: 13.230.191.90
@@ -99,16 +67,16 @@ proxies:
 - name: 🇯🇵[www.v2nodes.com] vless-JP-1...
   network: ws
   port: 443
-  server: 104.21.219.160
+  server: 172.67.156.147
   servername: jp3.yohototo.top
   skip-cert-verify: false
-  tls: true
+  tls: false
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
       Host: jp3.yohototo.top
-    path: /tyxywsfp=unsafe
+    path: /tyxywssecurity=tls
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
   network: ws
   port: 443
@@ -122,19 +90,28 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=unsafefp=unsafe
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #12'
+  network: ws
   port: 443
-  server: 137.220.221.179
-  tls: false
+  server: 141.11.139.215
+  servername: ccc.010304.xyz
+  skip-cert-verify: false
+  tls: true
   type: vless
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   port: 443
   server: 31.76.91.98
   tls: false
   type: vless
   uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
   port: 443
   server: 142.91.108.25
   tls: false
@@ -179,21 +156,22 @@ proxies:
     headers:
       Host: mellow-pine-465b-4e9d050c.pages.dev
     path: /e47f26811455/proxyip=146.190.100.44?u=dailydoseofvpnfp=unsafe
-- alpn:
-  - http/1.1
-  client-fingerprint: unsafe
-  name: '🇯🇵[www.v2nodes.com] vless-JP-7... #1'
-  network: ws
-  port: 443
-  server: bro-per-bro.cc.cd
-  servername: mellow-pine-465b-4e9d050c.pages.dev
-  tls: true
-  type: vless
-  uuid: 4cf798ba-5c0a-40a8-a985-263e4c164f9c
-  ws-opts:
-    headers:
-      Host: mellow-pine-465b-4e9d050c.pages.dev
-    path: /e47f26811455/proxyip=146.190.100.44?u=dailydoseofvpn
+- name: 日本1|@ripaojiedian
+  network: tcp
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 24914
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
+- name: 日本2|@ripaojiedian
+  network: tcp
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  port: 18295
+  server: ench-snet-app.w-ctrip.cn
+  skip-cert-verify: true
+  sni: cm.g.doubleclick.net
+  type: trojan
 - name: 日本3|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -209,24 +187,6 @@ proxies:
   skip-cert-verify: false
   sni: www.cordweave.com
   type: trojan
-- name: '🇯🇵 日本 | JPN #2'
-  network: tcp
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 18295
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-  udp: true
-- name: '🇯🇵 日本 | JPN #3'
-  network: tcp
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 24914
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-  udp: true
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   password: d050aca3-9df2-4461-90ec-92373c1d7636
   port: 44184
@@ -238,20 +198,22 @@ proxies:
   server: 45.32.52.173
   sni: 45.32.52.173
   type: trojan
-- name: '🇯🇵 日本 | JPN #1'
-  password: ece1b2df-a71d-47a4-962a-9084226263d3
-  port: 10010
-  server: 2088.nyyen.com
+- name: 🇯🇵 日本 | JPN
+  password: 92a1538c-7801-4cca-ab98-6a9062aa507c
+  port: 12899
+  server: rrrrrr101010r.luoyun2.com
   skip-cert-verify: true
-  sni: www.sony.com
+  sni: rr0520111.ly123.edu.kg
   type: anytls
   udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146270
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
+- name: 🇳🇬 尼日利亚 | NGA
+  password: 92a1538c-7801-4cca-ab98-6a9062aa507c
+  port: 56385
+  server: xxxxxx3331022.luoyun2.com
+  skip-cert-verify: true
+  sni: nrly916.luoyun2.com
+  type: anytls
+  udp: true
 - cipher: aes-128-gcm
   name: shadowsocks-1827146287
   password: shadowsocks
@@ -259,15 +221,21 @@ proxies:
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146658
+  name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
-  port: 80
+  port: 443
   server: 84.247.155.196
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
-  port: 443
+  port: 80
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
@@ -282,26 +250,3 @@ proxies:
   port: 443
   server: 149.22.87.204
   type: ss
-- name: 🇯🇵JP_1|2.7MB/s
-  password: 'null'
-  port: 40583
-  server: 120.232.204.58
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
-- alpn:
-  - h3
-  congestion-controller: bbr
-  disable-sni: false
-  name: 🇯🇵 日本 | JPN 4
-  password: 56d8a8fd-68b8-47f8-8c7f-98cc675902db
-  port: 8443
-  reduce-rtt: false
-  request-timeout: 0
-  server: jp01.uzifan.monster
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: tuic
-  udp-relay-mode: native
-  uuid: 56d8a8fd-68b8-47f8-8c7f-98cc675902db

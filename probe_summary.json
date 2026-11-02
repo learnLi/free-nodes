@@ -1,91 +1,79 @@
 {
-  "total": 1192,
+  "total": 996,
   "egress": {
-    "ip": "57.151.128.210",
+    "ip": "20.106.191.86",
     "method": "direct",
     "country": "United States",
-    "city": "Cheyenne",
+    "city": "Washington",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 1139,
-  "tcp_ok": 958,
-  "tcp_rate": "84.1%",
-  "tls_applicable": 611,
-  "tls_ok": 550,
-  "tls_rate": "90.0%",
-  "quic_applicable": 53,
+  "tcp_applicable": 939,
+  "tcp_ok": 803,
+  "tcp_rate": "85.5%",
+  "tls_applicable": 478,
+  "tls_ok": 440,
+  "tls_rate": "92.1%",
+  "quic_applicable": 57,
   "quic_ok": 1,
-  "quic_rate": "1.9%",
-  "udp_skipped": 53,
+  "quic_rate": "1.8%",
+  "udp_skipped": 57,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 18,
+      "ms": 2,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 11,
+      "ms": 3,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 44,
+      "ms": 4,
       "err": ""
     }
   ],
   "by_type": {
     "anytls": {
-      "total": 13,
-      "ok": 13
+      "total": 19,
+      "ok": 19
     },
     "http": {
-      "total": 89,
-      "ok": 89
+      "total": 54,
+      "ok": 54
     },
     "hysteria": {
       "total": 2,
       "ok": 0
     },
-    "socks5": {
-      "total": 3,
-      "ok": 3
-    },
     "ss": {
-      "total": 223,
-      "ok": 188
+      "total": 234,
+      "ok": 190
     },
     "trojan": {
-      "total": 236,
-      "ok": 220
+      "total": 228,
+      "ok": 213
     },
     "vless": {
-      "total": 346,
-      "ok": 295
+      "total": 234,
+      "ok": 222
     },
     "vmess": {
-      "total": 225,
-      "ok": 150
-    },
-    "wireguard": {
-      "total": 2,
-      "ok": 0
+      "total": 168,
+      "ok": 105
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 51,
+      "total": 57,
       "ok": 1
-    },
-    "tuic": {
-      "total": 2,
-      "ok": 0
     }
   }
 }
