@@ -1,87 +1,91 @@
 {
-  "total": 1258,
+  "total": 1192,
   "egress": {
-    "ip": "48.217.251.107",
+    "ip": "57.151.128.210",
     "method": "direct",
     "country": "United States",
-    "city": "Dulles",
+    "city": "Cheyenne",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 1221,
-  "tcp_ok": 1022,
-  "tcp_rate": "83.7%",
-  "tls_applicable": 687,
-  "tls_ok": 607,
-  "tls_rate": "88.4%",
-  "quic_applicable": 37,
+  "tcp_applicable": 1139,
+  "tcp_ok": 958,
+  "tcp_rate": "84.1%",
+  "tls_applicable": 611,
+  "tls_ok": 550,
+  "tls_rate": "90.0%",
+  "quic_applicable": 53,
   "quic_ok": 1,
-  "quic_rate": "2.7%",
-  "udp_skipped": 37,
+  "quic_rate": "1.9%",
+  "udp_skipped": 53,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 2,
+      "ms": 18,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 3,
+      "ms": 11,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 6,
+      "ms": 44,
       "err": ""
     }
   ],
   "by_type": {
     "anytls": {
-      "total": 1,
-      "ok": 1
+      "total": 13,
+      "ok": 13
     },
     "http": {
-      "total": 101,
-      "ok": 101
+      "total": 89,
+      "ok": 89
     },
     "hysteria": {
       "total": 2,
       "ok": 0
     },
     "socks5": {
-      "total": 2,
-      "ok": 1
+      "total": 3,
+      "ok": 3
     },
     "ss": {
-      "total": 243,
-      "ok": 195
+      "total": 223,
+      "ok": 188
     },
     "trojan": {
-      "total": 335,
-      "ok": 307
+      "total": 236,
+      "ok": 220
     },
     "vless": {
-      "total": 330,
-      "ok": 283
+      "total": 346,
+      "ok": 295
     },
     "vmess": {
-      "total": 206,
-      "ok": 134
+      "total": 225,
+      "ok": 150
     },
     "wireguard": {
-      "total": 1,
+      "total": 2,
       "ok": 0
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 37,
+      "total": 51,
       "ok": 1
+    },
+    "tuic": {
+      "total": 2,
+      "ok": 0
     }
   }
 }

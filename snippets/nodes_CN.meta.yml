@@ -1,60 +1,46 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 8C48FF
-  network: tcp
-  port: 50012
-  server: 36.133.78.37
-  tls: false
-  type: vmess
-  uuid: e37149b8-63df-4b4e-bd17-d7fc0b3009db
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | FC1C27
+  name: 🇨🇳CN-106.55.187.139-3011
   network: ws
-  port: 10086
-  server: 39.108.113.127
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 7547daaa-1577-49b0-9519-bd1823add1a7
-  ws-opts: {}
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-47.242.65.80-1786
-  network: http
-  port: 62307
-  server: 47.242.65.80
+  port: 8448
+  server: 106.55.187.139
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 48f3fa93-1722-4f8d-af74-fcc54c2f21d5
+  uuid: 5a464707-3162-4a09-e9e2-d70a6b892267
+  ws-opts:
+    path: /
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.242.95.19-1825
+  name: 🇨🇳CN-47.238.94.29-0538
+  network: ws
+  port: 443
+  server: ADncdOvLHR4M1P36.v.3dns.vip
+  servername: ADncdOvLHR4M1P36.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: ADncdOvLHR4M1P36.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.242.52.13-1946
   network: http
-  port: 40988
-  server: 47.242.95.19
+  port: 31152
+  server: 47.242.52.13
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 1e60b35a-db17-4283-8b99-7358ee7d5fd5
+  uuid: 59cf21e6-d029-47d8-9c37-7ef34280b9d1
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.243.185.128-1776
-  network: http
-  port: 47365
-  server: 47.243.185.128
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: fb695171-6b24-4255-9893-8921f53a0548
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-47.243.194.125-3089
+  name: 🇨🇳CN-47.243.194.125-0656
   network: ws
   port: 443
   server: 47.243.194.125
@@ -69,18 +55,20 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.243.36.34-1934
-  network: http
-  port: 55986
-  server: 47.243.36.34
+  name: 🇨🇳CN-47.244.120.197-6074
+  network: ws
+  port: 36703
+  server: 47.244.120.197
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 87ed289f-cae3-49b4-bbe3-23da298c0e81
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  ws-opts:
+    path: /arki?ed=2048
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.244.120.197-6088
+  name: 🇨🇳CN-47.244.120.197-6075
   network: ws
   port: 44867
   server: 47.244.120.197
@@ -90,10 +78,36 @@ proxies:
   type: vmess
   uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
   ws-opts:
-    path: /arki
+    path: /arki?ed=2048
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-47.88.79.34-1231
+  name: 🇨🇳CN-47.253.60.200-8193
+  network: ws
+  port: 443
+  server: 47.253.60.200
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: b36473e1-49c5-438e-85c4-d56796200585
+  ws-opts:
+    path: /swoole
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.88.104.186-8183
+  network: ws
+  port: 80
+  server: 47.88.104.186
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9dc5466-3768-4d45-8fd0-f1181139bb4e
+  ws-opts:
+    path: /4DJIP58JF6JTq4HIG0yr
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.88.79.34-1356
   network: ws
   port: 443
   server: 47.88.79.34
@@ -108,33 +122,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-59.63.154.101-1829
-  network: ws
-  port: 43815
-  server: blog.voewl.com
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 7a9f026f-f7a8-40ca-f2f9-3b380c287c0d
-  ws-opts:
-    headers:
-      Host: blog.voewl.com
-    path: /abc
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-8.210.248.210-1793
-  network: http
-  port: 54570
-  server: 8.210.248.210
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: aa1d02a4-60e6-4671-8107-4d5e6bacd265
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-8.217.186.60-3088
+  name: 🇨🇳CN-8.217.186.60-0655
   network: ws
   port: 443
   server: 8.217.186.60
@@ -149,7 +137,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.218.195.61-1251
+  name: 🇨🇳CN-8.218.195.61-1376
   network: ws
   port: 443
   server: 8.218.195.61
@@ -164,22 +152,7 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.219.105.225-0261
-  network: ws
-  port: 443
-  server: 8.219.105.225
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-8.219.108.81-0074
+  name: 🇨🇳CN-8.219.108.81-0082
   network: ws
   port: 443
   server: 8.219.108.81
@@ -194,10 +167,10 @@ proxies:
     path: /ray
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.219.173.108-0069
+  name: 🇨🇳CN-8.219.122.121-0086
   network: ws
   port: 443
-  server: 8.219.173.108
+  server: 8.219.122.121
   servername: ''
   skip-cert-verify: true
   tls: true
@@ -209,7 +182,7 @@ proxies:
     path: /ray
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.219.173.2-0071
+  name: 🇨🇳CN-8.219.173.2-0083
   network: ws
   port: 443
   server: 8.219.173.2
@@ -241,17 +214,38 @@ proxies:
   type: vmess
   uuid: a01e5d56-464f-45b9-b600-164db4700162
   ws-opts: {}
+- alterId: 0
+  cipher: auto
+  name: '🇭🇰 香港 | HKG #7'
+  network: ws
+  port: 443
+  server: i2psm3knof5qjjix.v.3dns.vip
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: i2psm3knof5qjjix.v.3dns.vip
+    path: /ws-vmess
 - ip: 172.16.0.2/32
-  mtu: 1380
-  name: 🇨🇳CN_1|2.6MB/s
-  port: 2371
-  presharedkey: ''
-  private-key: CBMxaub4dG7Q9W91x4+lUCqtF9eV1BN+4osBfWZNXHs=
+  keepalive: '5'
+  mtu: 1280
+  name: 🇨🇳CN_1|1.5MB/s
+  persistent-keepalive: '5'
+  port: 500
+  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   reserved:
-  - 225
-  - 17
-  - 205
-  server: 162.159.195.4
+  - 39
+  - 4
+  - 107
+  server: 162.159.192.2
   type: wireguard
   udp: true
+  wnoise: quic
+  wnoisecount: '5'
+  wnoisedelay: '5'
+  wpayloadsize: 40-90
