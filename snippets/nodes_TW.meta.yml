@@ -1,18 +1,43 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 9DA953
+  name: TW 🇹🇼 | @Raydikalx | C0813E
   network: ws
   port: 443
-  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  server: fujrdt.d6f54hd1j.cc
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
   ws-opts:
     headers:
-      Host: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+      Host: fujrdt.d6f54hd1j.cc
     path: /
-- name: '🇹🇼 🇨🇳 台湾 | TWN #1'
+- name: '🇹🇼 🇨🇳 台湾 | TWN #2'
+  network: ws
+  port: 443
+  server: 59.125.69.23
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
+- client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN #4'
+  network: ws
+  port: 443
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- name: 🇹🇼[www.v2nodes.com] vless-TW-1...
   network: ws
   port: 443
   server: 60.248.219.53
@@ -24,44 +49,6 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
-- client-fingerprint: chrome
-  name: '🇹🇼 🇨🇳 台湾 | TWN #3'
-  network: ws
-  port: 443
-  server: 59.125.69.23
-  servername: ty986gfazs.cainiaohub.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- client-fingerprint: chrome
-  name: '🇹🇼[www.v2nodes.com] vless-TW-1... #1'
-  network: ws
-  port: 8443
-  server: n04.jinggai.online
-  servername: n04.jinggai.online
-  tls: true
-  type: vless
-  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
-  ws-opts:
-    headers:
-      Host: n04.jinggai.online
-    path: /nvl-n04-ws/e0577fe8fd7c8823
-- client-fingerprint: chrome
-  name: '🇹🇼[www.v2nodes.com] vless-TW-1... #2'
-  network: ws
-  port: 443
-  server: 60.248.219.53
-  servername: ty986gfazs.cainiaohub.xyz
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
 - name: 台湾1|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -78,13 +65,6 @@ proxies:
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: 🇨🇳 TW台湾(mibei77.com 米贝节点分享)
-  password: humanity
-  port: 443
-  server: 188.114.98.0
-  skip-cert-verify: false
-  sni: www.pleadcourt.org
-  type: trojan
 - name: 🇹🇼 🇨🇳 台湾 | TWN
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
@@ -93,18 +73,10 @@ proxies:
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇹🇼 🇨🇳 台湾 | TWN #2'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 8443
-  server: 83.147.15.84
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
 - name: 🇹🇼[www.v2nodes.com] trojan-TW-...
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 45503
@@ -112,3 +84,19 @@ proxies:
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
+- name: '🇹🇼 🇨🇳 台湾 | TWN #3'
+  password: 0324fbc29561
+  port: 443
+  server: er8u54dh.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
+  udp: true
+- name: 🇹🇼 🇨🇳 台湾 | TWN 3
+  password: 0324fbc29561
+  port: 443
+  server: 684616s4.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
+  udp: true

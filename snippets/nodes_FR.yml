@@ -1,16 +1,86 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 3BE603
+  name: FR 🇫🇷 | @Raydikalx | 4B6372
   network: ws
-  port: 18901
-  server: 2001:bc8:32d7:1a9::3
-  servername: ''
+  port: 23388
+  server: 62.210.127.120
   tls: false
   type: vmess
   uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
   ws-opts:
+    headers:
+      Host: engage.cloudflareclient.com
     path: /github.com/Alvin9999-newpac/fanqiang
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-141.94.155.229-1537
+  network: ws
+  port: 443
+  server: 141.94.155.229
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: pelang.org
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-141.95.55.70-8692
+  network: ws
+  port: 80
+  server: 141.95.55.70
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 2496f711-f6c5-40ee-b9a3-972241fb09d4
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-146.59.43.129-0695
+  network: ws
+  port: 443
+  server: 146.59.43.129
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 54c6c823-4957-4c6c-b10c-359bc51f7cc3
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-152.228.191.232-0133
+  network: ws
+  port: 443
+  server: 152.228.191.232
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-51.77.212.145-0418
+  network: ws
+  port: 80
+  server: 51.77.212.145
+  servername: 51.77.212.145
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: 5f6e42bb-2fd1-478b-8f0f-e52b2d6f7652
+  ws-opts:
+    path: /vmess
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -18,6 +88,33 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- name: '🇫🇷 法国 | FRA #2'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 104.26.0.3
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: '🇫🇷 法国 | FRA #3'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 104.27.0.8
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: 🇫🇷 法国 | FRA 2
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 104.27.0.8
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -131,18 +228,6 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #18'
-  network: ws
-  password: humanity
-  port: 443
-  server: 104.19.229.21
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
 - name: '🇫🇷[www.v2nodes.com] trojan-FR-... #19'
   network: ws
   password: humanity
@@ -161,6 +246,18 @@ proxies:
   server: 5.44.46.142
   type: trojan
   ws-opts:
+    path: '%2Fassignment'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #21'
+  network: ws
+  password: humanity
+  port: 443
+  server: 104.19.229.21
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.calmlunch.com
     path: '%2Fassignment'
 - name: '🇫🇷[www.v2nodes.com] trojan-FR-... #9'
   network: ws
@@ -202,15 +299,9 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- cipher: aes-256-gcm
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1609...
-  password: lF3nRjH58koKTe-_VtABbg
-  port: 20222
-  server: 51.75.118.5
-  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇵🇱[www.v2nodes.com] ss-PL-1273... #2'
+  name: 🇫🇷FR-54.36.174.140-0256
   password: 6heexyz
   port: 443
-  server: 54.36.174.134
+  server: 54.36.174.140
   type: ss

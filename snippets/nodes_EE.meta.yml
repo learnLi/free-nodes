@@ -1,27 +1,13 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: FI 🇫🇮 | @Raydikalx | 71EE19
-  network: tcp
-  port: 39458
-  server: fintest3.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 5551d2e8-d3d4-42d2-95c8-fb780b4f6e6d
-- alterId: 0
-  cipher: auto
-  name: 🇪🇪EE-176.112.146.190-0676
-  network: ws
-  port: 80
-  server: 176.112.146.190
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: f9247df4-02d5-4b31-acc5-4022652c5953
-  ws-opts:
-    path: /
+- client-fingerprint: firefox
+  name: 🇪🇪 爱沙尼亚 | EST
+  network: xhttp
+  port: 34451
+  server: 31.56.187.35
+  servername: ee-2e06d85dc0.shamanapp.online
+  tls: true
+  type: vless
+  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
 - name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
   port: 443
   server: 185.225.205.53
