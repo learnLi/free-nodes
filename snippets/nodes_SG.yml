@@ -1,47 +1,23 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 1C3F85
-  network: ws
-  port: 443
-  server: wjofHsQtEuEywxEq.v.3dns.vip
-  servername: wjofHsQtEuEywxEq.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  ws-opts:
-    headers:
-      Host: wjofHsQtEuEywxEq.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | B86E69
-  network: ws
-  port: 53437
-  server: az-1.linkaa.xyz
-  servername: az-1.linkaa.xyz
+  name: SG 🇸🇬 | @Raydikalx | 3AD363
+  network: tcp
+  port: 18000
+  server: ww11.levikogjgfdd.ir
+  servername: null
   tls: false
   type: vmess
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
-  ws-opts:
-    headers:
-      Host: az-1.linkaa.xyz
-    path: /game/resources
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-139.99.61.154-1869
-  network: ws
-  port: 80
-  server: 139.99.61.154
-  servername: ''
-  skip-cert-verify: true
+  name: SG 🇸🇬 | @Raydikalx | C8F906
+  network: raw
+  port: 22324
+  server: 172.237.70.226
   tls: false
   type: vmess
-  uuid: 932a1f0d-f5ce-418d-8560-c88f53c534b9
-  ws-opts:
-    headers:
-      Host: 139.99.61.154
-    path: /vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 64
   cipher: auto
   name: 🇸🇬SG-159.223.94.156-5989
@@ -55,6 +31,19 @@ proxies:
   uuid: 533724ad-58ef-4147-88dc-9da523c15fc4
   ws-opts:
     path: /anti13.zingfast.vn
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-18.143.123.35-2559
+  network: ws
+  port: 80
+  server: 18.143.123.35
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 68df4838-46d0-4b5b-c3f0-a40ec7063245
+  ws-opts:
+    path: /
 - name: 新加坡1|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -79,13 +68,106 @@ proxies:
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: 🇸🇬 新加坡 | SGP
-  password: trojan
-  port: 8443
+- name: '🇸🇬 新加坡 | SGP #1'
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 2087
+  server: 104.18.43.20
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
+- name: '🇸🇬 新加坡 | SGP #10'
+  password: '!!str 123456'
+  port: 2096
   server: 104.18.35.86
   skip-cert-verify: true
-  sni: longwanghen.pages.dev
+  sni: 321dfbc6.uir-9i6.pages.dev
   type: trojan
+- name: '🇸🇬 新加坡 | SGP #3'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 2087
+  server: 104.18.43.20
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: '🇸🇬 新加坡 | SGP #5'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.236.139.181
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: '🇸🇬 新加坡 | SGP #6'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: cucc.cloudflare.seeck.cn
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: '🇸🇬 新加坡 | SGP #8'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.104.161.198
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: 🇸🇬 新加坡 | SGP 3
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.236.139.181
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
+- name: 🇸🇬 新加坡 | SGP 4
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: cucc.cloudflare.seeck.cn
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
+- name: 🇸🇬 新加坡 | SGP 6
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.104.161.198
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
+- name: 🇸🇬 新加坡 | SGP 8
+  network: ws
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: 321dfbc6.uir-9i6.pages.dev
+    path: /
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
   password: b17e9b52db9623bd6c16eea3d7adb5b3
   port: 15589
@@ -93,17 +175,42 @@ proxies:
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 149.28.130.108
+  sni: searchcreativejobsandshowcaseyourartistictalents.com
+  type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
   type: trojan
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #5'
+  network: ws
+  password: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
+  port: 443
+  server: blackshadow.dpdns.org
+  skip-cert-verify: false
+  sni: blackshadow.dpdns.org
+  type: trojan
+  ws-opts:
+    headers:
+      Host: blackshadow.dpdns.org
+    path: '%2F195.123.218.174-443'
 - cipher: rc4-md5
   name: shadowsocks-1827147315
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 68.183.227.4
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇬 新加坡 | SGP #9'
+  password: bf5129f1-31f5-4edf-a07a-27ec31b26c1d
+  port: 2096
+  server: 52.221.223.188
+  type: ss
+  udp: true
 - cipher: aes-256-gcm
   name: 🇸🇬[www.v2nodes.com] ss-SG-1559...
   password: qpSevKaUXYQKvSjp

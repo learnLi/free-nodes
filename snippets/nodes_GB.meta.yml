@@ -1,70 +1,46 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | AF47F3
-  network: ws
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  grpc-opts:
+    grpc-service-name: ''
+  name: 🇬🇧 GB VLESS-100 | free-nodes
+  network: tcp
   port: 443
-  server: n1761214911.74qxv.top
-  servername: n1761214911.74qxv.top
+  server: 193.142.59.180
+  servername: u695098uebdbd5f1s124.gogocs.xyz
+  skip-cert-verify: false
+  tfo: false
   tls: true
-  type: vmess
-  uuid: 372c1939-299d-4946-9633-5ffa971f8b67
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   ws-opts:
     headers:
-      Host: n1761214911.74qxv.top
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧GB-198.244.148.214-7848
-  network: ws
-  port: 443
-  server: 198.244.148.214
-  servername: goodfamily19.site
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
-  ws-opts:
-    path: /wmzmvws
+      Host: ebdbd5f1s124.gogocs.xyz
+    path: ''
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: 🇬🇧 GB VLESS-39 | free-nodes
-  network: xhttp
+  flow: xtls-rprx-vision
+  name: 🇬🇧 GB VLESS-108 | free-nodes
+  network: tcp
   port: 443
-  server: s1243.csgfw.top
-  servername: u695098u4d690bd1s861.gogocs.xyz
+  server: 2a13:29c0:2641:a307:2044:17f:7e80:4b
+  servername: u695098uebdbd5f1s124.gogocs.xyz
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  xhttp-opts:
-    host: u695098u4d690bd1s861.gogocs.xyz
-    path: 1d8b2de82bac7ff0c729eadf32ec6650
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: 🇬🇧 GB VLESS-45 | free-nodes
-  network: xhttp
-  port: 443
-  server: s1244.uugfw.top
-  servername: u695098u4d690bd1s861.gogocs.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  xhttp-opts:
-    host: u695098u4d690bd1s861.gogocs.xyz
-    path: 1d8b2de82bac7ff0c729eadf32ec6650
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇬🇧 GB VLESS-46 | free-nodes
+  name: 🇬🇧 GB VLESS-59 | free-nodes
   network: xhttp
   port: 443
   server: 2a13:29c0:fc75:90b0:df84:b8d4:d3aa:1
@@ -81,8 +57,11 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: firefox
+  encryption: none
   flow: xtls-rprx-vision
-  name: 🇬🇧 GB VLESS-74 | free-nodes
+  grpc-opts:
+    grpc-service-name: ''
+  name: 🇬🇧 GB VLESS-87 | free-nodes
   network: tcp
   port: 443
   server: s148.okgg.top
@@ -92,67 +71,34 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  ws-opts:
+    headers:
+      Host: ebdbd5f1s124.gogocs.xyz
+    path: ''
 - alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇬🇧 GB VLESS-77 | free-nodes
-  network: xhttp
-  port: 443
-  server: 193.142.59.97
-  servername: u695098u4d690bd1s861.gogocs.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  xhttp-opts:
-    host: u695098u4d690bd1s861.gogocs.xyz
-    path: 1d8b2de82bac7ff0c729eadf32ec6650
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧 GB VLESS-87 | free-nodes
-  network: tcp
-  port: 443
-  server: 193.142.59.180
-  servername: u695098uebdbd5f1s124.gogocs.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇬🇧 GB VLESS-95 | free-nodes
-  network: tcp
-  port: 443
-  server: 2a13:29c0:2641:a307:2044:17f:7e80:4b
-  servername: u695098uebdbd5f1s124.gogocs.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
   - http/1.1
   client-fingerprint: chrome
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #13'
+  name: 🇬🇧 英国 | GBR
+  network: ws
+  port: 2083
+  server: 140.225.209.152
+  servername: speedtestmark.com
+  tls: true
+  type: vless
+  uuid: 00947839-40de-4e3f-a6e5-0570c16b4bce
+  ws-opts:
+    path: /vless-ws
+- client-fingerprint: firefox
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #10'
   network: tcp
   port: 8443
-  server: node-uk.connectsuite.org
+  server: 51.38.71.147
   servername: node-uk.connectsuite.org
   tls: true
   type: vless
   uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
 - client-fingerprint: chrome
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #15'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #12'
   network: ws
   port: 443
   server: 159.65.51.189
@@ -169,7 +115,6 @@ proxies:
   port: 443
   server: 159.65.51.189
   servername: ccc.010304.xyz
-  skip-cert-verify: false
   tls: true
   type: vless
   uuid: d342d11e-d224-4463-b982-532309285094
@@ -181,9 +126,20 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: chrome
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
+  port: 8443
+  server: node-uk.connectsuite.org
+  servername: node-uk.connectsuite.org
+  tls: true
+  type: vless
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: beru-uk
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #7'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   network: grpc
   port: 8444
   server: ru3.radiolumens.uk
@@ -191,28 +147,6 @@ proxies:
   tls: true
   type: vless
   uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
-- name: '🇬🇧[www.v2nodes.com] trojan-GB-... #1'
-  password: 5t6i121em5lkmsmk
-  port: 29813
-  server: en001.zestapp778.com
-  sni: en001.zestapp778.com
-  type: trojan
-- name: 🇬🇧 英国 | GBR 2
-  password: 92a1538c-7801-4cca-ab98-6a9062aa507c
-  port: 17515
-  server: rrrrrr101010r.luoyun2.com
-  skip-cert-verify: true
-  sni: yg816.luoyun2.com
-  type: anytls
-  udp: true
-- name: 🇬🇧 英国 | GBR 3
-  password: 92a1538c-7801-4cca-ab98-6a9062aa507c
-  port: 49414
-  server: 9g96ulhy68tttw4t94.luoyun2.com
-  skip-cert-verify: true
-  sni: nanji666.ly123.edu.kg
-  type: anytls
-  udp: true
 - cipher: aes-128-gcm
   name: shadowsocks-1827146143
   password: shadowsocks
@@ -254,12 +188,6 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 443
   server: 82.38.31.159
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.16-0179
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.16
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.162-0174
@@ -518,12 +446,6 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.66
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1247... #1'
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 94.156.250.148
   type: ss
 - cipher: aes-128-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1451... #1'

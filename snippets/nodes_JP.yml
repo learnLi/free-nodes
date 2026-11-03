@@ -1,20 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | A27658
-  network: ws
-  port: 443
-  server: 212.135.211.242
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 1c3fb1c0-1204-49db-b842-f72d50f014c1
-  ws-opts:
-    headers:
-      Host: aus.lovehk.xyz
-    path: /Sydney3
-- alterId: 0
-  cipher: auto
   name: 🇯🇵JP-168.138.43.75-1314
   network: ws
   port: 80
@@ -59,6 +45,86 @@ proxies:
   skip-cert-verify: false
   sni: www.cordweave.com
   type: trojan
+- name: '🇯🇵 日本 | JPN #2'
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 13.158.71.221
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
+- name: '🇯🇵 日本 | JPN #3'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 13.158.71.221
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: '🇯🇵 日本 | JPN #4'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 175.41.232.194
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: '🇯🇵 日本 | JPN #5'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 13.158.86.30
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: '🇯🇵 日本 | JPN #6'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.104.89.73
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: 🇯🇵 日本 | JPN 2
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 175.41.232.194
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
+- name: 🇯🇵 日本 | JPN 3
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 13.158.86.30
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
+- name: 🇯🇵 日本 | JPN 4
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.104.89.73
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
   password: d050aca3-9df2-4461-90ec-92373c1d7636
   port: 44184
@@ -83,7 +149,7 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1291...
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
   password: shadowsocks
   port: 443
   server: 149.22.87.240

@@ -1,68 +1,43 @@
 proxies:
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 2CCD6C
+  name: CN 🇨🇳 | @Raydikalx | 38643F
   network: tcp
-  port: 50014
-  server: 36.133.78.37
+  port: 34002
+  server: 120.232.153.27
   tls: false
   type: vmess
-  uuid: e37149b8-63df-4b4e-bd17-d7fc0b3009db
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 6A8D34
-  network: tcp
-  port: 50018
-  server: 36.133.78.37
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 1b30f413-2865-4d40-9146-4207778718cd
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-43.110.63.10-0549
+  name: 🇨🇳CN-106.75.218.112-0081
   network: ws
   port: 443
-  server: bJ1Aa2ZyJxYamYuK.v.3dns.vip
-  servername: bJ1Aa2ZyJxYamYuK.v.3dns.vip
-  skip-cert-verify: false
+  server: 106.75.218.112
+  servername: ''
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   ws-opts:
     headers:
-      Host: bJ1Aa2ZyJxYamYuK.v.3dns.vip
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-47.243.153.153-0644
+  network: ws
+  port: 443
+  server: 47.243.153.153
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: i2psm3knof5qjjix.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-47.243.194.125-0159
-  network: ws
-  port: 443
-  server: 47.243.194.125
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: nycqg19zkwacpm1b.v.3dns.vip
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-47.76.57.83-0227
-  network: ws
-  port: 443
-  server: 47.76.57.83
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: vah4urdzl3jdx5r2.v.3dns.vip
-    path: /
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-47.88.79.34-0160
@@ -80,34 +55,17 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-8.209.116.3-1421
+  name: 🇨🇳CN-47.89.231.138-8096
   network: ws
   port: 443
-  server: 8.209.116.3
+  server: 47.89.231.138
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  uuid: 82f58397-480e-4975-b3ec-fea904dc5912
   ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-8.209.70.24-1399
-  network: ws
-  port: 443
-  server: 8.209.70.24
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
+    path: /O0emfe0pBfYovpz5526rhq
 - alterId: 0
   cipher: auto
   name: 🇨🇳CN-8.217.186.60-0158
@@ -125,6 +83,21 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
+  name: 🇨🇳CN-8.217.254.88-0152
+  network: ws
+  port: 443
+  server: 8.217.254.88
+  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: 2b9hwy8ocx7q74nm.v.3dns.vip
+    path: /
+- alterId: 0
+  cipher: auto
   name: 🇨🇳CN-8.218.195.61-0156
   network: ws
   port: 443
@@ -138,51 +111,3 @@ proxies:
     headers:
       Host: EX1oGt73NzPQKAc2.v.3dns.vip
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-8.219.150.28-8103
-  network: ws
-  port: 443
-  server: 8.219.150.28
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 1d4379ed-27c2-4f12-9f69-25b8ca8b084c
-  ws-opts:
-    path: /
-- alterId: 64
-  cipher: auto
-  name: 🇨🇳_CN_中国
-  network: tcp
-  port: 50002
-  server: 112.132.215.108
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- alterId: 0
-  cipher: auto
-  name: '🇨🇳_CN_中国 #1'
-  network: ws
-  port: 10086
-  server: 120.48.133.162
-  tls: false
-  type: vmess
-  uuid: a01e5d56-464f-45b9-b600-164db4700162
-  ws-opts: {}
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #8'
-  network: ws
-  port: 443
-  server: vah4urdzl3jdx5r2.v.3dns.vip
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: vah4urdzl3jdx5r2.v.3dns.vip
-    path: /ws-vmess
