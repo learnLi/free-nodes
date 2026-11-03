@@ -1,30 +1,20 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | C0813E
+  name: TW 🇹🇼 | @Raydikalx | 6749E4
   network: ws
   port: 443
-  server: fujrdt.d6f54hd1j.cc
-  skip-cert-verify: true
+  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  servername: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
   tls: true
   type: vmess
-  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
     headers:
-      Host: fujrdt.d6f54hd1j.cc
+      Host: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
     path: /
-- name: '🇹🇼 🇨🇳 台湾 | TWN #2'
-  network: ws
-  port: 443
-  server: 59.125.69.23
-  servername: ty986gfazs.cainiaohub.xyz
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
 - client-fingerprint: chrome
-  name: '🇹🇼 🇨🇳 台湾 | TWN #4'
+  name: '🇹🇼 🇨🇳 台湾 | TWN #2'
   network: ws
   port: 443
   server: 60.248.219.53
@@ -84,7 +74,7 @@ proxies:
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
   type: trojan
-- name: '🇹🇼 🇨🇳 台湾 | TWN #3'
+- name: '🇹🇼 🇨🇳 台湾 | TWN #1'
   password: 0324fbc29561
   port: 443
   server: er8u54dh.df6h451rh.xin

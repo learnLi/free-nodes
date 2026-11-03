@@ -1,14 +1,13 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | CD2072
+- client-fingerprint: chrome
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #11'
   network: tcp
-  port: 41353
-  server: 77.221.141.134
+  port: 443
+  server: static.fatcutecat.net
   tls: true
-  type: vmess
-  uuid: 655f6f7a-a288-39e1-9e82-b60cd4e81529
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #10'
+  type: vless
+  uuid: b95eb0b3-a8dc-41ce-8bc0-888f81731e7c
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #13'
   network: ws
   port: 14430
   server: 5.178.109.174
@@ -20,7 +19,7 @@ proxies:
     headers:
       Host: 5.178.109.174
     path: /vless
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #11'
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #14'
   network: ws
   port: 14430
   server: 193.188.21.253
@@ -32,15 +31,7 @@ proxies:
     headers:
       Host: 193.188.21.253
     path: /vless
-- client-fingerprint: chrome
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
-  network: tcp
-  port: 443
-  server: static.fatcutecat.net
-  tls: true
-  type: vless
-  uuid: b95eb0b3-a8dc-41ce-8bc0-888f81731e7c
-- name: 🇳🇱 荷兰 | NLD 4
+- name: '🇳🇱 荷兰 | NLD 4 #1'
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
@@ -80,19 +71,6 @@ proxies:
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-- name: '🇸🇪 瑞典 | SWE 2 #1'
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.21.0.3
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
 - name: Telegram 🆔@cnetvpn 🇸🇪
   obfs: salamander
   obfs-password: fuw2k1ddrouwxr3u
@@ -103,23 +81,3 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
-- name: 🇸🇪SE-🚀@VPNine1
-  password: 769f34f0-1500-488f-b414-03bc90666502
-  port: 443
-  server: se.mimowhat.online
-  skip-cert-verify: false
-  sni: se.mimowhat.online
-  tls: false
-  type: hysteria2
-- cipher: aes-256-gcm
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  password: AxIYWtskJWIIaefW
-  port: 8388
-  server: 70.34.212.124
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1608...
-  password: MODziWLa9qMuW-4yPa0rfw
-  port: 8388
-  server: msk2.rvpn.app
-  type: ss

@@ -1,16 +1,42 @@
 proxies:
-- client-fingerprint: firefox
-  name: 🇪🇪 爱沙尼亚 | EST
-  network: xhttp
-  port: 34451
-  server: 31.56.187.35
-  servername: ee-2e06d85dc0.shamanapp.online
-  tls: true
-  type: vless
-  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | EE8178
+  network: tcp
+  port: 5065
+  server: 94.139.179.124
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 9cb5e799-f308-4d52-b761-9b4e9c2ff842
+- alterId: 0
+  cipher: auto
+  name: IT 🇮🇹 | @Raydikalx | D0BEEA
+  network: tcp
+  port: 22324
+  server: 89.41.172.85
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
   port: 443
   server: 185.225.205.53
   tls: false
   type: vless
   uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇪🇪_EE_爱沙尼亚_IPV4
+  network: ws
+  port: 8443
+  server: 5.101.180.125
+  servername: sdwf-amq.pages.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 3305c285-8d55-4f52-a3b0-2a582f5ffd59
+  ws-opts:
+    headers:
+      Host: sdwf-amq.pages.dev
+    path: /?ed=2048

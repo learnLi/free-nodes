@@ -29,11 +29,10 @@ proxies:
     headers:
       Host: lg30.cfcdn3.xyz
     path: /ray
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   network: ws
   port: 25555
   server: 152.69.226.63
-  servername: 152.69.226.63
   tls: false
   type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
@@ -56,14 +55,6 @@ proxies:
     headers:
       Host: xy1ej.stream-node-us.danfeng.qzz.io
     path: /danfeng?ed=2560
-- name: 韩国1|@ripaojiedian
-  network: tcp
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 29628
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
 - name: 韩国2|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -112,5 +103,11 @@ proxies:
   name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
   password: Y6R9pAtvxxzmGC
   port: 5001
+  server: 141.164.45.187
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
+  password: Y6R9pAtvxxzmGC
+  port: 8888
   server: 141.164.45.187
   type: ss
