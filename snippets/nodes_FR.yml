@@ -1,27 +1,53 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | CD4BBF
-  network: tcp
-  port: 38854
-  server: 94.131.9.155
+  name: FR 🇫🇷 | @Raydikalx | 01715B
+  network: ws
+  port: 18901
+  server: 2001:bc8:32d7:1a9::2
   servername: ''
   tls: false
   type: vmess
-  uuid: 00abfc28-d7d2-4787-f2a3-da1c2f38d7b8
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  ws-opts:
+    path: /github.com/Alvin9999-newpac/fanqiang
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-146.59.43.129-0675
+  name: FR 🇫🇷 | @Raydikalx | 99DDCE
+  network: ws
+  port: 18901
+  server: 2001:bc8:32d7:1a9::3
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  ws-opts:
+    path: /github.com/Alvin9999-newpac/fanqiang?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷 France Fast
   network: ws
   port: 443
-  server: 146.59.43.129
+  server: fapeng.org
+  servername: fapeng.org
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: fapeng.org
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-146.70.158.111-8708
+  network: grpc
+  port: 443
+  server: 146.70.158.111
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 54c6c823-4957-4c6c-b10c-359bc51f7cc3
-  ws-opts:
-    path: /
+  uuid: 11ae0edd-2f63-4495-8683-037abbda9986
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-152.228.191.232-0133
@@ -39,19 +65,17 @@ proxies:
     path: /ray
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-51.75.118.5-0287
+  name: 🇫🇷FR-51.83.97.167-7751
   network: ws
-  port: 20222
-  server: 51.75.118.5
+  port: 80
+  server: 51.83.97.167
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6
+  uuid: 6e7ef21f-4736-480e-93aa-1f7d54f28089
   ws-opts:
-    headers:
-      Host: 51.75.118.5
-    path: /
+    path: /vmess
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -59,33 +83,6 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🇫🇷 法国 | FRA #1'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.26.0.3
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇫🇷 法国 | FRA #2'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.27.0.8
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: 🇫🇷 法国 | FRA 2
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.27.0.8
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -181,25 +178,13 @@ proxies:
       Host: www.calmlunch.com
     path: '%2Fassignment'
 - name: '🇫🇷[www.v2nodes.com] trojan-FR-... #16'
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.220.100.168
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #17'
   password: humanity
   port: 443
   server: 165.215.250.14
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #19'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #18'
   network: ws
   password: humanity
   port: 443
@@ -211,14 +196,14 @@ proxies:
     headers:
       Host: www.calmlunch.com
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #20'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #19'
   password: humanity
   port: 443
   server: 5.44.46.142
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #21'
+- name: '🇫🇷[www.v2nodes.com] trojan-FR-... #20'
   network: ws
   password: humanity
   port: 443
@@ -270,15 +255,15 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR-54.36.174.140-0286
+  password: 6heexyz
+  port: 443
+  server: 54.36.174.140
+  type: ss
 - cipher: aes-256-gcm
   name: 🇫🇷[www.v2nodes.com] ss-FR-1609...
   password: lF3nRjH58koKTe-_VtABbg
   port: 20222
   server: 51.75.118.5
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇵🇱[www.v2nodes.com] ss-PL-1273... #1'
-  password: 6heexyz
-  port: 443
-  server: 54.36.174.140
   type: ss

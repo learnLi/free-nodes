@@ -1,109 +1,108 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 2120E7
-  network: tcp
-  port: 49232
-  server: yamabiko.proxy.rlwy.net
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 797b4e6d-0d24-48ae-8f10-351eaaa8ed88
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 3D513A
-  network: tcp
-  port: 22324
-  server: 172.111.38.100
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 4F5D7F
-  network: tcp
-  port: 180
-  server: 82.198.246.97
-  servername: null
-  tls: false
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 69F6A6
+  name: US 🇺🇸 | @Raydikalx | 2DE869
   network: ws
-  port: 24943
-  server: 69.63.210.35
-  servername: ''
-  tls: false
+  port: 443
+  server: 3kCf86Ufi0U5xBDA.v.3dns.vip
+  servername: 3kCf86Ufi0U5xBDA.v.3dns.vip
+  tls: true
   type: vmess
-  uuid: a89feda9-ec30-48c1-ae6b-1a6f5b573f6b
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: www.bing.com
-    path: /a89feda9-ec30-48c1-ae6b-1a6f5b573f6b-vm
+      Host: 3kCf86Ufi0U5xBDA.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 9EEDF3
-  network: tcp
-  port: 22324
-  server: 216.106.183.35
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | A3DF03
-  network: tcp
-  port: 37387
-  server: ushsfs1.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: b85ba3bc-bac6-4cfc-b8be-fe16a7dac1b1
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | AAB7BB
-  network: ws
-  port: 80
-  server: us-23.hihu.net
-  tls: false
-  type: vmess
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  ws-opts:
-    headers:
-      Host: 172.66.0.251
-    path: /870ao26f
-- alterId: 0
-  cipher: auto
-  name: vmess-1837386188
+  name: US 🇺🇸 | @Raydikalx | 602935
   network: tcp
   port: 18000
-  server: 38.91.107.49
-  servername: ''
+  server: 67.220.95.3
+  servername: 67.220.95.3
   tls: false
   type: vmess
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alpn:
-  - ''
-  alterId: 0
+- alterId: 0
   cipher: auto
-  name: '🇺🇸 美国 | USA #5'
+  name: US 🇺🇸 | @Raydikalx | 6F0A31
+  network: tcp
+  port: 8881
+  server: 138.197.9.115
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: db5afae4-ac23-41a6-8378-f307a9a47436
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | 75386D
+  network: httpupgrade
+  port: 80
+  server: cd0.bmi.ir.kolman.com.de
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: b223d6cf-6f94-4889-8bcf-263c15881006
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | 7CF2F0
   network: ws
   port: 443
-  server: US122201.ssgreen.org
-  skip-cert-verify: true
+  server: 66.163.115.23
+  servername: ''
   tls: true
   type: vmess
-  udp: true
-  uuid: 2991b1de-fc76-4357-8f79-75dad945cf5c
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | 7D43D0
+  network: ws
+  port: 443
+  server: BbBBBBBh.hUAngsHANg.OnLINe
+  servername: null
+  tls: true
+  type: vmess
+  uuid: 98b419ef-83a2-4d1b-a23d-566b7f24477b
   ws-opts:
     headers:
-      Host: US122201.ssgreen.org
-    path: /wes
+      Host: BBBBbbBh.HUangSHaNg.oNline
+    path: /Iu415Fpf5REYxWLpTGA5AqzZ2Mj
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | A21CA4
+  network: ws
+  port: 8880
+  server: 162.159.45.63
+  servername: m1.106778.xyz
+  tls: false
+  type: vmess
+  uuid: 90f8f4dc-8092-4355-9047-05f506f5e9ab
+  ws-opts:
+    headers:
+      Host: m1.106778.xyz
+    path: github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: US 🇺🇸 | @Raydikalx | FB6B77
+  network: httpupgrade
+  port: 80
+  server: cd0.bmi.ir.kolman.com.de
+  servername: bmi.ir.draft.co.impossible.com.ir.bmi.ir.com.iran.ir1.ifilmino.com
+  tls: false
+  type: vmess
+  uuid: 9cce2b45-c226-4501-a9a1-226ed4179795
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 United States-2923
+  network: grpc
+  port: 2087
+  server: elma.ns.cloudflare.com
+  servername: 1fdSNA119228928OpS2smTaB228aAsDDsd1ea114928243200.1-senator.info
+  tls: true
+  type: vmess
+  uuid: 2a3263e2-891c-4446-b474-a8c63acb6e25
 - alterId: 0
   cipher: auto
   name: '🇺🇸 美国(yudou99.com 玉豆分享) #1'
@@ -156,64 +155,36 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
     path: /ws?ed=2048
-- alterId: 64
-  cipher: auto
-  name: 🇺🇸US-108.186.116.173-1375
-  network: ws
-  port: 443
-  server: 108.186.116.173
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.71034070.xyz
-    path: /path/1703837837728
-- alterId: 2
-  cipher: auto
-  name: 🇺🇸US-13.248.169.48-1863
-  network: ws
-  port: 443
-  server: 422wkl.fans8.xyz
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 7f4ff2e1-c08f-35bd-afe7-4a6a386907aa
-  ws-opts:
-    headers:
-      Host: 422wkl.fans8.xyz
-    path: /
-- alterId: 64
-  cipher: auto
-  name: 🇺🇸US-142.4.121.227-1396
-  network: ws
-  port: 40000
-  server: 142.4.121.227
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.43535620.xyz
-    path: /path/1704363182493
 - alterId: 0
   cipher: auto
-  name: 🇺🇸US-146.190.114.190-2885
+  name: 🇺🇸US-108.181.23.161-0755
   network: ws
-  port: 80
-  server: 146.190.114.190
-  servername: tms.dingtalk.com
-  skip-cert-verify: false
+  port: 8080
+  server: 108.181.23.161
+  servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: db8f8bbe-c589-4316-8063-49baaf0fd858
+  uuid: 969f1909-c0d3-4c30-813d-3aec5c838b7d
   ws-opts:
-    path: /
+    headers:
+      Host: internet.life.com.by
+    path: /1IKYjV0r/
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸US-128.14.140.254-0054
+  network: ws
+  port: 443
+  server: 128.14.140.254
+  servername: v2ray2.ssr-free2.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 0479eb9d-999d-4bff-ae3f-4f7cc440ce46
+  ws-opts:
+    headers:
+      Host: v2ray2.ssr-free2.xyz
+    path: /dongtaiwang.com
 - alterId: 4
   cipher: auto
   name: 🇺🇸US-192.96.204.250-5562
@@ -231,28 +202,17 @@ proxies:
     path: /ws
 - alterId: 0
   cipher: auto
-  name: 🇺🇸US-5.161.106.72-1806
-  network: http
-  port: 50978
-  server: 5.161.106.72
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 89e6248b-0152-4317-a6ed-b6a0cf41f2cb
-- alterId: 0
-  cipher: auto
-  name: 🇺🇸US-51.81.220.34-4968
+  name: 🇺🇸US-47.253.84.189-8150
   network: ws
-  port: 80
-  server: 51.81.220.34
+  port: 443
+  server: 47.253.84.189
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 0842be25-d718-491a-bca8-5e9d080150e6
+  uuid: cacc6b45-94c5-4d9e-a839-5d69cdd346eb
   ws-opts:
-    path: /vmess
+    path: /swoole
 - name: 美国1|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -281,7 +241,7 @@ proxies:
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
-  server: 216.38.170.103
+  server: 179.253.255.7
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
@@ -290,90 +250,46 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇺🇸 美国 | USA #10'
+- name: '🇺🇸 美国 | USA #2'
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
-  server: 104.18.0.1
+  server: 179.253.255.7
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-- name: '🇺🇸 美国 | USA #11'
+- name: '🇺🇸 美国 | USA #22'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 179.253.225.172
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: '🇺🇸 美国 | USA #23'
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
   server: 179.255.103.84
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-- name: '🇺🇸 美国 | USA #13'
+- name: '🇺🇸 美国 | USA #5'
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 2087
+  server: 104.18.43.20
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+- name: 🇺🇸 美国 | USA 10
+  network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
   server: 179.255.141.59
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-- name: '🇺🇸 美国 | USA #15'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.18.0.3
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇺🇸 美国 | USA #17'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 193.163.19.232
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇺🇸 美国 | USA #18'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.253.255.184
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇺🇸 美国 | USA #19'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.255.141.28
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇺🇸 美国 | USA #2'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 216.38.170.103
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇺🇸 美国 | USA #20'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.17.0.8
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇺🇸 美国 | USA #3'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.21.0.7
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇺🇸 美国 | USA #4'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.253.231.141
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-- name: '🇺🇸 美国 | USA #7'
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.253.231.22
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
 - name: '🇺🇸 美国 | USA 10 #1'
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
@@ -386,19 +302,6 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇺🇸 美国 | USA 10 #2'
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.18.0.3
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
 - name: 🇺🇸 美国 | USA 11
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
@@ -407,32 +310,6 @@ proxies:
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: '🇺🇸 美国 | USA 11 #1'
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 193.163.19.232
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: 🇺🇸 美国 | USA 12
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.253.255.184
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: api.85s.me
@@ -461,7 +338,7 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇺🇸 美国 | USA 13 #2'
+- name: 🇺🇸 美国 | USA 14
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
@@ -469,20 +346,18 @@ proxies:
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇺🇸 美国 | USA 14 #2'
+- name: '🇺🇸 美国 | USA 14 #1'
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
-  server: 104.17.0.8
+  server: 193.163.19.232
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: api.85s.me
@@ -499,6 +374,19 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
+- name: '🇺🇸 美国 | USA 17 #1'
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 179.253.225.172
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
 - name: 🇺🇸 美国 | USA 18
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
@@ -511,11 +399,24 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: 🇺🇸 美国 | USA 2
+- name: '🇺🇸 美国 | USA 18 #1'
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 8443
-  server: 179.253.226.191
+  port: 443
+  server: 179.255.103.84
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: /
+- name: 🇺🇸 美国 | USA 19
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 179.253.231.141
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
@@ -523,11 +424,11 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇺🇸 美国 | USA 2 #1'
+- name: 🇺🇸 美国 | USA 2
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.253.255.7
+  port: 8443
+  server: 179.253.226.191
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
@@ -559,15 +460,14 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇺🇸 美国 | USA 3 #1'
+- name: 🇺🇸 美国 | USA 3
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
-  server: 179.253.231.141
+  server: 179.253.231.22
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: api.85s.me
@@ -608,19 +508,6 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇺🇸 美国 | USA 5 #1'
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.253.231.22
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
 - name: 🇺🇸 美国 | USA 6
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
@@ -633,19 +520,6 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: '🇺🇸 美国 | USA 6 #1'
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 104.18.0.1
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
 - name: 🇺🇸 美国 | USA 7
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
@@ -654,32 +528,6 @@ proxies:
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: '🇺🇸 美国 | USA 7 #1'
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.255.103.84
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: 🇺🇸 美国 | USA 8
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 179.255.141.59
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: api.85s.me
@@ -702,12 +550,6 @@ proxies:
   server: 172.66.47.18
   skip-cert-verify: false
   sni: APkD964o1oghlTghHt0L0Of.pAgeS.Dev
-  type: trojan
-- name: 🇺🇸US-167.88.61.52-0147
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.52
-  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
   type: trojan
 - name: 🇺🇸US-169.197.140.218-1980
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
@@ -819,6 +661,17 @@ proxies:
   skip-cert-verify: true
   sni: firefox.com
   type: trojan
+- name: 🇺🇸[www.v2nodes.com] trojan-US-...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 170.101.101.53
+  type: trojan
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #1'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 167.88.61.198
+  sni: cdn.browseseniorrolesandenhanceyourcareertoday.com
+  type: trojan
 - name: '🇺🇸[www.v2nodes.com] trojan-US-... #2'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -827,8 +680,8 @@ proxies:
 - name: '🇺🇸[www.v2nodes.com] trojan-US-... #4'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 167.88.61.198
-  sni: cdn.browseseniorrolesandenhanceyourcareertoday.com
+  server: 167.88.61.52
+  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
   type: trojan
 - name: '🇺🇸[www.v2nodes.com] trojan-US-... #6'
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -843,11 +696,6 @@ proxies:
   server: ench-snet-app.w-ctrip.cn
   skip-cert-verify: true
   sni: cm.g.doubleclick.net
-  type: trojan
-- name: '🇺🇸[www.v2nodes.com] trojan-US-... #8'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 170.101.101.53
   type: trojan
 - cipher: aes-128-gcm
   name: shadowsocks-1827146051
