@@ -1,34 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-130.162.141.104-2064
-  network: ws
-  port: 443
-  server: 130.162.141.104
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
-  ws-opts:
-    path: /reffs7y26g0ua
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-132.226.16.183-1211
-  network: ws
-  port: 443
-  server: roewesu.eu.org
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 84e46faf-7d89-43af-8bd9-01b41fc1ddce
-  ws-opts:
-    headers:
-      Host: roewesu.eu.org
-    path: /0cc651aee76c7/
-- alterId: 0
-  cipher: auto
   name: 🇰🇷KR-138.2.122.225-0121
   network: ws
   port: 443
@@ -44,21 +16,6 @@ proxies:
     path: /ray
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-138.2.122.225-0327
-  network: ws
-  port: 443
-  server: 138.2.122.225
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /
-- alterId: 0
-  cipher: auto
   name: 🇰🇷KR-146.56.166.153-0131
   network: ws
   port: 443
@@ -72,22 +29,7 @@ proxies:
     headers:
       Host: lg30.cfcdn3.xyz
     path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-146.56.166.153-0317
-  network: ws
-  port: 443
-  server: 146.56.166.153
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   network: ws
   port: 25555
   server: 152.69.226.63
@@ -96,46 +38,6 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
-- name: 韩国1|@ripaojiedian
-  network: tcp
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 29628
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-- name: 韩国2|@ripaojiedian
-  network: tcp
-  password: b17e9b52db9623bd6c16eea3d7adb5b3
-  port: 18572
-  server: ench-snet-app.w-ctrip.cn
-  skip-cert-verify: true
-  sni: cm.g.doubleclick.net
-  type: trojan
-- name: 🇰🇷 韩国 | KOR
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 119.28.150.58
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: 🇰🇷 韩国 | KOR 2
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 8443
-  server: 123.111.169.70
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
@@ -143,25 +45,7 @@ proxies:
   server: 211.178.105.134
   type: ss
 - cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-2529
-  password: Y6R9pAtvxxzmGC
-  port: 9090
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  password: Y6R9pAtvxxzmGC
-  port: 8888
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
   name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
-  password: TEzjfAYq2IjtuoS
-  port: 6697
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #2'
   password: KixLvKzwjekG00rm
   port: 8000
   server: 141.164.45.187

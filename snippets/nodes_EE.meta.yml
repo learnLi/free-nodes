@@ -1,27 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 🇪🇪EE-176.112.146.190-0656
-  network: ws
-  port: 80
-  server: 176.112.146.190
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: f9247df4-02d5-4b31-acc5-4022652c5953
-  ws-opts:
-    path: /
-- grpc-opts:
-    grpc-service-name: grpc446
-  name: 🇪🇪 爱沙尼亚 | EST
-  network: grpc
-  port: 446
-  server: 144.31.129.202
-  servername: 144.31.129.202
-  tls: true
-  type: vless
-  uuid: 4cb5f361-ac35-4a80-b6da-f34bc90ee775
 - name: '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
   port: 16443
   server: 45.86.60.174

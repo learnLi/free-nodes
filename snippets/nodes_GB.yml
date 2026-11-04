@@ -1,31 +1,25 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 30892D
-  network: ws
-  port: 443
-  server: ki9i.dddct.us.ci
-  servername: ki9i.dddct.us.ci
-  tls: true
+  name: GB 🇬🇧 | @Raydikalx | 052C6E
+  network: tcp
+  port: 17356
+  server: freedom.vipgsmteam.info
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 795ef99b-3260-4d18-ac98-5130bba9f168
-  ws-opts:
-    headers:
-      Host: ki9i.dddct.us.ci
-    path: /LtgDLBVt1BfWnGWI7hLRpJ1
+  uuid: f95cb5ae-1b06-4a57-aba0-30afe12d23ed
 - alterId: 0
   cipher: auto
-  name: 🇬🇧GB-198.244.148.214-7806
+  name: GB 🇬🇧 | @Raydikalx | E3356A
   network: ws
-  port: 443
-  server: 198.244.148.214
-  servername: goodfamily19.site
-  skip-cert-verify: false
-  tls: true
+  port: 80
+  server: 18.168.124.58
+  tls: false
   type: vmess
-  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
+  uuid: ff7be42d-7d09-445e-b89f-96d7712eb4bf
   ws-opts:
-    path: /wmzmvws
+    path: /graphql
 - cipher: aes-128-gcm
   name: shadowsocks-1827146143
   password: shadowsocks
@@ -43,6 +37,18 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 178.83.185.156
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.10-0255
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.10
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.149-0262
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.149
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.155-0244
@@ -73,12 +79,6 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.171
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.174-0264
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.174
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.176-0275
@@ -117,6 +117,12 @@ proxies:
   server: 82.38.31.186
   type: ss
 - cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.187-0156
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.187
+  type: ss
+- cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.189-0166
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
@@ -129,28 +135,40 @@ proxies:
   server: 82.38.31.190
   type: ss
 - cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.191-0208
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.191
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.192-0179
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.192
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.193-0175
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.193
+  type: ss
+- cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.194-0170
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.194
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.199-0266
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.199
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.2-0233
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.2
-  type: ss
-- cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.202-0158
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.202
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.203-0314
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.203
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.205-0315
@@ -259,6 +277,12 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.48
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.49-0249
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.49
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.61-0236
