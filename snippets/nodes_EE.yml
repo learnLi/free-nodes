@@ -1,11 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | 94C8EE
-  network: tcp
-  port: 2044
-  server: 53f3167b1b943c53.vira-ai.dns.8.8.8.8.ir-service.connectoo.my.id
+  name: 🇪🇪EE-176.112.146.190-0656
+  network: ws
+  port: 80
+  server: 176.112.146.190
   servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 6bf2145c-75ea-48bc-b10a-84265c8d0973
+  uuid: f9247df4-02d5-4b31-acc5-4022652c5953
+  ws-opts:
+    path: /

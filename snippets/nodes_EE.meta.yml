@@ -1,32 +1,36 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: NL 🇳🇱 | @Raydikalx | 94C8EE
-  network: tcp
-  port: 2044
-  server: 53f3167b1b943c53.vira-ai.dns.8.8.8.8.ir-service.connectoo.my.id
+  name: 🇪🇪EE-176.112.146.190-0656
+  network: ws
+  port: 80
+  server: 176.112.146.190
   servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 6bf2145c-75ea-48bc-b10a-84265c8d0973
+  uuid: f9247df4-02d5-4b31-acc5-4022652c5953
+  ws-opts:
+    path: /
+- grpc-opts:
+    grpc-service-name: grpc446
+  name: 🇪🇪 爱沙尼亚 | EST
+  network: grpc
+  port: 446
+  server: 144.31.129.202
+  servername: 144.31.129.202
+  tls: true
+  type: vless
+  uuid: 4cb5f361-ac35-4a80-b6da-f34bc90ee775
+- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
+  port: 16443
+  server: 45.86.60.174
+  tls: false
+  type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
 - name: '🇪🇪[www.v2nodes.com] vless-EE-1... #5'
   port: 443
   server: 185.225.205.53
   tls: false
   type: vless
   uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇪🇪_EE_爱沙尼亚_IPV4
-  network: ws
-  port: 8443
-  server: 5.101.180.125
-  servername: sdwf-amq.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 3305c285-8d55-4f52-a3b0-2a582f5ffd59
-  ws-opts:
-    headers:
-      Host: sdwf-amq.pages.dev
-    path: /?ed=2048

@@ -1,15 +1,27 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 05FF6E
-  network: ws
-  port: 8555
-  server: 54.168.242.25
+  name: JP 🇯🇵 | @Raydikalx | 4C7D0D
+  network: tcp
+  port: 18112
+  server: oc.imfun.fun
+  servername: oc.imfun.fun
   tls: false
   type: vmess
-  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D144A2
+  network: ws
+  port: 443
+  server: J3Nz0zA0r13AoVhH.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
-    path: /
+    headers:
+      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
   name: JP 🇯🇵 | @Raydikalx | DDA3E3
@@ -24,40 +36,47 @@ proxies:
     headers:
       Host: DrBKg16eGf3FZlM3.v.3dns.vip
     path: /ws-vmess
-- alterId: 1
+- alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | EF09A6
-  network: tcp
-  port: 28787
-  server: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  servername: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  tls: true
-  type: vmess
-  uuid: 2ce005b4-e57a-3670-be88-60eeeb078bb7
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇫🇷_FR_法国->🇯🇵_JP_日本_IPV4
+  name: 🇯🇵JP-92.38.178.93-0852
   network: ws
-  port: 8443
-  server: 89.208.97.224
-  servername: sdwf-amq.pages.dev
+  port: 443
+  server: 92.38.178.93
+  servername: ''
   skip-cert-verify: true
   tls: true
-  type: vless
-  uuid: 3305c285-8d55-4f52-a3b0-2a582f5ffd59
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: sdwf-amq.pages.dev
-    path: /?ed=2048
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #12'
+      Host: 92.38.178.93
+    path: linkvws
+- name: 🇯🇵[www.v2nodes.com] vless-JP-1...
+  network: ws
+  port: 443
+  server: 104.17.210.74
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxywsfp=chrome
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
+  port: 443
+  server: 137.220.221.179
+  tls: false
+  type: vless
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #14'
   network: tcp
   port: 47878
   server: 152.69.195.67
-  servername: 152.69.195.67
   tls: false
   type: vless
   uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #13'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #15'
   network: ws
   port: 443
   server: 104.21.221.158
@@ -71,7 +90,7 @@ proxies:
       Host: ccc.010304.xyz
     path: /fp=unsafefp=unsafe
 - encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #15'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #17'
   network: ws
   port: 11424
   server: 38.47.96.220
@@ -90,24 +109,21 @@ proxies:
   tls: false
   type: vless
   uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-- alpn:
-  - http/1.1
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
   network: ws
   port: 443
-  server: 188.114.98.0
+  server: 104.16.10.234
   servername: jp3.yohototo.top
-  skip-cert-verify: false
   tls: true
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
       Host: jp3.yohototo.top
-    path: /tyxywsfp=unsafe
+    path: /tyxywsfp=chrome
 - client-fingerprint: chrome
   encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #9'
   network: ws
   port: 443
   server: 207.148.115.152
@@ -119,48 +135,6 @@ proxies:
     headers:
       Host: vlso5.1d.mom
     path: /socks5=888:888@hkip.1d.mom:1080
-- name: 🇯🇵[www.v2nodes.com] vless-JP-4...
-  network: ws
-  port: 443
-  server: kclx.eu.org
-  servername: kclx.eu.org
-  tls: true
-  type: vless
-  uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
-  ws-opts:
-    headers:
-      Host: kclx.eu.org
-    path: /154.16.10.34-8080fp=chrome
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇱🇻_LV_拉脱维亚->🇯🇵_JP_日本_IPV4
-  network: ws
-  port: 8443
-  server: 188.253.21.238
-  servername: sdwf-amq.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 3305c285-8d55-4f52-a3b0-2a582f5ffd59
-  ws-opts:
-    headers:
-      Host: sdwf-amq.pages.dev
-    path: /?ed=2048
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇸🇪_SE_瑞典->🇯🇵_JP_日本_IPV4
-  network: ws
-  port: 8443
-  server: 62.182.196.194
-  servername: sdwf-amq.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 3305c285-8d55-4f52-a3b0-2a582f5ffd59
-  ws-opts:
-    headers:
-      Host: sdwf-amq.pages.dev
-    path: /?ed=2048
 - name: 日本1|@ripaojiedian
   network: tcp
   password: b17e9b52db9623bd6c16eea3d7adb5b3
@@ -185,43 +159,7 @@ proxies:
   skip-cert-verify: true
   sni: wximg.qq.com
   type: trojan
-- name: 🇯🇵 日本 | JPN
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 172.238.29.97
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: '🇯🇵 日本 | JPN #1'
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 13.158.71.221
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: 🇯🇵 日本 | JPN 2
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 172.233.91.12
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: '🇯🇵 日本 | JPN 2 #1'
+- name: 🇯🇵 日本 | JPN 3
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
@@ -233,71 +171,11 @@ proxies:
     headers:
       Host: api.85s.me
     path: /
-- name: 🇯🇵 日本 | JPN 3
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 172.237.1.32
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
 - name: 🇯🇵 日本 | JPN 4
   network: ws
   password: 8deb189a-3aed-4865-843b-b72dae954c46
   port: 443
-  server: 154.19.187.190
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: '🇯🇵 日本 | JPN 4 #1'
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 172.104.89.73
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: 🇯🇵 日本 | JPN 5
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 172.238.22.178
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: 🇯🇵 日本 | JPN 6
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
   server: 54.249.160.228
-  skip-cert-verify: true
-  sni: api.85s.me
-  type: trojan
-  ws-opts:
-    headers:
-      Host: api.85s.me
-    path: /
-- name: 🇯🇵 日本 | JPN 7
-  network: ws
-  password: 8deb189a-3aed-4865-843b-b72dae954c46
-  port: 443
-  server: 13.158.86.30
   skip-cert-verify: true
   sni: api.85s.me
   type: trojan
@@ -317,6 +195,42 @@ proxies:
   server: 45.32.52.173
   sni: 45.32.52.173
   type: trojan
+- name: 🇯🇵_JP_日本_IPV4
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.238.22.178
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: '%2F'
+- name: 🇯🇵_JP_日本_IPV4 (3)
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.233.91.12
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: '%2F'
+- name: 🇯🇵_JP_日本_IPV4 (4)
+  network: ws
+  password: 8deb189a-3aed-4865-843b-b72dae954c46
+  port: 443
+  server: 172.238.29.97
+  skip-cert-verify: true
+  sni: api.85s.me
+  type: trojan
+  ws-opts:
+    headers:
+      Host: api.85s.me
+    path: '%2F'
 - cipher: aes-128-gcm
   name: shadowsocks-1827146287
   password: shadowsocks
@@ -324,9 +238,9 @@ proxies:
   server: 149.22.87.241
   type: ss
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146658
+  name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
-  port: 80
+  port: 443
   server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
@@ -334,12 +248,6 @@ proxies:
   password: shadowsocks
   port: 443
   server: 149.22.87.240
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #2'
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'
@@ -352,4 +260,10 @@ proxies:
   password: shadowsocks
   port: 443
   server: 149.22.87.204
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #11'
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
   type: ss
