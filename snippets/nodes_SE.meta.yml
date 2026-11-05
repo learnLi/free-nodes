@@ -1,5 +1,17 @@
 proxies:
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
+- name: '🇸🇪 瑞典 | SWE #1'
+  network: tcp
+  port: 5059
+  server: bot.vudfaro.ir
+  tls: false
+  type: vless
+  udp: true
+  uuid: 7df4f23f-b361-412a-883a-54dfdb5b8c8f
+  ws-opts:
+    headers:
+      Host: bot.vudfaro.ir
+    path: /
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   network: ws
   port: 14430
   server: 5.178.109.174
@@ -32,3 +44,10 @@ proxies:
   port: 8388
   server: 70.34.212.124
   type: ss
+- name: 🇸🇪SE_1|1.2MB/s
+  password: None
+  port: 443
+  server: 146.70.242.146
+  skip-cert-verify: true
+  tls: true
+  type: http
