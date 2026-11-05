@@ -1,27 +1,30 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 4968B8
+  name: TW 🇹🇼 | @Raydikalx | C3EB50
   network: ws
   port: 443
-  server: 7dba81fc3a0b.oylfmxz.cn
-  servername: 7dba81fc3a0b.oylfmxz.cn
+  server: 9641684.sdf65h4.top
+  servername: 9641684.sdf65h4.top
   tls: true
   type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
   ws-opts:
+    headers:
+      Host: 9641684.sdf65h4.top
     path: /
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | F93DED
+  name: 🇹🇼TW-211.22.184.186-0273
   network: ws
   port: 443
-  server: 24864168545164.d6f54hd1j.cc
-  servername: 24864168545164.d6f54hd1j.cc
+  server: 211.22.184.186
+  servername: ''
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081
+  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
   ws-opts:
     headers:
-      Host: 24864168545164.d6f54hd1j.cc
+      Host: crude-franklin-favors-outsourcing.trycloudflare.com
     path: /
