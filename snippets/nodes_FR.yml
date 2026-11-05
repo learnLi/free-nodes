@@ -1,6 +1,21 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: 🇫🇷FR-51.75.118.5-1814
+  network: ws
+  port: 20222
+  server: 51.75.118.5
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 541d46d8-5fc6-4d57-a7c4-9ccd3b5966eb
+  ws-opts:
+    headers:
+      Host: 51.75.118.5
+    path: /parham-confing-vmess?u=6991fbdd-51e0-4970-b159-f9af46890c43-beda239a407a7eed66f791c6
+- alterId: 0
+  cipher: auto
   name: 🇫🇷FR-51.83.97.167-7589
   network: ws
   port: 80
@@ -12,21 +27,6 @@ proxies:
   uuid: 6e7ef21f-4736-480e-93aa-1f7d54f28089
   ws-opts:
     path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-54.37.131.126-1818
-  network: ws
-  port: 80
-  server: 54.37.131.126
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-    path: /
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -44,14 +44,14 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.26.15.137
+  server: 104.17.111.4
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan

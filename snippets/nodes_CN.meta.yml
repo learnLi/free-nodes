@@ -1,20 +1,16 @@
 proxies:
-- alterId: 64
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 175208
-  network: tcp
-  port: 54402
-  server: 120.233.43.20
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 4960A7
-  network: tcp
-  port: 13001
-  server: 120.197.130.126
-  tls: false
+  name: 🇨🇳CN-106.75.104.152-1153
+  network: ws
+  port: 443
+  server: 106.75.104.152
+  servername: ''
+  skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: 21dcbec8-eee8-3d20-82b6-f8c16fe6dc8d
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray

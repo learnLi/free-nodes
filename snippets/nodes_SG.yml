@@ -1,60 +1,54 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 3AD363
+  name: SG 🇸🇬 | @Raydikalx | CF0750
   network: tcp
-  port: 18000
-  server: ww11.levikogjgfdd.ir
-  servername: null
+  port: 59121
+  server: 129.226.157.220
   tls: false
   type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  uuid: d9865d63-d95c-454b-ba07-8e88b838a801
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 44F22F
-  network: tcp
-  port: 30830
-  server: v30.hdacd.com
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 481627
-  network: raw
-  port: 18000
-  server: ww11.levikogjgfdd.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | A5D8F4
-  network: tcp
-  port: 52364
-  server: fin-5.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 06e769f1-96f8-4071-8910-b8f81b25d724
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-43.159.109.162-0048
+  name: SG 🇸🇬 | @Raydikalx | D2A027
   network: ws
-  port: 2086
-  server: www.gov.hk
-  servername: ''
-  skip-cert-verify: true
+  port: 443
+  server: wap.appleid.bf
   tls: false
   type: vmess
-  uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
+  uuid: 3960f128-1163-40a3-8dd7-7c91176e14a5
   ws-opts:
     headers:
-      Host: fr.cloudflare.quest
-    path: /aries
+      Host: gw.alicdn.com
+    path: /CAT
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | E22C29
+  network: ws
+  port: 443
+  server: web-production-0392e.up.railway.app
+  servername: web-production-0392e.up.railway.app
+  tls: true
+  type: vmess
+  uuid: e4ea74dd-2663-43a1-b843-14443cf70ddb
+  ws-opts:
+    headers:
+      Host: web-production-0392e.up.railway.app
+    path: /vm-ws
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | E6EC63
+  network: ws
+  port: 443
+  server: web-pmapdcb-mabtu.up.railway.app
+  servername: web-pmapdcb-mabtu.up.railway.app
+  tls: true
+  type: vmess
+  uuid: e5cc130a-c773-4c3c-beea-b55fee28ed72
+  ws-opts:
+    headers:
+      Host: web-pmapdcb-mabtu.up.railway.app
+    path: /vm-ws
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -71,10 +65,4 @@ proxies:
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 68.183.227.4
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1559...
-  password: qpSevKaUXYQKvSjp
-  port: 8388
-  server: 139.180.220.175
   type: ss

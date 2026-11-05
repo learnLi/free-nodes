@@ -1,6 +1,21 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: 🇫🇷FR-51.75.118.5-1814
+  network: ws
+  port: 20222
+  server: 51.75.118.5
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 541d46d8-5fc6-4d57-a7c4-9ccd3b5966eb
+  ws-opts:
+    headers:
+      Host: 51.75.118.5
+    path: /parham-confing-vmess?u=6991fbdd-51e0-4970-b159-f9af46890c43-beda239a407a7eed66f791c6
+- alterId: 0
+  cipher: auto
   name: 🇫🇷FR-51.83.97.167-7589
   network: ws
   port: 80
@@ -12,29 +27,6 @@ proxies:
   uuid: 6e7ef21f-4736-480e-93aa-1f7d54f28089
   ws-opts:
     path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-54.37.131.126-1818
-  network: ws
-  port: 80
-  server: 54.37.131.126
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-    path: /
-- client-fingerprint: chrome
-  name: '🇫🇷 法国 | FRA #1'
-  port: 37783
-  server: 62.210.70.194
-  servername: www.yahoo.com
-  tls: true
-  type: vless
-  uuid: a289c660-1b12-432b-a06c-c2ae469272b0
 - name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
   port: 443
@@ -47,35 +39,10 @@ proxies:
     headers:
       Host: Appxdn.global.ssl.fastly.net
     path: /fp=chrome
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  network: ws
-  port: 443
-  server: 92.53.190.167
-  servername: fgzb39ezu86s.ycz7syeeu3is.workers.dev
-  tls: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-ccc0e8cd3a83
-  ws-opts:
-    headers:
-      Host: fgzb39ezu86s.ycz7syeeu3is.workers.dev
-    path: /stream/PANEL_ZEUS/ccc0e8cd3a83fp=unsafe
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
-  network: tcp
-  port: 2053
-  server: w.geogame.ir
-  servername: w.geogame.ir
-  tls: true
-  type: vless
-  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #12'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
   network: ws
   port: 14430
   server: 138.124.70.41
-  servername: 138.124.70.41
   tls: false
   type: vless
   uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
@@ -84,7 +51,7 @@ proxies:
       Host: 138.124.70.41
     path: /vless
 - client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #13'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #11'
   network: ws
   port: 443
   server: 199.232.78.160
@@ -96,41 +63,61 @@ proxies:
     headers:
       Host: Appxdn.global.ssl.fastly.net
     path: /
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #15'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #12'
+  port: 35108
+  server: 152.228.139.33
+  tls: false
+  type: vless
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #13'
   port: 443
   server: 161.97.160.224
   tls: false
   type: vless
   uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #16'
   port: 80
   server: 152.228.162.19
   tls: false
   type: vless
   uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+  ws-opts:
+    path: /vless/
 - client-fingerprint: firefox
   grpc-opts:
-    grpc-service-name: grpc-common3
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+    grpc-service-name: grpc_common3
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
   network: grpc
-  port: 35108
+  port: 51671
   server: 152.228.139.33
-  servername: www.nvidia.com
+  servername: www.sony.com
   tls: true
   type: vless
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
+  network: ws
+  port: 443
+  server: cf.090227.xyz
+  servername: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chromefp=chrome
 - name: 🇫🇷[www.v2nodes.com] vless-FR-2...
   network: ws
   port: 443
-  server: 104.20.45.141
-  servername: razk50e1uvss.amirhoseyn-meshki.workers.dev
+  server: 178.104.70.11
+  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
   tls: true
   type: vless
-  uuid: 50414e45-4c5f-5a45-5553-7e7818beb9aa
+  uuid: 64726966-0000-4000-8000-740000000000
   ws-opts:
     headers:
-      Host: razk50e1uvss.amirhoseyn-meshki.workers.dev
-    path: /stream/PANEL_ZEUS/7e7818beb9aafp=unsafe
+      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
+    path: /fp=firefox
 - client-fingerprint: firefox
   name: '🇫🇷[www.v2nodes.com] vless-FR-2... #2'
   network: ws
@@ -185,7 +172,7 @@ proxies:
       Host: ccc.010304.xyz
     path: /fp=unsafe
 - client-fingerprint: chrome
-  name: '🏳[www.v2nodes.com] vless- #72'
+  name: '🏳[www.v2nodes.com] vless- #68'
   network: ws
   port: 443
   server: cf.130519.xyz
@@ -214,14 +201,14 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.26.15.137
+  server: 104.17.111.4
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -267,15 +254,6 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: FR_speednode_0010
-  password: 'null'
-  port: 23856
-  server: 51.159.225.196
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: 'null'
 - name: FR_speednode_0011
   port: 23856
   server: 51.159.225.196
@@ -290,6 +268,31 @@ proxies:
   tls: true
   type: http
   udp: true
+- name: 🇫🇷FR_1|3.1MB/s
+  port: 9443
+  server: 138.199.47.247
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇫🇷FR_2|2.5MB/s
+  password: None
+  port: 8081
+  server: 31.32.19.111
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇫🇷FR_3|2.9MB/s
+  port: 8090
+  server: 80.124.109.22
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇫🇷FR_4|3.2MB/s
+  port: 443
+  server: 82.66.235.221
+  skip-cert-verify: true
+  tls: true
+  type: http
 - alpn:
   - h3
   auth-str: dongtaiwang.com
