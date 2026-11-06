@@ -27,6 +27,35 @@ proxies:
   uuid: 6e7ef21f-4736-480e-93aa-1f7d54f28089
   ws-opts:
     path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-54.37.131.126-1818
+  network: ws
+  port: 80
+  server: 54.37.131.126
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
+  ws-opts:
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
+    path: /
+- client-fingerprint: chrome
+  name: '🇫🇷 法国 | FRA #2'
+  network: ws
+  port: 443
+  server: 199.232.78.160
+  servername: cdn.akamai.steamstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+    path: /
 - name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
   port: 443
@@ -39,19 +68,8 @@ proxies:
     headers:
       Host: Appxdn.global.ssl.fastly.net
     path: /fp=chrome
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
-  network: ws
-  port: 14430
-  server: 138.124.70.41
-  tls: false
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  ws-opts:
-    headers:
-      Host: 138.124.70.41
-    path: /vless
 - client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #11'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
   network: ws
   port: 443
   server: 199.232.78.160
@@ -64,36 +82,23 @@ proxies:
       Host: Appxdn.global.ssl.fastly.net
     path: /
 - name: '🇫🇷[www.v2nodes.com] vless-FR-1... #12'
-  port: 35108
-  server: 152.228.139.33
-  tls: false
-  type: vless
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #13'
   port: 443
   server: 161.97.160.224
   tls: false
   type: vless
   uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #16'
-  port: 80
-  server: 152.228.162.19
-  tls: false
-  type: vless
-  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
-  ws-opts:
-    path: /vless/
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc_common3
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
-  network: grpc
-  port: 51671
-  server: 152.228.139.33
-  servername: www.sony.com
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #17'
+  network: ws
+  port: 443
+  server: 178.104.70.11
+  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
   tls: true
   type: vless
-  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
+  uuid: 64726966-0000-4000-8000-740000000000
+  ws-opts:
+    headers:
+      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
+    path: /fp=firefox
 - name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
   network: ws
   port: 443
@@ -106,18 +111,17 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=chromefp=chrome
-- name: 🇫🇷[www.v2nodes.com] vless-FR-2...
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
   network: ws
-  port: 443
-  server: 178.104.70.11
-  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
-  tls: true
+  port: 14430
+  server: 138.124.70.41
+  tls: false
   type: vless
-  uuid: 64726966-0000-4000-8000-740000000000
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
   ws-opts:
     headers:
-      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
-    path: /fp=firefox
+      Host: 138.124.70.41
+    path: /vless
 - client-fingerprint: firefox
   name: '🇫🇷[www.v2nodes.com] vless-FR-2... #2'
   network: ws
@@ -144,7 +148,7 @@ proxies:
       Host: ccc.010304.xyz
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-3... #1'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-3... #2'
   network: ws
   port: 443
   server: 172.67.138.17
@@ -172,7 +176,7 @@ proxies:
       Host: ccc.010304.xyz
     path: /fp=unsafe
 - client-fingerprint: chrome
-  name: '🏳[www.v2nodes.com] vless- #68'
+  name: '🏳[www.v2nodes.com] vless- #71'
   network: ws
   port: 443
   server: cf.130519.xyz
@@ -240,6 +244,13 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- name: 🇫🇷4@exclavevpn
+  password: 40546f3a-0590-4a5a-a104-6eb2e6ba5f0c
+  port: 23661
+  server: 194.113.235.254
+  sni: fr.verymad.net
+  tls: false
+  type: hysteria2
 - name: FR_speednode_0008
   port: 19362
   server: 51.159.225.197
@@ -254,6 +265,15 @@ proxies:
   tls: true
   type: http
   udp: true
+- name: FR_speednode_0010
+  password: 'null'
+  port: 23856
+  server: 51.159.225.196
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: 'null'
 - name: FR_speednode_0011
   port: 23856
   server: 51.159.225.196
@@ -268,41 +288,10 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_1|3.1MB/s
-  port: 9443
-  server: 138.199.47.247
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇫🇷FR_2|2.5MB/s
+- name: 🇫🇷FR_1|2.4MB/s
   password: None
-  port: 8081
-  server: 31.32.19.111
+  port: 9443
+  server: 213.139.9.142
   skip-cert-verify: true
   tls: true
   type: http
-- name: 🇫🇷FR_3|2.9MB/s
-  port: 8090
-  server: 80.124.109.22
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇫🇷FR_4|3.2MB/s
-  port: 443
-  server: 82.66.235.221
-  skip-cert-verify: true
-  tls: true
-  type: http
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  auth_str: dongtaiwang.com
-  down: 55
-  name: 🇫🇷 法国 | FRA 2
-  port: 36699
-  protocol: none
-  server: 163.172.117.163
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11

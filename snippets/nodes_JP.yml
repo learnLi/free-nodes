@@ -1,17 +1,13 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-138.2.52.244-7641
-  network: ws
-  port: 443
-  server: 138.2.52.244
-  servername: lg30.cfcdn3.xyz
-  skip-cert-verify: false
-  tls: true
+  name: JP 🇯🇵 | @Raydikalx | 127574
+  network: tcp#\u0001f3a190@oneclickvpnkeys
+  port: 4433
+  server: 45.32.57.118
+  tls: false
   type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    path: /ray
+  uuid: 35b89832-0a7c-48dd-8d1c-a2891b522195
 - alterId: 0
   cipher: auto
   name: 🇯🇵JP-168.138.43.75-1827
@@ -33,13 +29,6 @@ proxies:
   port: 443
   server: 84.247.155.196
   type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 日本 | JPN #3'
-  password: BeaUf9c0AEWH40Pu
-  port: 8388
-  server: 154.36.158.197
-  type: ss
-  udp: true
 - cipher: aes-128-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
   password: shadowsocks
@@ -51,6 +40,12 @@ proxies:
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
+  password: BeaUf9c0AEWH40Pu
+  port: 8388
+  server: 154.36.158.197
   type: ss
 - cipher: aes-128-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-5141... #1'

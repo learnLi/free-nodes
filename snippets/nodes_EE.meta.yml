@@ -1,13 +1,18 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | 99FBEE
-  network: tcp
-  port: 5381
-  server: dashboard.ojestore.top
+  name: AL 🇦🇱 | @Raydikalx | 5EE977
+  network: ws
+  port: 80
+  server: 45.15.170.237
+  servername: ''
   tls: false
   type: vmess
-  uuid: 63ad66f6-b7a6-4df0-bf15-0c82a047b7e3
+  uuid: 820d4b4f-3357-4dc7-9381-6e5fd52b5f39
+  ws-opts:
+    headers:
+      Host: pelang.org
+    path: /vmess/
 - client-fingerprint: chrome
   name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   port: 25895
@@ -28,10 +33,9 @@ proxies:
   tls: false
   type: vless
   uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-- name: 🇪🇪EE_1|2.9MB/s
-  password: None
-  port: 9443
-  server: 95.153.31.66
+- name: 🇪🇪EE_1|1.3MB/s
+  port: 443
+  server: 95.153.32.2
   skip-cert-verify: true
   tls: true
   type: http

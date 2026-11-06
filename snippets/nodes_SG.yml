@@ -1,54 +1,62 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | CF0750
+  name: SG 🇸🇬 | @Raydikalx | 7BB621
+  network: ws
+  port: 443
+  server: stanngv2-production-20ea.up.railway.app
+  servername: stanngv2-production-20ea.up.railway.app
+  tls: true
+  type: vmess
+  uuid: d71c0a7c-a781-4a6c-8ba2-2534de9551fb
+  ws-opts:
+    headers:
+      Host: stanngv2-production-20ea.up.railway.app
+    path: /vm-ws
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | B7CE38
+  network: ws
+  port: 443
+  server: uiewtesty-production.up.railway.app
+  servername: uiewtesty-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: f48088dd-e933-4741-bc08-cc450f7e3b12
+  ws-opts:
+    headers:
+      Host: uiewtesty-production.up.railway.app
+    path: /api/QjsknC
+- alterId: 0
+  cipher: auto
+  name: vmess-1837386984
   network: tcp
-  port: 59121
-  server: 129.226.157.220
+  port: 18000
+  server: 149.88.23.202
+  servername: 149.88.23.202
   tls: false
   type: vmess
-  uuid: d9865d63-d95c-454b-ba07-8e88b838a801
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D2A027
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+- name: '🇸🇬 新加坡 | SGP #2'
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  type: trojan
+- name: 🇸🇬 新加坡 | SGP 2
   network: ws
-  port: 443
-  server: wap.appleid.bf
-  tls: false
-  type: vmess
-  uuid: 3960f128-1163-40a3-8dd7-7c91176e14a5
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  type: trojan
+  udp: true
   ws-opts:
     headers:
-      Host: gw.alicdn.com
-    path: /CAT
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E22C29
-  network: ws
-  port: 443
-  server: web-production-0392e.up.railway.app
-  servername: web-production-0392e.up.railway.app
-  tls: true
-  type: vmess
-  uuid: e4ea74dd-2663-43a1-b843-14443cf70ddb
-  ws-opts:
-    headers:
-      Host: web-production-0392e.up.railway.app
-    path: /vm-ws
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E6EC63
-  network: ws
-  port: 443
-  server: web-pmapdcb-mabtu.up.railway.app
-  servername: web-pmapdcb-mabtu.up.railway.app
-  tls: true
-  type: vmess
-  uuid: e5cc130a-c773-4c3c-beea-b55fee28ed72
-  ws-opts:
-    headers:
-      Host: web-pmapdcb-mabtu.up.railway.app
-    path: /vm-ws
+      Host: 321dfbc6.uir-9i6.pages.dev
+    path: /
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443

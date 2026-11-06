@@ -1,42 +1,34 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 7E8798
-  network: tcp
-  port: 800
-  server: 129.154.61.196
-  tls: false
-  type: vmess
-  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
-- alterId: 64
-  cipher: auto
-  name: 🇰🇷KR-104.37.215.102-1428
+  name: KR 🇰🇷 | @Raydikalx | 21E816
   network: ws
   port: 443
-  server: 104.37.215.102
-  servername: ''
+  server: JBQ4dPDPuJFzj4KV.v.3dns.vip
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 1d84e480-8fd2-4fae-96de-e46fe36ffe86
   ws-opts:
     headers:
-      Host: www.31733109.xyz
-    path: /path/191019072927
-- name: 🇰🇷[www.v2nodes.com] trojan-KR-...
-  network: tcp
-  password: 5t6i121em5lkmsmk
-  port: 48851
-  server: kr002.zestapp778.com
-  skip-cert-verify: true
-  sni: kr002.zestapp778.com
-  type: trojan
+      Host: JBQ4dPDPuJFzj4KV.v.3dns.vip
+    path: /ws-vmess
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+  network: ws
+  port: 25555
+  server: 152.69.226.63
+  servername: 152.69.226.63
+  tls: false
+  type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  ws-opts:
+    path: /
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
   name: '🇰🇷 韩国 | KOR #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 54.180.236.157
+  server: 3.38.169.211
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
@@ -51,7 +43,7 @@ proxies:
   name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 54.180.236.157
+  server: 3.38.169.211
   type: ss
   udp: true
 - cipher: aes-256-gcm
