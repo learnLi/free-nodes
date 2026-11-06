@@ -1,41 +1,28 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: AL 🇦🇱 | @Raydikalx | 5EE977
+  name: ES 🇪🇸 | @Raydikalx | EE55BF
   network: ws
-  port: 80
-  server: 45.15.170.237
-  servername: ''
-  tls: false
+  port: 443
+  server: 82259754d625.oylfmxz.cn
+  tls: true
   type: vmess
-  uuid: 820d4b4f-3357-4dc7-9381-6e5fd52b5f39
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
     headers:
-      Host: pelang.org
-    path: /vmess/
-- client-fingerprint: chrome
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
-  port: 25895
-  server: ee.h1cloud.net
-  servername: www.samsung.com
-  tls: true
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
-  port: 16443
-  server: 45.86.60.174
-  tls: false
-  type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+      Host: 82259754d625.oylfmxz.cn
+    path: /
 - name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
   port: 443
   server: 185.225.205.53
   tls: false
   type: vless
   uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-- name: 🇪🇪EE_1|1.3MB/s
-  port: 443
-  server: 95.153.32.2
-  skip-cert-verify: true
-  tls: true
-  type: http
+- encryption: none
+  name: '🏳[www.v2nodes.com] vless- #13'
+  network: tcp
+  port: 16443
+  server: 45.86.60.174
+  tls: false
+  type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20

@@ -1,4 +1,35 @@
 proxies:
+- alterId: 64
+  cipher: auto
+  name: 🇹🇼TW-211.22.180.68-1431
+  network: ws
+  port: 443
+  server: 211.22.180.68
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.82131333.xyz
+    path: /path/191019072927
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: TW@ripaojiedian
+  network: ws
+  port: 53725
+  server: 45.207.159.60
+  servername: speedtest.danfengno1.kdns.fr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: speedtest.danfengno1.kdns.fr
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
 - name: '🇹🇼 🇨🇳 台湾 | TWN #1'
   network: ws
   port: 443
@@ -11,6 +42,19 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
+- client-fingerprint: chrome
+  name: 🇹🇼[www.v2nodes.com] vless-TW-1...
+  network: ws
+  port: 8443
+  server: n04.jinggai.online
+  servername: n04.jinggai.online
+  tls: true
+  type: vless
+  uuid: 91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a
+  ws-opts:
+    headers:
+      Host: n04.jinggai.online
+    path: /nvl-n04-ws/e0577fe8fd7c8823
 - client-fingerprint: chrome
   encryption: none
   name: 🇹🇼[www.v2nodes.com] vless-TW-3...
@@ -25,6 +69,20 @@ proxies:
     headers:
       Host: vlso5.1d.mom
     path: /socks5=888:888@hkip.1d.mom:1080
+- client-fingerprint: firefox
+  name: 🇹🇼台湾｜06｜BGP
+  network: ws
+  port: 2096
+  server: cf02.564895.xyz
+  servername: tw01.564895.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887
+  ws-opts:
+    headers:
+      Host: tw01.564895.xyz
+    path: /asdasdflow=
 - name: 🇹🇼 台湾｜02｜HiNet
   password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887
   port: 6549
