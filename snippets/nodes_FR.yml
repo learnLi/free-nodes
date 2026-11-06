@@ -1,47 +1,22 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B67A73
-  network: tcp
-  port: 22324
-  server: 23.162.152.6
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B6B5B0
+  name: FR 🇫🇷 | @Raydikalx | 7B3678
   network: ws
-  port: 20222
-  server: 51.75.118.5
+  port: 18901
+  server: 2001:bc8:32d7:1a9::2
   servername: ''
   tls: false
   type: vmess
-  uuid: 541d46d8-5fc6-4d57-a7c4-9ccd3b5966eb
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
   ws-opts:
-    headers:
-      Host: 51.75.118.5
-    path: /parham-confing-vmess?u=6991fbdd-51e0-4970-b159-f9af46890c43-beda239a407a7eed66f791c6
+    path: /github.com/Alvin9999-newpac/fanqiang?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | E10B43
-  network: ws
-  port: 21142
-  server: dns1.mobilenovin12.ir
-  servername: dns1.mobilenovin12.ir
-  tls: true
-  type: vmess
-  uuid: 8077b2a0-8230-46d1-941d-b709f8f1c764
-  ws-opts:
-    headers:
-      Host: dns1.mobilenovin12.ir
-    path: /d90obbh0g
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-146.59.70.146-1394
+  name: 🇫🇷FR-141.94.155.229-1486
   network: ws
   port: 443
-  server: 146.59.70.146
+  server: 141.94.155.229
   servername: ''
   skip-cert-verify: true
   tls: true
@@ -49,7 +24,7 @@ proxies:
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: yichueng.org
+      Host: pelang.org
     path: linkvws
 - alterId: 0
   cipher: auto
@@ -83,14 +58,14 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.26.15.137
+  server: 104.17.111.4
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -104,14 +79,14 @@ proxies:
 - name: '🇫🇷法国丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.152
+  server: 104.18.22.63
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #2'
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.18.152.152
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -122,39 +97,39 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR-54.36.174.134-0262
+  password: 6heexyz
+  port: 443
+  server: 54.36.174.134
+  type: ss
 - cipher: aes-256-gcm
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1615...
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #1'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #2'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
   type: ss
 - cipher: aes-256-gcm
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1616...
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🏳[www.v2nodes.com] ss- #11'
-  password: 6heexyz
-  port: 443
-  server: 54.36.174.140
   type: ss

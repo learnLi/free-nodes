@@ -1,89 +1,47 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇷🇺RU-91.193.181.192-3819
+  name: RU 🇷🇺 | @Raydikalx | 670E9A
   network: ws
-  port: 8090
-  server: 91.193.181.192
+  port: 443
+  server: renderer-stream-2-62.mirra.now
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: auto
+  name: RU 🇷🇺 | @Raydikalx | 9B9CD3
+  network: tcp
+  port: 11556
+  server: 158.160.211.200
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: e2733dbc-1bc6-4835-b90a-447806f9efcd
+- alterId: 0
+  cipher: auto
+  name: 🇷🇺RU-45.89.230.196-2568
+  network: ws
+  port: 80
+  server: 45.89.230.196
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 08bc30e1-be39-4eb4-e887-e6579be15a45
+  uuid: 8f9f526b-cab6-41d2-9424-cbdde94ea14f
   ws-opts:
     path: /
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  encryption: none
   flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: 🇷🇺 RU VLESS-46 | free-nodes
-  network: tcp
-  port: 443
-  server: s2359.kukuss.top
-  servername: u695098u14c5ddd4s2358.gogocs.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  ws-opts:
-    headers:
-      Host: 14c5ddd4s2358.gogocs.xyz
-    path: ''
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: 🇷🇺 RU VLESS-61 | free-nodes
-  network: tcp
-  port: 443
-  server: s2360.kukuss.top
-  servername: u695098u14c5ddd4s2358.gogocs.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  ws-opts:
-    headers:
-      Host: 14c5ddd4s2358.gogocs.xyz
-    path: ''
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  grpc-opts:
-    grpc-service-name: ''
-  name: 🇷🇺 RU VLESS-70 | free-nodes
-  network: tcp
-  port: 443
-  server: 193.53.126.91
-  servername: u695098u14c5ddd4s2358.gogocs.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  ws-opts:
-    headers:
-      Host: 14c5ddd4s2358.gogocs.xyz
-    path: ''
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇷🇺 RU VLESS-78 | free-nodes
+  name: 🇷🇺 RU VLESS-51 | free-nodes
   network: tcp
   port: 443
   server: 2a00:b700:4::1ad
@@ -95,10 +53,25 @@ proxies:
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
 - alpn:
   - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇷🇺 RU VLESS-73 | free-nodes
+  network: tcp
+  port: 443
+  server: s2359.kukuss.top
+  servername: u695098u14c5ddd4s2358.gogocs.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
   client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: vlgrpc
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
   network: grpc
   port: 443
   server: 201.24.121.243
@@ -107,10 +80,10 @@ proxies:
   tls: true
   type: vless
   uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
-- client-fingerprint: chrome
+- client-fingerprint: random
   grpc-opts:
     grpc-service-name: grpc-ru
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #3'
   network: grpc
   port: 443
   server: xssite.webredirect.org
@@ -130,3 +103,15 @@ proxies:
   port: 1355
   server: dns27.m3hrzd.ir
   type: ss
+- name: 🇷🇺RU_1|2.1MB/s
+  password: None
+  port: 1446
+  server: 46.29.166.134
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇷🇺RU_2|2.4MB/s
+  port: 10800
+  server: 46.8.158.144
+  skip-cert-verify: true
+  type: socks5

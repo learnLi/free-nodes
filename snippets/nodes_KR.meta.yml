@@ -1,27 +1,19 @@
 proxies:
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | A27025
-  network: tcp
-  port: 3141
-  server: sh.australiacaregroup.site
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-130.162.141.104-1943
+  name: 🇰🇷KR-104.37.215.83-1549
   network: ws
-  port: 443
-  server: 130.162.141.104
+  port: 30000
+  server: 104.37.215.83
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
-    path: /reffs7y26g0ua
+    headers:
+      Host: www.19289243.xyz
+    path: /path/191019072927
 - alterId: 0
   cipher: auto
   name: 🇰🇷KR-146.56.166.153-0123
@@ -69,7 +61,156 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇰🇷 KR VLESS-14 | free-nodes
+  network: tcp
+  port: 443
+  server: s2455.ccgfw.online
+  servername: u695098u195e2634s2454.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-17 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:1c02:b3b:5400:7ff:fe03:a58b
+  servername: u695098u6d620bd7s2474.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u6d620bd7s2474.xxti.top
+    path: 142e24a84f23915cb677e52ab2b0f3eb
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-39 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2449.gogocs.xyz
+  servername: u695098u66e05ed8s2448.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u66e05ed8s2448.xxti.top
+    path: bfaa4bbe8cd76b7477b05453d8d48ecc
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-47 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2490.uugfw.top
+  servername: u695098u6d620bd7s2474.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u6d620bd7s2474.xxti.top
+    path: 142e24a84f23915cb677e52ab2b0f3eb
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇰🇷 KR VLESS-52 | free-nodes
+  network: tcp
+  port: 443
+  server: 2401:c080:1c02:12fe:5400:7ff:fe03:a587
+  servername: u695098u195e2634s2454.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-68 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2485.gogocs.xyz
+  servername: u695098u04af05e4s2473.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u04af05e4s2473.xxti.top
+    path: 47835048fa926e1dc3323ae57dcac72b
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-69 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:1c01:4ad:5400:7ff:fe03:a588
+  servername: u695098u04af05e4s2473.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u04af05e4s2473.xxti.top
+    path: 47835048fa926e1dc3323ae57dcac72b
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-74 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:1c01:f23:5400:7ff:fe03:a582
+  servername: u695098u66e05ed8s2448.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u66e05ed8s2448.xxti.top
+    path: bfaa4bbe8cd76b7477b05453d8d48ecc
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-86 | free-nodes
+  network: xhttp
+  port: 443
+  server: 141.164.40.4
+  servername: u695098u66e05ed8s2448.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u66e05ed8s2448.xxti.top
+    path: bfaa4bbe8cd76b7477b05453d8d48ecc
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
   network: ws
   port: 25555
   server: 152.69.226.63
@@ -79,13 +220,33 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
-- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
+- name: 🇰🇷[www.v2nodes.com] trojan-KR-...
   password: 5t6i121em5lkmsmk
   port: 48851
   server: kr002.zestapp778.com
   skip-cert-verify: true
   sni: kr002.zestapp778.com
   type: trojan
+- alpn:
+  - h3
+  auth: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  name: 🇰🇷 KR HY2-46 | free-nodes
+  password: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  port: 443
+  server: 2401:c080:1c01:4ad:5400:7ff:fe03:a588
+  skip-cert-verify: false
+  sni: u695098u04af05e4s2473.xxti.top
+  type: hysteria2
+- alpn:
+  - h3
+  auth: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  name: 🇰🇷 KR HY2-55 | free-nodes
+  password: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  port: 443
+  server: s2486.wagahaha.xyz
+  skip-cert-verify: false
+  sni: u695098u04af05e4s2473.xxti.top
+  type: hysteria2
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: 896186feb20cb7403187a45ff3bd5ddc8bfbdd419d779d55d786189d36731a69
   name: '🇰🇷 韩国 | KOR #1'
@@ -122,14 +283,14 @@ proxies:
   server: 141.164.45.187
   type: ss
 - cipher: aes-256-gcm
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
   password: Y6R9pAtvxxzmGC
-  port: 8888
+  port: 9090
   server: 141.164.45.187
   type: ss
 - cipher: aes-256-gcm
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #2'
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
   password: Y6R9pAtvxxzmGC
-  port: 9090
+  port: 8888
   server: 141.164.45.187
   type: ss

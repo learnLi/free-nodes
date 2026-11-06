@@ -1,20 +1,39 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 8A95D3
+  name: CN 🇨🇳 | @Raydikalx | 0C8076
   network: tcp
-  port: 50018
-  server: 36.133.78.37
+  port: 50011
+  server: 36.133.79.17
   servername: ''
   tls: false
   type: vmess
-  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 96B332
+  name: CN 🇨🇳 | @Raydikalx | 574398
   network: tcp
-  port: 50017
+  port: 50015
   server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: 23b5790c-4e96-49fa-95fc-9079ce9cf43c
+  uuid: f114d414-1535-4321-856c-29979eeed799
+- ip: 172.16.0.2/32
+  keepalive: '5'
+  mtu: 1280
+  name: 🇨🇳CN_1|3.0MB/s
+  persistent-keepalive: '5'
+  port: 2408
+  private-key: QA9tXp3mpp1GVAmE1wF/KAI4vT/pj6QaLaY4Lt1sXV0=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 149
+  - 115
+  - 173
+  server: 162.159.192.5
+  type: wireguard
+  udp: true
+  wnoise: quic
+  wnoisecount: '5'
+  wnoisedelay: '5'
+  wpayloadsize: 40-90
