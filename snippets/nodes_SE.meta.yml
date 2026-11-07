@@ -1,20 +1,33 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 913FEF
-  network: tcp
-  port: 1270
-  server: 138.199.55.230
-  servername: xmfhlpy.com
+  name: SE 🇸🇪 | @Raydikalx | 05B511
+  network: httpupgrade
+  port: 443
+  server: defe.sync-bridge.ir
+  servername: defe.sync-bridge.ir
   tls: true
   type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  uuid: e9f12253-bc99-4ea6-8ad0-00e407abe269
+- client-fingerprint: chrome
+  name: '🇸🇪 瑞典 | SWE #1'
+  network: xhttp
+  port: 4443
+  server: swo2.nexfile.net
+  servername: swo2.nexfile.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  xhttp-opts:
+    host: swo2.nexfile.net
+    mode: auto
+    path: /api/v1/sync/
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
-  network: tcp
   port: 443
   server: 194.104.94.141
   servername: se3.shtil.io
@@ -22,7 +35,6 @@ proxies:
   type: vless
   uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
-  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 70.34.207.14
@@ -45,27 +57,14 @@ proxies:
   tls: false
   type: hysteria2
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #22'
+  name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 138.199.55.243
   type: ss
-- name: 🇸🇪SE_1|3.2MB/s
-  password: None
+- name: 🇸🇪SE_1|2.8MB/s
   port: 443
-  server: 146.70.242.146
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇸🇪SE_2|1.0MB/s
-  port: 443
-  server: 217.210.129.243
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇸🇪SE_3|2.1MB/s
-  port: 443
-  server: 79.142.77.63
+  server: 146.70.242.130
   skip-cert-verify: true
   tls: true
   type: http

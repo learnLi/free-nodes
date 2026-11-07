@@ -1,33 +1,29 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 6358C7
-  network: tcp
+  name: SG 🇸🇬 | @Raydikalx | 03E73A
+  network: ws
   port: 443
-  server: 45.32.120.173
-  tls: false
+  server: 6JiziO8PxQAXBAtZ.v.3dns.vip
+  servername: 6JiziO8PxQAXBAtZ.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: 6JiziO8PxQAXBAtZ.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | A4790F
-  network: tcp
-  port: 47014
-  server: fer-5.povrak.ir
-  servername: ''
+  name: SG 🇸🇬 | @Raydikalx | E0CF2C
+  network: none
+  port: 23267
+  server: 47.236.207.245
+  servername: 47.236.207.245
   tls: false
   type: vmess
-  uuid: d4aa69e8-2739-42b3-9cd4-af1e4fb04ad5
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D21E6C
-  network: tcp
-  port: 47014
-  server: hong.1.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
+  uuid: 6a15faf6-3d61-4c93-974e-8ca01f2aa451
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-15.235.147.186-0087
@@ -41,53 +37,12 @@ proxies:
   uuid: 6fea1649-425b-4092-bf53-29792152c925
   ws-opts:
     path: /sshkit/Ertusg86/635014638c264/
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-8.219.217.17-1221
-  network: ws
-  port: 443
-  server: 8.219.217.17
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  ws-opts:
-    headers:
-      Host: crude-franklin-favors-outsourcing.trycloudflare.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-8.219.219.179-1215
-  network: ws
-  port: 443
-  server: 8.219.219.179
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  ws-opts:
-    headers:
-      Host: crude-franklin-favors-outsourcing.trycloudflare.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-8.222.222.64-7928
-  network: ws
-  port: 80
-  server: 8.222.222.64
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
-  ws-opts:
-    path: /2TokGE9A/
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
+  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 149.28.130.108
+  skip-cert-verify: true
   sni: searchcreativejobsandshowcaseyourartistictalents.com
   type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
@@ -101,39 +56,46 @@ proxies:
   port: 8080
   server: 68.183.227.4
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇬 新加坡 | SGP #3'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 54.169.134.178
+  type: ss
+  udp: true
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 149.88.106.74
+  server: 15.235.164.133
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 149.88.107.74
+  server: 149.88.106.74
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
+  server: 149.88.107.74
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #7'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
   server: 149.88.107.47
   type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #23'
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #2'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 51.79.228.131
   type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #24'
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #3'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 15.235.182.183
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #25'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 15.235.164.133
   type: ss

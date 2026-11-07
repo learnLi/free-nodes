@@ -1,20 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: AL 🇦🇱 | @Raydikalx | 5EE977
-  network: ws
-  port: 80
-  server: 45.15.170.237
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 820d4b4f-3357-4dc7-9381-6e5fd52b5f39
-  ws-opts:
-    headers:
-      Host: pelang.org
-    path: /vmess/
-- alterId: 0
-  cipher: auto
   name: IT 🇮🇹 | @Raydikalx | D0BEEA
   network: tcp
   port: 22324
@@ -23,15 +9,21 @@ proxies:
   tls: false
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #6'
+- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #5'
   port: 443
   server: 185.225.205.53
   tls: false
   type: vless
   uuid: 3d526c7f-059c-4e2b-b09a-8569b268935b
-- name: 🇪🇪EE_1|1.1MB/s
-  port: 443
+- name: 🇪🇪EE_1|1.7MB/s
+  port: 9443
   server: 95.153.32.2
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇪🇪EE_2|2.6MB/s
+  port: 9443
+  server: 95.153.31.66
   skip-cert-verify: true
   tls: true
   type: http

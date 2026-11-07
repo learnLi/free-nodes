@@ -1,4 +1,13 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | 9652E1
+  network: tcp
+  port: 123
+  server: 43.108.103.167
+  tls: false
+  type: vmess
+  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
 - alterId: 64
   cipher: auto
   name: 🇰🇷KR-104.37.215.83-1549
@@ -29,6 +38,17 @@ proxies:
     headers:
       Host: lg30.cfcdn3.xyz
     path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-150.230.249.15-2657
+  network: http
+  port: 46842
+  server: 150.230.249.15
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 4530b5ee-ced4-4e64-9285-1867fc5df7f8
 - alpn:
   - http/1.1
   client-fingerprint: firefox
@@ -220,7 +240,7 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
-- name: 🇰🇷[www.v2nodes.com] trojan-KR-...
+- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 5t6i121em5lkmsmk
   port: 48851
   server: kr002.zestapp778.com
@@ -247,29 +267,12 @@ proxies:
   skip-cert-verify: false
   sni: u695098u04af05e4s2473.xxti.top
   type: hysteria2
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 896186feb20cb7403187a45ff3bd5ddc8bfbdd419d779d55d786189d36731a69
-  name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 13.125.82.209
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 13.125.82.209
-  type: ss
-  udp: true
 - cipher: aes-256-gcm
   name: 🇰🇷KR-141.164.45.187-0233
   password: KixLvKzwjekG00rm
@@ -283,14 +286,8 @@ proxies:
   server: 141.164.45.187
   type: ss
 - cipher: aes-256-gcm
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  password: Y6R9pAtvxxzmGC
-  port: 9090
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
   name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
   password: Y6R9pAtvxxzmGC
-  port: 8888
+  port: 9090
   server: 141.164.45.187
   type: ss

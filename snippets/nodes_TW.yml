@@ -1,14 +1,68 @@
 proxies:
-- alterId: 1
+- alterId: 0
   cipher: auto
-  name: 🇹🇼TW-1.161.186.146-2582
+  name: 🇹🇼TW-211.72.35.110-4796
   network: ws
-  port: 64443
-  server: 1.161.186.146
-  servername: ''
-  skip-cert-verify: true
+  port: 443
+  server: 211.72.35.110
+  servername: woidenca1.jsworld.eu.org
+  skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: cb7001c7-e495-41ac-b942-f25f60523414
+  uuid: e87f326f-55ac-487f-a3d1-57c592bb663a
   ws-opts:
-    path: /clientarea
+    headers:
+      Host: woidenca1.jsworld.eu.org
+    path: /nishikata3
+- alterId: 64
+  cipher: auto
+  name: 🇹🇼TW-61.216.85.68-4845
+  network: ws
+  port: 443
+  server: 61.216.85.68
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 5ba738e7-0abf-4935-b67e-d404a083d6a6
+  ws-opts:
+    headers:
+      Host: www.88612860.xyz
+    path: /path/243535322906
+- name: '🇹🇼 🇨🇳 台湾 | TWN #4'
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- name: '🇹🇼 🇨🇳 台湾 | TWN #5'
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.46
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 🇨🇳 台湾 | TWN 2
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 🇨🇳 台湾 | TWN 3
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.46
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+  udp: true

@@ -1,86 +1,78 @@
 {
-  "total": 1038,
+  "total": 1001,
   "egress": {
-    "ip": "20.80.94.172",
+    "ip": "134.138.43.32",
     "method": "direct",
     "country": "United States",
-    "city": "Des Moines",
+    "city": "Atlanta",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 989,
-  "tcp_ok": 848,
-  "tcp_rate": "85.7%",
-  "tls_applicable": 518,
-  "tls_ok": 474,
-  "tls_rate": "91.5%",
-  "quic_applicable": 49,
+  "tcp_applicable": 955,
+  "tcp_ok": 822,
+  "tcp_rate": "86.1%",
+  "tls_applicable": 487,
+  "tls_ok": 439,
+  "tls_rate": "90.1%",
+  "quic_applicable": 46,
   "quic_ok": 3,
-  "quic_rate": "6.1%",
-  "udp_skipped": 49,
+  "quic_rate": "6.5%",
+  "udp_skipped": 46,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 6,
+      "ms": 2,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 9,
+      "ms": 2,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 28,
+      "ms": 17,
       "err": ""
     }
   ],
   "by_type": {
     "anytls": {
-      "total": 1,
-      "ok": 1
-    },
-    "http": {
-      "total": 101,
-      "ok": 101
-    },
-    "hysteria": {
-      "total": 6,
-      "ok": 0
-    },
-    "socks5": {
-      "total": 2,
+      "total": 3,
       "ok": 2
     },
+    "http": {
+      "total": 56,
+      "ok": 56
+    },
+    "hysteria": {
+      "total": 3,
+      "ok": 0
+    },
     "ss": {
-      "total": 246,
-      "ok": 206
+      "total": 248,
+      "ok": 208
     },
     "trojan": {
-      "total": 164,
-      "ok": 157
+      "total": 170,
+      "ok": 160
     },
     "vless": {
-      "total": 255,
-      "ok": 230
+      "total": 269,
+      "ok": 250
     },
     "vmess": {
-      "total": 213,
-      "ok": 151
-    },
-    "wireguard": {
-      "total": 1,
-      "ok": 0
+      "total": 206,
+      "ok": 146
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 49,
+      "total": 46,
       "ok": 3
     }
   }
