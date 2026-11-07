@@ -1,4 +1,11 @@
 proxies:
+- name: 🇸🇪 瑞典 V2CROSS.COM
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 167.88.61.175
+  skip-cert-verify: true
+  sni: blog.browseseniorrolesandenhanceyourcareertoday.com
+  type: trojan
 - name: 🇸🇪 瑞典(mibei77.com 米贝节点分享)
   password: f426d3c9-fb43-43c0-868b-898dfa451a74
   port: 443
@@ -7,14 +14,15 @@ proxies:
   sni: likejennie.pages.dev
   type: trojan
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: connect-se.mimowhat.online
-  sni: connect-se.mimowhat.online
-  type: trojan
-- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
+  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 70.34.207.14
   sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
   type: trojan
+- cipher: aes-256-gcm
+  name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss

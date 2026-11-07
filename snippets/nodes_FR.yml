@@ -1,32 +1,18 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 548D11
-  network: ws
-  port: 2095
-  server: www.asamping.ir
-  servername: www.asamping.ir
-  tls: false
-  type: vmess
-  uuid: a55cdc40-5af5-4f02-9a46-41685120fe6f
-  ws-opts:
-    headers:
-      Host: www.asamping.ir
-    path: /
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 967D8A
+  name: FR 🇫🇷 | @Raydikalx | 964E22
   network: ws
   port: 80
-  server: fr3.niekotin.de
-  servername: ''
+  server: 2606:4700:9c66::3c6d:65
+  servername: vmess.lbw666.dpdns.org
   tls: false
   type: vmess
-  uuid: 59e29918-53b3-4fa2-becf-56a601f33998
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   ws-opts:
     headers:
-      Host: fr3.niekotin.de
-    path: /vmess
+      Host: vmess.lbw666.dpdns.org
+    path: /ws
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-146.59.85.226-1316
@@ -44,7 +30,18 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-54.37.131.126-0254
+  name: 🇫🇷FR-51.159.155.52-0684
+  network: http
+  port: 3389
+  server: 51.159.155.52
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-54.37.131.126-0244
   network: ws
   port: 80
   server: 54.37.131.126
@@ -57,19 +54,6 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-57.128.45.161-0040
-  network: ws
-  port: 80
-  server: 57.128.45.161
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 35d25899-ed20-46d9-9c7c-99c0d414d5e4
-  ws-opts:
-    path: /user
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -101,39 +85,46 @@ proxies:
 - name: 🇫🇷法国丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.152
+  server: 104.18.152.73
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.73
+  server: 104.18.152.152
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #2'
   password: humanity
   port: 443
-  server: 104.18.152.133
+  server: 104.18.22.63
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #3'
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.18.152.133
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
+- name: '🇫🇷法国丨yoyapai.com\r #4'
+  password: humanity
+  port: 443
+  server: www.speedtest.org
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-54.36.174.134-0252
+  name: 🇫🇷FR-54.36.174.134-0258
   password: 6heexyz
   port: 443
   server: 54.36.174.134
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
@@ -142,22 +133,34 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 172.99.189.142
+  server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.175
+  server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.22
+  server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.22
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇵🇱[www.v2nodes.com] ss-PL-1273... #2'
+  password: 6heexyz
+  port: 443
+  server: 54.36.174.140
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22

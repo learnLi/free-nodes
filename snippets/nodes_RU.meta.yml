@@ -14,18 +14,29 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 876A78
+  name: RU 🇷🇺 | @Raydikalx | 623201
   network: ws
   port: 443
-  server: YyYYuUI.iRAn1912.dpDNs.oRG
+  server: 80.240.252.241
   servername: ''
   tls: true
   type: vmess
-  uuid: 4a7baca1-8048-4a91-8316-595b36657a54
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: YYyYUui.iran1912.dpdNS.OrG
-    path: /TaBvkrUbsyvsvinsGGg
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 64
+  cipher: auto
+  name: 🇷🇺RU-176.119.159.245-4736
+  network: http
+  port: 37672
+  server: 176.119.159.245
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477
 - alpn:
   - h2
   - http/1.1
@@ -56,13 +67,26 @@ proxies:
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc-ru
+  name: 🇷🇺 俄罗斯 | RUS 4
+  network: grpc
+  port: 443
+  server: xssite.webredirect.org
+  servername: xssite.webredirect.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
 - alpn:
   - h2
   client-fingerprint: chrome
   encryption: none
   grpc-opts:
     grpc-service-name: vlgrpc
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #1'
+  name: '🏳[www.v2nodes.com] vless- #36'
   network: grpc
   port: 443
   server: 201.24.121.243
@@ -70,6 +94,13 @@ proxies:
   tls: true
   type: vless
   uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+- cipher: aes-256-gcm
+  name: '🇷🇺 俄罗斯 | RUS #4'
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  port: 18443
+  server: 46.17.47.58
+  type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
   password: VVlAff77CnAU43Aoc5j15Y
@@ -77,8 +108,14 @@ proxies:
   server: 90.156.203.62
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇷🇺[www.v2nodes.com] ss-RU-1614... #1'
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1614...
   password: v1c-i5SSFXP8n4g1Wbc0L9gX82x5O2Qa
   port: 1355
   server: dns27.m3hrzd.ir
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1617...
+  password: 8722de56b6c0b3f6a4d01cf91c07e6aa
+  port: 13108
+  server: 38.60.223.125
   type: ss
