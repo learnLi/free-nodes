@@ -1,51 +1,36 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 1E1C14
+  name: 🇯🇵JP-138.2.49.230-3355
   network: ws
-  port: 80
-  server: 168.138.43.75
-  servername: null
-  tls: false
-  type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: jp01.a0a.xyz
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 45285F
-  network: ws
-  port: 8998
-  server: cc28.goingside.site
+  port: 10021
+  server: 138.2.49.230
+  servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 4b019faa-38b0-473d-bc49-60bb68151c34
+  uuid: a12e496e-f89a-434a-8011-108846f0e412
   ws-opts:
-    headers:
-      Host: cc28.goingside.site
     path: /
-- alterId: 64
+- alterId: 0
   cipher: auto
-  name: 🇯🇵JP-104.219.208.195-0293
+  name: 🇯🇵JP-168.138.203.232-0071
   network: ws
-  port: 34001
-  server: 104.219.208.195
+  port: 443
+  server: suzhihan.eu.org
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 0b873cff-11ab-4716-c41a-04f886135091
   ws-opts:
     headers:
-      Host: www.56982071.xyz
-    path: /
+      Host: suzhihan.eu.org
+    path: /roewesu
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146658
+  name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
-  port: 80
+  port: 443
   server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
@@ -55,7 +40,7 @@ proxies:
   server: 149.22.87.240
   type: ss
 - cipher: aes-256-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'
   password: BeaUf9c0AEWH40Pu
   port: 8388
   server: 154.36.158.197
@@ -67,8 +52,14 @@ proxies:
   server: 149.22.87.204
   type: ss
 - cipher: aes-128-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-9223...
+  name: '🇯🇵[www.v2nodes.com] ss-JP-9223... #1'
   password: shadowsocks
   port: 443
   server: 149.22.87.241
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #23'
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
   type: ss
