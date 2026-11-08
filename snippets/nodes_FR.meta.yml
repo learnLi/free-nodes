@@ -1,19 +1,30 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 01715B
-  network: ws
-  port: 18901
-  server: 2001:bc8:32d7:1a9::2
-  servername: ''
-  tls: false
+  name: 'FR 🇫🇷 | @Raydikalx | 2A0580 #1'
+  network: tcp
+  port: 1270
+  server: 46.105.222.157
+  servername: xmfhlpy.com
+  tls: true
   type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
-  ws-opts:
-    path: /github.com/Alvin9999-newpac/fanqiang
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-54.37.131.126-0257
+  name: '🇫🇷FR-152.228.191.232-7612 #1'
+  network: ws
+  port: 443
+  server: 152.228.191.232
+  servername: lg30.cfcdn3.xyz
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-54.37.131.126-0291
   network: ws
   port: 80
   server: 54.37.131.126
@@ -28,7 +39,7 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-57.128.164.21-1752
+  name: 🇫🇷FR-57.128.164.21-1907
   network: ws
   port: 80
   server: 57.128.164.21
@@ -46,25 +57,14 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
   name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
+  network: tcp
   port: 2053
   server: w.geogame.ir
   servername: w.geogame.ir
   tls: true
   type: vless
   uuid: fbda2834-b1e7-4148-afb9-deda31036a30
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #12'
-  network: tcp
-  port: 2053
-  server: 15.236.109.186
-  servername: w.geogame.ir
-  tls: true
-  type: vless
-  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #13'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #12'
   network: ws
   port: 14430
   server: 138.124.70.41
@@ -76,7 +76,7 @@ proxies:
     headers:
       Host: 138.124.70.41
     path: /vless
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #18'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #17'
   network: ws
   port: 80
   server: 152.228.162.19
@@ -85,7 +85,30 @@ proxies:
   uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
   ws-opts:
     path: /vless/
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+  port: 2053
+  server: 15.236.109.186
+  servername: w.geogame.ir
+  tls: true
+  type: vless
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
+- name: 🇫🇷[www.v2nodes.com] vless-FR-2...
+  network: ws
+  port: 443
+  server: 104.20.45.141
+  servername: razk50e1uvss.amirhoseyn-meshki.workers.dev
+  tls: true
+  type: vless
+  uuid: 50414e45-4c5f-5a45-5553-7e7818beb9aa
+  ws-opts:
+    headers:
+      Host: razk50e1uvss.amirhoseyn-meshki.workers.dev
+    path: /stream/PANEL_ZEUS/7e7818beb9aafp=unsafe
+- name: '🇫🇷[www.v2nodes.com] vless-FR-2... #1'
   network: ws
   port: 443
   server: 178.104.70.11
@@ -99,7 +122,7 @@ proxies:
     path: /fp=firefoxsecurity=tls
 - client-fingerprint: unsafe
   encryption: none
-  name: 🇫🇷[www.v2nodes.com] vless-FR-2...
+  name: '🇫🇷[www.v2nodes.com] vless-FR-2... #2'
   network: ws
   port: 443
   server: 104.20.45.141
@@ -141,28 +164,28 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.26.15.137
+  server: 104.17.111.4
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: 🇫🇷法国丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.73
+  server: 104.18.152.152
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.152
+  server: 104.18.152.73
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -181,14 +204,15 @@ proxies:
   sni: www.ignitelimit.com
   type: trojan
 - auth: gf1:gfhysteria2024
-  name: 🇫🇷 法国 | FRA
+  name: '🇫🇷 法国 | FRA #2'
   password: gf1:gfhysteria2024
   port: 443
   server: 173.212.201.85
   skip-cert-verify: true
   sni: www.docker.com
+  tls: false
   type: hysteria2
-- name: '🇫🇷 法国 | FRA #2'
+- name: '🇫🇷 法国 | FRA #5'
   password: gf1
   port: 443
   server: 173.212.201.85
@@ -231,12 +255,6 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇵🇱[www.v2nodes.com] ss-PL-1273... #3'
-  password: 6heexyz
-  port: 443
-  server: 54.36.174.134
   type: ss
 - name: FR_speednode_0008
   port: 19362

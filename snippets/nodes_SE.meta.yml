@@ -1,20 +1,17 @@
 proxies:
-- alterId: 64
-  cipher: auto
-  name: 🇸🇪SE-37.120.209.126-1372
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #10'
   network: ws
-  port: 31002
-  server: 37.120.209.126
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: dc0cf22d-e35c-4b77-8924-977f6844909b
+  port: 14430
+  server: 193.188.21.253
+  servername: 193.188.21.253
+  tls: false
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
   ws-opts:
     headers:
-      Host: www.68547476.xyz
-    path: /path/191019072927
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #10'
+      Host: 193.188.21.253
+    path: /vless
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
   network: ws
   port: 14430
   server: 5.178.109.174
@@ -31,7 +28,6 @@ proxies:
   - http/1.1
   client-fingerprint: firefox
   name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
-  network: tcp
   port: 443
   server: 194.104.94.141
   servername: se3.shtil.io
@@ -49,13 +45,6 @@ proxies:
   tls: true
   type: vless
   uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-- name: 🇸🇪 瑞典 V2CROSS.COM
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.175
-  skip-cert-verify: true
-  sni: blog.browseseniorrolesandenhanceyourcareertoday.com
-  type: trojan
 - name: 🇸🇪 瑞典(mibei77.com 米贝节点分享)
   password: f426d3c9-fb43-43c0-868b-898dfa451a74
   port: 443
@@ -64,19 +53,17 @@ proxies:
   sni: likejennie.pages.dev
   type: trojan
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
+  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 70.34.207.14
   sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
   type: trojan
-- name: Telegram 🆔@cnetvpn 🇸🇪
-  obfs: salamander
-  obfs-password: fuw2k1ddrouwxr3u
-  password: vz86jgszv4zszchv
-  port: 52062
-  server: giftcard.gateway-stream.com
-  skip-cert-verify: false
-  sni: giftcard.gateway-stream.com
+- name: 💫42@oneclickvpnkeys
+  password: 4fa0ca1b-0742-419d-8fd2-3f698e06b206
+  port: 20444
+  server: 88.216.60.117
+  sni: hy60c117-2.w-mebel.pro
   tls: false
   type: hysteria2
 - cipher: aes-256-gcm

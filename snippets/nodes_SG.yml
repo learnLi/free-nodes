@@ -1,61 +1,18 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 2F13BD
+  name: SG 🇸🇬 | @Raydikalx | 6FD410
   network: ws
   port: 443
-  server: panel-production-4c69.up.railway.app
-  servername: panel-production-4c69.up.railway.app
+  server: superjinx-production-d80d.up.railway.app
+  servername: superjinx-production-d80d.up.railway.app
   tls: true
   type: vmess
-  uuid: ce852641-b913-4597-ab61-d734e1a953c6
+  uuid: 7c1b29ba-6e83-45dc-bbb8-f8ad272c1e7a
   ws-opts:
     headers:
-      Host: panel-production-4c69.up.railway.app
-    path: /vm
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 32AA5C
-  network: tcp
-  port: 51401
-  server: fin-5.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 06e769f1-96f8-4071-8910-b8f81b25d724
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-146.190.82.241-2313
-  network: ws
-  port: 80
-  server: 146.190.82.241
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
-  ws-opts:
-    path: /
-- alterId: 64
-  cipher: auto
-  name: '🇸🇬SG-159.223.94.156-5693 #1'
-  network: ws
-  port: 80
-  server: 159.223.94.156
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 533724ad-58ef-4147-88dc-9da523c15fc4
-  ws-opts:
-    path: /anti13.zingfast.vn
-- name: '🇸🇬 新加坡 | SGP #8'
-  password: '!!str 123456'
-  port: 2096
-  server: 104.18.35.86
-  skip-cert-verify: true
-  sni: 321dfbc6.uir-9i6.pages.dev
-  type: trojan
+      Host: superjinx-production-d80d.up.railway.app
+    path: /gw/a53bc4a2-9c44-4b2f-b362-8467bf7f16b3?ed=2560
 - name: 🇸🇬 新加坡 | SGP 6
   network: ws
   password: '!!str 123456'
@@ -64,7 +21,6 @@ proxies:
   skip-cert-verify: true
   sni: 321dfbc6.uir-9i6.pages.dev
   type: trojan
-  udp: true
   ws-opts:
     headers:
       Host: 321dfbc6.uir-9i6.pages.dev
@@ -86,24 +42,11 @@ proxies:
   port: 8886
   server: 139.180.146.200
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #5'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 56.10.145.239
-  type: ss
-  udp: true
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 15.235.164.133
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #5'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 149.88.106.74
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #6'
@@ -122,10 +65,4 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 15.235.182.183
-  type: ss
-- cipher: aes-256-gcm
-  name: 🏳[www.v2nodes.com] ss-
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 51.79.228.131
   type: ss
