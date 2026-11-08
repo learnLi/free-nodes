@@ -1,10 +1,10 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 47F6B6
+  name: RU 🇷🇺 | @Raydikalx | 3C2E44
   network: ws
   port: 443
-  server: 2.27.54.132
+  server: 94.159.110.41
   servername: renderer-stream-2-62.mirra.now
   tls: true
   type: vmess
@@ -13,6 +13,19 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
+- alterId: 64
+  cipher: auto
+  name: 🇷🇺RU-171.22.134.12-8371
+  network: ws
+  port: 443
+  server: 171.22.134.12
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    path: /path/1689849487190
 - alpn:
   - h2
   - http/1.1
@@ -59,19 +72,13 @@ proxies:
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
 - client-fingerprint: chrome
-  name: '🇷🇺 俄罗斯 | RUS #11'
-  network: ws
+  name: 🇷🇺RU_1|1.1MB/s
   port: 443
-  server: xsru2.freeddns.org
-  servername: xsru2.freeddns.org
+  server: 9900edx.msk2.h1clayd.click
+  servername: 9900edx.msk2.h1clayd.click
   tls: true
   type: vless
-  udp: true
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-  ws-opts:
-    headers:
-      Host: xsru2.freeddns.org
-    path: /wsru
+  uuid: 13e6bdfd-d51b-4e57-a40e-b88784cba8bd
 - alpn:
   - h2
   client-fingerprint: chrome
@@ -91,17 +98,15 @@ proxies:
   port: 5112
   server: 90.156.203.62
   type: ss
+- cipher: aes-256-gcm
+  name: '🇷🇺[www.v2nodes.com] ss-RU-1616... #1'
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  port: 18443
+  server: 46.17.47.58
+  type: ss
 - cipher: aes-128-gcm
   name: '🇷🇺[www.v2nodes.com] ss-RU-1617... #1'
   password: 8722de56b6c0b3f6a4d01cf91c07e6aa
   port: 13108
   server: 38.60.223.125
   type: ss
-- name: 🇷🇺RU_1|1.1MB/s
-  password: 'null'
-  port: 443
-  server: 178.219.43.226
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'

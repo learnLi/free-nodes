@@ -1,14 +1,54 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 77AF8A
-  network: tcp
-  port: 1270
-  server: 15.235.144.92
-  servername: xmfhlpy.com
+  name: SG 🇸🇬 | @Raydikalx | 2F13BD
+  network: ws
+  port: 443
+  server: panel-production-4c69.up.railway.app
+  servername: panel-production-4c69.up.railway.app
   tls: true
   type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  uuid: ce852641-b913-4597-ab61-d734e1a953c6
+  ws-opts:
+    headers:
+      Host: panel-production-4c69.up.railway.app
+    path: /vm
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 32AA5C
+  network: tcp
+  port: 51401
+  server: fin-5.povrak.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 06e769f1-96f8-4071-8910-b8f81b25d724
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-146.190.82.241-2313
+  network: ws
+  port: 80
+  server: 146.190.82.241
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
+  ws-opts:
+    path: /
+- alterId: 64
+  cipher: auto
+  name: '🇸🇬SG-159.223.94.156-5693 #1'
+  network: ws
+  port: 80
+  server: 159.223.94.156
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 533724ad-58ef-4147-88dc-9da523c15fc4
+  ws-opts:
+    path: /anti13.zingfast.vn
 - alpn:
   - http/1.1
   client-fingerprint: firefox
@@ -41,28 +81,22 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
-- name: '🇸🇬 新加坡 | SGP #2'
+- client-fingerprint: chrome
+  name: '🇸🇬 新加坡 | SGP #7'
   network: ws
-  port: 443
-  server: 103.195.191.240
-  servername: jp3.yohototo.top
+  port: 8443
+  server: sg01.cf.sh-cloudflare.sbs
+  servername: sg01.cdn00.top
   tls: true
   type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  uuid: a8d9c86f-cddb-4fa5-96f7-f68eb48b3cb3
   ws-opts:
     headers:
-      Host: jp3.yohototo.top
-    path: /tyxywsfp=unsafe
+      Host: sg01.cdn00.top
+    path: /shanhai/sg01
 - client-fingerprint: firefox
   name: '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
-  port: 56984
-  server: 140.235.11.243
-  servername: sg1.zestapp778.com
-  tls: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- client-fingerprint: firefox
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #11'
   port: 443
   server: 45.76.155.179
   servername: sg003.zestapp778.com
@@ -70,13 +104,11 @@ proxies:
   type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
 - client-fingerprint: chrome
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #16'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #15'
   network: ws
   port: 2096
   server: 139.162.27.96
   servername: free-server.techsonic.dev
-  skip-cert-verify: false
   tls: true
   type: vless
   uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
@@ -84,12 +116,11 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.dev
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
   network: ws
   port: 2096
   server: 139.162.27.96
   servername: free-server.techsonic.dev
-  skip-cert-verify: false
   tls: true
   type: vless
   uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
@@ -97,6 +128,15 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.devfp=chrome
+- client-fingerprint: chrome
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #9'
+  network: tcp
+  port: 56984
+  server: sg1.zestapp778.com
+  servername: sg1.zestapp778.com
+  tls: true
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
 - client-fingerprint: firefox
   name: 🇸🇬新加坡｜07｜BGP
   network: ws
@@ -111,13 +151,32 @@ proxies:
     headers:
       Host: sg01.564895.xyz
     path: /asdasdflow=
+- name: '🇸🇬 新加坡 | SGP #8'
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  type: trojan
+- name: 🇸🇬 新加坡 | SGP 6
+  network: ws
+  password: '!!str 123456'
+  port: 2096
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: 321dfbc6.uir-9i6.pages.dev
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: 321dfbc6.uir-9i6.pages.dev
+    path: /
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 15.235.184.127
   type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
-  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 149.28.130.108
@@ -131,19 +190,29 @@ proxies:
   type: trojan
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
-  name: '🇸🇬 新加坡 | SGP #9'
+  name: '🇸🇬 新加坡 | SGP #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 13.212.45.153
+  server: 56.10.145.239
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
   type: hysteria2
+- alpn:
+  - h3
+  name: 🇸🇬 新加坡 | SGP 5
+  password: tX2WVPT3RUHDK2iQQpc9FDxP
+  port: 20000
+  server: 47.129.134.122
+  skip-cert-verify: true
+  sni: sg-transit-2.nebulacloud.win
+  tls: false
+  type: hysteria2
 - cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #6'
+  name: '🇸🇬 新加坡 | SGP #5'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 13.212.45.153
+  server: 56.10.145.239
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -174,11 +243,11 @@ proxies:
   name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #2'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 51.79.228.131
+  server: 15.235.182.183
   type: ss
 - cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #3'
+  name: 🏳[www.v2nodes.com] ss-
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 15.235.182.183
+  server: 51.79.228.131
   type: ss

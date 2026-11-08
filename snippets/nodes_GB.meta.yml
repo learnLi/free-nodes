@@ -1,38 +1,24 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 30892D
-  network: ws
-  port: 443
-  server: ki9i.dddct.us.ci
-  servername: ki9i.dddct.us.ci
-  tls: true
-  type: vmess
-  uuid: 795ef99b-3260-4d18-ac98-5130bba9f168
-  ws-opts:
-    headers:
-      Host: ki9i.dddct.us.ci
-    path: /LtgDLBVt1BfWnGWI7hLRpJ1
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 831E0F
+  name: GB 🇬🇧 | @Raydikalx | 624BDA
   network: tcp
-  port: 1270
-  server: 149.7.16.228
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | BD6D16
-  network: tcp
-  port: 22324
-  server: 66.163.117.58
+  port: 20004
+  server: 82.152.197.167
   servername: ''
   tls: false
   type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 88F306
+  network: tcp
+  port: 34204
+  server: 206.245.166.132
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f004547b-58ec-4536-9608-0d68982ea904
 - name: '🇬🇧 英国 | GBR #1'
   network: ws
   port: 443
@@ -50,7 +36,6 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
   name: '🇬🇧[www.v2nodes.com] vless-GB-1... #8'
-  network: tcp
   port: 8443
   server: node-uk.connectsuite.org
   servername: node-uk.connectsuite.org
@@ -164,6 +149,12 @@ proxies:
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.189
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.190-0145
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.190
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.191-0154
@@ -369,31 +360,3 @@ proxies:
   port: 443
   server: 141.98.101.181
   type: ss
-- name: 🇬🇧GB_1|1.7MB/s
-  password: None
-  port: 443
-  server: 212.102.63.61
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_2|1.9MB/s
-  password: None
-  port: 443
-  server: 84.17.50.193
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_3|1.7MB/s
-  password: None
-  port: 443
-  server: 212.102.63.1
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_4|2.5MB/s
-  password: None
-  port: 9443
-  server: 84.17.50.129
-  skip-cert-verify: true
-  tls: true
-  type: http

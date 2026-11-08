@@ -1,36 +1,31 @@
 proxies:
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 913FEF
-  network: tcp
-  port: 1270
-  server: 138.199.55.230
-  servername: xmfhlpy.com
+  name: 🇸🇪SE-37.120.209.126-1372
+  network: ws
+  port: 31002
+  server: 37.120.209.126
+  servername: ''
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- client-fingerprint: chrome
-  name: '🇸🇪 瑞典 | SWE #2'
-  network: xhttp
-  port: 4443
-  server: swo2.nexfile.net
-  servername: swo2.nexfile.net
-  tls: true
+  uuid: dc0cf22d-e35c-4b77-8924-977f6844909b
+  ws-opts:
+    headers:
+      Host: www.68547476.xyz
+    path: /path/191019072927
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #10'
+  network: ws
+  port: 14430
+  server: 5.178.109.174
+  servername: 5.178.109.174
+  tls: false
   type: vless
-  udp: true
-  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  xhttp-opts:
-    host: swo2.nexfile.net
-    mode: auto
-    path: /api/v1/sync/
-- client-fingerprint: chrome
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
-  port: 443
-  server: se3.shtil.io
-  servername: se3.shtil.io
-  tls: true
-  type: vless
-  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  ws-opts:
+    headers:
+      Host: 5.178.109.174
+    path: /vless
 - alpn:
   - h2
   - http/1.1
@@ -43,23 +38,22 @@ proxies:
   tls: true
   type: vless
   uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #9'
-  network: ws
-  port: 14430
-  server: 5.178.109.174
-  servername: 5.178.109.174
-  tls: false
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: 138-124-86-230-sslip-io
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
+  network: grpc
+  port: 48115
+  server: 138.124.86.230
+  servername: 138-124-86-230.sslip.io
+  tls: true
   type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  ws-opts:
-    headers:
-      Host: 5.178.109.174
-    path: /vless
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
 - name: 🇸🇪 瑞典 V2CROSS.COM
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 167.88.61.175
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: blog.browseseniorrolesandenhanceyourcareertoday.com
   type: trojan
 - name: 🇸🇪 瑞典(mibei77.com 米贝节点分享)
@@ -91,9 +85,3 @@ proxies:
   port: 19999
   server: 138.199.55.243
   type: ss
-- name: 🇸🇪SE_1|1.7MB/s
-  port: 443
-  server: 79.142.77.63
-  skip-cert-verify: true
-  tls: true
-  type: http

@@ -1,19 +1,16 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-51.195.140.208-0015
+  name: FR 🇫🇷 | @Raydikalx | 01715B
   network: ws
-  port: 443
-  server: univstar.51.195.140.208.sslip.io
-  servername: goodfamily19.site
-  skip-cert-verify: false
-  tls: true
+  port: 18901
+  server: 2001:bc8:32d7:1a9::2
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
   ws-opts:
-    headers:
-      Host: goodfamily19.site
-    path: /wmzmvws
+    path: /github.com/Alvin9999-newpac/fanqiang
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-54.37.131.126-0257
@@ -61,14 +58,14 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.26.15.137
+  server: 104.17.111.4
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -100,18 +97,6 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-54.36.174.134-0267
-  password: 6heexyz
-  port: 443
-  server: 54.36.174.134
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-54.36.174.140-0255
-  password: 6heexyz
-  port: 443
-  server: 54.36.174.140
-  type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -147,4 +132,10 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇵🇱[www.v2nodes.com] ss-PL-1273... #3'
+  password: 6heexyz
+  port: 443
+  server: 54.36.174.134
   type: ss

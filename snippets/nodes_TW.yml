@@ -1,16 +1,43 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇹🇼TW-165.154.253.194-0075
+  name: TW 🇹🇼 | @Raydikalx | 9DA953
   network: ws
   port: 443
-  server: 165.154.253.194
+  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  tls: true
+  type: vmess
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | C3EB50
+  network: ws
+  port: 443
+  server: 9641684.sdf65h4.top
+  servername: 9641684.sdf65h4.top
+  tls: true
+  type: vmess
+  uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
+  ws-opts:
+    headers:
+      Host: 9641684.sdf65h4.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼TW-165.154.253.35-1649
+  network: ws
+  port: 443
+  server: tw-1.qwqjsq.top
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: a5f37e9f-f856-4d61-a8e0-0bbb09d25e8f
+  uuid: b0543a3b-d690-3ed9-9a81-f24f852e74f7
   ws-opts:
     headers:
-      Host: 165.154.253.194
+      Host: tw-1.qwqjsq.top
     path: /
