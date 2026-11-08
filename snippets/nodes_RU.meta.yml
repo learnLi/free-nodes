@@ -1,25 +1,10 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺RU-45.136.244.181-2254
-  network: ws
-  port: 80
-  server: 45.136.244.181
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: a25881f3-967f-3265-bc7f-9e66857b016b
-  ws-opts:
-    headers:
-      Host: 45.136.244.181
-    path: /fr-unlimitxxx
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇷🇺 RU VLESS-43 | free-nodes
+  name: 🇷🇺 RU VLESS-56 | free-nodes
   network: tcp
   port: 443
   server: 2a00:b700:4::1ad
@@ -34,25 +19,10 @@ proxies:
   - http/1.1
   client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇷🇺 RU VLESS-61 | free-nodes
-  network: tcp
-  port: 443
-  server: s2359.kukuss.top
-  servername: u695098u14c5ddd4s2358.gogocs.xyz
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
   name: 🇷🇺 RU VLESS-80 | free-nodes
   network: tcp
   port: 443
-  server: s2360.kukuss.top
+  server: s2359.kukuss.top
   servername: u695098u14c5ddd4s2358.gogocs.xyz
   skip-cert-verify: false
   tfo: false

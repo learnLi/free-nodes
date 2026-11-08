@@ -1,40 +1,105 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 0523F4
+  name: HK 🇭🇰 | @Raydikalx | 10555E
   network: ws
   port: 443
-  server: u2frxj0g13vdi0wo.v.3dns.vip
-  servername: null
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 7878D2
-  network: ws
-  port: 443
-  server: 47.243.65.243
-  servername: lcv8v9l7oyamxxfz.v.3dns.vip
+  server: 47.243.92.155
+  servername: mTCKUNDiGePwU3uP.v.3dns.vip
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: lcv8v9l7oyamxxfz.v.3dns.vip
+      Host: mTCKUNDiGePwU3uP.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK2
+  name: HK 🇭🇰 | @Raydikalx | 21FA39
+  network: ws
+  port: 53110
+  server: az-1.linkaa.xyz
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  ws-opts:
+    headers:
+      Host: az-1.linkaa.xyz
+    path: /game/resources
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 331707
+  network: ws
+  port: 443
+  server: 8.217.254.88
+  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    headers:
+      Host: 2b9hwy8ocx7q74nm.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 896C35
+  network: ws
+  port: 443
+  server: nycqg19zkwacpm1b.v.3dns.vip
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 9B0AE9
+  network: ws
+  port: 443
+  server: 93ucrn4i0pffuabk.v.3dns.vip
+  servername: 93ucrn4i0pffuabk.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | A940D7
+  network: ws
+  port: 443
+  server: 47.83.19.148
+  servername: 6jdvarazgu3qqr6q.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | E468F8
   network: tcp
-  port: 16115
-  server: zfd-hkv2.kunlun01dns.com
+  port: 21034
+  server: dog-tw.kunlun01dns.com
   servername: ''
   tls: false
   type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | ED46C4
+  network: tcp
+  port: 21021
+  server: dog-hk.kunlun01dns.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
 - alterId: 0
   cipher: auto
   name: '🇭🇰 香港 | HKG #10'
@@ -110,36 +175,38 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-188.116.22.171-4732
+  name: 🇭🇰HK-167.179.32.53-0128
   network: ws
-  port: 80
-  server: 188.116.22.171
+  port: 443
+  server: 167.179.32.53
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 3c6c608d-68c0-4782-86ac-98ea1ada3a25
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   ws-opts:
-    path: /vmess
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-47.242.205.255-1717
+  name: 🇭🇰HK-47.242.243.218-1874
   network: http
-  port: 49935
-  server: 47.242.205.255
+  port: 48471
+  server: 47.242.243.218
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 3ffddc7c-80a3-4677-ab9e-30da4190ec6a
+  uuid: 7daf0d3d-8c74-4f46-8912-fbf59be05e39
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-8.210.70.156-1611
+  name: 🇭🇰HK-47.242.56.3-1871
   network: http
-  port: 54148
-  server: 8.210.70.156
+  port: 37064
+  server: 47.242.56.3
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 1346261e-3201-4932-bfba-df869ab48116
+  uuid: d2a10a17-6191-472c-896b-782331f49fb9

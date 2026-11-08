@@ -1,18 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 6FD410
-  network: ws
-  port: 443
-  server: superjinx-production-d80d.up.railway.app
-  servername: superjinx-production-d80d.up.railway.app
+  name: SG 🇸🇬 | @Raydikalx | 77AF8A
+  network: tcp
+  port: 1270
+  server: 15.235.144.92
+  servername: xmfhlpy.com
   tls: true
   type: vmess
-  uuid: 7c1b29ba-6e83-45dc-bbb8-f8ad272c1e7a
-  ws-opts:
-    headers:
-      Host: superjinx-production-d80d.up.railway.app
-    path: /gw/a53bc4a2-9c44-4b2f-b362-8467bf7f16b3?ed=2560
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alpn:
   - http/1.1
   client-fingerprint: firefox
@@ -59,7 +55,7 @@ proxies:
     path: /shanhai/sg01fp=chrome
 - client-fingerprint: firefox
   encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #11'
   network: tcp
   port: 56984
   server: 140.235.11.243
@@ -68,7 +64,7 @@ proxies:
   type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
 - client-fingerprint: firefox
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #11'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #12'
   port: 443
   server: 45.76.155.179
   servername: sg003.zestapp778.com
@@ -76,7 +72,7 @@ proxies:
   type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
 - client-fingerprint: chrome
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #15'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #17'
   network: ws
   port: 2096
   server: 139.162.27.96
@@ -88,21 +84,6 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.dev
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #17'
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  servername: investor.fb.com.r3xxe.eu.cc
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 1246e51a-97cd-4d5c-9842-76dd3420bbe2
-  ws-opts:
-    headers:
-      Host: investor.fb.com.r3xxe.eu.cc
-    path: /id-tksi
 - name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
   network: ws
   port: 2096
@@ -129,6 +110,20 @@ proxies:
     headers:
       Host: sg01.564895.xyz
     path: /asdasdflow=
+- client-fingerprint: chrome
+  name: '🇺🇸 美国 | USA #25'
+  network: ws
+  port: 8443
+  server: sg01.cf.sh-cloudflare.sbs
+  servername: sg01.cdn00.top
+  tls: true
+  type: vless
+  udp: true
+  uuid: a8d9c86f-cddb-4fa5-96f7-f68eb48b3cb3
+  ws-opts:
+    headers:
+      Host: sg01.cdn00.top
+    path: /shanhai/sg01
 - name: 🇸🇬 新加坡 | SGP 6
   network: ws
   password: '!!str 123456'
@@ -158,6 +153,14 @@ proxies:
   port: 8886
   server: 139.180.146.200
   type: trojan
+- name: 🇸🇬 8@exclavevpn
+  password: 4fa0ca1b-0742-419d-8fd2-3f698e06b206
+  port: 20443
+  server: 84.32.23.62
+  skip-cert-verify: true
+  sni: hy530899-3.w-mebel.pro
+  tls: false
+  type: hysteria2
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
   name: '🇸🇬 新加坡 | SGP #1'
@@ -178,25 +181,11 @@ proxies:
   sni: sg-transit-2.nebulacloud.win
   tls: false
   type: hysteria2
-- name: 🇸🇬210346 | ⚡️Telegram = t.me/L...
-  password: 4fa0ca1b-0742-419d-8fd2-3f698e06b206
-  port: 20443
-  server: 84.32.23.62
-  skip-cert-verify: false
-  sni: hy530899-3.w-mebel.pro
-  tls: false
-  type: hysteria2
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 15.235.164.133
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #6'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 149.88.107.74
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #7'

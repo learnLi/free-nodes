@@ -1,34 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 21E816
-  network: ws
-  port: 443
-  server: JBQ4dPDPuJFzj4KV.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 1d84e480-8fd2-4fae-96de-e46fe36ffe86
-  ws-opts:
-    headers:
-      Host: JBQ4dPDPuJFzj4KV.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 5160AE
-  network: ws
-  port: 443
-  server: 4KnPRw5H74w4AVNs.v.3dns.vip
-  servername: 4KnPRw5H74w4AVNs.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 10d6665f-10c9-4f03-9b83-ba45968f748d
-  ws-opts:
-    headers:
-      Host: 4KnPRw5H74w4AVNs.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
   name: 🇰🇷KR-132.145.80.230-1222
   network: ws
   port: 80
@@ -42,6 +14,21 @@ proxies:
     headers:
       Host: kr02.a0a.xyz
     path: /cctv13.m3u8
+- alterId: 1
+  cipher: auto
+  name: 🇰🇷KR-59.24.3.174-0132
+  network: ws
+  port: 50205
+  server: data-hk-v2.shwjfkw.cn
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+  ws-opts:
+    headers:
+      Host: data-hk-v2.shwjfkw.cn
+    path: /hls/cctv5phd.m3u8
 - cipher: chacha20-ietf-poly1305
   name: '🇰🇷 韩国 | KOR #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
@@ -51,7 +38,7 @@ proxies:
   udp: true
 - cipher: aes-256-gcm
   name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  password: PCnnH6SQSnfoS27
-  port: 8091
+  password: Y6R9pAtvxxzmGC
+  port: 5001
   server: 141.164.45.187
   type: ss

@@ -1,35 +1,35 @@
 {
-  "total": 921,
+  "total": 970,
   "egress": {
-    "ip": "20.104.167.71",
+    "ip": "64.236.177.120",
     "method": "direct",
-    "country": "Canada",
-    "city": "Quebec",
+    "country": "United States",
+    "city": "Chicago",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 868,
-  "tcp_ok": 717,
-  "tcp_rate": "82.6%",
-  "tls_applicable": 406,
-  "tls_ok": 361,
-  "tls_rate": "88.9%",
-  "quic_applicable": 53,
+  "tcp_applicable": 916,
+  "tcp_ok": 764,
+  "tcp_rate": "83.4%",
+  "tls_applicable": 427,
+  "tls_ok": 383,
+  "tls_rate": "89.7%",
+  "quic_applicable": 54,
   "quic_ok": 2,
-  "quic_rate": "3.8%",
-  "udp_skipped": 53,
+  "quic_rate": "3.7%",
+  "udp_skipped": 54,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 4,
+      "ms": 3,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 5,
+      "ms": 2,
       "err": ""
     },
     {
@@ -54,25 +54,25 @@
       "ok": 0
     },
     "ss": {
-      "total": 265,
-      "ok": 219
+      "total": 264,
+      "ok": 220
     },
     "trojan": {
-      "total": 174,
-      "ok": 160
+      "total": 183,
+      "ok": 170
     },
     "vless": {
-      "total": 244,
-      "ok": 215
+      "total": 255,
+      "ok": 219
     },
     "vmess": {
-      "total": 156,
-      "ok": 99
+      "total": 185,
+      "ok": 131
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 53,
+      "total": 54,
       "ok": 2
     }
   }
