@@ -1,26 +1,16 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 826527
-  network: tcp
-  port: 35034
-  server: 165.154.195.38
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-211.72.35.110-4805
+  name: 🇹🇼TW-165.154.253.194-0075
   network: ws
   port: 443
-  server: 211.72.35.110
-  servername: woideneu7.jsworld.eu.org
-  skip-cert-verify: false
-  tls: true
+  server: 165.154.253.194
+  servername: ''
+  skip-cert-verify: true
+  tls: false
   type: vmess
-  uuid: 2eb30779-2e8c-4b89-e6bd-a0ec760ca506
+  uuid: a5f37e9f-f856-4d61-a8e0-0bbb09d25e8f
   ws-opts:
     headers:
-      Host: woideneu7.jsworld.eu.org
-    path: /nishikata
+      Host: 165.154.253.194
+    path: /

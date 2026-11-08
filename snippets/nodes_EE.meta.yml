@@ -1,28 +1,15 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: ES 🇪🇸 | @Raydikalx | EE55BF
-  network: ws
-  port: 443
-  server: 82259754d625.oylfmxz.cn
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: 82259754d625.oylfmxz.cn
-    path: /
-- encryption: none
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #5'
+- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #7'
   network: tcp
   port: 16443
   server: 45.86.60.174
   tls: false
   type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-- name: 🇪🇪EE_1|1.1MB/s
+- name: 🇪🇪EE_1|3.4MB/s
+  password: None
   port: 9443
-  server: 95.153.32.2
+  server: 95.153.31.66
   skip-cert-verify: true
   tls: true
   type: http

@@ -1,47 +1,22 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 964E22
-  network: ws
-  port: 80
-  server: 2606:4700:9c66::3c6d:65
-  servername: vmess.lbw666.dpdns.org
-  tls: false
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  ws-opts:
-    headers:
-      Host: vmess.lbw666.dpdns.org
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-146.59.85.226-1316
+  name: 🇫🇷FR-51.195.140.208-0015
   network: ws
   port: 443
-  server: 146.59.85.226
-  servername: ''
-  skip-cert-verify: true
+  server: univstar.51.195.140.208.sslip.io
+  servername: goodfamily19.site
+  skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
   ws-opts:
     headers:
-      Host: pelang.org
-    path: linkvws
+      Host: goodfamily19.site
+    path: /wmzmvws
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-51.159.155.52-0684
-  network: http
-  port: 3389
-  server: 51.159.155.52
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-54.37.131.126-0244
+  name: 🇫🇷FR-54.37.131.126-0257
   network: ws
   port: 80
   server: 54.37.131.126
@@ -54,6 +29,21 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-57.128.164.21-1752
+  network: ws
+  port: 80
+  server: 57.128.164.21
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 6c443cb3-9fe8-45e6-a86f-ef6ed19d481e
+  ws-opts:
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -110,18 +100,17 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🇫🇷法国丨yoyapai.com\r #4'
-  password: humanity
-  port: 443
-  server: www.speedtest.org
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-54.36.174.134-0258
+  name: 🇫🇷FR-54.36.174.134-0267
   password: 6heexyz
   port: 443
   server: 54.36.174.134
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR-54.36.174.140-0255
+  password: 6heexyz
+  port: 443
+  server: 54.36.174.140
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
@@ -153,14 +142,8 @@ proxies:
   port: 19999
   server: 167.17.64.22
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇵🇱[www.v2nodes.com] ss-PL-1273... #2'
-  password: 6heexyz
-  port: 443
-  server: 54.36.174.140
-  type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #4'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22

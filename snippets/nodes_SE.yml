@@ -1,9 +1,19 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 913FEF
+  network: tcp
+  port: 1270
+  server: 138.199.55.230
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - name: 🇸🇪 瑞典 V2CROSS.COM
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 167.88.61.175
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: blog.browseseniorrolesandenhanceyourcareertoday.com
   type: trojan
 - name: 🇸🇪 瑞典(mibei77.com 米贝节点分享)
@@ -14,7 +24,6 @@ proxies:
   sni: likejennie.pages.dev
   type: trojan
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
-  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 70.34.207.14

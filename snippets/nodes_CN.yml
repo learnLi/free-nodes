@@ -1,10 +1,24 @@
 proxies:
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 6C11D3
+  name: CN 🇨🇳 | @Raydikalx | 3C2253
   network: tcp
-  port: 50012
-  server: 36.133.78.37
+  port: 34602
+  server: 183.240.235.170
   tls: false
   type: vmess
-  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 59EF9B
+  network: ws
+  port: 8033
+  server: 120.232.202.14
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 74499dd9-f4c0-4450-8a4a-e06c8b25b77d
+  ws-opts:
+    headers:
+      Host: tms.dingtalk.com
+    path: /3ff53f15-4c9a-45b0-99ad-c8dfa3825d8f
