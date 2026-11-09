@@ -1,101 +1,120 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: BR 🇧🇷 | @Raydikalx | 76DE6F
-  network: raw
-  port: 22324
-  server: 172.233.14.17
+  name: DE 🇩🇪 | @Raydikalx | 358769
+  network: ws
+  port: 16622
+  server: planb.mojcn.com.linuxlh.xin
   tls: false
   type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  uuid: 83c25eab-8461-4b6a-b714-f4279535b316
+  ws-opts:
+    headers:
+      Host: a5f19060282ba7516bdd6ce8dd04528b.mobgslb.tbcache.com
+    path: /
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 15E1BA
-  network: tcp
-  port: 30553
-  server: 109.70.74.113
+  name: DE 🇩🇪 | @Raydikalx | 5B2DE0
+  network: ws
+  port: 16632
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: 0f2a8df7-6119-496d-aef8-45ff837cf9ec
+  ws-opts:
+    headers:
+      Host: 236be42fc5d210917a1ecf890328e104.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 7704BF
+  network: httpupgrade
+  port: 5060
+  server: 169.40.32.48
   servername: ''
   tls: false
   type: vmess
-  uuid: 0490055e-41b4-4deb-a171-c8ec5c31cd46
+  uuid: f54e93d1-cd8e-434f-8122-4887e62c97f5
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 179450
+  name: DE 🇩🇪 | @Raydikalx | 847EA3
   network: tcp
-  port: 2053
-  server: 5.252.26.23
-  servername: 7sjy5tmd8101.dop72.com
-  tls: true
+  port: 36594
+  server: 91.107.147.12
+  tls: false
   type: vmess
-  uuid: 0e00c2fb-fa06-4913-b3f8-8f71e805ad25
+  uuid: 1aba92cc-d94c-4536-a0a3-1540cb82f38c
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | B49B88
+  name: DE 🇩🇪 | @Raydikalx | 9DC37B
   network: ws
   port: 443
-  server: phGp4YkSp9VKIe0t.v.3dns.vip
-  servername: phGp4YkSp9VKIe0t.v.3dns.vip
+  server: poeiLD4YbYshwTWI.v.3dns.vip
+  servername: poeiLD4YbYshwTWI.v.3dns.vip
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: phGp4YkSp9VKIe0t.v.3dns.vip
+      Host: poeiLD4YbYshwTWI.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | D59FA0
+  name: DE 🇩🇪 | @Raydikalx | D524D9
+  network: tcp
+  port: 54588
+  server: 195.26.26.148
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6becea77-83b3-4a2b-89c0-e71c7a672d2a
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | DBD3FC
   network: ws
   port: 443
-  server: fYIVBOhD2JXOA4ds.v.3dns.vip
-  servername: fYIVBOhD2JXOA4ds.v.3dns.vip
+  server: O3ZBhK3HTyKNltsS.v.3dns.vip
+  servername: O3ZBhK3HTyKNltsS.v.3dns.vip
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: fYIVBOhD2JXOA4ds.v.3dns.vip
+      Host: O3ZBhK3HTyKNltsS.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: FI 🇫🇮 | @Raydikalx | 9DE7A4
-  network: tcp
-  port: 45073
-  server: xdd.dashuai.cyou
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 45048c5c-9aaa-4e43-a990-bb887672609a
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | 559DE7
-  network: tcp
-  port: 5381
-  server: dashboard.ojestore.top
+  name: DE 🇩🇪 | @Raydikalx | EB15D8
+  network: ws
+  port: 46277
+  server: 136.243.83.105
   servername: ''
   tls: false
   type: vmess
-  uuid: dcc26718-a622-464a-809d-c902f77fcef2
+  uuid: aa8a26cd-94f4-4f11-a3b3-48f30a127627
+  ws-opts:
+    headers:
+      Host: 136.243.83.105
+    path: /Telegram=@VPNine1
 - alterId: 0
   cipher: auto
-  name: '🇩🇪 德国 | DEU #15'
+  name: DE 🇩🇪 | @Raydikalx | FEF726
   network: tcp
-  port: 54258
-  server: 109.70.74.172
-  tls: false
+  port: 443
+  server: 45.131.153.149
+  servername: ''
+  tls: true
   type: vmess
-  uuid: 969ea83d-cc6a-4035-93b3-089facfbf0d0
-- alpn:
-  - ''
-  alterId: 0
+  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
+- alterId: 0
   cipher: auto
   name: 🇩🇪 德国 | DEU 9
+  network: tcp
   port: 54258
   server: 109.70.74.172
   skip-cert-verify: true
   tls: false
   type: vmess
-  udp: true
   uuid: 969ea83d-cc6a-4035-93b3-089facfbf0d0
 - alterId: 0
   cipher: auto
@@ -110,19 +129,30 @@ proxies:
   uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
 - alterId: 0
   cipher: auto
-  name: 🇩🇪DE-2.26.54.200-1926
+  name: 🇩🇪DE-47.91.94.116-1283
   network: ws
-  port: 8018
-  server: d2.anonix.cloud
+  port: 443
+  server: 47.91.94.116
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪DE-5.75.247.192-1776
+  network: http
+  port: 443
+  server: 5.75.247.192
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  ws-opts:
-    headers:
-      Host: shit.67133767.xyz
-    path: /websocket/transfer/gayporn
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
 - alterId: 0
   cipher: auto
   name: 🇩🇪DE-57.129.59.199-1446
@@ -140,25 +170,17 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 🇩🇪DE-94.130.184.57-3593
+  name: 🇩🇪DE-89.163.213.20-2661
   network: ws
   port: 80
-  server: 94.130.184.57
+  server: 89.163.213.20
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: c5e523e7-da73-40af-a4a9-c638720c30e1
+  uuid: 5668ff97-631f-4602-a13f-b56552c67abe
   ws-opts:
-    path: /graphql
-- name: '🇩🇪 德国 | DEU #16'
-  password: 6cddea99-9b18-4d42-8638-131bd9f5374f
-  port: 443
-  server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-  skip-cert-verify: true
-  sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
-  type: trojan
-  udp: true
+    path: /vmess
 - name: 🇩🇪DE德国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -166,24 +188,56 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- name: 🇩🇪[www.v2nodes.com] trojan-DE-...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.96
+  sni: learn.iloverussia2026.com
+  type: trojan
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #3'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.78
+  type: trojan
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #5'
+  password: 6cddea99-9b18-4d42-8638-131bd9f5374f
+  port: 443
+  server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+  skip-cert-verify: true
+  sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+  type: trojan
 - name: '🇩🇪[www.v2nodes.com] trojan-DE-... #6'
   password: happybirthdaydaniel
   port: 25267
   server: de-bots4.h1cloud.net
   type: trojan
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #7'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 193.108.119.78
-  type: trojan
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #9'
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #8'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 193.108.119.29
   sni: blog.iloverussia2026.com
   type: trojan
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #9'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 193.108.119.193
+  sni: resources.iloverussia2026.com
+  type: trojan
+- name: '🇸🇪 瑞典 | SWE #1'
+  password: f426d3c9-fb43-43c0-868b-898dfa451a74
+  port: 443
+  server: 121.127.33.130
+  skip-cert-verify: true
+  sni: likejennie.pages.dev
+  type: trojan
+- cipher: aes-256-gcm
+  name: shadowsocks-1875023013
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.176.204.18
+  type: ss
 - cipher: aes-256-cfb
-  name: 🇩🇪DE-51.102.203.129-0257
+  name: 🇩🇪DE-51.102.203.129-0272
   password: amazonskr05
   port: 443
   server: 51.102.203.129

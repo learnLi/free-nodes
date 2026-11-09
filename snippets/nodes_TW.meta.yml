@@ -1,16 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | A1FA21
-  network: ws
-  port: 443
-  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    path: /
 - alpn:
   - http/1.1
   client-fingerprint: firefox
@@ -27,7 +15,42 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
-- name: '🇹🇼 🇨🇳 台湾 | TWN #1'
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇹🇼 TW@ripaojiedian
+  network: ws
+  port: 53725
+  server: 45.207.159.60
+  servername: speedtest.danfengno1.kdns.fr
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: speedtest.danfengno1.kdns.fr
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
+- client-fingerprint: firefox
+  name: 🇹🇼 台湾｜06｜BGP
+  network: ws
+  port: 2096
+  server: cf02.564895.xyz
+  servername: tw01.564895.xyz
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887
+  ws-opts:
+    headers:
+      Host: tw01.564895.xyz
+    path: /asdasd
+- client-fingerprint: chrome
+  name: 🇹🇼 🇨🇳 台湾 | TWN
   network: ws
   port: 443
   server: 59.125.69.22
@@ -38,8 +61,8 @@ proxies:
   ws-opts:
     headers:
       Host: tse1.mm.bing.net
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
-- name: '🇹🇼 🇨🇳 台湾 | TWN #2'
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- name: '🇹🇼 🇨🇳 台湾 | TWN #1'
   network: ws
   port: 443
   server: 60.248.219.53
@@ -52,7 +75,22 @@ proxies:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
 - client-fingerprint: chrome
+  encryption: mlkem768x25519plus.native.0rtt.lp5ecFTuEhpfyb3UpX4PV7X8OzGdI6l2DHcMcRpndVg
   name: '🇹🇼 🇨🇳 台湾 | TWN #3'
+  network: ws
+  port: 443
+  server: hc35000.leyali.kdns.fr
+  servername: hc35000.leyali.kdns.fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: 369f76a6-77d1-4998-80bc-be485ce363bd
+  ws-opts:
+    headers:
+      Host: hc35000.leyali.kdns.fr
+    path: /hc35000
+- client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN #4'
   network: ws
   port: 443
   server: 60.248.219.53
@@ -90,7 +128,7 @@ proxies:
     headers:
       Host: vlso5.1d.mom
     path: /socks5=888:888@hkip.1d.mom:1080fp=chromesecurity=tls
-- name: '🇹🇼[www.v2nodes.com] vless-TW-3... #1'
+- name: '🇹🇼[www.v2nodes.com] vless-TW-3... #2'
   network: ws
   port: 443
   server: 85.237.207.141
@@ -102,19 +140,6 @@ proxies:
     headers:
       Host: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
     path: /vl/SaXqikbSPA3ImtmZKAFin?ed=2560fp=chrome
-- client-fingerprint: chrome
-  name: '🇹🇼[www.v2nodes.com] vless-TW-3... #2'
-  network: ws
-  port: 443
-  server: 85.237.207.141
-  servername: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
-  tls: true
-  type: vless
-  uuid: 4d945644-69ab-47e0-98b3-d43a6313135d
-  ws-opts:
-    headers:
-      Host: mhoX6Xz96zGe3qv5HISuFj9B.paGeS.DEV
-    path: /vl/SaXqikbSPA3ImtmZKAFin?ed=2560
 - name: '🇹🇼[www.v2nodes.com] vless-TW-3... #3'
   network: ws
   port: 443

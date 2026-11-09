@@ -1,1 +1,39 @@
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  name: ES 🇪🇸 | @Raydikalx | EEA146
+  network: ws
+  port: 443
+  server: 66.163.118.73
+  servername: null
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: mygptagent.org
+    path: /linkvws
+- alterId: 0
+  cipher: auto
+  name: Global 🌐 | @Raydikalx | B0EED0
+  network: ws
+  port: 80
+  server: us65.netfilx.live
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 60f12435-bb55-4da2-cb7d-4fea34ecfa37
+  ws-opts:
+    headers:
+      Host: us65.netfilx.live
+    path: /
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | 0CBEEB
+  network: tcp
+  port: 443
+  server: irc.jahancloud.cfd
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 24b73122-9c73-45ae-871d-1837e427a9bf

@@ -13,23 +13,32 @@ proxies:
     path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 3BB29A
-  network: tcp
-  port: 50011
-  server: 36.133.74.15
-  servername: ''
-  tls: false
+  name: CN 🇨🇳 | @Raydikalx | 9754ED
+  network: ws
+  port: 33402
+  server: cu4.ainivp.com
+  tls: true
   type: vmess
-  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+  uuid: 9227afcd-026e-781f-1abc-c06efabd2338
+  ws-opts:
+    headers:
+      Host: cu4.ainivp.com
+    path: /ray
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 6D086A
-  network: tcp
-  port: 50014
-  server: 36.133.78.37
-  tls: false
+  name: 🇨🇳CN-113.31.124.147-0140
+  network: ws
+  port: 443
+  server: 113.31.124.147
+  servername: ''
+  skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: 9e63ca55-1ff9-453b-ae80-75947b8596d3
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
 - alterId: 0
   cipher: auto
   name: 🇨🇳_CN_中国_IPV4

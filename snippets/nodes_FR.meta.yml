@@ -11,53 +11,32 @@ proxies:
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 3FDDAA
+  name: 🇫🇷FR-141.94.59.200-5178
   network: ws
-  port: 18901
-  server: 2001:bc8:32d7:1a9::2
+  port: 8080
+  server: 141.94.59.200
   servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  uuid: 2f685138-93b0-453f-d683-9398b3a3b8a0
   ws-opts:
-    path: /github.com/Alvin9999-newpac/fanqiang?ed
+    path: /
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 98B0D2
-  network: ws
-  port: 23388
-  server: 2001:bc8:32d7:1a9::2
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
-  ws-opts:
-    headers:
-      Host: tabrizm137gmail.com
-    path: /github.com/Alvin9999-newpac/fanqiang
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | CD4BBF
-  network: tcp
-  port: 38854
-  server: 94.131.9.155
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 00abfc28-d7d2-4787-f2a3-da1c2f38d7b8
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-152.228.191.232-7612
+  name: 🇫🇷FR-146.59.70.146-1480
   network: ws
   port: 443
-  server: 152.228.191.232
-  servername: lg30.cfcdn3.xyz
-  skip-cert-verify: false
+  server: 146.59.70.146
+  servername: ''
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
-    path: /ray
+    headers:
+      Host: yichueng.org
+    path: linkvws
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-185.16.110.212-1425
@@ -75,39 +54,18 @@ proxies:
     path: /dabai
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-54.37.131.126-0291
+  name: 🇫🇷FR-5.135.43.119-2616
   network: ws
-  port: 80
-  server: 54.37.131.126
+  port: 58732
+  server: 5.135.43.119
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
+  uuid: d159c5be-8291-45c4-bd21-51d024658a6d
   ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-57.128.164.21-1907
-  network: ws
-  port: 80
-  server: 57.128.164.21
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 6c443cb3-9fe8-45e6-a86f-ef6ed19d481e
-  ws-opts:
-    headers:
-      Host: https.http.www.net.com.ramseyv2.ir.
-    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #11'
   network: tcp
   port: 2053
   server: w.geogame.ir
@@ -115,7 +73,32 @@ proxies:
   tls: true
   type: vless
   uuid: fbda2834-b1e7-4148-afb9-deda31036a30
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #16'
+- encryption: none
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #13'
+  network: ws
+  port: 14430
+  server: 138.124.70.41
+  servername: 138.124.70.41
+  tls: false
+  type: vless
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  ws-opts:
+    headers:
+      Host: 138.124.70.41
+    path: /vless
+- encryption: none
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #18'
+  network: ws
+  port: 80
+  server: ov-france1.09vpn.com
+  tls: false
+  type: vless
+  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+  ws-opts:
+    headers:
+      Host: OV-France1.09vpn.com
+    path: /vless/
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
   network: ws
   port: 80
   server: 152.228.162.19
@@ -128,9 +111,9 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
   port: 2053
-  server: 15.236.109.186
+  server: w.geogame.ir
   servername: w.geogame.ir
   tls: true
   type: vless
@@ -161,7 +144,7 @@ proxies:
     path: /fp=firefoxsecurity=tls
 - client-fingerprint: unsafe
   encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-2... #2'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-2... #3'
   network: ws
   port: 443
   server: 104.20.45.141
@@ -186,18 +169,6 @@ proxies:
     headers:
       Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
     path: /
-- name: '🏳[www.v2nodes.com] vless- #3'
-  network: ws
-  port: 14430
-  server: 138.124.70.41
-  servername: 138.124.70.41
-  tls: false
-  type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
-  ws-opts:
-    headers:
-      Host: 138.124.70.41
-    path: /vless
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -229,14 +200,14 @@ proxies:
 - name: 🇫🇷法国丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.152
+  server: 104.18.152.73
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.73
+  server: 104.18.152.152
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -254,8 +225,7 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- auth: gf1:gfhysteria2024
-  name: '🇫🇷 法国 | FRA #2'
+- name: 🇫🇷 法国 | FRA
   password: gf1:gfhysteria2024
   port: 443
   server: 173.212.201.85
@@ -263,7 +233,7 @@ proxies:
   sni: www.docker.com
   tls: false
   type: hysteria2
-- name: '🇫🇷 法国 | FRA #5'
+- name: '🇫🇷 法国 | FRA #1'
   password: gf1
   port: 443
   server: 173.212.201.85
@@ -344,16 +314,3 @@ proxies:
   tls: true
   type: http
   udp: true
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  auth_str: dongtaiwang.com
-  down: 55
-  name: 🇫🇷 法国 | FRA 2
-  port: 36699
-  protocol: none
-  server: 163.172.117.163
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11
