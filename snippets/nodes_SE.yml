@@ -1,4 +1,24 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 72E4B5
+  network: httpupgrade
+  port: 443
+  server: defe.sync-bridge.ir
+  servername: defe.sync-bridge.ir
+  tls: true
+  type: vmess
+  uuid: 386c5322-48aa-4fc1-814f-2ff6c34d77e0
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | C2B3A3
+  network: tcp
+  port: 12809
+  server: 13.48.205.27
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 413abec9-e07c-424e-8c0a-da234bef870e
 - name: 🇸🇪 瑞典 V2CROSS.COM
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -6,19 +26,6 @@ proxies:
   skip-cert-verify: false
   sni: blog.browseseniorrolesandenhanceyourcareertoday.com
   type: trojan
-- name: 🇸🇪 瑞典 | SWE
-  network: ws
-  password: f426d3c9-fb43-43c0-868b-898dfa451a74
-  port: 443
-  server: 121.127.33.130
-  skip-cert-verify: true
-  sni: likejennie.pages.dev
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: likejennie.pages.dev
-    path: /
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443

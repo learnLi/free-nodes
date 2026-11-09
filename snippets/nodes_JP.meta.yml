@@ -1,32 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-168.138.43.75-1896
-  network: ws
-  port: 80
-  server: 168.138.43.75
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  ws-opts:
-    headers:
-      Host: 168.138.43.75
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-172.105.219.18-0714
+  name: 🇯🇵JP-172.104.78.98-2721
   network: ws
   port: 443
-  server: 172.105.219.18
+  server: 172.104.78.98
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 927094d3-d678-4763-8591-e240d0bcae87
   ws-opts:
-    path: /
+    path: /chat
 - alpn:
   - http/1.1
   client-fingerprint: firefox
@@ -63,39 +48,24 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-16 | free-nodes
+  name: 🇯🇵 JP VLESS-05 | free-nodes
   network: xhttp
   port: 443
-  server: s2477.csgfw.top
-  servername: u695098ue6ff16a6s2475.xxti.top
+  server: s2572.sspcccdn.xyz
+  servername: u695098u77c95bees2571.xxti.top
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   xhttp-opts:
-    host: u695098ue6ff16a6s2475.xxti.top
-    path: 0c2f7c71895d3c60a01133cd6a16bef8
+    host: u695098u77c95bees2571.xxti.top
+    path: aa34e53cdd078631ce7430da06d64c09
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵 JP VLESS-18 | free-nodes
-  network: tcp
-  port: 443
-  server: s2503.ccgfw.online
-  servername: u695098u093da7d1s2502.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-20 | free-nodes
+  name: 🇯🇵 JP VLESS-19 | free-nodes
   network: xhttp
   port: 443
   server: s2523.fuhuovps.xyz
@@ -112,7 +82,7 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-21 | free-nodes
+  name: 🇯🇵 JP VLESS-20 | free-nodes
   network: xhttp
   port: 443
   server: 2001:19f0:7001:4743:5400:7ff:fe05:f482
@@ -129,78 +99,161 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: firefox
+  name: 🇯🇵 JP VLESS-26 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2573.csgfw.top
+  servername: u695098u77c95bees2571.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u77c95bees2571.xxti.top
+    path: aa34e53cdd078631ce7430da06d64c09
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇯🇵 JP VLESS-25 | free-nodes
-  network: tcp
-  port: 443
-  server: s2534.wagahaha.xyz
-  servername: u695098udfec02ees2532.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-33 | free-nodes
-  network: xhttp
-  port: 443
-  server: 2401:c080:3800:31c9:5400:7ff:fe03:a5a2
-  servername: u695098ue6ff16a6s2475.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  xhttp-opts:
-    host: u695098ue6ff16a6s2475.xxti.top
-    path: 0c2f7c71895d3c60a01133cd6a16bef8
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-34 | free-nodes
-  network: xhttp
-  port: 443
-  server: s2480.okgfwbackxyz.xyz
-  servername: u695098u5ee03bdds2472.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  xhttp-opts:
-    host: u695098u5ee03bdds2472.xxti.top
-    path: 42761be656e5c5ce21dae8c0ace8cc2d
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
   name: 🇯🇵 JP VLESS-35 | free-nodes
+  network: tcp
+  port: 443
+  server: 2401:c080:3800:32a3:5400:7ff:fe07:b909
+  servername: u695098u0be8742as2628.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇯🇵 JP VLESS-43 | free-nodes
   network: xhttp
   port: 443
-  server: s2481.kukuss.top
-  servername: u695098u5ee03bdds2472.xxti.top
+  server: 2001:19f0:7001:173f:5400:7ff:fe07:b903
+  servername: u695098ubcfb148fs2610.xxti.top
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   xhttp-opts:
-    host: u695098u5ee03bdds2472.xxti.top
-    path: 42761be656e5c5ce21dae8c0ace8cc2d
+    host: u695098ubcfb148fs2610.xxti.top
+    path: a4356ab3b76e7220f6fb403cf0ebe9f0
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇯🇵 JP VLESS-45 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2623.ccgfw.online
+  servername: u695098ud4a1e126s2622.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098ud4a1e126s2622.xxti.top
+    path: fd528e38b5e1d0a1c8dadad0d1c2e84b
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇯🇵 JP VLESS-57 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:1000:59d0:5400:7ff:fe06:754
+  servername: u695098u77c95bees2571.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u77c95bees2571.xxti.top
+    path: aa34e53cdd078631ce7430da06d64c09
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇯🇵 JP VLESS-38 | free-nodes
+  name: 🇯🇵 JP VLESS-62 | free-nodes
   network: tcp
   port: 443
-  server: s2546.wagahaha.xyz
-  servername: u695098uf08a6307s2544.xxti.top
+  server: 2401:c080:3800:2951:5400:7ff:fe07:b908
+  servername: u695098ud3f75663s2616.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇯🇵 JP VLESS-63 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:1000:5e51:5400:7ff:fe07:b906
+  servername: u695098ud4a1e126s2622.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098ud4a1e126s2622.xxti.top
+    path: fd528e38b5e1d0a1c8dadad0d1c2e84b
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇯🇵 JP VLESS-64 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:3800:2cc8:5400:7ff:fe07:b90a
+  servername: u695098ue0273d07s2629.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098ue0273d07s2629.xxti.top
+    path: 7cad4f98ff5c9cc8bc6ce26dc79e5251
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇯🇵 JP VLESS-65 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:3800:3265:5400:7ff:fe05:df94
+  servername: u695098u777955fes2514.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u777955fes2514.xxti.top
+    path: a33bb2f21ce1d5798a6537c211b9c513
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇯🇵 JP VLESS-78 | free-nodes
+  network: tcp
+  port: 443
+  server: s2617.gogocs.xyz
+  servername: u695098ud3f75663s2616.xxti.top
   skip-cert-verify: false
   tfo: false
   tls: true
@@ -211,11 +264,11 @@ proxies:
   - http/1.1
   client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🇯🇵 JP VLESS-39 | free-nodes
+  name: 🇯🇵 JP VLESS-79 | free-nodes
   network: tcp
   port: 443
-  server: s2547.fuhuovps.xyz
-  servername: u695098uf08a6307s2544.xxti.top
+  server: s2618.wagahaha.xyz
+  servername: u695098ud3f75663s2616.xxti.top
   skip-cert-verify: false
   tfo: false
   tls: true
@@ -225,7 +278,7 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-71 | free-nodes
+  name: 🇯🇵 JP VLESS-83 | free-nodes
   network: xhttp
   port: 443
   server: s2515.ccgfw.online
@@ -242,113 +295,53 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵 JP VLESS-72 | free-nodes
-  network: tcp
-  port: 443
-  server: s2533.gogocs.xyz
-  servername: u695098udfec02ees2532.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵 JP VLESS-73 | free-nodes
-  network: tcp
-  port: 443
-  server: 2401:c080:1000:340d:5400:7ff:fe05:f483
-  servername: u695098udfec02ees2532.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵 JP VLESS-75 | free-nodes
-  network: tcp
-  port: 443
-  server: 2401:c080:3800:3211:5400:7ff:fe05:f484
-  servername: u695098uf08a6307s2544.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-82 | free-nodes
+  name: 🇯🇵 JP VLESS-90 | free-nodes
   network: xhttp
   port: 443
-  server: 2401:c080:3800:3941:5400:7ff:fe03:a59e
-  servername: u695098u5ee03bdds2472.xxti.top
+  server: s2612.okgfwbackxyz.xyz
+  servername: u695098ubcfb148fs2610.xxti.top
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   xhttp-opts:
-    host: u695098u5ee03bdds2472.xxti.top
-    path: 42761be656e5c5ce21dae8c0ace8cc2d
+    host: u695098ubcfb148fs2610.xxti.top
+    path: a4356ab3b76e7220f6fb403cf0ebe9f0
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇯🇵 JP VLESS-84 | free-nodes
-  network: tcp
-  port: 443
-  server: 2401:c080:1000:54c3:5400:7ff:fe05:df8d
-  servername: u695098u093da7d1s2502.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-86 | free-nodes
+  name: 🇯🇵 JP VLESS-93 | free-nodes
   network: xhttp
   port: 443
-  server: s2516.okgfwbackxyz.xyz
-  servername: u695098u777955fes2514.xxti.top
+  server: s2641.gogocs.xyz
+  servername: u695098u4a88067fs2640.xxti.top
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   xhttp-opts:
-    host: u695098u777955fes2514.xxti.top
-    path: a33bb2f21ce1d5798a6537c211b9c513
+    host: u695098u4a88067fs2640.xxti.top
+    path: aa5ea189ea3ab5344f936fda07ec35b3
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: 🇯🇵 JP VLESS-87 | free-nodes
+  name: 🇯🇵 JP VLESS-94 | free-nodes
   network: xhttp
   port: 443
-  server: 2401:c080:3800:3265:5400:7ff:fe05:df94
-  servername: u695098u777955fes2514.xxti.top
+  server: 2001:19f0:7001:5e1e:5400:7ff:fe07:b904
+  servername: u695098u4a88067fs2640.xxti.top
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   xhttp-opts:
-    host: u695098u777955fes2514.xxti.top
-    path: a33bb2f21ce1d5798a6537c211b9c513
+    host: u695098u4a88067fs2640.xxti.top
+    path: aa5ea189ea3ab5344f936fda07ec35b3
 - alpn:
   - http/1.1
   client-fingerprint: firefox
@@ -388,7 +381,7 @@ proxies:
 - name: '🇯🇵 日本 | JPN #1'
   network: ws
   port: 443
-  server: 62.106.75.86
+  server: 3.113.213.171
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -397,7 +390,7 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxywsfp=unsafe
-- name: '🇯🇵 日本 | JPN #3'
+- name: '🇯🇵 日本 | JPN #3 #1'
   network: ws
   port: 2096
   server: jp01.cf.sh-cloudflare.sbs
@@ -409,6 +402,48 @@ proxies:
     headers:
       Host: jp01.cdn00.top
     path: /shanhai/jp01fp=chrome
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #4'
+  network: ws
+  port: 443
+  server: 46.250.248.210
+  servername: fs.qicai99.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: /
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #5'
+  network: ws
+  port: 443
+  server: 45.192.243.63
+  servername: 5269t.pages.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8c7588f8-2d81-4b09-86d4-4a623e9f2dca
+  ws-opts:
+    headers:
+      Host: 5269t.pages.dev
+    path: /
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #6'
+  network: ws
+  port: 443
+  server: 46.250.254.187
+  servername: fs.qicai99.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: /
 - client-fingerprint: firefox
   name: 🇯🇵 日本｜08｜BGP
   network: ws
@@ -425,7 +460,7 @@ proxies:
     headers:
       Host: jp01.564895.xyz
     path: /asdasd
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
+- name: 🇯🇵[www.v2nodes.com] vless-JP-1...
   network: ws
   port: 443
   server: 188.114.97.6
@@ -437,7 +472,56 @@ proxies:
     headers:
       Host: nautica-cff.kloningstrife002.workers.dev
     path: /138.2.74.219-28616fp=unsafe
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
+  network: ws
+  port: 8080
+  server: 104.21.70.21
+  servername: nautica-cff.kloningstrife002.workers.dev
+  tls: false
+  type: vless
+  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
+  ws-opts:
+    headers:
+      Host: nautica-cff.kloningstrife002.workers.dev
+    path: /138.2.74.219-28616
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #13'
+  port: 443
+  server: 142.91.108.25
+  tls: false
+  type: vless
+  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #16'
+  port: 47878
+  server: 152.69.195.67
+  servername: 152.69.195.67
+  tls: false
+  type: vless
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #17'
+  network: ws
+  port: 443
+  server: 207.148.115.152
+  servername: vlso5.1d.mom
+  tls: true
+  type: vless
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  ws-opts:
+    headers:
+      Host: vlso5.1d.mom
+    path: /socks5=888:888@hkip.1d.mom:1080fp=chrome
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  network: ws
+  port: 443
+  server: 207.148.115.152
+  servername: vlso5.1d.mom
+  tls: false
+  type: vless
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  ws-opts:
+    headers:
+      Host: vlso5.1d.mom
+    path: /socks5=888:888@hkip.1d.mom:1080fp=chromesecurity=tls
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
   network: ws
   port: 11424
   server: 38.47.96.220
@@ -450,84 +534,6 @@ proxies:
     headers:
       Host: notls.lukongtou.eu.org
     path: Telegram-WangCai2🇨🇳security=tls
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #12'
-  network: ws
-  port: 2096
-  server: courses.mftplus.qzz.io
-  servername: courses.mftplus.qzz.io
-  tls: true
-  type: vless
-  uuid: b9ede7a5-5b4b-4aee-ac37-2c307e587e47
-  ws-opts:
-    headers:
-      Host: courses.mftplus.qzz.io
-    path: /eyJqdW5rIjoidVkzQm1ROUg4dyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=fp=chrome
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #13'
-  network: ws
-  port: 443
-  server: 207.148.115.152
-  servername: vlso5.1d.mom
-  tls: true
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  ws-opts:
-    headers:
-      Host: vlso5.1d.mom
-    path: /socks5=888:888@hkip.1d.mom:1080fp=chrome
-- encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #14'
-  network: ws
-  port: 8080
-  server: 104.21.70.21
-  servername: nautica-cff.kloningstrife002.workers.dev
-  tls: false
-  type: vless
-  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
-  ws-opts:
-    headers:
-      Host: nautica-cff.kloningstrife002.workers.dev
-    path: /138.2.74.219-28616
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #16'
-  port: 443
-  server: 142.91.108.25
-  tls: false
-  type: vless
-  uuid: ee18d188-14cc-417e-beb1-70e4add6d023
-- encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #20'
-  network: tcp
-  port: 47878
-  server: 152.69.195.67
-  servername: 152.69.195.67
-  tls: false
-  type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-- client-fingerprint: unsafe
-  encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #21'
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  servername: nautica-cff.kloningstrife002.workers.dev
-  tls: true
-  type: vless
-  uuid: fc60147e-76b8-4bc5-b691-90b2da79e3d2
-  ws-opts:
-    headers:
-      Host: nautica-cff.kloningstrife002.workers.dev
-    path: /138.2.74.219-28616
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
-  network: ws
-  port: 443
-  server: 207.148.115.152
-  servername: vlso5.1d.mom
-  tls: false
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  ws-opts:
-    headers:
-      Host: vlso5.1d.mom
-    path: /socks5=888:888@hkip.1d.mom:1080fp=chromesecurity=tls
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
   network: ws
   port: 443
@@ -540,18 +546,6 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxywsfp=unsafe
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #9'
-  network: ws
-  port: 443
-  server: 104.17.210.74
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxywsfp=chrome
 - name: 🇯🇵[www.v2nodes.com] vless-JP-4...
   network: ws
   port: 443
@@ -564,12 +558,12 @@ proxies:
     headers:
       Host: web-app-ji3j1z.app-wuuhuw.workers.dev
     path: /api/wsfp=ios
-- name: '🇯🇵 日本 | JPN #2 #1'
-  password: e79bb958-2a79-4eea-87a3-7e73d0059ebf
-  port: 27777
-  server: 150.230.217.160
-  skip-cert-verify: true
-  sni: ol1.ssn571.top
+- name: 🇯🇵[www.v2nodes.com] trojan-JP-...
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 167.179.108.225
+  skip-cert-verify: false
+  sni: discoverparttimepositionsandsupplementyourincomeguide.com
   type: trojan
 - name: '🇯🇵[www.v2nodes.com] trojan-JP-... #2'
   password: ZLNrfFIw6IXWvhFvGEWi4EcsWJ76ZiDh
@@ -578,17 +572,36 @@ proxies:
   skip-cert-verify: true
   sni: 160.21.74.183
   type: trojan
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #3'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- alpn:
+  - h3
+  auth: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  name: 🇯🇵 JP HY2-34 | free-nodes
+  password: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   port: 443
-  server: 167.179.108.225
-  type: trojan
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146270
-  password: shadowsocks
+  server: s2624.okgfwbackxyz.xyz
+  skip-cert-verify: false
+  sni: u695098ud4a1e126s2622.xxti.top
+  type: hysteria2
+- alpn:
+  - h3
+  auth: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  name: 🇯🇵 JP HY2-46 | free-nodes
+  password: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   port: 443
-  server: 149.22.87.240
-  type: ss
+  server: s2634.uugfw.top
+  skip-cert-verify: false
+  sni: u695098u0be8742as2628.xxti.top
+  type: hysteria2
+- alpn:
+  - h3
+  auth: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  name: 🇯🇵 JP HY2-92 | free-nodes
+  password: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  port: 443
+  server: 2401:c080:3800:32a3:5400:7ff:fe07:b909
+  skip-cert-verify: false
+  sni: u695098u0be8742as2628.xxti.top
+  type: hysteria2
 - cipher: aes-128-gcm
   name: shadowsocks-1827146287
   password: shadowsocks
@@ -601,17 +614,17 @@ proxies:
   port: 80
   server: 84.247.155.196
   type: ss
+- cipher: aes-128-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
+  type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
   port: 443
   server: 84.247.155.196
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1598...
-  password: 1f24d145bf7c877f7e3140b7918eb9cd804b1576a96596f9
-  port: 443
-  server: 45.12.89.202
   type: ss
 - cipher: aes-256-gcm
   name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
@@ -625,3 +638,11 @@ proxies:
   port: 443
   server: 149.22.87.204
   type: ss
+- name: 🇯🇵JP_1|2.9MB/s
+  password: 'null'
+  port: 40583
+  server: 120.232.204.58
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'

@@ -11,16 +11,31 @@ proxies:
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-141.94.59.200-5178
+  name: FR 🇫🇷 | @Raydikalx | 8CDFD8
   network: ws
-  port: 8080
-  server: 141.94.59.200
+  port: 20222
+  server: 51.75.118.5
   servername: ''
-  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 2f685138-93b0-453f-d683-9398b3a3b8a0
+  uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6
   ws-opts:
+    headers:
+      Host: 51.75.118.5
+    path: /parham-confing-vmess?ed=2048&u=kma_vqHvj6gOpirojyJf5Q85P44FJpu7NnnYnhYNtCuKI7Sh6QFdZRnkYjsy8E6dgcMq8nNoGA
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 9FDBC9
+  network: ws
+  port: 80
+  server: 145.239.55.210
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 479526cd-5011-43cf-a788-504da95e07c2
+  ws-opts:
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
 - alterId: 0
   cipher: auto
@@ -39,32 +54,19 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-185.16.110.212-1425
+  name: 🇫🇷FR-91.134.8.88-1464
   network: ws
-  port: 8880
-  server: 185.16.110.212
+  port: 443
+  server: 91.134.8.88
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: b209dfbf-6bb0-30b2-a77a-286e230466b5
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: TG.WangCai2.s4.db-link02.top
-    path: /dabai
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-5.135.43.119-2616
-  network: ws
-  port: 58732
-  server: 5.135.43.119
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: d159c5be-8291-45c4-bd21-51d024658a6d
-  ws-opts:
-    path: /
+      Host: lammaland.org
+    path: linkvws
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -131,22 +133,16 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.27
+  server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 172.99.189.142
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
@@ -156,4 +152,10 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
+  type: ss
+- cipher: aes-256-gcm
+  name: 🏳[www.v2nodes.com] ss-
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.27
   type: ss
