@@ -1,12 +1,16 @@
 proxies:
-- name: 🇸🇪 瑞典 V2CROSS.COM
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
+  network: ws
+  password: f426d3c9-fb43-43c0-868b-898dfa451a74
   port: 443
-  server: 167.88.61.175
-  skip-cert-verify: false
-  sni: blog.browseseniorrolesandenhanceyourcareertoday.com
+  server: 121.127.33.130
+  sni: likejennie.pages.dev
   type: trojan
-- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
+  ws-opts:
+    headers:
+      Host: likejennie.pages.dev
+    path: '%2F'
+- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #3'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 70.34.207.14
@@ -23,4 +27,10 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 138.199.55.243
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  password: 2e555e46dbc421452416834962fd014f
+  port: 8388
+  server: 62.182.193.228
   type: ss

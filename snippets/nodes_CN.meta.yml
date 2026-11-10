@@ -1,75 +1,23 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 06056E
+  name: CN 🇨🇳 | @Raydikalx | 3C04D0
   network: tcp
-  port: 50015
-  server: 36.133.78.37
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 1b30f413-2865-4d40-9146-4207778718cd
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 09B96A
-  network: ws
-  port: 10086
-  server: 120.48.133.162
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
-  ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 8665EC
-  network: ws
-  port: 10086
-  server: 39.108.113.127
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 2eb25c1e-c3b5-45cf-9afd-dd3ddc00da10
-  ws-opts: {}
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | A15219
-  network: tcp
-  port: 50017
+  port: 50016
   server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: abcb006d-739f-4cec-b13f-12c10d334d92
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | ED4A61
+  name: 🇨🇳CN-153.101.64.221-2367
   network: ws
-  port: 11972
-  server: 120.240.142.21
+  port: 40013
+  server: 153.101.64.221
+  servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: d19c5396-aef2-b508-3abb-e9f93c8b0cfc
+  uuid: 5716c1b4-c2d3-4a9d-a9a8-5d9919d0ed8f
   ws-opts:
-    headers:
-      Host: tms.dingtalk.com
-    path: /adb4c2cc-9e77-d6fc-4dba-e06b15659469
-- ip: 172.16.0.2/32
-  keepalive: '5'
-  mtu: 1280
-  name: 🇨🇳CN_1|1.5MB/s
-  persistent-keepalive: '5'
-  port: 500
-  private-key: +AYnqJYinZIJ6yZwIjmirctmPqzfctf6H2fTqywa/XM=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 39
-  - 4
-  - 107
-  server: 162.159.192.2
-  type: wireguard
-  udp: true
-  wnoise: quic
-  wnoisecount: '5'
-  wnoisedelay: '5'
-  wpayloadsize: 40-90
+    path: /qwe123321ewq

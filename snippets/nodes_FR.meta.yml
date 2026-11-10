@@ -1,75 +1,69 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 15883A
-  network: ws
-  port: 20155
-  server: 51.68.34.78
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 5365cb12-83e2-4e12-8098-c9673ed7f540
-  ws-opts:
-    path: /bp-vmess
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 548D11
-  network: ws
-  port: 2095
-  server: www.asamping.ir
-  servername: www.asamping.ir
-  tls: false
-  type: vmess
-  uuid: a55cdc40-5af5-4f02-9a46-41685120fe6f
-  ws-opts:
-    headers:
-      Host: www.asamping.ir
-    path: /
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 9FDBC9
+  name: 'FR 🇫🇷 | @Raydikalx | 20ADF1 #1'
   network: ws
   port: 80
   server: 145.239.55.210
-  servername: ''
   tls: false
   type: vmess
-  uuid: 479526cd-5011-43cf-a788-504da95e07c2
+  uuid: c5443f55-d405-4990-ac36-8fd83ae2c17e
   ws-opts:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | BB13BB
+  name: FR 🇫🇷 | @Raydikalx | E86967
   network: ws
-  port: 443
-  server: vspeedfast.org
-  servername: vspeedfast.org
-  tls: true
+  port: 20222
+  server: 51.75.118.5
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6
   ws-opts:
     headers:
-      Host: vspeedfast.org
-    path: /linkvws
+      Host: 51.75.118.5
+    path: /parham-confing-vmess?u=3edbb4f2-65a2-439b-bb98-7d3f8bba62f4-2df79a37dad10ce85be2ddc5
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-141.95.55.70-8508
+  name: 🇫🇷FR-51.38.82.132-7893
   network: ws
   port: 80
-  server: 141.95.55.70
+  server: 51.38.82.132
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 18ca5b23-ead3-4adb-a153-d7ae32c10f54
+  uuid: aca76f27-cda3-47f7-af79-7873034fd3bc
   ws-opts:
     path: /vmess
 - alpn:
   - h3
-  client-fingerprint: edge
+  client-fingerprint: ios
   name: '🇫🇷 法国 | FRA #1'
+  port: 443
+  server: 151.101.36.201
+  servername: accounts.fastly.com
+  tls: true
+  type: vless
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+- alpn:
+  - h3
+  client-fingerprint: chrome
+  name: '🇫🇷 法国 | FRA #2'
+  network: xhttp
+  port: 443
+  server: 151.101.36.88
+  servername: accounts.fastly.com
+  tls: true
+  type: vless
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+- alpn:
+  - h3
+  client-fingerprint: edge
+  name: '🇫🇷 法国 | FRA #5'
   network: xhttp
   port: 443
   server: 151.101.36.2
@@ -84,74 +78,35 @@ proxies:
     path: /
 - alpn:
   - h3
-  client-fingerprint: chrome
-  name: '🇫🇷 法国 | FRA #2'
-  network: xhttp
-  port: 443
-  server: 151.101.36.88
-  servername: accounts.fastly.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  xhttp-opts:
-    host: ovd5.global.ssl.fastly.net
-    mode: auto
-    path: /
-- alpn:
-  - h3
-  client-fingerprint: ios
-  name: '🇫🇷 法国 | FRA #3'
-  network: xhttp
-  port: 443
-  server: 151.101.36.201
-  servername: accounts.fastly.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  xhttp-opts:
-    host: oh6.global.ssl.fastly.net
-    mode: auto
-    path: /
-- alpn:
-  - h3
   client-fingerprint: edge
-  name: '🇫🇷 法国 | FRA #4'
-  network: xhttp
+  name: 🇫🇷FR_1|1.8MB/s
   port: 443
   server: 151.101.36.111
   servername: accounts.fastly.com
   tls: true
   type: vless
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇫🇷FR_1|2.6MB/s
+  network: ws
+  port: 443
+  server: 3.169.9.125
+  servername: dkfsoyk9ju2as.cloudfront.net
+  tls: true
+  type: vless
   udp: true
   uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  xhttp-opts:
-    host: ovd11.global.ssl.fastly.net
-    mode: auto
+  ws-opts:
+    headers:
+      Host: dkfsoyk9ju2as.cloudfront.net
+      User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/46.0.2490.80 Safari/537.36
     path: /
-- alpn:
-  - h3
-  client-fingerprint: edge
-  name: 🇫🇷FR_1|1.1MB/s
-  port: 443
-  server: 151.101.36.61
-  servername: accounts.fastly.com
-  tls: true
-  type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #12'
-  network: tcp
-  port: 2053
-  server: w.geogame.ir
-  servername: w.geogame.ir
-  tls: true
-  type: vless
-  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
-- encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #14'
+  xudp: true
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
   network: ws
   port: 14430
   server: 138.124.70.41
@@ -163,8 +118,18 @@ proxies:
     headers:
       Host: 138.124.70.41
     path: /vless
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
+  network: tcp
+  port: 2053
+  server: w.geogame.ir
+  servername: w.geogame.ir
+  tls: true
+  type: vless
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
 - encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #19'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #16'
   network: ws
   port: 80
   server: ov-france1.09vpn.com
@@ -175,7 +140,19 @@ proxies:
     headers:
       Host: OV-France1.09vpn.com
     path: /vless/
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
+  port: 80
+  server: 152.228.162.19
+  tls: false
+  type: vless
+  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+  port: 51671
+  server: 152.228.139.33
+  tls: false
+  type: vless
+  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
   network: ws
   port: 443
   server: 178.104.70.11
@@ -187,15 +164,17 @@ proxies:
     headers:
       Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
     path: /fp=firefoxsecurity=tls
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
-  network: ws
-  port: 80
-  server: 152.228.162.19
-  tls: false
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  port: 2053
+  server: w.geogame.ir
+  servername: w.geogame.ir
+  tls: true
   type: vless
-  uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
-  ws-opts:
-    path: /vless/
+  uuid: fbda2834-b1e7-4148-afb9-deda31036a30
 - client-fingerprint: unsafe
   encryption: none
   name: '🇫🇷[www.v2nodes.com] vless-FR-2... #1'
@@ -210,6 +189,18 @@ proxies:
     headers:
       Host: razk50e1uvss.amirhoseyn-meshki.workers.dev
     path: /stream/PANEL_ZEUS/7e7818beb9aa
+- name: '🇫🇷[www.v2nodes.com] vless-FR-2... #2'
+  network: ws
+  port: 443
+  server: 178.104.70.11
+  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
+  tls: true
+  type: vless
+  uuid: 64726966-0000-4000-8000-740000000000
+  ws-opts:
+    headers:
+      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
+    path: /fp=firefox
 - name: 🇫🇷[www.v2nodes.com] vless-FR-6...
   network: ws
   port: 443
@@ -234,6 +225,22 @@ proxies:
     headers:
       Host: razk50e1uvss.amirhoseyn-meshki.workers.dev
     path: /stream/PANEL_ZEUS/7e7818beb9aafp=unsafe
+- alpn:
+  - h3
+  client-fingerprint: edge
+  name: '🇳🇱 荷兰 | NLD #6'
+  network: xhttp
+  port: 443
+  server: 151.101.36.61
+  servername: accounts.fastly.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  xhttp-opts:
+    host: ovd10.global.ssl.fastly.net
+    mode: auto
+    path: /
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -251,14 +258,14 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.26.15.137
+  server: 104.17.111.4
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -279,17 +286,24 @@ proxies:
 - name: '🇫🇷法国丨yoyapai.com\r #2'
   password: humanity
   port: 443
-  server: 104.18.152.133
+  server: 104.18.22.63
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #3'
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.18.152.133
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- cipher: aes-256-cfb
+  name: '🇫🇷 法国 | FRA #4'
+  password: amazonskr05
+  port: 443
+  server: 13.36.165.6
+  type: ss
+  udp: true
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -326,6 +340,13 @@ proxies:
   port: 19999
   server: 23.162.152.22
   type: ss
+- name: FR_speednode_0008
+  port: 19362
+  server: 51.159.225.197
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 - name: FR_speednode_0009
   port: 8090
   server: 83.206.1.225
@@ -356,39 +377,12 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_3|1.6MB/s
-  port: 9443
-  server: 138.199.47.247
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇫🇷FR_4|2.7MB/s
-  password: None
-  port: 9443
-  server: 213.139.9.142
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇫🇷FR_5|1.1MB/s
-  password: None
-  port: 443
-  server: 84.235.228.156
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇫🇷FR_6|3.1MB/s
-  port: 443
-  server: 103.82.101.44
-  skip-cert-verify: true
-  sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
-  tls: true
-  type: http
 - alpn:
   - h3
   auth-str: dongtaiwang.com
   auth_str: dongtaiwang.com
   down: 55
-  name: 🇫🇷 法国 | FRA 5
+  name: '🇫🇷 法国 | FRA #3'
   port: 36699
   protocol: none
   server: 163.172.117.163
@@ -396,17 +390,3 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: '55'
-  name: 🇫🇷FR_2|1.9MB/s
-  password: dongtaiwang.com
-  port: 24667
-  server: 62.210.28.175
-  servername: bing.com
-  skip-cert-verify: true
-  sni: bing.com
-  tls: true
-  type: hysteria
-  up: '11'

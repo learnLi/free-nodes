@@ -2,7 +2,7 @@ proxies:
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #10'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
   network: grpc
   port: 48115
   server: 138.124.86.230
@@ -10,7 +10,7 @@ proxies:
   tls: true
   type: vless
   uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #12'
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
   network: ws
   port: 14430
   server: 5.178.109.174
@@ -21,26 +21,18 @@ proxies:
     headers:
       Host: 5.178.109.174
     path: /vless
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #9'
-  network: tcp
+- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
+  network: ws
+  password: f426d3c9-fb43-43c0-868b-898dfa451a74
   port: 443
-  server: 194.104.94.141
-  servername: se3.shtil.io
-  tls: true
-  type: vless
-  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
-- name: 🇸🇪 瑞典 V2CROSS.COM
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.175
-  skip-cert-verify: false
-  sni: blog.browseseniorrolesandenhanceyourcareertoday.com
+  server: 121.127.33.130
+  sni: likejennie.pages.dev
   type: trojan
-- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
+  ws-opts:
+    headers:
+      Host: likejennie.pages.dev
+    path: '%2F'
+- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #3'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 70.34.207.14
@@ -58,16 +50,16 @@ proxies:
   port: 19999
   server: 138.199.55.243
   type: ss
-- name: 🇸🇪SE_1|1.3MB/s
+- cipher: chacha20-ietf-poly1305
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  password: 2e555e46dbc421452416834962fd014f
+  port: 8388
+  server: 62.182.193.228
+  type: ss
+- name: 🇸🇪SE_1|1.2MB/s
   password: None
   port: 443
   server: 146.70.242.146
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇸🇪SE_2|1.2MB/s
-  port: 443
-  server: 79.142.77.63
   skip-cert-verify: true
   tls: true
   type: http
