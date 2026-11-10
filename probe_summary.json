@@ -1,42 +1,42 @@
 {
-  "total": 1130,
+  "total": 1117,
   "egress": {
-    "ip": "40.124.29.229",
+    "ip": "20.106.231.74",
     "method": "direct",
     "country": "United States",
-    "city": "San Antonio",
+    "city": "Dulles",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 1084,
-  "tcp_ok": 938,
-  "tcp_rate": "86.5%",
-  "tls_applicable": 603,
-  "tls_ok": 538,
-  "tls_rate": "89.2%",
-  "quic_applicable": 46,
+  "tcp_applicable": 1063,
+  "tcp_ok": 904,
+  "tcp_rate": "85.0%",
+  "tls_applicable": 578,
+  "tls_ok": 529,
+  "tls_rate": "91.5%",
+  "quic_applicable": 54,
   "quic_ok": 1,
-  "quic_rate": "2.2%",
-  "udp_skipped": 46,
+  "quic_rate": "1.9%",
+  "udp_skipped": 54,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 10,
+      "ms": 2,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 16,
+      "ms": 2,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 38,
+      "ms": 5,
       "err": ""
     }
   ],
@@ -46,41 +46,37 @@
       "ok": 1
     },
     "http": {
-      "total": 100,
-      "ok": 99
+      "total": 93,
+      "ok": 93
     },
     "hysteria": {
-      "total": 2,
+      "total": 6,
       "ok": 0
     },
-    "socks5": {
-      "total": 2,
-      "ok": 2
-    },
     "ss": {
-      "total": 254,
-      "ok": 225
+      "total": 266,
+      "ok": 224
     },
     "trojan": {
-      "total": 178,
-      "ok": 167
+      "total": 177,
+      "ok": 163
     },
     "vless": {
-      "total": 346,
-      "ok": 313
+      "total": 332,
+      "ok": 297
     },
     "vmess": {
-      "total": 197,
-      "ok": 131
+      "total": 185,
+      "ok": 126
     },
     "wireguard": {
-      "total": 4,
+      "total": 3,
       "ok": 0
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 46,
+      "total": 54,
       "ok": 1
     }
   }

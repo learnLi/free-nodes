@@ -1,28 +1,30 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 2A0580
-  network: tcp
-  port: 1270
-  server: 46.105.222.157
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 8CDFD8
+  name: FR 🇫🇷 | @Raydikalx | 15883A
   network: ws
-  port: 20222
-  server: 51.75.118.5
+  port: 20155
+  server: 51.68.34.78
   servername: ''
   tls: false
   type: vmess
-  uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6
+  uuid: 5365cb12-83e2-4e12-8098-c9673ed7f540
+  ws-opts:
+    path: /bp-vmess
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 548D11
+  network: ws
+  port: 2095
+  server: www.asamping.ir
+  servername: www.asamping.ir
+  tls: false
+  type: vmess
+  uuid: a55cdc40-5af5-4f02-9a46-41685120fe6f
   ws-opts:
     headers:
-      Host: 51.75.118.5
-    path: /parham-confing-vmess?ed=2048&u=kma_vqHvj6gOpirojyJf5Q85P44FJpu7NnnYnhYNtCuKI7Sh6QFdZRnkYjsy8E6dgcMq8nNoGA
+      Host: www.asamping.ir
+    path: /
 - alterId: 0
   cipher: auto
   name: FR 🇫🇷 | @Raydikalx | 9FDBC9
@@ -39,34 +41,31 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-146.59.70.146-1480
+  name: FR 🇫🇷 | @Raydikalx | BB13BB
   network: ws
   port: 443
-  server: 146.59.70.146
-  servername: ''
-  skip-cert-verify: true
+  server: vspeedfast.org
+  servername: vspeedfast.org
   tls: true
   type: vmess
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: yichueng.org
-    path: linkvws
+      Host: vspeedfast.org
+    path: /linkvws
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-91.134.8.88-1464
+  name: 🇫🇷FR-141.95.55.70-8508
   network: ws
-  port: 443
-  server: 91.134.8.88
+  port: 80
+  server: 141.95.55.70
   servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 18ca5b23-ead3-4adb-a153-d7ae32c10f54
   ws-opts:
-    headers:
-      Host: lammaland.org
-    path: linkvws
+    path: /vmess
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -84,14 +83,14 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.26.15.137
+  server: 104.17.111.4
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.17.111.4
+  server: 104.26.15.137
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -112,14 +111,14 @@ proxies:
 - name: '🇫🇷法国丨yoyapai.com\r #2'
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.18.152.133
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #3'
   password: humanity
   port: 443
-  server: 104.18.152.133
+  server: 104.18.22.63
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -133,16 +132,22 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 172.99.189.142
+  server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.175
+  server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.175
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
@@ -152,10 +157,4 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
-  type: ss
-- cipher: aes-256-gcm
-  name: 🏳[www.v2nodes.com] ss-
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.27
   type: ss

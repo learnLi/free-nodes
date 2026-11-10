@@ -1,43 +1,47 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 2EB3A2
-  network: tcp
-  port: 21036
-  server: dog-tw.kunlun01dns.com
-  servername: ''
+  name: HK 🇭🇰 | @Raydikalx | 142B8E
+  network: ws
+  port: 21316
+  server: 143.14.189.125
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  uuid: 116f6ecd-275e-4b50-921d-780e78a526cb
+  ws-opts:
+    headers:
+      Host: pull.free.video.10010.com
+    path: /
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 391006
+  name: HK 🇭🇰 | @Raydikalx | 3C4921
   network: ws
   port: 443
-  server: i2psm3knof5qjjix.v.3dns.vip
-  servername: null
+  server: nycqg19zkwacpm1b.v.3dns.vip
+  servername: nycqg19zkwacpm1b.v.3dns.vip
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
-    headers:
-      Host: I2PSm3Knof5qjjix.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 41D581
+  name: HK 🇭🇰 | @Raydikalx | 3F4AEA
   network: ws
-  port: 36968
-  server: 47.83.18.10
+  port: 36703
+  server: 47.244.120.197
   servername: ''
   tls: false
   type: vmess
-  uuid: 176bf1dd-647f-4c09-892e-5f9223dc8617
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   ws-opts:
-    path: /arki?ed=2048
+    headers:
+      Host: google.com
+    path: /arki
 - alterId: 0
   cipher: auto
-  name: 'HK 🇭🇰 | @Raydikalx | 4641D1 #1'
+  name: HK 🇭🇰 | @Raydikalx | 4641D1
   network: ws
   port: 443
   server: 8.217.254.88
@@ -51,62 +55,30 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 8E87D4
-  network: tcp
-  port: 21004
-  server: dog-kr.kunlun01dns.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | B0FD5D
+  name: HK 🇭🇰 | @Raydikalx | C37023
   network: ws
   port: 443
-  server: 6jdvarazgu3qqr6q.v.3dns.vip
-  servername: ''
+  server: euu1yalfmcqvljex.v.3dns.vip
+  servername: euu1yalfmcqvljex.v.3dns.vip
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
   ws-opts:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | E2644D
+  name: HK 🇭🇰 | @Raydikalx | E46CC3
   network: ws
   port: 443
-  server: ex1ogt73nzpqkac2.v.3dns.vip
-  servername: ''
+  server: 93ucrn4i0pffuabk.v.3dns.vip
+  servername: 93ucrn4i0pffuabk.v.3dns.vip
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   ws-opts:
     headers:
-      Host: ex1ogt73nzpqkac2.v.3dns.vip
+      Host: 93ucrn4i0pffuabk.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | ED46C4
-  network: tcp
-  port: 21021
-  server: dog-hk.kunlun01dns.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #2'
-  network: ws
-  port: 44867
-  server: 47.244.120.197
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  ws-opts:
-    path: /arki
 - alterId: 0
   cipher: auto
   name: '🇭🇰 香港 | HKG #3'
@@ -116,6 +88,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   type: vmess
+  udp: true
   uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   ws-opts:
     path: /arki
@@ -123,37 +96,8 @@ proxies:
   cipher: auto
   name: '🇭🇰 香港 | HKG #5'
   network: ws
-  port: 16632
-  server: planb.mojcn.com.linuxlh.xin
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 56a511bd-f207-48f4-be5b-4652afe178a4
-  ws-opts:
-    headers:
-      Host: 686a7558df571afb1408b0e77ae4f687.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #6'
-  network: ws
-  port: 16632
-  server: t.cnmjcn.cyou
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 56a511bd-f207-48f4-be5b-4652afe178a4
-  ws-opts:
-    headers:
-      Host: 686a7558df571afb1408b0e77ae4f687.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #7'
-  network: ws
   port: 23026
   server: 47.244.120.197
-  servername: null
   skip-cert-verify: true
   tls: false
   type: vmess
@@ -163,63 +107,41 @@ proxies:
     headers:
       Host: 47.244.120.197
     path: /arki
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  name: HK1@ripaojiedian
-  network: ws
-  port: 11310
-  server: 218.102.64.147
-  servername: speedtest.danfengno1.kdns.fr
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK-8.210.20.159-1616
+  network: http
+  port: 45751
+  server: 8.210.20.159
+  servername: ''
   skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
+  tls: false
+  type: vmess
+  uuid: 3a0d252e-cddf-4695-ab0f-95a0ce7abcc0
 - alpn:
   - http/1.1
-  client-fingerprint: firefox
-  name: HK2@ripaojiedian
-  network: ws
-  port: 9383
-  server: 218.102.64.147
-  servername: speedtest.danfengno1.kdns.fr
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  name: HK3@ripaojiedian
-  network: ws
-  port: 12611
-  server: 45.221.114.46
-  servername: speedtest.danfengno1.kdns.fr
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
   name: 🇭🇰 HK1@ripaojiedian
   network: ws
   port: 11310
   server: 218.102.64.147
   servername: speedtest.danfengno1.kdns.fr
   skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: speedtest.danfengno1.kdns.fr
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇭🇰 HK1@ripaojiedian #1'
+  network: ws
+  port: 11310
+  server: 218.102.64.147
+  servername: speedtest.danfengno1.kdns.fr
+  skip-cert-verify: true
   tfo: false
   tls: true
   type: vless
@@ -231,8 +153,23 @@ proxies:
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
 - alpn:
   - http/1.1
-  client-fingerprint: firefox
   name: 🇭🇰 HK2@ripaojiedian
+  network: ws
+  port: 9383
+  server: 218.102.64.147
+  servername: speedtest.danfengno1.kdns.fr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: speedtest.danfengno1.kdns.fr
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇭🇰 HK2@ripaojiedian #1'
   network: ws
   port: 9383
   server: 218.102.64.147
@@ -249,8 +186,23 @@ proxies:
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
 - alpn:
   - http/1.1
-  client-fingerprint: firefox
   name: 🇭🇰 HK3@ripaojiedian
+  network: ws
+  port: 12611
+  server: 45.221.114.46
+  servername: speedtest.danfengno1.kdns.fr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: speedtest.danfengno1.kdns.fr
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇭🇰 HK3@ripaojiedian #1'
   network: ws
   port: 12611
   server: 45.221.114.46
@@ -265,76 +217,50 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
-- client-fingerprint: chrome
-  name: '🇭🇰 香港 | HKG #1'
+- name: '🇭🇰 香港 | HKG #1'
   network: ws
   port: 443
   server: 2.26.201.194
   servername: fs.qicai99.com
   tls: true
   type: vless
-  udp: true
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
     headers:
       Host: fs.qicai99.com
-    path: /
-- name: 🇭🇰[www.v2nodes.com] vless-HK-1...
-  network: ws
-  port: 8080
-  server: 188.114.97.6
-  servername: fornewiran.ade-1000.workers.dev
-  tls: false
-  type: vless
-  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
-  ws-opts:
-    headers:
-      Host: fornewiran.ade-1000.workers.dev
-    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
-- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
-  network: ws
-  port: 8080
-  server: 104.21.70.21
-  tls: false
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime11.workers.dev
-    path: /
-- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #3'
-  network: ws
-  port: 443
-  server: 103.247.28.203
-  servername: parsa-panel-dy55x.railway1385-2a46.workers.dev
-  tls: true
-  type: vless
-  uuid: 64726966-0000-4000-8000-740000000000
-  ws-opts:
-    headers:
-      Host: parsa-panel-dy55x.railway1385-2a46.workers.dev
     path: /fp=chrome
-- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
+- name: 🇭🇰[www.v2nodes.com] vless-HK-1...
+  port: 443
+  server: 188.114.98.0
+  tls: false
+  type: vless
+  uuid: 326227e2-f2d1-4f43-8715-9da854f5f4c0
+- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   port: 39098
   server: 209.33.160.122
   tls: false
   type: vless
   uuid: 7852e4df-db54-4f75-a35e-3b8fbe89e56d
 - client-fingerprint: chrome
-  encryption: none
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #7'
-  network: tcp
-  port: 31884
-  server: 152.175.6.229
-  servername: hk010.zestapp778.com
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #4'
+  network: ws
+  port: 443
+  server: 2.26.201.194
+  servername: fs.qicai99.com
   tls: true
   type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #9'
-  port: 443
-  server: 188.114.98.0
-  tls: false
-  type: vless
-  uuid: 326227e2-f2d1-4f43-8715-9da854f5f4c0
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
-    path: /326227e2-f2d1-4f43-8715-9da854f5f4c0
+    headers:
+      Host: fs.qicai99.com
+    path: /
+- auth: ec374b01-8dba-48dc-aa9d-b23cb6b2e694
+  name: '🇭🇰 香港 | HKG #4'
+  password: ec374b01-8dba-48dc-aa9d-b23cb6b2e694
+  port: 13212
+  server: hk2.5yunapi.buzz
+  skip-cert-verify: true
+  sni: hk2.5yunapi.buzz
+  tls: false
+  type: hysteria2
+  udp: true

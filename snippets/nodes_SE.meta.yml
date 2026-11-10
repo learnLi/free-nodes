@@ -1,71 +1,8 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 72E4B5
-  network: httpupgrade
-  port: 443
-  server: defe.sync-bridge.ir
-  servername: defe.sync-bridge.ir
-  tls: true
-  type: vmess
-  uuid: 386c5322-48aa-4fc1-814f-2ff6c34d77e0
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | C2B3A3
-  network: tcp
-  port: 12809
-  server: 13.48.205.27
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 413abec9-e07c-424e-8c0a-da234bef870e
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #11'
-  network: ws
-  port: 14430
-  server: 5.178.109.174
-  servername: 5.178.109.174
-  tls: false
-  type: vless
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
-  ws-opts:
-    headers:
-      Host: 5.178.109.174
-    path: /vless
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #12'
-  network: ws
-  port: 14430
-  server: 193.188.21.253
-  servername: 193.188.21.253
-  tls: false
-  type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  ws-opts:
-    headers:
-      Host: 193.188.21.253
-    path: /vless
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
-  port: 443
-  server: 194.104.94.141
-  servername: se3.shtil.io
-  tls: true
-  type: vless
-  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
-- client-fingerprint: chrome
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
-  port: 443
-  server: se3.shtil.io
-  servername: se3.shtil.io
-  tls: true
-  type: vless
-  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #9'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #10'
   network: grpc
   port: 48115
   server: 138.124.86.230
@@ -73,6 +10,29 @@ proxies:
   tls: true
   type: vless
   uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #12'
+  network: ws
+  port: 14430
+  server: 5.178.109.174
+  tls: false
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
+  ws-opts:
+    headers:
+      Host: 5.178.109.174
+    path: /vless
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #9'
+  network: tcp
+  port: 443
+  server: 194.104.94.141
+  servername: se3.shtil.io
+  tls: true
+  type: vless
+  uuid: 6ba4ed2e-b42b-4880-8b3b-c7e2df2d02f6
 - name: 🇸🇪 瑞典 V2CROSS.COM
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -101,7 +61,13 @@ proxies:
 - name: 🇸🇪SE_1|1.3MB/s
   password: None
   port: 443
-  server: 149.50.216.65
+  server: 146.70.242.146
+  skip-cert-verify: true
+  tls: true
+  type: http
+- name: 🇸🇪SE_2|1.2MB/s
+  port: 443
+  server: 79.142.77.63
   skip-cert-verify: true
   tls: true
   type: http

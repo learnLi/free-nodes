@@ -1,15 +1,20 @@
 proxies:
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #1'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 208.69.78.29
-  type: trojan
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #8'
+- alterId: 0
+  cipher: auto
+  name: CH 🇨🇭 | @Raydikalx | E430AE
+  network: tcp
+  port: 8080
+  server: 37.143.131.229
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f8aac2be-4d3c-4fa3-9afb-89b6c7e14596
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #7'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 208.69.78.208
   type: trojan
-- name: '🏳[www.v2nodes.com] trojan- #1'
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #8'
   network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443

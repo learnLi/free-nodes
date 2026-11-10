@@ -1,27 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | B7CE38
-  network: ws
-  port: 443
-  server: uiewtesty-production.up.railway.app
-  servername: uiewtesty-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: f48088dd-e933-4741-bc08-cc450f7e3b12
-  ws-opts:
-    headers:
-      Host: uiewtesty-production.up.railway.app
-    path: /api/QjsknC
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | EB55D4
-  network: tcp
-  port: 57614
-  server: 5.34.176.111
-  tls: false
-  type: vmess
-  uuid: 4e55ce40-9f8e-417d-f8ae-aa6af97a7097
 - alterId: 64
   cipher: auto
   name: 🇸🇬SG-159.223.94.156-5829
@@ -37,8 +14,7 @@ proxies:
     path: /anti13.zingfast.vn
 - alpn:
   - http/1.1
-  client-fingerprint: firefox
-  name: SG1@ripaojiedian
+  name: 🇸🇬 SG1@ripaojiedian
   network: ws
   port: 443
   server: 206.54.46.225
@@ -50,27 +26,11 @@ proxies:
   ws-opts:
     headers:
       Host: speedtest.danfengno1.kdns.fr
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
 - alpn:
   - http/1.1
   client-fingerprint: firefox
-  name: SG2@ripaojiedian
-  network: ws
-  port: 443
-  server: 206.54.46.241
-  servername: speedtest.danfengno1.kdns.fr
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stflow=
-- alpn:
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇸🇬 SG1@ripaojiedian
+  name: '🇸🇬 SG1@ripaojiedian #1'
   network: ws
   port: 443
   server: 206.54.46.225
@@ -87,8 +47,23 @@ proxies:
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
 - alpn:
   - http/1.1
-  client-fingerprint: firefox
   name: 🇸🇬 SG2@ripaojiedian
+  network: ws
+  port: 443
+  server: 206.54.46.241
+  servername: speedtest.danfengno1.kdns.fr
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  ws-opts:
+    headers:
+      Host: speedtest.danfengno1.kdns.fr
+    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇸🇬 SG2@ripaojiedian #1'
   network: ws
   port: 443
   server: 206.54.46.241
@@ -106,110 +81,78 @@ proxies:
 - name: '🇸🇬 新加坡 | SGP #1'
   network: ws
   port: 443
-  server: 172.93.186.31
-  servername: cat.ilovezhenjiu.top
-  tls: true
-  type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  ws-opts:
-    headers:
-      Host: cat.ilovezhenjiu.top
-    path: /cgciwsfp=chrome
-- name: '🇸🇬 新加坡 | SGP #2'
-  network: ws
-  port: 443
-  server: 172.237.91.206
-  servername: cat.ilovezhenjiu.top
-  tls: true
-  type: vless
-  uuid: affb10d4-3835-4b1f-b5a3-3481489911b6
-  ws-opts:
-    headers:
-      Host: cat.ilovezhenjiu.top
-    path: /cgciwsfp=chrome
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #3'
-  network: ws
-  port: 443
   server: 159.223.79.119
   servername: 5269t.pages.dev
   tls: true
   type: vless
-  udp: true
   uuid: 8c7588f8-2d81-4b09-86d4-4a623e9f2dca
   ws-opts:
     headers:
       Host: 5269t.pages.dev
-    path: /
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #4'
-  network: tcp
-  port: 8443
-  server: 207.148.124.12
-  servername: www.bing.com
-  tls: true
-  type: vless
-  uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
-  ws-opts:
-    path: /
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #5'
+    path: /fp=chrome
+- name: '🇸🇬 新加坡 | SGP #3'
   network: ws
   port: 443
   server: 139.162.62.195
   servername: fs.qicai99.com
   tls: true
   type: vless
-  udp: true
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
     headers:
       Host: fs.qicai99.com
-    path: /
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #6'
+    path: /fp=chrome
+- name: '🇸🇬 新加坡 | SGP #4'
   network: ws
   port: 443
   server: 157.230.248.19
   servername: fs.qicai99.com
   tls: true
   type: vless
-  udp: true
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
     headers:
       Host: fs.qicai99.com
-    path: /
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #7'
+    path: /fp=chrome
+- name: '🇸🇬 新加坡 | SGP #5'
   network: ws
   port: 443
   server: 143.42.66.91
   servername: fs.qicai99.com
   tls: true
   type: vless
-  udp: true
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
     headers:
       Host: fs.qicai99.com
-    path: /
-- client-fingerprint: chrome
-  name: '🇸🇬 新加坡 | SGP #8'
+    path: /fp=chrome
+- name: '🇸🇬 新加坡 | SGP #6'
   network: ws
   port: 443
   server: 43.170.38.62
   servername: 5269t.pages.dev
   tls: true
   type: vless
-  udp: true
   uuid: 8c7588f8-2d81-4b09-86d4-4a623e9f2dca
   ws-opts:
     headers:
       Host: 5269t.pages.dev
-    path: /
+    path: /fp=chrome
+- name: 🇸🇬 新加坡｜07｜BGP
+  network: ws
+  port: 2053
+  server: cf01.564895.xyz
+  servername: sg01.564895.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887
+  ws-opts:
+    headers:
+      Host: sg01.564895.xyz
+    path: /asdasdfp=firefox
 - client-fingerprint: firefox
-  name: 🇸🇬 新加坡｜07｜BGP
+  name: '🇸🇬 新加坡｜07｜BGP #1'
   network: ws
   port: 2053
   server: cf01.564895.xyz
@@ -241,7 +184,72 @@ proxies:
       Host: sg01.564895.xyz
     path: /asdasd
 - client-fingerprint: chrome
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #10'
+  encryption: none
+  name: 🇸🇬SG_1|1.3MB/s
+  network: ws
+  port: 8443
+  server: cf.090227.xyz
+  servername: liusuyan.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 889fa37f-6bce-4674-8a49-1cc435e11de7
+  ws-opts:
+    headers:
+      Host: liusuyan.cc.cd
+      User-Agent: Mozilla/5.0 (Linux; Android 4.4.2; SM-G7102 Build/KOT49H) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
+    path: /proxyip=ProxyIP.SG.CMLiussss.Net
+  xudp: true
+- name: 🇸🇬[www.v2nodes.com] vless-SG-1...
+  network: ws
+  port: 2087
+  server: 8.35.211.73
+  servername: d39333476.pages.dev
+  tls: true
+  type: vless
+  uuid: 9f534ac4-3c58-4a16-8b74-13dff09a0cf1
+  ws-opts:
+    headers:
+      Host: d39333476.pages.dev
+    path: /resourcefp=chrome
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  network: ws
+  port: 2096
+  server: 139.162.27.96
+  servername: free-server.techsonic.dev
+  tls: true
+  type: vless
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
+  ws-opts:
+    headers:
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.devfp=chrome
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #12'
+  network: ws
+  port: 8443
+  server: sg01.cf.sh-cloudflare.sbs
+  servername: sg01.cdn00.top
+  tls: true
+  type: vless
+  uuid: a8d9c86f-cddb-4fa5-96f7-f68eb48b3cb3
+  ws-opts:
+    headers:
+      Host: sg01.cdn00.top
+    path: /shanhai/sg01fp=chrome
+- client-fingerprint: chrome
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #13'
+  network: tcp
+  port: 8443
+  server: 207.148.124.12
+  servername: www.bing.com
+  tls: true
+  type: vless
+  uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
+  ws-opts:
+    path: /
+- client-fingerprint: chrome
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #14'
   network: ws
   port: 8443
   server: sg01.cf.sh-cloudflare.sbs
@@ -254,7 +262,9 @@ proxies:
       Host: sg01.cdn00.top
     path: /shanhai/sg01
 - client-fingerprint: firefox
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #11'
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #16'
+  network: tcp
   port: 56984
   server: 140.235.11.243
   servername: sg1.zestapp778.com
@@ -262,7 +272,8 @@ proxies:
   type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
 - client-fingerprint: firefox
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #12'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #17'
+  network: tcp
   port: 443
   server: 45.76.155.179
   servername: sg003.zestapp778.com
@@ -270,7 +281,7 @@ proxies:
   type: vless
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
 - client-fingerprint: chrome
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #16'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #22'
   network: ws
   port: 2096
   server: 139.162.27.96
@@ -284,7 +295,7 @@ proxies:
     path: /free-server.techsonic.dev
 - client-fingerprint: chrome
   encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #19'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #25'
   network: ws
   port: 2087
   server: 8.35.211.73
@@ -296,61 +307,13 @@ proxies:
     headers:
       Host: d39333476.pages.dev
     path: /resource
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
-  network: ws
-  port: 2096
-  server: 139.162.27.96
-  servername: free-server.techsonic.dev
-  tls: true
-  type: vless
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  ws-opts:
-    headers:
-      Host: free-server.techsonic.dev
-    path: /free-server.techsonic.devfp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #7'
-  network: ws
-  port: 443
-  server: 188.114.97.6
-  servername: investor.fb.com.r3xxe.eu.cc
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 1246e51a-97cd-4d5c-9842-76dd3420bbe2
-  ws-opts:
-    headers:
-      Host: investor.fb.com.r3xxe.eu.cc
-    path: /id-tksifp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #9'
-  network: ws
-  port: 8443
-  server: sg01.cf.sh-cloudflare.sbs
-  servername: sg01.cdn00.top
-  tls: true
-  type: vless
-  uuid: a8d9c86f-cddb-4fa5-96f7-f68eb48b3cb3
-  ws-opts:
-    headers:
-      Host: sg01.cdn00.top
-    path: /shanhai/sg01fp=chrome
-- client-fingerprint: firefox
-  name: 🇸🇬新加坡｜07｜BGP
-  network: ws
-  port: 2053
-  server: cf01.564895.xyz
-  servername: sg01.564895.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 2f4c3fc5-8fa2-4576-a583-8f98a6026887
-  ws-opts:
-    headers:
-      Host: sg01.564895.xyz
-    path: /asdasdflow=
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
+  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 15.235.184.127
+  skip-cert-verify: false
+  sni: exploredigitaljobplatformandfindonlinework.com
   type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
@@ -372,12 +335,6 @@ proxies:
   sni: hy530899-3.w-mebel.pro
   tls: false
   type: hysteria2
-- cipher: rc4-md5
-  name: shadowsocks-1827147315
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 68.183.227.4
-  type: ss
 - cipher: aes-256-gcm
   name: 🇸🇬SG-149.88.106.73-5766
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -420,15 +377,3 @@ proxies:
   port: 19999
   server: 15.235.182.183
   type: ss
-- name: 🇸🇬SG_1|1.7MB/s
-  port: 9443
-  server: 149.88.99.209
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: 🇸🇬SG_2|2.2MB/s
-  port: 9090
-  server: 104.248.151.93
-  skip-cert-verify: true
-  type: http
