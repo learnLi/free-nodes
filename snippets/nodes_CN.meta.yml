@@ -1,23 +1,123 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 3C04D0
+  name: CN 🇨🇳 | @Raydikalx | 06056E
   network: tcp
-  port: 50016
+  port: 50015
   server: 36.133.78.37
+  servername: ''
   tls: false
   type: vmess
-  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-153.101.64.221-2367
-  network: ws
-  port: 40013
-  server: 153.101.64.221
-  servername: ''
-  skip-cert-verify: true
+  name: 'CN 🇨🇳 | @Raydikalx | 22E02C #1'
+  network: tcp
+  port: 10001
+  server: 106.52.57.86
+  servername: 106.52.57.86
   tls: false
   type: vmess
-  uuid: 5716c1b4-c2d3-4a9d-a9a8-5d9919d0ed8f
+  uuid: f56b9a92-47d4-4d6e-b828-1aa3e96dae65
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | EA8CD3
+  network: ws
+  port: 33412
+  server: ct3.ainivp.com
+  tls: true
+  type: vmess
+  uuid: 9204afcd-026e-781f-1abc-c03efabd1344
   ws-opts:
-    path: /qwe123321ewq
+    headers:
+      Host: ct3.ainivp.com
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳_CN_中国_IPV4
+  network: ws
+  port: 10086
+  server: 39.108.113.127
+  tls: false
+  type: vmess
+  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
+  ws-opts:
+    path: /
+- name: 🇨🇳CN_5|2.6MB/s
+  port: 8888
+  server: 222.128.178.134
+  skip-cert-verify: true
+  type: http
+- name: 🇨🇳CN_6|2.2MB/s
+  port: 8888
+  server: 111.196.24.150
+  skip-cert-verify: true
+  type: http
+- ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8af2:447b:a9b9:b420:ebff/128
+  mtu: 1420
+  name: 🇨🇳CN_1|1.1MB/s
+  port: 946
+  private-key: eGpcqvonUvA7/m1lcaERbf2opGESbp375ieSliLc3WU=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  server: 8.6.112.181
+  type: wireguard
+  udp: true
+- ip: 172.16.0.2/32
+  keepalive: '5'
+  mtu: 1280
+  name: 🇨🇳CN_2|1.4MB/s
+  persistent-keepalive: '5'
+  port: 500
+  private-key: 6MOHNyxgcVe2ohk/L50VCvNoAD1dKsVQ+DO/r0GLgk8=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 228
+  - 192
+  - 229
+  server: 162.159.192.4
+  type: wireguard
+  udp: true
+  wnoise: quic
+  wnoisecount: '5'
+  wnoisedelay: '5'
+  wpayloadsize: 40-90
+- ip: 172.16.0.2/32
+  keepalive: '5'
+  mtu: 1280
+  name: 🇨🇳CN_3|2.0MB/s
+  persistent-keepalive: '5'
+  port: 987
+  presharedkey: ''
+  private-key: GJTd46xB/fjfi6vyJmpxUiNrNdjZTW0Qhi7b0PkER1Y=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 175
+  - 93
+  - 41
+  server: 188.114.97.6
+  type: wireguard
+  udp: true
+  wnoise: quic
+  wnoisecount: '15'
+  wnoisedelay: 1-2
+  wpayloadsize: 5-10
+- ip: 172.16.0.2/32
+  keepalive: '5'
+  mtu: 1280
+  name: 🇨🇳CN_4|2.0MB/s
+  persistent-keepalive: '5'
+  port: 4500
+  private-key: QB+xyMCK7DvH59ditStC1knU3bhSVJfbzpgvbSj/plI=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 111
+  - 85
+  - 82
+  server: 162.159.192.5
+  type: wireguard
+  udp: true
+  wnoise: quic
+  wnoisecount: '5'
+  wnoisedelay: '5'
+  wpayloadsize: 40-90

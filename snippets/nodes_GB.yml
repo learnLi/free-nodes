@@ -1,275 +1,254 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 30EAE1
-  network: ws
-  port: 443
-  server: pahobac.org
-  servername: null
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: pahobac.org
-    path: /linkvws
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 88F306
+  name: GB 🇬🇧 | @Raydikalx | 23338F
   network: tcp
-  port: 34204
-  server: 206.245.166.132
+  port: 8080
+  server: 212.74.39.64
   servername: ''
   tls: false
   type: vmess
-  uuid: f004547b-58ec-4536-9608-0d68982ea904
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | E3356A
-  network: ws
-  port: 80
-  server: 18.168.124.58
-  tls: false
-  type: vmess
-  uuid: ff7be42d-7d09-445e-b89f-96d7712eb4bf
-  ws-opts:
-    path: /graphql
-- name: 🇬🇧[www.v2nodes.com] trojan-GB-...
+  uuid: 891db494-d44d-4e3d-9df4-b9267ebd6a80
+- client-fingerprint: chrome
+  name: 🇬🇧GB_5|1.5MB/s
+  network: tcp
   password: 5t6i121em5lkmsmk
   port: 29813
   server: en001.zestapp778.com
+  skip-cert-verify: true
   sni: en001.zestapp778.com
   type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: 🇬🇧 英国 | GBR
+  password: amazonskr05
+  port: 443
+  server: 35.178.245.11
+  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-178.83.185.156-0171
+  name: 🇬🇧GB-178.83.185.156-0261
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 178.83.185.156
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.162-0186
+  name: 🇬🇧GB-82.38.31.162-0275
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 443
   server: 82.38.31.162
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.170-0172
+  name: 🇬🇧GB-82.38.31.170-0270
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 443
   server: 82.38.31.170
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.171-0173
+  name: 🇬🇧GB-82.38.31.171-0258
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.171
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.171-0180
+  name: 🇬🇧GB-82.38.31.171-0262
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 443
   server: 82.38.31.171
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.176-5756
+  name: 🇬🇧GB-82.38.31.176-0336
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.176
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.179-0112
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.179
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.180-0123
+  name: 🇬🇧GB-82.38.31.180-0212
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.180
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.181-0113
+  name: 🇬🇧GB-82.38.31.181-0194
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.181
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.184-0094
+  name: 🇬🇧GB-82.38.31.184-0214
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.184
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.186-0088
+  name: 🇬🇧GB-82.38.31.186-0211
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.186
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.187-0092
+  name: 🇬🇧GB-82.38.31.187-0163
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.187
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.189-0267
+  name: 🇬🇧GB-82.38.31.189-0174
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.189
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.190-0143
+  name: 🇬🇧GB-82.38.31.190-0226
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.190
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.191-0136
+  name: 🇬🇧GB-82.38.31.191-0216
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.191
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.192-0087
+  name: 🇬🇧GB-82.38.31.192-0206
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.192
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.193-0091
+  name: 🇬🇧GB-82.38.31.193-0166
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.193
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.194-0089
+  name: 🇬🇧GB-82.38.31.194-0160
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.194
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.199-0241
+  name: 🇬🇧GB-82.38.31.199-0333
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.199
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.202-0090
+  name: 🇬🇧GB-82.38.31.202-0181
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.202
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.203-0108
+  name: 🇬🇧GB-82.38.31.203-0157
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.203
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.205-0105
+  name: 🇬🇧GB-82.38.31.205-0189
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.205
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.206-0097
+  name: 🇬🇧GB-82.38.31.206-0154
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.206
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.207-0101
+  name: 🇬🇧GB-82.38.31.207-0190
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.207
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.208-0122
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.208
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.210-5752
+  name: 🇬🇧GB-82.38.31.210-0152
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.210
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.212-0098
+  name: 🇬🇧GB-82.38.31.212-0176
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.212
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.214-0106
+  name: 🇬🇧GB-82.38.31.214-0169
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.214
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.216-0086
+  name: 🇬🇧GB-82.38.31.216-0165
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.216
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.217-0095
+  name: 🇬🇧GB-82.38.31.217-0168
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.217
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.218-0245
+  name: 🇬🇧GB-82.38.31.218-0295
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.218
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.219-0248
+  name: 🇬🇧GB-82.38.31.219-0306
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.219
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.35-0182
+  name: 🇬🇧GB-82.38.31.35-0274
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.35
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.46-0175
+  name: 🇬🇧GB-82.38.31.46-0271
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.46
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.47-0177
+  name: 🇬🇧GB-82.38.31.47-0254
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.47
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.49-0174
+  name: 🇬🇧GB-82.38.31.48-0272
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.48
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.49-0259
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.49
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.61-0185
+  name: 🇬🇧GB-82.38.31.61-0257
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.61
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.62-0179
+  name: 🇬🇧GB-82.38.31.62-0269
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.62
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.66-0181
+  name: 🇬🇧GB-82.38.31.66-0267
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 82.38.31.66

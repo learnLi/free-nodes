@@ -1,9 +1,17 @@
 proxies:
-- encryption: none
-  name: '🏳[www.v2nodes.com] vless- #4'
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | 0CBEEB
   network: tcp
-  port: 16443
-  server: 45.86.60.174
+  port: 443
+  server: irc.jahancloud.cfd
+  servername: ''
   tls: false
-  type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  type: vmess
+  uuid: 24b73122-9c73-45ae-871d-1837e427a9bf
+- name: 🇪🇪EE_1|1.8MB/s
+  port: 9443
+  server: 95.153.31.66
+  skip-cert-verify: true
+  tls: true
+  type: http

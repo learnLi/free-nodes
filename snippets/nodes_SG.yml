@@ -1,100 +1,45 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 342B93
-  network: ws
-  port: 443
-  server: hadipowerplus.up.railway.app
-  servername: hadipowerplus.up.railway.app
-  tls: true
-  type: vmess
-  uuid: 242dc91e-061b-478d-9911-d81ea8672c10
-  ws-opts:
-    headers:
-      Host: hadipowerplus.up.railway.app
-    path: /cdn/2bd0b13f-2193-465d-8118-9d9de868261b/m?ed=2560
-- alterId: 2
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 771433
+  name: SG 🇸🇬 | @Raydikalx | D21E6C
   network: tcp
-  port: 30836
-  server: v36.hdacd.com
+  port: 47014
+  server: hong.1.povrak.ir
+  servername: ''
   tls: false
   type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- alterId: 64
-  cipher: auto
-  name: 'SG 🇸🇬 | @Raydikalx | 7E884C #1'
-  network: ws
-  port: 80
-  server: 159.223.94.156
-  tls: false
-  type: vmess
-  uuid: 533724ad-58ef-4147-88dc-9da523c15fc4
-  ws-opts:
-    path: /anti13.zingfast.vn
-- alterId: 2
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | AD83BD
-  network: tcp
-  port: 30845
-  server: v45.hdacd.com
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E1BDBE
+  name: SG 🇸🇬 | @Raydikalx | D2C1D0
   network: ws
   port: 443
-  server: urfddtest-production.up.railway.app
-  servername: urfddtest-production.up.railway.app
+  server: mot6fvb-production.up.railway.app
+  servername: mot6fvb-production.up.railway.app
   tls: true
   type: vmess
-  uuid: 327ad26c-1501-41b3-9f33-12b85de39d5f
+  uuid: 39020442-120b-417f-bb3f-4763f873b68d
   ws-opts:
     headers:
-      Host: urfddtest-production.up.railway.app
-    path: /api/xMxpTe
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-180.215.130.123-5464
-  network: ws
-  port: 46452
-  server: 180.215.130.123
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: c5414fe0-018b-473a-aa3b-f210f2ba42f5
-  ws-opts:
-    path: /
-- alterId: 4
-  cipher: auto
-  name: 🇸🇬SG-202.61.141.130-1701
-  network: ws
-  port: 443
-  server: 202.61.141.130
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  ws-opts:
-    headers:
-      Host: 202.61.141.130
-    path: /
+      Host: mot6fvb-production.up.railway.app
+    path: /api/8zfkVx
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
+  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+  port: 8886
+  server: 139.180.146.200
+  type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 15.235.184.127
+  type: trojan
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
+  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 15.235.184.127
   skip-cert-verify: false
   sni: exploredigitaljobplatformandfindonlinework.com
-  type: trojan
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 15.235.184.127
   type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
@@ -106,6 +51,7 @@ proxies:
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
+  sni: 139.180.146.200
   type: trojan
 - cipher: rc4-md5
   name: shadowsocks-1827147315
@@ -114,7 +60,7 @@ proxies:
   server: 68.183.227.4
   type: ss
 - cipher: aes-256-gcm
-  name: 🇸🇬SG-149.88.106.73-5766
+  name: 🇸🇬SG-149.88.106.73-0246
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 149.88.106.73

@@ -1,44 +1,15 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 'FR 🇫🇷 | @Raydikalx | 20ADF1 #1'
-  network: ws
-  port: 80
-  server: 145.239.55.210
-  tls: false
-  type: vmess
-  uuid: c5443f55-d405-4990-ac36-8fd83ae2c17e
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-    path: /
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | E86967
-  network: ws
-  port: 20222
-  server: 51.75.118.5
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6
-  ws-opts:
-    headers:
-      Host: 51.75.118.5
-    path: /parham-confing-vmess?u=3edbb4f2-65a2-439b-bb98-7d3f8bba62f4-2df79a37dad10ce85be2ddc5
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-51.38.82.132-7893
-  network: ws
-  port: 80
-  server: 51.38.82.132
+  name: 🇫🇷FR-146.70.158.111-8496
+  network: grpc
+  port: 443
+  server: 146.70.158.111
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: aca76f27-cda3-47f7-af79-7873034fd3bc
-  ws-opts:
-    path: /vmess
+  uuid: 11ae0edd-2f63-4495-8683-037abbda9986
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -84,14 +55,14 @@ proxies:
 - name: '🇫🇷法国丨yoyapai.com\r #2'
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.18.152.133
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #3'
   password: humanity
   port: 443
-  server: 104.18.152.133
+  server: 104.18.22.63
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -119,12 +90,6 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 172.99.189.142
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'

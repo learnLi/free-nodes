@@ -1,19 +1,20 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 71314A
+  name: 🇰🇷KR-132.145.80.230-1189
   network: ws
-  port: 443
-  server: WIDkzavxwwjiXsNk.v.3dns.vip
-  servername: WIDkzavxwwjiXsNk.v.3dns.vip
-  tls: true
+  port: 80
+  server: 132.145.80.230
+  servername: ''
+  skip-cert-verify: true
+  tls: false
   type: vmess
-  uuid: efe82ebc-46b3-4242-b612-b652b8fbc870
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
   ws-opts:
     headers:
-      Host: WIDkzavxwwjiXsNk.v.3dns.vip
-    path: /ws-vmess
-- name: 🇰🇷[www.v2nodes.com] trojan-KR-...
+      Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
+- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 5t6i121em5lkmsmk
   port: 48851
   server: 158.247.255.150
@@ -23,40 +24,4 @@ proxies:
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-0247
-  password: TEzjfAYq2IjtuoS
-  port: 6679
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-0250
-  password: PCnnH6SQSnfoS27
-  port: 8091
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷KR-141.164.45.187-5861
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
-  password: lGqs95QkFHo2NV
-  port: 5498
-  server: 141.164.45.187
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1185... #1'
-  password: RexnBgU7EV5ADxG
-  port: 7002
-  server: 141.164.45.187
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1620...
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 3.36.100.143
   type: ss
