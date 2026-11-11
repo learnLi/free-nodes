@@ -1,10 +1,24 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 5F374A
+  network: tcp
+  port: 10045
+  server: family.bucket.x9.kfc-520.com
+  tls: false
+  type: vmess
+  uuid: 1dc73529-f030-3ac5-ad64-f7666b9a51bc
 - name: 🇸🇪 瑞典 V2CROSS.COM
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 167.88.61.175
   skip-cert-verify: false
   sni: blog.browseseniorrolesandenhanceyourcareertoday.com
+  type: trojan
+- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  port: 443
+  server: 95.143.196.97
   type: trojan
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
   network: ws
@@ -24,7 +38,7 @@ proxies:
   sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
   type: trojan
 - cipher: aes-256-gcm
-  name: '🇸🇪[www.v2nodes.com] ss-SE-1560... #1'
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
   password: AxIYWtskJWIIaefW
   port: 8388
   server: 70.34.212.124
