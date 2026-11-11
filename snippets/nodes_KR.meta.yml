@@ -14,24 +14,113 @@ proxies:
     headers:
       Host: kr02.a0a.xyz
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-54.180.114.77-5828
-  network: ws
-  port: 42517
-  server: 54.180.114.77
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-opts:
-    path: /
 - alpn:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  name: 🇰🇷 KR VLESS-40 | free-nodes
+  name: 🇰🇷 KR VLESS-06 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:1c01:317:5400:7ff:fe06:753
+  servername: u695098u53aeed47s2556.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u53aeed47s2556.xxti.top
+    path: bb73f97fe26972118c6eca821c963bb0
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-22 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:1c01:f23:5400:7ff:fe03:a582
+  servername: u695098u66e05ed8s2448.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u66e05ed8s2448.xxti.top
+    path: bfaa4bbe8cd76b7477b05453d8d48ecc
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-24 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2719.ccgfw.online
+  servername: u695098u5827c1bbs2718.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u5827c1bbs2718.xxti.top
+    path: 4fbf00abd81f74db033d44801dc80c77
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-27 | free-nodes
+  network: xhttp
+  port: 443
+  server: 2401:c080:1c02:b3b:5400:7ff:fe03:a58b
+  servername: u695098u6d620bd7s2474.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u6d620bd7s2474.xxti.top
+    path: 142e24a84f23915cb677e52ab2b0f3eb
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-38 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2562.uugfw.top
+  servername: u695098u53aeed47s2556.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u53aeed47s2556.xxti.top
+    path: bb73f97fe26972118c6eca821c963bb0
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-51 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2659.ccgfw.online
+  servername: u695098u270a8f9cs2658.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u270a8f9cs2658.xxti.top
+    path: 224b0868abf552a7f3e1cd34bd90f2de
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-64 | free-nodes
   network: xhttp
   port: 443
   server: s2606.wagahaha.xyz
@@ -48,52 +137,7 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇰🇷 KR VLESS-59 | free-nodes
-  network: tcp
-  port: 443
-  server: 2401:c080:1c00:2eae:5400:7ff:fe07:b8fb
-  servername: u695098uc01145cas2593.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇰🇷 KR VLESS-73 | free-nodes
-  network: tcp
-  port: 443
-  server: s2599.ccgfw.online
-  servername: u695098uc01145cas2593.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🇰🇷 KR VLESS-74 | free-nodes
-  network: tcp
-  port: 443
-  server: s2600.okgfwbackxyz.xyz
-  servername: u695098uc01145cas2593.xxti.top
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: firefox
-  name: 🇰🇷 KR VLESS-76 | free-nodes
+  name: 🇰🇷 KR VLESS-66 | free-nodes
   network: xhttp
   port: 443
   server: 2401:c080:1c02:4db:5400:7ff:fe07:b8ff
@@ -106,6 +150,40 @@ proxies:
   xhttp-opts:
     host: u695098u23f9aae1s2604.xxti.top
     path: f46d1b21213998b3c5ccf1bd63aea58f
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-74 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2449.gogocs.xyz
+  servername: u695098u66e05ed8s2448.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u66e05ed8s2448.xxti.top
+    path: bfaa4bbe8cd76b7477b05453d8d48ecc
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-79 | free-nodes
+  network: xhttp
+  port: 443
+  server: s2490.uugfw.top
+  servername: u695098u6d620bd7s2474.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  xhttp-opts:
+    host: u695098u6d620bd7s2474.xxti.top
+    path: 142e24a84f23915cb677e52ab2b0f3eb
 - alpn:
   - h2
   - http/1.1
@@ -127,49 +205,34 @@ proxies:
   - h2
   - http/1.1
   client-fingerprint: firefox
+  flow: xtls-rprx-vision
   name: 🇰🇷 KR VLESS-89 | free-nodes
+  network: tcp
+  port: 443
+  server: 2401:c080:1c00:2eae:5400:7ff:fe07:b8fb
+  servername: u695098uc01145cas2593.xxti.top
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇰🇷 KR VLESS-94 | free-nodes
   network: xhttp
   port: 443
-  server: s2605.gogocs.xyz
-  servername: u695098u23f9aae1s2604.xxti.top
+  server: s2660.okgfwbackxyz.xyz
+  servername: u695098u270a8f9cs2658.xxti.top
   skip-cert-verify: false
   tfo: false
   tls: true
   type: vless
   uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   xhttp-opts:
-    host: u695098u23f9aae1s2604.xxti.top
-    path: f46d1b21213998b3c5ccf1bd63aea58f
-- alpn:
-  - http/1.1
-  name: 🇰🇷 KR1@ripaojiedian
-  network: ws
-  port: 443
-  server: 109.61.127.247
-  servername: speedtest.danfengno1.kdns.fr
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
-- alpn:
-  - http/1.1
-  name: 🇰🇷 KR2@ripaojiedian
-  network: ws
-  port: 28017
-  server: 121.154.67.134
-  servername: speedtest.danfengno1.kdns.fr
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  ws-opts:
-    headers:
-      Host: speedtest.danfengno1.kdns.fr
-    path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5stfp=firefox
+    host: u695098u270a8f9cs2658.xxti.top
+    path: 224b0868abf552a7f3e1cd34bd90f2de
 - client-fingerprint: chrome
   name: '🇰🇷 韩国 | KOR #3'
   network: ws
@@ -221,7 +284,19 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
-- name: '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
+- name: 🇰🇷[www.v2nodes.com] vless-KR-3...
+  network: ws
+  port: 8443
+  server: 64.110.79.66
+  servername: fs.qicai99.com
+  tls: false
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: /fp=chromesecurity=tls
+- name: '🇰🇷[www.v2nodes.com] vless-KR-3... #2'
   network: ws
   port: 8443
   server: 64.110.79.66
@@ -234,7 +309,7 @@ proxies:
       Host: fs.qicai99.com
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #4'
+  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   network: ws
   port: 8443
   server: 64.110.79.66
@@ -246,19 +321,7 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /
-- name: 🇰🇷[www.v2nodes.com] vless-KR-4...
-  network: ws
-  port: 8443
-  server: 64.110.79.66
-  servername: fs.qicai99.com
-  tls: false
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: /fp=chromesecurity=tls
-- name: '🇰🇷 韩国 | KOR #1'
+- name: 🇰🇷[www.v2nodes.com] trojan-KR-...
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 158.247.253.243
@@ -268,7 +331,7 @@ proxies:
 - alpn:
   - h3
   auth: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  name: 🇰🇷 KR HY2-10 | free-nodes
+  name: 🇰🇷 KR HY2-12 | free-nodes
   password: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
   port: 443
   server: s2595.fuhuovps.xyz

@@ -1,26 +1,10 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 5F374A
-  network: tcp
-  port: 10045
-  server: family.bucket.x9.kfc-520.com
-  tls: false
-  type: vmess
-  uuid: 1dc73529-f030-3ac5-ad64-f7666b9a51bc
-- name: 🇸🇪 瑞典 V2CROSS.COM
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 167.88.61.175
-  skip-cert-verify: false
-  sni: blog.browseseniorrolesandenhanceyourcareertoday.com
-  type: trojan
-- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
+- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
   password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   port: 443
   server: 95.143.196.97
   type: trojan
-- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
+- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #3'
   network: ws
   password: f426d3c9-fb43-43c0-868b-898dfa451a74
   port: 443
@@ -31,18 +15,6 @@ proxies:
     headers:
       Host: likejennie.pages.dev
     path: '%2F'
-- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #3'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 70.34.207.14
-  sni: searchhealthcarejobsandbuildmedicalcareerpathway.com
-  type: trojan
-- cipher: aes-256-gcm
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  password: AxIYWtskJWIIaefW
-  port: 8388
-  server: 70.34.212.124
-  type: ss
 - cipher: aes-256-gcm
   name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -54,4 +26,10 @@ proxies:
   password: 2e555e46dbc421452416834962fd014f
   port: 8388
   server: 62.182.193.228
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #3'
+  password: AxIYWtskJWIIaefW
+  port: 8388
+  server: 70.34.212.124
   type: ss

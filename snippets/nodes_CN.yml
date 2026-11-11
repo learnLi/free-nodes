@@ -13,25 +13,23 @@ proxies:
     path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 0B9564
-  network: ws
-  port: 10086
-  server: 120.48.133.162
+  name: CN 🇨🇳 | @Raydikalx | 3303AB
+  network: tcp
+  port: 50011
+  server: 157.148.7.55
   servername: ''
   tls: false
   type: vmess
-  uuid: a01e5d56-464f-45b9-b600-164db4700162
-  ws-opts: {}
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 10C07D
+  name: CN 🇨🇳 | @Raydikalx | 6C11D3
   network: tcp
-  port: 2648
-  server: 150.242.244.116
-  servername: ''
+  port: 50012
+  server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: aeff933f-0ae6-4465-85bf-12f1394f35af
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
 - alterId: 0
   cipher: auto
   name: CN 🇨🇳 | @Raydikalx | 8665EC
@@ -45,24 +43,41 @@ proxies:
   ws-opts: {}
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | A1B995
+  name: CN 🇨🇳 | @Raydikalx | 9BF1B1
   network: tcp
-  port: 50002
-  server: 112.132.215.108
-  servername: ''
+  port: 50015
+  server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 23b5790c-4e96-49fa-95fc-9079ce9cf43c
+- alterId: 64
+  cipher: auto
+  name: 🇨🇳CN-119.36.161.40-0029
+  network: ws
+  port: 443
+  server: 119.36.161.40
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 946ba5df-5771-4873-a3cb-892378526147
+  ws-opts:
+    headers:
+      Host: www.99136853.xyz
+    path: /path/120306182525
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | DCC4F6
-  network: tcp
-  port: 50011
-  server: 36.139.117.41
+  name: 🇨🇳CN-223.111.202.139-2140
+  network: ws
+  port: 63086
+  server: 223.111.202.139
   servername: ''
-  tls: false
+  skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+  uuid: e159f409-af0e-38b6-b34e-404a98089471
+  ws-opts:
+    path: /mugua
 - alterId: 0
   cipher: auto
   name: 🇨🇳_CN_中国_IPV4

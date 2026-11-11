@@ -1,83 +1,87 @@
 {
-  "total": 1073,
+  "total": 1108,
   "egress": {
-    "ip": "128.85.153.200",
+    "ip": "20.169.65.35",
     "method": "direct",
     "country": "United States",
-    "city": "Chase City",
+    "city": "Phoenix",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 1024,
-  "tcp_ok": 841,
-  "tcp_rate": "82.1%",
-  "tls_applicable": 502,
-  "tls_ok": 461,
-  "tls_rate": "91.8%",
-  "quic_applicable": 49,
+  "tcp_applicable": 1062,
+  "tcp_ok": 897,
+  "tcp_rate": "84.5%",
+  "tls_applicable": 549,
+  "tls_ok": 522,
+  "tls_rate": "95.1%",
+  "quic_applicable": 46,
   "quic_ok": 2,
-  "quic_rate": "4.1%",
-  "udp_skipped": 49,
+  "quic_rate": "4.3%",
+  "udp_skipped": 46,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 6,
+      "ms": 9,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 7,
+      "ms": 3,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 8,
+      "ms": 60,
       "err": ""
     }
   ],
   "by_type": {
     "anytls": {
-      "total": 1,
-      "ok": 1
+      "total": 3,
+      "ok": 3
     },
     "http": {
-      "total": 23,
-      "ok": 23
+      "total": 83,
+      "ok": 83
     },
     "hysteria": {
-      "total": 4,
+      "total": 5,
       "ok": 0
     },
+    "socks5": {
+      "total": 2,
+      "ok": 2
+    },
     "ss": {
-      "total": 282,
-      "ok": 228
+      "total": 276,
+      "ok": 230
     },
     "trojan": {
-      "total": 179,
-      "ok": 167
+      "total": 168,
+      "ok": 161
     },
     "vless": {
-      "total": 353,
-      "ok": 309
+      "total": 337,
+      "ok": 296
     },
     "vmess": {
-      "total": 182,
-      "ok": 113
+      "total": 184,
+      "ok": 122
+    },
+    "wireguard": {
+      "total": 4,
+      "ok": 0
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 48,
+      "total": 46,
       "ok": 2
-    },
-    "tuic": {
-      "total": 1,
-      "ok": 0
     }
   }
 }
