@@ -1,45 +1,37 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D21E6C
-  network: tcp
-  port: 47014
-  server: hong.1.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D2C1D0
+  name: SG 🇸🇬 | @Raydikalx | E63360
   network: ws
   port: 443
-  server: mot6fvb-production.up.railway.app
-  servername: mot6fvb-production.up.railway.app
+  server: siderail-production-fbfe.up.railway.app
+  servername: siderail-production-fbfe.up.railway.app
   tls: true
   type: vmess
-  uuid: 39020442-120b-417f-bb3f-4763f873b68d
+  uuid: a039c6ac-5e2f-4f7e-a79b-27582a8d61e0
   ws-opts:
     headers:
-      Host: mot6fvb-production.up.railway.app
-    path: /api/8zfkVx
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  port: 8886
-  server: 139.180.146.200
-  type: trojan
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 15.235.184.127
-  type: trojan
+      Host: siderail-production-fbfe.up.railway.app
+    path: /api/IVSugr
+- alterId: 64
+  cipher: auto
+  name: 🇸🇬SG-134.122.184.88-1447
+  network: ws
+  port: 48885
+  server: 134.122.184.88
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.13146165.xyz
+    path: /path/191019072927
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
-  network: tcp
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 15.235.184.127
-  skip-cert-verify: false
-  sni: exploredigitaljobplatformandfindonlinework.com
   type: trojan
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #4'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
@@ -51,7 +43,6 @@ proxies:
   password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
   port: 8886
   server: 139.180.146.200
-  sni: 139.180.146.200
   type: trojan
 - cipher: rc4-md5
   name: shadowsocks-1827147315
@@ -94,10 +85,4 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 51.79.228.131
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #3'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 15.235.182.183
   type: ss

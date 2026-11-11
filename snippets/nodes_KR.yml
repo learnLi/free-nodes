@@ -14,6 +14,28 @@ proxies:
     headers:
       Host: kr02.a0a.xyz
     path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-146.56.162.25-0134
+  network: ws
+  port: 443
+  server: 146.56.162.25
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- name: '🇰🇷 韩国 | KOR #1'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 158.247.253.243
+  skip-cert-verify: true
+  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+  type: trojan
 - name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 5t6i121em5lkmsmk
   port: 48851
