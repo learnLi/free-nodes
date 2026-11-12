@@ -1,6 +1,17 @@
 proxies:
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: 204adda7e3da
+  name: '🇪🇪 爱沙尼亚 | EST #2'
+  network: grpc
+  port: 443
+  server: 196.196.148.63
+  servername: 717252g.nl8.h1clayd.click
+  tls: true
+  type: vless
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
 - encryption: none
-  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #7'
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #4'
   network: tcp
   port: 16443
   server: 45.86.60.174

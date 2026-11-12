@@ -9,6 +9,42 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | B9D3B8
+  network: ws
+  port: 80
+  server: 145.239.55.210
+  tls: false
+  type: vmess
+  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  ws-opts:
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+    path: /
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | CD4BBF
+  network: tcp
+  port: 38854
+  server: 94.131.9.155
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 00abfc28-d7d2-4787-f2a3-da1c2f38d7b8
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-195.154.77.190-3806
+  network: ws
+  port: 2082
+  server: 195.154.77.190
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 36fa45db-2d4a-4295-a1fe-223836989878
+  ws-opts:
+    path: /pineapple
 - name: FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -47,49 +83,55 @@ proxies:
 - name: '🇫🇷法国丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.18.152.133
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #2'
   password: humanity
   port: 443
-  server: 104.18.152.152
+  server: 104.18.22.63
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷法国丨yoyapai.com\r #3'
   password: humanity
   port: 443
-  server: 104.18.152.133
+  server: 104.18.152.152
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: '🇫🇷 法国 | FRA #12'
+  password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
+  port: 1352
+  server: dns24.m3hrzd.ir
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🇫🇷 法国 | FRA #2'
+  password: 29irqk0paakcx19v
+  port: 8080
+  server: 51.83.61.102
+  type: ss
 - cipher: aes-256-cfb
-  name: 🇫🇷 法国 | FRA
+  name: 🇫🇷FR-13.38.12.246-0634
   password: amazonskr05
   port: 443
   server: 13.38.12.246
   type: ss
 - cipher: aes-256-cfb
-  name: '🇫🇷 法国 | FRA #10'
-  password: amazonskr05
-  port: 443
-  server: 51.44.170.122
-  type: ss
-- cipher: aes-256-cfb
-  name: '🇫🇷 法国 | FRA #11'
+  name: 🇫🇷FR-15.237.53.254-0636
   password: amazonskr05
   port: 443
   server: 15.237.53.254
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇫🇷 法国 | FRA #14'
-  password: 29irqk0paakcx19v
-  port: 8080
-  server: 51.83.61.102
+- cipher: aes-256-cfb
+  name: 🇫🇷FR-51.44.170.122-0635
+  password: amazonskr05
+  port: 443
+  server: 51.44.170.122
   type: ss
-  udp: true
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -100,10 +142,16 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.175
+  server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.175
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
@@ -113,10 +161,4 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #9'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.27
   type: ss

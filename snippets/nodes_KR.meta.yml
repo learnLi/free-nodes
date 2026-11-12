@@ -1,7 +1,20 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-132.145.80.230-0306
+  name: 🇰🇷KR-130.162.141.104-1932
+  network: ws
+  port: 443
+  server: 130.162.141.104
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+  ws-opts:
+    path: /reffs7y26g0ua
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-132.145.80.230-1123
   network: ws
   port: 80
   server: 132.145.80.230
@@ -13,15 +26,91 @@ proxies:
   ws-opts:
     headers:
       Host: kr02.a0a.xyz
-    path: /
-- client-fingerprint: chrome
-  name: 🇰🇷[www.v2nodes.com] vless-KR-1...
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-138.2.122.225-0065
+  network: ws
   port: 443
-  server: 43.108.85.54
-  servername: cloudflare.com
+  server: 138.2.122.225
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-146.56.166.153-0067
+  network: ws
+  port: 443
+  server: 146.56.166.153
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- name: '🇰🇷 韩国 | KOR #2'
+  network: ws
+  port: 8443
+  server: 123.111.169.70
+  servername: v1n3.11676767.xyz
   tls: true
   type: vless
-  uuid: e15db5c2-2dca-49fc-857b-aa37a7ba1c79
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  ws-opts:
+    headers:
+      Host: v1n3.11676767.xyz
+    path: /go.php/productsfp=chrome
+- name: '🇰🇷 韩国 | KOR #3'
+  network: ws
+  port: 443
+  server: 131.186.16.166
+  servername: v1n3.11676767.xyz
+  tls: true
+  type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  ws-opts:
+    headers:
+      Host: v1n3.11676767.xyz
+    path: /picture/lessonsfp=chrome
+- name: '🇰🇷 韩国 | KOR #4'
+  network: ws
+  port: 2096
+  server: 123.111.169.70
+  servername: v1n3.11676767.xyz
+  tls: true
+  type: vless
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  ws-opts:
+    headers:
+      Host: v1n3.11676767.xyz
+    path: /go.php/productsfp=chrome
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+  port: 5455
+  server: 23.95.72.244
+  tls: false
+  type: vless
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
+  port: 50135
+  server: 23.95.72.244
+  tls: false
+  type: vless
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+  port: 8883
+  server: 23.95.72.244
+  tls: false
+  type: vless
+  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #6'
   network: ws
   port: 25555
@@ -43,7 +132,7 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /fp=chromesecurity=tls
-- name: '🇰🇷[www.v2nodes.com] vless-KR-3... #2'
+- name: '🇰🇷[www.v2nodes.com] vless-KR-3... #1'
   network: ws
   port: 8443
   server: 64.110.79.66
@@ -56,7 +145,7 @@ proxies:
       Host: fs.qicai99.com
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
+  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #2'
   network: ws
   port: 8443
   server: 64.110.79.66
@@ -68,7 +157,7 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /
-- name: 🇰🇷[www.v2nodes.com] trojan-KR-...
+- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 158.247.253.243

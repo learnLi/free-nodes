@@ -1,35 +1,54 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 79F85B
+  name: 🇯🇵JP-168.138.43.75-1126
   network: ws
-  port: 2082
-  server: tgqyjc2024.qyjc.xyz
+  port: 80
+  server: 168.138.43.75
+  servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 1e3e82b2-36c0-44aa-80ad-5c3f693824f1
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
     headers:
-      Host: hongkong.tgqyjc2024.qyjc666.xyz
-    path: /?ed=2048
-- alterId: 1
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | EF09A6
-  network: tcp
-  port: 28787
-  server: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  servername: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  tls: true
-  type: vmess
-  uuid: 2ce005b4-e57a-3670-be88-60eeeb078bb7
+      Host: jp01.a0a.xyz
+    path: /cctv13.m3u8
+- name: '🇳🇬 尼日利亚 | NGA #1'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20103
+  server: sclass-01.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- name: '🇳🇬 尼日利亚 | NGA #2'
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  port: 20051
+  server: sclass-c2.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+  udp: true
 - cipher: aes-256-gcm
   name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
   port: 443
   server: 84.247.155.196
   type: ss
+- cipher: aes-128-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
+  type: ss
 - cipher: aes-256-gcm
-  name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'
   password: BeaUf9c0AEWH40Pu
   port: 8388
   server: 154.36.158.197
@@ -39,4 +58,10 @@ proxies:
   password: shadowsocks
   port: 443
   server: 149.22.87.204
+  type: ss
+- cipher: aes-128-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-9223... #1'
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.241
   type: ss
