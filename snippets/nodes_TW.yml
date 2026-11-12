@@ -1,16 +1,28 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇹🇼TW-104.29.64.5-1736
+  name: TW 🇹🇼 | @Raydikalx | A1FA21
   network: ws
   port: 443
-  server: 104.29.64.5
+  server: dee2309db4se3g5sds35g4s3dg.oylfmxz.cn
   servername: ''
-  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: a1b16d10-4f43-4dd9-8c4f-52065b2b0910
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼TW-165.154.246.107-1725
+  network: ws
+  port: 80
+  server: 165.154.246.107
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
   ws-opts:
     headers:
-      Host: us3.guolicheng.cyou
-    path: /suti/us3?ed=2048
+      Host: tms.dingtalk.com
+    path: /

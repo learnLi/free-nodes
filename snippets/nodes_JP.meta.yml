@@ -1,19 +1,26 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-168.138.43.75-1126
+  name: JP 🇯🇵 | @Raydikalx | D2CBEF
   network: ws
-  port: 80
-  server: 168.138.43.75
-  servername: ''
-  skip-cert-verify: true
-  tls: false
+  port: 443
+  server: jp.vpn.taiaise.cn
+  tls: true
   type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  uuid: 060aede7-11ea-4032-b025-6c4168a5182e
   ws-opts:
     headers:
-      Host: jp01.a0a.xyz
-    path: /cctv13.m3u8
+      Host: jp.vpn.taiaise.cn
+    path: /jp
+- alterId: 1
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | FF5D14
+  network: tcp
+  port: 11775
+  server: g03.jp02-e3-vm0.entry.fr0528.art
+  tls: false
+  type: vmess
+  uuid: a85150ba-dae3-3055-8984-700faca4d576
 - client-fingerprint: chrome
   name: 日本4|@ripaojiedian
   network: ws
@@ -28,19 +35,103 @@ proxies:
     headers:
       Host: cdn-jp.skyvora.app
     path: /pmcxbjzdau6flow=
-- name: 🇯🇵[www.v2nodes.com] vless-JP-1...
+- client-fingerprint: chrome
+  name: 🇯🇵 日本 | JPN
   network: ws
   port: 443
-  server: 172.64.152.19
-  servername: jp3.yohototo.top
+  server: 64.83.37.223
+  servername: vip.freevpn.cloudns.biz
   tls: true
   type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
   ws-opts:
     headers:
-      Host: jp3.yohototo.top
-    path: /tyxywsfp=unsafe
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
+      Host: vip.freevpn.cloudns.biz
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #1'
+  network: ws
+  port: 443
+  server: 154.36.156.220
+  servername: vip.freevpn.cloudns.biz
+  tls: true
+  type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  ws-opts:
+    headers:
+      Host: vip.freevpn.cloudns.biz
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #2'
+  network: ws
+  port: 443
+  server: 64.83.36.18
+  servername: vip.freevpn.cloudns.biz
+  tls: true
+  type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  ws-opts:
+    headers:
+      Host: vip.freevpn.cloudns.biz
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #3'
+  network: ws
+  port: 443
+  server: 154.36.183.110
+  servername: vip.freevpn.cloudns.biz
+  tls: true
+  type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  ws-opts:
+    headers:
+      Host: vip.freevpn.cloudns.biz
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #4'
+  network: ws
+  port: 443
+  server: 154.36.155.12
+  servername: vip.freevpn.cloudns.biz
+  tls: true
+  type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  ws-opts:
+    headers:
+      Host: vip.freevpn.cloudns.biz
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048
+- client-fingerprint: chrome
+  name: '🇯🇵 日本 | JPN #5'
+  network: ws
+  port: 443
+  server: 154.36.154.29
+  servername: vip.freevpn.cloudns.biz
+  tls: true
+  type: vless
+  uuid: 0bb8b560-b056-4245-8b9d-231a0a78c54b
+  ws-opts:
+    headers:
+      Host: vip.freevpn.cloudns.biz
+    path: /0bb8b560-b056-4245-8b9d-231a0a78c54b?ed=2048
+- name: 🇯🇵[www.v2nodes.com] vless-JP-1...
+  port: 443
+  server: 104.16.10.185
+  tls: false
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
+  network: ws
+  port: 443
+  server: 207.148.115.152
+  servername: vlso5.1d.mom
+  tls: false
+  type: vless
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  ws-opts:
+    headers:
+      Host: vlso5.1d.mom
+    path: /socks5=888:888@hkip.1d.mom:1080fp=chromesecurity=tls
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #12'
   network: ws
   port: 443
   server: 46.250.254.187
@@ -52,7 +143,7 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /fp=chrome
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #11'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #13'
   network: ws
   port: 443
   server: 207.148.115.152
@@ -64,17 +155,7 @@ proxies:
     headers:
       Host: vlso5.1d.mom
     path: /socks5=888:888@hkip.1d.mom:1080fp=chrome
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #12'
-  port: 443
-  server: 104.16.10.185
-  tls: false
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    path: /tyxyws
-- encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #15'
-  network: tcp
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #17'
   port: 47878
   server: 152.69.195.67
   servername: 152.69.195.67
@@ -82,10 +163,10 @@ proxies:
   type: vless
   uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
 - client-fingerprint: chrome
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #16'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #19'
   network: ws
   port: 443
-  server: 46.250.254.187
+  server: 46.250.248.210
   servername: fs.qicai99.com
   tls: true
   type: vless
@@ -95,7 +176,7 @@ proxies:
       Host: fs.qicai99.com
     path: /
 - encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #17'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #20'
   network: ws
   port: 11424
   server: 38.47.96.220
@@ -120,22 +201,23 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /fp=chromesecurity=tls
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
-  network: ws
-  port: 443
-  server: 207.148.115.152
-  servername: vlso5.1d.mom
-  tls: false
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  ws-opts:
-    headers:
-      Host: vlso5.1d.mom
-    path: /socks5=888:888@hkip.1d.mom:1080fp=chromesecurity=tls
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   network: ws
+  port: 11424
+  server: 38.47.96.220
+  servername: notls.lukongtou.eu.org
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  ws-opts:
+    headers:
+      Host: notls.lukongtou.eu.org
+    path: Telegram-WangCai2🇨🇳security=tls
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #7'
+  network: ws
   port: 443
-  server: 104.18.42.98
+  server: 172.64.152.19
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -143,21 +225,15 @@ proxies:
   ws-opts:
     headers:
       Host: jp3.yohototo.top
-    path: /tyxywsfp=chrome
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #8'
-  port: 55569
-  server: 23.95.72.244
-  tls: false
-  type: vless
-  uuid: 9a5e7b1c-bf39-4b1f-891f-ac87824ee38f
-- name: '🇳🇬 尼日利亚 | NGA #1'
+    path: /tyxywsfp=unsafe
+- name: '🇳🇬 尼日利亚 | NGA #3'
   password: d7563108-615c-4338-a7bd-77f359869a4a
   port: 20103
   server: sclass-01.catcat321.com
   skip-cert-verify: true
   sni: hk.catxstar.com
   type: trojan
-- name: '🇳🇬 尼日利亚 | NGA #2'
+- name: '🇳🇬 尼日利亚 | NGA #4'
   password: d9064589-74af-432a-9390-5d8a9da281bf
   port: 20051
   server: sclass-c2.catcat321.com
@@ -166,7 +242,7 @@ proxies:
   type: trojan
   udp: true
 - auth: abedf59203ff9523
-  name: 🇯🇵 日本 | JPN
+  name: '🇯🇵 日本 | JPN #6'
   obfs: salamander
   obfs-password: ce8a8b39835f0ce5340cf548892e8e71
   password: abedf59203ff9523
@@ -177,9 +253,9 @@ proxies:
   sni: www.bing.com
   type: hysteria2
 - cipher: aes-256-gcm
-  name: shadowsocks-1827146336
+  name: shadowsocks-1827146658
   password: 3eOFeNssde7PYYMv
-  port: 443
+  port: 80
   server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
@@ -191,7 +267,7 @@ proxies:
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
-  port: 80
+  port: 443
   server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
@@ -212,11 +288,3 @@ proxies:
   port: 443
   server: 149.22.87.241
   type: ss
-- name: 🇯🇵JP_1|1.2MB/s
-  password: 'null'
-  port: 40583
-  server: 120.232.204.58
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
