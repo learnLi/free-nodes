@@ -1,6 +1,34 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 041C4E
+  network: ws
+  port: 443
+  server: 2nj8qyoHuZwgCP8J.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
+  ws-opts:
+    headers:
+      Host: 2nj8qyoHuZwgCP8J.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 903C4C
+  network: ws
+  port: 443
+  server: re45h5adf54334532-production.up.railway.app
+  servername: re45h5adf54334532-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: e02f9f09-f82a-48cb-9dc0-8ebd53c0ff3b
+  ws-opts:
+    headers:
+      Host: re45h5adf54334532-production.up.railway.app
+    path: /gw/bc5aeca0-ea58-47cd-b716-0a4bd67680ec?ed=2560
+- alterId: 0
+  cipher: auto
   name: SG 🇸🇬 | @Raydikalx | 9DDCC3
   network: ws
   port: 443
@@ -15,54 +43,42 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | A4790F
-  network: tcp
-  port: 47014
-  server: fer-5.povrak.ir
-  servername: ''
+  name: SG 🇸🇬 | @Raydikalx | C9CCB4
+  network: raw
+  port: 18000
+  server: ww11.levikogjgfdd.ir
+  servername: ww11.levikogjgfdd.ir
   tls: false
   type: vmess
-  uuid: d4aa69e8-2739-42b3-9cd4-af1e4fb04ad5
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C5D91D
+  name: SG 🇸🇬 | @Raydikalx | E09534
   network: ws
-  port: 53267
-  server: 167.150.100.81
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 0a4e5d12-f804-4991-a3bf-e45dbfcb1201
-  ws-opts:
-    path: /gx5hemjvd8
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D2C1D0
-  network: ws
-  port: 443
-  server: mot6fvb-production.up.railway.app
-  servername: mot6fvb-production.up.railway.app
+  port: 52935
+  server: 52.74.177.147
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 39020442-120b-417f-bb3f-4763f873b68d
+  uuid: c685dd34-b84e-484d-b3f5-efd0a27ad2d5
   ws-opts:
     headers:
-      Host: mot6fvb-production.up.railway.app
-    path: /api/8zfkVx
+      Host: sg-transit-1.nebulacloud.win
+    path: /getData/fr
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E1BDBE
+  name: SG 🇸🇬 | @Raydikalx | FE8CC0
   network: ws
   port: 443
-  server: urfddtest-production.up.railway.app
-  servername: urfddtest-production.up.railway.app
+  server: atlaswero-production.up.railway.app
+  servername: atlaswero-production.up.railway.app
   tls: true
   type: vmess
-  uuid: 327ad26c-1501-41b3-9f33-12b85de39d5f
+  uuid: 6a34835b-f9f5-4b51-b405-d6131ea42062
   ws-opts:
     headers:
-      Host: urfddtest-production.up.railway.app
-    path: /api/xMxpTe
+      Host: atlaswero-production.up.railway.app
+    path: /api/dYZOED
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-109.123.237.41-2985
@@ -76,21 +92,26 @@ proxies:
   uuid: 03a77360-808d-11ed-b736-205c6d5f5d78
   ws-opts:
     path: /fastssh
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-3.1.211.250-2106
+- name: '🇸🇬 新加坡 | SGP #5'
+  password: trojan
+  port: 8443
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: longwanghen.pages.dev
+  type: trojan
+- name: 🇸🇬 新加坡 | SGP 4
   network: ws
-  port: 5100
-  server: st-2.dnspro.icu
-  servername: lg-hkg-b.gcorelabs.info
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 13ef5f2c-d002-36a2-9e96-a13d5e3ae03b
+  password: trojan
+  port: 8443
+  server: 104.18.35.86
+  skip-cert-verify: true
+  sni: longwanghen.pages.dev
+  type: trojan
+  udp: true
   ws-opts:
     headers:
-      Host: st-2.dnspro.icu
-    path: /iso
+      Host: longwanghen.pages.dev
+    path: /
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
