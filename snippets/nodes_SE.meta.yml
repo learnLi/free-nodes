@@ -1,5 +1,11 @@
 proxies:
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
+  port: 443
+  server: 150.241.79.124
+  tls: false
+  type: vless
+  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
   network: ws
   port: 14430
   server: 5.178.109.174
@@ -10,23 +16,6 @@ proxies:
     headers:
       Host: 5.178.109.174
     path: /vless
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
-  port: 443
-  server: 150.241.79.124
-  tls: false
-  type: vless
-  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: 138-124-86-230-sslip-io
-  name: '🏳[www.v2nodes.com] vless- #38'
-  network: grpc
-  port: 48115
-  server: 138.124.86.230
-  servername: 138-124-86-230.sslip.io
-  tls: true
-  type: vless
-  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #2'
   password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   port: 443
@@ -44,12 +33,6 @@ proxies:
     headers:
       Host: likejennie.pages.dev
     path: '%2F'
-- cipher: 2022-blake3-aes-256-gcm
-  name: '🇸🇪 瑞典 | SWE #1'
-  password: SWePBmNSadMUzbm7GigoCTrCXr1vG/zUfYbBDaxk/VU=:jXzFNqqClbUWdzc1f4DSolu9VfjohvSJ+vP/Sj5eK0U=
-  port: 8080
-  server: 16.171.159.75
-  type: ss
 - cipher: aes-256-gcm
   name: '🇸🇪[www.v2nodes.com] ss-SE-1560... #1'
   password: AxIYWtskJWIIaefW
@@ -61,10 +44,4 @@ proxies:
   password: 2e555e46dbc421452416834962fd014f
   port: 8388
   server: 62.182.193.228
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #15'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 138.199.55.243
   type: ss
