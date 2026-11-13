@@ -11,24 +11,14 @@ proxies:
   uuid: f56b9a92-47d4-4d6e-b828-1aa3e96dae65
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | E7ABC3
-  network: tcp
-  port: 2648
-  server: 150.242.244.116
-  servername: 150.242.244.116
-  tls: false
-  type: vmess
-  uuid: 44712929-c2b7-4fa4-93bd-9de332a78c8c
-- alterId: 0
-  cipher: auto
-  name: 🇨🇳CN-106.55.187.139-2742
+  name: 🇨🇳CN-223.111.202.139-2547
   network: ws
-  port: 8448
-  server: 106.55.187.139
+  port: 63086
+  server: 223.111.202.139
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 5a464707-3162-4a09-e9e2-d70a6b892267
+  uuid: e159f409-af0e-38b6-b34e-404a98089471
   ws-opts:
-    path: /
+    path: /mugua
