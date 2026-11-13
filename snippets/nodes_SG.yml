@@ -1,46 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5CF2BB
+  name: 🇸🇬SG-8.219.123.35-7833
   network: ws
-  port: 443
-  server: fdhjbd-production.up.railway.app
-  servername: fdhjbd-production.up.railway.app
-  tls: true
+  port: 80
+  server: 8.219.123.35
+  servername: ''
+  skip-cert-verify: true
+  tls: false
   type: vmess
-  uuid: 9b0d6833-3301-49b6-a596-a6e9151a9ff4
+  uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
   ws-opts:
-    headers:
-      Host: fdhjbd-production.up.railway.app
-    path: /api/Wqqi-E
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | DB3920
-  network: ws
-  port: 443
-  server: mouyhninn-production.up.railway.app
-  servername: mouyhninn-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: 2d62008e-800c-4483-aa9a-f3772a2ce773
-  ws-opts:
-    headers:
-      Host: mouyhninn-production.up.railway.app
-    path: /api/0dmRnp
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E93E65
-  network: ws
-  port: 443
-  server: 5FPTMOqdtsxQRFmA.v.3dns.vip
-  servername: 5FPTMOqdtsxQRFmA.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  ws-opts:
-    headers:
-      Host: 5FPTMOqdtsxQRFmA.v.3dns.vip
-    path: /ws-vmess
+    path: /2TokGE9A/
 - name: 🇸🇬 新加坡 | SGP 4
   network: ws
   password: trojan

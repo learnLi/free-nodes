@@ -1,26 +1,27 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | D2CBEF
-  network: ws
-  port: 443
-  server: jp.vpn.taiaise.cn
-  tls: true
-  type: vmess
-  uuid: 060aede7-11ea-4032-b025-6c4168a5182e
-  ws-opts:
-    headers:
-      Host: jp.vpn.taiaise.cn
-    path: /jp
 - alterId: 1
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | FF5D14
+  name: JP 🇯🇵 | @Raydikalx | C3EF80
   network: tcp
-  port: 11775
-  server: g03.jp02-e3-vm0.entry.fr0528.art
+  port: 46482
+  server: vt50k-g01.jp05-6786-vm0.entry.fr0307a.art
   tls: false
   type: vmess
-  uuid: a85150ba-dae3-3055-8984-700faca4d576
+  uuid: 7a6cb59b-fbcd-3f50-b5f2-a2534326c4c8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | FBC414
+  network: ws
+  port: 443
+  server: 4dhgjo2t9anciqpk.v.3dns.vip
+  servername: 4dhgjo2t9anciqpk.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: b664cc36-4896-454b-bb9c-1377c76176de
+  ws-opts:
+    headers:
+      Host: 4dhgjo2t9anciqpk.v.3dns.vip
+    path: /ws-vmess
 - client-fingerprint: chrome
   name: 日本4|@ripaojiedian
   network: ws
@@ -131,7 +132,15 @@ proxies:
     headers:
       Host: vlso5.1d.mom
     path: /socks5=888:888@hkip.1d.mom:1080fp=chromesecurity=tls
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #12'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #15'
+  network: tcp
+  port: 47878
+  server: 152.69.195.67
+  servername: 152.69.195.67
+  tls: false
+  type: vless
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #16'
   network: ws
   port: 443
   server: 46.250.254.187
@@ -143,27 +152,8 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /fp=chrome
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #13'
-  network: ws
-  port: 443
-  server: 207.148.115.152
-  servername: vlso5.1d.mom
-  tls: true
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  ws-opts:
-    headers:
-      Host: vlso5.1d.mom
-    path: /socks5=888:888@hkip.1d.mom:1080fp=chrome
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #17'
-  port: 47878
-  server: 152.69.195.67
-  servername: 152.69.195.67
-  tls: false
-  type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
 - client-fingerprint: chrome
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #19'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #17'
   network: ws
   port: 443
   server: 46.250.248.210
@@ -176,7 +166,7 @@ proxies:
       Host: fs.qicai99.com
     path: /
 - encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #20'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #18'
   network: ws
   port: 11424
   server: 38.47.96.220
@@ -226,38 +216,37 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxywsfp=unsafe
-- name: '🇳🇬 尼日利亚 | NGA #3'
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20103
-  server: sclass-01.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-- name: '🇳🇬 尼日利亚 | NGA #4'
+- name: '🇳🇬 尼日利亚 | NGA #2'
   password: d9064589-74af-432a-9390-5d8a9da281bf
   port: 20051
   server: sclass-c2.catcat321.com
   skip-cert-verify: true
   sni: hk.catxstar.com
   type: trojan
-  udp: true
-- auth: abedf59203ff9523
-  name: '🇯🇵 日本 | JPN #6'
-  obfs: salamander
-  obfs-password: ce8a8b39835f0ce5340cf548892e8e71
-  password: abedf59203ff9523
-  port: 17826
-  ports: 17826,20000-40000
-  server: 138.2.37.59
+- name: 🇳🇬[www.v2nodes.com] trojan-NG-...
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20103
+  server: sclass-01.catcat321.com
   skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
+  sni: hk.catxstar.com
+  type: trojan
 - cipher: aes-256-gcm
   name: shadowsocks-1827146658
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇯🇵JP_1|4.7MB/s
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: (Telegram🇨🇳 @VPNine1)af2501f:110406
+    mode: tls
+  port: 2377
+  server: 13.231.100.94
+  type: ss
+  x-toolall-mihomo: true
 - cipher: aes-128-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
   password: shadowsocks

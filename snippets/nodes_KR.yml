@@ -1,30 +1,20 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | ED5343
-  network: tcp
-  port: 8888
-  server: 146.56.112.110
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-132.145.80.230-1121
+  name: 🇰🇷KR-138.2.122.225-1123
   network: ws
-  port: 80
-  server: 132.145.80.230
+  port: 443
+  server: 138.2.122.225
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   ws-opts:
     headers:
-      Host: kr02.a0a.xyz
-    path: /cctv13.m3u8
-- name: '🏳[www.v2nodes.com] trojan- #6'
+      Host: lg30.cfcdn3.xyz
+    path: /
+- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 158.247.253.243

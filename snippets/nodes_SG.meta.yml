@@ -1,46 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5CF2BB
+  name: 🇸🇬SG-8.219.123.35-7833
   network: ws
-  port: 443
-  server: fdhjbd-production.up.railway.app
-  servername: fdhjbd-production.up.railway.app
-  tls: true
+  port: 80
+  server: 8.219.123.35
+  servername: ''
+  skip-cert-verify: true
+  tls: false
   type: vmess
-  uuid: 9b0d6833-3301-49b6-a596-a6e9151a9ff4
+  uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
   ws-opts:
-    headers:
-      Host: fdhjbd-production.up.railway.app
-    path: /api/Wqqi-E
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | DB3920
-  network: ws
-  port: 443
-  server: mouyhninn-production.up.railway.app
-  servername: mouyhninn-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: 2d62008e-800c-4483-aa9a-f3772a2ce773
-  ws-opts:
-    headers:
-      Host: mouyhninn-production.up.railway.app
-    path: /api/0dmRnp
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E93E65
-  network: ws
-  port: 443
-  server: 5FPTMOqdtsxQRFmA.v.3dns.vip
-  servername: 5FPTMOqdtsxQRFmA.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  ws-opts:
-    headers:
-      Host: 5FPTMOqdtsxQRFmA.v.3dns.vip
-    path: /ws-vmess
+    path: /2TokGE9A/
 - client-fingerprint: chrome
   name: 新加坡4|@ripaojiedian
   network: ws
@@ -68,7 +39,7 @@ proxies:
       Host: vlsovip.1d.mom
     path: /fp=unsafefp=chrome
 - client-fingerprint: chrome
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #12'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #14'
   network: ws
   port: 2096
   server: 139.162.27.96
@@ -92,8 +63,20 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.devfp=chrome
-- client-fingerprint: chrome
+- encryption: none
   name: '🇸🇬[www.v2nodes.com] vless-SG-1... #7'
+  network: ws
+  port: 8880
+  server: 216.24.57.40
+  tls: false
+  type: vless
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  ws-opts:
+    headers:
+      Host: vms.lifetime28.workers.dev
+    path: /
+- client-fingerprint: chrome
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #8'
   port: 8443
   server: 207.148.124.12
   servername: www.bing.com
@@ -125,6 +108,16 @@ proxies:
   server: 149.28.130.108
   sni: searchcreativejobsandshowcaseyourartistictalents.com
   type: trojan
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
+  name: '🇸🇬 新加坡 | SGP #4'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 52.77.214.112
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - cipher: rc4-md5
   name: shadowsocks-1827147315
   password: 14fFPrbezE3HDZzsMOr6
@@ -161,20 +154,3 @@ proxies:
   port: 19999
   server: 15.235.182.183
   type: ss
-- name: 🇸🇬SG_2|1.1MB/s
-  password: None
-  port: 9090
-  server: 128.199.254.13
-  skip-cert-verify: true
-  type: http
-- name: 🇸🇬SG_3|2.1MB/s
-  port: 9090
-  server: 146.190.80.158
-  skip-cert-verify: true
-  type: http
-- name: 🇸🇬SG_1|1.9MB/s
-  password: '!!str 8888'
-  port: 1080
-  server: 47.236.168.243
-  type: socks5
-  username: '8888'

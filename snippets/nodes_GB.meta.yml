@@ -1,6 +1,20 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | AC88EF
+  network: ws
+  port: 443
+  server: jjjk.191268.xyz
+  servername: null
+  tls: true
+  type: vmess
+  uuid: 5cccb4da-8aee-4b01-be84-2056265e52dc
+  ws-opts:
+    headers:
+      Host: jjjk.191268.xyz
+    path: /AwUJyGh9Ym6vVzg35A6ueyyZnWd
 - client-fingerprint: chrome
-  name: '🇬🇧 英国 | GBR #1'
+  name: '🇬🇧 英国 | GBR #2'
   network: ws
   port: 443
   server: 146.75.59.186
@@ -314,32 +328,3 @@ proxies:
   port: 8080
   server: 54.37.240.40
   type: ss
-- name: 🇬🇧GB_1|1.0MB/s
-  password: None
-  port: 443
-  server: 185.164.138.156
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_2|1.9MB/s
-  port: 443
-  server: 212.102.63.1
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_3|2.4MB/s
-  password: None
-  port: 9443
-  server: 37.120.233.34
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇬🇧GB_4|1.5MB/s|R002-260618
-  port: 9443
-  server: 84.233.178.33
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true

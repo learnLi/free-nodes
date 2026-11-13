@@ -1,4 +1,18 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | AC88EF
+  network: ws
+  port: 443
+  server: jjjk.191268.xyz
+  servername: null
+  tls: true
+  type: vmess
+  uuid: 5cccb4da-8aee-4b01-be84-2056265e52dc
+  ws-opts:
+    headers:
+      Host: jjjk.191268.xyz
+    path: /AwUJyGh9Ym6vVzg35A6ueyyZnWd
 - cipher: aes-128-gcm
   name: shadowsocks-1827146143
   password: shadowsocks
