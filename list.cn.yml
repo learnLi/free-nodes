@@ -36,20 +36,6 @@ proxies:
     path: /hls/cctv5phd.m3u8
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 028BCA
-  network: ws
-  port: 443
-  server: 104.17.197.31
-  servername: quiet-moon-132a.xetag42714.workers.dev
-  tls: true
-  type: vmess
-  uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca
-  ws-opts:
-    headers:
-      Host: quiet-moon-132a.xetag42714.workers.dev
-    path: /ivideos.sbs/linkws
-- alterId: 0
-  cipher: auto
   name: CA 🇨🇦 | @Raydikalx | 03FF3D
   network: ws
   port: 443
@@ -233,21 +219,6 @@ proxies:
     path: /@irvpnn,@irvpnn,@irvpnn,@irvpnn?ed=80
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | B52D10
-  network: ws
-  port: 443
-  server: us16-4.998998.best
-  servername: server1.9966338.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  ws-opts:
-    headers:
-      Host: server1.9966338.xyz
-    path: /efrsdioy98wert
-- alterId: 0
-  cipher: auto
   name: CA 🇨🇦 | @Raydikalx | BE0231
   network: ws
   port: 2086
@@ -345,34 +316,6 @@ proxies:
   ws-opts: {}
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 2EDE11
-  network: ws
-  port: 443
-  server: 85.215.41.19
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 5659C3
-  network: ws
-  port: 16632
-  server: m.cnmjin.net
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 56174c24-a84b-4caf-b033-739728cc2773
-  ws-opts:
-    headers:
-      Host: af47ea9d24759da2ccb4dbdb6c4bb073.mobgslb.tbcache.com
-    path: /
-- alterId: 0
-  cipher: auto
   name: DE 🇩🇪 | @Raydikalx | BDAB37
   network: ws
   port: 443
@@ -414,19 +357,6 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | D15B1E
-  network: ws
-  port: 8080
-  server: yh2.dtku41.xyz
-  tls: false
-  type: vmess
-  uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
-  ws-opts:
-    headers:
-      Host: per-essex-patterns-bowling.trycloudflare.com
-    path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
-- alterId: 0
-  cipher: auto
   name: IR 🇮🇷 | @Raydikalx | 9C15F7
   network: tcp
   port: 33625
@@ -434,16 +364,6 @@ proxies:
   tls: false
   type: vmess
   uuid: f6547466-a44a-41e7-9b71-473c5bf05723
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | B6D422
-  network: tcp
-  port: 5381
-  server: dashboard.afrashop.top
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: b2bc2ff5-e36e-453b-84e9-d93a33203ac3
 - alterId: 0
   cipher: auto
   name: IR 🇮🇷 | @Raydikalx | EC6E4E
@@ -470,20 +390,6 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 041C4E
-  network: ws
-  port: 443
-  server: 2nj8qyoHuZwgCP8J.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
-  ws-opts:
-    headers:
-      Host: 2nj8qyoHuZwgCP8J.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
   name: SG 🇸🇬 | @Raydikalx | 96BD56
   network: ws
   port: 443
@@ -498,16 +404,6 @@ proxies:
     path: /gw/b8cd6416-ae90-4b5f-bb98-72d7df659625?ed=2560
 - alterId: 0
   cipher: auto
-  name: TW2
-  network: tcp
-  port: 22222
-  server: 103.160.180.26
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: a5206a55-d5bd-41b9-92a5-bd27a90355ff
-- alterId: 0
-  cipher: auto
   name: US 🇺🇸 | @Raydikalx | 032847
   network: ws
   port: 443
@@ -520,16 +416,6 @@ proxies:
     headers:
       Host: rich-claw.nyc.boxd.sh
     path: /Telegram=@AmyraxVPN
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 053C5B
-  network: tcp
-  port: 1270
-  server: 38.91.106.182
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
   name: US 🇺🇸 | @Raydikalx | 17FAD5
@@ -727,19 +613,6 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🏁RELAY-104.21.8.157-3074
-  network: ws
-  port: 2082
-  server: 104.21.8.157
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
   name: 🏁RELAY-154.92.9.253-8501
   network: ws
   port: 80
@@ -930,14 +803,6 @@ proxies:
   server: 104.16.174.36
   skip-cert-verify: true
   sni: www.ignitelimit.com
-  type: trojan
-- name: SG TROJAN-22 | free-nodes
-  network: tcp
-  password: Z5lvhmLqSc
-  port: 48994
-  server: matrix.phonicsindia.mobi
-  skip-cert-verify: true
-  sni: m.microsoft.com
   type: trojan
 - name: trojan-1827148859
   network: ws
@@ -1199,18 +1064,6 @@ proxies:
   skip-cert-verify: true
   sni: www.calmlunch.com
   type: trojan
-- alpn:
-  - http/1.1
-  name: 未知 TROJAN-24 | free-nodes
-  network: ws
-  password: QzVKeGlc2qYRxyzWb3xZFjHbqY2JmOfZ
-  port: 2087
-  server: 199.68.156.221
-  skip-cert-verify: true
-  sni: nexoastra.xnetaro.ir
-  type: trojan
-  ws-opts:
-    path: '%2Fwss'
 - name: 🇧🇷BR巴西圣保罗丨yoyapai.com\r
   password: humanity
   port: 443
@@ -1316,11 +1169,6 @@ proxies:
   skip-cert-verify: true
   sni: t2w2t2w2.bpca2026.top
   type: trojan
-- name: 🇪🇸[www.v2nodes.com] trojan-ES-...
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.118.115
-  type: trojan
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -1410,29 +1258,11 @@ proxies:
   server: 202.50.253.63
   type: ss
   udp: true
-- cipher: chacha20-ietf-poly1305
-  name: '🇨🇦[www.v2nodes.com] ss-CA-1555... #1'
-  password: 575hiopq2h28yao6
-  port: 8080
-  server: 15.235.121.109
-  type: ss
 - cipher: aes-256-cfb
   name: 🇪🇸ES-5.188.181.201-0237
   password: XPtzA9sCug3SPR4c
   port: 9025
   server: 5.188.181.201
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #3'
-  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
-  port: 21191
-  server: c17b957c5a76ec76.lebufflonfermegroup.us
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1622... #1'
-  password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
-  port: 1353
-  server: 185.194.191.35
   type: ss
 - cipher: aes-128-gcm
   name: 🇬🇧[www.v2nodes.com] ss-GB-8004...
@@ -1451,12 +1281,6 @@ proxies:
   password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
   port: 40011
   server: c17b957c5a76ec76.lebufflonfermegroup.us
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇮🇱[www.v2nodes.com] ss-IL-1622... #1'
-  password: jfWoSVCVYXRmNBfC
-  port: 8388
-  server: 64.177.66.60
   type: ss
 - cipher: xchacha20-ietf-poly1305
   name: '🇮🇳[www.v2nodes.com] ss-IN-1621... #1'
@@ -1524,12 +1348,6 @@ proxies:
   port: 8388
   server: 154.36.158.197
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇳🇱[www.v2nodes.com] ss-NL-1622... #1'
-  password: 2Ef8X21WALqK7H6N8A78j5WYtzZ999PP8rF8DaLsb5LLyDLQpf5dGVAjdA3mj1wudigKXTt5heYU9jmaBbfxXBJJAqhPHkxe
-  port: 46190
-  server: 194.87.233.93
-  type: ss
 proxy-groups:
 - name: 🚀 选择代理
   proxies:
@@ -1542,7 +1360,6 @@ proxy-groups:
   name: ♻ 自动选择
   proxies:
   - '@DeltaKroneckerGithub_3021_IPV...'
-  - CA 🇨🇦 | @Raydikalx | 028BCA
   - CA 🇨🇦 | @Raydikalx | 03FF3D
   - CA 🇨🇦 | @Raydikalx | 0D2640
   - CA 🇨🇦 | @Raydikalx | 129EB6
@@ -1557,7 +1374,6 @@ proxy-groups:
   - CA 🇨🇦 | @Raydikalx | 9ABF07
   - CA 🇨🇦 | @Raydikalx | A1CD58
   - CA 🇨🇦 | @Raydikalx | A72602
-  - CA 🇨🇦 | @Raydikalx | B52D10
   - CA 🇨🇦 | @Raydikalx | BE0231
   - CA 🇨🇦 | @Raydikalx | D978E8
   - CA 🇨🇦 | @Raydikalx | E1C3C4
@@ -1566,21 +1382,14 @@ proxy-groups:
   - CN 🇨🇳 | @Raydikalx | 187FEB
   - CN 🇨🇳 | @Raydikalx | ACF667
   - CN 🇨🇳 | @Raydikalx | EA5588
-  - DE 🇩🇪 | @Raydikalx | 2EDE11
-  - DE 🇩🇪 | @Raydikalx | 5659C3
   - DE 🇩🇪 | @Raydikalx | BDAB37
   - FI 🇫🇮 | @Raydikalx | DC0D7D
   - HK 🇭🇰 | @Raydikalx | 6AF575
-  - HK 🇭🇰 | @Raydikalx | D15B1E
   - IR 🇮🇷 | @Raydikalx | 9C15F7
-  - IR 🇮🇷 | @Raydikalx | B6D422
   - IR 🇮🇷 | @Raydikalx | EC6E4E
   - NL 🇳🇱 | @Raydikalx | ED6CA8
-  - SG 🇸🇬 | @Raydikalx | 041C4E
   - SG 🇸🇬 | @Raydikalx | 96BD56
-  - TW2
   - US 🇺🇸 | @Raydikalx | 032847
-  - US 🇺🇸 | @Raydikalx | 053C5B
   - US 🇺🇸 | @Raydikalx | 17FAD5
   - US 🇺🇸 | @Raydikalx | 18811D
   - US 🇺🇸 | @Raydikalx | 943FAE
@@ -1596,7 +1405,6 @@ proxy-groups:
   - 🏁RELAY-104.18.42.54-1140
   - 🏁RELAY-104.19.47.79-1438
   - 🏁RELAY-104.21.75.246-8768
-  - 🏁RELAY-104.21.8.157-3074
   - 🏁RELAY-154.92.9.253-8501
   - 🏁RELAY-154.92.9.94-8482
   - 🏁RELAY-162.159.135.251-8465
@@ -1612,7 +1420,6 @@ proxy-groups:
   - 🏁RELAY-188.114.97.7-1338
   - 🏁RELAY-23.227.38.3-1363
   - FR法国丨yoyapai.com\r
-  - SG TROJAN-22 | free-nodes
   - trojan-1827148859
   - trojan-1827148954
   - trojan-1827149109
@@ -1648,7 +1455,6 @@ proxy-groups:
   - '❓未知丨yoyapai.com\r #3'
   - '❓未知丨yoyapai.com\r #4'
   - '❓未知丨yoyapai.com\r #5'
-  - 未知 TROJAN-24 | free-nodes
   - 🇧🇷BR巴西圣保罗丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
   - '🇨🇦CA加拿大丨yoyapai.com\r #1'
@@ -1664,7 +1470,6 @@ proxy-groups:
   - '🇨🇦CA加拿大丨yoyapai.com\r #8'
   - '🇨🇦CA加拿大丨yoyapai.com\r #9'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
-  - 🇪🇸[www.v2nodes.com] trojan-ES-...
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
   - '🇫🇷FR法國丨yoyapai.com\r #1'
@@ -1678,14 +1483,10 @@ proxy-groups:
   - '🇺🇸US美国丨yoyapai.com\r #1'
   - ⚡ b2n.ir/v2ray-configs | 730
   - 意大利|@ripaojiedian
-  - '🇨🇦[www.v2nodes.com] ss-CA-1555... #1'
   - 🇪🇸ES-5.188.181.201-0237
-  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #3'
-  - '🇬🇧[www.v2nodes.com] ss-GB-1622... #1'
   - 🇬🇧[www.v2nodes.com] ss-GB-8004...
   - '🇭🇰[www.v2nodes.com] ss-HK-1599... #1'
   - '🇭🇰[www.v2nodes.com] ss-HK-1621... #2'
-  - '🇮🇱[www.v2nodes.com] ss-IL-1622... #1'
   - '🇮🇳[www.v2nodes.com] ss-IN-1621... #1'
   - '🇮🇹 意大利 | ITA #1'
   - '🇮🇹 意大利 | ITA #4'
@@ -1696,7 +1497,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1619... #1'
   - '🇮🇹[www.v2nodes.com] ss-IT-1619... #6'
   - 🇯🇵[www.v2nodes.com] ss-JP-1599...
-  - '🇳🇱[www.v2nodes.com] ss-NL-1622... #1'
   timeout: 5000
   type: fallback
   url: https://www.gstatic.com/generate_204
@@ -1704,7 +1504,6 @@ proxy-groups:
   name: 🔰 延迟最低
   proxies:
   - '@DeltaKroneckerGithub_3021_IPV...'
-  - CA 🇨🇦 | @Raydikalx | 028BCA
   - CA 🇨🇦 | @Raydikalx | 03FF3D
   - CA 🇨🇦 | @Raydikalx | 0D2640
   - CA 🇨🇦 | @Raydikalx | 129EB6
@@ -1719,7 +1518,6 @@ proxy-groups:
   - CA 🇨🇦 | @Raydikalx | 9ABF07
   - CA 🇨🇦 | @Raydikalx | A1CD58
   - CA 🇨🇦 | @Raydikalx | A72602
-  - CA 🇨🇦 | @Raydikalx | B52D10
   - CA 🇨🇦 | @Raydikalx | BE0231
   - CA 🇨🇦 | @Raydikalx | D978E8
   - CA 🇨🇦 | @Raydikalx | E1C3C4
@@ -1728,21 +1526,14 @@ proxy-groups:
   - CN 🇨🇳 | @Raydikalx | 187FEB
   - CN 🇨🇳 | @Raydikalx | ACF667
   - CN 🇨🇳 | @Raydikalx | EA5588
-  - DE 🇩🇪 | @Raydikalx | 2EDE11
-  - DE 🇩🇪 | @Raydikalx | 5659C3
   - DE 🇩🇪 | @Raydikalx | BDAB37
   - FI 🇫🇮 | @Raydikalx | DC0D7D
   - HK 🇭🇰 | @Raydikalx | 6AF575
-  - HK 🇭🇰 | @Raydikalx | D15B1E
   - IR 🇮🇷 | @Raydikalx | 9C15F7
-  - IR 🇮🇷 | @Raydikalx | B6D422
   - IR 🇮🇷 | @Raydikalx | EC6E4E
   - NL 🇳🇱 | @Raydikalx | ED6CA8
-  - SG 🇸🇬 | @Raydikalx | 041C4E
   - SG 🇸🇬 | @Raydikalx | 96BD56
-  - TW2
   - US 🇺🇸 | @Raydikalx | 032847
-  - US 🇺🇸 | @Raydikalx | 053C5B
   - US 🇺🇸 | @Raydikalx | 17FAD5
   - US 🇺🇸 | @Raydikalx | 18811D
   - US 🇺🇸 | @Raydikalx | 943FAE
@@ -1758,7 +1549,6 @@ proxy-groups:
   - 🏁RELAY-104.18.42.54-1140
   - 🏁RELAY-104.19.47.79-1438
   - 🏁RELAY-104.21.75.246-8768
-  - 🏁RELAY-104.21.8.157-3074
   - 🏁RELAY-154.92.9.253-8501
   - 🏁RELAY-154.92.9.94-8482
   - 🏁RELAY-162.159.135.251-8465
@@ -1774,7 +1564,6 @@ proxy-groups:
   - 🏁RELAY-188.114.97.7-1338
   - 🏁RELAY-23.227.38.3-1363
   - FR法国丨yoyapai.com\r
-  - SG TROJAN-22 | free-nodes
   - trojan-1827148859
   - trojan-1827148954
   - trojan-1827149109
@@ -1810,7 +1599,6 @@ proxy-groups:
   - '❓未知丨yoyapai.com\r #3'
   - '❓未知丨yoyapai.com\r #4'
   - '❓未知丨yoyapai.com\r #5'
-  - 未知 TROJAN-24 | free-nodes
   - 🇧🇷BR巴西圣保罗丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
   - '🇨🇦CA加拿大丨yoyapai.com\r #1'
@@ -1826,7 +1614,6 @@ proxy-groups:
   - '🇨🇦CA加拿大丨yoyapai.com\r #8'
   - '🇨🇦CA加拿大丨yoyapai.com\r #9'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
-  - 🇪🇸[www.v2nodes.com] trojan-ES-...
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
   - '🇫🇷FR法國丨yoyapai.com\r #1'
@@ -1840,14 +1627,10 @@ proxy-groups:
   - '🇺🇸US美国丨yoyapai.com\r #1'
   - ⚡ b2n.ir/v2ray-configs | 730
   - 意大利|@ripaojiedian
-  - '🇨🇦[www.v2nodes.com] ss-CA-1555... #1'
   - 🇪🇸ES-5.188.181.201-0237
-  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #3'
-  - '🇬🇧[www.v2nodes.com] ss-GB-1622... #1'
   - 🇬🇧[www.v2nodes.com] ss-GB-8004...
   - '🇭🇰[www.v2nodes.com] ss-HK-1599... #1'
   - '🇭🇰[www.v2nodes.com] ss-HK-1621... #2'
-  - '🇮🇱[www.v2nodes.com] ss-IL-1622... #1'
   - '🇮🇳[www.v2nodes.com] ss-IN-1621... #1'
   - '🇮🇹 意大利 | ITA #1'
   - '🇮🇹 意大利 | ITA #4'
@@ -1858,7 +1641,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1619... #1'
   - '🇮🇹[www.v2nodes.com] ss-IT-1619... #6'
   - 🇯🇵[www.v2nodes.com] ss-JP-1599...
-  - '🇳🇱[www.v2nodes.com] ss-NL-1622... #1'
   timeout: 5000
   tolerance: 20
   type: url-test
@@ -1866,7 +1648,6 @@ proxy-groups:
 - name: ✅ 手动选择
   proxies:
   - '@DeltaKroneckerGithub_3021_IPV...'
-  - CA 🇨🇦 | @Raydikalx | 028BCA
   - CA 🇨🇦 | @Raydikalx | 03FF3D
   - CA 🇨🇦 | @Raydikalx | 0D2640
   - CA 🇨🇦 | @Raydikalx | 129EB6
@@ -1881,7 +1662,6 @@ proxy-groups:
   - CA 🇨🇦 | @Raydikalx | 9ABF07
   - CA 🇨🇦 | @Raydikalx | A1CD58
   - CA 🇨🇦 | @Raydikalx | A72602
-  - CA 🇨🇦 | @Raydikalx | B52D10
   - CA 🇨🇦 | @Raydikalx | BE0231
   - CA 🇨🇦 | @Raydikalx | D978E8
   - CA 🇨🇦 | @Raydikalx | E1C3C4
@@ -1890,21 +1670,14 @@ proxy-groups:
   - CN 🇨🇳 | @Raydikalx | 187FEB
   - CN 🇨🇳 | @Raydikalx | ACF667
   - CN 🇨🇳 | @Raydikalx | EA5588
-  - DE 🇩🇪 | @Raydikalx | 2EDE11
-  - DE 🇩🇪 | @Raydikalx | 5659C3
   - DE 🇩🇪 | @Raydikalx | BDAB37
   - FI 🇫🇮 | @Raydikalx | DC0D7D
   - HK 🇭🇰 | @Raydikalx | 6AF575
-  - HK 🇭🇰 | @Raydikalx | D15B1E
   - IR 🇮🇷 | @Raydikalx | 9C15F7
-  - IR 🇮🇷 | @Raydikalx | B6D422
   - IR 🇮🇷 | @Raydikalx | EC6E4E
   - NL 🇳🇱 | @Raydikalx | ED6CA8
-  - SG 🇸🇬 | @Raydikalx | 041C4E
   - SG 🇸🇬 | @Raydikalx | 96BD56
-  - TW2
   - US 🇺🇸 | @Raydikalx | 032847
-  - US 🇺🇸 | @Raydikalx | 053C5B
   - US 🇺🇸 | @Raydikalx | 17FAD5
   - US 🇺🇸 | @Raydikalx | 18811D
   - US 🇺🇸 | @Raydikalx | 943FAE
@@ -1920,7 +1693,6 @@ proxy-groups:
   - 🏁RELAY-104.18.42.54-1140
   - 🏁RELAY-104.19.47.79-1438
   - 🏁RELAY-104.21.75.246-8768
-  - 🏁RELAY-104.21.8.157-3074
   - 🏁RELAY-154.92.9.253-8501
   - 🏁RELAY-154.92.9.94-8482
   - 🏁RELAY-162.159.135.251-8465
@@ -1936,7 +1708,6 @@ proxy-groups:
   - 🏁RELAY-188.114.97.7-1338
   - 🏁RELAY-23.227.38.3-1363
   - FR法国丨yoyapai.com\r
-  - SG TROJAN-22 | free-nodes
   - trojan-1827148859
   - trojan-1827148954
   - trojan-1827149109
@@ -1972,7 +1743,6 @@ proxy-groups:
   - '❓未知丨yoyapai.com\r #3'
   - '❓未知丨yoyapai.com\r #4'
   - '❓未知丨yoyapai.com\r #5'
-  - 未知 TROJAN-24 | free-nodes
   - 🇧🇷BR巴西圣保罗丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
   - '🇨🇦CA加拿大丨yoyapai.com\r #1'
@@ -1988,7 +1758,6 @@ proxy-groups:
   - '🇨🇦CA加拿大丨yoyapai.com\r #8'
   - '🇨🇦CA加拿大丨yoyapai.com\r #9'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
-  - 🇪🇸[www.v2nodes.com] trojan-ES-...
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
   - '🇫🇷FR法國丨yoyapai.com\r #1'
@@ -2002,14 +1771,10 @@ proxy-groups:
   - '🇺🇸US美国丨yoyapai.com\r #1'
   - ⚡ b2n.ir/v2ray-configs | 730
   - 意大利|@ripaojiedian
-  - '🇨🇦[www.v2nodes.com] ss-CA-1555... #1'
   - 🇪🇸ES-5.188.181.201-0237
-  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #3'
-  - '🇬🇧[www.v2nodes.com] ss-GB-1622... #1'
   - 🇬🇧[www.v2nodes.com] ss-GB-8004...
   - '🇭🇰[www.v2nodes.com] ss-HK-1599... #1'
   - '🇭🇰[www.v2nodes.com] ss-HK-1621... #2'
-  - '🇮🇱[www.v2nodes.com] ss-IL-1622... #1'
   - '🇮🇳[www.v2nodes.com] ss-IN-1621... #1'
   - '🇮🇹 意大利 | ITA #1'
   - '🇮🇹 意大利 | ITA #4'
@@ -2020,7 +1785,6 @@ proxy-groups:
   - '🇮🇹[www.v2nodes.com] ss-IT-1619... #1'
   - '🇮🇹[www.v2nodes.com] ss-IT-1619... #6'
   - 🇯🇵[www.v2nodes.com] ss-JP-1599...
-  - '🇳🇱[www.v2nodes.com] ss-NL-1622... #1'
   type: select
 - name: 🌐 突破锁区
   proxies:
@@ -2071,7 +1835,6 @@ proxy-groups:
 - name: 🇺🇸 美国
   proxies:
   - US 🇺🇸 | @Raydikalx | 032847
-  - US 🇺🇸 | @Raydikalx | 053C5B
   - US 🇺🇸 | @Raydikalx | 17FAD5
   - US 🇺🇸 | @Raydikalx | 18811D
   - US 🇺🇸 | @Raydikalx | 943FAE
@@ -2084,7 +1847,7 @@ proxy-groups:
   type: select
 - name: 🇨🇳 台湾
   proxies:
-  - TW2
+  - DIRECT
   type: select
 - name: 🇨🇳 中国
   proxies:
@@ -2095,13 +1858,11 @@ proxy-groups:
 - name: 🇭🇰 香港
   proxies:
   - HK 🇭🇰 | @Raydikalx | 6AF575
-  - HK 🇭🇰 | @Raydikalx | D15B1E
   - '🇭🇰[www.v2nodes.com] ss-HK-1599... #1'
   - '🇭🇰[www.v2nodes.com] ss-HK-1621... #2'
   type: select
 - name: 🇨🇦 加拿大
   proxies:
-  - CA 🇨🇦 | @Raydikalx | 028BCA
   - CA 🇨🇦 | @Raydikalx | 03FF3D
   - CA 🇨🇦 | @Raydikalx | 0D2640
   - CA 🇨🇦 | @Raydikalx | 129EB6
@@ -2115,7 +1876,6 @@ proxy-groups:
   - CA 🇨🇦 | @Raydikalx | 9ABF07
   - CA 🇨🇦 | @Raydikalx | A1CD58
   - CA 🇨🇦 | @Raydikalx | A72602
-  - CA 🇨🇦 | @Raydikalx | B52D10
   - CA 🇨🇦 | @Raydikalx | BE0231
   - CA 🇨🇦 | @Raydikalx | D978E8
   - CA 🇨🇦 | @Raydikalx | E1C3C4
@@ -2135,7 +1895,6 @@ proxy-groups:
   - '🇨🇦CA加拿大丨yoyapai.com\r #7'
   - '🇨🇦CA加拿大丨yoyapai.com\r #8'
   - '🇨🇦CA加拿大丨yoyapai.com\r #9'
-  - '🇨🇦[www.v2nodes.com] ss-CA-1555... #1'
   type: select
 - name: 🇫🇷 法国
   proxies:
@@ -2147,17 +1906,13 @@ proxy-groups:
   - '🇫🇷法国丨yoyapai.com\r #1'
   - '🇫🇷法国丨yoyapai.com\r #2'
   - '🇫🇷法国丨yoyapai.com\r #3'
-  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #3'
   type: select
 - name: 🇸🇬 新加坡
   proxies:
-  - SG 🇸🇬 | @Raydikalx | 041C4E
   - SG 🇸🇬 | @Raydikalx | 96BD56
-  - SG TROJAN-22 | free-nodes
   type: select
 - name: 🇬🇧 英国
   proxies:
-  - '🇬🇧[www.v2nodes.com] ss-GB-1622... #1'
   - 🇬🇧[www.v2nodes.com] ss-GB-8004...
   type: select
 - name: 🇰🇷 韩国
@@ -2170,8 +1925,6 @@ proxy-groups:
   type: select
 - name: 🇩🇪 德国
   proxies:
-  - DE 🇩🇪 | @Raydikalx | 2EDE11
-  - DE 🇩🇪 | @Raydikalx | 5659C3
   - DE 🇩🇪 | @Raydikalx | BDAB37
   - 🇩🇪_DE_德国_IPV4
   type: select
