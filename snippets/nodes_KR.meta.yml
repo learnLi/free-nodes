@@ -1,8 +1,19 @@
 proxies:
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | ED5343
+  network: tcp
+  port: 8888
+  server: 146.56.112.110
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   network: ws
   port: 25555
   server: 152.69.226.63
+  servername: 152.69.226.63
   tls: false
   type: vless
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
@@ -33,16 +44,17 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /
-- name: '🏳[www.v2nodes.com] trojan- #5'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: '🇰🇷 韩国 | KOR #1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 158.247.253.243
+  server: 52.79.253.83
   skip-cert-verify: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  type: trojan
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #1'
+  name: '🇰🇷 韩国 | KOR #3'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
   server: 3.36.121.247
@@ -55,4 +67,10 @@ proxies:
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  password: '!!str 12242'
+  port: 10099
+  server: 115.161.136.145
   type: ss

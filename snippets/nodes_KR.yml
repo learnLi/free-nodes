@@ -1,14 +1,23 @@
 proxies:
-- name: '🏳[www.v2nodes.com] trojan- #5'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 158.247.253.243
-  skip-cert-verify: true
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-  type: trojan
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | ED5343
+  network: tcp
+  port: 8888
+  server: 146.56.112.110
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  password: '!!str 12242'
+  port: 10099
+  server: 115.161.136.145
   type: ss

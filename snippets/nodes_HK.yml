@@ -1,40 +1,110 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 07D20A
+  name: HK 🇭🇰 | @Raydikalx | 049278
   network: tcp
-  port: 21020
+  port: 21018
   server: dog-hk.kunlun01dns.com
-  servername: null
+  servername: ''
   tls: false
   type: vmess
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 579979
-  network: tcp
-  port: 6003
-  server: gtm-sg-cc54q7d1q01.365cloud0285.com
-  tls: false
+  name: HK 🇭🇰 | @Raydikalx | 40765E
+  network: ws
+  port: 443
+  server: mh7r5ardl0z5jtgy.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
   type: vmess
-  uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: mh7R5ArdL0z5jTGY.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 5DD014
+  name: HK 🇭🇰 | @Raydikalx | 549DC8
+  network: ws
+  port: 443
+  server: m01c7b2z26dtqgee.v.3dns.vip
+  servername: M01c7B2z26DtQGEe.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: M01c7B2z26DtQGEe.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 5B239D
   network: tcp
-  port: 16112
-  server: zfd-hkv2.kunlun01dns.com
-  servername: ''
+  port: 16258
+  server: zfd-boardv2.kunlun01dns.com
   tls: false
   type: vmess
   uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 614D44
+  name: HK 🇭🇰 | @Raydikalx | 8FE905
+  network: tcp
+  port: 16298
+  server: zfd-boardv2.kunlun01dns.com
+  tls: false
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | CF7068
   network: ws
   port: 443
-  server: m01c7b2z26dtqgee.v.3dns.vip
+  server: 47.242.79.198
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: ejOMsxPtP19APyGL.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | D2C524
+  network: ws
+  port: 443
+  server: wwafj5lhl6bi8au9.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: wwafj5LHl6bI8aU9.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | D755F0
+  network: ws
+  port: 443
+  server: 47.243.65.243
   servername: null
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: lcv8v9l7OyamxxfZ.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | D83692
+  network: ws
+  port: 443
+  server: ex1ogt73nzpqkac2.v.3dns.vip
+  servername: ex1ogt73nzpqkac2.v.3dns.vip
+  skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
@@ -42,45 +112,53 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 6AF575
+  name: HK 🇭🇰 | @Raydikalx | E5CF14
+  network: tcp
+  port: 29009
+  server: 366-1095.rabbitpro-in-3.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e351d6d8-c167-3e07-8fda-3f2f4ec0760b
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | FEB62F
   network: ws
   port: 443
-  server: QlxYtBpuqj3qqJsJ.v.3dns.vip
+  server: 6jdvarazgu3qqr6q.v.3dns.vip
+  servername: 6jdvarazgu3qqr6q.v.3dns.vip
   tls: true
   type: vmess
-  uuid: b664cc36-4896-454b-bb9c-1377c76176de
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   ws-opts:
-    headers:
-      Host: QlxYtBpuqj3qqJsJ.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | D15B1E
+  name: 🇭🇰 Hong Kong هنگ کنگ
   network: ws
-  port: 8080
-  server: yh2.dtku41.xyz
+  port: 54809
+  server: 8.210.140.23
+  servername: ''
   tls: false
   type: vmess
-  uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
+  uuid: fde73daf-cc67-42f3-9935-35b132b01abd
   ws-opts:
-    headers:
-      Host: per-essex-patterns-bowling.trycloudflare.com
-    path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
+    path: /arki?ed=2048
 - alterId: 0
   cipher: auto
-  name: '🇭🇰 香港 | HKG #1'
+  name: '🇭🇰 香港 | HKG #2'
   network: ws
-  port: 36703
+  port: 23026
   server: 47.244.120.197
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   ws-opts:
     path: /arki
 - alterId: 0
   cipher: auto
-  name: '🇭🇰 香港 | HKG #2'
+  name: '🇭🇰 香港 | HKG #2 #1'
   network: ws
   port: 44867
   server: 47.244.120.197
@@ -92,14 +170,14 @@ proxies:
     path: /arki
 - alterId: 0
   cipher: auto
-  name: '🇭🇰 香港 | HKG #4'
+  name: '🇭🇰 香港 | HKG #3'
   network: ws
-  port: 23026
+  port: 36703
   server: 47.244.120.197
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   ws-opts:
     path: /arki
 - alpn:
@@ -113,7 +191,7 @@ proxies:
     method: GET
     path:
     - /QQqun-737805443
-  name: '🇭🇰 香港 | HKG #6'
+  name: '🇭🇰 香港 | HKG #4'
   network: http
   port: 52080
   server: 47.242.81.94
@@ -124,7 +202,7 @@ proxies:
   uuid: e47b9f77-60e4-4738-8d53-772b6002e146
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-156.245.232.239-5893
+  name: 🇭🇰HK-156.245.232.239-0258
   network: ws
   port: 35043
   server: 156.245.232.239
@@ -135,6 +213,23 @@ proxies:
   uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
   ws-opts:
     path: /
+- alterId: '0'
+  cipher: auto
+  name: 🇭🇰HK_2|1021KB/s
+  network: ws
+  port: 443
+  server: grab-assistance-crawford-capital.trycloudflare.com
+  servername: grab-assistance-crawford-capital.trycloudflare.com
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea
+  ws-opts:
+    headers:
+      Host: grab-assistance-crawford-capital.trycloudflare.com
+    path: /2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea-vm
+  xudp: true
 - cipher: aes-128-gcm
   name: '🇭🇰[www.v2nodes.com] ss-HK-1599... #1'
   password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
