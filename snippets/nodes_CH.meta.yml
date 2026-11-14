@@ -4,20 +4,17 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
   name: '🇨🇭 瑞士 | CHE #2'
-  network: tcp
   port: 443
   server: 194.87.109.106
   servername: currant.asynchronous.site
   tls: true
   type: vless
-  udp: true
   uuid: d9274255-edf4-4944-bc62-6ef35cd2de40
-  ws-opts:
-    path: /
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #2'
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 208.69.78.29
+  server: 208.69.78.33
+  sni: courses.yourultimateprofessionalcareerhub.com
   type: trojan
 - name: '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
   password: b7795ce8-3863-4292-adfc-9c0a7b847774
@@ -26,13 +23,7 @@ proxies:
   skip-cert-verify: true
   sni: t2w2t2w2.bpca2026.top
   type: trojan
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #5'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 208.69.78.33
-  sni: courses.yourultimateprofessionalcareerhub.com
-  type: trojan
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #7'
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #6'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 208.69.78.158
@@ -49,9 +40,9 @@ proxies:
   port: 19999
   server: 79.127.184.104
   type: ss
-- name: 🇨🇭CH_1|1.3MB/s
-  port: 443
-  server: 31.7.62.50
-  skip-cert-verify: true
-  tls: true
-  type: http
+- cipher: aes-256-gcm
+  name: '🇨🇭[www.v2nodes.com] ss-CH-1616... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.166.88.127
+  type: ss

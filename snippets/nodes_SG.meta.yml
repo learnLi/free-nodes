@@ -1,27 +1,57 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 337680
-  network: tcp
-  port: 8080
-  server: 116.88.224.217
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-146.190.82.241-2801
+  name: SG 🇸🇬 | @Raydikalx | 041C4E
   network: ws
   port: 443
-  server: 146.190.82.241
-  servername: ''
+  server: 2nj8qyoHuZwgCP8J.v.3dns.vip
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
+  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
   ws-opts:
-    path: /
+    headers:
+      Host: 2nj8qyoHuZwgCP8J.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 32AA5C
+  network: tcp
+  port: 51401
+  server: fin-5.povrak.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 06e769f1-96f8-4071-8910-b8f81b25d724
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 96BD56
+  network: ws
+  port: 443
+  server: ezraeilking445-production.up.railway.app
+  servername: ezraeilking445-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: e7a0ff04-010f-42e7-b257-c64a2a9bd6b5
+  ws-opts:
+    headers:
+      Host: ezraeilking445-production.up.railway.app
+    path: /gw/b8cd6416-ae90-4b5f-bb98-72d7df659625?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-139.99.47.36-0084
+  network: ws
+  port: 80
+  server: 139.99.47.36
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 0bf0cc63-cc4d-4a6f-8770-a7fa5a0d1c55
+  ws-opts:
+    headers:
+      Host: sg2.v2rayserv.com
+    path: /sshocean
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-152.69.211.235-1688
@@ -33,6 +63,21 @@ proxies:
   tls: false
   type: vmess
   uuid: d345916f-1673-4a98-f37d-49357c84ce03
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-54.255.208.134-1644
+  network: ws
+  port: 5001
+  server: steam.dnspro.icu
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: d4c93465-70f0-30d5-ab5f-a8881f3f49e7
+  ws-opts:
+    headers:
+      Host: steam.dnspro.icu
+    path: /iso
 - client-fingerprint: chrome
   name: 新加坡4|@ripaojiedian
   network: ws
@@ -47,8 +92,21 @@ proxies:
     headers:
       Host: cdn-sg.skyvora.app
     path: /axzfrv47qcnflow=
+- name: 🇸🇬[www.v2nodes.com] vless-SG-1...
+  network: ws
+  port: 443
+  server: 143.42.66.91
+  servername: fs.qicai99.com
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: /security=tls
 - client-fingerprint: chrome
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #13'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #14'
   network: ws
   port: 2096
   server: 139.162.27.96
@@ -60,19 +118,20 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.dev
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #5'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #4'
   network: ws
-  port: 8880
-  server: 216.24.57.40
-  tls: false
+  port: 2096
+  server: 139.162.27.96
+  servername: free-server.techsonic.dev
+  tls: true
   type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
   ws-opts:
     headers:
-      Host: vms.lifetime28.workers.dev
-    path: /
+      Host: free-server.techsonic.dev
+    path: /free-server.techsonic.devfp=chrome
 - encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #6'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #9'
   network: ws
   port: 443
   server: 143.42.66.91
@@ -85,6 +144,22 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /
+- client-fingerprint: chrome
+  name: '🏳[www.v2nodes.com] vless- #23'
+  port: 8443
+  server: 207.148.124.12
+  servername: www.bing.com
+  tls: true
+  type: vless
+  uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
+- name: SG TROJAN-22 | free-nodes
+  network: tcp
+  password: Z5lvhmLqSc
+  port: 48994
+  server: matrix.phonicsindia.mobi
+  skip-cert-verify: true
+  sni: m.microsoft.com
+  type: trojan
 - name: '🇸🇬 新加坡 | SGP #1'
   password: Z5lvhmLqSc
   port: 48994
@@ -92,59 +167,57 @@ proxies:
   skip-cert-verify: true
   sni: m.microsoft.com
   type: trojan
-  udp: true
-- name: '🇸🇬 新加坡 | SGP #2'
-  password: Z5lvhmLqSc
-  port: 48994
-  server: matrix.phonicsindia.mobi
-  skip-cert-verify: true
-  sni: m.microsoft.com
-  type: trojan
-  udp: true
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
+- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 149.28.130.108
   sni: searchcreativejobsandshowcaseyourartistictalents.com
   type: trojan
-- name: 🇸🇬 新加坡 | SGP 2
-  password: 1caaeda2-7ea1-43c3-b2b6-f8c093a45993
-  port: 23151
-  server: 45.192.198.230
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
+  name: '🇸🇬 新加坡 | SGP #3'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 47.129.144.40
   skip-cert-verify: true
-  sni: buylite.music.apple.com
-  type: anytls
-  udp: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - name: 🇸🇬 新加坡 | SGP 3
-  password: 1caaeda2-7ea1-43c3-b2b6-f8c093a45993
-  port: 23152
-  server: 45.192.198.230
+  password: cce1f769-d7db-42d5-b622-15803db8e428
+  port: 2082
+  server: forwarded.frnhk.xyz
   skip-cert-verify: true
-  sni: buylite.music.apple.com
+  sni: sg.gosthk.site
   type: anytls
   udp: true
-- name: 🇸🇬 新加坡 | SGP 4
-  password: 1caaeda2-7ea1-43c3-b2b6-f8c093a45993
-  port: 23150
-  server: 45.192.198.230
-  skip-cert-verify: true
-  sni: buylite.music.apple.com
-  type: anytls
+- cipher: rc4-md5
+  name: shadowsocks-1827147315
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 68.183.227.4
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇬 新加坡 | SGP #4'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 47.129.144.40
+  type: ss
   udp: true
 - cipher: aes-256-gcm
-  name: 🇸🇬SG-149.88.106.73-0154
+  name: 🇸🇬SG-149.88.106.73-0150
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 149.88.106.73
   type: ss
 - cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 15.235.164.133
   type: ss
 - cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #4'
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 149.88.106.74
@@ -153,7 +226,7 @@ proxies:
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 149.88.107.47
+  server: 149.88.107.74
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #2'
@@ -166,4 +239,10 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 15.235.182.183
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #5'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 149.88.107.47
   type: ss

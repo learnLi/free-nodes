@@ -1,43 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 9652E1
-  network: tcp
-  port: 123
-  server: 43.108.103.167
-  tls: false
-  type: vmess
-  uuid: 35aa0fda-175a-4aec-c468-0231dee1a121
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-146.56.166.153-0003
-  network: ws
-  port: 443
-  server: 146.56.166.153
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 1
-  cipher: auto
-  name: 🇰🇷KR-54.180.96.67-1599
-  network: ws
-  port: 8888
-  server: 54.180.96.67
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: ae7486f9-d7b7-4f26-97a0-dc5b093dfa89
-  ws-opts:
-    headers:
-      Host: 54.180.96.67
-    path: /
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
   network: ws
   port: 25555
@@ -72,7 +33,7 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /
-- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
+- name: '🏳[www.v2nodes.com] trojan- #5'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 158.247.253.243
@@ -81,32 +42,17 @@ proxies:
   type: trojan
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #2'
+  name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 43.202.3.164
+  server: 3.36.121.247
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: 🇰🇷 韩国 | KOR 4
-  password: 1caaeda2-7ea1-43c3-b2b6-f8c093a45993
-  port: 23211
-  server: 45.192.198.230
-  skip-cert-verify: true
-  sni: buylite.music.apple.com
-  type: anytls
-  udp: true
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
   port: 6123
   server: 211.178.105.134
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #3'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.202.3.164
-  type: ss
-  udp: true

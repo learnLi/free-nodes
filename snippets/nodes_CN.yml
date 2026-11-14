@@ -1,6 +1,15 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 0CE14F
+  network: tcp
+  port: 50012
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+- alterId: 0
+  cipher: auto
   name: CN 🇨🇳 | @Raydikalx | 187FEB
   network: ws
   port: 10086
@@ -13,33 +22,32 @@ proxies:
     path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 3BB29A
-  network: tcp
-  port: 50011
-  server: 36.133.74.15
+  name: CN 🇨🇳 | @Raydikalx | ACF667
+  network: ws
+  port: 10086
+  server: 39.108.113.127
   servername: ''
   tls: false
   type: vmess
-  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+  uuid: d50cc563-0c03-4136-899f-85cbc0b02699
+  ws-opts: {}
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | D9C1C5
+  name: CN 🇨🇳 | @Raydikalx | C8DC82
   network: tcp
   port: 50016
   server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: abcb006d-739f-4cec-b13f-12c10d334d92
+  uuid: 9e63ca55-1ff9-453b-ae80-75947b8596d3
 - alterId: 0
   cipher: auto
-  name: 🇨🇳CN-153.101.64.221-2422
+  name: CN 🇨🇳 | @Raydikalx | EA5588
   network: ws
-  port: 40013
-  server: 153.101.64.221
+  port: 10086
+  server: 39.108.113.127
   servername: ''
-  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 5716c1b4-c2d3-4a9d-a9a8-5d9919d0ed8f
-  ws-opts:
-    path: /qwe123321ewq
+  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
+  ws-opts: {}

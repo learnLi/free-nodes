@@ -1,19 +1,17 @@
 proxies:
-- alterId: 64
+- alterId: 0
   cipher: auto
-  name: 🇷🇺RU-185.173.94.1-1460
+  name: RU 🇷🇺 | @Raydikalx | 00FA89
   network: ws
-  port: 30002
-  server: 185.173.94.1
-  servername: ''
-  skip-cert-verify: true
-  tls: true
+  port: 2086
+  server: admin.arzonhost.ir
+  tls: false
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
   ws-opts:
     headers:
-      Host: www.17336793.xyz
-    path: /path/191019072927
+      Host: admin.arzonhost.ir
+    path: /
 - cipher: chacha20-ietf-poly1305
   name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
   password: VVlAff77CnAU43Aoc5j15Y

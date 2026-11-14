@@ -1,16 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 13C63A
-  network: tcp
-  port: 35034
-  server: 165.154.195.38
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- alterId: 0
-  cipher: auto
   name: TW2
   network: tcp
   port: 22222
@@ -19,33 +9,3 @@ proxies:
   tls: false
   type: vmess
   uuid: a5206a55-d5bd-41b9-92a5-bd27a90355ff
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-104.29.64.25-1749
-  network: ws
-  port: 443
-  server: 104.29.64.25
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-211.72.35.110-5279
-  network: ws
-  port: 443
-  server: 211.72.35.110
-  servername: haxeu7.jsworld.eu.org
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: dfd1d80f-caf0-4b11-e0bb-733a2710a07a
-  ws-opts:
-    headers:
-      Host: haxeu7.jsworld.eu.org
-    path: /nishikata3
