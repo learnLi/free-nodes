@@ -1,17 +1,19 @@
 proxies:
-- alterId: 0
+- alterId: 64
   cipher: auto
-  name: 🇷🇺RU-45.129.2.237-2774
+  name: 🇷🇺RU-185.173.94.1-1460
   network: ws
-  port: 10258
-  server: 45.129.2.237
+  port: 30002
+  server: 185.173.94.1
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: add194d6-192c-4ea3-a5af-eea994390831
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
-    path: /
+    headers:
+      Host: www.17336793.xyz
+    path: /path/191019072927
 - cipher: chacha20-ietf-poly1305
   name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
   password: VVlAff77CnAU43Aoc5j15Y

@@ -1,34 +1,22 @@
 proxies:
-- name: '🇳🇬 尼日利亚 | NGA #1'
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  port: 20051
-  server: sclass-c2.catcat321.com
+- alterId: 2
+  cipher: auto
+  name: 🇯🇵JP-153.122.173.53-3538
+  network: ws
+  port: 32407
+  server: 153.122.173.53
+  servername: ''
   skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-  udp: true
-- cipher: aes-128-gcm
-  name: shadowsocks-1827146270
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.240
-  type: ss
+  tls: false
+  type: vmess
+  uuid: 26c5fdc7-b3be-3482-9a45-d97b958a889a
+  ws-opts:
+    path: /v2ray
 - cipher: aes-256-gcm
-  name: '🇯🇵 日本 | JPN #3'
+  name: '🇯🇵 日本 | JPN #4'
   password: BeaUf9c0AEWH40Pu
   port: 8388
   server: 154.36.158.197
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇯🇵 日本 | JPN 4
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  plugin: obfs
-  plugin-opts:
-    host: (Telegram🇨🇳 @VPNine1)af2501f:110406
-    mode: tls
-  port: 2377
-  server: 13.231.100.94
   type: ss
   udp: true
 - cipher: aes-128-gcm
@@ -36,6 +24,12 @@ proxies:
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100
+  type: ss
+- cipher: aes-128-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'

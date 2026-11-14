@@ -1,36 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 03E73A
-  network: ws
-  port: 443
-  server: 6JiziO8PxQAXBAtZ.v.3dns.vip
-  servername: 6JiziO8PxQAXBAtZ.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
+  name: SG 🇸🇬 | @Raydikalx | 337680
+  network: tcp
+  port: 8080
+  server: 116.88.224.217
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 6JiziO8PxQAXBAtZ.v.3dns.vip
-    path: /ws-vmess
+  uuid: 6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 3A20C0
-  network: ws
-  port: 443
-  server: uitestaio-production.up.railway.app
-  servername: uitestaio-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: 3632583a-712c-4f79-a43c-acab1d904289
-  ws-opts:
-    headers:
-      Host: uitestaio-production.up.railway.app
-    path: /api/WaCwWB
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬SG-146.190.82.241-2801 #1'
+  name: 🇸🇬SG-146.190.82.241-2801
   network: ws
   port: 443
   server: 146.190.82.241
@@ -43,45 +24,37 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇸🇬SG-15.235.192.196-3470
-  network: ws
+  name: 🇸🇬SG-152.69.211.235-1688
+  network: http
   port: 80
-  server: 15.235.192.196
+  server: 152.69.211.235
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 3701ded3-09ba-4154-970d-a9f4a090a382
-  ws-opts:
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-8.219.211.12-1126
-  network: ws
-  port: 443
-  server: 8.219.211.12
-  servername: ''
+  uuid: d345916f-1673-4a98-f37d-49357c84ce03
+- name: '🇸🇬 新加坡 | SGP #1'
+  password: Z5lvhmLqSc
+  port: 48994
+  server: 173.234.15.84
   skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
-  ws-opts:
-    headers:
-      Host: uk2.v2rayserv.com
-    path: /sshocean
+  sni: m.microsoft.com
+  type: trojan
+  udp: true
+- name: '🇸🇬 新加坡 | SGP #2'
+  password: Z5lvhmLqSc
+  port: 48994
+  server: matrix.phonicsindia.mobi
+  skip-cert-verify: true
+  sni: m.microsoft.com
+  type: trojan
+  udp: true
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 149.28.130.108
   sni: searchcreativejobsandshowcaseyourartistictalents.com
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #3'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 18.143.176.12
-  type: ss
-  udp: true
 - cipher: aes-256-gcm
   name: 🇸🇬SG-149.88.106.73-0154
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=

@@ -1,67 +1,45 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 9754ED
+  name: CN 🇨🇳 | @Raydikalx | 187FEB
   network: ws
-  port: 33402
-  server: cu4.ainivp.com
-  tls: true
+  port: 10086
+  server: 120.48.133.162
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 9227afcd-026e-781f-1abc-c06efabd2338
+  uuid: fde10e39-48bb-4dcf-b3ba-71d711323a54
   ws-opts:
-    headers:
-      Host: cu4.ainivp.com
-    path: /ray
-- name: 🇨🇳CN_3|1.4MB/s
-  port: 8888
-  server: 114.246.197.252
+    path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 3BB29A
+  network: tcp
+  port: 50011
+  server: 36.133.74.15
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | D9C1C5
+  network: tcp
+  port: 50016
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: abcb006d-739f-4cec-b13f-12c10d334d92
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-153.101.64.221-2422
+  network: ws
+  port: 40013
+  server: 153.101.64.221
+  servername: ''
   skip-cert-verify: true
-  type: http
-- name: 🇨🇳CN_4|1.1MB/s
-  port: 8888
-  server: 123.121.101.115
-  skip-cert-verify: true
-  type: http
-- name: 🇨🇳CN_5|1.5MB/s
-  port: 8888
-  server: 111.192.61.210
-  skip-cert-verify: true
-  type: http
-- name: 🇨🇳CN_6|2.5MB/s
-  port: 8888
-  server: 114.244.221.178
-  skip-cert-verify: true
-  type: http
-- ip: 172.16.0.2/32
-  mtu: 1280
-  name: 🇨🇳CN_1|2.4MB/s
-  port: 500
-  presharedkey: ''
-  private-key: cMxekgAnVSNb+rgOySV+74ogaJhqpJtShZaECZCY6k4=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 236
-  - 210
-  - 245
-  server: 162.159.192.1
-  type: wireguard
-  udp: true
-- ip: 172.16.0.2/32
-  keepalive: '5'
-  mtu: 1280
-  name: 🇨🇳CN_2|1.2MB/s
-  persistent-keepalive: '5'
-  port: 500
-  private-key: mHj04J164X9hgzAVq4BlB0hc/SK3QPbgl7JF+/anXU0=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 99
-  - 166
-  - 252
-  server: 162.159.192.6
-  type: wireguard
-  udp: true
-  wnoise: quic
-  wnoisecount: '5'
-  wnoisedelay: '5'
-  wpayloadsize: 40-90
+  tls: false
+  type: vmess
+  uuid: 5716c1b4-c2d3-4a9d-a9a8-5d9919d0ed8f
+  ws-opts:
+    path: /qwe123321ewq

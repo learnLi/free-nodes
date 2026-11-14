@@ -1,32 +1,38 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | C3EB50
-  network: ws
-  port: 443
-  server: 9641684.sdf65h4.top
-  servername: 9641684.sdf65h4.top
-  tls: true
+  name: TW 🇹🇼 | @Raydikalx | 13C63A
+  network: tcp
+  port: 35034
+  server: 165.154.195.38
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
-  ws-opts:
-    headers:
-      Host: 9641684.sdf65h4.top
-    path: /
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
 - alterId: 0
   cipher: auto
-  name: 🇹🇼TW-104.29.64.2-1495
+  name: TW2
+  network: tcp
+  port: 22222
+  server: 103.160.180.26
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: a5206a55-d5bd-41b9-92a5-bd27a90355ff
+- alterId: 0
+  cipher: auto
+  name: 🇹🇼TW-104.29.64.25-1749
   network: ws
   port: 443
-  server: 104.29.64.2
+  server: 104.29.64.25
   servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   ws-opts:
     headers:
-      Host: fr2.cfcdn4.xyz
+      Host: lg30.cfcdn3.xyz
     path: /ray
 - alterId: 0
   cipher: auto
@@ -55,6 +61,20 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530fp=chrome
+- client-fingerprint: chrome
+  name: '🇹🇼 🇨🇳 台湾 | TWN #2'
+  network: ws
+  port: 443
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
 - name: 🇹🇼[www.v2nodes.com] vless-TW-1...
   network: ws
   port: 443
@@ -81,18 +101,17 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+- name: 🇹🇼 🇨🇳 台湾 | TWN 2
+  password: 1caaeda2-7ea1-43c3-b2b6-f8c093a45993
+  port: 23141
+  server: 45.192.198.230
+  skip-cert-verify: true
+  sni: buylite.music.apple.com
+  type: anytls
+  udp: true
 - cipher: 2022-blake3-aes-128-gcm
-  name: '🏳[www.v2nodes.com] ss- #16'
+  name: '🇹🇼[www.v2nodes.com] ss-TW-1620... #1'
   password: b7I6g7l7fJhBaMInJ+zkzw==
   port: 14514
   server: amasoid.ddns.net
   type: ss
-- name: 🇹🇼TW_2|1.1MB/s
-  password: exaxgqkKkd0TAMrCxeonWg==
-  port: 1443
-  server: twmoon1-cdn-route.couldflare-cdn.com
-  skip-cert-verify: false
-  sni: twmoon1-cdn-route.couldflare-cdn.com
-  tls: true
-  type: http
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
