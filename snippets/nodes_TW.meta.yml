@@ -1,23 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 1D48F9
-  network: none
-  port: 31172
-  server: 202.153.4.171
-  tls: false
-  type: vmess
-  uuid: 2bb735a0-b26e-4628-9f1a-23a6661b1275
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 234D0F
-  network: tcp
-  port: 59507
-  server: ff003.owwoedu.com
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 464b32ca-1365-49db-a531-31568b602065
 - name: 🇹🇼[www.v2nodes.com] vless-TW-1...
   network: ws
   port: 443
@@ -56,14 +37,6 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-- name: 🇹🇼 🇨🇳 台湾 | TWN 2
-  password: b5bf323d-cccd-4e7b-9ecd-2ab4943b7396
-  port: 443
-  server: jp.gosthk.site
-  skip-cert-verify: true
-  sni: jp.gosthk.site
-  type: anytls
-  udp: true
 - cipher: 2022-blake3-aes-128-gcm
   name: '🇹🇼[www.v2nodes.com] ss-TW-1620... #1'
   password: b7I6g7l7fJhBaMInJ+zkzw==

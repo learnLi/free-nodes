@@ -1,36 +1,39 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | ED5343
-  network: tcp
-  port: 8888
-  server: 146.56.112.110
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
+  name: 🇰🇷KR-138.2.122.225-0064
   network: ws
-  port: 25555
-  server: 152.69.226.63
-  servername: 152.69.226.63
-  tls: false
-  type: vless
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  port: 443
+  server: 138.2.122.225
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   ws-opts:
-    path: /
-- name: 🇰🇷[www.v2nodes.com] vless-KR-3...
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- client-fingerprint: firefox
+  name: '🇰🇷 韩国 | KOR #3'
+  port: 20043
+  server: eu90.cdn77.icu
+  servername: eu64.cdn77.icu
+  tls: true
+  type: vless
+  uuid: 1e697474-7836-47ed-aaca-b559efcbb298
+- name: '🇰🇷[www.v2nodes.com] vless-KR-3... #2'
   network: ws
   port: 8443
   server: 64.110.79.66
   servername: fs.qicai99.com
-  tls: false
+  tls: true
   type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
     headers:
       Host: fs.qicai99.com
-    path: /fp=chromesecurity=tls
+    path: /fp=chrome
 - client-fingerprint: chrome
   name: '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   network: ws
@@ -44,24 +47,6 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /
-- name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 52.79.253.83
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #3'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 3.36.121.247
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
@@ -69,7 +54,7 @@ proxies:
   server: 211.178.105.134
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #1'
   password: '!!str 12242'
   port: 10099
   server: 115.161.136.145

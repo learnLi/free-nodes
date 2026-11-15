@@ -11,6 +11,16 @@ proxies:
   uuid: f56b9a92-47d4-4d6e-b828-1aa3e96dae65
 - alterId: 0
   cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 27BF25
+  network: tcp
+  port: 50011
+  server: 36.139.117.41
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 0
+  cipher: auto
   name: CN 🇨🇳 | @Raydikalx | 360817
   network: ws
   port: 10086
@@ -22,6 +32,49 @@ proxies:
   ws-opts: {}
 - alterId: 0
   cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 6C11D3
+  network: tcp
+  port: 50012
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 8A95D3
+  network: tcp
+  port: 50018
+  server: 36.133.78.37
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 9DFCB7
+  network: tcp
+  port: 50013
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 23b5790c-4e96-49fa-95fc-9079ce9cf43c
+- alterId: 0
+  cipher: auto
+  name: 🇨🇳CN-113.31.124.147-0053
+  network: ws
+  port: 443
+  server: 113.31.124.147
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray
+- alterId: 0
+  cipher: auto
   name: 🇨🇳_CN_中国_IPV4
   network: ws
   port: 10086
@@ -31,3 +84,10 @@ proxies:
   uuid: 74e07df3-f82a-4791-987f-247c3c395866
   ws-opts:
     path: /
+- name: '🇳🇬[www.v2nodes.com] trojan-NG-... #3'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20103
+  server: sclass-01.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan

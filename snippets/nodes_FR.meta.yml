@@ -1,6 +1,26 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 03E267
+  network: tcp
+  port: 22324
+  server: 45.80.215.8
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 367911
+  network: tcp
+  port: 1270
+  server: 162.19.82.57
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
   name: FR 🇫🇷 | @Raydikalx | 8C32A6
   network: tcp
   port: 1270
@@ -9,17 +29,6 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | D56E69
-  network: ws
-  port: 52620
-  server: 38.60.176.80
-  tls: false
-  type: vmess
-  uuid: d60c7a89-40d9-4f09-e8f8-591932ce79ef
-  ws-opts:
-    path: /8704a4ad
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-145.239.55.210-0222
@@ -37,10 +46,10 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-91.134.8.100-1339
+  name: 🇫🇷FR-146.59.85.226-1354
   network: ws
   port: 443
-  server: 91.134.8.100
+  server: 146.59.85.226
   servername: ''
   skip-cert-verify: true
   tls: true
@@ -48,11 +57,23 @@ proxies:
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: kampong.org
+      Host: pelang.org
     path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-172.232.44.160-7990
+  network: ws
+  port: 443
+  server: 172.232.44.160
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: cae7fe63-6ff7-4443-b532-019fee32a119
+  ws-opts:
+    path: /vmess
 - client-fingerprint: chrome
   grpc-opts:
-    grpc-mode: gun
     grpc-service-name: qi8ws15c7jv5q2fa
   name: 🇫🇷 法国 | FRA
   network: grpc
@@ -61,9 +82,8 @@ proxies:
   servername: 68r2nrw6avta71yq.cdn.cachefleet.com
   tls: true
   type: vless
-  udp: true
   uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-- name: '🇫🇷 法国 | FRA #1'
+- name: '🇫🇷 法国 | FRA #2'
   network: ws
   port: 443
   server: 199.232.78.120
@@ -76,18 +96,7 @@ proxies:
       Host: fraboijji.global.ssl.fastly.net.
     path: /fp=chrome
 - client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇫🇷 法国 | FRA #2'
-  network: grpc
-  port: 80
-  server: 200.102.183.226
-  servername: 68r2nrw6avta71yq.cdn.cachefleet.com
-  tls: true
-  type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-- client-fingerprint: chrome
-  name: '🇫🇷 法国 | FRA #3'
+  name: '🇫🇷 法国 | FRA #5'
   network: ws
   port: 443
   server: 199.232.78.120
@@ -100,21 +109,7 @@ proxies:
     headers:
       Host: fraboijji.global.ssl.fastly.net.
     path: /
-- alpn:
-  - http/1.1
-  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
-  network: ws
-  port: 443
-  server: 3.169.9.125
-  servername: d4afoyczh5tek.cloudfront.net
-  tls: true
-  type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  ws-opts:
-    headers:
-      Host: d4afoyczh5tek.cloudfront.net
-    path: /fp=chrome
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+- name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
   port: 2166
   server: 89.187.7.4
@@ -127,9 +122,23 @@ proxies:
     path: /Telegram=@AmyraxVPN
 - alpn:
   - http/1.1
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
+  network: ws
+  port: 443
+  server: 3.169.9.125
+  servername: d4afoyczh5tek.cloudfront.net
+  tls: true
+  type: vless
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  ws-opts:
+    headers:
+      Host: d4afoyczh5tek.cloudfront.net
+    path: /fp=chrome
+- alpn:
+  - http/1.1
   client-fingerprint: chrome
   encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   network: ws
   port: 443
   server: 3.169.9.125
@@ -145,7 +154,7 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
   encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
   network: ws
   port: 443
   server: 3.169.9.125
@@ -161,7 +170,7 @@ proxies:
   - http/1.1
   client-fingerprint: chrome
   encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
   network: ws
   port: 443
   server: 3.169.9.125
@@ -173,59 +182,24 @@ proxies:
     headers:
       Host: dkfsoyk9ju2as.cloudfront.net
     path: /
-- name: FR法国丨yoyapai.com\r
-  password: humanity
-  port: 443
-  server: 104.16.174.36
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
 - name: 🇫🇷FR法国丨yoyapai.com\r
-  password: humanity
-  port: 443
-  server: 104.18.152.207
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-- name: 🇫🇷FR法國丨yoyapai.com\r
-  password: humanity
-  port: 443
-  server: 104.26.15.137
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-- name: '🇫🇷FR法國丨yoyapai.com\r #1'
-  password: humanity
-  port: 443
-  server: 104.17.111.4
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-- name: 🇫🇷法国丨yoyapai.com\r
-  password: humanity
-  port: 443
-  server: 104.18.152.73
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-- name: '🇫🇷法国丨yoyapai.com\r #1'
   password: humanity
   port: 443
   server: 104.18.152.152
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🇫🇷法国丨yoyapai.com\r #2'
+- name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.22.63
+  server: 104.18.152.50
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- name: '🇫🇷法国丨yoyapai.com\r #3'
+- name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.133
+  server: 104.18.152.77
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -235,63 +209,92 @@ proxies:
   port: 443
   server: 15.237.53.254
   type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.27
+- cipher: aes-256-cfb
+  name: 🇫🇷FR-51.44.170.122-0159
+  password: amazonskr05
+  port: 443
+  server: 51.44.170.122
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
   type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 23.162.152.22
-  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
   password: 29irqk0paakcx19v
   port: 8080
   server: 51.83.61.102
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #3'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
   password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
   port: 21191
   server: c17b957c5a76ec76.lebufflonfermegroup.us
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #7'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #8'
   password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
   port: 1352
   server: dns24.m3hrzd.ir
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #8'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #9'
   password: x19py0a8ipglqkbe
   port: 8080
   server: 51.77.144.182
   type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #11'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.162.152.22
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #13'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.27
+  type: ss
+- name: FR_speednode_0008
+  port: 19362
+  server: 51.159.225.197
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 - name: FR_speednode_0009
   port: 8090
   server: 83.206.1.225
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- name: FR_speednode_0010
+  password: 'null'
+  port: 23856
+  server: 51.159.225.196
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: 'null'
+- name: FR_speednode_0011
+  port: 23856
+  server: 51.159.225.196
   skip-cert-verify: true
   tls: true
   type: http
@@ -303,25 +306,13 @@ proxies:
   tls: true
   type: http
   udp: true
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  auth_str: dongtaiwang.com
-  down: 50
-  name: 🇫🇷FR_1|2.8MB/s
-  port: 24667
-  server: 62.210.70.191
+- name: 🇫🇷FR_1|1.0MB/s|P002-260618
+  password: None
+  port: 9443
+  server: 138.199.47.247
   skip-cert-verify: true
-  type: hysteria
-  up: 10
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: '55'
-  name: 🇫🇷FR_2|1.2MB/s
-  port: 36699
-  server: 163.172.117.163
-  skip-cert-verify: true
-  type: hysteria
-  up: '11'
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
   x-toolall-mihomo: true
