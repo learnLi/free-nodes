@@ -1,42 +1,8 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | C1BBF7
-  network: ws
-  port: 80
-  server: 132.145.80.230
-  tls: false
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: 'null'
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-43.201.103.12-1216
-  network: ws
-  port: 29930
-  server: 43.201.103.12
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: f46b2e2a-e02c-437a-833c-023410840a80
-  ws-opts:
-    headers:
-      Host: 43.201.103.12
-    path: /f46b2e2a-e02c-437a-833c-023410840a80
-- name: '🏳[www.v2nodes.com] trojan- #6'
+- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 158.247.253.243
   skip-cert-verify: true
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #1'
-  password: '!!str 12242'
-  port: 10099
-  server: 115.161.136.145
-  type: ss

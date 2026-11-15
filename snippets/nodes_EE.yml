@@ -1,1 +1,24 @@
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  name: Global 🌐 | @Raydikalx | 94EE6D
+  network: ws
+  port: 56830
+  server: vpnu.loungers.cc
+  tls: true
+  type: vmess
+  uuid: d2e92a19-f50c-426e-cd15-03ece7f4f3b1
+  ws-opts:
+    headers:
+      Host: vpnu.loungers.cc
+    path: /ws/x-ui
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | 0CBEEB
+  network: tcp
+  port: 443
+  server: irc.jahancloud.cfd
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 24b73122-9c73-45ae-871d-1837e427a9bf

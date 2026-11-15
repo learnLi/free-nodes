@@ -1,40 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | C1BBF7
-  network: ws
-  port: 80
-  server: 132.145.80.230
-  tls: false
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: 'null'
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-43.201.103.12-1216
-  network: ws
-  port: 29930
-  server: 43.201.103.12
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: f46b2e2a-e02c-437a-833c-023410840a80
-  ws-opts:
-    headers:
-      Host: 43.201.103.12
-    path: /f46b2e2a-e02c-437a-833c-023410840a80
-- client-fingerprint: firefox
-  name: '🇰🇷 韩国 | KOR #3'
-  port: 20043
-  server: eu90.cdn77.icu
-  servername: eu64.cdn77.icu
-  tls: true
-  type: vless
-  uuid: 1e697474-7836-47ed-aaca-b559efcbb298
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   network: ws
   port: 25555
@@ -70,7 +34,7 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /
-- name: '🏳[www.v2nodes.com] trojan- #6'
+- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 158.247.253.243
@@ -87,9 +51,18 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #1'
-  password: '!!str 12242'
-  port: 10099
-  server: 115.161.136.145
-  type: ss
+- name: 🇰🇷KR_1|1.5MB/s|R002-260618
+  port: 443
+  server: 152.69.230.221
+  skip-cert-verify: true
+  sni: 152.69.230.221
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: 🇰🇷KR_2|4.9MB/s
+  port: 80
+  server: 211.188.55.218
+  skip-cert-verify: true
+  type: http
