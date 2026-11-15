@@ -1,33 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 01BAC4
-  network: ws
-  port: 29163
-  server: 91.107.130.73
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: dynu.com
-    path: /index.php
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 0A6E49
-  network: ws
-  port: 443
-  server: 9WEXvuEOsTlJWUrS.v.3dns.vip
-  servername: 9WEXvuEOsTlJWUrS.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 9WEXvuEOsTlJWUrS.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 166068
   network: ws
   port: 443
@@ -42,173 +15,219 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 3E1586
+  name: DE 🇩🇪 | @Raydikalx | 1FF6D1
   network: tcp
-  port: 54041
-  server: 109.70.74.149
+  port: 8585
+  server: 165.227.138.218
   servername: ''
   tls: false
   type: vmess
-  uuid: 1aaaf080-c977-4165-9dfe-586906619b48
+  uuid: afedd970-62a2-46f5-88c4-e1f5305d3758
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 45D219
-  network: tcp
-  port: 10803
-  server: 5.45.97.147
-  tls: false
-  type: vmess
-  uuid: 018fbfb7-721a-49a9-b9f5-fb55d92592b6
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 4671F6
+  name: DE 🇩🇪 | @Raydikalx | 260C00
   network: ws
-  port: 23981
-  server: 176.65.140.210
-  servername: ''
-  tls: false
+  port: 443
+  server: 57.129.28.64
+  servername: serkat.org
+  tls: true
   type: vmess
-  uuid: 3a98c196-7408-4c49-bbbf-da50188b14e0
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: bobo.badrangteb.ir
+      Host: Join---v2rayngzendegimamad
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 3E59CC
+  network: tcp
+  port: 20402
+  server: 109.70.74.135
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 94c7e13b-24e9-436f-88d8-8d471debb5a2
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 4F1BC6
+  network: ws
+  port: 443
+  server: de.connfull.org
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 2131c089-4af5-4354-b01d-d833bbd06d0b
+  ws-opts:
+    path: /api/v1/connect
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 6B51E5
+  network: ws
+  port: 443
+  server: xIvYT9T3GrgoRgc5.v.3dns.vip
+  servername: xIvYT9T3GrgoRgc5.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: xIvYT9T3GrgoRgc5.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 8ADE6E
+  network: tcp
+  port: 1003
+  server: 3.72.50.236
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e147fa91-0c93-4bf8-af6c-02ca5179f585
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 8AE67C
+  network: ws
+  port: 25025
+  server: superpanel.sobu.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: ff2c2fe9-264c-4e6c-8daa-8ebfce7fef0e
+  ws-opts:
     path: /
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 60BAE9
-  network: tcp
-  port: 1270
-  server: 193.108.117.61
-  servername: xmfhlpy.com
+  name: DE 🇩🇪 | @Raydikalx | AF6B4B
+  network: ws
+  port: 443
+  server: z4dWee2304PZNpbC.v.3dns.vip
+  servername: z4dWee2304PZNpbC.v.3dns.vip
   tls: true
   type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 616DC9
-  network: tcp
-  port: 19829
-  server: 109.70.74.217
-  tls: false
-  type: vmess
-  uuid: 61d4bd1e-2def-46cb-a7ac-6c98d002e7da
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 847EA3
-  network: tcp
-  port: 36594
-  server: 91.107.147.12
-  tls: false
-  type: vmess
-  uuid: 1aba92cc-d94c-4536-a0a3-1540cb82f38c
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 8AF752
-  network: tcp
-  port: 8880
-  server: 159.69.180.75
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 3654ab64-2bff-4439-bd93-918b3e9c5aaa
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | B9B048
-  network: tcp
-  port: 2121
-  server: tokien.mrmtn.xyz
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 29c4a3bd-9d8c-4ac3-b279-8b201560c227
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | D7281E
-  network: tcp
-  port: 57875
-  server: 109.70.74.130
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 69aa90b8-bf6f-49b6-b19f-d53667572eb4
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | DF8AD1
-  network: tcp
-  port: 36812
-  server: 91.107.128.44
-  tls: false
-  type: vmess
-  uuid: 6cdfc27b-a0cc-4ea1-802a-e98552be430d
-- alterId: 0
-  cipher: auto
-  name: IR 🇮🇷 | @Raydikalx | 559DE7
-  network: tcp
-  port: 5381
-  server: dashboard.ojestore.top
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: dcc26718-a622-464a-809d-c902f77fcef2
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  http-opts:
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
     headers:
-      Host:
-      - www.tno.nl
-    method: GET
-    path:
-    - /
-  name: '🇩🇪 德国 | DEU #11'
+      Host: z4dWee2304PZNpbC.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | B7C118
+  network: tcp
+  port: 2053
+  server: 178.63.237.148
+  tls: false
+  type: vmess
+  uuid: c69fd960-c455-4a05-88d1-d83e9431bc76
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | E3F708
+  network: tcp
+  port: 443
+  server: 2a01:4f8:1c1b:999::1
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6d9d8434-2320-4281-b509-797ed57434e9
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | F00EF1
+  network: tcp
+  port: 110
+  server: 94.156.179.138
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | F36578
+  network: tcp
+  port: 8080
+  server: 143.14.59.99
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 4baf4472-4a18-449f-84c1-8bf0dcac97a4
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | FA5C19
+  network: ws
+  port: 443
+  server: EwKrslzTlAZVqwb1.v.3dns.vip
+  servername: EwKrslzTlAZVqwb1.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: EwKrslzTlAZVqwb1.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | FC9307
+  network: ws
+  port: 16632
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: bc8a58c9-a544-4f85-87cf-274f6eb4d8cb
+  ws-opts:
+    headers:
+      Host: 9531724e3efc3135bdf7f4339b2e04d7.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: TR 🇹🇷 | @Raydikalx | DE532F
+  network: tcp
+  port: 37523
+  server: netork.povrak.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 0f52641b-f84c-49dc-bc93-887bb292e6ac
+- alterId: 0
+  cipher: auto
+  name: '🇩🇪 德国 | DEU #1'
+  network: http
+  port: 52080
+  server: 23.165.200.150
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
+- alterId: 0
+  cipher: auto
+  name: '🇩🇪 德国 | DEU #13'
+  network: http
+  port: 58804
+  server: 91.98.221.107
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: aa3e4b64-c119-44be-b0f3-f88293705e37
+- alterId: 0
+  cipher: auto
+  name: '🇩🇪 德国 | DEU #2 #1'
   network: http
   port: 8880
   server: free3.familysharing.ir
   skip-cert-verify: true
   tls: false
   type: vmess
-  udp: true
   uuid: 04cacf0a-46d5-81b3-874d-460d7a36c036
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪DE-168.119.254.234-3065
+- client-fingerprint: safari
+  grpc-opts:
+    grpc-service-name: api
+  name: 🇩🇪 德国 | DEU
+  network: grpc
+  port: 443
+  server: 200.165.236.84
+  servername: yandex.ru
+  tls: true
+  type: vless
+  uuid: a54c6d0b-56d8-4bb8-a4af-8c5a7f0c0b34
+- name: '🇩🇪 德国 | DEU #10'
   network: ws
-  port: 80
-  server: 168.119.254.234
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 41990bdc-da75-496d-bad3-ae822ad8be5f
-  ws-opts:
-    path: /graphql
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪DE-94.130.184.57-3390
-  network: ws
-  port: 80
-  server: 94.130.184.57
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: c5e523e7-da73-40af-a4a9-c638720c30e1
-  ws-opts:
-    path: /graphql
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪_DE_德国_IPV4
-  network: http
-  port: 52080
-  server: 23.165.200.150
-  servername: down-cdn.dingtalk.com
-  tls: false
-  type: vmess
-  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
-- encryption: mlkem768x25519plus.native.0rtt.GlIc2LFlqBQ3itRnw8zoo3tfD7MSknWWmmLVDdr88jE
-  name: DE VLESS-02 | free-nodes
-  network: httpupgrade
   port: 80
   server: 104.18.43.144
   tls: false
@@ -218,10 +237,199 @@ proxies:
     headers:
       Host: erosan.seminar-irani.ir
     path: /MiMiTDL
+- name: '🇩🇪 德国 | DEU #14'
+  port: 42275
+  server: 91.98.221.107
+  tls: false
+  type: vless
+  uuid: aa3e4b64-c119-44be-b0f3-f88293705e37
+- client-fingerprint: chrome
+  name: '🇩🇪 德国 | DEU #15'
+  network: ws
+  port: 443
+  server: ir2.cryptojakiro.com
+  servername: ir2.cryptojakiro.com
+  tls: true
+  type: vless
+  uuid: 8a1a991a-f206-447a-adaf-37a57c133418
+  ws-opts:
+    headers:
+      Host: ir2.cryptojakiro.com
+    path: /
+- client-fingerprint: firefox
+  name: '🇩🇪 德国 | DEU #19'
+  network: xhttp
+  port: 443
+  server: 193.160.208.240
+  servername: 193.160.208.240
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
+  xhttp-opts:
+    mode: auto
+    path: /assets/twru01/
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇩🇪 德国 | DEU #2'
+  port: 2053
+  server: 104.21.74.214
+  servername: n8.hyby.ir
+  tls: true
+  type: vless
+  uuid: d133dd1c-3084-46c3-ba6e-aa3597c43cc1
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇩🇪 德国 | DEU #4 #1'
+  port: 2053
+  server: check-host.net
+  servername: n8.hyby.ir
+  tls: true
+  type: vless
+  uuid: d133dd1c-3084-46c3-ba6e-aa3597c43cc1
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: 43f41cd7fee0
+  name: 🇩🇪 德国 | DEU 6
+  network: grpc
+  port: 443
+  server: 132.243.163.154
+  servername: ec7a81g.de15.h1clayd.click
+  tls: true
+  type: vless
+  uuid: 55458d10-24ab-4ea6-a522-13741b546f2a
+- client-fingerprint: chrome
+  name: 🇩🇪DE_1|2.1MB/s
+  port: 443
+  server: 3.174.189.0
+  servername: d1b9pmaut2v26v.cloudfront.net
+  tls: true
+  type: vless
+  uuid: 2e69b088-6ef3-417f-8247-125cf257fafd
+- name: 🇩🇪[www.v2nodes.com] vless-DE-1...
+  network: ws
+  port: 8443
+  server: 103.31.4.160
+  servername: moz.ar-marz.fun
+  tls: true
+  type: vless
+  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+  ws-opts:
+    headers:
+      Host: moz.ar-marz.fun
+    path: /manfp=firefox
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: a9w9wmko0k2od14hv8v
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
+  network: grpc
+  port: 443
+  server: 5.83.129.236
+  servername: host-de-upscale.cdn.cachefleet.com
+  tls: true
+  type: vless
+  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #13'
+  network: ws
+  port: 443
+  server: decdn-28.nome-rkp.net
+  servername: decdn-28.nome-rkp.net
+  tls: true
+  type: vless
+  uuid: c1208c5a-2350-0003-affd-fc41b4319286
+  ws-opts:
+    headers:
+      Host: decdn-28.nome-rkp.net
+    path: /media/ws/
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #15'
+  port: 39653
+  server: online.shop.ir.eeso.cc
+  servername: online.shop.ir.eeso.cc
+  tls: true
+  type: vless
+  uuid: baded307-189c-4ffc-a271-9acdab51a324
+- client-fingerprint: firefox
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #19'
+  network: ws
+  port: 443
+  server: 188.225.37.43
+  servername: torvani.cyou
+  tls: true
+  type: vless
+  uuid: 4cabcd59-a405-4c00-96f5-03507e1e28fa
+  ws-opts:
+    headers:
+      Host: torvani.cyou
+    path: /api/boards/live
+- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #21'
+  port: 49313
+  server: 159.195.207.238
+  tls: false
+  type: vless
+  uuid: 855c7aaa-e7d6-463e-971e-d36032744428
+- client-fingerprint: firefox
+  encryption: none
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #22'
+  network: ws
+  port: 8443
+  server: 103.31.4.160
+  servername: moz.ar-marz.fun
+  tls: true
+  type: vless
+  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
+  ws-opts:
+    headers:
+      Host: moz.ar-marz.fun
+    path: /man
+- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
+  network: ws
+  port: 443
+  server: 188.225.37.43
+  servername: torvani.cyou
+  tls: true
+  type: vless
+  uuid: 4cabcd59-a405-4c00-96f5-03507e1e28fa
+  ws-opts:
+    headers:
+      Host: torvani.cyou
+    path: /api/boards/livefp=firefox
+- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  network: ws
+  port: 443
+  server: decdn-28.nome-rkp.net
+  servername: decdn-28.nome-rkp.net
+  tls: true
+  type: vless
+  uuid: c1208c5a-2350-0003-affd-fc41b4319286
+  ws-opts:
+    headers:
+      Host: decdn-28.nome-rkp.net
+    path: /media/ws/fp=chrome
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: 43f41cd7fee0
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
+  network: grpc
+  port: 443
+  server: ec7a81g.de15.h1clayd.click
+  servername: ec7a81g.de15.h1clayd.click
+  tls: true
+  type: vless
+  uuid: 55458d10-24ab-4ea6-a522-13741b546f2a
 - alpn:
   - h2
   client-fingerprint: firefox
-  name: '🇩🇪 德国 | DEU #10'
+  name: '🇺🇸 美国 | USA #6'
   network: xhttp
   port: 443
   server: 199.232.239.239
@@ -240,243 +448,93 @@ proxies:
     x-padding-method: repeat-x
     x-padding-obfs-mode: true
     x-padding-placement: queryInHeader
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇩🇪 德国 | DEU #2'
-  port: 2053
-  server: 104.21.74.214
-  servername: n8.hyby.ir
-  tls: true
-  type: vless
-  uuid: d133dd1c-3084-46c3-ba6e-aa3597c43cc1
-- client-fingerprint: firefox
-  name: '🇩🇪 德国 | DEU #2 #1'
-  port: 443
-  server: 193.160.208.240
-  servername: 193.160.208.240
-  tls: true
-  type: vless
-  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-- client-fingerprint: firefox
-  name: '🇩🇪 德国 | DEU #4'
-  port: 443
-  server: 130.78.31.25
-  servername: pl2.obxodvpn.us
-  tls: true
-  type: vless
-  uuid: 146d567c-6335-4e63-a8aa-7ec068642440
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: '🇩🇪 德国 | DEU #4 #1'
-  port: 2053
-  server: check-host.net
-  servername: n8.hyby.ir
-  tls: true
-  type: vless
-  uuid: d133dd1c-3084-46c3-ba6e-aa3597c43cc1
-- client-fingerprint: chrome
-  name: '🇩🇪 德国 | DEU #5'
-  port: 443
-  server: 3.174.189.0
-  servername: d1b9pmaut2v26v.cloudfront.net
-  tls: true
-  type: vless
-  uuid: 2e69b088-6ef3-417f-8247-125cf257fafd
-- client-fingerprint: ios
-  name: '🇩🇪 德国 | DEU #5 #1'
-  port: 443
-  server: 87.228.92.122
-  servername: 1c7b4fx.fi9.h1clayd.click
-  tls: true
-  type: vless
-  uuid: 0753957f-bbb0-48ea-8bd3-b0c709e552d7
-- client-fingerprint: chrome
-  name: '🇩🇪 德国 | DEU #6'
-  network: ws
-  port: 8443
-  server: 147.45.76.226
-  servername: v2n4.11676767.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
-  ws-opts:
-    headers:
-      Host: v2n4.11676767.xyz
-    path: /resource/topics
-- client-fingerprint: chrome
-  name: '🇩🇪 德国 | DEU #9'
-  network: ws
-  port: 443
-  server: 104.20.63.254
-  tls: true
-  type: vless
-  udp: true
-  uuid: cd3d8e5c-794f-4c34-8222-59d3e99e35fe
-  ws-opts:
-    headers:
-      Host: joeypg.ezbiz.dynv6.net
-    path: /?ed=2048
-- name: 🇩🇪[www.v2nodes.com] vless-DE-1...
-  network: ws
-  port: 8443
-  server: 103.31.4.160
-  servername: moz.ar-marz.fun
-  tls: true
-  type: vless
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  ws-opts:
-    headers:
-      Host: moz.ar-marz.fun
-    path: /manfp=firefox
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #14'
-  network: ws
-  port: 443
-  server: decdn-28.nome-rkp.net
-  servername: decdn-28.nome-rkp.net
-  tls: true
-  type: vless
-  uuid: c1208c5a-2350-0003-affd-fc41b4319286
-  ws-opts:
-    headers:
-      Host: decdn-28.nome-rkp.net
-    path: /media/ws/
-- client-fingerprint: firefox
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #20'
-  network: ws
-  port: 443
-  server: 188.225.37.43
-  servername: torvani.cyou
-  tls: true
-  type: vless
-  uuid: 4cabcd59-a405-4c00-96f5-03507e1e28fa
-  ws-opts:
-    headers:
-      Host: torvani.cyou
-    path: /api/boards/live
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #22'
-  port: 49313
-  server: 159.195.207.238
-  tls: false
-  type: vless
-  uuid: 855c7aaa-e7d6-463e-971e-d36032744428
-- client-fingerprint: firefox
-  encryption: none
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #23'
-  network: ws
-  port: 8443
-  server: 103.31.4.160
-  servername: moz.ar-marz.fun
-  tls: true
-  type: vless
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-  ws-opts:
-    headers:
-      Host: moz.ar-marz.fun
-    path: /man
-- client-fingerprint: chrome
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  port: 2087
-  server: 2.26.6.1
-  servername: 2.26.6.1
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  network: ws
-  port: 443
-  server: 188.225.37.43
-  servername: torvani.cyou
-  tls: true
-  type: vless
-  uuid: 4cabcd59-a405-4c00-96f5-03507e1e28fa
-  ws-opts:
-    headers:
-      Host: torvani.cyou
-    path: /api/boards/livefp=firefox
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  port: 8443
-  server: 103.31.4.75
-  tls: false
-  type: vless
-  uuid: 9443badf-414f-4b12-b19a-7cc2c7431163
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #7'
-  network: ws
-  port: 443
-  server: decdn-28.nome-rkp.net
-  servername: decdn-28.nome-rkp.net
-  tls: true
-  type: vless
-  uuid: c1208c5a-2350-0003-affd-fc41b4319286
-  ws-opts:
-    headers:
-      Host: decdn-28.nome-rkp.net
-    path: /media/ws/fp=chrome
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: a9w9wmko0k2od14hv8v
-  name: '🏳[www.v2nodes.com] vless- #8'
-  network: grpc
-  port: 443
-  server: 5.83.129.236
-  servername: host-de-upscale.cdn.cachefleet.com
-  tls: true
-  type: vless
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-- name: 🇩🇪DE-193.108.119.15-0109
+- name: 🇩🇪DE-193.108.119.15-0238
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 193.108.119.15
   sni: courses.iloverussia2026.com
   type: trojan
-- name: 🇩🇪DE-193.108.119.193-0110
+- name: 🇩🇪DE-193.108.119.193-0227
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 193.108.119.193
   sni: resources.iloverussia2026.com
   type: trojan
-- name: 🇩🇪DE-193.108.119.29-0103
+- name: 🇩🇪DE-193.108.119.29-0206
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 193.108.119.29
   sni: blog.iloverussia2026.com
   type: trojan
-- name: 🇩🇪DE-193.108.119.96-0114
+- name: 🇩🇪DE-193.108.119.96-0225
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 193.108.119.96
   sni: learn.iloverussia2026.com
   type: trojan
+- name: 🇩🇪 德国 | DEU 2
+  password: 9b24e5d0-62be-41df-b967-9b670cf90ff8
+  port: 2086
+  server: forwarded.frnhk.xyz
+  skip-cert-verify: true
+  sni: de.gosthk.site
+  type: anytls
+  udp: true
+- name: 🇩🇪 德国 | DEU 9
+  password: 97e926e8-0fbf-4af5-89de-4a4c8708a12c
+  port: 2086
+  server: forwarded.frnhk.xyz
+  skip-cert-verify: true
+  sni: de.gosthk.site
+  type: anytls
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇩🇪 德国 | DEU #3'
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  port: 443
+  server: 47.254.175.2
+  type: ss
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇩🇪 德国 | DEU #6'
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  port: 443
+  server: 47.254.143.251
+  type: ss
 - cipher: aes-256-gcm
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1615...
+  name: 🇩🇪DE-193.108.119.2-0296
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 193.108.119.2
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇩🇪DE-193.108.119.3-0211
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 193.108.119.3
   type: ss
 - cipher: aes-256-gcm
-  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
+  name: 🇩🇪DE-23.157.88.43-0214
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.157.88.43
   type: ss
 - cipher: aes-256-gcm
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1616...
+  name: 🇩🇪DE-57.129.83.85-0272
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 57.129.83.85
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  password: zZMNTGpPl38ASlbI1EKOBJ
+  port: 46303
+  server: 135.220.178.46
+  type: ss
 - cipher: 2022-blake3-chacha20-poly1305
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1622...
+  name: '🏳[www.v2nodes.com] ss- #13'
   password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
   port: 443
-  server: 47.254.143.251
+  server: 47.254.169.3
   type: ss
 - name: DE_speednode_0004
   port: 443
@@ -485,59 +543,17 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: DK_speednode_0005
-  port: 9002
-  server: 158.173.154.5
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  auth_str: dongtaiwang.com
+  down: 55
+  name: 🇩🇪 德国 | DEU 10
+  port: 54177
+  protocol: none
+  server: 5.83.129.90
   skip-cert-verify: true
-  tls: true
-  type: http
+  sni: apple.com
+  type: hysteria
   udp: true
-- name: 🇩🇪DE_2|1.3MB/s
-  port: 443
-  server: 172.64.69.89
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇩🇪DE_3|3.1MB/s|R002-260618
-  port: 443
-  server: 172.64.68.89
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇩🇪DE_4|1.0MB/s
-  password: None
-  port: 443
-  server: 172.64.68.89
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇩🇪DE_5|1.0MB/s
-  password: 'null'
-  port: 443
-  server: 172.64.68.89
-  skip-cert-verify: true
-  tls: true
-  type: http
-  username: 'null'
-- name: 🇩🇪DE_7|1.7MB/s|R002-260618
-  port: 443
-  server: 87.106.223.158
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇩🇪DE_8|1.0MB/s
-  password: 'null'
-  port: 443
-  server: 172.64.69.89
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: 'null'
-  x-toolall-mihomo: true
+  up: 11
