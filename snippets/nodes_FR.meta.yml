@@ -25,19 +25,28 @@ proxies:
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-141.94.155.224-1442
+  name: FR 🇫🇷 | @Raydikalx | 967D8A
   network: ws
-  port: 443
-  server: 141.94.155.224
+  port: 80
+  server: fr3.niekotin.de
   servername: ''
-  skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  uuid: 59e29918-53b3-4fa2-becf-56a601f33998
   ws-opts:
     headers:
-      Host: fapeng.org
-    path: linkvws
+      Host: fr3.niekotin.de
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | CD4BBF
+  network: tcp
+  port: 38854
+  server: 94.131.9.155
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 00abfc28-d7d2-4787-f2a3-da1c2f38d7b8
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-145.239.55.210-0315
@@ -55,34 +64,6 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-146.59.70.146-1448
-  network: ws
-  port: 443
-  server: 146.59.70.146
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: yichueng.org
-    path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-51.83.97.167-7642
-  network: ws
-  port: 80
-  server: 51.83.97.167
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 6e7ef21f-4736-480e-93aa-1f7d54f28089
-  ws-opts:
-    path: /vmess
-- alterId: 0
-  cipher: auto
   name: 🇫🇷FR-54.37.131.126-1170
   network: ws
   port: 80
@@ -96,6 +77,29 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-91.134.8.100-1429
+  network: ws
+  port: 443
+  server: 91.134.8.100
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: kampong.org
+    path: linkvws
+- client-fingerprint: chrome
+  name: '🇫🇷 法国 | FRA #1'
+  port: 443
+  server: 151.101.36.2
+  servername: accounts.fastly.com
+  tls: true
+  type: vless
+  uuid: ad9a885d-93bb-48e3-9937-57f1116b64e3
 - name: '🇫🇷 法国 | FRA #2'
   network: ws
   port: 443
@@ -116,56 +120,6 @@ proxies:
   tls: true
   type: vless
   uuid: ad9a885d-93bb-48e3-9937-57f1116b64e3
-- client-fingerprint: chrome
-  name: '🇫🇷 法国 | FRA #3'
-  network: xhttp
-  port: 443
-  server: 151.101.36.2
-  servername: accounts.fastly.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: ad9a885d-93bb-48e3-9937-57f1116b64e3
-  xhttp-opts:
-    host: oh4.global.ssl.fastly.net
-    mode: auto
-    no-grpc-header: true
-    path: /
-    x-padding-bytes: 100-1000
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇫🇷 法国 | FRA #4'
-  network: ws
-  port: 443
-  server: 199.232.78.120
-  servername: cdn.akamai.steamstatic.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
-  ws-opts:
-    headers:
-      Host: fraboijji.global.ssl.fastly.net.
-    path: /
-- client-fingerprint: chrome
-  encryption: none
-  fingerprint: cd6e838b9bfe31cab8b3d5c858b0d6223fe84ece236c1fdb281be93c302e1e6e
-  name: 🇫🇷FR_1|2.3MB/s
-  network: xhttp
-  port: 443
-  server: 167.82.64.7
-  servername: cdn.akamai.steamstatic.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 88888888-8888-8888-8888-888888888888
-  xhttp-opts:
-    host: Xpnt5eam.global.ssl.fastly.net
-    mode: auto
-    path: /
-    x-padding-bytes: 100-1000
-  xudp: true
 - alpn:
   - http/1.1
   name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
@@ -196,21 +150,18 @@ proxies:
     headers:
       Host: d4afoyczh5tek.cloudfront.net
     path: /
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
+- client-fingerprint: chrome
   name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   network: ws
   port: 443
-  server: 3.169.9.125
-  servername: d1afk2ndm8pox3.cloudfront.net
+  server: 199.232.78.120
+  servername: cdn.akamai.steamstatic.com
   tls: true
   type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
   ws-opts:
     headers:
-      Host: d1afk2ndm8pox3.cloudfront.net
+      Host: fraboijji.global.ssl.fastly.net.
     path: /
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
@@ -233,12 +184,6 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-51.83.61.102-0329
-  password: 29irqk0paakcx19v
-  port: 8080
-  server: 51.83.61.102
-  type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -269,18 +214,31 @@ proxies:
   port: 19999
   server: 167.17.64.22
   type: ss
+- cipher: aes-256-gcm
+  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
+  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
+  port: 21191
+  server: c17b957c5a76ec76.lebufflonfermegroup.us
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
   password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
   port: 1352
   server: dns24.m3hrzd.ir
   type: ss
-- cipher: aes-256-gcm
+- cipher: chacha20-ietf-poly1305
   name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #2'
-  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
-  port: 21191
-  server: c17b957c5a76ec76.lebufflonfermegroup.us
+  password: 29irqk0paakcx19v
+  port: 8080
+  server: 51.83.61.102
   type: ss
+- name: FR_speednode_0008
+  port: 19362
+  server: 51.159.225.197
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 - name: FR_speednode_0009
   port: 8090
   server: 83.206.1.225
@@ -311,50 +269,3 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_4|3.8MB/s|K001-260618
-  password: None
-  port: 443
-  server: 82.66.235.221
-  skip-cert-verify: true
-  sub_tag: K001-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇫🇷FR_5|2.4MB/s|P002-260618
-  password: None
-  port: 9443
-  server: 138.199.47.247
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  auth_str: dongtaiwang.com
-  down: 55
-  name: 🇫🇷 法国 | FRA 3
-  port: 36699
-  protocol: none
-  server: 163.172.117.163
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: '55'
-  name: 🇫🇷FR_2|1.0MB/s
-  password: dongtaiwang.com
-  port: 36699
-  server: 163.172.117.163
-  servername: bing.com
-  skip-cert-verify: true
-  sni: bing.com
-  tls: true
-  type: hysteria
-  up: '11'

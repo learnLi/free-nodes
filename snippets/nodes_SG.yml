@@ -1,41 +1,66 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D5AF8A
-  network: ws
-  port: 443
-  server: m987yh-production.up.railway.app
-  servername: m987yh-production.up.railway.app
+  name: SG 🇸🇬 | @Raydikalx | 77AF8A
+  network: tcp
+  port: 1270
+  server: 15.235.144.92
+  servername: xmfhlpy.com
   tls: true
   type: vmess
-  uuid: 21a09a2a-8b94-4d7f-bdee-3bee24f30c1c
-  ws-opts:
-    headers:
-      Host: m987yh-production.up.railway.app
-    path: /api/PxGCmb
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | EB55D4
+  name: SG 🇸🇬 | @Raydikalx | A5D8F4
   network: tcp
-  port: 57614
-  server: 5.34.176.111
+  port: 52364
+  server: fin-5.povrak.ir
+  servername: ''
   tls: false
   type: vmess
-  uuid: 4e55ce40-9f8e-417d-f8ae-aa6af97a7097
+  uuid: 06e769f1-96f8-4071-8910-b8f81b25d724
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | FE1914
+  name: SG 🇸🇬 | @Raydikalx | D326E1
   network: ws
   port: 443
-  server: morteza456786tg-production.up.railway.app
-  servername: morteza456786tg-production.up.railway.app
+  server: puohertestc-production.up.railway.app
+  servername: puohertestc-production.up.railway.app
   tls: true
   type: vmess
-  uuid: 30f32d0d-b1c7-4bee-b274-6e7cc0123317
+  uuid: 0354d7d4-b444-41f5-9441-68378aa4e537
   ws-opts:
     headers:
-      Host: morteza456786tg-production.up.railway.app
-    path: /api/5mOHLi
+      Host: puohertestc-production.up.railway.app
+    path: /api/Salvu0
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-129.150.44.64-3481
+  network: ws
+  port: 46075
+  server: 129.150.44.64
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: da257e73-f02b-45ab-9916-7baf154c47a3
+  ws-opts:
+    path: /jhndsmlanj11223
+- alterId: 64
+  cipher: auto
+  name: 🇸🇬SG-134.122.184.88-1475
+  network: ws
+  port: 48885
+  server: 134.122.184.88
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.13146165.xyz
+    path: /path/191019072927
 - alterId: 0
   cipher: auto
   name: 🇸🇬SG-146.190.82.241-2822
@@ -52,13 +77,6 @@ proxies:
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #2'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
-  server: 15.235.184.127
-  skip-cert-verify: false
-  sni: exploredigitaljobplatformandfindonlinework.com
-  type: trojan
-- name: '🇸🇬[www.v2nodes.com] trojan-SG-... #3'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
   server: 149.28.130.108
   sni: searchcreativejobsandshowcaseyourartistictalents.com
   type: trojan
@@ -68,6 +86,13 @@ proxies:
   server: matrix.phonicsindia.mobi
   skip-cert-verify: true
   sni: m.microsoft.com
+  type: trojan
+- name: '🏳[www.v2nodes.com] trojan- #11'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 15.235.184.127
+  skip-cert-verify: false
+  sni: exploredigitaljobplatformandfindonlinework.com
   type: trojan
 - cipher: rc4-md5
   name: shadowsocks-1827147315

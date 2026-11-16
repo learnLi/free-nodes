@@ -1,6 +1,20 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 025B20
+  network: ws
+  port: 80
+  server: 57.128.164.21
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 6c443cb3-9fe8-45e6-a86f-ef6ed19d481e
+  ws-opts:
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
+- alterId: 0
+  cipher: auto
   name: GB 🇬🇧 | @Raydikalx | 69A6FE
   network: ws
   port: 80
@@ -15,31 +29,14 @@ proxies:
     path: /vmess/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - alterId: 0
   cipher: auto
-  name: 🇬🇧GB-198.244.148.214-7697
-  network: ws
-  port: 443
-  server: 198.244.148.214
-  servername: goodfamily19.site
-  skip-cert-verify: false
+  name: GB 🇬🇧 | @Raydikalx | D632BF
+  network: tcp
+  port: 2053
+  server: uk.connfull.org
+  servername: ''
   tls: true
   type: vmess
-  uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
-  ws-opts:
-    path: /wmzmvws
-- client-fingerprint: chrome
-  name: 🇬🇧GB_1|3.3MB/s
-  network: xhttp
-  port: 443
-  server: 3.174.189.0
-  servername: d3rpprumpbwwt5.cloudfront.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2e69b088-6ef3-417f-8247-125cf257fafd
-  xhttp-opts:
-    host: d3rpprumpbwwt5.cloudfront.net
-    path: /cf
-  xudp: true
+  uuid: 262ce956-68fd-48af-918e-bd829819030c
 - name: 🇬🇧[www.v2nodes.com] vless-GB-1...
   network: ws
   port: 443
@@ -64,15 +61,8 @@ proxies:
   uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
   ws-opts:
     path: /GunService
-- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #15'
-  port: 8443
-  server: node-uk.connectsuite.org
-  servername: node-uk.connectsuite.org
-  tls: true
-  type: vless
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
 - encryption: none
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #19'
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #18'
   network: ws
   port: 80
   server: 57.129.132.223
@@ -93,19 +83,6 @@ proxies:
   uuid: 408c814e-f70a-4d16-b3b3-8182bb70211d
   ws-opts:
     path: /GunServicefp=chrome
-- client-fingerprint: chrome
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #9'
-  network: ws
-  port: 443
-  server: 146.75.59.186
-  servername: cdn.akamai.steamstatic.com
-  tls: true
-  type: vless
-  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
-  ws-opts:
-    headers:
-      Host: ukoijji.global.ssl.fastly.net
-    path: /
 - client-fingerprint: firefox
   encryption: none
   name: 🇬🇧_GB_英国_IPV4
@@ -121,6 +98,13 @@ proxies:
     headers:
       Host: 666-7sf.pages.dev
     path: /
+- name: '🏳[www.v2nodes.com] vless- #36'
+  port: 8443
+  server: node-uk.connectsuite.org
+  servername: node-uk.connectsuite.org
+  tls: true
+  type: vless
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
 - cipher: aes-256-cfb
   name: 🇬🇧GB-16.60.30.137-0336
   password: amazonskr05
@@ -254,12 +238,6 @@ proxies:
   server: 82.38.31.210
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.212-0187
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.212
-  type: ss
-- cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.214-0215
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
@@ -343,11 +321,11 @@ proxies:
   port: 7001
   server: 94.156.250.148
   type: ss
-- cipher: aes-256-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1602... #1'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.176.206.9
+- cipher: aes-128-gcm
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1451... #1'
+  password: shadowsocks
+  port: 443
+  server: 158.173.24.73
   type: ss
 - cipher: aes-256-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1615... #2'
@@ -379,18 +357,17 @@ proxies:
   port: 1353
   server: 185.194.191.35
   type: ss
-- cipher: aes-128-gcm
-  name: '🏳[www.v2nodes.com] ss- #25'
-  password: shadowsocks
-  port: 443
-  server: 158.173.24.73
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #9'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 185.176.206.9
   type: ss
-- name: 🇬🇧GB_2|1.2MB/s|P002-260618
-  password: None
-  port: 9443
-  server: 84.17.50.129
+- name: 🇬🇧GB_1|2.0MB/s|R002-260618
+  port: 443
+  server: 212.102.63.31
   skip-cert-verify: true
-  sub_tag: P002-260618
+  sub_tag: R002-260618
   tls: true
   type: http
   udp: true

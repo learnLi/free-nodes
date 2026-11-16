@@ -6,7 +6,7 @@ proxies:
   skip-cert-verify: true
   sni: t2w2t2w2.bpca2026.top
   type: trojan
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 208.69.78.158
@@ -29,17 +29,3 @@ proxies:
   port: 19999
   server: 23.166.88.127
   type: ss
-- name: 🇨🇭CH_1|1.6MB/s
-  port: 9443
-  server: 149.88.27.46
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇨🇭CH_2|2.9MB/s
-  port: 443
-  server: 31.7.62.50
-  skip-cert-verify: true
-  tls: true
-  type: http

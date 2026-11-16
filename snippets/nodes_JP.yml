@@ -15,19 +15,45 @@ proxies:
     path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-172.105.223.136-1773
+  name: 🇯🇵JP-140.83.84.209-2373
+  network: ws
+  port: 1234
+  server: 140.83.84.209
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e94247e0-d3e5-4f96-d8f3-b2144b383292
+  ws-opts:
+    path: /1234
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-147.78.244.7-1790
   network: ws
   port: 443
-  server: 172.105.223.136
+  server: 147.78.244.7
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
+  uuid: c2907a9a-5024-41fd-be3c-30885585e3ef
   ws-opts:
     headers:
-      Host: www.microsoft.com
+      Host: virmach.qweasdzxc.gq
     path: /
+- alterId: 2
+  cipher: auto
+  name: 🇯🇵JP-153.122.173.53-3545
+  network: ws
+  port: 32407
+  server: 153.122.173.53
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 26c5fdc7-b3be-3482-9a45-d97b958a889a
+  ws-opts:
+    path: /v2ray
 - alterId: 0
   cipher: auto
   name: 🇯🇵_JP_日本_IPV4
@@ -50,17 +76,17 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1827146658
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
 - cipher: aes-128-gcm
   name: 🇯🇵JP-168.138.205.100-0292
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
+  password: 3eOFeNssde7PYYMv
+  port: 80
+  server: 84.247.155.196
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'

@@ -1,4 +1,32 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | E90108
+  network: ws
+  port: 443
+  server: zwRcf79GExd13VGH.v.3dns.vip
+  servername: zwRcf79GExd13VGH.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: ad8685f2-5d17-411e-855c-1cc2ed5144a9
+  ws-opts:
+    headers:
+      Host: zwRcf79GExd13VGH.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-1.238.102.214-7651
+  network: ws
+  port: 30001
+  server: 1.238.102.214
+  servername: p3.chigua.tk
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
+  ws-opts:
+    path: /vmess
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   network: ws
   port: 25555
@@ -22,7 +50,7 @@ proxies:
       Host: fs.qicai99.com
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #6'
+  name: '🇰🇷[www.v2nodes.com] vless-KR-3... #5'
   network: ws
   port: 8443
   server: 64.110.79.66
@@ -41,28 +69,3 @@ proxies:
   skip-cert-verify: true
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   type: trojan
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 43.201.54.5
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: 🇰🇷KR_1|1.5MB/s|R002-260618
-  port: 443
-  server: 152.69.230.221
-  skip-cert-verify: true
-  sni: 152.69.230.221
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇰🇷KR_2|4.9MB/s
-  port: 80
-  server: 211.188.55.218
-  skip-cert-verify: true
-  type: http
