@@ -12,33 +12,17 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | D784E0
-  network: ws
-  port: 443
-  server: 194.226.142.120
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alpn:
-  - h2
-  client-fingerprint: ios
+- client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: mobile.api.Event
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #4'
   network: grpc
   port: 443
-  server: vps2.nemnogogo.com
-  servername: vps2.nemnogogo.com
+  server: 201.24.116.192
+  servername: vps3.nemnogogo.com
   tls: true
   type: vless
-  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
 - alpn:
   - h2
   client-fingerprint: chrome
@@ -52,9 +36,49 @@ proxies:
   tls: true
   type: vless
   uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+- name: 🇷🇺216805 | ⚡️Telegram = t.me/L...
+  password: 41edb44c8e
+  port: 11592
+  server: srv-17e124.21freedom.net
+  skip-cert-verify: true
+  sni: srv-17e124
+  tls: false
+  type: hysteria2
+- cipher: chacha20-ietf-poly1305
+  name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
+  password: VVlAff77CnAU43Aoc5j15Y
+  port: 5112
+  server: 90.156.203.62
+  type: ss
 - cipher: aes-128-gcm
-  name: '🇷🇺[www.v2nodes.com] ss-RU-1617... #1'
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1617...
   password: 8722de56b6c0b3f6a4d01cf91c07e6aa
   port: 13108
   server: 38.60.223.125
   type: ss
+- cipher: aes-256-gcm
+  name: '🇷🇺[www.v2nodes.com] ss-RU-1620... #1'
+  password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+  port: 18443
+  server: 185.22.153.117
+  type: ss
+- name: 🇷🇺RU_1|3.0MB/s|R002-260618
+  port: 1446
+  server: 46.29.166.134
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: 🇷🇺RU_2|1.9MB/s|P002-260618
+  password: 'null'
+  port: 1446
+  server: 46.29.166.134
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+  username: 'null'
+  x-toolall-mihomo: true

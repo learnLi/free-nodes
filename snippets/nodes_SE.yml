@@ -1,4 +1,14 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 13C720
+  network: tcp
+  port: 1270
+  server: 138.199.55.230
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
   password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   port: 443
@@ -9,6 +19,12 @@ proxies:
   password: AxIYWtskJWIIaefW
   port: 8388
   server: 70.34.212.124
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇸🇪[www.v2nodes.com] ss-SE-1620... #1'
