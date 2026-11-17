@@ -1,6 +1,16 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 18B440
+  network: tcp
+  port: 16291
+  server: zfd-boardv2.kunlun01dns.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+- alterId: 0
+  cipher: auto
   name: HK 🇭🇰 | @Raydikalx | 4641D1
   network: ws
   port: 443
@@ -15,55 +25,33 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 4B13CB
+  name: HK 🇭🇰 | @Raydikalx | 6A0ADC
   network: ws
-  port: 443
-  server: 8.218.184.4
+  port: 57278
+  server: 156.239.224.107
   servername: ''
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: NYcQg19zkwaCPM1B.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 79DDC5
-  network: ws
-  port: 443
-  server: m01c7b2z26dtqgee.v.3dns.vip
-  servername: m01c7b2z26dtqgee.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 951B24
-  network: ws
-  port: 443
-  server: lcv8v9l7oyamxxfz.v.3dns.vip
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #1'
-  network: http
-  port: 52080
-  server: 47.242.81.94
-  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
+  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
+  ws-opts:
+    path: /
 - alterId: 0
   cipher: auto
-  name: '🇭🇰 香港 | HKG #4'
+  name: HK 🇭🇰 | @Raydikalx | F71C5F
+  network: ws
+  port: 443
+  server: 68.64.182.121
+  servername: renderer-stream-2-62.mirra.now
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: auto
+  name: '🇭🇰 香港 | HKG #2'
   network: ws
   port: 443
   server: cdns.doon.eu.org
@@ -71,12 +59,26 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: vmess
-  udp: true
   uuid: 8614bde7-34cf-4413-8360-e96f1b960528
   ws-opts:
     headers:
       Host: consisting-hosted-memphis-tee.trycloudflare.com
     path: /vmess-argo?ed=2560
+- alterId: 0
+  cipher: auto
+  name: '🇭🇰 香港 | HKG #4'
+  network: ws
+  port: 23026
+  server: 47.244.120.197
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  ws-opts:
+    headers:
+      Host: 47.244.120.197
+    path: /arki
 - alterId: 0
   cipher: auto
   name: 🇭🇰HK-156.245.232.239-0317
@@ -92,43 +94,27 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-47.244.120.197-1126
-  network: ws
-  port: 23026
-  server: 47.244.120.197
+  name: 🇭🇰HK-47.242.52.13-1695
+  network: http
+  port: 31152
+  server: 47.242.52.13
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
-  ws-opts:
-    headers:
-      Host: 47.244.120.197
-    path: /arki
+  uuid: 59cf21e6-d029-47d8-9c37-7ef34280b9d1
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-8.210.15.231-1686
+  name: 🇭🇰HK-47.243.36.34-1798
   network: http
-  port: 41083
-  server: 8.210.15.231
+  port: 55986
+  server: 47.243.36.34
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 1d1ad417-29ed-41e8-aaed-323f797efe6b
+  uuid: 87ed289f-cae3-49b4-bbe3-23da298c0e81
 - name: 🇭🇰[www.v2nodes.com] vless-HK-1...
-  network: ws
-  port: 443
-  server: 38.207.177.204
-  servername: fs.qicai99.com
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: /fp=chromefp=chrome
-- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   network: ws
   port: 443
   server: 23.156.153.40
@@ -140,19 +126,19 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /fp=chromesecurity=tls
-- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #2'
+- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   network: ws
   port: 443
-  server: 68.64.182.205
+  server: 38.207.177.204
   servername: fs.qicai99.com
-  tls: false
+  tls: true
   type: vless
   uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
     headers:
       Host: fs.qicai99.com
-    path: /fp=chromesecurity=tls
-- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #7'
+    path: /fp=chromefp=chrome
+- name: '🇭🇰[www.v2nodes.com] vless-HK-1... #5'
   network: ws
   port: 443
   server: 23.156.153.40
@@ -165,7 +151,7 @@ proxies:
       Host: fs.qicai99.com
     path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #8'
+  name: '🇭🇰[www.v2nodes.com] vless-HK-1... #6'
   network: ws
   port: 443
   server: 38.207.177.204
@@ -177,29 +163,28 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /fp=chrome
-- name: '🇭🇰 香港 | HKG #3'
+- name: 🇭🇰[www.v2nodes.com] trojan-HK-...
   password: '!!str 12012'
   port: 12012
   server: 47.242.93.89
   skip-cert-verify: true
   sni: ali-hk.b-gfw.cfd
   type: trojan
-  udp: true
-- cipher: aes-128-gcm
-  name: 🇭🇰[www.v2nodes.com] ss-HK-1599...
-  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
-  port: 40010
-  server: c17b957c5a76ec76.lebufflonfermegroup.us
-  type: ss
-- cipher: aes-128-gcm
-  name: '🇭🇰[www.v2nodes.com] ss-HK-1621... #1'
-  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
-  port: 40011
-  server: c17b957c5a76ec76.lebufflonfermegroup.us
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #11'
-  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
-  port: 8388
-  server: 209.248.57.105
-  type: ss
+- auth: b0917015b656b3dd2286b5633af0c5c1
+  name: '🇭🇰 香港 | HKG #5'
+  password: b0917015b656b3dd2286b5633af0c5c1
+  port: 50160
+  server: 31.57.248.176
+  skip-cert-verify: true
+  sni: www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147
+  tls: false
+  type: hysteria2
+- name: 🇭🇰216973 | ⚡️Telegram = t.me/L...
+  obfs: salamander
+  obfs-password: 9veAh9pTbrAfDwM1fIYI
+  password: hAUdd15a7YGHUSgiPOUz
+  port: 443
+  server: 43.103.2.53
+  skip-cert-verify: true
+  tls: false
+  type: hysteria2

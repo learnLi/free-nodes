@@ -1,53 +1,81 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 005985
-  network: ws
-  port: 16626
-  server: planb.mojcn.com.linuxlh.xin
+  name: DE 🇩🇪 | @Raydikalx | 1A228E
+  network: tcp
+  port: 56189
+  server: 109.70.74.78
   servername: ''
   tls: false
   type: vmess
-  uuid: 4a9bbf17-5684-452c-9b84-ba3743a5b819
+  uuid: c11c7002-22ca-41e2-a433-ecf262341408
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 1A6741
+  network: ws
+  port: 16626
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: 2498a366-dd3c-4f0b-832c-f2df12f7ee27
   ws-opts:
     headers:
-      Host: f2a1fd8cc931919f1ada44cdfa8310e9.mobgslb.tbcache.com
+      Host: 791f9b5b1318471268a2dc21098376cc.mobgslb.tbcache.com
     path: /
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 03788B
+  name: DE 🇩🇪 | @Raydikalx | 1F4D9D
+  network: tcp
+  port: 15307
+  server: 5.75.192.206
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 1c3b61a1-cfd5-41e3-99b7-061203decf66
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 226785
+  network: ws
+  port: 2053
+  server: 104.105.18.214
+  servername: deapp.jisuyun.top
+  tls: true
+  type: vmess
+  uuid: 9a1a05d9-69be-45d3-e326-c6621edf7b31
+  ws-opts:
+    headers:
+      Host: deapp.jisuyun.top
+    path: /devm
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 2343B2
   network: tcp
   port: 9443
   server: ar.paydar.site
   servername: ''
   tls: false
   type: vmess
-  uuid: 0f6d91ec-0c88-45f9-b359-1520d7b30e66
+  uuid: b092208e-5589-4206-ab8e-d15df701b958
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 1444B4
-  network: ws
+  name: DE 🇩🇪 | @Raydikalx | 4CD3F9
+  network: httpupgrade
   port: 443
-  server: 212.95.34.195
-  servername: ''
-  skip-cert-verify: true
+  server: 193.148.253.210
+  servername: 193.148.253.210
   tls: true
   type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
+  uuid: 4878b80d-7602-499c-b742-b09ac4355e0b
 - alterId: 0
-  cipher: none
-  name: DE 🇩🇪 | @Raydikalx | 1E4C77
-  network: tcp
-  port: 8880
-  server: funnymemes.goalir.co.uk
-  servername: ''
-  tls: false
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 4FE27D
+  network: xhttp
+  port: 443
+  server: nginx.greewebservices.ir
+  servername: nginx.greewebservices.ir
+  tls: true
   type: vmess
-  uuid: 677b49b0-9cfe-4358-93a7-15579a6708a3
+  uuid: 183cd41d-d95c-461a-9792-8188c199c33c
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 53A099
@@ -64,41 +92,158 @@ proxies:
     path: /linkvws
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | A09BDC
+  name: DE 🇩🇪 | @Raydikalx | 57F842
+  network: tcp
+  port: 37044
+  server: 195.26.26.162
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e1181cc7-6ff1-46b0-8351-6fae301d986a
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 8F8CE6
+  network: ws
+  port: 16632
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: 0c657913-e593-4893-9555-f88478c33a4b
+  ws-opts:
+    headers:
+      Host: f784fdb75e4fc8a478c10d9acff513d3.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 99997B
+  network: tcp
+  port: 54668
+  server: 109.70.74.202
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 5cc094c4-3f86-4a0b-975d-498562f6a80d
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 9C56F6
   network: ws
   port: 33744
   server: de-d21e56c13c.shamanapp.online
-  servername: ''
   tls: false
   type: vmess
   uuid: b3a11068-1a7e-4643-85de-7c82cce46943
   ws-opts:
     headers:
-      Host: de-d21e56c13c.shamanapp.online
+      Host: de-d21e56c13c.shamanapp.online:33744
     path: /ShamanVMESS2026
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | F5F099
+  name: DE 🇩🇪 | @Raydikalx | 9F5A7D
   network: tcp
-  port: 56189
-  server: 109.70.74.78
+  port: 443
+  server: 167.235.70.202
   servername: ''
   tls: false
   type: vmess
-  uuid: 5867a48b-d3b2-41ff-a5a7-c712dfc0a959
+  uuid: 7209d7ee-cfd0-46c0-a580-d92e2f0c801c
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | F79465
+  name: DE 🇩🇪 | @Raydikalx | AF6C6A
+  network: ws
+  port: 443
+  server: wEh2vblW4uUWgvyF.v.3dns.vip
+  servername: wEh2vblW4uUWgvyF.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: wEh2vblW4uUWgvyF.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | B9B048
   network: tcp
-  port: 2087
-  server: 31.184.244.6
+  port: 2121
+  server: tokien.mrmtn.xyz
   servername: ''
   tls: false
   type: vmess
-  uuid: 6b306661-93c7-4653-94d6-a8adb742b82f
+  uuid: 29c4a3bd-9d8c-4ac3-b279-8b201560c227
 - alterId: 0
   cipher: auto
-  name: 🇩🇪DE-162.55.174.135-3778
+  name: DE 🇩🇪 | @Raydikalx | C144FB
+  network: tcp
+  port: 8880
+  server: funnymemes.goalir.co.uk
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 62c0dde8-ffdb-4659-b749-a7ffef832392
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | D9A50D
+  network: tcp
+  port: 54588
+  server: 195.26.26.148
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 5fa81b59-214d-4d6e-9397-e3914926ed21
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | EF9BB7
+  network: ws
+  port: 443
+  server: 9FvMZovqvgV9O0xM.v.3dns.vip
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 10d6665f-10c9-4f03-9b83-ba45968f748d
+  ws-opts:
+    headers:
+      Host: 9FvMZovqvgV9O0xM.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | F24AF6
+  network: ws
+  port: 443
+  server: WaNwWDK0WcLQ15w0.v.3dns.vip
+  servername: WaNwWDK0WcLQ15w0.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: WaNwWDK0WcLQ15w0.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | FC7D08
+  network: tcp
+  port: 33554
+  server: 195.26.26.74
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: b6ad0562-0df9-4bd4-8a9a-9e25d7868604
+- alterId: 0
+  cipher: auto
+  name: MY 🇲🇾 | @Raydikalx | E7C7DE
+  network: ws
+  port: 43063
+  server: 47.250.45.234
+  tls: false
+  type: vmess
+  uuid: c77f48f5-4be3-4461-b52b-49998e7b897b
+  ws-opts:
+    headers:
+      Host: 47.250.45.234
+    path: /arki
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪DE-162.55.174.135-3936
   network: ws
   port: 80
   server: 162.55.174.135
@@ -111,40 +256,17 @@ proxies:
     path: /graphql
 - alterId: 0
   cipher: auto
-  name: 🇩🇪DE-162.55.214.110-5063
-  network: ws
-  port: 51549
-  server: 162.55.214.110
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 6399ab58-b7ce-4d24-be9e-92c581c93b44
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪DE-167.235.78.112-3994
+  name: 🇩🇪DE-89.163.213.20-2579
   network: ws
   port: 80
-  server: 167.235.78.112
+  server: 89.163.213.20
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  uuid: 5668ff97-631f-4602-a13f-b56552c67abe
   ws-opts:
-    path: /telegram-id-@privatevpns
-- alterId: 0
-  cipher: auto
-  name: 🇩🇪DE德国
-  network: tcp
-  port: 52080
-  server: 23.165.200.150
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
+    path: /vmess
 - name: 🇩🇪DE-193.108.119.15-0328
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -164,26 +286,26 @@ proxies:
   sni: blog.iloverussia2026.com
   type: trojan
 - cipher: aes-256-gcm
-  name: 🇩🇪DE-193.108.119.2-0181
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.108.119.2
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇩🇪DE-23.157.88.43-0193
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1615...
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.157.88.43
   type: ss
 - cipher: aes-256-gcm
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1616...
+  name: '🇩🇪[www.v2nodes.com] ss-DE-1615... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 193.108.119.2
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇩🇪[www.v2nodes.com] ss-DE-1616... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 57.129.83.85
   type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #9'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 193.108.119.3
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  password: zZMNTGpPl38ASlbI1EKOBJ
+  port: 46303
+  server: 135.220.178.46
   type: ss

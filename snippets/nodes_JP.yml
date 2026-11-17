@@ -1,23 +1,39 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-138.2.52.244-7689
+  name: JP 🇯🇵 | @Raydikalx | 368E3D
+  network: ws
+  port: 25686
+  server: 140.83.51.161
+  servername: 140.83.51.161
+  tls: false
+  type: vmess
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
+  ws-opts:
+    headers:
+      Host: 140.83.51.161
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-168.138.203.232-0453
   network: ws
   port: 443
-  server: 138.2.52.244
-  servername: lg30.cfcdn3.xyz
+  server: suzhihan.eu.org
+  servername: suzhihan.eu.org
   skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  uuid: 0b873cff-11ab-4716-c41a-04f886135091
   ws-opts:
-    path: /ray
-- name: 日本2|@ripaojiedian
-  network: tcp
-  password: d050aca3-9df2-4461-90ec-92373c1d7636
-  port: 44184
-  server: v2jp.k1.ssnss.live
+    headers:
+      Host: suzhihan.eu.org
+    path: /roewesu
+- name: '🇳🇬 尼日利亚 | NGA #1'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20051
+  server: sclass-b1.catcat321.com
   skip-cert-verify: true
+  sni: hk.catxstar.com
   type: trojan
   udp: true
 - cipher: aes-256-gcm
@@ -26,24 +42,29 @@ proxies:
   port: 443
   server: 84.247.155.196
   type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 日本 | JPN #3'
-  password: BeaUf9c0AEWH40Pu
-  port: 8388
-  server: 154.36.158.197
-  type: ss
-  udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵JP-168.138.205.100-5784
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100
   type: ss
+- cipher: aes-128-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-1291... #1'
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.240
+  type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
   password: 3eOFeNssde7PYYMv
   port: 80
   server: 84.247.155.196
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇯🇵[www.v2nodes.com] ss-JP-1599...
+  password: BeaUf9c0AEWH40Pu
+  port: 8388
+  server: 154.36.158.197
   type: ss
 - cipher: aes-128-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-9223... #1'

@@ -1,29 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 10A4FB
-  network: ws
-  port: 20026
-  server: 51.75.118.170
-  tls: false
-  type: vmess
-  uuid: d521503c-1b16-4263-89e8-d0f198e5a144
-  ws-opts:
-    headers:
-      Host: 51.75.118.170
-    path: /vmess/d521503c-1b16-4263-89e8-d0f198e5a144
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 8D380D
-  network: tcp
-  port: 1270
-  server: 46.105.222.155
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
   name: 🇫🇷FR-145.239.55.210-0263
   network: ws
   port: 80
@@ -37,6 +14,34 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-146.59.70.146-1412
+  network: ws
+  port: 443
+  server: 146.59.70.146
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: yichueng.org
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-51.38.82.132-7931
+  network: ws
+  port: 80
+  server: 51.38.82.132
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: aca76f27-cda3-47f7-af79-7873034fd3bc
+  ws-opts:
+    path: /vmess
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-54.37.131.126-0298
@@ -55,35 +60,22 @@ proxies:
 - client-fingerprint: chrome
   name: '🇫🇷 法国 | FRA #1'
   port: 443
-  server: 151.101.36.88
-  servername: accounts.fastly.com
-  tls: true
-  type: vless
-  uuid: ad9a885d-93bb-48e3-9937-57f1116b64e3
-- client-fingerprint: chrome
-  name: 🇫🇷FR_1|3.4MB/s
-  port: 443
-  server: 151.101.36.2
-  servername: accounts.fastly.com
-  tls: true
-  type: vless
-  uuid: ad9a885d-93bb-48e3-9937-57f1116b64e3
-- client-fingerprint: chrome
-  name: 🇫🇷FR_3|2.6MB/s
-  port: 443
   server: 167.82.64.7
   servername: cdn.akamai.steamstatic.com
   tls: true
   type: vless
   uuid: 88888888-8888-8888-8888-888888888888
-- client-fingerprint: chrome
-  name: 🇫🇷FR_5|1.8MB/s
-  port: 443
-  server: 151.101.36.246
-  servername: accounts.fastly.com
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: TunService
+  name: 🇫🇷 法国 | FRA 4
+  network: grpc
+  port: 8443
+  server: 122.8.47.9
+  servername: www.epson.com
   tls: true
   type: vless
-  uuid: ad9a885d-93bb-48e3-9937-57f1116b64e3
+  uuid: 97ab2e86-83c5-0a32-4914-5dbe1af97839
 - name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
   port: 443
@@ -98,19 +90,20 @@ proxies:
       Host: fraboijji.global.ssl.fastly.net.
     path: /security=tls
 - encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #12'
   network: ws
-  port: 14430
-  server: 138.124.70.41
-  servername: 138.124.70.41
-  tls: false
+  port: 443
+  server: 199.232.78.120
+  servername: cdn.akamai.steamstatic.com
+  skip-cert-verify: false
+  tls: true
   type: vless
-  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
+  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
   ws-opts:
     headers:
-      Host: 138.124.70.41
-    path: /vless
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #15'
+      Host: fraboijji.global.ssl.fastly.net.
+    path: /
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #18'
   network: ws
   port: 80
   server: ov-france1.09vpn.com
@@ -124,7 +117,7 @@ proxies:
     path: /vless/
 - client-fingerprint: chrome
   encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #17'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #20'
   network: ws
   port: 443
   server: 84.46.251.105
@@ -136,45 +129,30 @@ proxies:
     headers:
       Host: fs.qicai99.com
     path: /
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: grpc_common3
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
-  network: grpc
-  port: 51671
-  server: 152.228.139.33
-  servername: www.sony.com
-  tls: true
-  type: vless
-  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
-- alpn:
-  - http/1.1
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
   network: ws
   port: 443
-  server: 3.169.9.125
-  servername: d4afoyczh5tek.cloudfront.net
+  server: 84.46.251.105
+  servername: fs.qicai99.com
   tls: true
   type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
   ws-opts:
     headers:
-      Host: d4afoyczh5tek.cloudfront.net
+      Host: fs.qicai99.com
     path: /fp=chrome
-- encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+- name: '🏳[www.v2nodes.com] vless- #32'
   network: ws
-  port: 443
-  server: 199.232.78.120
-  servername: cdn.akamai.steamstatic.com
-  skip-cert-verify: false
-  tls: true
+  port: 14430
+  server: 138.124.70.41
+  servername: 138.124.70.41
+  tls: false
   type: vless
-  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
+  uuid: 6cc745e3-4eb9-46c8-a4a1-85dee7b87edc
   ws-opts:
     headers:
-      Host: fraboijji.global.ssl.fastly.net.
-    path: /
+      Host: 138.124.70.41
+    path: /vless
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -185,17 +163,23 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.50
+  server: 104.18.152.77
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.77
+  server: 104.18.152.50
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇫🇷FR-51.77.144.182-0308
+  password: x19py0a8ipglqkbe
+  port: 8080
+  server: 51.77.144.182
+  type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -212,37 +196,25 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 172.99.189.142
+  server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.175
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 167.17.64.22
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
+  name: '🏳[www.v2nodes.com] ss- #16'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
   type: ss
 - cipher: aes-256-gcm
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  password: 3411b0af-589e-40f3-b8d5-d2e04ce19fa9
-  port: 21191
-  server: c17b957c5a76ec76.lebufflonfermegroup.us
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🏳[www.v2nodes.com] ss- #10'
-  password: 29irqk0paakcx19v
-  port: 8080
-  server: 51.83.61.102
+  name: '🏳[www.v2nodes.com] ss- #17'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 172.99.189.142
   type: ss
 - name: FR_speednode_0008
   port: 19362
@@ -258,6 +230,22 @@ proxies:
   tls: true
   type: http
   udp: true
+- name: FR_speednode_0010
+  password: 'null'
+  port: 23856
+  server: 51.159.225.196
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  username: 'null'
+- name: FR_speednode_0011
+  port: 23856
+  server: 51.159.225.196
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 - name: FR_speednode_0012
   port: 443
   server: 82.65.162.76
@@ -265,30 +253,3 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_1|3.3MB/s|R002-260618
-  password: 'null'
-  port: 6103
-  server: 87.98.174.157
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  username: 'null'
-  x-toolall-mihomo: true
-- name: 🇫🇷FR_2|3.3MB/s|P002-260618
-  password: 'null'
-  port: 443
-  server: 82.66.235.221
-  skip-cert-verify: true
-  sub_tag: P002-260618
-  tls: true
-  type: http
-  udp: true
-  username: 'null'
-  x-toolall-mihomo: true
-- name: 🇫🇷FR_3|1.2MB/s
-  port: 4388
-  server: 45.74.31.42
-  skip-cert-verify: true
-  type: socks5
