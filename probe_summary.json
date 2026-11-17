@@ -1,22 +1,22 @@
 {
-  "total": 938,
+  "total": 878,
   "egress": {
-    "ip": "57.151.125.219",
+    "ip": "20.83.159.1",
     "method": "direct",
     "country": "United States",
     "city": "Washington",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 894,
-  "tcp_ok": 763,
-  "tcp_rate": "85.3%",
-  "tls_applicable": 432,
-  "tls_ok": 401,
-  "tls_rate": "92.8%",
-  "quic_applicable": 44,
+  "tcp_applicable": 836,
+  "tcp_ok": 715,
+  "tcp_rate": "85.5%",
+  "tls_applicable": 397,
+  "tls_ok": 342,
+  "tls_rate": "86.1%",
+  "quic_applicable": 42,
   "quic_ok": 0,
   "quic_rate": "0.0%",
-  "udp_skipped": 44,
+  "udp_skipped": 42,
   "refs": [
     {
       "host": "1.1.1.1",
@@ -41,13 +41,9 @@
     }
   ],
   "by_type": {
-    "anytls": {
-      "total": 1,
-      "ok": 1
-    },
     "http": {
-      "total": 43,
-      "ok": 43
+      "total": 25,
+      "ok": 25
     },
     "hysteria": {
       "total": 2,
@@ -58,29 +54,25 @@
       "ok": 1
     },
     "ss": {
-      "total": 270,
-      "ok": 223
+      "total": 266,
+      "ok": 222
     },
     "trojan": {
-      "total": 144,
-      "ok": 134
+      "total": 131,
+      "ok": 124
     },
     "vless": {
-      "total": 238,
-      "ok": 230
+      "total": 249,
+      "ok": 238
     },
     "vmess": {
-      "total": 194,
-      "ok": 131
-    },
-    "wireguard": {
-      "total": 1,
-      "ok": 0
+      "total": 162,
+      "ok": 105
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 44,
+      "total": 42,
       "ok": 0
     }
   }

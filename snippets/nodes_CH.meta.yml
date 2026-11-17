@@ -1,14 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: '🇨🇭 瑞士 | CHE #2'
-  network: http
-  port: 42831
-  server: 179.43.140.24
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: a925a98c-ad7a-40c6-9fdf-130a1de69416
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: grpc
@@ -31,13 +21,13 @@ proxies:
   tls: true
   type: vless
   uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #3'
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 208.69.78.33
   sni: courses.yourultimateprofessionalcareerhub.com
   type: trojan
-- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #5'
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #6'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 208.69.78.158

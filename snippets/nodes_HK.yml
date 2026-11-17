@@ -1,79 +1,185 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 18B440
+  name: HK 🇭🇰 | @Raydikalx | 00D9A1
   network: tcp
-  port: 16291
-  server: zfd-boardv2.kunlun01dns.com
+  port: 16115
+  server: zfd-hkv1.kunlun01dns.com
   servername: ''
   tls: false
   type: vmess
   uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 4641D1
+  name: HK 🇭🇰 | @Raydikalx | 30A3AC
   network: ws
   port: 443
-  server: 8.217.254.88
-  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
+  server: 47.86.107.119
+  servername: lcv8v9l7OyamxxfZ.v.3dns.vip
+  skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: 2b9hwY8oCx7Q74NM.v.3dns.vip
+      Host: lcv8v9l7OyamxxfZ.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 6A0ADC
-  network: ws
-  port: 57278
-  server: 156.239.224.107
+  name: HK 🇭🇰 | @Raydikalx | 346115
+  network: tcp
+  port: 20143
+  server: 91.149.236.46
   servername: ''
   tls: false
   type: vmess
-  uuid: 1270bed5-f908-4ecc-f1c8-de246033b186
+  uuid: 6785594d-31c8-48ff-c7ad-9f99c9483bf0
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 4023A7
+  network: tcp
+  port: 800
+  server: 47.86.167.194
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: f2c67cae-c09d-4739-947d-f5302d87a3c0
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 9B0AE9
+  network: ws
+  port: 443
+  server: 93ucrn4i0pffuabk.v.3dns.vip
+  servername: 93ucrn4i0pffuabk.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | A72DB6
+  network: ws
+  port: 443
+  server: n1761296892.4u9ma.icu
+  servername: n1761296892.4u9ma.icu
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: d6db128f-42b9-40b1-b979-5e0095fa593c
+  ws-opts:
+    headers:
+      Host: n1761296892.4u9ma.icu
     path: /
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | F71C5F
+  name: HK 🇭🇰 | @Raydikalx | D92730
   network: ws
   port: 443
-  server: 68.64.182.121
-  servername: renderer-stream-2-62.mirra.now
+  server: qtkdr8jxe3wefxjm.v.3dns.vip
+  servername: qTKDR8jXE3wEFxJM.v.3dns.vip
   tls: true
   type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
+      Host: qTKDR8jXE3wEFxJM.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | E51D72
+  network: ws
+  port: 443
+  server: dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn
+  servername: dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn
+  tls: true
+  type: vmess
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: dee2309db4944c248b6d4372c6641e7b.oylfmxz.cn
+    path: /
+- alterId: 0
+  cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | E5C65E
+  network: tcp
+  port: 16280
+  server: zfd-boardv2.kunlun01dns.com
+  tls: false
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+- alterId: 0
+  cipher: auto
+  name: 'HK3 #1'
+  network: ws
+  port: 443
+  server: 47.243.194.125
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: nycqg19zkwacpm1b.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
   name: '🇭🇰 香港 | HKG #2'
   network: ws
+  port: 44867
+  server: 47.244.120.197
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  ws-opts:
+    path: /arki
+- alterId: 0
+  cipher: auto
+  name: '🇭🇰 香港 | HKG #3'
+  network: ws
   port: 443
-  server: cdns.doon.eu.org
-  servername: consisting-hosted-memphis-tee.trycloudflare.com
+  server: prozac-celebrities-inclusion-parallel.trycloudflare.com
+  servername: prozac-celebrities-inclusion-parallel.trycloudflare.com
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 8614bde7-34cf-4413-8360-e96f1b960528
+  udp: true
+  uuid: 2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea
   ws-opts:
     headers:
-      Host: consisting-hosted-memphis-tee.trycloudflare.com
-    path: /vmess-argo?ed=2560
+      Host: prozac-celebrities-inclusion-parallel.trycloudflare.com
+    path: /2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea-vm
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  http-opts:
+    headers:
+      Host:
+      - openai.com
+    method: GET
+    path:
+    - /QQqun-737805443
+  name: '🇭🇰 香港 | HKG #4'
+  network: http
+  port: 52080
+  server: 47.242.81.94
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
 - alterId: 0
   cipher: auto
-  name: '🇭🇰 香港 | HKG #4'
+  name: '🇭🇰 香港 | HKG #5'
   network: ws
   port: 23026
   server: 47.244.120.197
   skip-cert-verify: true
   tls: false
   type: vmess
-  udp: true
   uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
   ws-opts:
     headers:
@@ -94,30 +200,38 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-47.242.52.13-1695
+  name: 🇭🇰HK-47.242.56.3-1794
   network: http
-  port: 31152
-  server: 47.242.52.13
+  port: 37064
+  server: 47.242.56.3
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 59cf21e6-d029-47d8-9c37-7ef34280b9d1
+  uuid: d2a10a17-6191-472c-896b-782331f49fb9
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-47.243.36.34-1798
-  network: http
-  port: 55986
-  server: 47.243.36.34
+  name: '🇭🇰HK-47.244.120.197-0297 #1'
+  network: ws
+  port: 36703
+  server: 47.244.120.197
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 87ed289f-cae3-49b4-bbe3-23da298c0e81
-- name: 🇭🇰[www.v2nodes.com] trojan-HK-...
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  ws-opts:
+    path: /
+- name: '🇭🇰[www.v2nodes.com] trojan-HK-... #1'
   password: '!!str 12012'
   port: 12012
   server: 47.242.93.89
   skip-cert-verify: true
   sni: ali-hk.b-gfw.cfd
   type: trojan
+- cipher: aes-256-gcm
+  name: '🇭🇰[www.v2nodes.com] ss-HK-1621... #1'
+  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
+  port: 8388
+  server: 209.248.57.105
+  type: ss
