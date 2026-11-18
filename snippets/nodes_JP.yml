@@ -1,51 +1,31 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 15C632
+  name: 🇯🇵JP-140.83.84.209-1800
   network: ws
-  port: 17577
-  server: 206.190.237.167
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 3ceb8486-fb82-462c-e989-89182fe660a5
-  ws-opts:
-    path: /3ceb8486
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | CE63C1
-  network: ws
-  port: 8081
-  server: 168.110.63.247
-  servername: 168.110.63.247
-  tls: false
-  type: vmess
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
-  ws-opts:
-    path: /vless
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | E40342
-  network: raw
-  port: 18112
-  server: 168.110.60.104
-  tls: false
-  type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-152.69.197.74-2556
-  network: ws
-  port: 12345
-  server: 152.69.197.74
+  port: 1234
+  server: 140.83.84.209
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: b8a6bf58-485a-4046-b386-b3661bf65eff
+  uuid: e94247e0-d3e5-4f96-d8f3-b2144b383292
   ws-opts:
-    path: /bb
-- name: 日本2|@ripaojiedian
+    path: /1234
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-43.128.225.220-2212
+  network: ws
+  port: 80
+  server: 43.128.225.220
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 03fa8e54-41be-4e3b-b70c-50b3750b5fdc
+  ws-opts:
+    path: /
+- name: '日本2|@ripaojiedian #1'
   network: tcp
   password: d050aca3-9df2-4461-90ec-92373c1d7636
   port: 44184
@@ -53,14 +33,13 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: '🇳🇬 尼日利亚 | NGA #2'
+- name: '🇳🇬[www.v2nodes.com] trojan-NG-... #3'
   password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20051
-  server: sclass-b1.catcat321.com
+  port: 20103
+  server: sclass-01.catcat321.com
   skip-cert-verify: true
   sni: hk.catxstar.com
   type: trojan
-  udp: true
 - cipher: aes-256-gcm
   name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
@@ -68,7 +47,7 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
-  name: 🇯🇵JP-168.138.205.100-0229
+  name: 🇯🇵JP-168.138.205.100-0204
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100

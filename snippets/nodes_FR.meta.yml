@@ -1,7 +1,7 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0218
+  name: 🇫🇷FR-145.239.55.210-0190
   network: ws
   port: 80
   server: 145.239.55.210
@@ -28,7 +28,7 @@ proxies:
       Host: fraboijji.global.ssl.fastly.net.
     path: /security=tls
 - encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #12'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #11'
   network: ws
   port: 443
   server: 199.232.78.120
@@ -41,7 +41,7 @@ proxies:
     headers:
       Host: fraboijji.global.ssl.fastly.net.
     path: /
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #14'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #13'
   network: ws
   port: 14430
   server: 138.124.70.41
@@ -53,7 +53,7 @@ proxies:
     headers:
       Host: 138.124.70.41
     path: /vless
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #19'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #18'
   network: ws
   port: 80
   server: ov-france1.09vpn.com
@@ -65,18 +65,6 @@ proxies:
     headers:
       Host: ov-france1.09vpn.com
     path: /vless/
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
-  network: ws
-  port: 443
-  server: 84.46.251.105
-  servername: fs.qicai99.com
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: /fp=chrome
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -99,7 +87,7 @@ proxies:
   sni: www.ignitelimit.com
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-51.77.144.182-0208
+  name: 🇫🇷FR-51.77.144.182-0199
   password: x19py0a8ipglqkbe
   port: 8080
   server: 51.77.144.182
@@ -109,6 +97,12 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
@@ -177,14 +171,22 @@ proxies:
   tls: true
   type: http
   udp: true
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  auth_str: dongtaiwang.com
-  down: 50
-  name: 🇫🇷 法国 | FRA
-  port: 24667
-  server: 62.210.70.191
+- name: 🇫🇷FR_1|1.1MB/s|P002-260618
+  password: None
+  port: 9443
+  server: 138.199.47.247
   skip-cert-verify: true
-  type: hysteria
-  up: 10
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: 🇫🇷FR_2|1.1MB/s|R002-260618
+  port: 9443
+  server: 213.139.9.142
+  skip-cert-verify: true
+  sub_tag: R002-260618
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true

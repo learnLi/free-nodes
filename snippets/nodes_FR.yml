@@ -1,7 +1,7 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0218
+  name: 🇫🇷FR-145.239.55.210-0190
   network: ws
   port: 80
   server: 145.239.55.210
@@ -36,7 +36,7 @@ proxies:
   sni: www.ignitelimit.com
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-51.77.144.182-0208
+  name: 🇫🇷FR-51.77.144.182-0199
   password: x19py0a8ipglqkbe
   port: 8080
   server: 51.77.144.182
@@ -46,6 +46,12 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
