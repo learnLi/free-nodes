@@ -1,30 +1,26 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-140.83.84.209-1800
-  network: ws
-  port: 1234
-  server: 140.83.84.209
-  servername: ''
-  skip-cert-verify: true
+  name: JP 🇯🇵 | @Raydikalx | 031A3A
+  network: tcp
+  port: 18112
+  server: oc.imfun.fun
+  servername: null
   tls: false
   type: vmess
-  uuid: e94247e0-d3e5-4f96-d8f3-b2144b383292
-  ws-opts:
-    path: /1234
+  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-43.128.225.220-2212
+  name: JP 🇯🇵 | @Raydikalx | 74A719
   network: ws
   port: 80
-  server: 43.128.225.220
-  servername: ''
-  skip-cert-verify: true
+  server: 168.138.43.75
+  servername: 168.138.43.75
   tls: false
   type: vmess
-  uuid: 03fa8e54-41be-4e3b-b70c-50b3750b5fdc
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
   ws-opts:
-    path: /
+    path: /cctv13.m3u8
 - client-fingerprint: chrome
   name: 日本3|@ripaojiedian
   network: ws
@@ -227,13 +223,14 @@ proxies:
   skip-cert-verify: true
   type: trojan
   udp: true
-- name: '🇳🇬[www.v2nodes.com] trojan-NG-... #3'
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20103
-  server: sclass-01.catcat321.com
+- name: 🇯🇵218802 | ⚡️Telegram = t.me/L...
+  password: oracle_hy2_pass_2026
+  port: 8443
+  server: 129.225.181.46
   skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
+  sni: bing.com
+  tls: false
+  type: hysteria2
 - cipher: aes-256-gcm
   name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
@@ -271,8 +268,14 @@ proxies:
   server: 149.22.87.204
   type: ss
 - cipher: aes-128-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-9223... #1'
+  name: '🏳[www.v2nodes.com] ss- #14'
   password: shadowsocks
   port: 443
   server: 149.22.87.241
   type: ss
+- name: 🇯🇵JP_1|3.3MB/s
+  password: EGJDy5Kg
+  port: 42000
+  server: 103.248.150.50
+  type: socks5
+  username: paZFN3JA

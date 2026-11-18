@@ -1,6 +1,30 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 8D380D
+  network: tcp
+  port: 1270
+  server: 46.105.222.155
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 964E22
+  network: ws
+  port: 80
+  server: 2606:4700:9c66::3c6d:65
+  servername: vmess.lbw666.dpdns.org
+  tls: false
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  ws-opts:
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    path: /ws
+- alterId: 0
+  cipher: auto
   name: 🇫🇷FR-145.239.55.210-0190
   network: ws
   port: 80
@@ -86,6 +110,13 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- cipher: aes-256-gcm
+  name: '🇫🇷 法国 | FRA #1'
+  password: itzvpn@321
+  port: 8388
+  server: 107.161.160.28
+  type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇫🇷FR-51.77.144.182-0199
   password: x19py0a8ipglqkbe
@@ -96,28 +127,16 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 38.109.228.110
+  server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.27
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 172.99.189.142
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
@@ -133,6 +152,18 @@ proxies:
   password: 29irqk0paakcx19v
   port: 8080
   server: 51.83.61.102
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #8'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.109.228.110
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #9'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 172.99.189.142
   type: ss
 - name: FR_speednode_0008
   port: 19362
@@ -171,7 +202,7 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_1|1.1MB/s|P002-260618
+- name: 🇫🇷FR_1|3.5MB/s|P002-260618
   password: None
   port: 9443
   server: 138.199.47.247
@@ -181,7 +212,7 @@ proxies:
   type: http
   udp: true
   x-toolall-mihomo: true
-- name: 🇫🇷FR_2|1.1MB/s|R002-260618
+- name: 🇫🇷FR_2|2.2MB/s|R002-260618
   port: 9443
   server: 213.139.9.142
   skip-cert-verify: true

@@ -1,31 +1,5 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-152.69.230.170-0387
-  network: ws
-  port: 80
-  server: 152.69.230.170
-  servername: 152.69.230.170
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 6aa24ded-5f15-48c7-8cba-3e2a159d6b77
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-52.78.213.224-1913
-  network: ws
-  port: 80
-  server: 52.78.213.224
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 6f442823-6b73-4b31-f1f5-aa1e907b051e
-  ws-opts:
-    path: /
-- name: '🏳[www.v2nodes.com] trojan- #8'
+- name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
   server: 158.247.253.243
@@ -38,6 +12,13 @@ proxies:
   port: 6123
   server: 211.178.105.134
   type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #2'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 3.38.150.98
+  type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #1'
   password: '!!str 12242'
