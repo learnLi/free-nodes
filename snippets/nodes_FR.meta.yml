@@ -1,32 +1,7 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 692E54
-  network: ws
-  port: 18901
-  server: 2001:bc8:32d7:1a9::2
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
-  ws-opts:
-    path: /github.com/Alvin9999-newpac/fanqiang?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM#TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-141.95.55.70-8546
-  network: ws
-  port: 80
-  server: 141.95.55.70
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 18ca5b23-ead3-4adb-a153-d7ae32c10f54
-  ws-opts:
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0263
+  name: 🇫🇷FR-145.239.55.210-0218
   network: ws
   port: 80
   server: 145.239.55.210
@@ -38,21 +13,6 @@ proxies:
   ws-opts:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-54.37.131.126-0298
-  network: ws
-  port: 80
-  server: 54.37.131.126
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 1e55beca-3c69-4fa7-fb1f-15c1b767435f
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
     path: /
 - name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
@@ -105,21 +65,7 @@ proxies:
     headers:
       Host: ov-france1.09vpn.com
     path: /vless/
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #21'
-  network: ws
-  port: 443
-  server: 84.46.251.105
-  servername: fs.qicai99.com
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: /
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
   network: ws
   port: 443
   server: 84.46.251.105
@@ -153,7 +99,7 @@ proxies:
   sni: www.ignitelimit.com
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-51.77.144.182-0308
+  name: 🇫🇷FR-51.77.144.182-0208
   password: x19py0a8ipglqkbe
   port: 8080
   server: 51.77.144.182
@@ -181,6 +127,18 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.162.152.22
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
+  password: 29irqk0paakcx19v
+  port: 8080
+  server: 51.83.61.102
   type: ss
 - name: FR_speednode_0008
   port: 19362
@@ -219,3 +177,14 @@ proxies:
   tls: true
   type: http
   udp: true
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  auth_str: dongtaiwang.com
+  down: 50
+  name: 🇫🇷 法国 | FRA
+  port: 24667
+  server: 62.210.70.191
+  skip-cert-verify: true
+  type: hysteria
+  up: 10

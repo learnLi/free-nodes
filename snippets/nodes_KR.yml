@@ -1,32 +1,32 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇰🇷KR-1.238.102.214-7591
+  name: 🇰🇷KR-13.125.24.112-4782
   network: ws
-  port: 30001
-  server: 1.238.102.214
-  servername: p3.chigua.tk
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  ws-opts:
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: '🇰🇷KR-146.56.166.153-1149 #1'
-  network: ws
-  port: 443
-  server: 146.56.166.153
+  port: 49517
+  server: 13.125.24.112
   servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-132.145.80.230-1113
+  network: ws
+  port: 80
+  server: 132.145.80.230
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
   ws-opts:
     headers:
-      Host: clash6.ssr-free.xyz
-    path: /dongtaiwang.com
+      Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
 - name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -41,7 +41,7 @@ proxies:
   server: 211.178.105.134
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #1'
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
   password: '!!str 12242'
   port: 10099
   server: 115.161.136.145

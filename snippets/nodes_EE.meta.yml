@@ -1,1 +1,27 @@
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  name: IT 🇮🇹 | @Raydikalx | D0BEEA
+  network: tcp
+  port: 22324
+  server: 89.41.172.85
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: NL 🇳🇱 | @Raydikalx | BEE421
+  network: tcp
+  port: 22636
+  server: 185.19.33.150
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 213a2396-f6aa-4acd-a929-c461919fdec2
+- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #1'
+  port: 16443
+  server: 45.86.60.174
+  tls: false
+  type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
