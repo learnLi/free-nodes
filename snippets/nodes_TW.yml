@@ -1,16 +1,25 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇹🇼TW-165.154.246.107-4767
-  network: ws
-  port: 80
-  server: 165.154.246.107
+  name: TW 🇹🇼 | @Raydikalx | 353960
+  network: tcp
+  port: 22222
+  server: 103.160.180.26
   servername: ''
-  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: fa0702f4-8ec9-48e5-9b53-a0afb7c3717e
+  uuid: a5206a55-d5bd-41b9-92a5-bd27a90355ff
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | C3EB50
+  network: ws
+  port: 443
+  server: 9641684.sdf65h4.top
+  servername: 9641684.sdf65h4.top
+  tls: true
+  type: vmess
+  uuid: 250c015d-bab0-4ed3-b638-b4eda48f5840
   ws-opts:
     headers:
-      Host: tms.dingtalk.com
+      Host: 9641684.sdf65h4.top
     path: /

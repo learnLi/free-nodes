@@ -12,17 +12,17 @@ proxies:
     path: /bp-vmess
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 8D380D
+  name: FR 🇫🇷 | @Raydikalx | A723A2
   network: tcp
-  port: 1270
-  server: 46.105.222.155
-  servername: xmfhlpy.com
-  tls: true
+  port: 26126
+  server: 188.165.61.68
+  servername: ''
+  tls: false
   type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  uuid: b09b111e-f41c-4145-83c9-029027a5a745
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0190
+  name: 🇫🇷FR-145.239.55.210-0179
   network: ws
   port: 80
   server: 145.239.55.210
@@ -35,79 +35,33 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-51.159.2.152-3076
-  network: ws
-  port: 8880
-  server: 51.159.2.152
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: a2ecce43-c6fb-4978-8b1d-8018ddd9faf4
-  ws-opts:
-    path: /
-- name: 🇫🇷FR法国丨yoyapai.com\r
-  password: humanity
-  port: 443
-  server: 104.18.152.152
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-- name: 🇫🇷FR法國丨yoyapai.com\r
-  password: humanity
-  port: 443
-  server: 104.18.152.50
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
-- name: '🇫🇷FR法國丨yoyapai.com\r #1'
-  password: humanity
-  port: 443
-  server: 104.18.152.77
-  skip-cert-verify: true
-  sni: www.ignitelimit.com
-  type: trojan
 - cipher: aes-256-gcm
   name: '🇫🇷 法国 | FRA #1'
   password: itzvpn@321
   port: 8388
   server: 107.161.160.28
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-51.77.144.182-0199
-  password: x19py0a8ipglqkbe
-  port: 8080
-  server: 51.77.144.182
-  type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.175
+  server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
+  server: 167.17.64.175
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
   server: 167.17.64.22
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
-  password: 29irqk0paakcx19v
-  port: 8080
-  server: 51.83.61.102
-  type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #25'
+  name: '🏳[www.v2nodes.com] ss- #21'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 23.162.152.22
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #26'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.27
+  server: 38.109.228.110
   type: ss
