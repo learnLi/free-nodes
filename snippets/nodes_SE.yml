@@ -1,32 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 0F820A
-  network: tcp
-  port: 2096
-  server: hamedhp790.dpdns.org
-  servername: hamedhp790.dpdns.org
-  tls: true
-  type: vmess
-  uuid: 753c6310-c4f9-42ab-a675-a3f0c44b8f4a
-- name: '🇸🇪 瑞典 | SWE #12'
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: 95.143.196.32
-  skip-cert-verify: true
-  sni: connect-se.mimowhat.online
-  type: trojan
-- alpn:
-  - h2
-  - http/1.1
-  name: 🇸🇪 瑞典 | SWE 8
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  port: 443
-  server: 95.143.196.32
-  skip-cert-verify: true
-  sni: connect-se.mimowhat.online
-  type: trojan
-  udp: true
 - cipher: aes-256-gcm
   name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=

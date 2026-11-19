@@ -1,10 +1,28 @@
 proxies:
+- alterId: 2
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 21C649
+  network: tcp
+  port: 30833
+  server: v33.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | CE5A05
+  name: CN 🇨🇳 | @Raydikalx | 9BF1B1
+  network: tcp
+  port: 50015
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: 23b5790c-4e96-49fa-95fc-9079ce9cf43c
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | E1F4D8
   network: tcp
   port: 50011
-  server: 36.134.35.36
+  server: 36.133.79.17
   servername: ''
   tls: false
   type: vmess

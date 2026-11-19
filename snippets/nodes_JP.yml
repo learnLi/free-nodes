@@ -1,28 +1,122 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 81424E
+  name: JP 🇯🇵 | @Raydikalx | 15C632
   network: ws
-  port: 6233
-  server: 151.242.165.160
-  servername: v47.emnode.top
-  tls: true
+  port: 17577
+  server: 206.190.237.167
+  servername: ''
+  tls: false
   type: vmess
-  uuid: c3d17f1d-9201-4644-b184-6cd1414c6cc5
+  uuid: 3ceb8486-fb82-462c-e989-89182fe660a5
+  ws-opts:
+    path: /3ceb8486
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 368E3D
+  network: ws
+  port: 25686
+  server: 140.83.51.161
+  servername: 140.83.51.161
+  tls: false
+  type: vmess
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
   ws-opts:
     headers:
-      Host: v47.emnode.top
+      Host: 140.83.51.161
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 8E5B58
+  network: tcp
+  port: 46130
+  server: 64.176.34.102
+  tls: false
+  type: vmess
+  uuid: 477350b2-7536-4f38-ee21-020efdde2d1d
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D1FFD7
+  network: ws
+  port: 10021
+  server: 138.2.49.230
+  tls: false
+  type: vmess
+  uuid: a12e496e-f89a-434a-8011-108846f0e412
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D917F3
+  network: ws
+  port: 47431
+  server: jp.6807251.xyz
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  ws-opts:
     path: /
 - alterId: 1
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | EF09A6
+  name: '🇯🇵 日本 | JPN #2'
   network: tcp
-  port: 28787
-  server: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
-  servername: qdiysly-g05.jp06-jz-vm0.entry.fr0528.art
+  port: 28788
+  server: op715tj-g06.jp06-jz-vm0.entry.fr0528.art
   tls: true
   type: vmess
-  uuid: 2ce005b4-e57a-3670-be88-60eeeb078bb7
+  uuid: 72a52b12-fbd2-3fa3-9964-df23590dc0bb
+- alterId: 1
+  cipher: auto
+  name: 🇯🇵 日本 | JPN 2
+  port: 28788
+  server: op715tj-g06.jp06-jz-vm0.entry.fr0528.art
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 72a52b12-fbd2-3fa3-9964-df23590dc0bb
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-109.123.230.157-1126
+  network: ws
+  port: 80
+  server: 109.123.230.157
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 59517e0b-ae1c-41d3-9c44-c44cea6f7546
+  ws-opts:
+    headers:
+      Host: internet.life.com.by
+    path: /takeshi.wiki
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-138.2.45.89-2619
+  network: ws
+  port: 4430
+  server: 138.2.45.89
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6abfad5a-24be-3657-85da-ceac782b7e19
+  ws-opts:
+    path: /osav101
+- alterId: 2
+  cipher: auto
+  name: 🇯🇵JP-153.122.173.53-3407
+  network: ws
+  port: 32407
+  server: 153.122.173.53
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 26c5fdc7-b3be-3482-9a45-d97b958a889a
+  ws-opts:
+    path: /v2ray
 - alterId: 0
   cipher: auto
   name: 🇯🇵JP-168.138.43.75-1052
@@ -53,14 +147,6 @@ proxies:
   skip-cert-verify: true
   sni: hk.catxstar.com
   type: trojan
-- name: '🇳🇬 尼日利亚 | NGA #2'
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  port: 20103
-  server: sclass-00.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
-  udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵JP-168.138.205.100-0193
   password: Bwlqh7GcFB
