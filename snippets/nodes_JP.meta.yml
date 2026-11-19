@@ -1,16 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 031A3A
-  network: tcp
-  port: 18112
-  server: oc.imfun.fun
-  servername: null
-  tls: false
-  type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
-- alterId: 0
-  cipher: auto
   name: JP 🇯🇵 | @Raydikalx | 74A719
   network: ws
   port: 80
@@ -45,163 +35,18 @@ proxies:
   uuid: b0dc852a-97ec-4d4e-9179-f0e5c2ef1489
   ws-opts:
     path: /wsflow=
-- name: '🇯🇵 日本 | JPN #1'
-  network: ws
-  port: 443
-  server: 89.106.78.217
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #10'
-  network: ws
-  port: 443
-  server: 172.104.120.30
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #11'
-  network: ws
-  port: 443
-  server: 104.18.33.121
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #12'
-  network: ws
-  port: 443
-  server: 141.98.41.104
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #2'
-  network: ws
-  port: 443
-  server: 188.164.248.18
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #3'
-  network: ws
-  port: 443
-  server: 31.77.133.224
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #4'
-  network: ws
-  port: 443
-  server: 152.53.156.23
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #5'
-  network: ws
-  port: 443
-  server: 141.164.44.60
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #6'
-  network: ws
-  port: 2053
-  server: 178.208.64.211
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #7'
-  network: ws
-  port: 443
-  server: 202.27.229.7
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #8'
-  network: ws
-  port: 443
-  server: 138.2.41.8
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇯🇵 日本 | JPN #9'
-  network: ws
-  port: 443
-  server: 43.170.8.95
-  servername: jp-osa.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
 - name: 🇯🇵[www.v2nodes.com] vless-JP-1...
   network: ws
   port: 443
-  server: 104.21.70.228
+  server: 104.16.10.9
   servername: jp3.yohototo.top
-  skip-cert-verify: false
   tls: true
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
   ws-opts:
     headers:
       Host: jp3.yohototo.top
-    path: /tyxywsfp=firefox
+    path: /tyxywsfp=chrome
 - client-fingerprint: chrome
   name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
   network: ws
@@ -221,6 +66,14 @@ proxies:
   port: 44184
   server: v2jp.k1.ssnss.live
   skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: '🇳🇬 尼日利亚 | NGA #1'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20051
+  server: sclass-b1.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
   type: trojan
   udp: true
 - name: 🇯🇵218802 | ⚡️Telegram = t.me/L...
@@ -250,12 +103,6 @@ proxies:
   server: 149.22.87.240
   type: ss
 - cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-256-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-1599... #1'
   password: BeaUf9c0AEWH40Pu
   port: 8388
@@ -267,15 +114,14 @@ proxies:
   port: 443
   server: 149.22.87.204
   type: ss
-- cipher: aes-128-gcm
-  name: '🏳[www.v2nodes.com] ss- #14'
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.241
-  type: ss
-- name: 🇯🇵JP_1|3.3MB/s
+- name: 🇯🇵JP_1|2.0MB/s
   password: EGJDy5Kg
   port: 42000
   server: 103.248.150.50
   type: socks5
   username: paZFN3JA
+- name: 🇯🇵JP_2|1.2MB/s
+  port: 3001
+  server: 43.133.21.24
+  skip-cert-verify: true
+  type: socks5

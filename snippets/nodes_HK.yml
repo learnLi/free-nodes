@@ -1,6 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: HK 🇭🇰 | @Raydikalx | 0B46CB
+  network: ws
+  port: 443
+  server: vah4urdzl3jdx5r2.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  ws-opts:
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
   name: HK 🇭🇰 | @Raydikalx | 190171
   network: ws
   port: 23026
@@ -15,94 +26,33 @@ proxies:
     path: /arki
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 21D467
+  name: HK 🇭🇰 | @Raydikalx | 30A3AC
   network: ws
   port: 443
-  server: ex1ogt73nzpqkac2.v.3dns.vip
-  servername: null
-  tls: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: ex1ogt73nzpqkac2.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 2952C7
-  network: ws
-  port: 50045
-  server: 20.239.179.251
-  tls: false
-  type: vmess
-  uuid: 1617e875-e377-4e4f-85ef-dcf9e5e10df7
-  ws-opts:
-    headers:
-      Host: 20.239.179.251
-    path: /
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 5B9364
-  network: ws
-  port: 443
-  server: 47.76.102.39
-  servername: ex1ogt73nzpqkac2.v.3dns.vip
+  server: 47.86.107.119
+  servername: lcv8v9l7OyamxxfZ.v.3dns.vip
+  skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: ex1ogt73nzpqkac2.v.3dns.vip
+      Host: lcv8v9l7OyamxxfZ.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 867005
+  name: HK 🇭🇰 | @Raydikalx | 391006
   network: ws
   port: 443
-  server: vah4urdzl3jdx5r2.v.3dns.vip
-  servername: vah4urdzl3jdx5r2.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: vah4urdzl3jdx5r2.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | A940D7
-  network: ws
-  port: 443
-  server: 47.83.19.148
-  servername: 6jdvarazgu3qqr6q.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | A9E951
-  network: ws
-  port: 443
-  server: mtckundigepwu3up.v.3dns.vip
+  server: i2psm3knof5qjjix.v.3dns.vip
   servername: null
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: mTCKUNDiGePwU3uP.v.3dns.vip
+      Host: I2PSm3Knof5qjjix.v.3dns.vip
     path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | C8BB96
-  network: tcp
-  port: 29008
-  server: 366-1095.rabbitpro-in-3.com
-  tls: false
-  type: vmess
-  uuid: e351d6d8-c167-3e07-8fda-3f2f4ec0760b
 - alterId: 0
   cipher: auto
   name: HK 🇭🇰 | @Raydikalx | E591BD
@@ -119,62 +69,32 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | E94C44
+  name: HK 🇭🇰 | @Raydikalx | F3ED31
   network: ws
-  port: 8443
-  server: 20.2.218.142
-  servername: 01.appleid.bf
+  port: 443
+  server: lcv8v9l7oyamxxfz.v.3dns.vip
+  servername: lcv8v9l7oyamxxfz.v.3dns.vip
   tls: true
   type: vmess
-  uuid: 3960f128-1163-40a3-8dd7-7c91176e14a5
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   ws-opts:
     headers:
-      Host: 01.appleid.bf
-    path: /ws?ed=2048
+      Host: lcv8v9l7oyamxxfz.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | ED46C4
-  network: tcp
-  port: 21021
-  server: dog-hk.kunlun01dns.com
+  name: HK3
+  network: ws
+  port: 443
+  server: 47.243.92.155
   servername: ''
-  tls: false
+  tls: true
   type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #2'
-  network: ws
-  port: 23026
-  server: 47.244.120.197
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   ws-opts:
-    path: /arki
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #3'
-  network: ws
-  port: 36703
-  server: 47.244.120.197
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  ws-opts:
-    path: /arki
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #4'
-  network: http
-  port: 52080
-  server: 47.242.81.94
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: e47b9f77-60e4-4738-8d53-772b6002e146
+    headers:
+      Host: mTCKUNDiGePwU3uP.v.3dns.vip
+    path: /ws-vmess
 - alterId: 0
   cipher: auto
   name: 🇭🇰HK-159.100.206.88-0052
@@ -190,6 +110,34 @@ proxies:
     headers:
       Host: lg30.cfcdn3.xyz
     path: /ray
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK-188.116.22.171-4227
+  network: ws
+  port: 80
+  server: 188.116.22.171
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 3c6c608d-68c0-4782-86ac-98ea1ada3a25
+  ws-opts:
+    path: /vmess
+- alterId: 0
+  cipher: auto
+  name: 🇭🇰HK-47.243.92.11-0258
+  network: ws
+  port: 443
+  server: 47.243.92.11
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+  ws-opts:
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /
 - name: 🇭🇰[www.v2nodes.com] trojan-HK-...
   password: '!!str 12012'
   port: 12012
@@ -198,7 +146,7 @@ proxies:
   sni: ali-hk.b-gfw.cfd
   type: trojan
 - cipher: aes-256-gcm
-  name: '🇭🇰[www.v2nodes.com] ss-HK-1621... #1'
+  name: 🇭🇰[www.v2nodes.com] ss-HK-1621...
   password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
   port: 8388
   server: 209.248.57.105

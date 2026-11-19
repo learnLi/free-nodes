@@ -1,6 +1,17 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 24D78E
+  network: ws
+  port: 20287
+  server: 147.135.213.72
+  tls: false
+  type: vmess
+  uuid: dcbb251a-90f2-454d-bf54-fc5efa789dbd
+  ws-opts:
+    path: /bp-vmess
+- alterId: 0
+  cipher: auto
   name: FR 🇫🇷 | @Raydikalx | 8D380D
   network: tcp
   port: 1270
@@ -9,20 +20,6 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 964E22
-  network: ws
-  port: 80
-  server: 2606:4700:9c66::3c6d:65
-  servername: vmess.lbw666.dpdns.org
-  tls: false
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  ws-opts:
-    headers:
-      Host: vmess.lbw666.dpdns.org
-    path: /ws
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-145.239.55.210-0190
@@ -37,6 +34,19 @@ proxies:
   ws-opts:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-51.159.2.152-3076
+  network: ws
+  port: 8880
+  server: 51.159.2.152
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: a2ecce43-c6fb-4978-8b1d-8018ddd9faf4
+  ws-opts:
     path: /
 - name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
@@ -116,7 +126,6 @@ proxies:
   port: 8388
   server: 107.161.160.28
   type: ss
-  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇫🇷FR-51.77.144.182-0199
   password: x19py0a8ipglqkbe
@@ -127,25 +136,13 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.27
+  server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.175
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 167.17.64.22
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 23.162.152.22
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
@@ -154,16 +151,16 @@ proxies:
   server: 51.83.61.102
   type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #8'
+  name: '🏳[www.v2nodes.com] ss- #25'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 38.109.228.110
+  server: 23.162.152.22
   type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #9'
+  name: '🏳[www.v2nodes.com] ss- #26'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 172.99.189.142
+  server: 167.17.64.27
   type: ss
 - name: FR_speednode_0008
   port: 19362
@@ -179,15 +176,6 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: FR_speednode_0010
-  password: 'null'
-  port: 23856
-  server: 51.159.225.196
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  username: 'null'
 - name: FR_speednode_0011
   port: 23856
   server: 51.159.225.196
@@ -202,7 +190,7 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_1|3.5MB/s|P002-260618
+- name: 🇫🇷FR_1|1.8MB/s|P002-260618
   password: None
   port: 9443
   server: 138.199.47.247
@@ -212,12 +200,18 @@ proxies:
   type: http
   udp: true
   x-toolall-mihomo: true
-- name: 🇫🇷FR_2|2.2MB/s|R002-260618
-  port: 9443
-  server: 213.139.9.142
+- name: 🇫🇷FR_2|1.2MB/s|R002-260618
+  port: 443
+  server: 149.102.245.65
   skip-cert-verify: true
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
   x-toolall-mihomo: true
+- name: 🇫🇷FR_3|3.3MB/s
+  port: 443
+  server: 82.66.235.221
+  skip-cert-verify: true
+  tls: true
+  type: http

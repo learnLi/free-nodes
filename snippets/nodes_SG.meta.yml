@@ -1,80 +1,58 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 41BF03
+  name: SG 🇸🇬 | @Raydikalx | 83905A
   network: ws
   port: 443
-  server: bncdsferna-production.up.railway.app
-  servername: bncdsferna-production.up.railway.app
+  server: oeptestwqee-production.up.railway.app
+  servername: oeptestwqee-production.up.railway.app
   tls: true
   type: vmess
-  uuid: 52c2942f-1312-49a6-89f4-05b625cc8efd
+  uuid: 751f6306-6d21-420e-9c6a-5c5edb2acfec
   ws-opts:
     headers:
-      Host: bncdsferna-production.up.railway.app
-    path: /api/M1VM3i
+      Host: oeptestwqee-production.up.railway.app
+    path: /api/gQjJlE
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 82C9EC
+  name: SG 🇸🇬 | @Raydikalx | 88687F
   network: ws
   port: 443
-  server: rex.sahebkarami.ir
-  servername: rex.sahebkarami.ir
+  server: moryet3-production.up.railway.app
+  servername: moryet3-production.up.railway.app
   tls: true
   type: vmess
-  uuid: c8c51efb-0a07-44f6-bec8-131cea784b55
+  uuid: b3a9e94e-e90e-4a85-b280-2c7d43e48e5b
   ws-opts:
     headers:
-      Host: rex.sahebkarami.ir
-    path: /cdn/310a7084-9cc1-423a-9876-0a7635b64794/m?ed=2560
+      Host: moryet3-production.up.railway.app
+    path: /api/xPCc9c
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C8F906
-  network: raw
-  port: 22324
-  server: 172.237.70.226
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D21E6C
-  network: tcp
-  port: 47014
-  server: hong.1.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E762D7
+  name: 🇸🇬SG-129.150.44.64-2551
   network: ws
-  port: 443
-  server: erwintdfr-production.up.railway.app
-  servername: erwintdfr-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: 4525d0dc-a827-4510-88d6-4cb07025869b
-  ws-opts:
-    headers:
-      Host: erwintdfr-production.up.railway.app
-    path: /api/oIpmHF
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-15.235.147.186-0046
-  network: ws
-  port: 80
-  server: 15.235.147.186
+  port: 46075
+  server: 129.150.44.64
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  uuid: da257e73-f02b-45ab-9916-7baf154c47a3
   ws-opts:
-    headers:
-      Host: 15.235.147.186
-    path: /sshkit/Ertusg86/635014638c264/
+    path: /jhndsmlanj11223
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-146.190.82.241-2247
+  network: ws
+  port: 443
+  server: 146.190.82.241
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
+  ws-opts:
+    path: /
 - client-fingerprint: chrome
   name: 新加坡|@ripaojiedian
   network: ws
@@ -87,66 +65,26 @@ proxies:
   uuid: 7f0270f9-1abc-4c4f-960d-0a23e32f1eb8
   ws-opts:
     path: /wsflow=
-- name: '🇸🇬 新加坡 | SGP #3'
-  network: ws
+- client-fingerprint: firefox
+  name: '🇸🇬 新加坡 | SGP #3'
   port: 443
-  server: 168.144.132.93
-  servername: us-lax.862400.xyz
+  server: 195.63.138.212
+  servername: cloudehouse24.ru
   tls: true
   type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: us-lax.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇬 新加坡 | SGP #4'
+  uuid: fa937345-6d3e-4ff4-8127-1a836987a0db
+- name: '🇸🇬[www.v2nodes.com] vless-SG #1'
   network: ws
-  port: 443
-  server: 185.130.224.105
-  servername: ap-south.862400.xyz
-  tls: true
+  port: 8080
+  server: www.gov.se
+  servername: www.gov.se
+  tls: false
   type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  uuid: 989d58b8-d2ea-4d28-b5ff-0f3cd078f2cf
   ws-opts:
     headers:
-      Host: ap-south.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇬 新加坡 | SGP #5'
-  network: ws
-  port: 443
-  server: 13.231.172.130
-  servername: ap-south.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: ap-south.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇬 新加坡 | SGP #6'
-  network: ws
-  port: 443
-  server: 101.108.49.121
-  servername: ap-south.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: ap-south.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇬 新加坡 | SGP #8'
-  network: ws
-  port: 443
-  server: 82.153.135.54
-  servername: us-lax.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: us-lax.862400.xyz
-    path: /announcement?ed=2048fp=random
+      Host: sdf23g-billowing-moon-348e.mzm468gc.workers.dev
+    path: /
 - name: 🇸🇬[www.v2nodes.com] vless-SG-1...
   network: ws
   port: 2096
@@ -220,6 +158,19 @@ proxies:
     headers:
       Host: free-server.techsonic.dev
     path: /free-server.techsonic.dev
+- client-fingerprint: unsafe
+  name: 🇸🇬[www.v2nodes.com] vless-SG-4...
+  network: ws
+  port: 2083
+  server: 104.18.35.86
+  servername: vlsovip.1d.mom
+  tls: true
+  type: vless
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  ws-opts:
+    headers:
+      Host: vlsovip.1d.mom
+    path: /
 - name: 🇸🇬[www.v2nodes.com] vless-SG-7...
   network: ws
   port: 443
@@ -233,21 +184,34 @@ proxies:
     headers:
       Host: partner.catchplay.com.r3xxe.eu.cc
     path: /sg-amzfp=chrome
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-7... #2'
+- alpn:
+  - http/1.1
+  name: '🇸🇬[www.v2nodes.com] vless-SG-7... #1'
   network: ws
   port: 443
-  server: 141.193.213.10
-  servername: partner.catchplay.com.r3xxe.eu.cc
-  skip-cert-verify: false
-  tls: true
+  server: 188.114.98.0
+  servername: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
+  tls: false
   type: vless
-  uuid: 977b814d-d9e0-4889-bb71-98d6bfb8f462
+  uuid: ec24cde1-6bd9-4b69-baf7-270e8aabd6dd
   ws-opts:
     headers:
-      Host: partner.catchplay.com.r3xxe.eu.cc
-    path: /sg-amz
+      Host: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
+    path: /?ed=2560fp=unsafesecurity=tls
+- alpn:
+  - http/1.1
+  name: '🇸🇬[www.v2nodes.com] vless-SG-7... #3'
+  network: ws
+  port: 443
+  server: 188.114.98.0
+  servername: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
+  tls: true
+  type: vless
+  uuid: ec24cde1-6bd9-4b69-baf7-270e8aabd6dd
+  ws-opts:
+    headers:
+      Host: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
+    path: /?ed=2560fp=unsafe
 - encryption: none
   name: '🇸🇬[www.v2nodes.com] vless-SG-7... #4'
   network: ws
@@ -262,18 +226,6 @@ proxies:
     path: /Telegram-XV2ry2?ed=2048
 - name: 🇸🇬[www.v2nodes.com] vless-SG-8...
   network: ws
-  port: 2083
-  server: 27.50.49.154
-  servername: proxy-34l.pages.dev
-  tls: true
-  type: vless
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
-  ws-opts:
-    headers:
-      Host: proxy-34l.pages.dev
-    path: /fp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG-8... #1'
-  network: ws
   port: 8443
   server: cf.090227.xyz
   servername: liusuyan.cc.cd
@@ -285,7 +237,7 @@ proxies:
       Host: liusuyan.cc.cd
     path: /proxyip=ProxyIP.SG.CMLiussss.Netsecurity=tls
 - encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-8... #2'
+  name: '🇸🇬[www.v2nodes.com] vless-SG-8... #1'
   network: ws
   port: 8443
   server: cf.090227.xyz
@@ -297,23 +249,11 @@ proxies:
     headers:
       Host: liusuyan.cc.cd
     path: /proxyip=ProxyIP.SG.CMLiussss.Net
-- name: 🇸🇬[www.v2nodes.com] vless-SG-9...
-  network: ws
-  port: 8080
-  server: www.gov.se
-  servername: www.gov.se
-  tls: false
-  type: vless
-  uuid: 989d58b8-d2ea-4d28-b5ff-0f3cd078f2cf
-  ws-opts:
-    headers:
-      Host: sdf23g-billowing-moon-348e.mzm468gc.workers.dev
-    path: /
 - alpn:
   - http/1.1
   client-fingerprint: unsafe
   encryption: none
-  name: '🇸🇬[www.v2nodes.com] vless-SG-9... #1'
+  name: 🇸🇬[www.v2nodes.com] vless-SG-9...
   network: ws
   port: 443
   server: 188.114.98.0
@@ -325,6 +265,20 @@ proxies:
     headers:
       Host: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
     path: /?ed=2560
+- client-fingerprint: firefox
+  name: 🇸🇬_SG_新加坡_IPV4
+  network: ws
+  port: 443
+  server: 84.17.38.250
+  servername: free-config-bot-development-33s35.lucity.app
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 474c5a2e-96eb-fa3f-6639-cbd2129c8027
+  ws-opts:
+    headers:
+      Host: free-config-bot-development-33s35.lucity.app
+    path: /ws/474c5a2e-96eb-fa3f-6639-cbd2129c8027
 - name: 🇸🇬SG-188.253.12.15-0760
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   port: 48697
@@ -339,11 +293,11 @@ proxies:
   sni: exploredigitaljobplatformandfindonlinework.com
   type: trojan
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: c1fd40941f919b5c7896244097f22d9d958e625cd958b75f34ccfa42181f50b2
-  name: '🇸🇬 新加坡 | SGP #1'
+  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
+  name: '🇸🇬 新加坡 | SGP #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 13.212.48.8
+  server: 52.221.227.252
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
@@ -363,10 +317,10 @@ proxies:
   server: 68.183.227.4
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #2'
+  name: '🇸🇬 新加坡 | SGP #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 13.212.48.8
+  server: 52.221.227.252
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -376,7 +330,7 @@ proxies:
   server: 149.88.106.73
   type: ss
 - cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #4'
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #3'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 15.235.164.133
@@ -393,26 +347,3 @@ proxies:
   port: 19999
   server: 149.88.107.47
   type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #18'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 51.79.228.131
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #19'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 15.235.182.183
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #20'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 149.88.106.74
-  type: ss
-- name: 🇸🇬SG_1|1.2MB/s
-  port: 9090
-  server: 128.199.116.219
-  skip-cert-verify: true
-  type: http

@@ -1,119 +1,72 @@
 proxies:
-- client-fingerprint: firefox
-  name: '🇸🇪 瑞典 | SWE #1'
-  port: 443
-  server: 88.216.214.159
-  servername: api-svc-mgr.galioncc.com
-  tls: true
-  type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-- name: '🇸🇪 瑞典 | SWE #1 #1'
-  network: ws
-  port: 443
-  server: 213.155.119.28
-  servername: se-sto.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: se-sto.862400.xyz
-    path: /announcement?ed=2048fp=random
-- client-fingerprint: chrome
-  name: '🇸🇪 瑞典 | SWE #10'
+- name: '🇸🇪 瑞典 | SWE #3'
   network: ws
   port: 443
   server: 87.242.94.43
   servername: 87.242.94.43
   tls: true
   type: vless
+  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
+  ws-opts:
+    headers:
+      Host: 87.242.94.43
+    path: /api/v2/session/CAgikYAkk4z7fp=chrome
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇸🇪SE_1|1.2MB/s
+  network: ws
+  port: 443
+  server: 31.56.227.253
+  servername: cf-1rm.pages.dev
+  tls: true
+  type: vless
   udp: true
+  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
+  ws-opts:
+    headers:
+      Host: cf-1rm.pages.dev
+      User-Agent: Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/55.0.2883.87 Safari/537.36
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
+  network: ws
+  port: 443
+  server: 87.242.94.43
+  servername: 87.242.94.43
+  tls: true
+  type: vless
   uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
   ws-opts:
     headers:
       Host: 87.242.94.43
     path: /api/v2/session/CAgikYAkk4z7
-- name: '🇸🇪 瑞典 | SWE #2'
-  network: ws
-  port: 443
-  server: 95.141.241.216
-  servername: jp-osa.862400.xyz
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: 138-124-86-230-sslip-io
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
+  network: grpc
+  port: 48115
+  server: 138.124.86.230
+  servername: 138-124-86-230.sslip.io
   tls: true
   type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: jp-osa.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇪 瑞典 | SWE #3'
+  uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #9'
   network: ws
-  port: 443
-  server: 205.186.76.237
-  servername: se-sto.862400.xyz
-  tls: true
+  port: 14430
+  server: 5.178.109.174
+  tls: false
   type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   ws-opts:
     headers:
-      Host: se-sto.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇪 瑞典 | SWE #4'
-  network: ws
-  port: 443
-  server: 45.139.25.72
-  servername: se-sto.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: se-sto.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇪 瑞典 | SWE #6'
-  network: ws
-  port: 8443
-  server: 5.157.30.28
-  servername: se-sto.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: se-sto.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇪 瑞典 | SWE #8'
-  network: ws
-  port: 443
-  server: 193.124.58.5
-  servername: se-sto.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: se-sto.862400.xyz
-    path: /announcement?ed=2048fp=random
-- name: '🇸🇪 瑞典 | SWE #9'
-  network: ws
-  port: 443
-  server: 5.22.222.157
-  servername: se-sto.862400.xyz
-  tls: true
-  type: vless
-  uuid: 5bbbbf2c-9031-4511-8222-b6cecd5a5291
-  ws-opts:
-    headers:
-      Host: se-sto.862400.xyz
-    path: /announcement?ed=2048fp=random
+      Host: 5.178.109.174
+    path: /vless
 - cipher: aes-256-gcm
   name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 138.199.55.243
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇪[www.v2nodes.com] ss-SE-1620... #1'
-  password: 2e555e46dbc421452416834962fd014f
-  port: 8388
-  server: 62.182.193.228
   type: ss
