@@ -1,53 +1,11 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 82C740
-  network: ws
-  port: 443
-  server: 654168416355441.oylfmxz.cn
-  servername: 654168416355441.oylfmxz.cn
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: 654168416355441.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 9BE918
-  network: raw
-  port: 35034
-  server: 165.154.195.38
+  name: TW 🇹🇼 | @Raydikalx | 838056
+  network: tcp
+  port: 29502
+  server: ff003.owwoedu.com
   servername: ''
   tls: false
   type: vmess
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-- alterId: 64
-  cipher: auto
-  name: 🇹🇼TW-211.22.180.68-1351
-  network: ws
-  port: 443
-  server: 211.22.180.68
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.82131333.xyz
-    path: /path/191019072927
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW_1|4.6MB/s
-  network: ws
-  port: 16616
-  server: dp8yk.xiaoyan.io
-  skip-cert-verify: true
-  type: vmess
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
+  uuid: 464b32ca-1365-49db-a531-31568b602065

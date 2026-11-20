@@ -1,18 +1,39 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 5B3E25
+  name: SG 🇸🇬 | @Raydikalx | 0462D3
   network: ws
   port: 443
-  server: moer67gv-production.up.railway.app
-  servername: moer67gv-production.up.railway.app
+  server: wjofhsqteueywxeq.v.3dns.vip
+  servername: ''
   tls: true
   type: vmess
-  uuid: 9d0bc215-a201-43af-a2bc-7a9db1899294
+  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
+  ws-opts:
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 290599
+  network: none
+  port: 8443
+  server: 13.250.114.194
+  tls: false
+  type: vmess
+  uuid: 9dcb8d73-cc0b-4fcc-a12d-d7affb56267c
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 3F5AD0
+  network: ws
+  port: 443
+  server: fdhjbd-production.up.railway.app
+  servername: fdhjbd-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: 9b0d6833-3301-49b6-a596-a6e9151a9ff4
   ws-opts:
     headers:
-      Host: moer67gv-production.up.railway.app
-    path: /api/WigrBu
+      Host: fdhjbd-production.up.railway.app
+    path: /api/Wqqi-E?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
 - alterId: 0
   cipher: auto
   name: SG 🇸🇬 | @Raydikalx | 77AF8A
@@ -25,31 +46,13 @@ proxies:
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 7BB621
-  network: ws
-  port: 443
-  server: stanngv2-production-20ea.up.railway.app
-  servername: stanngv2-production-20ea.up.railway.app
-  tls: true
+  name: SG 🇸🇬 | @Raydikalx | 9E4ECB
+  network: tcp
+  port: 53385
+  server: x-ui.zxhh.top
+  tls: false
   type: vmess
-  uuid: d71c0a7c-a781-4a6c-8ba2-2534de9551fb
-  ws-opts:
-    headers:
-      Host: stanngv2-production-20ea.up.railway.app
-    path: /vm-ws
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-146.190.82.241-2247
-  network: ws
-  port: 443
-  server: 146.190.82.241
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: ee76cecf-1219-42be-ae3f-6b8077e4cacc
-  ws-opts:
-    path: /
+  uuid: 6aac0241-0c66-4bec-942d-e8a8d9b11a3a
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -64,10 +67,10 @@ proxies:
   server: 68.183.227.4
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #3'
+  name: '🇸🇬 新加坡 | SGP #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 13.229.87.193
+  server: 175.41.188.76
   type: ss
   udp: true
 - cipher: aes-256-gcm

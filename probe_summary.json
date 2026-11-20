@@ -1,86 +1,86 @@
 {
-  "total": 962,
+  "total": 930,
   "egress": {
-    "ip": "135.232.216.50",
+    "ip": "100.62.132.232",
     "method": "direct",
     "country": "United States",
-    "city": "Chicago",
-    "org": "Microsoft Corporation"
+    "city": "Washington",
+    "org": "Amazon.com, Inc."
   },
-  "tcp_applicable": 916,
-  "tcp_ok": 748,
-  "tcp_rate": "81.7%",
-  "tls_applicable": 395,
-  "tls_ok": 315,
-  "tls_rate": "79.7%",
-  "quic_applicable": 46,
+  "tcp_applicable": 878,
+  "tcp_ok": 747,
+  "tcp_rate": "85.1%",
+  "tls_applicable": 404,
+  "tls_ok": 361,
+  "tls_rate": "89.4%",
+  "quic_applicable": 52,
   "quic_ok": 0,
   "quic_rate": "0.0%",
-  "udp_skipped": 46,
+  "udp_skipped": 52,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 5,
+      "ms": 2,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 21,
+      "ms": 3,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 18,
+      "ms": 3,
       "err": ""
     }
   ],
   "by_type": {
+    "anytls": {
+      "total": 1,
+      "ok": 1
+    },
     "http": {
-      "total": 56,
-      "ok": 53
+      "total": 50,
+      "ok": 49
     },
     "hysteria": {
-      "total": 3,
+      "total": 2,
       "ok": 0
     },
     "socks5": {
-      "total": 16,
-      "ok": 16
+      "total": 5,
+      "ok": 4
     },
     "ss": {
-      "total": 285,
-      "ok": 240
+      "total": 275,
+      "ok": 232
     },
     "trojan": {
-      "total": 131,
-      "ok": 124
+      "total": 145,
+      "ok": 131
     },
     "vless": {
-      "total": 209,
-      "ok": 194
+      "total": 208,
+      "ok": 202
     },
     "vmess": {
-      "total": 209,
-      "ok": 121
+      "total": 191,
+      "ok": 128
     },
     "wireguard": {
-      "total": 7,
+      "total": 1,
       "ok": 0
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 45,
-      "ok": 0
-    },
-    "tuic": {
-      "total": 1,
+      "total": 52,
       "ok": 0
     }
   }

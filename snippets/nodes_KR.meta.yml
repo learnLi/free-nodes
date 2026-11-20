@@ -1,46 +1,13 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 19EBD7
-  network: ws
-  port: 443
-  server: seoul01.zgjok.com
-  servername: seoul01.zgjok.com
-  tls: true
-  type: vmess
-  uuid: 182f1650-ca13-480c-b0b4-1ca44ed0504e
-  ws-opts:
-    headers:
-      Host: seoul01.zgjok.com
-    path: /henis01
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | A99D73
-  network: ws
+  name: KR 🇰🇷 | @Raydikalx | 168118
+  network: tcp
   port: 80
-  server: 132.145.80.230
+  server: 217.142.138.61
   tls: false
   type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: kr02.a0a.xyz
-    path: /cctv13.m3u8
-- alterId: 0
-  cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | AA3A3F
-  network: ws
-  port: 443
-  server: seoul02.zgjok.com
-  servername: seoul02.zgjok.com
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
-  ws-opts:
-    headers:
-      Host: seoul02.zgjok.com
-    path: /
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
 - alterId: 64
   cipher: auto
   name: 🇰🇷KR-104.37.215.83-1372
@@ -56,28 +23,7 @@ proxies:
     headers:
       Host: www.19289243.xyz
     path: /path/191019072927
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-54.180.114.77-6096
-  network: ws
-  port: 42517
-  server: 54.180.114.77
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b5b5209f-bcbd-4bac-b044-0d179698c62d
-  ws-opts:
-    path: /
-- client-fingerprint: firefox
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
-  port: 2053
-  server: 151.245.106.49
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   network: ws
   port: 25555
   server: 152.69.226.63
@@ -95,23 +41,22 @@ proxies:
   type: trojan
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #2'
+  name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 43.203.123.202
+  server: 43.200.255.222
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
   type: hysteria2
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.203.123.202
+- cipher: aes-256-cfb
+  name: shadowsocks-1827145973
+  password: qwerREWQ@@
+  port: 6123
+  server: 211.178.105.134
   type: ss
-  udp: true
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #1'
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
   password: '!!str 12242'
   port: 10099
   server: 115.161.136.145
