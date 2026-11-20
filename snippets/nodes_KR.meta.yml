@@ -1,28 +1,19 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | 168118
-  network: tcp
-  port: 80
-  server: 217.142.138.61
-  tls: false
-  type: vmess
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-- alterId: 64
-  cipher: auto
-  name: 🇰🇷KR-104.37.215.83-1372
+  name: 🇰🇷KR-132.145.80.230-1029
   network: ws
-  port: 30000
-  server: 104.37.215.83
+  port: 80
+  server: 132.145.80.230
   servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
   ws-opts:
     headers:
-      Host: www.19289243.xyz
-    path: /path/191019072927
+      Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   network: ws
   port: 25555
@@ -44,17 +35,18 @@ proxies:
   name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 43.200.255.222
+  server: 43.203.227.42
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
   type: hysteria2
-- cipher: aes-256-cfb
-  name: shadowsocks-1827145973
-  password: qwerREWQ@@
-  port: 6123
-  server: 211.178.105.134
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #2'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 43.203.227.42
   type: ss
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
   password: '!!str 12242'

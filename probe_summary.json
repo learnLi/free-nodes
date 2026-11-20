@@ -1,18 +1,18 @@
 {
-  "total": 930,
+  "total": 913,
   "egress": {
-    "ip": "100.62.132.232",
+    "ip": "52.159.244.171",
     "method": "direct",
     "country": "United States",
-    "city": "Washington",
-    "org": "Amazon.com, Inc."
+    "city": "San Jose",
+    "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 878,
-  "tcp_ok": 747,
-  "tcp_rate": "85.1%",
-  "tls_applicable": 404,
-  "tls_ok": 361,
-  "tls_rate": "89.4%",
+  "tcp_applicable": 861,
+  "tcp_ok": 736,
+  "tcp_rate": "85.5%",
+  "tls_applicable": 396,
+  "tls_ok": 321,
+  "tls_rate": "81.1%",
   "quic_applicable": 52,
   "quic_ok": 0,
   "quic_rate": "0.0%",
@@ -29,14 +29,14 @@
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 3,
+      "ms": 2,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 3,
+      "ms": 18,
       "err": ""
     }
   ],
@@ -58,20 +58,20 @@
       "ok": 4
     },
     "ss": {
-      "total": 275,
+      "total": 273,
       "ok": 232
     },
     "trojan": {
-      "total": 145,
-      "ok": 131
+      "total": 142,
+      "ok": 134
     },
     "vless": {
-      "total": 208,
-      "ok": 202
+      "total": 192,
+      "ok": 180
     },
     "vmess": {
-      "total": 191,
-      "ok": 128
+      "total": 195,
+      "ok": 136
     },
     "wireguard": {
       "total": 1,

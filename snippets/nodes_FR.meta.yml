@@ -11,62 +11,66 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 3F8AC3
-  network: ws
-  port: 20230
-  server: 51.75.118.79
-  servername: ''
-  tls: false
+  name: FR 🇫🇷 | @Raydikalx | 246A8D
+  network: tcp
+  port: 1270
+  server: 91.134.35.72
+  servername: xmfhlpy.com
+  tls: true
   type: vmess
-  uuid: de698ab0-709d-413f-b21f-a914e5e7c603
-  ws-opts:
-    headers:
-      Host: 51.75.118.79
-    path: /parham-confing-vmess?u=3YB85eBme2UP
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 967D8A
+  name: FR 🇫🇷 | @Raydikalx | 24D78E
   network: ws
-  port: 80
-  server: fr3.niekotin.de
-  servername: ''
+  port: 20287
+  server: 147.135.213.72
   tls: false
   type: vmess
-  uuid: 59e29918-53b3-4fa2-becf-56a601f33998
+  uuid: dcbb251a-90f2-454d-bf54-fc5efa789dbd
   ws-opts:
-    headers:
-      Host: fr3.niekotin.de
-    path: /vmess
+    path: /bp-vmess
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 98B0D2
+  name: FR 🇫🇷 | @Raydikalx | 334327
   network: ws
-  port: 23388
-  server: 2001:bc8:32d7:1a9::2
-  servername: ''
-  tls: false
+  port: 443
+  server: 90.127.143.135
+  servername: renderer-stream-2-62.mirra.now
+  tls: true
   type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: tabrizm137gmail.com
-    path: /github.com/Alvin9999-newpac/fanqiang
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B9D3B8
+  name: FR 🇫🇷 | @Raydikalx | 8D380D
+  network: tcp
+  port: 1270
+  server: 46.105.222.155
+  servername: xmfhlpy.com
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 9FDBC9
   network: ws
   port: 80
   server: 145.239.55.210
+  servername: ''
   tls: false
   type: vmess
-  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  uuid: 479526cd-5011-43cf-a788-504da95e07c2
   ws-opts:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0179
+  name: 🇫🇷FR-145.239.55.210-0198
   network: ws
   port: 80
   server: 145.239.55.210
@@ -79,19 +83,21 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
-- name: 🇫🇷FR_1|2.1MB/s
-  network: ws
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇫🇷FR_1|3.7MB/s
+  network: tcp
   port: 443
-  server: jdxl.cf.090227.xyz
-  servername: approved-flush-consideration-earliest.trycloudflare.com
+  server: 45.95.98.139
+  servername: 45.95.98.130
   tls: true
   type: vless
-  uuid: 11111111-2222-3333-4444-555555555555
-  ws-opts:
-    headers:
-      Host: approved-flush-consideration-earliest.trycloudflare.com
-    path: /tg-jiedianxieloufp=chrome
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+  udp: true
+  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
+- name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   network: ws
   port: 14430
   server: 138.124.70.41
@@ -103,7 +109,7 @@ proxies:
     headers:
       Host: 138.124.70.41
     path: /vless
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
+- name: '🏳[www.v2nodes.com] vless- #13'
   network: ws
   port: 80
   server: ov-france1.09vpn.com
@@ -137,31 +143,31 @@ proxies:
   sni: www.ignitelimit.com
   type: trojan
 - cipher: aes-256-gcm
-  name: 🇫🇷FR-107.161.160.28-0516
+  name: 🇫🇷FR-107.161.160.28-0212
   password: itzvpn@321
   port: 8388
   server: 107.161.160.28
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-51.77.144.182-0207
+  name: 🇫🇷FR-51.77.144.182-0250
   password: x19py0a8ipglqkbe
   port: 8080
   server: 51.77.144.182
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 172.99.189.142
@@ -170,7 +176,7 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.22
+  server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
@@ -183,6 +189,12 @@ proxies:
   password: 29irqk0paakcx19v
   port: 8080
   server: 51.83.61.102
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #15'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.22
   type: ss
 - name: FR_speednode_0008
   port: 19362
