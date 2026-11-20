@@ -1,79 +1,28 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 4FC983
+  name: SG 🇸🇬 | @Raydikalx | 4CC338
   network: tcp
-  port: 56268
-  server: hong.1.povrak.ir
+  port: 10001
+  server: sy.australiacaregroup.site
   servername: ''
   tls: false
   type: vmess
-  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
+  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C5D91D
-  network: ws
-  port: 53267
-  server: 167.150.100.81
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 0a4e5d12-f804-4991-a3bf-e45dbfcb1201
-  ws-opts:
-    path: /gx5hemjvd8
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | C8F906
-  network: raw
-  port: 22324
-  server: 172.237.70.226
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | EFDFF6
+  name: SG 🇸🇬 | @Raydikalx | E33129
   network: ws
   port: 443
-  server: panel-production-3905.up.railway.app
-  servername: panel-production-3905.up.railway.app
+  server: siderail-production-df88.up.railway.app
+  servername: siderail-production-df88.up.railway.app
   tls: true
   type: vmess
-  uuid: f5de9f50-fe52-4a36-945d-0cb116d6e014
+  uuid: adacbe9f-e0cb-48dd-8a18-501667547afc
   ws-opts:
     headers:
-      Host: panel-production-3905.up.railway.app
-    path: /gw/b9feccab-9fa0-420f-8a4c-9c5384e79817?ed=2560
-- alterId: 0
-  cipher: auto
-  name: vmess-1837386984
-  network: tcp
-  port: 18000
-  server: 149.88.23.202
-  servername: 149.88.23.202
-  tls: false
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-- alterId: 0
-  cipher: auto
-  name: '🇸🇬 新加坡 | SGP #4'
-  network: none
-  port: 47630
-  server: 43.228.126.187
-  tls: false
-  type: vmess
-  uuid: 9e5c6ebf-35f9-49a3-9f12-cba2b7cdbccb
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-152.69.211.235-1594
-  network: http
-  port: 80
-  server: 152.69.211.235
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: d345916f-1673-4a98-f37d-49357c84ce03
+      Host: siderail-production-df88.up.railway.app
+    path: /api/8L2FZN
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -81,13 +30,6 @@ proxies:
   skip-cert-verify: false
   sni: exploredigitaljobplatformandfindonlinework.com
   type: trojan
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 18.143.179.74
-  type: ss
-  udp: true
 - cipher: aes-256-gcm
   name: 🇸🇬SG-149.88.106.73-0146
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -104,22 +46,28 @@ proxies:
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 149.88.106.74
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #6'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 149.88.107.47
   type: ss
 - cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #3'
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #2'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 51.79.228.131
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #19'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 15.235.182.183
   type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #26'
+  name: '🏳[www.v2nodes.com] ss- #20'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 149.88.106.74
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #21'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 149.88.107.74

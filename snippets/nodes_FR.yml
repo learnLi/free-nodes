@@ -11,62 +11,15 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 246A8D
-  network: tcp
-  port: 1270
-  server: 91.134.35.72
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 24D78E
-  network: ws
-  port: 20287
-  server: 147.135.213.72
-  tls: false
-  type: vmess
-  uuid: dcbb251a-90f2-454d-bf54-fc5efa789dbd
-  ws-opts:
-    path: /bp-vmess
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 334327
-  network: ws
-  port: 443
-  server: 90.127.143.135
-  servername: renderer-stream-2-62.mirra.now
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 8D380D
-  network: tcp
-  port: 1270
-  server: 46.105.222.155
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 9FDBC9
+  name: FR 🇫🇷 | @Raydikalx | 058A0B
   network: ws
   port: 80
-  server: 145.239.55.210
-  servername: ''
+  server: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+  servername: null
   tls: false
   type: vmess
   uuid: 479526cd-5011-43cf-a788-504da95e07c2
   ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
 - alterId: 0
   cipher: auto
@@ -141,20 +94,14 @@ proxies:
   server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 23.162.152.22
+  server: 167.17.64.22
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
   password: 29irqk0paakcx19v
   port: 8080
   server: 51.83.61.102
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #15'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.22
   type: ss

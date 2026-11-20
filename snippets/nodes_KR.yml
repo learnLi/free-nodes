@@ -1,6 +1,16 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | ED5343
+  network: tcp
+  port: 8888
+  server: 146.56.112.110
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+- alterId: 0
+  cipher: auto
   name: 🇰🇷KR-132.145.80.230-1029
   network: ws
   port: 80
@@ -25,11 +35,11 @@ proxies:
   name: '🇰🇷 韩国 | KOR #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 43.203.227.42
+  server: 3.36.53.31
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #1'
   password: '!!str 12242'
   port: 10099
   server: 115.161.136.145
