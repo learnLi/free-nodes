@@ -1,14 +1,33 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | BCC710
-  network: httpupgrade
-  port: 443
-  server: defe.sync-bridge.ir
-  servername: defe.sync-bridge.ir
+  name: SE 🇸🇪 | @Raydikalx | 94F21C
+  network: tcp
+  port: 1270
+  server: 138.199.55.230
+  servername: ''
   tls: true
   type: vmess
-  uuid: 386c5322-48aa-4fc1-814f-2ff6c34d77e0
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | C2B3A3
+  network: tcp
+  port: 12809
+  server: 13.48.205.27
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 413abec9-e07c-424e-8c0a-da234bef870e
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | CD2072
+  network: tcp
+  port: 41353
+  server: 77.221.141.134
+  tls: true
+  type: vmess
+  uuid: 655f6f7a-a288-39e1-9e82-b60cd4e81529
 - cipher: aes-256-gcm
   name: '🇸🇪[www.v2nodes.com] ss-SE-1615... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=

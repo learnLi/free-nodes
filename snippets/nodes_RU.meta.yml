@@ -12,19 +12,6 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: 🇷🇺RU-91.193.181.192-3726
-  network: ws
-  port: 8090
-  server: 91.193.181.192
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 08bc30e1-be39-4eb4-e887-e6579be15a45
-  ws-opts:
-    path: /
 - alpn:
   - h2
   client-fingerprint: chrome

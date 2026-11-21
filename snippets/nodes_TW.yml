@@ -1,69 +1,57 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 20069F
-  network: tcp
-  port: 59509
-  server: ff003.owwoedu.com
+  name: TW 🇹🇼 | @Raydikalx | 1232A6
+  network: ws
+  port: 52300
+  server: hi.northcluster.info
   servername: ''
   tls: false
   type: vmess
-  uuid: 464b32ca-1365-49db-a531-31568b602065
+  uuid: 6e571484-4166-4699-8f58-b34a1823691f
+  ws-opts:
+    headers:
+      Host: hi.northcluster.info
+    path: /video
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 82C740
+  name: TW 🇹🇼 | @Raydikalx | 387389
   network: ws
   port: 443
-  server: 654168416355441.oylfmxz.cn
-  servername: 654168416355441.oylfmxz.cn
+  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  servername: ''
   tls: true
   type: vmess
   uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   ws-opts:
-    headers:
-      Host: 654168416355441.oylfmxz.cn
     path: /
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | F7660D
+  name: '🇹🇼 🇨🇳 台湾 | TWN #1'
   network: ws
-  port: 443
-  server: 24864168545164.oylfmxz.cn
-  servername: 24864168545164.oylfmxz.cn
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: 24864168545164.oylfmxz.cn
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-104.29.64.30-1649
-  network: ws
-  port: 443
-  server: 104.29.64.30
-  servername: ''
+  port: 16616
+  server: dp8yk.xiaoyan.io
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: a2c5ba68-e86a-4959-b7f3-8f8801d6370e
+  udp: true
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
   ws-opts:
     headers:
-      Host: de1.kuainiao.buzz
-    path: /kuainiao/de1
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+    path: /
 - alterId: 0
   cipher: auto
-  name: 🇹🇼TW-211.72.35.110-1636
+  name: 🇹🇼TW-104.29.64.2-1394
   network: ws
   port: 443
-  server: 211.72.35.110
+  server: 104.29.64.2
   servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 2eb30779-2e8c-4b89-e6bd-a0ec760ca506
+  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
   ws-opts:
     headers:
-      Host: woideneu7.jsworld.eu.org
-    path: /nishikata
+      Host: fr2.cfcdn4.xyz
+    path: /ray

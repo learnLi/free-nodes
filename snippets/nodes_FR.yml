@@ -1,29 +1,21 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 03E267
-  network: tcp
-  port: 22324
-  server: 45.80.215.8
+  name: FR 🇫🇷 | @Raydikalx | B6B5B0
+  network: ws
+  port: 20222
+  server: 51.75.118.5
   servername: ''
   tls: false
   type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 058A0B
-  network: ws
-  port: 80
-  server: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-  servername: null
-  tls: false
-  type: vmess
-  uuid: 479526cd-5011-43cf-a788-504da95e07c2
+  uuid: 541d46d8-5fc6-4d57-a7c4-9ccd3b5966eb
   ws-opts:
-    path: /
+    headers:
+      Host: 51.75.118.5
+    path: /parham-confing-vmess?u=6991fbdd-51e0-4970-b159-f9af46890c43-beda239a407a7eed66f791c6
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0198
+  name: 🇫🇷FR-145.239.55.210-0257
   network: ws
   port: 80
   server: 145.239.55.210
@@ -36,6 +28,19 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-146.59.92.219-3591
+  network: ws
+  port: 2096
+  server: 146.59.92.219
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: aca71b13-ec8a-466d-c28f-43516d3cf246
+  ws-opts:
+    path: /
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -46,25 +51,25 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.50
+  server: 104.18.152.77
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.77
+  server: 104.18.152.50
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - cipher: aes-256-gcm
-  name: 🇫🇷FR-107.161.160.28-0212
+  name: 🇫🇷FR-107.161.160.28-0189
   password: itzvpn@321
   port: 8388
   server: 107.161.160.28
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇫🇷FR-51.77.144.182-0250
+  name: 🇫🇷FR-51.77.144.182-0215
   password: x19py0a8ipglqkbe
   port: 8080
   server: 51.77.144.182
@@ -98,6 +103,12 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.162.152.22
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'

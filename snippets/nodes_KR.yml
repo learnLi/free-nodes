@@ -9,21 +9,6 @@ proxies:
   tls: false
   type: vmess
   uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-132.145.80.230-1029
-  network: ws
-  port: 80
-  server: 132.145.80.230
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  ws-opts:
-    headers:
-      Host: kr02.a0a.xyz
-    path: /cctv13.m3u8
 - name: '🇰🇷[www.v2nodes.com] trojan-KR-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -31,11 +16,17 @@ proxies:
   skip-cert-verify: true
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   type: trojan
+- cipher: aes-256-cfb
+  name: shadowsocks-1827145973
+  password: qwerREWQ@@
+  port: 6123
+  server: 211.178.105.134
+  type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #2'
+  name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 3.36.53.31
+  server: 15.165.75.243
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
