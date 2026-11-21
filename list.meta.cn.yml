@@ -269,20 +269,6 @@ proxies:
     path: /?ed=2048&Telegram🇨🇳
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | F61E58
-  network: ws
-  port: 443
-  server: US032024.ssgreen.org
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: f6fb24e5-310a-4c1e-b381-0e8ca2c7d2ea
-  ws-opts:
-    headers:
-      Host: US032024.ssgreen.org
-    path: /wes
-- alterId: 0
-  cipher: auto
   name: CA 🇨🇦 | @Raydikalx | FBD0E2
   network: ws
   port: 2095
@@ -370,15 +356,6 @@ proxies:
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: HK 🇭🇰 | @Raydikalx | 4F89A3
-  network: tcp
-  port: 21016
-  server: dog-jp.kunlun01dns.com
-  tls: false
-  type: vmess
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-- alterId: 0
-  cipher: auto
   name: HK 🇭🇰 | @Raydikalx | 59FF64
   network: tcp
   port: 11973
@@ -433,16 +410,6 @@ proxies:
   uuid: e0be13c2-98f7-4965-b386-87745a82d96b
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | ED5343
-  network: tcp
-  port: 8888
-  server: 146.56.112.110
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
-- alterId: 0
-  cipher: auto
   name: NL 🇳🇱 | @Raydikalx | 01492A
   network: tcp
   port: 116
@@ -465,19 +432,6 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: none
-  name: PL 🇵🇱 | @Raydikalx | 38D7E1
-  network: ws
-  port: 80
-  server: 54.37.131.126
-  tls: false
-  type: vmess
-  uuid: 6deef9ad-1357-443d-f95c-cb18952c20b3
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-    path: /
 - alterId: 0
   cipher: auto
   name: RU 🇷🇺 | @Raydikalx | 23540B
@@ -503,40 +457,6 @@ proxies:
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 1DA3B5
-  network: ws
-  port: 443
-  server: ugfdrtyi-production.up.railway.app
-  servername: ugfdrtyi-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: a0139cc4-835a-492d-9552-715f3e46d9fa
-  ws-opts:
-    headers:
-      Host: ugfdrtyi-production.up.railway.app
-    path: /api/xviT8X
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 0CBFCD
-  network: tcp
-  port: 1270
-  server: 38.91.106.182
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 565AA4
-  network: tcp
-  port: 1270
-  server: 38.91.100.69
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
   name: US 🇺🇸 | @Raydikalx | 737919
   network: tcp
   port: 22324
@@ -554,16 +474,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- alterId: 0
-  cipher: auto
-  name: US 🇺🇸 | @Raydikalx | 7DD8C0
-  network: tcp
-  port: 1270
-  server: 38.128.66.241
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
   name: US 🇺🇸 | @Raydikalx | F4E423
@@ -723,21 +633,6 @@ proxies:
     path: /arki
 - alterId: 0
   cipher: auto
-  name: 🇭🇰HK-159.100.206.88-0064
-  network: ws
-  port: 443
-  server: 159.100.206.88
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
-- alterId: 0
-  cipher: auto
   name: 🇭🇰HK-47.244.120.197-5771
   network: ws
   port: 44867
@@ -779,21 +674,6 @@ proxies:
   type: vmess
   uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
   ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: '🇹🇼 🇨🇳 台湾 | TWN #1'
-  network: ws
-  port: 16616
-  server: dp8yk.xiaoyan.io
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
     path: /
 - alterId: 0
   cipher: auto
@@ -1030,6 +910,21 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
+  name: 🏁RELAY-188.114.96.3-1748
+  network: ws
+  port: 8443
+  server: 188.114.96.3
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  ws-opts:
+    headers:
+      Host: v2ray1.dozapp.xyz
+    path: /lMnsZUN4/
+- alterId: 0
+  cipher: auto
   name: 🏁RELAY-23.227.38.33-0577
   network: ws
   port: 80
@@ -1125,11 +1020,10 @@ proxies:
     headers:
       Host: hk.zhaoqing.city
     path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-- client-fingerprint: chrome
-  name: vless-1828654076
+- name: vless-1832764138
   network: ws
   port: 443
-  server: 104.21.70.228
+  server: 104.17.210.74
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -1138,10 +1032,10 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxyws
-- name: vless-1832764138
+- name: vless-1853654571
   network: ws
   port: 443
-  server: 104.17.210.74
+  server: 104.21.70.21
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -1177,18 +1071,6 @@ proxies:
   network: ws
   port: 443
   server: 104.16.10.2
-  servername: jp3.yohototo.top
-  tls: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  ws-opts:
-    headers:
-      Host: jp3.yohototo.top
-    path: /tyxyws
-- name: vless-1863464818
-  network: ws
-  port: 443
-  server: 104.18.42.98
   servername: jp3.yohototo.top
   tls: true
   type: vless
@@ -1268,20 +1150,6 @@ proxies:
     path: /
 - client-fingerprint: chrome
   encryption: none
-  name: ⚡ b2n.ir/v2ray-configs | 110
-  network: ws
-  port: 2053
-  server: 188.114.99.137
-  servername: fast.145779.xyz
-  tls: true
-  type: vless
-  uuid: c83f15bf-1817-4ec8-a19f-6393d226434c
-  ws-opts:
-    headers:
-      Host: fast.145779.xyz
-    path: /ws-tesla
-- client-fingerprint: chrome
-  encryption: none
   name: ⚡ b2n.ir/v2ray-configs | 514
   network: ws
   port: 443
@@ -1306,32 +1174,6 @@ proxies:
     headers:
       Host: wR-mTrZb1.mAniYaDg7sHaRd.iR
     path: /
-- encryption: none
-  name: '⚡ b2n.ir/v2ray-configs | 911 #1'
-  network: ws
-  port: 443
-  server: 104.24.196.20
-  servername: fs.qicai99.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-  ws-opts:
-    headers:
-      Host: fs.qicai99.com
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- encryption: none
-  name: ⚡ b2n.ir/v2ray-configs | 934
-  network: ws
-  port: 80
-  server: ov-germany1.09vpn.com
-  tls: false
-  type: vless
-  uuid: 7d74eae4-8a06-4306-a923-ad686f30bf26
-  ws-opts:
-    headers:
-      Host: OV-Germany1.09vpn.com
-    path: /vless/
 - client-fingerprint: chrome
   name: 新加坡|@ripaojiedian
   network: ws
@@ -1371,18 +1213,6 @@ proxies:
     headers:
       Host: cf-1rm.pages.dev
     path: /
-- name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  network: ws
-  port: 22573
-  server: 84.235.244.108
-  servername: uae.unixzone.us
-  tls: false
-  type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  ws-opts:
-    headers:
-      Host: uae.unixzone.us
-    path: /
 - client-fingerprint: chrome
   grpc-opts:
     grpc-service-name: 5b79e8a94241
@@ -1394,18 +1224,6 @@ proxies:
   tls: true
   type: vless
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-- name: '🇦🇷 阿根廷 | ARG #1'
-  network: ws
-  port: 443
-  server: 131.255.6.88
-  servername: cj1-e06.pages.dev
-  tls: true
-  type: vless
-  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
-  ws-opts:
-    headers:
-      Host: cj1-e06.pages.dev
-    path: /?ed=2560fp=random
 - name: 🇨🇦[www.v2nodes.com] vless-CA
   network: ws
   port: 8080
@@ -1612,6 +1430,23 @@ proxies:
   type: vless
   uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
 - alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: random
+  name: '🇩🇪 德国 | DEU #28'
+  network: xhttp
+  port: 443
+  server: sunfield.moltex.click
+  servername: sunfield.moltex.click
+  tls: true
+  type: vless
+  udp: true
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  xhttp-opts:
+    host: sunfield.moltex.click
+    mode: auto
+    path: /api/de1/sync
+- alpn:
   - http/1.1
   client-fingerprint: firefox
   name: '🇩🇪 德国 | DEU #29'
@@ -1718,24 +1553,6 @@ proxies:
         like Gecko) Chrome/57.0.2987.133 Safari/537.36
     path: /?ed=2048
   xudp: true
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇩🇪DE_12|3.1MB/s
-  network: ws
-  port: 2096
-  server: 162.159.158.245
-  servername: cdn.lahjy.xyz
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5821f560-4156-4faf-80ec-9d798b128090
-  ws-opts:
-    headers:
-      Host: cdn.lahjy.xyz
-      User-Agent: Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/60.0.3112.90 Safari/537.36
-    path: /
-  xudp: true
 - encryption: none
   name: 🇩🇪DE_13|2.9MB/s
   network: ws
@@ -1802,18 +1619,6 @@ proxies:
   tls: true
   type: vless
   uuid: 63aa95e5-3b36-4e53-a86f-7df59652e994
-- name: '🇫🇷 法国 | FRA #1'
-  network: ws
-  port: 443
-  server: notified-rendered-moore-consideration.trycloudflare.com
-  servername: notified-rendered-moore-consideration.trycloudflare.com
-  tls: true
-  type: vless
-  uuid: 11111111-2222-3333-4444-555555555555
-  ws-opts:
-    headers:
-      Host: notified-rendered-moore-consideration.trycloudflare.com
-    path: /tg-jiedianxieloufp=chrome
 - client-fingerprint: qq
   name: '🇬🇧 英国 | GBR #2'
   network: tcp
@@ -1841,31 +1646,6 @@ proxies:
   udp: true
   uuid: 40992c2a-513e-4837-9594-23411fd42afd
   xudp: true
-- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
-  network: ws
-  port: 443
-  server: xray-ckc68nno-swift-harbor-8.cloady.io
-  servername: xray-ckc68nno-swift-harbor-8.cloady.io
-  tls: true
-  type: vless
-  uuid: b004e898-f6cf-54a5-d281-f063d741ad53
-  ws-opts:
-    headers:
-      Host: xray-ckc68nno-swift-harbor-8.cloady.io
-    path: /3e0261245277336dfp=chrome
-- client-fingerprint: chrome
-  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
-  network: ws
-  port: 443
-  server: xray-ckc68nno-swift-harbor-8.cloady.io
-  servername: xray-ckc68nno-swift-harbor-8.cloady.io
-  tls: true
-  type: vless
-  uuid: b004e898-f6cf-54a5-d281-f063d741ad53
-  ws-opts:
-    headers:
-      Host: xray-ckc68nno-swift-harbor-8.cloady.io
-    path: /3e0261245277336d
 - name: 🇮🇪[www.v2nodes.com] vless-IE-3...
   network: ws
   port: 443
@@ -1878,34 +1658,10 @@ proxies:
     headers:
       Host: cj1-e06.pages.dev
     path: /fp=random
-- name: '🇮🇹 意大利 | ITA #10'
-  network: ws
-  port: 443
-  server: 165.22.28.246
-  servername: it-mil.862400.xyz
-  tls: true
-  type: vless
-  uuid: f520bd45-8e26-4a23-a227-2f91acb67928
-  ws-opts:
-    headers:
-      Host: it-mil.862400.xyz
-    path: /announcementfp=random
 - name: '🇮🇹 意大利 | ITA #11'
   network: ws
   port: 443
   server: 172.67.67.89
-  servername: it-mil.862400.xyz
-  tls: true
-  type: vless
-  uuid: f520bd45-8e26-4a23-a227-2f91acb67928
-  ws-opts:
-    headers:
-      Host: it-mil.862400.xyz
-    path: /announcementfp=random
-- name: '🇮🇹 意大利 | ITA #12'
-  network: ws
-  port: 443
-  server: 176.124.221.112
   servername: it-mil.862400.xyz
   tls: true
   type: vless
@@ -1950,18 +1706,6 @@ proxies:
     headers:
       Host: it-mil.862400.xyz
     path: /announcementfp=random
-- name: 🇮🇹[www.v2nodes.com] vless-IT-2...
-  network: ws
-  port: 443
-  server: 45.147.250.39
-  servername: cj1-e06.pages.dev
-  tls: true
-  type: vless
-  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
-  ws-opts:
-    headers:
-      Host: cj1-e06.pages.dev
-    path: /?ed=2560fp=random
 - client-fingerprint: chrome
   encryption: none
   name: 🇯🇵JP_1|2.2MB/s
@@ -2000,14 +1744,6 @@ proxies:
     headers:
       Host: cj1-e06.pages.dev
     path: /?ed=2560fp=random
-- client-fingerprint: chrome
-  name: '🇳🇱 荷兰 | NLD #5'
-  port: 443
-  server: 185.14.29.29
-  servername: static.gcore.pro
-  tls: true
-  type: vless
-  uuid: 6b1607f1-3a08-4681-8abd-83663a8155e7
 - encryption: none
   http-opts:
     headers:
@@ -2446,6 +2182,13 @@ proxies:
   server: 8.6.112.206
   sni: www.trusteeforward.com
   type: trojan
+- name: trojan-1943480647
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 208.69.78.60
+  sni: cdn.yourultimateprofessionalcareerhub.com
+  type: trojan
 - name: trojan-1944218170
   network: ws
   password: humanity
@@ -2459,6 +2202,20 @@ proxies:
   port: 443
   server: 104.27.0.1
   sni: www.calmlunch.com
+  type: trojan
+- name: trojan-1945021228
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 208.69.78.19
+  sni: www.yourultimateprofessionalcareerhub.com
+  type: trojan
+- name: trojan-1945028567
+  network: tcp
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 208.69.78.29
+  sni: learn.yourultimateprofessionalcareerhub.com
   type: trojan
 - name: trojan-1946894181
   network: ws
@@ -2516,11 +2273,6 @@ proxies:
   type: trojan
   ws-opts:
     path: /
-- name: ⚡ b2n.ir/v2ray-configs | 973
-  password: ND91608427
-  port: 443
-  server: 18.179.31.199
-  type: trojan
 - name: ❓未知丨yoyapai.com\r
   password: humanity
   port: 443
@@ -2566,6 +2318,12 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #6'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 208.69.78.33
+  sni: courses.yourultimateprofessionalcareerhub.com
+  type: trojan
 - name: '🇨🇭[www.v2nodes.com] trojan-CH-... #7'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -2596,13 +2354,6 @@ proxies:
       User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/67.0.3396.87 Safari/537.36
     path: /tr?ed=2560
-- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
-  password: poimnap
-  port: 443
-  server: alireza.karamoz1.ir
-  skip-cert-verify: true
-  sni: alireza.karamoz1.ir
-  type: trojan
 - name: 🇩🇰 丹麦 | DNK
   network: ws
   password: zhs000666
@@ -2655,6 +2406,13 @@ proxies:
   port: 443
   server: 47.250.84.25
   type: trojan
+- name: 🇺🇸 US美国(mibei77.com 米贝节点分享)
+  password: f426d3c9-fb43-43c0-868b-898dfa451a74
+  port: 443
+  server: 103.11.76.183
+  skip-cert-verify: false
+  sni: likejennie.pages.dev
+  type: trojan
 - name: 🇺🇸US美国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -2681,18 +2439,6 @@ proxies:
   port: 443
   server: 162.19.59.161
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇨🇾 塞浦路斯 | CYP #1'
-  password: lDe8uY-MIsa2C_PfpwUaqUHsMkf5tqPE
-  port: 1080
-  server: 45.83.85.31
-  type: ss
-- cipher: 2022-blake3-chacha20-poly1305
-  name: 🇩🇪 德国 | DEU
-  password: T/JBl9+ncYroIbDdDv16t8J6DqXsIAe0GbzWo6iDdhI=
-  port: 59924
-  server: 92.5.70.180
-  type: ss
 - cipher: 2022-blake3-chacha20-poly1305
   name: '🇩🇪 德国 | DEU #23'
   password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
@@ -2707,18 +2453,6 @@ proxies:
   server: 47.254.128.109
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: 🇪🇸ES-5.188.181.201-5660
-  password: S7KwUu7yBy58S3Ga
-  port: 9042
-  server: 5.188.181.201
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇮[www.v2nodes.com] ss-FI-1623...
-  password: C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc
-  port: 25565
-  server: static.28.210.29.2.clients.your-server.de
-  type: ss
 - cipher: 2022-blake3-chacha20-poly1305
   name: '🇬🇧 英国 | GBR #1'
   password: qQiY6ohAB0nZSQtGK8ScY+jaTeJgYxsdERHW0vrXxnY=
@@ -2796,25 +2530,6 @@ proxies:
   type: ss
   udp: true
 - cipher: 2022-blake3-chacha20-poly1305
-  name: '🇳🇱 荷兰 | NLD #1'
-  password: Lqb/eLDa4LnfF6j965FkZEXTWkH65B083ivjy0xFpiI=
-  port: 45819
-  server: 158.178.157.15
-  type: ss
-- cipher: 2022-blake3-chacha20-poly1305
-  name: '🇳🇱 荷兰 | NLD #9'
-  password: 7mxLVm0/qr6Fq1P7IXBvCJ9PUzdNkuUIQkiBWnz8EpA=
-  port: 45819
-  server: 141.148.243.126
-  type: ss
-  udp: true
-- cipher: 2022-blake3-chacha20-poly1305
-  name: '🇳🇱[www.v2nodes.com] ss-NL-1623... #2'
-  password: hZ3VbN592JZsuzZ9ou+pGOBFMSRGBiSVczJFghcRaEY=
-  port: 45819
-  server: 84.235.170.154
-  type: ss
-- cipher: 2022-blake3-chacha20-poly1305
   name: '🇸🇬[www.v2nodes.com] ss-SG-1623... #1'
   password: c11JMfCMQ3Y4aGlhMX5LrMpM13uvw+UVbjGfHP+eKkY=
   port: 56927
@@ -2825,12 +2540,6 @@ proxies:
   password: GMhXRpy/pfPMVrZeCAxOxI5MpuH3llOtZKoeNLUT0n8=
   port: 56927
   server: 158.178.230.120
-  type: ss
-- cipher: 2022-blake3-chacha20-poly1305
-  name: 🇺🇸[www.v2nodes.com] ss-US-1623...
-  password: EP/0kIjk18c43tfkqeJqdVQm8lGArteYkhhwgBJ3q70=
-  port: 50356
-  server: 161.153.38.61
   type: ss
 proxy-groups:
 - name: 🚀 选择代理
@@ -2864,7 +2573,6 @@ proxy-groups:
   - CA 🇨🇦 | @Raydikalx | C0774F
   - CA 🇨🇦 | @Raydikalx | D8003D
   - CA 🇨🇦 | @Raydikalx | E8F6E5
-  - CA 🇨🇦 | @Raydikalx | F61E58
   - CA 🇨🇦 | @Raydikalx | FBD0E2
   - CR 🇨🇷 | @Raydikalx | 09F047
   - DE 🇩🇪 | @Raydikalx | 11025A
@@ -2872,24 +2580,17 @@ proxy-groups:
   - HK 🇭🇰 | @Raydikalx | 1B63F0
   - HK 🇭🇰 | @Raydikalx | 313D15
   - HK 🇭🇰 | @Raydikalx | 48EBAF
-  - HK 🇭🇰 | @Raydikalx | 4F89A3
   - HK 🇭🇰 | @Raydikalx | 59FF64
   - HK 🇭🇰 | @Raydikalx | A4DE51
   - IR 🇮🇷 | @Raydikalx | 258709
   - IR 🇮🇷 | @Raydikalx | 3811FD
   - IR 🇮🇷 | @Raydikalx | 7410D7
-  - KR 🇰🇷 | @Raydikalx | ED5343
   - NL 🇳🇱 | @Raydikalx | 01492A
   - NL 🇳🇱 | @Raydikalx | 41C7D7
-  - PL 🇵🇱 | @Raydikalx | 38D7E1
   - RU 🇷🇺 | @Raydikalx | 23540B
   - SE 🇸🇪 | @Raydikalx | 94F21C
-  - SG 🇸🇬 | @Raydikalx | 1DA3B5
-  - US 🇺🇸 | @Raydikalx | 0CBFCD
-  - US 🇺🇸 | @Raydikalx | 565AA4
   - US 🇺🇸 | @Raydikalx | 737919
   - US 🇺🇸 | @Raydikalx | 7AA8C3
-  - US 🇺🇸 | @Raydikalx | 7DD8C0
   - US 🇺🇸 | @Raydikalx | F4E423
   - US 🇺🇸 | @Raydikalx | FBF6EC
   - 未知100
@@ -2902,11 +2603,9 @@ proxy-groups:
   - 🇩🇪DE德国
   - 🇪🇸 西班牙(mibei77.com 米贝节点分享)
   - '🇭🇰 香港 | HKG #6'
-  - 🇭🇰HK-159.100.206.88-0064
   - 🇭🇰HK-47.244.120.197-5771
   - '🇮🇩 印尼 | IDN #1'
   - 🇮🇳IN-155.248.241.52-1794
-  - '🇹🇼 🇨🇳 台湾 | TWN #1'
   - '🇺🇸 US美国(mibei77.com 米贝节点分享) #1'
   - '🇺🇸 美国 | USA #12'
   - 🇺🇸US-147.135.112.248-1521
@@ -2924,6 +2623,7 @@ proxy-groups:
   - 🏁RELAY-172.64.229.223-8256
   - 🏁RELAY-172.67.120.67-8241
   - 🏁RELAY-188.114.96.2-1242
+  - 🏁RELAY-188.114.96.3-1748
   - 🏁RELAY-23.227.38.33-0577
   - AT_speednode_0001
   - 'AT_speednode_0001 #1'
@@ -2931,29 +2631,23 @@ proxy-groups:
   - 'BR_speednode_0003 #1'
   - GB VLESS-18 | free-nodes
   - US VLESS-21 | free-nodes
-  - vless-1828654076
   - vless-1832764138
+  - vless-1853654571
   - vless-1853976457
   - vless-1856199614
   - vless-1863440028
-  - vless-1863464818
   - vless-1863468525
   - vless-1867102735
   - vless-1884945236
   - vless-1927185301
   - vless-1946593165
   - vless-1947014531
-  - ⚡ b2n.ir/v2ray-configs | 110
   - ⚡ b2n.ir/v2ray-configs | 514
   - ⚡ b2n.ir/v2ray-configs | 578
-  - '⚡ b2n.ir/v2ray-configs | 911 #1'
-  - ⚡ b2n.ir/v2ray-configs | 934
   - 新加坡|@ripaojiedian
   - 未知 VLESS-16 | free-nodes
   - 未知 VLESS-24 | free-nodes
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
-  - '🇦🇷 阿根廷 | ARG #1'
   - 🇨🇦[www.v2nodes.com] vless-CA
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #3'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
@@ -2969,6 +2663,7 @@ proxy-groups:
   - '🇩🇪 德国 | DEU #25'
   - '🇩🇪 德国 | DEU #26'
   - '🇩🇪 德国 | DEU #27'
+  - '🇩🇪 德国 | DEU #28'
   - '🇩🇪 德国 | DEU #29'
   - '🇩🇪 德国 | DEU #3'
   - '🇩🇪 德国 | DEU #5'
@@ -2977,29 +2672,21 @@ proxy-groups:
   - 🇩🇪 德国 | DEU 13
   - 🇩🇪 德国 | DEU 18
   - 🇩🇪DE_11|2.8MB/s
-  - 🇩🇪DE_12|3.1MB/s
   - 🇩🇪DE_13|2.9MB/s
   - 🇩🇪DE_14|1.1MB/s
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - '🇪🇸 西班牙 | ESP #1'
   - '🇪🇸 西班牙 | ESP #1 #1'
-  - '🇫🇷 法国 | FRA #1'
   - '🇬🇧 英国 | GBR #2'
   - 🇬🇧GB_1|2.7MB/s
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - 🇮🇪[www.v2nodes.com] vless-IE-3...
-  - '🇮🇹 意大利 | ITA #10'
   - '🇮🇹 意大利 | ITA #11'
-  - '🇮🇹 意大利 | ITA #12'
   - '🇮🇹 意大利 | ITA #13'
   - '🇮🇹 意大利 | ITA #14'
   - '🇮🇹 意大利 | ITA #9'
-  - 🇮🇹[www.v2nodes.com] vless-IT-2...
   - 🇯🇵JP_1|2.2MB/s
   - '🇰🇿 哈萨克斯坦 | KAZ #1'
   - '🇳🇱 荷兰 | NLD #4'
-  - '🇳🇱 荷兰 | NLD #5'
   - 🇳🇱NL_2|2.2MB/s
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - '🇷🇺 俄罗斯 | RUS #10'
@@ -3044,8 +2731,11 @@ proxy-groups:
   - trojan-1939845059
   - trojan-1939845073
   - trojan-1940455323
+  - trojan-1943480647
   - trojan-1944218170
   - trojan-1944218172
+  - trojan-1945021228
+  - trojan-1945028567
   - trojan-1946894181
   - trojan-1947413506
   - ⚡ b2n.ir/v2ray-configs | 408
@@ -3053,17 +2743,16 @@ proxy-groups:
   - ⚡ b2n.ir/v2ray-configs | 710
   - ⚡ b2n.ir/v2ray-configs | 718
   - ⚡ b2n.ir/v2ray-configs | 755
-  - ⚡ b2n.ir/v2ray-configs | 973
   - ❓未知丨yoyapai.com\r
   - '美国4|@ripaojiedian #1'
   - '美国5|@ripaojiedian #1'
   - 美國丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
   - '🇨🇦CA加拿大丨yoyapai.com\r #1'
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #6'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #7'
   - '🇨🇳 CN_61 #1'
   - 🇩🇪DE_3|2.3MB/s
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
   - 🇩🇰 丹麦 | DNK
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
@@ -3071,16 +2760,13 @@ proxy-groups:
   - 🇬🇧 GB英国mibei77.com 米贝节点分享)
   - '🇬🇧 GB英国mibei77.com 米贝节点分享) #1'
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
+  - 🇺🇸 US美国(mibei77.com 米贝节点分享)
   - 🇺🇸US美国丨yoyapai.com\r
   - 🇺🇸US美國丨yoyapai.com\r
   - ⚡ b2n.ir/v2ray-configs | 113
   - ⚡ b2n.ir/v2ray-configs | 226
-  - '🇨🇾 塞浦路斯 | CYP #1'
-  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #23'
   - '🇩🇪 德国 | DEU #24'
-  - 🇪🇸ES-5.188.181.201-5660
-  - 🇫🇮[www.v2nodes.com] ss-FI-1623...
   - '🇬🇧 英国 | GBR #1'
   - '🇮🇹 意大利 | ITA #16'
   - '🇮🇹 意大利 | ITA #17'
@@ -3092,12 +2778,8 @@ proxy-groups:
   - '🇮🇹 意大利 | ITA #6'
   - '🇮🇹 意大利 | ITA #7'
   - '🇮🇹 意大利 | ITA #8'
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱[www.v2nodes.com] ss-NL-1623... #2'
   - '🇸🇬[www.v2nodes.com] ss-SG-1623... #1'
   - '🇸🇬[www.v2nodes.com] ss-SG-1623... #2'
-  - 🇺🇸[www.v2nodes.com] ss-US-1623...
   timeout: 5000
   type: fallback
   url: https://www.gstatic.com/generate_204
@@ -3125,7 +2807,6 @@ proxy-groups:
   - CA 🇨🇦 | @Raydikalx | C0774F
   - CA 🇨🇦 | @Raydikalx | D8003D
   - CA 🇨🇦 | @Raydikalx | E8F6E5
-  - CA 🇨🇦 | @Raydikalx | F61E58
   - CA 🇨🇦 | @Raydikalx | FBD0E2
   - CR 🇨🇷 | @Raydikalx | 09F047
   - DE 🇩🇪 | @Raydikalx | 11025A
@@ -3133,24 +2814,17 @@ proxy-groups:
   - HK 🇭🇰 | @Raydikalx | 1B63F0
   - HK 🇭🇰 | @Raydikalx | 313D15
   - HK 🇭🇰 | @Raydikalx | 48EBAF
-  - HK 🇭🇰 | @Raydikalx | 4F89A3
   - HK 🇭🇰 | @Raydikalx | 59FF64
   - HK 🇭🇰 | @Raydikalx | A4DE51
   - IR 🇮🇷 | @Raydikalx | 258709
   - IR 🇮🇷 | @Raydikalx | 3811FD
   - IR 🇮🇷 | @Raydikalx | 7410D7
-  - KR 🇰🇷 | @Raydikalx | ED5343
   - NL 🇳🇱 | @Raydikalx | 01492A
   - NL 🇳🇱 | @Raydikalx | 41C7D7
-  - PL 🇵🇱 | @Raydikalx | 38D7E1
   - RU 🇷🇺 | @Raydikalx | 23540B
   - SE 🇸🇪 | @Raydikalx | 94F21C
-  - SG 🇸🇬 | @Raydikalx | 1DA3B5
-  - US 🇺🇸 | @Raydikalx | 0CBFCD
-  - US 🇺🇸 | @Raydikalx | 565AA4
   - US 🇺🇸 | @Raydikalx | 737919
   - US 🇺🇸 | @Raydikalx | 7AA8C3
-  - US 🇺🇸 | @Raydikalx | 7DD8C0
   - US 🇺🇸 | @Raydikalx | F4E423
   - US 🇺🇸 | @Raydikalx | FBF6EC
   - 未知100
@@ -3163,11 +2837,9 @@ proxy-groups:
   - 🇩🇪DE德国
   - 🇪🇸 西班牙(mibei77.com 米贝节点分享)
   - '🇭🇰 香港 | HKG #6'
-  - 🇭🇰HK-159.100.206.88-0064
   - 🇭🇰HK-47.244.120.197-5771
   - '🇮🇩 印尼 | IDN #1'
   - 🇮🇳IN-155.248.241.52-1794
-  - '🇹🇼 🇨🇳 台湾 | TWN #1'
   - '🇺🇸 US美国(mibei77.com 米贝节点分享) #1'
   - '🇺🇸 美国 | USA #12'
   - 🇺🇸US-147.135.112.248-1521
@@ -3185,6 +2857,7 @@ proxy-groups:
   - 🏁RELAY-172.64.229.223-8256
   - 🏁RELAY-172.67.120.67-8241
   - 🏁RELAY-188.114.96.2-1242
+  - 🏁RELAY-188.114.96.3-1748
   - 🏁RELAY-23.227.38.33-0577
   - AT_speednode_0001
   - 'AT_speednode_0001 #1'
@@ -3192,29 +2865,23 @@ proxy-groups:
   - 'BR_speednode_0003 #1'
   - GB VLESS-18 | free-nodes
   - US VLESS-21 | free-nodes
-  - vless-1828654076
   - vless-1832764138
+  - vless-1853654571
   - vless-1853976457
   - vless-1856199614
   - vless-1863440028
-  - vless-1863464818
   - vless-1863468525
   - vless-1867102735
   - vless-1884945236
   - vless-1927185301
   - vless-1946593165
   - vless-1947014531
-  - ⚡ b2n.ir/v2ray-configs | 110
   - ⚡ b2n.ir/v2ray-configs | 514
   - ⚡ b2n.ir/v2ray-configs | 578
-  - '⚡ b2n.ir/v2ray-configs | 911 #1'
-  - ⚡ b2n.ir/v2ray-configs | 934
   - 新加坡|@ripaojiedian
   - 未知 VLESS-16 | free-nodes
   - 未知 VLESS-24 | free-nodes
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
-  - '🇦🇷 阿根廷 | ARG #1'
   - 🇨🇦[www.v2nodes.com] vless-CA
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #3'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
@@ -3230,6 +2897,7 @@ proxy-groups:
   - '🇩🇪 德国 | DEU #25'
   - '🇩🇪 德国 | DEU #26'
   - '🇩🇪 德国 | DEU #27'
+  - '🇩🇪 德国 | DEU #28'
   - '🇩🇪 德国 | DEU #29'
   - '🇩🇪 德国 | DEU #3'
   - '🇩🇪 德国 | DEU #5'
@@ -3238,29 +2906,21 @@ proxy-groups:
   - 🇩🇪 德国 | DEU 13
   - 🇩🇪 德国 | DEU 18
   - 🇩🇪DE_11|2.8MB/s
-  - 🇩🇪DE_12|3.1MB/s
   - 🇩🇪DE_13|2.9MB/s
   - 🇩🇪DE_14|1.1MB/s
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - '🇪🇸 西班牙 | ESP #1'
   - '🇪🇸 西班牙 | ESP #1 #1'
-  - '🇫🇷 法国 | FRA #1'
   - '🇬🇧 英国 | GBR #2'
   - 🇬🇧GB_1|2.7MB/s
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - 🇮🇪[www.v2nodes.com] vless-IE-3...
-  - '🇮🇹 意大利 | ITA #10'
   - '🇮🇹 意大利 | ITA #11'
-  - '🇮🇹 意大利 | ITA #12'
   - '🇮🇹 意大利 | ITA #13'
   - '🇮🇹 意大利 | ITA #14'
   - '🇮🇹 意大利 | ITA #9'
-  - 🇮🇹[www.v2nodes.com] vless-IT-2...
   - 🇯🇵JP_1|2.2MB/s
   - '🇰🇿 哈萨克斯坦 | KAZ #1'
   - '🇳🇱 荷兰 | NLD #4'
-  - '🇳🇱 荷兰 | NLD #5'
   - 🇳🇱NL_2|2.2MB/s
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - '🇷🇺 俄罗斯 | RUS #10'
@@ -3305,8 +2965,11 @@ proxy-groups:
   - trojan-1939845059
   - trojan-1939845073
   - trojan-1940455323
+  - trojan-1943480647
   - trojan-1944218170
   - trojan-1944218172
+  - trojan-1945021228
+  - trojan-1945028567
   - trojan-1946894181
   - trojan-1947413506
   - ⚡ b2n.ir/v2ray-configs | 408
@@ -3314,17 +2977,16 @@ proxy-groups:
   - ⚡ b2n.ir/v2ray-configs | 710
   - ⚡ b2n.ir/v2ray-configs | 718
   - ⚡ b2n.ir/v2ray-configs | 755
-  - ⚡ b2n.ir/v2ray-configs | 973
   - ❓未知丨yoyapai.com\r
   - '美国4|@ripaojiedian #1'
   - '美国5|@ripaojiedian #1'
   - 美國丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
   - '🇨🇦CA加拿大丨yoyapai.com\r #1'
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #6'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #7'
   - '🇨🇳 CN_61 #1'
   - 🇩🇪DE_3|2.3MB/s
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
   - 🇩🇰 丹麦 | DNK
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
@@ -3332,16 +2994,13 @@ proxy-groups:
   - 🇬🇧 GB英国mibei77.com 米贝节点分享)
   - '🇬🇧 GB英国mibei77.com 米贝节点分享) #1'
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
+  - 🇺🇸 US美国(mibei77.com 米贝节点分享)
   - 🇺🇸US美国丨yoyapai.com\r
   - 🇺🇸US美國丨yoyapai.com\r
   - ⚡ b2n.ir/v2ray-configs | 113
   - ⚡ b2n.ir/v2ray-configs | 226
-  - '🇨🇾 塞浦路斯 | CYP #1'
-  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #23'
   - '🇩🇪 德国 | DEU #24'
-  - 🇪🇸ES-5.188.181.201-5660
-  - 🇫🇮[www.v2nodes.com] ss-FI-1623...
   - '🇬🇧 英国 | GBR #1'
   - '🇮🇹 意大利 | ITA #16'
   - '🇮🇹 意大利 | ITA #17'
@@ -3353,12 +3012,8 @@ proxy-groups:
   - '🇮🇹 意大利 | ITA #6'
   - '🇮🇹 意大利 | ITA #7'
   - '🇮🇹 意大利 | ITA #8'
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱[www.v2nodes.com] ss-NL-1623... #2'
   - '🇸🇬[www.v2nodes.com] ss-SG-1623... #1'
   - '🇸🇬[www.v2nodes.com] ss-SG-1623... #2'
-  - 🇺🇸[www.v2nodes.com] ss-US-1623...
   timeout: 5000
   tolerance: 20
   type: url-test
@@ -3384,7 +3039,6 @@ proxy-groups:
   - CA 🇨🇦 | @Raydikalx | C0774F
   - CA 🇨🇦 | @Raydikalx | D8003D
   - CA 🇨🇦 | @Raydikalx | E8F6E5
-  - CA 🇨🇦 | @Raydikalx | F61E58
   - CA 🇨🇦 | @Raydikalx | FBD0E2
   - CR 🇨🇷 | @Raydikalx | 09F047
   - DE 🇩🇪 | @Raydikalx | 11025A
@@ -3392,24 +3046,17 @@ proxy-groups:
   - HK 🇭🇰 | @Raydikalx | 1B63F0
   - HK 🇭🇰 | @Raydikalx | 313D15
   - HK 🇭🇰 | @Raydikalx | 48EBAF
-  - HK 🇭🇰 | @Raydikalx | 4F89A3
   - HK 🇭🇰 | @Raydikalx | 59FF64
   - HK 🇭🇰 | @Raydikalx | A4DE51
   - IR 🇮🇷 | @Raydikalx | 258709
   - IR 🇮🇷 | @Raydikalx | 3811FD
   - IR 🇮🇷 | @Raydikalx | 7410D7
-  - KR 🇰🇷 | @Raydikalx | ED5343
   - NL 🇳🇱 | @Raydikalx | 01492A
   - NL 🇳🇱 | @Raydikalx | 41C7D7
-  - PL 🇵🇱 | @Raydikalx | 38D7E1
   - RU 🇷🇺 | @Raydikalx | 23540B
   - SE 🇸🇪 | @Raydikalx | 94F21C
-  - SG 🇸🇬 | @Raydikalx | 1DA3B5
-  - US 🇺🇸 | @Raydikalx | 0CBFCD
-  - US 🇺🇸 | @Raydikalx | 565AA4
   - US 🇺🇸 | @Raydikalx | 737919
   - US 🇺🇸 | @Raydikalx | 7AA8C3
-  - US 🇺🇸 | @Raydikalx | 7DD8C0
   - US 🇺🇸 | @Raydikalx | F4E423
   - US 🇺🇸 | @Raydikalx | FBF6EC
   - 未知100
@@ -3422,11 +3069,9 @@ proxy-groups:
   - 🇩🇪DE德国
   - 🇪🇸 西班牙(mibei77.com 米贝节点分享)
   - '🇭🇰 香港 | HKG #6'
-  - 🇭🇰HK-159.100.206.88-0064
   - 🇭🇰HK-47.244.120.197-5771
   - '🇮🇩 印尼 | IDN #1'
   - 🇮🇳IN-155.248.241.52-1794
-  - '🇹🇼 🇨🇳 台湾 | TWN #1'
   - '🇺🇸 US美国(mibei77.com 米贝节点分享) #1'
   - '🇺🇸 美国 | USA #12'
   - 🇺🇸US-147.135.112.248-1521
@@ -3444,6 +3089,7 @@ proxy-groups:
   - 🏁RELAY-172.64.229.223-8256
   - 🏁RELAY-172.67.120.67-8241
   - 🏁RELAY-188.114.96.2-1242
+  - 🏁RELAY-188.114.96.3-1748
   - 🏁RELAY-23.227.38.33-0577
   - AT_speednode_0001
   - 'AT_speednode_0001 #1'
@@ -3451,29 +3097,23 @@ proxy-groups:
   - 'BR_speednode_0003 #1'
   - GB VLESS-18 | free-nodes
   - US VLESS-21 | free-nodes
-  - vless-1828654076
   - vless-1832764138
+  - vless-1853654571
   - vless-1853976457
   - vless-1856199614
   - vless-1863440028
-  - vless-1863464818
   - vless-1863468525
   - vless-1867102735
   - vless-1884945236
   - vless-1927185301
   - vless-1946593165
   - vless-1947014531
-  - ⚡ b2n.ir/v2ray-configs | 110
   - ⚡ b2n.ir/v2ray-configs | 514
   - ⚡ b2n.ir/v2ray-configs | 578
-  - '⚡ b2n.ir/v2ray-configs | 911 #1'
-  - ⚡ b2n.ir/v2ray-configs | 934
   - 新加坡|@ripaojiedian
   - 未知 VLESS-16 | free-nodes
   - 未知 VLESS-24 | free-nodes
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
-  - '🇦🇷 阿根廷 | ARG #1'
   - 🇨🇦[www.v2nodes.com] vless-CA
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #3'
   - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
@@ -3489,6 +3129,7 @@ proxy-groups:
   - '🇩🇪 德国 | DEU #25'
   - '🇩🇪 德国 | DEU #26'
   - '🇩🇪 德国 | DEU #27'
+  - '🇩🇪 德国 | DEU #28'
   - '🇩🇪 德国 | DEU #29'
   - '🇩🇪 德国 | DEU #3'
   - '🇩🇪 德国 | DEU #5'
@@ -3497,29 +3138,21 @@ proxy-groups:
   - 🇩🇪 德国 | DEU 13
   - 🇩🇪 德国 | DEU 18
   - 🇩🇪DE_11|2.8MB/s
-  - 🇩🇪DE_12|3.1MB/s
   - 🇩🇪DE_13|2.9MB/s
   - 🇩🇪DE_14|1.1MB/s
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - '🇪🇸 西班牙 | ESP #1'
   - '🇪🇸 西班牙 | ESP #1 #1'
-  - '🇫🇷 法国 | FRA #1'
   - '🇬🇧 英国 | GBR #2'
   - 🇬🇧GB_1|2.7MB/s
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - 🇮🇪[www.v2nodes.com] vless-IE-3...
-  - '🇮🇹 意大利 | ITA #10'
   - '🇮🇹 意大利 | ITA #11'
-  - '🇮🇹 意大利 | ITA #12'
   - '🇮🇹 意大利 | ITA #13'
   - '🇮🇹 意大利 | ITA #14'
   - '🇮🇹 意大利 | ITA #9'
-  - 🇮🇹[www.v2nodes.com] vless-IT-2...
   - 🇯🇵JP_1|2.2MB/s
   - '🇰🇿 哈萨克斯坦 | KAZ #1'
   - '🇳🇱 荷兰 | NLD #4'
-  - '🇳🇱 荷兰 | NLD #5'
   - 🇳🇱NL_2|2.2MB/s
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
   - '🇷🇺 俄罗斯 | RUS #10'
@@ -3564,8 +3197,11 @@ proxy-groups:
   - trojan-1939845059
   - trojan-1939845073
   - trojan-1940455323
+  - trojan-1943480647
   - trojan-1944218170
   - trojan-1944218172
+  - trojan-1945021228
+  - trojan-1945028567
   - trojan-1946894181
   - trojan-1947413506
   - ⚡ b2n.ir/v2ray-configs | 408
@@ -3573,17 +3209,16 @@ proxy-groups:
   - ⚡ b2n.ir/v2ray-configs | 710
   - ⚡ b2n.ir/v2ray-configs | 718
   - ⚡ b2n.ir/v2ray-configs | 755
-  - ⚡ b2n.ir/v2ray-configs | 973
   - ❓未知丨yoyapai.com\r
   - '美国4|@ripaojiedian #1'
   - '美国5|@ripaojiedian #1'
   - 美國丨yoyapai.com\r
   - 🇨🇦CA加拿大丨yoyapai.com\r
   - '🇨🇦CA加拿大丨yoyapai.com\r #1'
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #6'
   - '🇨🇭[www.v2nodes.com] trojan-CH-... #7'
   - '🇨🇳 CN_61 #1'
   - 🇩🇪DE_3|2.3MB/s
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
   - 🇩🇰 丹麦 | DNK
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
@@ -3591,16 +3226,13 @@ proxy-groups:
   - 🇬🇧 GB英国mibei77.com 米贝节点分享)
   - '🇬🇧 GB英国mibei77.com 米贝节点分享) #1'
   - '🇲🇾[www.v2nodes.com] trojan-MY-... #1'
+  - 🇺🇸 US美国(mibei77.com 米贝节点分享)
   - 🇺🇸US美国丨yoyapai.com\r
   - 🇺🇸US美國丨yoyapai.com\r
   - ⚡ b2n.ir/v2ray-configs | 113
   - ⚡ b2n.ir/v2ray-configs | 226
-  - '🇨🇾 塞浦路斯 | CYP #1'
-  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #23'
   - '🇩🇪 德国 | DEU #24'
-  - 🇪🇸ES-5.188.181.201-5660
-  - 🇫🇮[www.v2nodes.com] ss-FI-1623...
   - '🇬🇧 英国 | GBR #1'
   - '🇮🇹 意大利 | ITA #16'
   - '🇮🇹 意大利 | ITA #17'
@@ -3612,12 +3244,8 @@ proxy-groups:
   - '🇮🇹 意大利 | ITA #6'
   - '🇮🇹 意大利 | ITA #7'
   - '🇮🇹 意大利 | ITA #8'
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱[www.v2nodes.com] ss-NL-1623... #2'
   - '🇸🇬[www.v2nodes.com] ss-SG-1623... #1'
   - '🇸🇬[www.v2nodes.com] ss-SG-1623... #2'
-  - 🇺🇸[www.v2nodes.com] ss-US-1623...
   type: select
 - name: 🌐 突破锁区
   proxies:
@@ -3667,11 +3295,8 @@ proxy-groups:
   type: select
 - name: 🇺🇸 美国
   proxies:
-  - US 🇺🇸 | @Raydikalx | 0CBFCD
-  - US 🇺🇸 | @Raydikalx | 565AA4
   - US 🇺🇸 | @Raydikalx | 737919
   - US 🇺🇸 | @Raydikalx | 7AA8C3
-  - US 🇺🇸 | @Raydikalx | 7DD8C0
   - US 🇺🇸 | @Raydikalx | F4E423
   - US 🇺🇸 | @Raydikalx | FBF6EC
   - '🇺🇸 US美国(mibei77.com 米贝节点分享) #1'
@@ -3681,6 +3306,7 @@ proxy-groups:
   - 🇺🇸US-47.88.104.186-7853
   - 🇺🇸_US_美国_IPV4 (14)
   - US VLESS-21 | free-nodes
+  - '🇩🇪 德国 | DEU #28'
   - '🇷🇺 俄罗斯 | RUS #10'
   - '🇷🇺 俄罗斯 | RUS #3'
   - '🇺🇸 美国 | USA #1'
@@ -3690,13 +3316,13 @@ proxy-groups:
   - '美国4|@ripaojiedian #1'
   - '美国5|@ripaojiedian #1'
   - 美國丨yoyapai.com\r
+  - 🇺🇸 US美国(mibei77.com 米贝节点分享)
   - 🇺🇸US美国丨yoyapai.com\r
   - 🇺🇸US美國丨yoyapai.com\r
-  - 🇺🇸[www.v2nodes.com] ss-US-1623...
   type: select
 - name: 🇨🇳 台湾
   proxies:
-  - '🇹🇼 🇨🇳 台湾 | TWN #1'
+  - DIRECT
   type: select
 - name: 🇨🇳 中国
   proxies:
@@ -3707,10 +3333,8 @@ proxy-groups:
   - HK 🇭🇰 | @Raydikalx | 1B63F0
   - HK 🇭🇰 | @Raydikalx | 313D15
   - HK 🇭🇰 | @Raydikalx | 48EBAF
-  - HK 🇭🇰 | @Raydikalx | 4F89A3
   - HK 🇭🇰 | @Raydikalx | 59FF64
   - '🇭🇰 香港 | HKG #6'
-  - 🇭🇰HK-159.100.206.88-0064
   - 🇭🇰HK-47.244.120.197-5771
   type: select
 - name: 🇨🇦 加拿大
@@ -3732,7 +3356,6 @@ proxy-groups:
   - CA 🇨🇦 | @Raydikalx | C0774F
   - CA 🇨🇦 | @Raydikalx | D8003D
   - CA 🇨🇦 | @Raydikalx | E8F6E5
-  - CA 🇨🇦 | @Raydikalx | F61E58
   - CA 🇨🇦 | @Raydikalx | FBD0E2
   - 🏁RELAY-104.17.77.77-1066
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #3'
@@ -3741,14 +3364,12 @@ proxy-groups:
   type: select
 - name: 🇫🇷 法国
   proxies:
-  - '🇫🇷 法国 | FRA #1'
   - 🇫🇷FR法国丨yoyapai.com\r
   - 🇫🇷FR法國丨yoyapai.com\r
   - '🇫🇷FR法國丨yoyapai.com\r #1'
   type: select
 - name: 🇸🇬 新加坡
   proxies:
-  - SG 🇸🇬 | @Raydikalx | 1DA3B5
   - 新加坡|@ripaojiedian
   - 🇨🇦[www.v2nodes.com] vless-CA
   - '🇸🇬 新加坡 | SGP #2'
@@ -3764,15 +3385,13 @@ proxy-groups:
   proxies:
   - GB VLESS-18 | free-nodes
   - 🇬🇧GB_1|2.7MB/s
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - 🇬🇧 GB英国mibei77.com 米贝节点分享)
   - '🇬🇧 GB英国mibei77.com 米贝节点分享) #1'
   - '🇬🇧 英国 | GBR #1'
   type: select
 - name: 🇰🇷 韩国
   proxies:
-  - KR 🇰🇷 | @Raydikalx | ED5343
+  - DIRECT
   type: select
 - name: 🇷🇺 俄罗斯
   proxies:
@@ -3803,16 +3422,12 @@ proxy-groups:
   - 🇩🇪 德国 | DEU 13
   - 🇩🇪 德国 | DEU 18
   - 🇩🇪DE_11|2.8MB/s
-  - 🇩🇪DE_12|3.1MB/s
   - 🇩🇪DE_14|1.1MB/s
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #9'
   - DE TROJAN-22 | free-nodes
   - 🇩🇪DE_3|2.3MB/s
-  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
-  - 🇩🇪 德国 | DEU
   - '🇩🇪 德国 | DEU #23'
   - '🇩🇪 德国 | DEU #24'
-  - 🇫🇮[www.v2nodes.com] ss-FI-1623...
   type: select
 rules:
 - IP-CIDR,60.190.139.164/32,⛔ 广告拦截
