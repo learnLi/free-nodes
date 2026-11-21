@@ -1,10 +1,46 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 1778F4
+  name: CN 🇨🇳 | @Raydikalx | 0C8076
   network: tcp
-  port: 50017
-  server: 36.133.78.37
+  port: 50011
+  server: 36.133.79.17
+  servername: ''
   tls: false
   type: vmess
-  uuid: 148e82ae-5014-4a1a-a783-dd63fa9cdc9d
+  uuid: 1b30f413-2865-4d40-9146-4207778718cd
+- alterId: 2
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 21C649
+  network: tcp
+  port: 30833
+  server: v33.hdacd.com
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- alterId: 64
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | 3C2253
+  network: tcp
+  port: 34602
+  server: 183.240.235.170
+  tls: false
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | E1F4D8
+  network: tcp
+  port: 50011
+  server: 36.133.79.17
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+- name: '🇳🇬[www.v2nodes.com] trojan-NG-... #1'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20103
+  server: sclass-01.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan

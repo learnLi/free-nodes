@@ -1,18 +1,18 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B6B5B0
+  name: FR 🇫🇷 | @Raydikalx | 33DF70
   network: ws
-  port: 20222
-  server: 51.75.118.5
+  port: 443
+  server: 90.127.143.135
   servername: ''
-  tls: false
+  tls: true
   type: vmess
-  uuid: 541d46d8-5fc6-4d57-a7c4-9ccd3b5966eb
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
   ws-opts:
     headers:
-      Host: 51.75.118.5
-    path: /parham-confing-vmess?u=6991fbdd-51e0-4970-b159-f9af46890c43-beda239a407a7eed66f791c6
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-145.239.55.210-0257
@@ -30,17 +30,19 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-146.59.92.219-3591
+  name: 🇫🇷FR-91.134.8.93-1323
   network: ws
-  port: 2096
-  server: 146.59.92.219
+  port: 443
+  server: 91.134.8.93
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: aca71b13-ec8a-466d-c28f-43516d3cf246
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
-    path: /
+    headers:
+      Host: pelang.org
+    path: linkvws
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -51,23 +53,17 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.77
+  server: 104.18.152.50
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.50
+  server: 104.18.152.77
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- cipher: aes-256-gcm
-  name: 🇫🇷FR-107.161.160.28-0189
-  password: itzvpn@321
-  port: 8388
-  server: 107.161.160.28
-  type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇫🇷FR-51.77.144.182-0215
   password: x19py0a8ipglqkbe
@@ -78,41 +74,41 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 38.109.228.110
+  server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.27
+  server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 172.99.189.142
+  server: 167.17.64.175
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.175
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 167.17.64.22
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 23.162.152.22
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
   password: 29irqk0paakcx19v
   port: 8080
   server: 51.83.61.102
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #14'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.162.152.22
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #15'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.109.228.110
   type: ss
