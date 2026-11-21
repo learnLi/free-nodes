@@ -1,7 +1,21 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 9552FE
+  name: GB 🇬🇧 | @Raydikalx | 290C1B
+  network: ws
+  port: 443
+  server: mko.859886.xyz
+  servername: mko.859886.xyz
+  tls: true
+  type: vmess
+  uuid: b020865b-7404-4894-ba65-a7414b10cda3
+  ws-opts:
+    headers:
+      Host: mko.859886.xyz
+    path: /boWUVaU0sxrNtFSdOPjqSc7fzeJr
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 69A6FE
   network: ws
   port: 80
   server: 57.129.132.223
@@ -12,20 +26,37 @@ proxies:
   ws-opts:
     headers:
       Host: google.com
-    path: /vmess/?ed#
+    path: /vmess/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | D632BF
-  network: tcp
-  port: 2053
-  server: uk.connfull.org
-  servername: ''
+  name: GB 🇬🇧 | @Raydikalx | 9DBB35
+  network: ws
+  port: 443
+  server: nnnmjku.932.pp.ua
+  servername: nnnmjku.932.pp.ua
   tls: true
   type: vmess
-  uuid: 262ce956-68fd-48af-918e-bd829819030c
+  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
+  ws-opts:
+    headers:
+      Host: nnnmjku.932.pp.ua
+    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | C96927
+  network: ws
+  port: 80
+  server: 57.128.164.21
+  tls: false
+  type: vmess
+  uuid: 10029c03-5d2f-4185-aab2-cbf91eef7361
+  ws-opts:
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
 - alterId: 64
   cipher: auto
-  name: 🇬🇧GB-140.99.128.86-8492
+  name: 🇬🇧GB-140.99.128.86-8096
   network: ws
   port: 443
   server: 140.99.128.86
@@ -36,19 +67,6 @@ proxies:
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     path: /path/1689673828070
-- alterId: 0
-  cipher: auto
-  name: 🇬🇧GB-198.244.232.39-4105
-  network: ws
-  port: 2096
-  server: 198.244.232.39
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: df46384b-1ad5-40a6-812e-48d60fb80283
-  ws-opts:
-    path: /
 - alterId: 0
   cipher: auto
   name: 🇬🇧GB-57.129.132.223-0140
@@ -281,16 +299,22 @@ proxies:
   server: 158.173.24.73
   type: ss
 - cipher: aes-256-gcm
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1615... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 142.202.51.22
+  type: ss
+- cipher: aes-256-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #2'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 198.244.201.129
   type: ss
-- cipher: aes-128-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-8004... #1'
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.178
+- cipher: aes-256-gcm
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #3'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 198.244.202.215
   type: ss
 - cipher: aes-128-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-9184... #1'
@@ -298,9 +322,9 @@ proxies:
   port: 443
   server: 141.98.101.181
   type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #17'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 198.244.202.215
+- cipher: aes-128-gcm
+  name: '🏳[www.v2nodes.com] ss- #20'
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.178
   type: ss

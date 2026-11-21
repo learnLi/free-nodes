@@ -1,49 +1,49 @@
 {
-  "total": 870,
+  "total": 887,
   "egress": {
-    "ip": "20.51.119.16",
+    "ip": "20.15.94.100",
     "method": "direct",
     "country": "United States",
-    "city": "Quincy",
+    "city": "Chase City",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 815,
-  "tcp_ok": 685,
-  "tcp_rate": "84.0%",
-  "tls_applicable": 363,
-  "tls_ok": 301,
-  "tls_rate": "82.9%",
-  "quic_applicable": 55,
+  "tcp_applicable": 827,
+  "tcp_ok": 690,
+  "tcp_rate": "83.4%",
+  "tls_applicable": 368,
+  "tls_ok": 292,
+  "tls_rate": "79.3%",
+  "quic_applicable": 60,
   "quic_ok": 0,
   "quic_rate": "0.0%",
-  "udp_skipped": 55,
+  "udp_skipped": 60,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 5,
+      "ms": 6,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 5,
+      "ms": 7,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 3,
+      "ms": 11,
       "err": ""
     }
   ],
   "by_type": {
     "anytls": {
       "total": 1,
-      "ok": 1
+      "ok": 0
     },
     "http": {
       "total": 25,
@@ -53,30 +53,26 @@
       "total": 2,
       "ok": 0
     },
-    "socks5": {
-      "total": 2,
-      "ok": 2
-    },
     "ss": {
-      "total": 260,
-      "ok": 225
+      "total": 261,
+      "ok": 218
     },
     "trojan": {
-      "total": 137,
-      "ok": 124
+      "total": 140,
+      "ok": 126
     },
     "vless": {
-      "total": 185,
-      "ok": 171
+      "total": 192,
+      "ok": 178
     },
     "vmess": {
-      "total": 203,
-      "ok": 139
+      "total": 206,
+      "ok": 145
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 55,
+      "total": 60,
       "ok": 0
     }
   }

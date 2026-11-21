@@ -1,21 +1,23 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: AL 🇦🇱 | @Raydikalx | 5EE977
-  network: ws
-  port: 80
-  server: 45.15.170.237
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 820d4b4f-3357-4dc7-9381-6e5fd52b5f39
-  ws-opts:
-    headers:
-      Host: pelang.org
-    path: /vmess/
 - name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
   port: 16443
   server: 45.86.60.174
   tls: false
   type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+- name: 🇪🇪EE-🚀@VPNine1
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  port: 443
+  server: 217.60.182.79
+  skip-cert-verify: true
+  sni: cabinet.wwwinternetvideo.click
+  tls: false
+  type: hysteria2
+- name: '🇪🇪EE-🚀@VPNine1 #1'
+  password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
+  port: 443
+  server: cabinet.wwwinternetvideo.click
+  skip-cert-verify: true
+  sni: cabinet.wwwinternetvideo.click
+  tls: false
+  type: hysteria2
