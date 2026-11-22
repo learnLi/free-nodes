@@ -27,25 +27,6 @@ proxies:
     headers:
       Host: renderer-stream-2-129.mirra.now
     path: /api/v1/gpu-stream/socket
-- client-fingerprint: random
-  grpc-opts:
-    grpc-service-name: grpc-ru
-  name: '🏳[www.v2nodes.com] vless- #18'
-  network: grpc
-  port: 443
-  server: xssite.webredirect.org
-  servername: xssite.webredirect.org
-  tls: true
-  type: vless
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-- name: '🇷🇺RU-🚀@VPNine1 #1'
-  password: 6acdc33a-a25b-0001-8095-c9a252d72fd0
-  port: 443
-  server: 176.108.244.162
-  skip-cert-verify: true
-  sni: ohyjf-ru-65sb.my-fade.cloud
-  tls: false
-  type: hysteria2
 - cipher: chacha20-ietf-poly1305
   name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
   password: VVlAff77CnAU43Aoc5j15Y

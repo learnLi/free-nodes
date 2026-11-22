@@ -1,4 +1,19 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: 🇰🇷KR-52.231.200.179-2210
+  network: ws
+  port: 443
+  server: fullaccesstokoreannetsubnode1.azurewebsites.net
+  servername: fullaccesstokoreannetsubnode1.azurewebsites.net
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: 274f11c6-f69b-40b9-8966-f39e06e97be7
+  ws-opts:
+    headers:
+      Host: fullaccesstokoreannetsubnode1.azurewebsites.net
+    path: /ws
 - name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   network: ws
   port: 25555
@@ -15,16 +30,6 @@ proxies:
   skip-cert-verify: true
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   type: trojan
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 43.201.17.144
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
 - cipher: aes-256-cfb
   name: shadowsocks-1827145973
   password: qwerREWQ@@
@@ -32,15 +37,20 @@ proxies:
   server: 211.178.105.134
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #2'
+  name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 43.201.17.144
+  server: 13.124.39.151
   type: ss
   udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1126... #1'
   password: '!!str 12242'
   port: 10099
   server: 115.161.136.145
   type: ss
+- name: 🇰🇷KR_1|1.4MB/s
+  port: 8085
+  server: 217.142.139.207
+  skip-cert-verify: true
+  type: http

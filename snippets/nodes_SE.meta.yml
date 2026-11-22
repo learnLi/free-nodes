@@ -1,24 +1,26 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 24A21D
-  network: httpupgrade
-  port: 16751
-  server: 16.171.159.75
-  tls: false
-  type: vmess
-  uuid: 5b2e2e5f-1302-4d65-ab39-27f6f0ca5562
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | 94F21C
-  network: tcp
-  port: 1270
-  server: 138.199.55.230
-  servername: ''
+- name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+  network: ws
+  port: 443
+  server: 77.232.143.142
+  servername: volumestyle.komediyatorg.net
   tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  ws-opts:
+    path: /media/ws/fp=firefox
+- client-fingerprint: firefox
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #10'
+  network: ws
+  port: 443
+  server: 77.232.143.142
+  servername: volumestyle.komediyatorg.net
+  tls: true
+  type: vless
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  ws-opts:
+    path: /media/ws/
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
   network: ws
   port: 443
   server: 87.242.94.43
@@ -31,7 +33,7 @@ proxies:
       Host: 87.242.94.43
     path: /api/v2/session/CAgikYAkk4z7fp=chrome
 - client-fingerprint: chrome
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
   network: ws
   port: 443
   server: 87.242.94.43
@@ -46,7 +48,7 @@ proxies:
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
   network: grpc
   port: 48115
   server: 138.124.86.230
@@ -54,7 +56,7 @@ proxies:
   tls: true
   type: vless
   uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
   network: ws
   port: 14430
   server: 5.178.109.174
@@ -65,18 +67,7 @@ proxies:
     headers:
       Host: 5.178.109.174
     path: /vless
-- client-fingerprint: firefox
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #8'
-  network: ws
-  port: 443
-  server: 77.232.143.142
-  servername: volumestyle.komediyatorg.net
-  tls: true
-  type: vless
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
-  ws-opts:
-    path: /media/ws/
-- name: 🇸🇪[www.v2nodes.com] trojan-SE-...
+- name: '🇸🇪[www.v2nodes.com] trojan-SE-... #1'
   password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   port: 443
   server: 95.143.196.97
