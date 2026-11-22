@@ -1,55 +1,20 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 6752EC
-  network: ws
-  port: 23388
-  server: 62.210.127.120
-  tls: false
-  type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
-  ws-opts:
-    path: /github.com/Alvin9999-newpac/fanqiang
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B9D3B8
+  name: 'FR 🇫🇷 | @Raydikalx | 20ADF1 #1'
   network: ws
   port: 80
   server: 145.239.55.210
   tls: false
   type: vmess
-  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  uuid: c5443f55-d405-4990-ac36-8fd83ae2c17e
   ws-opts:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | D56E69
-  network: ws
-  port: 52620
-  server: 38.60.176.80
-  tls: false
-  type: vmess
-  uuid: d60c7a89-40d9-4f09-e8f8-591932ce79ef
-  ws-opts:
-    path: /8704a4ad
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-141.94.59.200-4580
-  network: ws
-  port: 8080
-  server: 141.94.59.200
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 2f685138-93b0-453f-d683-9398b3a3b8a0
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0242
+  name: 🇫🇷FR-145.239.55.210-0226
   network: ws
   port: 80
   server: 145.239.55.210
@@ -64,10 +29,10 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-146.59.70.146-1295
+  name: 🇫🇷FR-146.59.55.50-1294
   network: ws
   port: 443
-  server: 146.59.70.146
+  server: 146.59.55.50
   servername: ''
   skip-cert-verify: true
   tls: true
@@ -75,8 +40,8 @@ proxies:
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: yichueng.org
-    path: linkvws
+      Host: o.metuji.com
+    path: /linkvws
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -87,37 +52,37 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.77
+  server: 104.18.152.50
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.50
+  server: 104.18.152.77
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - cipher: aes-256-gcm
-  name: 🇫🇷FR-107.161.160.28-0247
+  name: 🇫🇷FR-107.161.160.28-0219
   password: itzvpn@321
   port: 8388
   server: 107.161.160.28
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 172.99.189.142
@@ -126,7 +91,19 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
+  server: 167.17.64.175
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
   server: 167.17.64.22
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.162.152.22
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'

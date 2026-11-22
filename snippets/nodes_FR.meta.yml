@@ -1,55 +1,20 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 6752EC
-  network: ws
-  port: 23388
-  server: 62.210.127.120
-  tls: false
-  type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
-  ws-opts:
-    path: /github.com/Alvin9999-newpac/fanqiang
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B9D3B8
+  name: 'FR 🇫🇷 | @Raydikalx | 20ADF1 #1'
   network: ws
   port: 80
   server: 145.239.55.210
   tls: false
   type: vmess
-  uuid: 067fcd63-b215-4abd-8529-ae929a9971a9
+  uuid: c5443f55-d405-4990-ac36-8fd83ae2c17e
   ws-opts:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | D56E69
-  network: ws
-  port: 52620
-  server: 38.60.176.80
-  tls: false
-  type: vmess
-  uuid: d60c7a89-40d9-4f09-e8f8-591932ce79ef
-  ws-opts:
-    path: /8704a4ad
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-141.94.59.200-4580
-  network: ws
-  port: 8080
-  server: 141.94.59.200
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 2f685138-93b0-453f-d683-9398b3a3b8a0
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0242
+  name: 🇫🇷FR-145.239.55.210-0226
   network: ws
   port: 80
   server: 145.239.55.210
@@ -64,10 +29,10 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-146.59.70.146-1295
+  name: 🇫🇷FR-146.59.55.50-1294
   network: ws
   port: 443
-  server: 146.59.70.146
+  server: 146.59.55.50
   servername: ''
   skip-cert-verify: true
   tls: true
@@ -75,16 +40,38 @@ proxies:
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: yichueng.org
-    path: linkvws
-- client-fingerprint: chrome
-  name: '🇫🇷 法国 | FRA #2'
+      Host: o.metuji.com
+    path: /linkvws
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: FR VLESS-08 | free-nodes
+  network: xhttp
   port: 443
-  server: 92.223.124.62
-  servername: api.gcore.com
+  server: 185.133.35.86
+  servername: mamafrance.baklajann.ru
   tls: true
   type: vless
-  uuid: 10e60745-9685-4b7e-8539-a1fd06ce0d4e
+  uuid: d795a9ec-5ed0-4309-ba6c-edc09b818669
+  ws-opts:
+    headers:
+      Host: mamafrance.baklajann.ru
+    path: /
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
+  network: ws
+  port: 80
+  server: ov-france1.09vpn.com
+  servername: ov-france1.09vpn.com
+  tls: false
+  type: vless
+  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
+  ws-opts:
+    headers:
+      Host: ov-france1.09vpn.com
+    path: /vless/
 - name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   network: ws
   port: 443
@@ -97,7 +84,7 @@ proxies:
     headers:
       Host: notified-rendered-moore-consideration.trycloudflare.com
     path: /tg-jiedianxieloufp=chrome
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
   network: ws
   port: 2083
   server: 54.36.102.152
@@ -107,7 +94,7 @@ proxies:
   ws-opts:
     path: /vless-kulo
 - client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
   network: ws
   port: 443
   server: jdxl.cf.090227.xyz
@@ -119,18 +106,6 @@ proxies:
     headers:
       Host: notified-rendered-moore-consideration.trycloudflare.com
     path: /tg-jiedianxielou
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
-  network: ws
-  port: 80
-  server: ov-france1.09vpn.com
-  servername: ov-france1.09vpn.com
-  tls: false
-  type: vless
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-  ws-opts:
-    headers:
-      Host: ov-france1.09vpn.com
-    path: /vless/
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -141,37 +116,37 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.77
+  server: 104.18.152.50
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.50
+  server: 104.18.152.77
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - cipher: aes-256-gcm
-  name: 🇫🇷FR-107.161.160.28-0247
+  name: 🇫🇷FR-107.161.160.28-0219
   password: itzvpn@321
   port: 8388
   server: 107.161.160.28
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #4'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 172.99.189.142
@@ -180,7 +155,19 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
+  server: 167.17.64.175
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
   server: 167.17.64.22
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 23.162.152.22
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #1'
@@ -188,47 +175,10 @@ proxies:
   port: 8080
   server: 51.83.61.102
   type: ss
-- name: FR_speednode_0008
-  port: 19362
-  server: 51.159.225.197
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: FR_speednode_0009
-  port: 8090
-  server: 83.206.1.225
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: FR_speednode_0012
-  port: 443
-  server: 82.65.162.76
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-- name: 🇫🇷FR_2|1.7MB/s|R002-260618
-  password: 'null'
-  port: 6103
-  server: 87.98.174.157
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  username: 'null'
-  x-toolall-mihomo: true
-- name: 🇫🇷FR_3|2.5MB/s
-  port: 8081
-  server: 31.32.19.111
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: 🇫🇷FR_4|4.0MB/s
+- name: FR_speednode_0007
   port: 6103
   server: 87.98.174.157
   skip-cert-verify: true
   tls: true
   type: http
+  udp: true

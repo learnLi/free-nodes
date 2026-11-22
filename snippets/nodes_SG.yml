@@ -1,111 +1,92 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 083E88
+  name: SG 🇸🇬 | @Raydikalx | 2F13BD
   network: ws
   port: 443
-  server: 13.249.231.85
-  servername: ''
+  server: panel-production-4c69.up.railway.app
+  servername: panel-production-4c69.up.railway.app
   tls: true
   type: vmess
-  uuid: a84c132a-3151-40fe-947b-4dd9a7d2122c
+  uuid: ce852641-b913-4597-ab61-d734e1a953c6
   ws-opts:
     headers:
-      Host: d7pu5mzr9c4b0.cloudfront.net
-    path: /vmess
+      Host: panel-production-4c69.up.railway.app
+    path: /vm
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 337680
+  name: SG 🇸🇬 | @Raydikalx | 84D78F
+  network: ws
+  port: 443
+  server: masdfy6y-production.up.railway.app
+  servername: masdfy6y-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: a14e4da2-d876-4595-a442-a1ca275888fa
+  ws-opts:
+    headers:
+      Host: masdfy6y-production.up.railway.app
+    path: /cdn/d206b1b6-eae6-4120-881f-3f9f863b3d8e/m?ed=2560
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | B72B4A
+  network: ws
+  port: 443
+  server: motyui-production.up.railway.app
+  servername: motyui-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: 9a9d3a6f-e7dd-4fe8-bcb9-a0d053a986a0
+  ws-opts:
+    headers:
+      Host: motyui-production.up.railway.app
+    path: /api/W_NAAM
+- alterId: 2
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | DF19B9
   network: tcp
-  port: 8080
-  server: 116.88.224.217
-  servername: ''
+  port: 30804
+  server: v4.hdacd.com
+  servername: v4.hdacd.com
   tls: false
   type: vmess
-  uuid: 6f4f0eb5-fe86-41ca-eccb-a6ca68f88d9b
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 82C9EC
-  network: ws
-  port: 443
-  server: rex.sahebkarami.ir
-  servername: rex.sahebkarami.ir
-  tls: true
-  type: vmess
-  uuid: c8c51efb-0a07-44f6-bec8-131cea784b55
-  ws-opts:
-    headers:
-      Host: rex.sahebkarami.ir
-    path: /cdn/310a7084-9cc1-423a-9876-0a7635b64794/m?ed=2560
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 903C4C
-  network: ws
-  port: 443
-  server: re45h5adf54334532-production.up.railway.app
-  servername: re45h5adf54334532-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: e02f9f09-f82a-48cb-9dc0-8ebd53c0ff3b
-  ws-opts:
-    headers:
-      Host: re45h5adf54334532-production.up.railway.app
-    path: /gw/bc5aeca0-ea58-47cd-b716-0a4bd67680ec?ed=2560
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | D326E1
-  network: ws
-  port: 443
-  server: puohertestc-production.up.railway.app
-  servername: puohertestc-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: 0354d7d4-b444-41f5-9441-68378aa4e537
-  ws-opts:
-    headers:
-      Host: puohertestc-production.up.railway.app
-    path: /api/Salvu0
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-15.235.147.186-0446
+  name: '🇸🇬SG-143.198.219.182-1851 #1'
   network: ws
   port: 80
-  server: 15.235.147.186
-  servername: 15.235.147.186
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 6fea1649-425b-4092-bf53-29792152c925
-  ws-opts:
-    path: /sshkit/Ertusg86/635014638c264/
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-8.219.120.168-7151
-  network: ws
-  port: 443
-  server: 8.219.120.168
-  servername: p3.chigua.tk
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  ws-opts:
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-8.219.204.195-0000
-  network: ws
-  port: 80
-  server: 8.219.204.195
+  server: 143.198.219.182
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 0f1f1cca-56dc-4feb-8b4b-50ab074f4467
+  uuid: e9c4ce52-9a78-4381-b6f8-23350bc4d606
+  ws-opts:
+    path: /v2ray
+- alterId: 0
+  cipher: auto
+  name: 🇸🇬SG-15.235.147.186-0081
+  network: ws
+  port: 80
+  server: 15.235.147.186
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
   ws-opts:
     headers:
-      Host: w1.800876.xyz
-    path: /?ed=2048
+      Host: 15.235.147.186
+    path: /sshkit/Ertusg86/635014638c264/
+- name: '🇸🇬 新加坡 | SGP #4'
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 443
+  server: bgsg1.hikigo.com
+  skip-cert-verify: true
+  sni: bgsg1.hikigo.com
+  type: trojan
+  udp: true
 - name: '🇸🇬[www.v2nodes.com] trojan-SG-... #1'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -120,7 +101,7 @@ proxies:
   server: 68.183.227.4
   type: ss
 - cipher: aes-256-gcm
-  name: 🇸🇬SG-149.88.106.73-0180
+  name: 🇸🇬SG-149.88.106.73-0164
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 149.88.106.73
@@ -129,23 +110,35 @@ proxies:
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 149.88.106.74
+  server: 15.235.164.133
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 149.88.107.74
+  server: 149.88.106.74
   type: ss
 - cipher: aes-256-gcm
   name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
+  server: 149.88.107.74
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1615... #7'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
   server: 149.88.107.47
   type: ss
 - cipher: aes-256-gcm
-  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #1'
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #2'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 51.79.228.131
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇸🇬[www.v2nodes.com] ss-SG-1616... #3'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 15.235.182.183
   type: ss

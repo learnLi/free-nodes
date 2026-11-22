@@ -1,87 +1,79 @@
 {
-  "total": 926,
+  "total": 829,
   "egress": {
-    "ip": "172.185.33.115",
+    "ip": "4.155.199.88",
     "method": "direct",
     "country": "United States",
-    "city": "San Jose",
+    "city": "Quincy",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 872,
-  "tcp_ok": 731,
-  "tcp_rate": "83.8%",
-  "tls_applicable": 397,
-  "tls_ok": 357,
-  "tls_rate": "89.9%",
-  "quic_applicable": 54,
-  "quic_ok": 0,
-  "quic_rate": "0.0%",
-  "udp_skipped": 54,
+  "tcp_applicable": 766,
+  "tcp_ok": 627,
+  "tcp_rate": "81.9%",
+  "tls_applicable": 329,
+  "tls_ok": 276,
+  "tls_rate": "83.9%",
+  "quic_applicable": 63,
+  "quic_ok": 1,
+  "quic_rate": "1.6%",
+  "udp_skipped": 63,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 2,
+      "ms": 6,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 1,
+      "ms": 5,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 22,
+      "ms": 4,
       "err": ""
     }
   ],
   "by_type": {
     "anytls": {
-      "total": 2,
-      "ok": 2
-    },
-    "http": {
-      "total": 71,
-      "ok": 69
-    },
-    "hysteria": {
-      "total": 2,
-      "ok": 0
-    },
-    "socks5": {
-      "total": 5,
+      "total": 4,
       "ok": 4
     },
+    "http": {
+      "total": 25,
+      "ok": 25
+    },
+    "hysteria": {
+      "total": 1,
+      "ok": 0
+    },
     "ss": {
-      "total": 250,
-      "ok": 214
+      "total": 256,
+      "ok": 218
     },
     "trojan": {
-      "total": 145,
-      "ok": 118
+      "total": 129,
+      "ok": 101
     },
     "vless": {
-      "total": 190,
-      "ok": 180
+      "total": 194,
+      "ok": 188
     },
     "vmess": {
-      "total": 204,
-      "ok": 144
-    },
-    "wireguard": {
-      "total": 3,
-      "ok": 0
+      "total": 157,
+      "ok": 91
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 54,
-      "ok": 0
+      "total": 63,
+      "ok": 1
     }
   }
 }
