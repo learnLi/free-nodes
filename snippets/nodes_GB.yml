@@ -1,4 +1,42 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 4638D2
+  network: ws
+  port: 8080
+  server: 8ggixlxj2bf9.dop69.com
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 2f28bb4b-5322-4cfd-9627-e52205c5e052
+  ws-opts:
+    headers:
+      Host: rt.orvexa.ir
+    path: /
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 472910
+  network: tcp
+  port: 42970
+  server: vpn.rezapanel.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 571d56be-1229-4280-b041-9c549dad03bd
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 6B4B20
+  network: ws
+  port: 443
+  server: 185.92.74.108
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
 - cipher: rc4-md5
   name: shadowsocks-1827147777
   password: 14fFPrbezE3HDZzsMOr6
@@ -215,12 +253,6 @@ proxies:
   port: 8080
   server: 82.38.31.66
   type: ss
-- cipher: aes-256-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1247... #1'
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 94.156.250.148
-  type: ss
 - cipher: aes-128-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1451... #1'
   password: shadowsocks
@@ -228,16 +260,10 @@ proxies:
   server: 158.173.24.73
   type: ss
 - cipher: aes-256-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1615... #2'
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1602... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 142.202.51.22
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-1615... #3'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 38.114.120.221
+  server: 185.176.206.9
   type: ss
 - cipher: aes-256-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1616... #2'
@@ -251,21 +277,27 @@ proxies:
   port: 19999
   server: 198.244.202.215
   type: ss
-- cipher: aes-128-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-8004... #1'
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.178
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #11'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 142.202.51.22
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #12'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.114.120.221
   type: ss
 - cipher: aes-128-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-9184... #1'
+  name: '🏳[www.v2nodes.com] ss- #13'
   password: shadowsocks
   port: 443
   server: 141.98.101.181
   type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #10'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 185.176.206.9
+- cipher: aes-128-gcm
+  name: '🏳[www.v2nodes.com] ss- #14'
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.178
   type: ss

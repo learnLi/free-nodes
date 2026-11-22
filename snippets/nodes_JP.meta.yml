@@ -1,14 +1,69 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 031A3A
-  network: tcp
-  port: 18112
-  server: oc.imfun.fun
-  servername: null
+  name: JP 🇯🇵 | @Raydikalx | 161464
+  network: ws
+  port: 443
+  server: tokyo02.zgjok.com
+  servername: tokyo02.zgjok.com
+  tls: true
+  type: vmess
+  uuid: 3fe113f9-e564-4111-b8c7-11f597687689
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 7D7435
+  network: ws
+  port: 25686
+  server: 140.83.51.161
+  servername: ''
   tls: false
   type: vmess
-  uuid: ad45f8f6-0f0a-4cc4-b907-c4582407dc94
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
+  ws-opts:
+    path: /cctv13.m3u8
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | 9B5C33
+  network: ws
+  port: 8081
+  server: 168.110.63.247
+  tls: false
+  type: vmess
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
+  ws-opts:
+    path: /vless
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-138.2.52.176-1548
+  network: ws
+  port: 24429
+  server: 138.2.52.176
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 8d5ca59e-8e3e-4a10-e023-53cfcd87a72b
+  ws-opts:
+    headers:
+      Host: 138.2.52.176
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-140.83.51.161-1071
+  network: ws
+  port: 25686
+  server: 140.83.51.161
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 6733c357-ba11-4e9f-f00f-7d87f2776ff9
+  ws-opts:
+    headers:
+      Host: jp02.a0a.xyz
+    path: /cctv13.m3u8
 - alterId: 0
   cipher: auto
   name: 🇯🇵JP-168.138.43.75-1070
@@ -60,19 +115,6 @@ proxies:
     headers:
       Host: cdn.lahjy.xyz
     path: /fp=chrome
-- client-fingerprint: chrome
-  name: 🇯🇵[www.v2nodes.com] vless-JP
-  network: ws
-  port: 443
-  server: 103.201.130.126
-  servername: tt-9nz.pages.dev
-  tls: true
-  type: vless
-  uuid: 39303679-4e68-4233-8def-8f4f9e48d611
-  ws-opts:
-    headers:
-      Host: tt-9nz.pages.dev
-    path: /item/favourites
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
   network: ws
   port: 443
@@ -120,15 +162,8 @@ proxies:
     headers:
       Host: jp3.yohototo.top
     path: /tyxyws
-- name: '🇯🇵 日本 | JPN #1'
-  password: LDSLDq9XlM4-92pvTPOUuklMb99BLOCrdyejsupEca4
-  port: 17443
-  server: 156.246.93.237
-  skip-cert-verify: true
-  sni: jpk.wentibuxiaobuda.xyz
-  type: trojan
 - client-fingerprint: chrome
-  name: 🇯🇵JP_3|5.0MB/s
+  name: 🇯🇵JP_2|5.2MB/s
   network: tcp
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   port: 34745
@@ -137,6 +172,13 @@ proxies:
   sni: nu3rb.supertoolify.com
   type: trojan
   udp: true
+- name: 🇯🇵[www.v2nodes.com] trojan-JP-...
+  password: LDSLDq9XlM4-92pvTPOUuklMb99BLOCrdyejsupEca4
+  port: 17443
+  server: 156.246.93.237
+  skip-cert-verify: true
+  sni: jpk.wentibuxiaobuda.xyz
+  type: trojan
 - name: ' 🇯🇵 20@exclavevpn'
   password: gG1JyjbJgDmEMvdTgcD9wVOS
   port: 443
@@ -150,16 +192,26 @@ proxies:
   down: 200
   name: 🇯🇵 日本 | JPN
   obfs: salamander
-  obfs-password: yhlbhcysaba0wtn1
+  obfs-password: e3ymhs6gbzptjysj
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   port: 443
-  server: nb5rb.hikigo.com
+  server: dg3rb.ianai.it.com
   skip-cert-verify: true
-  sni: nb5rb.hikigo.com
+  sni: dg3rb.ianai.it.com
   type: hysteria2
   udp: true
   up: 100
 - name: '🇯🇵 日本 | JPN #2'
+  obfs: salamander
+  obfs-password: salamander
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 443
+  server: dg3rb.ianai.it.com
+  skip-cert-verify: true
+  sni: dg3rb.ianai.it.com
+  tls: false
+  type: hysteria2
+- name: '🇯🇵 日本 | JPN #3'
   obfs: salamander
   obfs-password: salamander
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
@@ -173,17 +225,25 @@ proxies:
   - h3
   auth: 57beeeb0-03fc-4fc9-94da-7604488a7134
   down: 200
-  name: 🇯🇵JP_2|1.5MB/s
+  name: 🇯🇵 日本 | JPN 3
   obfs: salamander
-  obfs-password: e3ymhs6gbzptjysj
+  obfs-password: yhlbhcysaba0wtn1
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   port: 443
-  server: dg3rb.ianai.it.com
+  server: nb5rb.hikigo.com
   skip-cert-verify: true
-  sni: dg3rb.ianai.it.com
+  sni: nb5rb.hikigo.com
   type: hysteria2
   udp: true
   up: 100
+- name: 🇯🇵 日本 | JPN 2
+  password: czxPueuXQB1wUfMU
+  port: 36835
+  server: 45.192.203.110
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: anytls
+  udp: true
 - cipher: aes-256-gcm
   name: shadowsocks-1827146336
   password: 3eOFeNssde7PYYMv
@@ -203,14 +263,30 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
+  name: '🇯🇵[www.v2nodes.com] ss-JP-5141... #1'
+  password: shadowsocks
+  port: 443
+  server: 149.22.87.204
+  type: ss
+- cipher: aes-128-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-9223... #1'
   password: shadowsocks
   port: 443
   server: 149.22.87.241
   type: ss
-- cipher: aes-128-gcm
-  name: '🏳[www.v2nodes.com] ss- #12'
-  password: shadowsocks
-  port: 443
-  server: 149.22.87.204
-  type: ss
+- name: 🇯🇵JP_3|3.2MB/s|P002-260618
+  port: 343
+  server: 133.18.200.207
+  skip-cert-verify: true
+  sub_tag: P002-260618
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: 🇯🇵JP_4|2.9MB/s
+  password: '!!str 123456'
+  port: 1080
+  server: 8.209.236.192
+  skip-cert-verify: true
+  type: socks5
+  username: '123456'

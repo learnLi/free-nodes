@@ -1,22 +1,27 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | 99FBEE
+  network: tcp
+  port: 5381
+  server: dashboard.ojestore.top
+  tls: false
+  type: vmess
+  uuid: 63ad66f6-b7a6-4df0-bf15-0c82a047b7e3
+- client-fingerprint: qq
+  name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  port: 443
+  server: 136.148.83.69
+  servername: szqbx-ru-77dc.my-fade.cloud
+  tls: true
+  type: vless
+  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
 - name: '🇪🇪[www.v2nodes.com] vless-EE-1... #3'
   port: 16443
   server: 45.86.60.174
   tls: false
   type: vless
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-- client-fingerprint: qq
-  name: '🇬🇧 英国 | GBR #5'
-  network: tcp
-  port: 443
-  server: 136.148.83.69
-  servername: szqbx-ru-77dc.my-fade.cloud
-  tls: true
-  type: vless
-  udp: true
-  uuid: 666821a2-5c3d-0001-a56f-5a3a562d7324
-  ws-opts:
-    path: /
 - name: 🇪🇪EE-🚀@VPNine1
   password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
   port: 443
