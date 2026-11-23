@@ -1,87 +1,87 @@
 {
-  "total": 942,
+  "total": 927,
   "egress": {
-    "ip": "128.203.199.84",
+    "ip": "3.41.210.137",
     "method": "direct",
     "country": "United States",
-    "city": "Des Moines",
-    "org": "Microsoft Corporation"
+    "city": "Washington",
+    "org": "Amazon.com, Inc."
   },
-  "tcp_applicable": 877,
-  "tcp_ok": 720,
-  "tcp_rate": "82.1%",
-  "tls_applicable": 390,
-  "tls_ok": 329,
-  "tls_rate": "84.4%",
-  "quic_applicable": 65,
-  "quic_ok": 1,
-  "quic_rate": "1.5%",
-  "udp_skipped": 65,
+  "tcp_applicable": 861,
+  "tcp_ok": 729,
+  "tcp_rate": "84.7%",
+  "tls_applicable": 389,
+  "tls_ok": 355,
+  "tls_rate": "91.3%",
+  "quic_applicable": 66,
+  "quic_ok": 0,
+  "quic_rate": "0.0%",
+  "udp_skipped": 66,
   "refs": [
     {
       "host": "1.1.1.1",
       "port": 443,
       "ok": true,
-      "ms": 7,
+      "ms": 2,
       "err": ""
     },
     {
       "host": "8.8.8.8",
       "port": 443,
       "ok": true,
-      "ms": 21,
+      "ms": 3,
       "err": ""
     },
     {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 37,
+      "ms": 3,
       "err": ""
     }
   ],
   "by_type": {
     "anytls": {
-      "total": 4,
-      "ok": 4
+      "total": 5,
+      "ok": 5
     },
     "http": {
-      "total": 88,
-      "ok": 86
+      "total": 80,
+      "ok": 80
     },
     "hysteria": {
       "total": 3,
       "ok": 0
     },
     "socks5": {
-      "total": 9,
-      "ok": 8
+      "total": 7,
+      "ok": 6
     },
     "ss": {
-      "total": 263,
-      "ok": 215
+      "total": 260,
+      "ok": 216
     },
     "trojan": {
-      "total": 130,
+      "total": 120,
       "ok": 103
     },
     "vless": {
-      "total": 181,
-      "ok": 178
+      "total": 178,
+      "ok": 175
     },
     "vmess": {
-      "total": 194,
-      "ok": 126
+      "total": 205,
+      "ok": 144
     },
     "wireguard": {
-      "total": 5,
+      "total": 3,
       "ok": 0
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 65,
-      "ok": 1
+      "total": 66,
+      "ok": 0
     }
   }
 }

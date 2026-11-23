@@ -1,18 +1,49 @@
 proxies:
-- client-fingerprint: random
-  grpc-opts:
-    grpc-service-name: grpc-ru
-  name: '🏳[www.v2nodes.com] vless- #19'
-  network: grpc
+- alterId: 0
+  cipher: auto
+  name: RU 🇷🇺 | @Raydikalx | 00FA89
+  network: ws
+  port: 2086
+  server: admin.arzonhost.ir
+  tls: false
+  type: vmess
+  uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
+  ws-opts:
+    headers:
+      Host: admin.arzonhost.ir
+    path: /
+- alterId: 0
+  cipher: auto
+  name: RU 🇷🇺 | @Raydikalx | BA77B0
+  network: ws
   port: 443
-  server: xssite.webredirect.org
-  servername: xssite.webredirect.org
+  server: 5.188.26.85
+  servername: renderer-stream-2-62.mirra.now
   tls: true
-  type: vless
-  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  type: vmess
+  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  ws-opts:
+    headers:
+      Host: renderer-stream-2-62.mirra.now
+    path: /api/v1/gpu-stream/socket
+- name: 🇷🇺RU-🚀@VPNine1
+  password: 10550754-cf62-3d3b-ba6a-50be27a275d7
+  port: 443
+  server: 195.133.53.33
+  sni: s516.okgfw.top
+  tls: false
+  type: hysteria2
 - cipher: chacha20-ietf-poly1305
   name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
   password: VVlAff77CnAU43Aoc5j15Y
   port: 5112
   server: 90.156.203.62
   type: ss
+- name: 🇷🇺RU_1|3.2MB/s
+  password: 'null'
+  port: 1446
+  server: 46.29.166.134
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'

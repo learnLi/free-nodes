@@ -1,28 +1,28 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 4638D2
+  name: GB 🇬🇧 | @Raydikalx | 4EC290
   network: ws
-  port: 8080
-  server: 8ggixlxj2bf9.dop69.com
-  servername: ''
-  tls: false
+  port: 443
+  server: me.kalakatha.org
+  servername: me.kalakatha.org
+  tls: true
   type: vmess
-  uuid: 2f28bb4b-5322-4cfd-9627-e52205c5e052
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: rt.orvexa.ir
-    path: /
+      Host: me.kalakatha.org
+    path: /linkvws
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 472910
+  name: GB 🇬🇧 | @Raydikalx | 624BDA
   network: tcp
-  port: 42970
-  server: vpn.rezapanel.ir
+  port: 20004
+  server: 82.152.197.167
   servername: ''
   tls: false
   type: vmess
-  uuid: 571d56be-1229-4280-b041-9c549dad03bd
+  uuid: 1c7b2d6c-ddd8-4944-9329-d0eb6eb64686
 - alterId: 0
   cipher: auto
   name: GB 🇬🇧 | @Raydikalx | 6B4B20
@@ -37,17 +37,75 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 82D7CF
+  network: ws
+  port: 443
+  server: vvvbbbnhj.taipei102.indevs.in
+  servername: vvvbbbnhj.taipei102.indevs.in
+  tls: true
+  type: vmess
+  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
+  ws-opts:
+    headers:
+      Host: vvvbbbnhj.taipei102.indevs.in
+    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | 9E424D
+  network: ws
+  port: 443
+  server: 172.99.190.109
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | B196C7
+  network: ws
+  port: 8081
+  server: uk.1more.mobileahmadreza.ir
+  tls: false
+  type: vmess
+  uuid: 07377c32-6e40-40dc-aaad-3b3fbf22b9bb
+  ws-opts:
+    headers:
+      Host: ssh.webdade.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: GB 🇬🇧 | @Raydikalx | C96927
+  network: ws
+  port: 80
+  server: 57.128.164.21
+  tls: false
+  type: vmess
+  uuid: 10029c03-5d2f-4185-aab2-cbf91eef7361
+  ws-opts:
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+    path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
+- alterId: 0
+  cipher: auto
+  name: 🇬🇧GB-198.244.232.39-4097
+  network: ws
+  port: 2096
+  server: 198.244.232.39
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: df46384b-1ad5-40a6-812e-48d60fb80283
+  ws-opts:
+    path: /
 - cipher: rc4-md5
   name: shadowsocks-1827147777
   password: 14fFPrbezE3HDZzsMOr6
   port: 8080
   server: 146.70.61.37
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-178.83.185.156-0188
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 178.83.185.156
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.162-0184
@@ -134,12 +192,6 @@ proxies:
   server: 82.38.31.194
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.199-0215
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.199
-  type: ss
-- cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.202-0114
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
@@ -150,6 +202,12 @@ proxies:
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.203
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧GB-82.38.31.205-5721
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  port: 8080
+  server: 82.38.31.205
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.206-0108
@@ -218,10 +276,10 @@ proxies:
   server: 82.38.31.35
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.46-0187
+  name: 🇬🇧GB-82.38.31.47-0181
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
-  server: 82.38.31.46
+  server: 82.38.31.47
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.48-0179
@@ -253,6 +311,12 @@ proxies:
   port: 8080
   server: 82.38.31.66
   type: ss
+- cipher: aes-256-gcm
+  name: '🇬🇧[www.v2nodes.com] ss-GB-1247... #1'
+  password: RexnBgU7EV5ADxG
+  port: 7001
+  server: 94.156.250.148
+  type: ss
 - cipher: aes-128-gcm
   name: '🇬🇧[www.v2nodes.com] ss-GB-1451... #1'
   password: shadowsocks
@@ -277,27 +341,9 @@ proxies:
   port: 19999
   server: 198.244.202.215
   type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #11'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 142.202.51.22
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #12'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 38.114.120.221
-  type: ss
-- cipher: aes-128-gcm
-  name: '🏳[www.v2nodes.com] ss- #13'
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.181
-  type: ss
-- cipher: aes-128-gcm
-  name: '🏳[www.v2nodes.com] ss- #14'
-  password: shadowsocks
-  port: 443
-  server: 141.98.101.178
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱[www.v2nodes.com] ss-NL-1564...
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.46
   type: ss

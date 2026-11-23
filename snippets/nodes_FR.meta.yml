@@ -1,19 +1,6 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 20ADF1
-  network: ws
-  port: 80
-  server: 145.239.55.210
-  tls: false
-  type: vmess
-  uuid: c5443f55-d405-4990-ac36-8fd83ae2c17e
-  ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-    path: /
-- alterId: 0
-  cipher: auto
   name: FR 🇫🇷 | @Raydikalx | 33DF70
   network: ws
   port: 443
@@ -26,32 +13,6 @@ proxies:
     headers:
       Host: renderer-stream-2-62.mirra.now
     path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 4A7C1C
-  network: ws
-  port: 20222
-  server: 51.75.118.5
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6
-  ws-opts:
-    headers:
-      Host: 51.75.118.5
-    path: /parham-confing-vmess?u=Scnqz84F-E2l
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | E58B34
-  network: ws
-  port: 23388
-  server: 2001:bc8:32d7:1a9::2
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
-  ws-opts:
-    path: /github.com/Alvin9999-newpac/fanqiang
 - alterId: 0
   cipher: auto
   name: 🇫🇷FR-145.239.55.210-0226
@@ -82,23 +43,18 @@ proxies:
     headers:
       Host: 162.19.224.175
     path: /vmess
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  encryption: none
-  name: FR VLESS-08 | free-nodes
-  network: xhttp
-  port: 443
-  server: 185.133.35.86
-  servername: mamafrance.baklajann.ru
-  tls: true
-  type: vless
-  uuid: d795a9ec-5ed0-4309-ba6c-edc09b818669
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-51.159.2.152-3444
+  network: ws
+  port: 80
+  server: 51.159.2.152
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
   ws-opts:
-    headers:
-      Host: mamafrance.baklajann.ru
     path: /
 - name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
   network: ws
@@ -174,7 +130,7 @@ proxies:
   server: 107.161.160.28
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
@@ -203,18 +159,6 @@ proxies:
   port: 8080
   server: 51.83.61.102
   type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #8'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.27
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #9'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 172.99.189.142
-  type: ss
 - name: FR_speednode_0007
   port: 6103
   server: 87.98.174.157
@@ -222,45 +166,52 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_3|3.5MB/s|P002-260618
-  password: 'null'
+- name: 🇫🇷FR_3|1.2MB/s|K001-260618
+  password: None
   port: 443
   server: 82.66.235.221
   skip-cert-verify: true
-  sub_tag: P002-260618
+  sub_tag: K001-260618
+  tls: true
+  type: http
+  udp: true
+  x-toolall-mihomo: true
+- name: 🇫🇷FR_5|2.3MB/s|R002-260618
+  password: 'null'
+  port: 6103
+  server: 87.98.174.157
+  skip-cert-verify: true
+  sub_tag: R002-260618
   tls: true
   type: http
   udp: true
   username: 'null'
   x-toolall-mihomo: true
-- name: 🇫🇷FR_4|2.1MB/s|R002-260618
+- name: 🇫🇷FR_6|1.4MB/s|R002-260618
   port: 443
-  server: 149.102.245.65
+  server: 103.82.101.44
   skip-cert-verify: true
+  sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
   sub_tag: R002-260618
   tls: true
   type: http
   udp: true
   x-toolall-mihomo: true
-- name: 🇫🇷FR_5|2.9MB/s|R002-260618
-  port: 8090
-  server: 80.124.109.22
+- name: 🇫🇷FR_4|1018KB/s|K001-260618
+  password: Zn5mR7vA
+  port: 42000
+  server: 144.56.22.78
   skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
+  sub_tag: K001-260618
+  type: socks5
   udp: true
+  username: L8wP3kQx
   x-toolall-mihomo: true
-- name: 🇫🇷FR_6|1.7MB/s
-  port: 3128
-  server: 54.36.150.233
-  skip-cert-verify: true
-  type: http
 - alpn:
   - h3
   auth-str: dongtaiwang.com
   down: '55'
-  name: 🇫🇷FR_1|1.4MB/s
+  name: 🇫🇷FR_1|2.6MB/s
   password: dongtaiwang.com
   port: 24667
   server: 62.210.124.132
