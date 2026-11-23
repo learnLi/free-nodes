@@ -1,21 +1,19 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 33DF70
+  name: FR 🇫🇷 | @Raydikalx | 3FDDAA
   network: ws
-  port: 443
-  server: 90.127.143.135
+  port: 18901
+  server: 2001:bc8:32d7:1a9::2
   servername: ''
-  tls: true
+  tls: false
   type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
   ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
+    path: /github.com/Alvin9999-newpac/fanqiang?ed
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0226
+  name: 🇫🇷FR-145.239.55.210-0230
   network: ws
   port: 80
   server: 145.239.55.210
@@ -30,32 +28,17 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-162.19.224.175-1782
+  name: 🇫🇷FR-57.128.45.161-4990
   network: ws
   port: 80
-  server: 162.19.224.175
+  server: 57.128.45.161
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 42ba278d-65e0-4743-8707-e18ed98cfed5
+  uuid: 35d25899-ed20-46d9-9c7c-99c0d414d5e4
   ws-opts:
-    headers:
-      Host: 162.19.224.175
-    path: /vmess
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-51.159.2.152-3444
-  network: ws
-  port: 80
-  server: 51.159.2.152
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 43587dc1-34f1-4254-ab90-56507e72d7a8
-  ws-opts:
-    path: /
+    path: /user
 - name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
   network: ws
   port: 80
@@ -68,7 +51,7 @@ proxies:
     headers:
       Host: ov-france1.09vpn.com
     path: /vless/
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
   network: ws
   port: 443
   server: jdxl.cf.090227.xyz
@@ -124,13 +107,13 @@ proxies:
   sni: www.ignitelimit.com
   type: trojan
 - cipher: aes-256-gcm
-  name: 🇫🇷FR-107.161.160.28-0219
+  name: 🇫🇷FR-107.161.160.28-0222
   password: itzvpn@321
   port: 8388
   server: 107.161.160.28
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #3'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 38.109.228.110
@@ -139,10 +122,22 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 167.17.64.175
+  server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 172.99.189.142
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 167.17.64.175
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
@@ -166,58 +161,3 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇫🇷FR_3|1.2MB/s|K001-260618
-  password: None
-  port: 443
-  server: 82.66.235.221
-  skip-cert-verify: true
-  sub_tag: K001-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇫🇷FR_5|2.3MB/s|R002-260618
-  password: 'null'
-  port: 6103
-  server: 87.98.174.157
-  skip-cert-verify: true
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  username: 'null'
-  x-toolall-mihomo: true
-- name: 🇫🇷FR_6|1.4MB/s|R002-260618
-  port: 443
-  server: 103.82.101.44
-  skip-cert-verify: true
-  sni: f3a61d8406d537345747f99f8a281007-3f754ed5da1bba09.apache-iv.com
-  sub_tag: R002-260618
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-- name: 🇫🇷FR_4|1018KB/s|K001-260618
-  password: Zn5mR7vA
-  port: 42000
-  server: 144.56.22.78
-  skip-cert-verify: true
-  sub_tag: K001-260618
-  type: socks5
-  udp: true
-  username: L8wP3kQx
-  x-toolall-mihomo: true
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: '55'
-  name: 🇫🇷FR_1|2.6MB/s
-  password: dongtaiwang.com
-  port: 24667
-  server: 62.210.124.132
-  servername: bing.com
-  skip-cert-verify: true
-  sni: bing.com
-  tls: true
-  type: hysteria
-  up: '11'

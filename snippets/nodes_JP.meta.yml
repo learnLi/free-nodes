@@ -1,45 +1,92 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 9B5C33
+  name: JP 🇯🇵 | @Raydikalx | 3D8D0C
   network: ws
-  port: 8081
-  server: 168.110.63.247
+  port: 23462
+  server: 64.176.51.214
   tls: false
   type: vmess
-  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
-  ws-opts:
-    path: /vless
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | DDA3E3
-  network: ws
-  port: 443
-  server: 210.138.37.53
-  servername: DrBKg16eGf3FZlM3.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
   ws-opts:
     headers:
-      Host: DrBKg16eGf3FZlM3.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
+      Host: 64.176.51.214
+    path: /a15206
+- alpn:
+  - ''
+  alterId: 0
   cipher: auto
-  name: 🇯🇵JP-168.138.43.75-1070
+  name: '🇯🇵 日本 | JPN #1'
   network: ws
-  port: 80
-  server: 168.138.43.75
-  servername: ''
+  port: 16617
+  server: afzuv.xiaoyan.io
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  udp: true
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
   ws-opts:
     headers:
-      Host: jp01.a0a.xyz
-    path: /cctv13.m3u8
-- name: 🇯🇵[www.v2nodes.com] vless-JP
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+    path: /
+- client-fingerprint: chrome
+  name: 日本2|@ripaojiedian
+  network: ws
+  port: 443
+  server: 172.104.86.181
+  servername: itunes.apple.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 010431f3-04f6-4404-a801-b93bf2e3c2b2
+  ws-opts:
+    headers:
+      Host: itunes.apple.com
+    path: /wsflow=
+- client-fingerprint: chrome
+  name: 日本3|@ripaojiedian
+  network: ws
+  port: 443
+  server: 139.162.91.182
+  servername: itunes.apple.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: b4ec7f6b-b41e-4018-9f76-19204e138db9
+  ws-opts:
+    headers:
+      Host: itunes.apple.com
+    path: /wsflow=
+- client-fingerprint: chrome
+  name: 日本4|@ripaojiedian
+  network: ws
+  port: 8443
+  server: 166.88.14.71
+  servername: senflarelink-node-71i.pages.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  ws-opts:
+    headers:
+      Host: senflarelink-node-71i.pages.dev
+    path: /flow=
+- client-fingerprint: chrome
+  name: 日本5|@ripaojiedian
+  network: ws
+  port: 8443
+  server: 45.32.57.15
+  servername: senflarelink-node-nwz76h.pages.dev
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  ws-opts:
+    headers:
+      Host: senflarelink-node-nwz76h.pages.dev
+    path: /flow=
+- client-fingerprint: chrome
+  name: 🇯🇵[www.v2nodes.com] vless-JP
   network: ws
   port: 443
   server: 103.201.130.126
@@ -50,7 +97,7 @@ proxies:
   ws-opts:
     headers:
       Host: tt-9nz.pages.dev
-    path: /item/favouritesfp=chrome
+    path: /item/favourites
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
   network: ws
   port: 443
@@ -64,7 +111,7 @@ proxies:
       Host: jp3.yohototo.top
     path: /tyxywsfp=unsafe
 - encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
   network: ws
   port: 80
   server: 172.67.192.49
@@ -73,7 +120,7 @@ proxies:
   uuid: 4808e2ce-14f4-4f5e-b8f4-59fb92fffa09
 - client-fingerprint: unsafe
   encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
   network: ws
   port: 443
   server: 43.170.8.95
@@ -108,45 +155,11 @@ proxies:
   skip-cert-verify: true
   sni: hk.catxstar.com
   type: trojan
-  udp: true
 - name: ' 🇯🇵 20@exclavevpn'
   password: gG1JyjbJgDmEMvdTgcD9wVOS
   port: 443
   server: 35.221.91.82
   sni: www.microsoft.com
-  tls: false
-  type: hysteria2
-- alpn:
-  - h3
-  auth: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  down: 200
-  name: 🇯🇵 日本 | JPN
-  obfs: salamander
-  obfs-password: e3ymhs6gbzptjysj
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  port: 443
-  server: dg3rb.ianai.it.com
-  skip-cert-verify: true
-  sni: dg3rb.ianai.it.com
-  type: hysteria2
-  udp: true
-  up: 100
-- name: '🇯🇵 日本 | JPN #1'
-  obfs: salamander
-  obfs-password: salamander
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  port: 443
-  server: dg3rb.ianai.it.com
-  skip-cert-verify: true
-  sni: dg3rb.ianai.it.com
-  tls: false
-  type: hysteria2
-- name: 📗96@oneclickvpnkeys
-  password: oracle_hy2_pass_2026
-  port: 8443
-  server: 129.225.181.46
-  skip-cert-verify: true
-  sni: bing.com
   tls: false
   type: hysteria2
 - cipher: aes-256-gcm
@@ -156,7 +169,7 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
-  name: 🇯🇵JP-168.138.205.100-0217
+  name: 🇯🇵JP-168.138.205.100-0237
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100

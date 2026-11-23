@@ -1,16 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: TW 🇹🇼 | @Raydikalx | 6A8944
-  network: ws
-  port: 443
-  server: 654168416355441.oylfmxz.cn
+  name: TW 🇹🇼 | @Raydikalx | 826527
+  network: tcp
+  port: 35034
+  server: 165.154.195.38
   servername: ''
-  skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts: {}
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
 - alterId: 0
   cipher: auto
   name: TW 🇹🇼 | @Raydikalx | 9A6E65
@@ -21,26 +19,3 @@ proxies:
   tls: false
   type: vmess
   uuid: 464b32ca-1365-49db-a531-31568b602065
-- alterId: 64
-  cipher: auto
-  name: 🇹🇼TW-61.216.85.68-1666
-  network: ws
-  port: 443
-  server: 61.216.85.68
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 5ba738e7-0abf-4935-b67e-d404a083d6a6
-  ws-opts:
-    headers:
-      Host: www.88612860.xyz
-    path: /path/243535322906
-- name: '🇹🇼 🇨🇳 台湾 | TWN #2'
-  password: 5KdDtpoJI58OTsoG0PwEYunqB0mkAEDm
-  port: 30502
-  server: 161.114.15.215
-  skip-cert-verify: true
-  sni: www.cloudflare.com
-  type: trojan
-  udp: true
