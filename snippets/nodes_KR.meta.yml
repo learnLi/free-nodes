@@ -1,14 +1,33 @@
 proxies:
+- alterId: 64
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | 9F13DD
+  network: ws
+  port: 30002
+  server: 107.148.70.79
+  servername: www.91397592.xyz
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.91397592.xyz
+    path: /path/351212081517
 - alterId: 0
   cipher: auto
-  name: '🇰🇷 韩国 | KOR #2'
-  network: http
+  name: 🇰🇷KR-132.145.80.230-1133
+  network: ws
   port: 80
-  server: 43.155.199.22
+  server: 132.145.80.230
+  servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
 - client-fingerprint: chrome
   name: 韩国2|@ripaojiedian
   network: ws
@@ -24,7 +43,7 @@ proxies:
       Host: senflarelink-node-nwz76h.pages.dev
     path: /flow=
 - client-fingerprint: chrome
-  name: '韩国|@ripaojiedian #1'
+  name: 韩国|@ripaojiedian
   network: ws
   port: 8443
   server: 131.186.22.95
@@ -37,7 +56,7 @@ proxies:
     headers:
       Host: senflarelink-node-il65vh.pages.dev
     path: /flow=
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   network: ws
   port: 25555
   server: 152.69.226.63
@@ -46,26 +65,13 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
-- cipher: aes-256-cfb
-  name: shadowsocks-1827145973
-  password: qwerREWQ@@
-  port: 6123
-  server: 211.178.105.134
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.203.236.179
-  type: ss
-  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
   password: '!!str 12242'
   port: 10099
   server: 115.161.136.145
   type: ss
-- name: 🇰🇷KR_1|2.0MB/s
+- name: 🇰🇷KR_1|3.4MB/s
   port: 1080
   server: 59.11.209.162
   skip-cert-verify: true

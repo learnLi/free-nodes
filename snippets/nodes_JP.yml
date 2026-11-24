@@ -1,34 +1,58 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 3D8D0C
+  name: JP 🇯🇵 | @Raydikalx | 79F85B
   network: ws
-  port: 23462
-  server: 64.176.51.214
+  port: 2082
+  server: tgqyjc2024.qyjc.xyz
   tls: false
   type: vmess
-  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
+  uuid: 1e3e82b2-36c0-44aa-80ad-5c3f693824f1
   ws-opts:
     headers:
-      Host: 64.176.51.214
-    path: /a15206
-- alpn:
-  - ''
-  alterId: 0
+      Host: hongkong.tgqyjc2024.qyjc666.xyz
+    path: /?ed=2048
+- alterId: 0
   cipher: auto
-  name: '🇯🇵 日本 | JPN #1'
+  name: JP 🇯🇵 | @Raydikalx | 81424E
   network: ws
-  port: 16617
-  server: afzuv.xiaoyan.io
+  port: 6233
+  server: 151.242.165.160
+  servername: v47.emnode.top
+  tls: true
+  type: vmess
+  uuid: c3d17f1d-9201-4644-b184-6cd1414c6cc5
+  ws-opts:
+    headers:
+      Host: v47.emnode.top
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP 🇯🇵 | @Raydikalx | D48DE2
+  network: ws
+  port: 443
+  server: J3Nz0zA0r13AoVhH.v.3dns.vip
+  servername: J3Nz0zA0r13AoVhH.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: '🇯🇵JP-168.110.63.247-5909 #1'
+  network: ws
+  port: 8081
+  server: 168.110.63.247
+  servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  udp: true
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
   ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
+    path: /vless
 - name: '日本|@ripaojiedian #1'
   network: tcp
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
@@ -38,19 +62,12 @@ proxies:
   sni: nu2rb.supertoolify.com
   type: trojan
   udp: true
-- name: 🇯🇵[www.v2nodes.com] trojan-JP-...
-  password: LDSLDq9XlM4-92pvTPOUuklMb99BLOCrdyejsupEca4
-  port: 17443
-  server: 156.246.93.237
+- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 34745
+  server: win2loxfde0303.gggrelay.org
   skip-cert-verify: true
-  sni: jpk.wentibuxiaobuda.xyz
-  type: trojan
-- name: '🇳🇬 尼日利亚 | NGA #1'
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 20051
-  server: sclass-b1.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
+  sni: nu3rb.supertoolify.com
   type: trojan
 - cipher: aes-256-gcm
   name: shadowsocks-1827146336
@@ -59,7 +76,7 @@ proxies:
   server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
-  name: 🇯🇵JP-168.138.205.100-0237
+  name: 🇯🇵JP-168.138.205.100-0247
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100
@@ -69,12 +86,6 @@ proxies:
   password: shadowsocks
   port: 443
   server: 149.22.87.240
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵[www.v2nodes.com] ss-JP-1544... #1'
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
   type: ss
 - cipher: aes-128-gcm
   name: '🇯🇵[www.v2nodes.com] ss-JP-5141... #1'

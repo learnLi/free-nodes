@@ -1,27 +1,33 @@
 proxies:
+- alterId: 64
+  cipher: auto
+  name: KR 🇰🇷 | @Raydikalx | 9F13DD
+  network: ws
+  port: 30002
+  server: 107.148.70.79
+  servername: www.91397592.xyz
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.91397592.xyz
+    path: /path/351212081517
 - alterId: 0
   cipher: auto
-  name: '🇰🇷 韩国 | KOR #2'
-  network: http
+  name: 🇰🇷KR-132.145.80.230-1133
+  network: ws
   port: 80
-  server: 43.155.199.22
+  server: 132.145.80.230
+  servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 3722ad16-f3e1-4406-b04a-929b529d8e0d
-- cipher: aes-256-cfb
-  name: shadowsocks-1827145973
-  password: qwerREWQ@@
-  port: 6123
-  server: 211.178.105.134
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.203.236.179
-  type: ss
-  udp: true
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: kr02.a0a.xyz
+    path: /cctv13.m3u8
 - cipher: chacha20-ietf-poly1305
   name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
   password: '!!str 12242'

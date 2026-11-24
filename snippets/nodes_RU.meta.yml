@@ -1,22 +1,8 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: RU 🇷🇺 | @Raydikalx | 30981F
-  network: ws
-  port: 443
-  server: renderer-stream-2-114.mirra.now
-  servername: renderer-stream-2-114.mirra.now
-  tls: true
-  type: vmess
-  uuid: 8ffa41d4-e6b5-4af5-a8a9-69e26bec75f5
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-114.mirra.now
-    path: /api/v1/gpu-stream/socket
 - client-fingerprint: random
   grpc-opts:
     grpc-service-name: grpc-ru
-  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #2'
+  name: '🇷🇺[www.v2nodes.com] vless-RU-1... #3'
   network: grpc
   port: 443
   server: xssite.webredirect.org
@@ -24,13 +10,15 @@ proxies:
   tls: true
   type: vless
   uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
-- name: 🇷🇺RU-🚀@VPNine1
-  password: 10550754-cf62-3d3b-ba6a-50be27a275d7
+- client-fingerprint: chrome
+  name: 🇷🇺_RU_俄罗斯_IPV4
   port: 443
-  server: 195.133.53.33
-  sni: s516.okgfw.top
-  tls: false
-  type: hysteria2
+  server: 136.148.83.69
+  servername: szqbx-ru-77dc.my-fade.cloud
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 7dff1be7-b930-0001-a8ad-dc7850168215
 - cipher: chacha20-ietf-poly1305
   name: '🇷🇺[www.v2nodes.com] ss-RU-1163... #1'
   password: VVlAff77CnAU43Aoc5j15Y
