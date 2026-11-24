@@ -1,48 +1,21 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 79F85B
+  name: JP 🇯🇵 | @Raydikalx | 45285F
   network: ws
-  port: 2082
-  server: tgqyjc2024.qyjc.xyz
+  port: 8998
+  server: cc28.goingside.site
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 1e3e82b2-36c0-44aa-80ad-5c3f693824f1
+  uuid: 4b019faa-38b0-473d-bc49-60bb68151c34
   ws-opts:
     headers:
-      Host: hongkong.tgqyjc2024.qyjc666.xyz
-    path: /?ed=2048
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 81424E
-  network: ws
-  port: 6233
-  server: 151.242.165.160
-  servername: v47.emnode.top
-  tls: true
-  type: vmess
-  uuid: c3d17f1d-9201-4644-b184-6cd1414c6cc5
-  ws-opts:
-    headers:
-      Host: v47.emnode.top
+      Host: cc28.goingside.site
     path: /
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | D48DE2
-  network: ws
-  port: 443
-  server: J3Nz0zA0r13AoVhH.v.3dns.vip
-  servername: J3Nz0zA0r13AoVhH.v.3dns.vip
-  tls: true
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: J3Nz0zA0r13AoVhH.v.3dns.vip
-    path: /ws-vmess
-- alterId: 0
-  cipher: auto
-  name: '🇯🇵JP-168.110.63.247-5909 #1'
+  name: 🇯🇵JP-168.110.63.247-5865
   network: ws
   port: 8081
   server: 168.110.63.247
@@ -109,8 +82,7 @@ proxies:
     headers:
       Host: senflarelink-node-nwz76h.pages.dev
     path: /flow=
-- encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #4'
+- name: 🇯🇵[www.v2nodes.com] vless-JP-1...
   network: ws
   port: 80
   server: 172.67.192.49
@@ -126,29 +98,26 @@ proxies:
   sni: nu2rb.supertoolify.com
   type: trojan
   udp: true
-- name: '🇯🇵[www.v2nodes.com] trojan-JP-... #1'
+- name: '🇯🇵 日本 | JPN #1'
+  network: tcp
   password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   port: 34745
   server: win2loxfde0303.gggrelay.org
   skip-cert-verify: true
   sni: nu3rb.supertoolify.com
   type: trojan
-- name: 🇯🇵 日本 | JPN
-  password: 36013ba3-3fe6-4553-a2ee-f2946a44f425
-  port: 57180
-  server: media.gosthk.site
-  skip-cert-verify: true
-  sni: media.gosthk.site
-  type: anytls
   udp: true
-- cipher: aes-256-gcm
-  name: shadowsocks-1827146336
-  password: 3eOFeNssde7PYYMv
+- auth: 5dc783605a6829f831a21d86bb913c7a
+  name: '🇯🇵 日本 | JPN #3'
+  password: 5dc783605a6829f831a21d86bb913c7a
   port: 443
-  server: 84.247.155.196
-  type: ss
+  server: 64.204.49.143
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
 - cipher: aes-128-gcm
-  name: 🇯🇵JP-168.138.205.100-0247
+  name: 🇯🇵JP-168.138.205.100-0262
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100
@@ -171,3 +140,10 @@ proxies:
   port: 443
   server: 149.22.87.241
   type: ss
+- name: 🇯🇵JP_1|3.6MB/s
+  password: EGJDy5Kg
+  port: 42000
+  server: 103.248.150.50
+  skip-cert-verify: true
+  type: socks5
+  username: paZFN3JA

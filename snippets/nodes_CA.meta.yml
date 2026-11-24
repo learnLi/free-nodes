@@ -1,11 +1,24 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 0E0071
+  name: CA 🇨🇦 | @Raydikalx | 0FE8B1
   network: ws
   port: 443
-  server: 172.67.71.160
-  servername: obdii.cfd
+  server: node.socks5.kdns.fr
+  servername: pas-seo-delays-safe.trycloudflare.com
+  tls: true
+  type: vmess
+  uuid: 20a16a21-6468-4e63-96e1-d9cecf0035ce
+  ws-opts:
+    headers:
+      Host: pas-seo-delays-safe.trycloudflare.com
+    path: /20a16a21-6468-4e63-96e1-d9cecf0035ce-vm
+- alterId: 0
+  cipher: auto
+  name: 'CA 🇨🇦 | @Raydikalx | 140CBF #1'
+  network: ws
+  port: 443
+  server: 188.114.96.2
   tls: true
   type: vmess
   uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
@@ -15,78 +28,21 @@ proxies:
     path: /linkws
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 176CD9
-  network: ws
-  port: 443
-  server: 172.98.207.58
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
-  ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 37B799
-  network: ws
-  port: 8080
-  server: 104.24.169.183
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: nasnet-571299667.rahavard365.co
-    path: /NASNET/cdn#/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 4B08FB
-  network: ws
-  port: 443
-  server: node8.liudonghoe.com
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 47050e4e-965d-41ca-976d-73c1f11e6905
-  ws-opts:
-    path: /hoe8
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 4C3914
-  network: ws
+  name: CA 🇨🇦 | @Raydikalx | 2312FC
+  network: httpupgrade
   port: 80
-  server: 104.21.231.57
+  server: bmi.ir.kolman.com.de
   servername: ''
   tls: false
   type: vmess
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  ws-opts:
-    headers:
-      Host: a.prapt1.ir
-    path: /?ed=2048&Telegram🇨🇳
+  uuid: c18a7a84-d4a9-4a73-bd27-cb00818abe0b
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 4F8BD1
-  network: ws
-  port: 8443
-  server: 104.19.48.3
-  tls: true
-  type: vmess
-  uuid: 39135a39-e6ca-43df-a360-d859eea58d86
-  ws-opts:
-    headers:
-      Host: hk01.linkitnow.net
-    path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 618C2B
+  name: CA 🇨🇦 | @Raydikalx | 275119
   network: ws
   port: 443
-  server: www.shopify.com
-  servername: guanwang.awsno.com
+  server: guanwang.awsno.com
+  servername: ''
   tls: true
   type: vmess
   uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
@@ -96,103 +52,76 @@ proxies:
     path: /hls/cctv5phd.m3u8
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 64A1EB
-  network: ws
-  port: 443
-  server: 172.66.142.170
-  servername: zoomgov.nathaya.web.id
-  tls: true
-  type: vmess
-  uuid: 4caf156a-3309-4105-8388-d388eb9e1105
-  ws-opts:
-    headers:
-      Host: id2.nathaya.web.id
-    path: /whatever/vmess
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 68442F
-  network: ws
-  port: 443
-  server: n1761214915.mv7wh.tech
-  servername: n1761214915.mv7wh.tech
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 1f2daf43-ff90-4df9-9276-dfb8486d72bc
-  ws-opts:
-    headers:
-      Host: n1761214915.mv7wh.tech
-    path: /
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 6887A6
-  network: ws
-  port: 443
-  server: US122202.ssgreen.org
-  tls: true
-  type: vmess
-  uuid: 0fca7244-8c8a-45f6-bca1-a933499218a4
-  ws-opts:
-    path: /wes
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 738F81
-  network: ws
-  port: 8443
-  server: 104.21.91.53
+  name: 'CA 🇨🇦 | @Raydikalx | 391CAA #1'
+  network: raw
+  port: 18000
+  server: 23.162.200.198
   servername: ''
-  tls: true
+  tls: false
   type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  ws-opts:
-    headers:
-      Host: v2ray1.dozapp.xyz
-    path: /lMnsZUN4/
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 74B31F
+  name: CA 🇨🇦 | @Raydikalx | 5CEF46
+  network: ws
+  port: 443
+  server: www.shopify.com
+  servername: dimensional-regularly-buildings-keys.trycloudflare.com
+  tls: true
+  type: vmess
+  uuid: d187a23a-76a9-4d55-84e3-ea3b8b222cbf
+  ws-opts:
+    headers:
+      Host: dimensional-regularly-buildings-keys.trycloudflare.com
+    path: /d187a23a-76a9-4d55-84e3-ea3b8b222cbf-vm
+- alterId: 0
+  cipher: auto
+  name: 'CA 🇨🇦 | @Raydikalx | 61155A #1'
   network: ws
   port: 8080
-  server: 104.18.202.250
+  server: 104.19.174.68
+  servername: ''
   tls: false
   type: vmess
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev
-    path: /jahfkjha.cfd/linkws
+      Host: nasnet-571299667.rahavard365.co
+    path: /NASNET/cdn?ed=2560
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 81229C
-  network: ws
-  port: 2086
-  server: 104.19.45.47
-  tls: false
-  type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  ws-opts:
-    headers:
-      Host: ip2.1457230.xyz
-    path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 84E37F
+  name: CA 🇨🇦 | @Raydikalx | 617AF2
   network: ws
   port: 443
-  server: 104.19.36.106
+  server: arranged-samuel-cradle-hayes.trycloudflare.com
+  servername: arranged-samuel-cradle-hayes.trycloudflare.com
   tls: true
   type: vmess
-  uuid: c08d2444-cc3c-43ad-9a41-f5ea60f99293
+  uuid: 2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea
   ws-opts:
     headers:
-      Host: wonbill.1565995.xyz
-    path: /wonbill
+      Host: arranged-samuel-cradle-hayes.trycloudflare.com
+    path: /2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea-vm
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 8A67CF
+  name: CA 🇨🇦 | @Raydikalx | 81617B
+  network: ws
+  port: 443
+  server: node.socks5.kdns.fr
+  servername: brake-substance-shared-dual.trycloudflare.com
+  tls: true
+  type: vmess
+  uuid: 3abf004b-aec7-4da9-b47c-8ebdfa3e005c
+  ws-opts:
+    headers:
+      Host: brake-substance-shared-dual.trycloudflare.com
+    path: /3abf004b-aec7-4da9-b47c-8ebdfa3e005c-vm
+- alterId: 0
+  cipher: auto
+  name: 'CA 🇨🇦 | @Raydikalx | 897CDC #1'
   network: ws
   port: 2052
-  server: 104.19.46.123
+  server: 104.26.7.152
   tls: false
   type: vmess
   uuid: d6b6d982-d52f-465a-b988-85670b23f64a
@@ -202,17 +131,29 @@ proxies:
     path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 8C8CE7
+  name: 'CA 🇨🇦 | @Raydikalx | 952B1E #1'
   network: ws
-  port: 8080
-  server: 172.67.169.104
-  tls: false
+  port: 443
+  server: 104.18.42.163
+  servername: guanwang.awsno.com
+  tls: true
   type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+- alterId: 0
+  cipher: auto
+  name: CA 🇨🇦 | @Raydikalx | 977CEA
+  network: ws
+  port: 443
+  server: node.socks5.kdns.fr
+  tls: true
+  type: vmess
+  uuid: 37db053e-cb62-45bc-8a09-d2a9c2ebbd09
   ws-opts:
     headers:
-      Host: oiictw.yydsii.com
-    path: /
+      Host: booth-moreover-framework-thereafter.trycloudflare.com
+    path: /37db053e-cb62-45bc-8a09-d2a9c2ebbd09-vm
 - alterId: 0
   cipher: auto
   name: CA 🇨🇦 | @Raydikalx | 9BF296
@@ -229,35 +170,62 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | 9E1AF7
+  name: CA 🇨🇦 | @Raydikalx | 9C8E65
   network: ws
-  port: 443
-  server: eu3.998998.best
-  servername: server40.9966338.xyz
-  tls: true
-  type: vmess
-  uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
-  ws-opts:
-    headers:
-      Host: server40.9966338.xyz
-    path: /aiaiai
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | A6CD78
-  network: ws
-  port: 2086
-  server: 104.19.45.47
+  port: 80
+  server: mki.tt5.ccwu.cc
+  servername: null
   tls: false
   type: vmess
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  uuid: 1798b14b-aee0-4008-ba9a-2e53877761b4
   ws-opts:
+    headers:
+      Host: mki.tt5.ccwu.cc
+    path: /kFK9O5cl8ZycyrxcJWNVFC21
+- alterId: 0
+  cipher: auto
+  name: CA 🇨🇦 | @Raydikalx | A69B88
+  network: ws
+  port: 443
+  server: rush-6it6b.teeopp.quest
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: rush-6it6b.teeopp.quest
     path: /
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | B88FF3
+  name: 'CA 🇨🇦 | @Raydikalx | D0A7BF #1'
+  network: ws
+  port: 2052
+  server: 104.16.67.38
+  tls: false
+  type: vmess
+  uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+  ws-opts:
+    headers:
+      Host: 7hss-butterfly-d4c3.fijetem432.workers.dev
+    path: /afrhms07.xfixedfloat.cfd/linkws
+- alterId: 0
+  cipher: auto
+  name: 'CA 🇨🇦 | @Raydikalx | D1B200 #1'
+  network: ws
+  port: 2086
+  server: 104.19.47.22
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
+  ws-opts: {}
+- alterId: 0
+  cipher: auto
+  name: 'CA 🇨🇦 | @Raydikalx | D78D1A #1'
   network: ws
   port: 8443
-  server: 104.19.48.11
+  server: 104.19.48.29
   tls: true
   type: vmess
   uuid: 39135a39-e6ca-43df-a360-d859eea58d86
@@ -267,59 +235,23 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | BA7BB4
-  network: httpupgrade
-  port: 8080
-  server: 172.66.44.97
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: be6134da-f1c7-4a0a-90cc-de639082f64b
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | BE1521
+  name: 'CA 🇨🇦 | @Raydikalx | E59E04 #1'
   network: ws
-  port: 8080
-  server: 104.19.47.237
+  port: 2086
+  server: 172.64.233.15
   tls: false
   type: vmess
-  uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
+  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
   ws-opts:
     headers:
-      Host: oiictw.yydsii.com
-    path: /?ed=2048&Telegram🇨🇳 @WangCai2
+      Host: ip2.1457230.xyz
+    path: github.com/Alvin9999
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | C40615
-  network: ws
-  port: 8080
-  server: 104.19.174.68
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-  ws-opts:
-    headers:
-      Host: nasnet-571299667.rahavard365.co
-    path: /NASNET/cdn
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | CA0C28
-  network: ws
-  port: 8443
-  server: 172.67.167.78
-  servername: v2ray1.dozapp.xyz
-  tls: true
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  ws-opts:
-    path: /lMnsZUN4/
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | CFEDA4
+  name: 'CA 🇨🇦 | @Raydikalx | E8D081 #1'
   network: ws
   port: 443
-  server: 172.64.229.21
+  server: 172.66.203.67
   servername: ''
   tls: true
   type: vmess
@@ -330,77 +262,18 @@ proxies:
     path: /ws
 - alterId: 0
   cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | D8D897
-  network: ws
-  port: 80
-  server: 104.21.237.88
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  ws-opts:
-    headers:
-      Host: a.prapt1.ir
-    path: /?ed=2048&Telegram🇨🇳
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | DB92F1
+  name: CA 🇨🇦 | @Raydikalx | EB1E3E
   network: ws
   port: 443
-  server: 104.21.7.133
-  servername: vmess.lbw666.dpdns.org
-  skip-cert-verify: true
+  server: sticks-military-buildings-fence.trycloudflare.com
+  servername: sticks-military-buildings-fence.trycloudflare.com
   tls: true
   type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  uuid: 2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea
   ws-opts:
     headers:
-      Host: vmess.lbw666.dpdns.org
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: CA 🇨🇦 | @Raydikalx | F0DDD9
-  network: ws
-  port: 443
-  server: 104.21.3.99
-  servername: www.windowsmsidownloads.com
-  tls: true
-  type: vmess
-  uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b
-  ws-opts:
-    headers:
-      Host: www.windowsmsidownloads.com
-    path: /truth?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
-- alterId: 0
-  cipher: auto
-  name: 🇨🇦CA-148.113.153.113-1427
-  network: ws
-  port: 443
-  server: 148.113.153.113
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: serkat.org
-    path: linkvws
-- alterId: 0
-  cipher: auto
-  name: 🏁RELAY-104.27.0.1-1153
-  network: ws
-  port: 443
-  server: 104.27.0.1
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  ws-opts:
-    headers:
-      Host: vmess.lbw666.dpdns.org
-    path: /ws
+      Host: sticks-military-buildings-fence.trycloudflare.com
+    path: /2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea-vm
 - name: '🇨🇦 加拿大 | CAN #1'
   network: ws
   port: 2083
@@ -413,12 +286,18 @@ proxies:
     headers:
       Host: helloapps.cc.cd
     path: /fp=chrome
-- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #6'
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.147.93
-  sni: connectingpeoplewithgreatjobs.com
-  type: trojan
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #7'
+  network: ws
+  port: 8443
+  server: 172.64.154.113
+  servername: freeceshi6.frii.site
+  tls: true
+  type: vless
+  uuid: 53bbdad4-2f4e-45db-8df4-fa491a6a7227
+  ws-opts:
+    headers:
+      Host: freeceshi6.frii.site
+    path: /proxyip=ProxyIP.JP.CMLiussss.netfp=chrome
 - name: '🇨🇦[www.v2nodes.com] trojan-CA-... #7'
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   port: 443
@@ -434,6 +313,12 @@ proxies:
   password: shadowsocks
   port: 443
   server: 149.22.95.183
+  type: ss
+- cipher: rc4-md5
+  name: shadowsocks-1827147479
+  password: 14fFPrbezE3HDZzsMOr6
+  port: 8080
+  server: 137.184.174.93
   type: ss
 - cipher: aes-256-gcm
   name: '🇨🇦[www.v2nodes.com] ss-CA-1538... #1'
@@ -453,12 +338,6 @@ proxies:
   port: 5003
   server: 51.222.155.32
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇨🇦[www.v2nodes.com] ss-CA-1555...
-  password: 575hiopq2h28yao6
-  port: 8080
-  server: 15.235.121.109
-  type: ss
 - cipher: aes-256-gcm
   name: '🇨🇦[www.v2nodes.com] ss-CA-1559... #2'
   password: zDNVedRFPQexG9v
@@ -472,8 +351,8 @@ proxies:
   server: 51.79.85.185
   type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #6'
-  password: kDWvXYZoTBcGkC4
-  port: 8882
-  server: 51.222.136.236
+  name: '🏳[www.v2nodes.com] ss- #8'
+  password: Y6R9pAtvxxzmGC
+  port: 5000
+  server: 51.222.200.165
   type: ss

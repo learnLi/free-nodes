@@ -1,20 +1,51 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-141.95.55.70-8531
-  network: ws
-  port: 443
-  server: 141.95.55.70
-  servername: ''
-  skip-cert-verify: true
+  name: 'FR 🇫🇷 | @Raydikalx | 4C225F #1'
+  network: tcp
+  port: 1270
+  server: 46.105.222.156
+  servername: xmfhlpy.com
   tls: true
   type: vmess
-  uuid: 2496f711-f6c5-40ee-b9a3-972241fb09d4
-  ws-opts:
-    path: /vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0244
+  name: FR 🇫🇷 | @Raydikalx | 6752EC
+  network: ws
+  port: 23388
+  server: 62.210.127.120
+  tls: false
+  type: vmess
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  ws-opts:
+    path: /github.com/Alvin9999-newpac/fanqiang
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 964E22
+  network: ws
+  port: 80
+  server: 2606:4700:9c66::3c6d:65
+  servername: vmess.lbw666.dpdns.org
+  tls: false
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  ws-opts:
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | B67A73
+  network: tcp
+  port: 22324
+  server: 23.162.152.6
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-145.239.55.210-0250
   network: ws
   port: 80
   server: 145.239.55.210
@@ -27,18 +58,30 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
-- name: 🇫🇷FR_1|3.4MB/s
+- name: '🇫🇷 法国 | FRA #2'
   network: ws
-  port: 2025
-  server: 88.151.197.87
+  port: 4433
+  server: fr.fxhunter.ir
   tls: false
   type: vless
-  uuid: 1697852e-cd5c-472d-b377-0def0f301d98
+  udp: true
+  uuid: a82b1829-003d-452f-8606-e17ab28c3330
   ws-opts:
     headers:
-      Host: ''
-    path: /
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
+      Host: fr.fxhuntet.ir
+    path: /Fredxhunter
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: grpc-common3
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  network: grpc
+  port: 35108
+  server: 152.228.139.33
+  servername: www.nvidia.com
+  tls: true
+  type: vless
+  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
   network: ws
   port: 80
   server: 188.114.99.137
@@ -49,27 +92,14 @@ proxies:
     headers:
       Host: suh.cryptofront.uk
     path: /
-- name: '🏳[www.v2nodes.com] vless- #13'
-  network: ws
-  port: 2083
-  server: 54.36.102.152
+- name: 🇫🇷24@exclavevpn
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 13.36.234.11
+  skip-cert-verify: true
+  sni: vpn-fr-001.fastervpn.world
   tls: false
-  type: vless
-  uuid: 51a6ab93-e805-4b8b-89d1-d3ab85a118ce
-  ws-opts:
-    path: /vless-kulo
-- name: '🏳[www.v2nodes.com] vless- #14'
-  network: ws
-  port: 80
-  server: ov-france1.09vpn.com
-  servername: ov-france1.09vpn.com
-  tls: false
-  type: vless
-  uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-  ws-opts:
-    headers:
-      Host: ov-france1.09vpn.com
-    path: /vless/
+  type: hysteria2
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -105,12 +135,6 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  password: 29irqk0paakcx19v
-  port: 8080
-  server: 51.83.61.102
   type: ss
 - name: FR_speednode_0007
   port: 6103

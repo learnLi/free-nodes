@@ -1,20 +1,51 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-141.95.55.70-8531
-  network: ws
-  port: 443
-  server: 141.95.55.70
-  servername: ''
-  skip-cert-verify: true
+  name: 'FR 🇫🇷 | @Raydikalx | 4C225F #1'
+  network: tcp
+  port: 1270
+  server: 46.105.222.156
+  servername: xmfhlpy.com
   tls: true
   type: vmess
-  uuid: 2496f711-f6c5-40ee-b9a3-972241fb09d4
-  ws-opts:
-    path: /vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0244
+  name: FR 🇫🇷 | @Raydikalx | 6752EC
+  network: ws
+  port: 23388
+  server: 62.210.127.120
+  tls: false
+  type: vmess
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  ws-opts:
+    path: /github.com/Alvin9999-newpac/fanqiang
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 964E22
+  network: ws
+  port: 80
+  server: 2606:4700:9c66::3c6d:65
+  servername: vmess.lbw666.dpdns.org
+  tls: false
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  ws-opts:
+    headers:
+      Host: vmess.lbw666.dpdns.org
+    path: /ws
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | B67A73
+  network: tcp
+  port: 22324
+  server: 23.162.152.6
+  tls: false
+  type: vmess
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-145.239.55.210-0250
   network: ws
   port: 80
   server: 145.239.55.210
@@ -62,10 +93,4 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇫🇷[www.v2nodes.com] ss-FR-1621...
-  password: 29irqk0paakcx19v
-  port: 8080
-  server: 51.83.61.102
   type: ss
