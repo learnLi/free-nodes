@@ -1,7 +1,27 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: 'SE 🇸🇪 | @Raydikalx | AC7919 #1'
+  name: SE 🇸🇪 | @Raydikalx | 72E4B5
+  network: httpupgrade
+  port: 443
+  server: defe.sync-bridge.ir
+  servername: defe.sync-bridge.ir
+  tls: true
+  type: vmess
+  uuid: 386c5322-48aa-4fc1-814f-2ff6c34d77e0
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 98E112
+  network: tcp
+  port: 1270
+  server: 62.93.166.184
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | AC7919
   network: tcp
   port: 1270
   server: 138.199.55.230

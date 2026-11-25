@@ -1,1 +1,25 @@
-proxies: []
+proxies:
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 13C63A
+  network: tcp
+  port: 35034
+  server: 165.154.195.38
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+- name: 🇹🇼[www.v2nodes.com] trojan-TW-...
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 28478
+  server: ddrr1.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw2.cat.bilibili.com
+  type: trojan
+- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #1'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 59188
+  server: ddrr2.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw3.cat.bilibili.com
+  type: trojan

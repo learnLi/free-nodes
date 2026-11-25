@@ -1,69 +1,111 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 0C23CB
+  name: DE 🇩🇪 | @Raydikalx | 15E1BA
   network: tcp
-  port: 50551
-  server: 31.76.11.83
-  tls: false
-  type: vmess
-  uuid: 57160c16-b7db-40d8-bd06-ced30edd4df6
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 1028F3
-  network: tcp
-  port: 19829
-  server: 109.70.74.217
+  port: 30553
+  server: 109.70.74.113
   servername: ''
   tls: false
   type: vmess
-  uuid: 2c00cd64-2ba3-4400-b227-04be9bddb15a
+  uuid: 0490055e-41b4-4deb-a171-c8ec5c31cd46
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 1D4560
+  name: DE 🇩🇪 | @Raydikalx | 1D97E3
   network: tcp
-  port: 2083
-  server: 91.107.149.64
-  servername: qxfvrvcmf898.dop66.com
-  tls: true
-  type: vmess
-  uuid: 90a8b839-feea-43a9-9554-9b4ad5ead3e2
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 5AC1D0
-  network: tcp
-  port: 50407
-  server: gerall-1.povrak.ir
+  port: 42188
+  server: x4.topspeedarash.com
   tls: false
   type: vmess
-  uuid: cdfcb2be-db05-4f55-b6fc-6bf46199acd7
+  uuid: 83d6fcc7-bb82-49ce-a955-38757bab22e6
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 62F127
+  name: DE 🇩🇪 | @Raydikalx | 44E7F3
   network: tcp
-  port: 443
-  server: 142.132.189.247
+  port: 58856
+  server: 109.70.74.138
   servername: ''
   tls: false
   type: vmess
-  uuid: b1211a37-ac2b-4cd0-9f3d-732028caa184
+  uuid: 43fceaa9-b712-4024-9119-50f4a609d87f
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 97EFA3
+  name: DE 🇩🇪 | @Raydikalx | 6ADF21
+  network: tcp
+  port: 27501
+  server: 191.96.94.50
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 93842911-bc7f-47e9-a036-904d205b3d11
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 71FE83
+  network: ws
+  port: 16626
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: cefbe234-bcc6-4558-ab7b-1030e331e6a5
+  ws-opts:
+    headers:
+      Host: d052c66d50dcf7c3cfab75ed7f8e8322.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 9E5388
   network: ws
   port: 443
-  server: Vydf6DgVXlN7TpRG.v.3dns.vip
-  servername: Vydf6DgVXlN7TpRG.v.3dns.vip
+  server: oDDJKX2OdVb0VnKF.v.3dns.vip
+  servername: oDDJKX2OdVb0VnKF.v.3dns.vip
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
   ws-opts:
     headers:
-      Host: Vydf6DgVXlN7TpRG.v.3dns.vip
+      Host: oDDJKX2OdVb0VnKF.v.3dns.vip
     path: /ws-vmess
 - alterId: 0
   cipher: auto
-  name: '🇩🇪 德国 | DEU #27'
+  name: DE 🇩🇪 | @Raydikalx | BB6E5B
+  network: tcp
+  port: 2053
+  server: 178.63.237.148
+  tls: false
+  type: vmess
+  uuid: 2f3d6fc3-f4ba-4c5e-8a9e-39ab50cd564a
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | CF23C9
+  network: tcp
+  port: 17046
+  server: 195.26.26.148
+  tls: false
+  type: vmess
+  uuid: 1a53db41-a421-414f-bc32-3a21897fd1e8
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | F2D28A
+  network: tcp
+  port: 18911
+  server: de-proton.drhomes.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: e4f17f20-49a1-43b3-83fc-29b2ed37055a
+- alterId: 0
+  cipher: auto
+  name: IR 🇮🇷 | @Raydikalx | DEC616
+  network: tcp
+  port: 36822
+  server: dashboard.nixonvhost.top
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: f5a1ea85-6a36-41d1-ac46-b971ef23a42f
+- alterId: 0
+  cipher: auto
+  name: '🇩🇪 德国 | DEU #8'
   network: ws
   port: 443
   server: uk2-2.998998.best
@@ -71,14 +113,19 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: vmess
-  udp: true
   uuid: bfc876fe-ecbc-4c13-a969-4b757e9e76fb
   ws-opts:
     headers:
       Host: server3.9966338.xyz
     path: /waetasiuofguiwer?ed=2560
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1592...
+  password: NcAXc0UZI6yQJE1p8QmOv8
+  port: 8388
+  server: 57.129.113.16
+  type: ss
 - cipher: aes-256-gcm
-  name: '🇩🇪[www.v2nodes.com] ss-DE-1616... #1'
+  name: '🏳[www.v2nodes.com] ss- #10'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 57.129.83.85
