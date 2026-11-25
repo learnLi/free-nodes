@@ -1,66 +1,32 @@
 proxies:
 - alterId: 0
   cipher: auto
-  grpc-opts:
-    grpc-service-name: france.paydar.site
-  name: FR 🇫🇷 | @Raydikalx | 22152B
-  network: grpc
-  port: 443
-  server: france.paydar.site
-  servername: ''
-  tls: true
-  type: vmess
-  uuid: 1233c26d-95d1-459f-a1bb-7ca12bd5a124
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 4C225F
-  network: tcp
-  port: 1270
-  server: 46.105.222.156
-  servername: xmfhlpy.com
-  tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 509705
-  network: tcp
-  port: 8443
-  server: 188.130.207.241
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: d65cd75f-27c9-4b79-86d4-7ca3e09bbe3f
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | E86967
+  name: FR 🇫🇷 | @Raydikalx | 4B6372
   network: ws
-  port: 20222
-  server: 51.75.118.5
-  servername: ''
+  port: 23388
+  server: 62.210.127.120
   tls: false
   type: vmess
-  uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
   ws-opts:
     headers:
-      Host: 51.75.118.5
-    path: /parham-confing-vmess?u=3edbb4f2-65a2-439b-bb98-7d3f8bba62f4-2df79a37dad10ce85be2ddc5
+      Host: engage.cloudflareclient.com
+    path: /github.com/Alvin9999-newpac/fanqiang
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-141.95.55.70-8488
+  name: FR 🇫🇷 | @Raydikalx | 692E54
   network: ws
-  port: 80
-  server: 141.95.55.70
+  port: 18901
+  server: 2001:bc8:32d7:1a9::2
   servername: ''
-  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 2496f711-f6c5-40ee-b9a3-972241fb09d4
+  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
   ws-opts:
-    path: /
+    path: /github.com/Alvin9999-newpac/fanqiang?TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM#TELEGRAM--B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub-B2Hub--TELEGRAM
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0250
+  name: 🇫🇷FR-145.239.55.210-0185
   network: ws
   port: 80
   server: 145.239.55.210
@@ -88,6 +54,19 @@ proxies:
     headers:
       Host: pelang.org
     path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-146.59.92.219-3669
+  network: ws
+  port: 2096
+  server: 146.59.92.219
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: aca71b13-ec8a-466d-c28f-43516d3cf246
+  ws-opts:
+    path: /
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -110,17 +89,17 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
+  server: 167.17.64.175
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
   server: 167.17.64.22
   type: ss
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #11'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #12'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.175
   type: ss

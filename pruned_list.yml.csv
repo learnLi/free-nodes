@@ -1,63 +1,74 @@
 名称,类型,剔除原因
-CA 🇨🇦 | @Raydikalx | 301D47,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-CA 🇨🇦 | @Raydikalx | D78D1A,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-CA 🇨🇦 | @Raydikalx | E8D081,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-DE 🇩🇪 | @Raydikalx | 6ADF21,vmess,TCP 连接被拒绝，端口无人监听
-DE 🇩🇪 | @Raydikalx | CF23C9,vmess,TCP 连接被拒绝，端口无人监听
-FR 🇫🇷 | @Raydikalx | E86967,vmess,TCP 连接被拒绝，端口无人监听
-FR 🇫🇷 | @Raydikalx | EE2A8D,vmess,TCP 连接被拒绝，端口无人监听
-IR 🇮🇷 | @Raydikalx | 1394C7,vmess,TCP 连接被拒绝，端口无人监听
-IR 🇮🇷 | @Raydikalx | 1E46D5,vmess,TCP 连接被拒绝，端口无人监听
-IR 🇮🇷 | @Raydikalx | 4B3DC5,vmess,TCP 连接被拒绝，端口无人监听
-IR 🇮🇷 | @Raydikalx | B00AC8,vmess,TCP 连接被拒绝，端口无人监听
-IR 🇮🇷 | @Raydikalx | C37BDF,vmess,TCP 连接被拒绝，端口无人监听
-IR 🇮🇷 | @Raydikalx | F59D7E,vmess,TCP 连接被拒绝，端口无人监听
-LV 🇱🇻 | @Raydikalx | AFB057,vmess,TCP 连接被拒绝，端口无人监听
+CA 🇨🇦 | @Raydikalx | 301D47 #1,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+CA 🇨🇦 | @Raydikalx | 89FD67,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+DE 🇩🇪 | @Raydikalx | 1443BB,vmess,TCP 连接被拒绝，端口无人监听
+DE 🇩🇪 | @Raydikalx | A766E3,vmess,TCP 连接被拒绝，端口无人监听
+DE 🇩🇪 | @Raydikalx | CE7DF4,vmess,延迟过高（1106ms > 1000ms）
+DE 🇩🇪 | @Raydikalx | DD5D95,vmess,延迟过高（1054ms > 1000ms）
+DE 🇩🇪 | @Raydikalx | EFF254,vmess,TCP 连接被拒绝，端口无人监听
+FR 🇫🇷 | @Raydikalx | 4B6372,vmess,TCP 连接被拒绝，端口无人监听
+GB 🇬🇧 | @Raydikalx | B196C7,vmess,TCP 连接被拒绝，端口无人监听
+HK 🇭🇰 | @Raydikalx | 08972D,vmess,TCP 连接被拒绝，端口无人监听
+HK 🇭🇰 | @Raydikalx | 9D01B9,vmess,延迟过高（2621ms > 1000ms）
+HK 🇭🇰 | @Raydikalx | B25A0D,vmess,TCP 连接被拒绝，端口无人监听
+IN 🇮🇳 | @Raydikalx | D70999,vmess,TCP 连接被拒绝，端口无人监听
+IR 🇮🇷 | @Raydikalx | 081BC9,vmess,TCP 连接被拒绝，端口无人监听
+IR 🇮🇷 | @Raydikalx | 44B969,vmess,TCP 连接被拒绝，端口无人监听
+JP 🇯🇵 | @Raydikalx | 81424E,vmess,TCP 连接被拒绝，端口无人监听
+PL 🇵🇱 | @Raydikalx | 1C7562,vmess,TCP 连接被拒绝，端口无人监听
 SG 🇸🇬 | @Raydikalx | 8DCEC7,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
 SG 🇸🇬 | @Raydikalx | F0FF0E,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-US 🇺🇸 | @Raydikalx | 0859BD,vmess,TCP 连接被拒绝，端口无人监听
-US 🇺🇸 | @Raydikalx | C0EB3C,vmess,TCP 连接被拒绝，端口无人监听
-未知165,vmess,TCP 连接被拒绝，端口无人监听
-🇫🇷FR-141.95.55.70-8488,vmess,TCP 连接被拒绝，端口无人监听
-🇺🇸US-172.86.108.79-1108,vmess,TCP 连接被拒绝，端口无人监听
-🇺🇸US-38.11.7.80-1611,vmess,TCP 连接被拒绝，端口无人监听
-🏁RELAY-104.17.95.4-8716,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+TH 🇹🇭 | @Raydikalx | 8241E4,vmess,TCP 连接被拒绝，端口无人监听
+US 🇺🇸 | @Raydikalx | 17FAD5,vmess,延迟过高（1365ms > 1000ms）
+US 🇺🇸 | @Raydikalx | 571A60,vmess,TCP 连接被拒绝，端口无人监听
+US 🇺🇸 | @Raydikalx | B6570F,vmess,TCP 连接被拒绝，端口无人监听
+未知20,vmess,TCP 连接被拒绝，端口无人监听
+🇬🇧GB-8.208.30.41-7856,vmess,TCP 连接被拒绝，端口无人监听
+🇸🇬SG-146.190.82.241-2373,vmess,TCP 连接被拒绝，端口无人监听
+🇺🇸US-137.175.18.85-1256,vmess,TCP 连接被拒绝，端口无人监听
+🇺🇸US-137.175.47.183-1267,vmess,TCP 连接被拒绝，端口无人监听
+🇺🇸US-142.4.107.184-1233,vmess,TCP 连接被拒绝，端口无人监听
+🇺🇸US-64.32.8.216-1257,vmess,TCP 连接被拒绝，端口无人监听
 🏁RELAY-104.21.48.161-1568,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-🏁RELAY-104.21.79.246-8674,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
 🏁RELAY-104.31.16.196-8634,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
 🏁RELAY-104.31.16.35-8599,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-🏁RELAY-104.31.16.65-8571,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-🏁RELAY-141.101.115.136-1472,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-141.101.114.133-0039,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-141.101.114.25-0041,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-141.101.114.32-3330,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
 🏁RELAY-141.101.115.140-1468,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-🏁RELAY-141.101.115.30-3313,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-🏁RELAY-172.67.242.38-8249,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-🏁RELAY-172.67.77.95-1563,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-154.92.9.8-8423,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-172.64.148.111-0042,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-172.64.153.150-2743,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-172.66.0.1-0203,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-172.67.135.55-2747,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-172.67.161.144-0205,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
 🏁RELAY-173.245.49.10-5485,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-🏁RELAY-198.41.203.1-0034,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-190.93.245.170-3305,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-198.41.203.1-0035,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-198.41.203.5-0036,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
 🏁RELAY-198.41.203.5-0380,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
 🏁RELAY-203.24.103.45-8113,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🏁RELAY-23.227.38.27-1563,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
 🏁RELAY-45.85.119.207-7933,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
-trojan-1929965340,trojan,延迟过高（1043ms > 1000ms）
-trojan-1939845049,trojan,延迟过高（1669ms > 1000ms）
-trojan-1941064101,trojan,延迟过高（1597ms > 1000ms）
-trojan-1941512524,trojan,延迟过高（1104ms > 1000ms）
-trojan-1945028567,trojan,延迟过高（2982ms > 1000ms）
-trojan-1946951303,trojan,延迟过高（2115ms > 1000ms）
-⚡ b2n.ir/v2ray-configs | 603,trojan,TCP 连接被拒绝，端口无人监听
-🇯🇵[www.v2nodes.com] trojan-JP-...,trojan,TCP 连接被拒绝，端口无人监听
-🇳🇬[www.v2nodes.com] trojan-NG-... #1,trojan,延迟过高（2351ms > 1000ms）
-🇳🇱[www.v2nodes.com] trojan-NL-... #7,trojan,延迟过高（2420ms > 1000ms）
-🇸🇬[www.v2nodes.com] trojan-SG-...,trojan,延迟过高（1005ms > 1000ms）
-🏳[www.v2nodes.com] trojan- #7,trojan,延迟过高（3157ms > 1000ms）
-⚡ b2n.ir/v2ray-configs | 219,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 259,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 312,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 312 #1,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 340,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 473,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 48,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 481,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 49,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 561,ss,TCP 连接被拒绝，端口无人监听
-⚡ b2n.ir/v2ray-configs | 588,ss,TCP 连接被拒绝，端口无人监听
-🇭🇰[www.v2nodes.com] ss-HK-1621... #1,ss,延迟过高（1061ms > 1000ms）
+🏁RELAY-66.81.247.222-7871,vmess,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+trojan-1931229905,trojan,延迟过高（1367ms > 1000ms）
+trojan-1933715116,trojan,延迟过高（1367ms > 1000ms）
+trojan-1935805071,trojan,延迟过高（1316ms > 1000ms）
+trojan-1943754366,trojan,延迟过高（1840ms > 1000ms）
+⚡ b2n.ir/v2ray-configs | 151,trojan,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+⚡ b2n.ir/v2ray-configs | 198,trojan,TCP 连接被拒绝，端口无人监听
+⚡ b2n.ir/v2ray-configs | 53,trojan,TCP 连接被拒绝，端口无人监听
+⚡ b2n.ir/v2ray-configs | 961,trojan,TLS 握手被对端明确拒绝，该端口不是预期的 TLS 服务
+🇨🇦[www.v2nodes.com] trojan-CA-... #5,trojan,延迟过高（2622ms > 1000ms）
+🇹🇼[www.v2nodes.com] trojan-TW-...,trojan,延迟过高（1376ms > 1000ms）
+🇹🇼[www.v2nodes.com] trojan-TW-... #1,trojan,延迟过高（1419ms > 1000ms）
+🏳[www.v2nodes.com] trojan- #2,trojan,延迟过高（2565ms > 1000ms）
+🏳[www.v2nodes.com] trojan- #7,trojan,延迟过高（2585ms > 1000ms）
+⚡ b2n.ir/v2ray-configs | 159,ss,TCP 连接被拒绝，端口无人监听
+⚡ b2n.ir/v2ray-configs | 324,ss,TCP 连接被拒绝，端口无人监听
+⚡ b2n.ir/v2ray-configs | 366,ss,TCP 连接被拒绝，端口无人监听
+⚡ b2n.ir/v2ray-configs | 500,ss,TCP 连接被拒绝，端口无人监听
+⚡ b2n.ir/v2ray-configs | 549,ss,TCP 连接被拒绝，端口无人监听
+⚡ b2n.ir/v2ray-configs | 58,ss,TCP 连接被拒绝，端口无人监听
+⚡ b2n.ir/v2ray-configs | 646,ss,TCP 连接被拒绝，端口无人监听
+🇭🇰[www.v2nodes.com] ss-HK-1621... #1,ss,延迟过高（1012ms > 1000ms）
