@@ -1,48 +1,31 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: KR 🇰🇷 | @Raydikalx | ED5343
-  network: tcp
-  port: 8888
-  server: 146.56.112.110
+  name: 🇰🇷KR-132.145.80.230-0203
+  network: ws
+  port: 80
+  server: 132.145.80.230
   servername: ''
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: e7c302f3-90d6-42dd-9d7d-94a3683a3707
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  ws-opts:
+    headers:
+      Host: kr02.a0a.xyz
+    path: /
 - alterId: 0
   cipher: auto
-  name: 🇰🇷 韩国 | KOR 3
-  network: tcp
-  port: 19283
-  server: kr.075661.xyz
-  servername: kr.075661.xyz
+  name: 🇰🇷KR-146.56.162.25-1364
+  network: ws
+  port: 443
+  server: 146.56.162.25
+  servername: ''
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 3153def6-eecb-414d-88aa-7e59ea525e5d
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-152.67.218.38-2639
-  network: ws
-  port: 443
-  server: 152.67.218.38
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: b5e9480a-b7aa-40a4-f9a7-5299b5e363b4
+  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
   ws-opts:
-    path: /
-- cipher: aes-256-cfb
-  name: shadowsocks-1827145973
-  password: qwerREWQ@@
-  port: 6123
-  server: 211.178.105.134
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 43.201.31.151
-  type: ss
-  udp: true
+    headers:
+      Host: lg30.cfcdn3.xyz
+    path: /ray

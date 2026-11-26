@@ -1,45 +1,31 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 4B6372
+  name: FR 🇫🇷 | @Raydikalx | BB13BB
   network: ws
-  port: 23388
-  server: 62.210.127.120
-  tls: false
+  port: 443
+  server: vspeedfast.org
+  servername: vspeedfast.org
+  tls: true
   type: vmess
-  uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: engage.cloudflareclient.com
-    path: /github.com/Alvin9999-newpac/fanqiang
+      Host: vspeedfast.org
+    path: /linkvws
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B844A6
-  network: ws
-  port: 20327
-  server: 51.68.34.78
+  name: FR 🇫🇷 | @Raydikalx | CD4BBF
+  network: tcp
+  port: 38854
+  server: 94.131.9.155
   servername: ''
   tls: false
   type: vmess
-  uuid: 5485ddcf-562b-4638-b92e-5eabfe60ad86
-  ws-opts:
-    path: /bp-vmess
+  uuid: 00abfc28-d7d2-4787-f2a3-da1c2f38d7b8
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-141.95.55.70-7970
-  network: ws
-  port: 80
-  server: 141.95.55.70
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 2496f711-f6c5-40ee-b9a3-972241fb09d4
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0185
+  name: 🇫🇷FR-145.239.55.210-0209
   network: ws
   port: 80
   server: 145.239.55.210
@@ -52,8 +38,42 @@ proxies:
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
-- client-fingerprint: firefox
-  name: 🇫🇷 法国 | FRA
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-57.128.45.161-4534
+  network: ws
+  port: 80
+  server: 57.128.45.161
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 35d25899-ed20-46d9-9c7c-99c0d414d5e4
+  ws-opts:
+    path: /user
+- client-fingerprint: chrome
+  encryption: none
+  name: FR VLESS-10 | free-nodes
+  network: xhttp
+  port: 443
+  server: 89.44.80.204
+  servername: 145.baklajann.ru
+  tls: true
+  type: vless
+  uuid: db4b5d79-a741-41c8-9769-c1ba3d7ac374
+  ws-opts:
+    headers:
+      Host: 145.baklajann.ru
+    path: /
+- client-fingerprint: chrome
+  name: 🇫🇷FR_1|1.4MB/s
+  port: 8880
+  server: 185.179.154.10
+  servername: www.speedtest.net
+  tls: true
+  type: vless
+  uuid: b5b563ad-e4ef-4873-9d35-66cc08202aec
+- name: 🇫🇷FR_4|2.0MB/s
   network: ws
   port: 8454
   server: 213.183.45.23
@@ -62,14 +82,8 @@ proxies:
   type: vless
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   ws-opts:
-    path: /ws
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #10'
-  port: 23576
-  server: 62.210.91.2
-  tls: false
-  type: vless
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+    path: /wsfp=firefox
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
   network: ws
   port: 80
   server: 188.114.99.137
@@ -80,7 +94,13 @@ proxies:
     headers:
       Host: suh.cryptofront.uk
     path: /
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #8'
+  port: 23576
+  server: 62.210.91.2
+  tls: false
+  type: vless
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: '🏳[www.v2nodes.com] vless- #16'
   network: ws
   port: 80
   server: ov-france1.09vpn.com
@@ -92,15 +112,6 @@ proxies:
     headers:
       Host: ov-france1.09vpn.com
     path: /vless/
-- name: '🏳[www.v2nodes.com] vless- #17'
-  network: ws
-  port: 2083
-  server: 54.36.102.152
-  tls: false
-  type: vless
-  uuid: 51a6ab93-e805-4b8b-89d1-d3ab85a118ce
-  ws-opts:
-    path: /vless-kulo
 - name: 🇫🇷 FR法国(mibei77.com 米贝节点分享)
   password: zhs000666
   port: 443
@@ -118,14 +129,14 @@ proxies:
 - name: 🇫🇷FR法國丨yoyapai.com\r
   password: humanity
   port: 443
-  server: 104.18.152.77
+  server: 104.18.152.50
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
 - name: '🇫🇷FR法國丨yoyapai.com\r #1'
   password: humanity
   port: 443
-  server: 104.18.152.50
+  server: 104.18.152.77
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
@@ -138,10 +149,16 @@ proxies:
   tls: false
   type: hysteria2
 - cipher: chacha20-ietf-poly1305
-  name: '🇫🇷 法国 | FRA #2'
+  name: '🇫🇷 法国 | FRA #1'
   password: eCUs1n3b2Fh9b6WATvkNILLBzYbruQ_X
   port: 154
   server: uk.fusetea.ir
+  type: ss
+- cipher: aes-256-gcm
+  name: '🇫🇷 法国 | FRA #2'
+  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
+  port: 21191
+  server: 038b7750485a79a0.lebufflonfermegroup.us
   type: ss
   udp: true
 - cipher: aes-256-gcm
@@ -175,7 +192,7 @@ proxies:
   server: 167.17.64.22
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1616... #1'
+  name: '🏳[www.v2nodes.com] ss- #4'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
