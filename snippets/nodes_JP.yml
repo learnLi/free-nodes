@@ -1,37 +1,29 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 05FF6E
+  name: JP 🇯🇵 | @Raydikalx | 3D8D0C
   network: ws
-  port: 8555
-  server: 54.168.242.25
+  port: 23462
+  server: 64.176.51.214
   tls: false
   type: vmess
-  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 6006A2
-  network: tcp
-  port: 10001
-  server: tyo2.australiacaregroup.site
-  tls: false
-  type: vmess
-  uuid: aec8e5e3-bb81-4b22-8802-0b88c54997b3
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 81424E
-  network: ws
-  port: 6233
-  server: 151.242.165.160
-  servername: v47.emnode.top
-  tls: true
-  type: vmess
-  uuid: c3d17f1d-9201-4644-b184-6cd1414c6cc5
+  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
   ws-opts:
     headers:
-      Host: v47.emnode.top
+      Host: 64.176.51.214
+    path: /a15206
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵JP-152.69.193.245-4852
+  network: ws
+  port: 80
+  server: 152.69.193.245
+  servername: ''
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 6697776b-d009-413b-8708-822ee2e02515
+  ws-opts:
     path: /
 - alterId: 0
   cipher: auto
@@ -46,62 +38,18 @@ proxies:
   uuid: c3bde296-8e44-4b8c-a325-577d5b3cc7c8
   ws-opts:
     path: /vless
-- alterId: 0
-  cipher: auto
-  name: 🇯🇵JP-172.105.223.136-1703
-  network: ws
-  port: 443
-  server: 172.105.223.136
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8964ea79-1422-460e-b6e2-a16e83a22aab
-  ws-opts:
-    headers:
-      Host: www.microsoft.com
-    path: /
-- name: 日本|@ripaojiedian
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  port: 443
-  server: nu2rb.supertoolify.com
-  skip-cert-verify: true
-  sni: nu2rb.supertoolify.com
-  type: trojan
-- cipher: aes-256-gcm
-  name: shadowsocks-1827146336
-  password: 3eOFeNssde7PYYMv
-  port: 443
-  server: 84.247.155.196
-  type: ss
-- cipher: aes-256-gcm
-  name: shadowsocks-1827146658
-  password: 3eOFeNssde7PYYMv
-  port: 80
-  server: 84.247.155.196
-  type: ss
 - cipher: aes-128-gcm
   name: 🇯🇵 日本 | JPN
   password: 78f30e05-8bbb-4460-a7e1-df58039d4282
-  plugin: obfs
-  plugin-opts:
-    host: f646e6bf4cb428c6cfaf5389d43d5e09.baidu.com
-    mode: http
   port: 36603
   server: dlyqv8kg.jhm.qwer123.net
   type: ss
-  udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵 日本 | JPN 2
   password: 78f30e05-8bbb-4460-a7e1-df58039d4282
-  plugin: obfs
-  plugin-opts:
-    host: f646e6bf4cb428c6cfaf5389d43d5e09.baidu.com
-    mode: http
   port: 36609
   server: dlyqv8kg.jhm.qwer123.net
   type: ss
-  udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵JP-168.138.205.100-0195
   password: Bwlqh7GcFB

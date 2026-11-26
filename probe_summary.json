@@ -1,86 +1,82 @@
 {
-  "total": 922,
+  "total": 920,
   "egress": {
-    "ip": "20.171.196.90",
+    "ip": "20.102.235.84",
     "method": "direct",
     "country": "United States",
-    "city": "Phoenix",
+    "city": "Chicago",
     "org": "Microsoft Corporation"
   },
-  "tcp_applicable": 853,
-  "tcp_ok": 710,
-  "tcp_rate": "83.2%",
-  "tls_applicable": 377,
-  "tls_ok": 314,
-  "tls_rate": "83.3%",
-  "quic_applicable": 69,
+  "tcp_applicable": 856,
+  "tcp_ok": 727,
+  "tcp_rate": "84.9%",
+  "tls_applicable": 395,
+  "tls_ok": 358,
+  "tls_rate": "90.6%",
+  "quic_applicable": 64,
   "quic_ok": 0,
   "quic_rate": "0.0%",
-  "udp_skipped": 69,
+  "udp_skipped": 64,
   "refs": [
     {
       "host": "1.1.1.1",
-      "port": 443,
-      "ok": true,
-      "ms": 9,
-      "err": ""
-    },
-    {
-      "host": "8.8.8.8",
       "port": 443,
       "ok": true,
       "ms": 3,
       "err": ""
     },
     {
+      "host": "8.8.8.8",
+      "port": 443,
+      "ok": true,
+      "ms": 17,
+      "err": ""
+    },
+    {
       "host": "github.com",
       "port": 443,
       "ok": true,
-      "ms": 60,
+      "ms": 18,
       "err": ""
     }
   ],
   "by_type": {
     "anytls": {
-      "total": 8,
-      "ok": 8
+      "total": 11,
+      "ok": 11
     },
     "http": {
-      "total": 48,
-      "ok": 48
+      "total": 33,
+      "ok": 32
     },
     "hysteria": {
-      "total": 3,
+      "total": 2,
       "ok": 0
     },
     "socks5": {
-      "total": 12,
-      "ok": 12
+      "total": 3,
+      "ok": 3
     },
     "ss": {
-      "total": 261,
-      "ok": 217
+      "total": 259,
+      "ok": 219
     },
     "trojan": {
-      "total": 99,
-      "ok": 90
+      "total": 122,
+      "ok": 113
     },
     "vless": {
-      "total": 211,
-      "ok": 198
+      "total": 216,
+      "ok": 215
     },
     "vmess": {
-      "total": 209,
-      "ok": 137
-    },
-    "wireguard": {
-      "total": 2,
-      "ok": 0
+      "total": 210,
+      "ok": 134
     }
   },
   "by_type_quic": {
     "hysteria2": {
-      "total": 69,
+      "total": 64,
       "ok": 0
     }
   }

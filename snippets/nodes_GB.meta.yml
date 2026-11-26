@@ -1,88 +1,53 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 0FCB5E
+  name: GB 🇬🇧 | @Raydikalx | CC2C7C
   network: tcp
-  port: 2053
-  server: node-uk.connectsuite.org
+  port: 34204
+  server: 206.245.166.132
   servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 72f2cbe4-2874-45b7-b6aa-b93077c10c72
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | 85E18B
-  network: ws
-  port: 443
-  server: hhhnmjki.932.pp.ua
-  servername: hhhnmjki.932.pp.ua
-  tls: true
-  type: vmess
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  ws-opts:
-    headers:
-      Host: hhhnmjki.932.pp.ua
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-- alterId: 0
-  cipher: auto
-  name: GB 🇬🇧 | @Raydikalx | B196C7
-  network: ws
-  port: 8081
-  server: uk.1more.mobileahmadreza.ir
   tls: false
   type: vmess
-  uuid: 07377c32-6e40-40dc-aaad-3b3fbf22b9bb
-  ws-opts:
-    headers:
-      Host: ssh.webdade.com
-    path: /
+  uuid: beb22b15-2c6f-4bc4-b4ef-309b5a797a57
 - alterId: 0
   cipher: auto
-  name: '🇬🇧 英国 | GBR #1'
+  name: GB 🇬🇧 | @Raydikalx | E3356A
   network: ws
-  port: 443
-  server: eu2.998998.best
-  servername: server47.9966338.xyz
-  skip-cert-verify: true
-  tls: true
+  port: 80
+  server: 18.168.124.58
+  tls: false
   type: vmess
-  uuid: bfc876fe-ecbc-4c13-a969-4b757e9e76fb
+  uuid: ff7be42d-7d09-445e-b89f-96d7712eb4bf
   ws-opts:
-    headers:
-      Host: server47.9966338.xyz
-    path: /socks
+    path: /graphql
 - alterId: 0
   cipher: auto
-  name: 🇬🇧GB-8.208.30.41-7856
+  name: GB 🇬🇧 | @Raydikalx | EF400F
   network: ws
   port: 443
-  server: 8.208.30.41
+  server: mko.859886.xyz
   servername: ''
-  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 3e9165fe-9145-4ff2-a058-56678d85ca6b
+  uuid: b020865b-7404-4894-ba65-a7414b10cda3
   ws-opts:
-    path: /swoole
-- client-fingerprint: firefox
-  name: '🇬🇧 英国 | GBR #2'
-  port: 443
-  server: 196.196.208.22
-  servername: 9303d6x.fi-p1b.h1clayd.click
-  tls: true
-  type: vless
-  uuid: cae99415-10a6-4317-81bd-19a4586b5d76
+    headers:
+      Host: mko.859886.xyz
+    path: /boWUVaU0sxrNtFSdOPjqSc7fzeJr
 - client-fingerprint: qq
-  name: '🇬🇧 英国 | GBR #3'
+  name: '🇬🇧 英国 | GBR #4'
+  network: tcp
   port: 443
   server: 136.148.83.70
   servername: aszbk-ru-78dc.my-fade.cloud
   tls: true
   type: vless
+  udp: true
   uuid: 00000000-0000-0001-0000-000000000000
+  ws-opts:
+    path: /
 - client-fingerprint: qq
-  name: '🇬🇧 英国 | GBR #5'
+  name: '🇬🇧 英国 | GBR #6'
   network: tcp
   port: 443
   server: 136.148.83.71
@@ -93,7 +58,7 @@ proxies:
   uuid: 00000000-0000-0001-0000-000000000000
   ws-opts:
     path: /
-- name: 🇬🇧[www.v2nodes.com] vless-GB-1...
+- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #1'
   network: ws
   port: 80
   server: 57.129.132.223
@@ -119,11 +84,7 @@ proxies:
   uuid: dbb78c94-9f87-4d7d-b945-2000b60352fd
   ws-opts:
     path: /vless/
-- down: ''
-  fingerprint: ''
-  name: 🇩🇪DE_8|1.8MB/s
-  obfs: ''
-  obfs-password: ''
+- name: 🇬🇧25@exclavevpn
   password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
   port: 13337
   server: 128.254.186.57
@@ -131,7 +92,6 @@ proxies:
   sni: mother-earth.fyi
   tls: false
   type: hysteria2
-  up: ''
 - cipher: rc4-md5
   name: shadowsocks-1827147777
   password: 14fFPrbezE3HDZzsMOr6
@@ -155,12 +115,6 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 8080
   server: 178.83.185.156
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.162-0156
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 443
-  server: 82.38.31.162
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.176-0251
@@ -221,12 +175,6 @@ proxies:
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.191
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.192-0101
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.192
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.193-0078
@@ -299,12 +247,6 @@ proxies:
   password: k1dBOmOB4oqi7Ump37a1bQ
   port: 8080
   server: 82.38.31.214
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇬🇧GB-82.38.31.216-0111
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  port: 8080
-  server: 82.38.31.216
   type: ss
 - cipher: chacha20-ietf-poly1305
   name: 🇬🇧GB-82.38.31.217-0073
@@ -414,11 +356,11 @@ proxies:
   port: 443
   server: 141.98.101.178
   type: ss
-- cipher: aes-128-gcm
-  name: '🇬🇧[www.v2nodes.com] ss-GB-9184... #1'
-  password: shadowsocks
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇱[www.v2nodes.com] ss-NL-1510...
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   port: 443
-  server: 141.98.101.181
+  server: 82.38.31.162
   type: ss
 - name: GB_speednode_0008
   port: 443
@@ -427,8 +369,3 @@ proxies:
   tls: true
   type: http
   udp: true
-- name: 🇬🇧GB_2|1.2MB/s
-  port: 9052
-  server: 157.90.113.23
-  skip-cert-verify: true
-  type: socks5

@@ -1,29 +1,12 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: 🇹🇼TW-104.29.64.2-1483
-  network: ws
-  port: 443
-  server: 104.29.64.2
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f33957e8-372e-4fba-99ed-f4db32cce9e5
-  ws-opts:
-    headers:
-      Host: fr2.cfcdn4.xyz
-    path: /ray
-- name: 🇹🇼[www.v2nodes.com] trojan-TW-...
-  network: tcp
+- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #2'
   password: d7563108-615c-4338-a7bd-77f359869a4a
   port: 28478
   server: ddrr1.tube-cat.com
   skip-cert-verify: true
   sni: r.tw2.cat.bilibili.com
   type: trojan
-- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #1'
-  network: tcp
+- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #3'
   password: d7563108-615c-4338-a7bd-77f359869a4a
   port: 59188
   server: ddrr2.tube-cat.com

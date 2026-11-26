@@ -13,37 +13,26 @@ proxies:
     path: /?Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 518B7B
+  name: CN 🇨🇳 | @Raydikalx | 99FA39
   network: tcp
-  port: 50011
-  server: 157.148.7.136
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 1b30f413-2865-4d40-9146-4207778718cd
-- alterId: 0
-  cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 6D086A
-  network: tcp
-  port: 50014
+  port: 50013
   server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: 9e63ca55-1ff9-453b-ae80-75947b8596d3
+  uuid: 148e82ae-5014-4a1a-a783-dd63fa9cdc9d
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 86D34C
+  name: 🇨🇳CN-223.111.202.139-2043
   network: ws
-  port: 443
-  server: 162.4.136.79
-  servername: renderer-stream-2-62.mirra.now
+  port: 63086
+  server: 223.111.202.139
+  servername: ''
+  skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
+  uuid: e159f409-af0e-38b6-b34e-404a98089471
   ws-opts:
-    headers:
-      Host: renderer-stream-2-62.mirra.now
-    path: /api/v1/gpu-stream/socket
+    path: /mugua
 - name: '🇨🇳 CN_63 #1'
   password: b179b8a4-9a98-44a0-a1f1-65b8e8cb20a9
   port: 20103
@@ -51,7 +40,6 @@ proxies:
   skip-cert-verify: true
   sni: hk.catxstar.com
   type: trojan
-  udp: true
 - name: '🇨🇳 CN_64 #1'
   password: b179b8a4-9a98-44a0-a1f1-65b8e8cb20a9
   port: 20001
@@ -59,32 +47,3 @@ proxies:
   skip-cert-verify: true
   sni: hk.catxstar.com
   type: trojan
-  udp: true
-- ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
-  mtu: 1280
-  name: 🇨🇳CN_1|1.1MB/s
-  port: 8742
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 0
-  - 0
-  - 0
-  server: 8.6.112.207
-  type: wireguard
-  udp: true
-- ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
-  mtu: 1280
-  name: 🇨🇳CN_2|1.3MB/s
-  port: 1180
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 0
-  - 0
-  - 0
-  server: 8.6.112.246
-  type: wireguard
-  udp: true
