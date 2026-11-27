@@ -1,43 +1,19 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 3D8D0C
+  name: 🇯🇵JP-109.123.230.157-1094
   network: ws
-  port: 23462
-  server: 64.176.51.214
-  tls: false
-  type: vmess
-  uuid: 95c5abc1-018d-4628-89a7-25ab9c62ab74
-  ws-opts:
-    headers:
-      Host: 64.176.51.214
-    path: /a15206
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 5BD3AF
-  network: ws
-  port: 10086
-  server: 45.76.100.238
-  tls: false
-  type: vmess
-  uuid: ee2927f6-b76a-4011-957c-fe7c4865b36c
-  ws-opts:
-    path: /ws
-- alterId: 0
-  cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | 9AB53C
-  network: ws
-  port: 443
-  server: kQov7UKaDknXb8a3.v.3dns.vip
-  servername: kQov7UKaDknXb8a3.v.3dns.vip
+  port: 80
+  server: 109.123.230.157
+  servername: ''
   skip-cert-verify: true
-  tls: true
+  tls: false
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
+  uuid: 59517e0b-ae1c-41d3-9c44-c44cea6f7546
   ws-opts:
     headers:
-      Host: kQov7UKaDknXb8a3.v.3dns.vip
-    path: /ws-vmess
+      Host: internet.life.com.by
+    path: /takeshi.wiki
 - alterId: 0
   cipher: auto
   name: 🇯🇵JP-168.110.63.247-5745
@@ -80,20 +56,6 @@ proxies:
       Host: itunes.apple.com
     path: /wsflow=
 - client-fingerprint: chrome
-  name: 日本4|@ripaojiedian
-  network: ws
-  port: 8443
-  server: 166.88.14.71
-  servername: senflarelink-node-71i.pages.dev
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  ws-opts:
-    headers:
-      Host: senflarelink-node-71i.pages.dev
-    path: /flow=
-- client-fingerprint: chrome
   name: 日本5|@ripaojiedian
   network: ws
   port: 8443
@@ -107,7 +69,65 @@ proxies:
     headers:
       Host: senflarelink-node-nwz76h.pages.dev
     path: /flow=
-- name: '🇯🇵 日本 | JPN #2'
+- client-fingerprint: firefox
+  name: '🇯🇵 日本 | JPN #2'
+  network: ws
+  port: 8463
+  server: 213.183.41.31
+  servername: share.plumstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
+  ws-opts:
+    path: /ws
+- client-fingerprint: chrome
+  name: 🇯🇵 日本4|@ripaojiedian
+  network: ws
+  port: 8443
+  server: 166.88.14.71
+  servername: senflarelink-node-71i.pages.dev
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  ws-opts:
+    headers:
+      Host: senflarelink-node-71i.pages.dev
+    path: /
+    v2ray-http-upgrade: false
+- client-fingerprint: chrome
+  name: 🇯🇵 日本5|@ripaojiedian
+  network: ws
+  port: 8443
+  server: 45.32.57.15
+  servername: senflarelink-node-nwz76h.pages.dev
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  ws-opts:
+    headers:
+      Host: senflarelink-node-nwz76h.pages.dev
+    path: /
+    v2ray-http-upgrade: false
+- client-fingerprint: firefox
+  encryption: none
+  name: 🇯🇵JP_1|1.1MB/s
+  network: tcp
+  port: 443
+  server: 50.7.159.242
+  servername: jp.reddotcorp.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8840fac2-5361-4cb6-b887-cd1b95092394
+  xudp: true
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
   network: ws
   port: 8463
   server: 213.183.41.31
@@ -117,32 +137,20 @@ proxies:
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   ws-opts:
     path: /wsfp=firefox
-- client-fingerprint: firefox
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
-  network: ws
-  port: 8463
-  server: 213.183.41.31
-  servername: share.plumstatic.com
-  tls: true
-  type: vless
-  uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
-  ws-opts:
-    path: /ws
-- name: '🇯🇵 日本 | JPN #1'
-  password: GeH9cDNl6FcXvgpfU8Sz0MNwQgPEm7Cv
-  port: 443
-  server: 43.165.129.121
+- name: 🇯🇵 日本 | JPN
+  password: c0e8e373-946f-4862-98e6-3aaf1db7b53c
+  port: 57180
+  server: media.gosthk.site
   skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
+  sni: media.gosthk.site
+  type: anytls
+  udp: true
 - cipher: aes-256-gcm
-  name: '🇯🇵 日本 | JPN #4'
+  name: '🇯🇵 日本 | JPN #1'
   password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
   port: 22069
   server: 038b7750485a79a0.lebufflonfermegroup.us
   type: ss
-  udp: true
 - cipher: aes-128-gcm
   name: 🇯🇵JP-168.138.205.100-0207
   password: Bwlqh7GcFB

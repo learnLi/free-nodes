@@ -1,24 +1,13 @@
 proxies:
-- client-fingerprint: firefox
-  name: '🇪🇪 爱沙尼亚 | EST #1'
-  port: 443
-  server: 13.141.36.163
-  servername: 079b6et.ee5.h1clayd.shop
-  tls: true
-  type: vless
-  uuid: 73ebb72a-e2a8-44c8-a0e3-938740a4f578
-- client-fingerprint: firefox
-  name: 🇪🇪EE_1|1019KB/s
-  port: 443
-  server: 13.141.36.127
-  servername: 079b6et.ee5.h1clayd.shop
-  tls: true
-  type: vless
-  uuid: 73ebb72a-e2a8-44c8-a0e3-938740a4f578
 - cipher: aes-128-gcm
-  name: '🇪🇪 爱沙尼亚 | EST #2'
+  name: '🇪🇪 爱沙尼亚 | EST #1'
   password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
   port: 35194
   server: 038b7750485a79a0.lebufflonfermegroup.us
   type: ss
-  udp: true
+- name: 🇪🇪EE_1|2.1MB/s
+  port: 9443
+  server: 95.153.31.66
+  skip-cert-verify: true
+  tls: true
+  type: http

@@ -14,36 +14,24 @@ proxies:
     headers:
       Host: kr02.a0a.xyz
     path: /
-- alterId: 0
-  cipher: auto
-  name: 🇰🇷KR-146.56.162.25-1364
-  network: ws
-  port: 443
-  server: 146.56.162.25
-  servername: ''
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  ws-opts:
-    headers:
-      Host: lg30.cfcdn3.xyz
-    path: /ray
 - client-fingerprint: chrome
-  name: 韩国|@ripaojiedian
+  name: 🇰🇷 韩国|@ripaojiedian
   network: ws
   port: 12101
   server: 14.44.19.57
   servername: senflarelink-node-nwz76h.pages.dev
   skip-cert-verify: true
+  tfo: false
   tls: true
   type: vless
+  udp: true
   uuid: b69cf773-da16-486e-afce-a45b94f998b3
   ws-opts:
     headers:
       Host: senflarelink-node-nwz76h.pages.dev
-    path: /flow=
-- name: '🇰🇷 韩国 | KOR #1'
+    path: /
+    v2ray-http-upgrade: false
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
   network: ws
   port: 443
   server: krd.80782636.xyz
@@ -55,28 +43,8 @@ proxies:
     headers:
       Host: krd.80782636.xyz
     path: /kw7x2mq9fp=chrome
-- name: 🇰🇷[www.v2nodes.com] vless-KR-1...
-  network: ws
-  port: 443
-  server: 104.25.128.15
-  servername: krc.80782636.xyz
-  tls: true
-  type: vless
-  uuid: db906786-8c49-4b17-9182-cea680ef954d
-  ws-opts:
-    headers:
-      Host: krc.80782636.xyz
-    path: /kw7x2mq9fp=chrome
 - client-fingerprint: chrome
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
-  port: 443
-  server: ifdmbpb.kdns.fr
-  servername: ifdmbpb.kdns.fr
-  tls: true
-  type: vless
-  uuid: 9a600801-e889-4705-9adb-bf9aeb366fc7
-- client-fingerprint: chrome
-  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #4'
+  name: '🇰🇷[www.v2nodes.com] vless-KR-1... #2'
   network: ws
   port: 443
   server: krd.80782636.xyz
@@ -88,7 +56,7 @@ proxies:
     headers:
       Host: krd.80782636.xyz
     path: /kw7x2mq9
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #5'
+- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #3'
   network: ws
   port: 25555
   server: 152.69.226.63
@@ -97,9 +65,7 @@ proxies:
   uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   ws-opts:
     path: /
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #2'
+- name: 🇰🇷KR-🚀@VPNine1
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
   server: 13.124.238.118
@@ -107,13 +73,14 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: 🇰🇷KR_1|2.0MB/s
+- cipher: aes-256-gcm
+  name: '🇰🇷[www.v2nodes.com] ss-KR-1624... #1'
+  password: qpowi_vip_tunnel_2026_secure
+  port: 8388
+  server: 211.233.33.228
+  type: ss
+- name: 🇰🇷KR_1|4.7MB/s
   port: 1080
   server: 59.11.209.162
-  skip-cert-verify: true
-  type: socks5
-- name: 🇰🇷KR_2|1018KB/s
-  port: 1080
-  server: 183.106.215.208
   skip-cert-verify: true
   type: socks5
