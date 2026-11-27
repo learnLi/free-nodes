@@ -1,37 +1,41 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 2E1805
-  network: tcp
-  port: 2086
-  server: 152.228.145.5
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | A053E2
-  network: tcp
-  port: 19918
-  server: vmess.aryan-neni.neninet.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 445706d5-25c6-4a45-97df-8b25df1d25ea
-- alterId: 0
-  cipher: auto
-  name: 🇫🇷FR-146.59.92.219-3108
+  name: FR 🇫🇷 | @Raydikalx | 058A0B
   network: ws
-  port: 2096
-  server: 146.59.92.219
-  servername: ''
-  skip-cert-verify: true
+  port: 80
+  server: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
+  servername: null
   tls: false
   type: vmess
-  uuid: aca71b13-ec8a-466d-c28f-43516d3cf246
+  uuid: 479526cd-5011-43cf-a788-504da95e07c2
   ws-opts:
     path: /
+- alterId: 0
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 8477A2
+  network: tcp
+  port: 1270
+  server: 46.105.222.155
+  servername: ''
+  tls: true
+  type: vmess
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-91.134.8.100-1184
+  network: ws
+  port: 443
+  server: 91.134.8.100
+  servername: ''
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  ws-opts:
+    headers:
+      Host: kampong.org
+    path: linkvws
 - client-fingerprint: chrome
   encryption: none
   name: FR VLESS-26 | free-nodes
@@ -46,27 +50,21 @@ proxies:
     headers:
       Host: fl1.internium.forum
     path: /connect
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+- client-fingerprint: chrome
+  name: '🇫🇷 法国 | FRA #2'
   network: ws
-  port: 80
-  server: 188.114.99.137
-  tls: false
+  port: 443
+  server: ipfast.kingmna.com
+  servername: cdn.akamai.steamstatic.com
+  tls: true
   type: vless
-  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
+  udp: true
+  uuid: c6b0a7f0-4a4e-47aa-975a-35988278ab85
   ws-opts:
     headers:
-      Host: suh.cryptofront.uk
+      Host: fraboijji.global.ssl.fastly.net.
     path: /
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
-  network: ws
-  port: 2083
-  server: 54.36.102.152
-  tls: false
-  type: vless
-  uuid: 51a6ab93-e805-4b8b-89d1-d3ab85a118ce
-  ws-opts:
-    path: /vless-kulo
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
   network: ws
   port: 80
   server: ov-france1.09vpn.com
@@ -78,12 +76,23 @@ proxies:
     headers:
       Host: ov-france1.09vpn.com
     path: /vless/
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   port: 23576
   server: 62.210.91.2
   tls: false
   type: vless
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: '🏳[www.v2nodes.com] vless- #13'
+  network: ws
+  port: 80
+  server: 188.114.99.137
+  tls: false
+  type: vless
+  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
+  ws-opts:
+    headers:
+      Host: suh.cryptofront.uk
+    path: /
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
