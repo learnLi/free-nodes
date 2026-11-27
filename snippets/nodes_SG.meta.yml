@@ -1,52 +1,70 @@
 proxies:
-- alterId: 0
+- alterId: 2
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 68AE9D
-  network: ws
-  port: 443
-  server: moiuyt6gvgv-production.up.railway.app
-  servername: moiuyt6gvgv-production.up.railway.app
-  tls: true
-  type: vmess
-  uuid: b6e9ff1b-13e1-42db-b183-5f648fb438ba
-  ws-opts:
-    headers:
-      Host: moiuyt6gvgv-production.up.railway.app
-    path: /api/yC1TRh
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 6AC44E
+  name: SG 🇸🇬 | @Raydikalx | 0BCCEF
   network: tcp
-  port: 56268
-  server: fin-5.povrak.ir
-  servername: ''
+  port: 30836
+  server: v36.hdacd.com
+  servername: v36.hdacd.com
   tls: false
   type: vmess
-  uuid: 06e769f1-96f8-4071-8910-b8f81b25d724
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | 9ABAB4
-  network: tcp
-  port: 52364
-  server: hong.1.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 29c6f854-2068-4899-8d68-7a5f0ffb92d1
-- alterId: 0
-  cipher: auto
-  name: SG 🇸🇬 | @Raydikalx | E93E65
+  name: SG 🇸🇬 | @Raydikalx | 30BB82
   network: ws
   port: 443
-  server: 5FPTMOqdtsxQRFmA.v.3dns.vip
-  servername: 5FPTMOqdtsxQRFmA.v.3dns.vip
+  server: mlnoydrettwe-production.up.railway.app
+  servername: mlnoydrettwe-production.up.railway.app
   tls: true
   type: vmess
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
+  uuid: d162c6a8-ba2a-4112-bf21-b64f9cf15310
   ws-opts:
     headers:
-      Host: 5FPTMOqdtsxQRFmA.v.3dns.vip
-    path: /ws-vmess
+      Host: mlnoydrettwe-production.up.railway.app
+    path: /api/ru6xgp
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 3387A5
+  network: ws
+  port: 443
+  server: vegatu3-production.up.railway.app
+  servername: vegatu3-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: 8771fca3-242d-4c68-9fe3-db8c5ab4c86b
+  ws-opts:
+    headers:
+      Host: vegatu3-production.up.railway.app
+    path: /vm/8771fca3-242d-4c68-9fe3-db8c5ab4c86b
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | 5A93E3
+  network: ws
+  port: 443
+  server: suitesrwebo-production.up.railway.app
+  servername: suitesrwebo-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: be2a6e74-781c-4c7b-98aa-95dc0715e82e
+  ws-opts:
+    headers:
+      Host: suitesrwebo-production.up.railway.app
+    path: /api/kTUYNq
+- alterId: 0
+  cipher: auto
+  name: SG 🇸🇬 | @Raydikalx | BE3217
+  network: ws
+  port: 443
+  server: mkioy789j-production.up.railway.app
+  servername: mkioy789j-production.up.railway.app
+  tls: true
+  type: vmess
+  uuid: 2165a15c-53f2-4b70-bb63-d188c8c71f2d
+  ws-opts:
+    headers:
+      Host: mkioy789j-production.up.railway.app
+    path: /api/aVM5qj
 - alterId: 0
   cipher: auto
   name: '🇸🇬 新加坡 | SGP #1'
@@ -59,51 +77,48 @@ proxies:
   uuid: 8a3d03bc-9b35-43b4-d901-c8531f2bbc6d
   ws-opts:
     path: /pages
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-15.235.147.186-0023
-  network: ws
-  port: 80
-  server: 15.235.147.186
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 6fea1649-425b-4092-bf53-29792152c925
-  ws-opts:
-    headers:
-      Host: 15.235.147.186
-    path: /sshkit/Ertusg86/635014638c264/
-- alterId: 0
-  cipher: auto
-  name: 🇸🇬SG-15.235.192.196-2900
-  network: ws
-  port: 80
-  server: 15.235.192.196
-  servername: ''
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 3701ded3-09ba-4154-970d-a9f4a090a382
-  ws-opts:
-    path: /vmess
 - client-fingerprint: chrome
-  name: 🇸🇬 新加坡|@ripaojiedian
+  name: 新加坡2|@ripaojiedian
   network: ws
-  port: 2087
-  server: 13.140.95.76
-  servername: senflarelink-node-6b9.pages.dev
+  port: 443
+  server: 172.104.48.162
+  servername: itunes.apple.com
   skip-cert-verify: true
-  tfo: false
   tls: true
   type: vless
-  udp: true
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
+  uuid: 0dbe84f8-74fd-4bd1-99fe-e67eb7eaff85
   ws-opts:
     headers:
-      Host: senflarelink-node-6b9.pages.dev
-    path: /
-    v2ray-http-upgrade: false
+      Host: itunes.apple.com
+    path: /wsflow=
+- client-fingerprint: chrome
+  name: 新加坡3|@ripaojiedian
+  network: ws
+  port: 443
+  server: 172.104.48.194
+  servername: itunes.apple.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: a28d0884-193d-4591-aa64-8638ba1481ce
+  ws-opts:
+    headers:
+      Host: itunes.apple.com
+    path: /wsflow=
+- client-fingerprint: chrome
+  name: 新加坡|@ripaojiedian
+  network: ws
+  port: 443
+  server: 172.104.186.185
+  servername: itunes.apple.com
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 87ff88cc-5c1f-4f46-86b8-c43f55b71dd2
+  ws-opts:
+    headers:
+      Host: itunes.apple.com
+    path: /wsflow=
 - name: '🇸🇬[www.v2nodes.com] vless-SG #...'
   network: ws
   port: 443
@@ -209,7 +224,7 @@ proxies:
     headers:
       Host: bdfba-cool-tree-b580.v8fz4kbv.workers.dev
     path: /
-- name: '🇸🇬[www.v2nodes.com] vless-SG-2... #5'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-2... #4'
   network: ws
   port: 8443
   server: 172.64.154.113
@@ -221,6 +236,17 @@ proxies:
     headers:
       Host: freeceshi6.frii.site
     path: /proxyip=ProxyIP.JP.CMLiussss.netfp=chrome
+- name: '🇸🇬[www.v2nodes.com] vless-SG-2... #5'
+  network: ws
+  port: 2052
+  server: 104.18.109.147
+  tls: false
+  type: vless
+  uuid: c29d39bd-92a4-45db-bb61-56013998617c
+  ws-opts:
+    headers:
+      Host: www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com
+    path: /Telegram-XV2ry2?ed=2048
 - name: 🇸🇬[www.v2nodes.com] vless-SG-3...
   network: ws
   port: 2083
@@ -269,23 +295,12 @@ proxies:
     headers:
       Host: kozel.cc.cd
     path: /118.151.222.66=17317fp=chrome
-- name: '🇸🇬[www.v2nodes.com] vless-SG-7... #3'
-  network: ws
-  port: 2052
-  server: 104.18.109.147
-  tls: false
-  type: vless
-  uuid: c29d39bd-92a4-45db-bb61-56013998617c
-  ws-opts:
-    headers:
-      Host: www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com
-    path: /Telegram-XV2ry2?ed=2048
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
   name: '🇸🇬 新加坡 | SGP #3'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 47.128.219.111
+  server: 13.229.56.229
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
@@ -306,14 +321,22 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- cipher: aes-128-gcm
+- cipher: chacha20-ietf-poly1305
   name: '🇸🇬 新加坡 | SGP #4'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 40022
-  server: 038b7750485a79a0.lebufflonfermegroup.us
+  password: aqfNMqGyxRTHwXOy
+  port: 49899
+  server: e.node001.download
   type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇬 新加坡 | SGP #5'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 13.229.56.229
+  type: ss
+  udp: true
 - cipher: aes-256-gcm
-  name: 🇸🇬SG-149.88.106.73-0161
+  name: 🇸🇬SG-149.88.106.73-0117
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 149.88.106.73

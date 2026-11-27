@@ -1,36 +1,37 @@
 proxies:
 - alterId: 0
-  cipher: none
-  name: FR 🇫🇷 | @Raydikalx | 8E1B8F
+  cipher: auto
+  name: FR 🇫🇷 | @Raydikalx | 2E1805
   network: tcp
-  port: 20250
-  server: 51.83.6.5
+  port: 2086
+  server: 152.228.145.5
   servername: ''
   tls: false
   type: vmess
-  uuid: de883d6d-4099-41bc-ba86-82ffed64a380
+  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-145.239.55.210-0209
+  name: FR 🇫🇷 | @Raydikalx | A053E2
+  network: tcp
+  port: 19918
+  server: vmess.aryan-neni.neninet.ir
+  servername: ''
+  tls: false
+  type: vmess
+  uuid: 445706d5-25c6-4a45-97df-8b25df1d25ea
+- alterId: 0
+  cipher: auto
+  name: 🇫🇷FR-146.59.92.219-3108
   network: ws
-  port: 80
-  server: 145.239.55.210
+  port: 2096
+  server: 146.59.92.219
   servername: ''
   skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: 2bc80e77-9590-4ded-a48b-0eda493f611b
+  uuid: aca71b13-ec8a-466d-c28f-43516d3cf246
   ws-opts:
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
     path: /
-- name: 🇫🇷 FR法国(mibei77.com 米贝节点分享)
-  password: zhs000666
-  port: 443
-  server: 146.59.105.122
-  skip-cert-verify: false
-  sni: 666-4sd.pages.dev
-  type: trojan
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -52,12 +53,6 @@ proxies:
   skip-cert-verify: true
   sni: www.ignitelimit.com
   type: trojan
-- cipher: aes-256-gcm
-  name: '🇫🇷 法国 | FRA #1'
-  password: d98d7ec5-24d7-4ed8-8329-728b2c7ad1c5
-  port: 21191
-  server: 038b7750485a79a0.lebufflonfermegroup.us
-  type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=

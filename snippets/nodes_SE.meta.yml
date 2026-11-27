@@ -1,26 +1,4 @@
 proxies:
-- alterId: 0
-  cipher: auto
-  name: SE 🇸🇪 | @Raydikalx | DA4D02
-  network: httpupgrade
-  port: 443
-  server: defe.sync-bridge.ir
-  servername: defe.sync-bridge.ir
-  tls: true
-  type: vmess
-  uuid: e9f12253-bc99-4ea6-8ad0-00e407abe269
-- name: '🇸🇪 瑞典 | SWE #1'
-  network: ws
-  port: 2053
-  server: ws.dhafhdtjdti.site
-  servername: ws.dhafhdtjdti.site
-  tls: true
-  type: vless
-  uuid: 9f749472-c636-4c5a-af51-7f8feefaac81
-  ws-opts:
-    headers:
-      Host: ws.dhafhdtjdti.site
-    path: /fp=chrome
 - name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
   network: ws
   port: 443
@@ -33,8 +11,20 @@ proxies:
     headers:
       Host: accessfooter.cleanfoodshop.org
     path: /media/ws/fp=firefox
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
+  network: ws
+  port: 2053
+  server: ws.dhafhdtjdti.site
+  servername: ws.dhafhdtjdti.site
+  tls: true
+  type: vless
+  uuid: 9f749472-c636-4c5a-af51-7f8feefaac81
+  ws-opts:
+    headers:
+      Host: ws.dhafhdtjdti.site
+    path: /fp=chrome
 - client-fingerprint: chrome
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
   network: ws
   port: 2053
   server: ws.dhafhdtjdti.site
@@ -47,7 +37,7 @@ proxies:
       Host: ws.dhafhdtjdti.site
     path: /
 - client-fingerprint: firefox
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #4'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   network: ws
   port: 443
   server: 185.247.224.206
@@ -62,7 +52,7 @@ proxies:
 - client-fingerprint: firefox
   grpc-opts:
     grpc-service-name: 138-124-86-230-sslip-io
-  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
+  name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
   network: grpc
   port: 48115
   server: 138.124.86.230
@@ -70,7 +60,7 @@ proxies:
   tls: true
   type: vless
   uuid: b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #6'
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #7'
   network: ws
   port: 14430
   server: 5.178.109.174
