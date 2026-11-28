@@ -1,12 +1,19 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | FC1C27
-  network: ws
-  port: 10086
-  server: 39.108.113.127
-  servername: ''
+  name: CN 🇨🇳 | @Raydikalx | 2F6F5A
+  network: tcp
+  port: 50014
+  server: 36.133.78.37
   tls: false
   type: vmess
-  uuid: 7547daaa-1577-49b0-9519-bd1823add1a7
-  ws-opts: {}
+  uuid: e1be6941-0667-469c-9224-6f34adb549ba
+- alterId: 0
+  cipher: auto
+  name: CN 🇨🇳 | @Raydikalx | D4738C
+  network: tcp
+  port: 50013
+  server: 36.133.78.37
+  tls: false
+  type: vmess
+  uuid: abcb006d-739f-4cec-b13f-12c10d334d92

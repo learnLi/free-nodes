@@ -1,15 +1,29 @@
 proxies:
+- alterId: 0
+  cipher: auto
+  name: TW 🇹🇼 | @Raydikalx | 53691C
+  network: ws
+  port: 55386
+  server: az-1.linkaa.xyz
+  servername: null
+  tls: false
+  type: vmess
+  uuid: 6E571484-4166-4699-8F58-B34A1823691F
+  ws-opts:
+    headers:
+      Host: az-1.linkaa.xyz
+    path: /game/resources
 - name: 🇹🇼[www.v2nodes.com] trojan-TW-...
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  port: 28478
-  server: ddrr1.tube-cat.com
-  skip-cert-verify: true
-  sni: r.tw2.cat.bilibili.com
-  type: trojan
-- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #1'
   password: d7563108-615c-4338-a7bd-77f359869a4a
   port: 59188
   server: ddrr2.tube-cat.com
   skip-cert-verify: true
   sni: r.tw3.cat.bilibili.com
+  type: trojan
+- name: '🇹🇼[www.v2nodes.com] trojan-TW-... #1'
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 28478
+  server: ddrr1.tube-cat.com
+  skip-cert-verify: true
+  sni: r.tw2.cat.bilibili.com
   type: trojan

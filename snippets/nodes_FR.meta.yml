@@ -1,16 +1,14 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 058A0B
-  network: ws
-  port: 80
-  server: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-  servername: null
-  tls: false
+  name: FR 🇫🇷 | @Raydikalx | 246A8D
+  network: tcp
+  port: 1270
+  server: 91.134.35.72
+  servername: xmfhlpy.com
+  tls: true
   type: vmess
-  uuid: 479526cd-5011-43cf-a788-504da95e07c2
-  ws-opts:
-    path: /
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
   name: FR 🇫🇷 | @Raydikalx | 8477A2
@@ -23,42 +21,87 @@ proxies:
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
 - alterId: 0
   cipher: auto
-  name: 🇫🇷FR-91.134.8.100-1184
-  network: ws
-  port: 443
-  server: 91.134.8.100
-  servername: ''
-  skip-cert-verify: true
-  tls: true
+  name: FR 🇫🇷 | @Raydikalx | B67A73
+  network: tcp
+  port: 22324
+  server: 23.162.152.6
+  tls: false
   type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  ws-opts:
-    headers:
-      Host: kampong.org
-    path: linkvws
-- client-fingerprint: chrome
-  encryption: none
-  name: FR VLESS-26 | free-nodes
-  network: xhttp
-  port: 443
-  server: 194.122.84.6
-  servername: fl1.internium.forum
-  tls: true
-  type: vless
-  uuid: e6d52328-2d60-4fcf-812c-9734493baf11
-  ws-opts:
-    headers:
-      Host: fl1.internium.forum
-    path: /connect
-- client-fingerprint: chrome
-  name: '🇫🇷 法国 | FRA #2'
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- name: '🇫🇷 法国 | FRA #2'
   network: ws
   port: 443
   server: ipfast.kingmna.com
   servername: cdn.akamai.steamstatic.com
   tls: true
   type: vless
+  uuid: c6b0a7f0-4a4e-47aa-975a-35988278ab85
+  ws-opts:
+    headers:
+      Host: fraboijji.global.ssl.fastly.net.
+    path: /fp=chrome
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇫🇷FR_1|1.9MB/s
+  network: xhttp
+  port: 443
+  server: 89.44.80.204
+  servername: newmama.baklajann.ru
+  tls: true
+  type: vless
   udp: true
+  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
+  xhttp-opts:
+    host: newmama.baklajann.ru
+    mode: auto
+    path: /
+    reuse-settings:
+      c-max-reuse-times: '0'
+      h-keep-alive-period: 0
+      h-max-request-times: 600-900
+      h-max-reusable-secs: 1800-3000
+      max-concurrency: '0'
+      max-connections: '4'
+  xudp: true
+- client-fingerprint: chrome
+  name: 🇫🇷FR_1|2.6MB/s
+  port: 443
+  server: 194.122.84.6
+  servername: fl1.internium.forum
+  tls: true
+  type: vless
+  uuid: e6d52328-2d60-4fcf-812c-9734493baf11
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇫🇷FR_2|1.8MB/s
+  network: xhttp
+  port: 443
+  server: 87.120.126.127
+  servername: mama147.baklajann.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
+  xhttp-opts:
+    host: mama147.baklajann.ru
+    mode: auto
+    path: /
+    reuse-settings:
+      c-max-reuse-times: '0'
+      h-keep-alive-period: 0
+      h-max-request-times: 600-900
+      h-max-reusable-secs: 1800-3000
+      max-concurrency: '0'
+      max-connections: '4'
+  xudp: true
+- client-fingerprint: chrome
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
+  network: ws
+  port: 443
+  server: ipfast.kingmna.com
+  servername: cdn.akamai.steamstatic.com
+  tls: true
+  type: vless
   uuid: c6b0a7f0-4a4e-47aa-975a-35988278ab85
   ws-opts:
     headers:
@@ -82,17 +125,22 @@ proxies:
   tls: false
   type: vless
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- name: '🏳[www.v2nodes.com] vless- #13'
-  network: ws
-  port: 80
-  server: 188.114.99.137
-  tls: false
+- client-fingerprint: chrome
+  encryption: none
+  name: '🇵🇱 波兰 | POL #1'
+  network: xhttp
+  port: 443
+  server: 45.67.215.204
+  servername: 51.baklajann.ru
+  tls: true
   type: vless
-  uuid: c762af05-2e92-4133-bc30-8cf45dd40a28
-  ws-opts:
-    headers:
-      Host: suh.cryptofront.uk
+  udp: true
+  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
+  xhttp-opts:
+    host: 51.baklajann.ru
+    mode: auto
     path: /
+  xudp: true
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
