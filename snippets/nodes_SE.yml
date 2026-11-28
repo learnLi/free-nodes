@@ -1,6 +1,15 @@
 proxies:
 - alterId: 0
   cipher: auto
+  name: SE 🇸🇪 | @Raydikalx | 24A21D
+  network: httpupgrade
+  port: 16751
+  server: 16.171.159.75
+  tls: false
+  type: vmess
+  uuid: 5b2e2e5f-1302-4d65-ab39-27f6f0ca5562
+- alterId: 0
+  cipher: auto
   name: SE 🇸🇪 | @Raydikalx | 98E112
   network: tcp
   port: 1270
@@ -9,3 +18,9 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #15'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 138.199.55.243
+  type: ss

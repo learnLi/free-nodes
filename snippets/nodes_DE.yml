@@ -1,58 +1,86 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 1E3DBC
+  name: DE 🇩🇪 | @Raydikalx | 0A5F4D
   network: tcp
-  port: 20402
-  server: 109.70.74.135
+  port: 33554
+  server: 195.26.26.74
   servername: ''
   tls: false
   type: vmess
-  uuid: fb1e9d7c-f98b-4a57-ae49-aa3d1bdda237
+  uuid: b2619c4b-2f47-4464-8de9-bb0576be7687
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 1F3FF4
+  name: DE 🇩🇪 | @Raydikalx | 187497
   network: tcp
-  port: 50407
-  server: 2.31.43.159
+  port: 10916
+  server: afshin.sub-daltoon.ir
   servername: ''
   tls: false
   type: vmess
-  uuid: d7b9fe42-6116-466e-b0b5-bd83ff827a91
+  uuid: c8622c6f-25e0-4a56-836f-9769af899017
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 3A9FAF
+  name: DE 🇩🇪 | @Raydikalx | 20F25F
   network: ws
-  port: 16622
+  port: 16632
   server: planb.mojcn.com.linuxlh.xin
-  servername: ''
   tls: false
   type: vmess
-  uuid: 8ed52c4d-1fe1-4c08-b46f-ca8eb2729cb9
+  uuid: cefbe234-bcc6-4558-ab7b-1030e331e6a5
   ws-opts:
     headers:
-      Host: f406e32143bc023a8819a6335733f851.mobgslb.tbcache.com
+      Host: d052c66d50dcf7c3cfab75ed7f8e8322.mobgslb.tbcache.com
     path: /
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 42459D
-  network: tcp
-  port: 2070
-  server: esc.georkup.ir
-  servername: ''
+  name: DE 🇩🇪 | @Raydikalx | 4421B8
+  network: ws
+  port: 16622
+  server: planb.mojcn.com.linuxlh.xin
   tls: false
   type: vmess
-  uuid: 4d765598-33d4-4ef5-87d6-b3fa61918875
+  uuid: 5b874a21-93b4-4fd5-9e11-b3cc30c9abdf
+  ws-opts:
+    headers:
+      Host: 73226094b12c74c4f4e0d0220d300108.mobgslb.tbcache.com
+    path: /
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 758BBF
+  name: DE 🇩🇪 | @Raydikalx | 4B7538
+  network: ws
+  port: 443
+  server: 8.211.1.139
+  servername: bzqHefRtvpQyiUQb.v.3dns.vip
+  tls: true
+  type: vmess
+  uuid: 7add6c87-86cb-412a-b3ab-d7e0fb276f09
+  ws-opts:
+    headers:
+      Host: bzqHefRtvpQyiUQb.v.3dns.vip
+    path: /ws-vmess
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 616DC9
   network: tcp
-  port: 1003
-  server: 3.123.35.248
-  servername: ''
+  port: 19829
+  server: 109.70.74.217
   tls: false
   type: vmess
-  uuid: 4cd183f8-99e6-43e5-a778-e5989fa5ac27
+  uuid: 61d4bd1e-2def-46cb-a7ac-6c98d002e7da
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 81AAC3
+  network: ws
+  port: 16632
+  server: planb.mojcn.com.linuxlh.xin
+  tls: false
+  type: vmess
+  uuid: 6011f1c0-0fcc-4153-b848-972da6dec0f1
+  ws-opts:
+    headers:
+      Host: 6907bbf8a71b1370e29aa5fd2b77b347.mobgslb.tbcache.com
+    path: /
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | 875613
@@ -78,58 +106,70 @@ proxies:
   uuid: cda5b8c3-0bf7-4d36-a7e3-b5e8244f953b
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | 9B851D
+  name: DE 🇩🇪 | @Raydikalx | 8886C7
   network: tcp
-  port: 57708
-  server: germany1.povrak.ir
-  servername: ''
-  tls: false
-  type: vmess
-  uuid: 9371d6ef-97a4-47f3-bfa2-ce10bc50436a
-- alterId: 0
-  cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | AA3B51
-  network: ws
-  port: 443
-  server: 9WEXvuEOsTlJWUrS.v.3dns.vip
-  servername: 9WEXvuEOsTlJWUrS.v.3dns.vip
+  port: 8080
+  server: germany.hetzner.sldbflapxkw.vpxpp.ir
+  servername: germany.hetzner.sldbflapxkw.vpxpp.ir
   tls: true
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: 9WEXvuEOsTlJWUrS.v.3dns.vip
-    path: /ws-vmess
+  uuid: 8ffcf2e4-6e64-4647-b8ce-473b4287cff5
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | C152FB
+  name: DE 🇩🇪 | @Raydikalx | 8ADE6E
   network: tcp
-  port: 54738
-  server: 109.70.74.94
+  port: 1003
+  server: 3.72.50.236
   servername: ''
   tls: false
   type: vmess
-  uuid: 436c87cd-0421-4088-a62f-dab629d3c5b0
+  uuid: e147fa91-0c93-4bf8-af6c-02ca5179f585
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | D6ECB3
+  name: DE 🇩🇪 | @Raydikalx | 9A3452
+  network: ws
+  port: 16622
+  server: 162.19.192.89
+  tls: false
+  type: vmess
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  ws-opts:
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | 9C5B70
   network: tcp
   port: 2080
   server: ovhpok.goalir.co.uk
   servername: ''
   tls: false
   type: vmess
-  uuid: 8e675427-4595-45a5-bab3-8a34598d741a
+  uuid: bc3804ce-caf8-4249-bc98-393c9daf7adf
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | D9A50D
+  name: DE 🇩🇪 | @Raydikalx | 9CD654
+  network: ws
+  port: 443
+  server: 194.164.192.16
+  tls: true
+  type: vmess
+  uuid: 5f72f180-b21b-4b7a-8484-240759012604
+  ws-opts:
+    headers:
+      Host: apjhdggyx.com
+    path: /5f72f180-b21b-4b7a-8484-240759096785
+- alterId: 0
+  cipher: auto
+  name: DE 🇩🇪 | @Raydikalx | DB1EF1
   network: tcp
-  port: 54588
-  server: 195.26.26.148
+  port: 56696
+  server: 109.70.74.202
   servername: ''
   tls: false
   type: vmess
-  uuid: 5fa81b59-214d-4d6e-9397-e3914926ed21
+  uuid: 164de7f3-0943-4d91-8941-f315c923644d
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | DDEF48
@@ -145,18 +185,13 @@ proxies:
     path: /api/v1/gpu-stream/socket
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | EDE807
-  network: ws
-  port: 443
-  server: BxMzry7bu86yuvNb.v.3dns.vip
-  servername: BxMzry7bu86yuvNb.v.3dns.vip
-  tls: true
+  name: DE 🇩🇪 | @Raydikalx | DF8AD1
+  network: tcp
+  port: 36812
+  server: 91.107.128.44
+  tls: false
   type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: BxMzry7bu86yuvNb.v.3dns.vip
-    path: /ws-vmess
+  uuid: 6cdfc27b-a0cc-4ea1-802a-e98552be430d
 - alterId: 0
   cipher: auto
   name: DE 🇩🇪 | @Raydikalx | F00EF1
@@ -169,14 +204,18 @@ proxies:
   uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
 - alterId: 0
   cipher: auto
-  name: DE 🇩🇪 | @Raydikalx | F3F55D
-  network: tcp
-  port: 19829
-  server: 109.70.74.217
-  servername: ''
+  name: DE 🇩🇪 | @Raydikalx | F354F2
+  network: ws
+  port: 16622
+  server: m.cnmjin.net.xiaoyan.io
+  skip-cert-verify: true
   tls: false
   type: vmess
-  uuid: a83f3700-e75b-47c1-aff8-808ea793f23d
+  uuid: b02552e1-524c-4d4e-ac8a-ceba8e31cb8e
+  ws-opts:
+    headers:
+      Host: 84879cab658d49d9a985aa85c9f1a362.mobgslb.tbcache.com
+    path: /
 - alterId: 0
   cipher: auto
   name: 🇩🇪DE-57.129.24.130-1214
@@ -194,19 +233,29 @@ proxies:
     path: linkvws
 - alterId: 0
   cipher: auto
-  name: 🇩🇪DE-94.130.237.57-0166
+  name: 🇩🇪DE-57.129.24.131-1308
   network: ws
-  port: 27154
-  server: 94.130.237.57
+  port: 443
+  server: 57.129.24.131
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: d9d02f3e-c877-4a1f-990e-f2418777f745
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   ws-opts:
     headers:
-      Host: 94.130.237.57
-    path: /
+      Host: kampong.org
+    path: linkvws
+- alterId: 0
+  cipher: auto
+  name: 🇩🇪DE_3|2.3MB/s
+  network: tcp
+  port: 2080
+  server: Ir.wbzo.ir
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: b7e3e8af-d1ca-45da-a95f-8b9ad77398b1
 - alterId: 0
   cipher: auto
   name: 🇩🇪DE德国
@@ -217,9 +266,3 @@ proxies:
   tls: false
   type: vmess
   uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
-- cipher: aes-256-gcm
-  name: 🇩🇪DE-213.202.208.199-0170
-  password: RexnBgU7EV5ADxG
-  port: 7001
-  server: 213.202.208.199
-  type: ss

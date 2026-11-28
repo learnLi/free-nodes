@@ -1,19 +1,34 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | 2F6F5A
-  network: tcp
-  port: 50014
-  server: 36.133.78.37
+  name: CN 🇨🇳 | @Raydikalx | 0B9564
+  network: ws
+  port: 10086
+  server: 120.48.133.162
+  servername: ''
   tls: false
   type: vmess
-  uuid: e1be6941-0667-469c-9224-6f34adb549ba
-- alterId: 0
+  uuid: a01e5d56-464f-45b9-b600-164db4700162
+  ws-opts: {}
+- alterId: 64
   cipher: auto
-  name: CN 🇨🇳 | @Raydikalx | D4738C
-  network: tcp
-  port: 50013
-  server: 36.133.78.37
-  tls: false
+  name: 🇺🇸 美国-001
+  network: ws
+  port: 30004
+  server: 192.74.236.148
+  servername: ''
+  tls: true
   type: vmess
-  uuid: abcb006d-739f-4cec-b13f-12c10d334d92
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.91334565.xyz
+    path: /path/1733477783705
+- name: '🇨🇳 CN_53 #1'
+  password: 40a8a71b-91d3-4b63-9907-5e12ad2259c1
+  port: 20101
+  server: sclass-01.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+  udp: true

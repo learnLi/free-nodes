@@ -9,26 +9,82 @@ proxies:
   tls: true
   type: vmess
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | 8477A2
-  network: tcp
-  port: 1270
-  server: 46.105.222.155
-  servername: ''
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇫🇷 法国 | FRA #2'
+  network: ws
+  port: 443
+  server: 108.158.198.2
+  servername: dkfsoyk9ju2as.cloudfront.net
   tls: true
-  type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-- alterId: 0
-  cipher: auto
-  name: FR 🇫🇷 | @Raydikalx | B67A73
-  network: tcp
-  port: 22324
-  server: 23.162.152.6
-  tls: false
-  type: vmess
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-- name: '🇫🇷 法国 | FRA #2'
+  type: vless
+  udp: true
+  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
+  ws-opts:
+    headers:
+      Host: dkfsoyk9ju2as.cloudfront.net
+    path: /
+- client-fingerprint: chrome
+  name: '🇫🇷 法国 | FRA #3'
+  network: xhttp
+  port: 443
+  server: 167.82.64.7
+  servername: cdn.akamai.steamstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 88888888-8888-8888-8888-888888888888
+  xhttp-opts:
+    host: Wssmx.global.ssl.fastly.net
+    mode: auto
+    path: /
+    x-padding-bytes: 100-1000
+- client-fingerprint: chrome
+  name: 🇫🇷FR_3|2.4MB/s
+  port: 443
+  server: 87.120.126.127
+  servername: mama147.baklajann.ru
+  tls: true
+  type: vless
+  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
+- client-fingerprint: chrome
+  name: 🇫🇷FR_4|3.4MB/s
+  port: 443
+  server: 193.42.109.29
+  servername: mama1455.baklajann.ru
+  tls: true
+  type: vless
+  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_5|3.2MB/s
+  network: ws
+  port: 443
+  server: 194.76.146.25
+  servername: app-base-njw3ky.pages.dev
+  tls: true
+  type: vless
+  uuid: 92e8d9dc-8e3b-4f81-a278-d18c6bf1b962
+  ws-opts:
+    headers:
+      Host: app-base-njw3ky.pages.dev
+    path: /ws?ip=194.76.146.25:443fp=chrome
+- alpn:
+  - http/1.1
+  name: 🇫🇷FR_6|3.1MB/s
+  network: ws
+  port: 443
+  server: 45.155.103.57
+  servername: app-base-njw3ky.pages.dev
+  tls: true
+  type: vless
+  uuid: 92e8d9dc-8e3b-4f81-a278-d18c6bf1b962
+  ws-opts:
+    headers:
+      Host: app-base-njw3ky.pages.dev
+    path: /ws?ip=45.155.103.57:443fp=chrome
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
   network: ws
   port: 443
   server: ipfast.kingmna.com
@@ -41,61 +97,7 @@ proxies:
       Host: fraboijji.global.ssl.fastly.net.
     path: /fp=chrome
 - client-fingerprint: chrome
-  encryption: none
-  name: 🇫🇷FR_1|1.9MB/s
-  network: xhttp
-  port: 443
-  server: 89.44.80.204
-  servername: newmama.baklajann.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
-  xhttp-opts:
-    host: newmama.baklajann.ru
-    mode: auto
-    path: /
-    reuse-settings:
-      c-max-reuse-times: '0'
-      h-keep-alive-period: 0
-      h-max-request-times: 600-900
-      h-max-reusable-secs: 1800-3000
-      max-concurrency: '0'
-      max-connections: '4'
-  xudp: true
-- client-fingerprint: chrome
-  name: 🇫🇷FR_1|2.6MB/s
-  port: 443
-  server: 194.122.84.6
-  servername: fl1.internium.forum
-  tls: true
-  type: vless
-  uuid: e6d52328-2d60-4fcf-812c-9734493baf11
-- client-fingerprint: chrome
-  encryption: none
-  name: 🇫🇷FR_2|1.8MB/s
-  network: xhttp
-  port: 443
-  server: 87.120.126.127
-  servername: mama147.baklajann.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
-  xhttp-opts:
-    host: mama147.baklajann.ru
-    mode: auto
-    path: /
-    reuse-settings:
-      c-max-reuse-times: '0'
-      h-keep-alive-period: 0
-      h-max-request-times: 600-900
-      h-max-reusable-secs: 1800-3000
-      max-concurrency: '0'
-      max-connections: '4'
-  xudp: true
-- client-fingerprint: chrome
-  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   network: ws
   port: 443
   server: ipfast.kingmna.com
@@ -107,7 +109,7 @@ proxies:
     headers:
       Host: fraboijji.global.ssl.fastly.net.
     path: /
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
   network: ws
   port: 80
   server: ov-france1.09vpn.com
@@ -119,28 +121,12 @@ proxies:
     headers:
       Host: ov-france1.09vpn.com
     path: /vless/
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
   port: 23576
   server: 62.210.91.2
   tls: false
   type: vless
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- client-fingerprint: chrome
-  encryption: none
-  name: '🇵🇱 波兰 | POL #1'
-  network: xhttp
-  port: 443
-  server: 45.67.215.204
-  servername: 51.baklajann.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7a42d986-f0b8-46e7-82cf-9516e168a613
-  xhttp-opts:
-    host: 51.baklajann.ru
-    mode: auto
-    path: /
-  xudp: true
 - name: 🇫🇷FR法国丨yoyapai.com\r
   password: humanity
   port: 443
@@ -174,28 +160,16 @@ proxies:
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #5'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 38.109.228.110
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 167.17.64.27
   type: ss
 - cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #7'
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #6'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 172.99.189.142
   type: ss
 - cipher: aes-256-gcm
   name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #8'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 167.17.64.175
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇫🇷[www.v2nodes.com] ss-FR-1615... #9'
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 167.17.64.22
@@ -205,6 +179,12 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
   server: 23.162.152.22
+  type: ss
+- cipher: aes-256-gcm
+  name: '🏳[www.v2nodes.com] ss- #7'
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 38.109.228.110
   type: ss
 - name: FR_speednode_0007
   port: 6103

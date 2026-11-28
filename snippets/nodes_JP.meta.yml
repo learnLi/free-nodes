@@ -1,20 +1,20 @@
 proxies:
 - alterId: 0
   cipher: auto
-  name: JP 🇯🇵 | @Raydikalx | C61C47
+  name: JP 🇯🇵 | @Raydikalx | 102B75
   network: ws
-  port: 8555
-  server: 54.168.242.25
-  tls: false
+  port: 13118
+  server: 140.83.57.20
+  tls: true
   type: vmess
-  uuid: 7aa3a024-e333-4b63-99a2-3db9d3b2054e
+  uuid: 1f01e389-fbcb-494c-e46a-210ec36329c2
   ws-opts:
     headers:
-      Host: a.189.cn
+      Host: sg.11160321.de5.net
     path: /
 - alterId: 1
   cipher: auto
-  name: '🇯🇵 日本 | JPN #9'
+  name: 🇯🇵 日本 | JPN
   network: tcp
   port: 11777
   server: lkqf7pi-g05.jp02-e3-vm0.entry.fr0528.art
@@ -24,57 +24,27 @@ proxies:
   uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
 - alterId: 1
   cipher: auto
-  name: 🇯🇵 日本 | JPN 2
-  network: tcp
-  port: 46486
-  server: liqzf4z-g05.jp05-h6-vm0.entry.fr0528.art
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
-- alterId: 1
-  cipher: auto
-  name: 🇯🇵 日本 | JPN 5
-  network: tcp
-  port: 28787
-  server: 2k2ff4t-g05.jp07-sh-vm0.entry.fr0528.art
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
-- alterId: 1
-  cipher: auto
-  name: 🇯🇵 日本 | JPN 6
+  name: 🇯🇵 日本 | JPN 3
   network: tcp
   port: 21585
-  server: 932zfpi-g05.jp01-nn-vm0.entry.fr0528.art
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
-- alterId: 1
-  cipher: auto
-  name: 🇯🇵 日本 | JPN 7
-  network: tcp
-  port: 28787
-  server: l3gzwx9-g05.jp06-jz-vm0.entry.fr0528.art
+  server: 2kgw7p9-g05.jp03-j7-vm0.entry.fr0528.art
   skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
 - alterId: 0
   cipher: auto
-  name: 🇯🇵JP-138.2.39.67-2243
+  name: 🇯🇵JP-139.162.117.173-1814
   network: ws
-  port: 80
-  server: 138.2.39.67
+  port: 443
+  server: 139.162.117.173
   servername: ''
   skip-cert-verify: true
-  tls: false
+  tls: true
   type: vmess
-  uuid: ab335c88-d14a-4e67-b52c-54ed8be80c49
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   ws-opts:
-    path: /
+    path: /chat
 - client-fingerprint: chrome
   name: 日本1|@ripaojiedian
   network: ws
@@ -145,6 +115,34 @@ proxies:
     headers:
       Host: itunes.apple.com
     path: /wsflow=
+- alpn:
+  - http/1.1
+  name: 🇯🇵JP_1|1.7MB/s
+  network: ws
+  port: 443
+  server: 8.222.193.153
+  servername: app-base-njw3ky.pages.dev
+  tls: true
+  type: vless
+  uuid: 92e8d9dc-8e3b-4f81-a278-d18c6bf1b962
+  ws-opts:
+    headers:
+      Host: app-base-njw3ky.pages.dev
+    path: /ws?ip=8.222.193.153:443fp=chrome
+- alpn:
+  - http/1.1
+  name: 🇯🇵JP_2|2.2MB/s
+  network: ws
+  port: 443
+  server: 212.192.221.107
+  servername: app-base-njw3ky.pages.dev
+  tls: true
+  type: vless
+  uuid: 92e8d9dc-8e3b-4f81-a278-d18c6bf1b962
+  ws-opts:
+    headers:
+      Host: app-base-njw3ky.pages.dev
+    path: /ws?ip=212.192.221.107:443fp=chrome
 - name: '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
   network: ws
   port: 8463
@@ -155,6 +153,18 @@ proxies:
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   ws-opts:
     path: /wsfp=firefox
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  network: ws
+  port: 443
+  server: jllp.cf.877774.xyz
+  servername: jp.bbusxxxh.top
+  tls: true
+  type: vless
+  uuid: 531d9e93-53be-4f05-a9c1-33490d4da2f3
+  ws-opts:
+    headers:
+      Host: jp.bbusxxxh.top
+    path: /images
 - client-fingerprint: firefox
   name: '🇯🇵[www.v2nodes.com] vless-JP-1... #3'
   port: 443
@@ -174,581 +184,72 @@ proxies:
   uuid: eb62cabf-5901-403a-aa0c-b1d9ed1b346d
   ws-opts:
     path: /ws
-- name: 🇯🇵 日本 | JPN
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
+- client-fingerprint: unsafe
+  encryption: none
+  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #5'
+  network: ws
   port: 443
-  server: 172.66.0.172
+  server: 104.18.153.10
+  servername: jp3.yohototo.top
+  tls: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- name: '🇯🇵 日本 | JPN 3 #1'
+  password: 1fe082ef-9dce-4481-ae92-fbd53cf2f679
+  port: 57180
+  server: media.gosthk.site
   skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- name: '🇯🇵 日本 | JPN #1'
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  port: 443
-  server: 104.26.14.111
-  skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- name: '🇯🇵 日本 | JPN #2'
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  port: 8443
-  server: 13.140.139.31
-  skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- name: '🇯🇵 日本 | JPN #3'
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  port: 443
-  server: 109.120.138.102
-  skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- name: '🇯🇵 日本 | JPN #4'
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  port: 443
-  server: 46.101.110.88
-  skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- name: '🇯🇵 日本 | JPN #5'
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  port: 443
-  server: 85.206.161.198
-  skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- name: '🇯🇵 日本 | JPN #6'
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  port: 2053
-  server: 194.87.196.133
-  skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- name: '🇯🇵 日本 | JPN #7'
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  port: 443
-  server: 68.64.180.218
-  skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- name: '🇯🇵 日本 | JPN #8'
-  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
-  port: 443
-  server: 172.237.81.42
-  skip-cert-verify: true
-  sni: eofino.bpjp2027.top
-  type: trojan
-- down: ''
-  fingerprint: ''
-  name: 🇯🇵JP_2|1.8MB/s
-  obfs: ''
-  obfs-password: ''
-  password: Yuike2026cat
-  port: 8443
-  server: 43.130.234.128
-  skip-cert-verify: false
-  sni: 43-130-234-128.sslip.io
-  type: hysteria2
-  up: ''
+  sni: media.gosthk.site
+  type: anytls
+  udp: true
 - cipher: aes-256-gcm
   name: 🇯🇵 JP日本(mibei77.com 米贝节点分享)
-  password: '!!str 123456'
-  port: 5555
-  server: 8.211.154.126
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #1'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.10.204
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #10'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.249.190
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #11'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.8.135
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #12'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.15.46
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #13'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.245.54.15
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #14'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.9.41
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #15'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.16.98
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #16'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.211.131.30
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #17'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.8.176
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #18'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.17.19
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #19'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.9.142
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #2'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.211.129.80
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #20'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.9.151
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #21'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.211.128.146
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #22'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.9.15
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #23'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.245.32.129
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #24'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.196.11
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #25'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.9.154
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #26'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.5.89
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #27'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.245.25
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #28'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.8.84
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #29'
   password: '!!str 123456'
   port: 5555
   server: 47.74.24.29
   type: ss
 - cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #3'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.0.168
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #30'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.17.189
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #31'
+  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #1'
   password: '!!str 123456'
   port: 5555
   server: 47.74.18.249
   type: ss
 - cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #32'
+  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #2'
   password: '!!str 123456'
   port: 5555
-  server: 8.209.197.190
+  server: 47.245.54.15
   type: ss
 - cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #33'
+  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #3'
   password: '!!str 123456'
   port: 5555
-  server: 8.216.4.146
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #34'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.253.213
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #35'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.91.15.111
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #36'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.16.102
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #37'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.74.0.207
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #38'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.3.160
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #39'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.245.42.226
+  server: 47.245.32.129
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #4'
   password: '!!str 123456'
   port: 5555
-  server: 8.216.3.83
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #40'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.18.173
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #41'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.221.183
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #42'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.6.19
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #43'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.236.164
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #44'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.199.75
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #45'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.18.167
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #46'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.9.190
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #47'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.236.2
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #48'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.9.42
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #49'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.249.205
+  server: 8.211.129.80
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #5'
   password: '!!str 123456'
   port: 5555
-  server: 8.216.14.14
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #50'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.74.27.11
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #51'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.18.139
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #52'
-  password: '!!str 123456'
-  port: 5555
   server: 47.74.41.139
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #53'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.221.90
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #54'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.222.150
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #55'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.209.198.176
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #56'
-  password: '!!str 123456'
-  port: 6666
-  server: 8.216.17.86
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #57'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.5.230
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #58'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.74.49.154
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #59'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.74.9.21
   type: ss
 - cipher: aes-256-gcm
   name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #6'
   password: '!!str 123456'
   port: 5555
-  server: 8.216.15.55
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #60'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.211.130.59
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #61'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.91.31.150
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #62'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.91.18.202
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #63'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.11.25
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #64'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.91.16.50
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #65'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.211.174.191
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #66'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.74.40.77
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #67'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.91.15.175
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #68'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.211.132.94
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #69'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.18.189
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #7'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.1.127
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #70'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.91.2.13
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #71'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.74.17.125
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #72'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.18.170
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #73'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.17.52
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #74'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.91.29.60
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #75'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.8.185
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #76'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.15.30
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #77'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.14.94
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #78'
-  password: '!!str 123456'
-  port: 5555
-  server: 47.74.40.243
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #79'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.211.174.60
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #8'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.8.0
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #80'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.6.223
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #81'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.19.169
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #82'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.4.158
-  type: ss
-- cipher: aes-256-gcm
-  name: '🇯🇵 JP日本(mibei77.com 米贝节点分享) #9'
-  password: '!!str 123456'
-  port: 5555
-  server: 8.216.9.217
+  server: 47.74.49.154
   type: ss
 - cipher: aes-128-gcm
-  name: 🇯🇵JP-168.138.205.100-0168
+  name: 🇯🇵JP-168.138.205.100-0245
   password: Bwlqh7GcFB
   port: 53758
   server: 168.138.205.100
@@ -777,10 +278,3 @@ proxies:
   port: 443
   server: 149.22.87.241
   type: ss
-- name: 🇯🇵JP_1|2.0MB/s
-  password: EGJDy5Kg
-  port: 42000
-  server: 103.248.150.50
-  skip-cert-verify: true
-  type: socks5
-  username: paZFN3JA
